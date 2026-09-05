@@ -36,10 +36,10 @@ fi
 HAS_MANIM=1
 if [ -f "$REEL_DIR/beat_sheet.json" ]; then
   HAS_MANIM=$(PYTHONPATH="$ROOT/scripts" python3 -c "
-import json, beat_plan
-bs = json.load(open('$REEL_DIR/beat_sheet.json'))
+import json, sys, beat_plan
+bs = json.load(open(sys.argv[1]))
 print(1 if any(beat_plan.fill_plan(b).get('method') == 'manim' for b in bs.get('beats', [])) else 0)
-")
+" "$REEL_DIR/beat_sheet.json")
 fi
 
 GFX="$ROOT/manim"

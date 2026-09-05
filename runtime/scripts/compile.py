@@ -29,6 +29,12 @@ import argparse, hashlib, json, os, shutil, subprocess, sys
 from collections import Counter
 from pathlib import Path
 
+# Ensure Unicode log output works on Windows terminals/pipes.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 FFPROBE = shutil.which("ffprobe") or "ffprobe"
 INK_RGB = (47, 42, 38)        # #2F2A26
@@ -463,7 +469,9 @@ def stamp_sheet(folder, sheet, report, cut, sheet_name="beat_sheet.json"):
             "slates": slates, "skin_warnings": warns,
         }
         (folder / sheet_name).write_text(
-            json.dumps(sheet, indent=2, ensure_ascii=False))
+            json.dumps(sheet, indent=2, ensure_ascii=False),
+            encoding="utf-8"
+        )
         print(f"[art] build stamp → {sheet_name} "
               f"({len(report) - len(slates)}/{len(report)} filled)")
     except Exception as e:                                  # never fatal
@@ -490,7 +498,7 @@ def main():
                     help="beat sheet filename (default: beat_sheet.json)")
     a = ap.parse_args()
     folder = a.folder.resolve()
-    sheet = json.loads((folder / a.sheet).read_text())
+    sheet = json.loads((folder / a.sheet).read_text(encoding="utf-8"))
     beats = sheet["beats"]
     ar = sheet.get("metadata", {}).get("aspect_ratio", "16:9")
     num, den = (int(x) for x in ar.split(":"))
@@ -632,10 +640,14 @@ def main():
                       f"overlay=(W-w)/2:H-h-40"
                       f":enable='between(t,0,{first_beat_dur:.3f})'[vtitle]")
             prev = "vtitle"
-        if a.review and drawtext:
-            fc.append(f"[{prev}]drawtext=fontfile={font}:text='%{{pts\\:hms}}'"
-                      f":fontcolor=white:fontsize={int(h*0.04)}:box=1"
-                      f":boxcolor=black@0.55:boxborderw=8:x=w-text_w-16:y=16[vout]")
+        if a.review and drawtext and font:
+            # FFmpeg's drawtext filter needs Windows paths like
+            # F:\folder\font.ttf converted to F\:/folder/font.ttf
+            ffmpeg_font = font.replace("\\", "/").replace(":", r"\:")
+
+            fc.append(f"[{prev}]drawtext=fontfile='{ffmpeg_font}':text='%{{pts\\:hms}}'"
+                    f":fontcolor=white:fontsize={int(h*0.04)}:box=1"
+                    f":boxcolor=black@0.55:boxborderw=8:x=w-text_w-16:y=16[vout]")
         else:
             fc.append(f"[{prev}]null[vout]")
     if fc:
