@@ -16,6 +16,8 @@ Browser: on the Mac, Remotion's default works. In a constrained/allowlisted env 
 """
 import argparse, json, os, shutil, subprocess, sys, tempfile
 from pathlib import Path
+from datetime import datetime, timezone
+from build_safety import BuildError, atomic_json, validate_project, validate_approvals, writable_path
 
 HERE = Path(__file__).resolve().parents[1]                       # runtime/
 PROJECT = HERE / "remotion"        # the Remotion project
@@ -63,6 +65,7 @@ def extend_clip_to_duration(out: Path, duration_s: float) -> None:
         shutil.move(str(tmp), str(out))
     else:
         tmp.unlink(missing_ok=True)
+        raise BuildError(f'Failed duration conformance for {out.name}: {r.stderr[-800:]!r}')
 
 
 def render_beat(folder: Path, beat: dict, force: bool) -> str:
@@ -71,32 +74,34 @@ def render_beat(folder: Path, beat: dict, force: bool) -> str:
     pattern = rem.get("pattern")
     if not pattern:
         return "skip: no shot.remotion.pattern"
-    out = folder / "media" / f"{bid}.mp4"
+    out = writable_path(folder, f"media/{bid}.mp4")
     if out.exists() and not force:
         return f"exists: {out.name} (use --force to re-render)"
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
-        json.dump(rem.get("props", {}), f)
-        props_path = f.name
     # --scale=2 renders the 1920x1080 comps at true 3840x2160 (supersampled text).
     # --image-format=png removes Remotion's default JPEG-q80 frame step (the hidden
     # quality ceiling on flat brand color + text). --crf=16 for a clean master.
-    cmd = ["npx", "remotion", "render", ENTRY, pattern, str(out.resolve()),
-           f"--props={props_path}", "--concurrency=1",
-           "--scale=2", "--image-format=png", "--crf=16"] + browser_flags()
-    r = subprocess.run(cmd, cwd=PROJECT, capture_output=True, text=True)
-    os.unlink(props_path)
-    if r.returncode != 0:
-        return f"FAIL: {pattern}\n{r.stderr[-800:]}"
-
-    # If beat has a measured audio duration, extend the render with freeze-hold so
-    # compile.py gets a clip at the exact beat length (no extreme slow-mo stretching).
-    duration_s = beat.get("actual_duration_s") or beat.get("estimated_duration_s")
-    if duration_s:
-        extend_clip_to_duration(out, float(duration_s))
-        return f"ok: {pattern} -> media/{bid}.mp4 (extended to {float(duration_s):.1f}s)"
-    return f"ok: {pattern} -> media/{bid}.mp4"
+    try:
+        with tempfile.TemporaryDirectory(prefix='.remotion-', dir=out.parent) as scratch:
+            candidate = Path(scratch) / 'render.mp4'
+            props_path = Path(scratch) / 'props.json'
+            atomic_json(props_path, rem.get('props', {}))
+            cmd = ["npx", "remotion", "render", ENTRY, pattern, str(candidate),
+                   f"--props={props_path}", "--concurrency=1",
+                   "--scale=2", "--image-format=png", "--crf=16"] + browser_flags()
+            r = subprocess.run(cmd, cwd=PROJECT, capture_output=True, text=True)
+            if r.returncode != 0:
+                return f"FAIL: {pattern}\n{r.stderr[-800:]}"
+            if not candidate.is_file() or candidate.stat().st_size == 0:
+                return f'FAIL: {pattern} returned success without a video'
+            duration_s = beat.get('actual_duration_s') or beat.get('estimated_duration_s')
+            if duration_s:
+                extend_clip_to_duration(candidate, float(duration_s))
+            os.replace(candidate, out)
+        return f"ok: {pattern} -> media/{bid}.mp4"
+    except (BuildError, OSError, subprocess.SubprocessError, ValueError) as exc:
+        return f'FAIL: {pattern}: {exc}'
 
 
 def stamp(beat: dict, folder: Path, now: str):
@@ -118,7 +123,7 @@ def update_consumers(sheet: dict, folder: Path):
         if row not in rows:
             rows.append(row)
     CONSUMERS.parent.mkdir(parents=True, exist_ok=True)
-    CONSUMERS.write_text(json.dumps(idx, indent=1, sort_keys=True))
+    atomic_json(CONSUMERS, idx)
 
 
 def main():
@@ -128,11 +133,12 @@ def main():
     ap.add_argument("--only")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--outro", action="store_true")
-    ap.add_argument("--now", default="", help="iso8601 timestamp to stamp (scripts have no clock)")
+    ap.add_argument("--now", default=None, help="override ISO8601 build timestamp")
     a = ap.parse_args()
     folder = a.reel.resolve()
-    sheet_path = folder / "beat_sheet.json"
+    sheet_path = writable_path(folder, 'beat_sheet.json')
     sheet = load(sheet_path)
+    validate_project(sheet)
 
     # remotion candidates = beats carrying a shot.remotion.pattern
     cands = [b for b in sheet["beats"]
@@ -161,13 +167,15 @@ def main():
                   f"({'found' if src.exists() else 'MISSING'})")
         print("[remotion] outro compositions build after the core loop is in use "
               "(see SKILL.md 'Next phase').")
-        return
+        return 2
 
     if not cands:
         print("[remotion] nothing to do — no shot.remotion.pattern beats")
         return
 
+    validate_approvals(folder, sheet)
     changed = False
+    failures = []
     for b in cands:
         bid = b["beat_id"]
         if not a.force and not slate_resolves(folder, bid):
@@ -176,15 +184,24 @@ def main():
         msg = render_beat(folder, b, a.force)
         print(f"[remotion] {bid}: {msg}")
         if msg.startswith("ok:"):
-            stamp(b, folder, a.now)
+            stamp(b, folder, a.now or datetime.now(timezone.utc).isoformat())
             changed = True
+        elif msg.startswith('FAIL:'):
+            failures.append(bid)
 
     if changed:
-        sheet_path.write_text(json.dumps(sheet, indent=1, ensure_ascii=False))
+        atomic_json(sheet_path, sheet)
         update_consumers(sheet, folder)
         print(f"[remotion] stamped provenance in beat_sheet.json + updated {CONSUMERS.name}")
+    if failures:
+        print('[remotion] FAILED: ' + ', '.join(failures), file=sys.stderr)
+        return 2
     print("[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        raise SystemExit(main())
+    except BuildError as exc:
+        raise SystemExit(f'[remotion] REFUSED: {exc}')

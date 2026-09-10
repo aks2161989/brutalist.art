@@ -6,7 +6,7 @@ in YouTube's world view — to get people to the 16:9 longs, and they have a
 HARD 3:00 cap. So:
 
   1. CHECK LENGTH FIRST. At or under the cap → the whole reel reformats
-     16:9 → 9:16 and posts as-is (no beats cut, silent endcard appended).
+     16:9 → 9:16 (no beats cut, silent endcard appended). Never publishes.
   2. OVER the cap → SHORTEN BY CUTTING BEATS, never by re-authoring —
      cutting saves regeneration. Auto-planned here (longest middle beats go
      first; the hook, the hero, and the outro are protected; --keep/--drop
@@ -14,12 +14,14 @@ HARD 3:00 cap. So:
   3. When beats were cut, the OUTRO IS REWRITTEN to say what was cut and to
      send the viewer to the long for the full story. That outro narration is
      the ONLY audio regenerated for a short — every other beat reuses the
-     parent's mp3.
-  4. Shorts ALWAYS post to the "Shorts" playlist, and the publisher points a
-     short's description at its parent long (the funnel).
+     parent's audio as independent copies, not symlinks.
+  4. Publishing is separate. HAI scheduling selects a currently popular related
+     channel video and leaves at least one hour between channel-wide Shorts.
+  5. --vertical creates a full-length companion, not a Short: no drops,
+     no duration cap, no rewritten outro, no added endcard.
 
 THE REFORMAT RULE (16:9 → 9:16): captured/user media is CENTER-CUT (biased
-by shot.focus), written beside the source as <beat>-916.* — inspectable and
+by shot.focus), written inside short/media/ as <beat>-916.* — inspectable and
 replaceable. THE HUMAN IS EXPECTED TO REPLACE a center cut that doesn't
 work by adding a 9:16 version of the beat to the PANTRY:
 pantry/<beat>-916.mp4|png always wins over everything else. GENERATED
@@ -43,16 +45,19 @@ Usage:
   python3 scripts/shorts.py reels/<slug>                      # auto: cap check + plan
   python3 scripts/shorts.py reels/<slug> --drop B14 B16       # manual plan
   python3 scripts/shorts.py reels/<slug> --keep B07 --recut   # protect + recut
+  python3 scripts/shorts.py reels/<slug> --vertical          # full-length companion
 Then (printed per run):
   python3 scripts/generate_audio_kokoro.py <reel>/short --only <outro>   # only if outro rewritten
   python3 scripts/compile.py <reel>/short --review --height 1920
-  publish with --playlist "Shorts"
+  Publishing requires a separate authorized handoff; see docs/FELLOWS-SUBMISSION.md.
 
 The endcard's Next: line defaults to the narration of the LAST dropped CARD
 beat (the 16:9 outro's tease), override with --next.
 """
-import argparse, json, shutil, subprocess, sys
+import argparse, json, shutil, subprocess, sys, shlex, uuid, tempfile, os
 from pathlib import Path
+from build_safety import (BuildError, atomic_json, copy_asset, is_source_report,
+                          validate_project, writable_path)
 
 FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 CREAM = (243, 235, 221); INK = (47, 42, 38); TERRA = (211, 95, 67)
@@ -152,6 +157,8 @@ def is_protected(b, beats, keep_ids):
     """The hook (first), the outro (last), the hero, and --keep ids never drop."""
     if b["beat_id"] in keep_ids:
         return True
+    if is_source_report(b):
+        return True
     if b is beats[0] or b is beats[-1]:
         return True
     if (b.get("act") or "").upper() in ("INTRO", "OUTRO"):
@@ -218,18 +225,31 @@ def main():
                     help="end on the last kept beat (e.g. the bio kicker) instead of the silent branded card")
     ap.add_argument("--no-outro-rewrite", action="store_true",
                     help="keep the parent outro narration even when beats were cut")
+    ap.add_argument('--vertical', action='store_true',
+                    help='full-length 9:16 deliverable: no cap, dropping, new outro or endcard')
     a = ap.parse_args()
     folder = a.folder.resolve()
     sheet = json.loads((folder / "beat_sheet.json").read_text())
+    validate_project(sheet)
     slug = sheet["metadata"].get("slug", folder.name)
     title = sheet["metadata"].get("title", slug)
     beats = sheet["beats"]
+    for b in beats:
+        if is_source_report(b, sheet):
+            b['kind'] = 'source_report'
+    if a.vertical:
+        if a.drop:
+            raise BuildError('--vertical preserves the full film; --drop is not allowed')
+        a.no_endcard = a.no_outro_rewrite = True
 
     # ── 1. THE CAP CHECK ─────────────────────────────────────────────────
     full = sum(beat_dur(b) for b in beats)
     print(f"[short] parent reel: {len(beats)} beats · {full:.1f}s "
           f"({int(full//60)}:{full%60:04.1f}) · Shorts cap {int(SHORTS_CAP_S//60)}:00")
-    if a.drop is not None:
+    if a.vertical:
+        drops = []
+        print('[vertical] full-length companion: every source beat is retained')
+    elif a.drop is not None:
         drops = list(a.drop)                      # human plan wins
         print(f"[short] manual plan: dropping {', '.join(drops) or 'nothing'}")
     else:
@@ -241,14 +261,21 @@ def main():
         else:
             print("[short] under the cap → full reformat, no beats cut")
 
-    short = folder / "short"
+    unknown = set(drops) - {b['beat_id'] for b in beats}
+    if unknown:
+        raise BuildError(f'Unknown --drop beat(s): {sorted(unknown)}')
+    if any(is_source_report(b) and b['beat_id'] in drops for b in beats):
+        raise BuildError('Cannot drop a source report; author a separately reviewed excerpt or use --vertical')
+    short = folder / ('vertical' if a.vertical else 'short')
+    if short.is_symlink():
+        raise BuildError(f'{short} must be an independent directory, not a symlink')
     for d in ("media", "manim", "mp3"):
-        (short / d).mkdir(parents=True, exist_ok=True)
+        writable_path(short, f'{d}/.check').parent.mkdir(parents=True, exist_ok=True)
 
     # a derivative inherits the parent's fact-check (Gate F)
-    fc = short / "FACTCHECK.md"
-    if (folder / "FACTCHECK.md").exists() and not fc.exists():
-        fc.symlink_to(Path("..") / "FACTCHECK.md")
+    for name in ('FACTCHECK.md', 'SHOTLIST.md', 'PROMPTS.md', 'NOTES.md'):
+        if (folder / name).is_file():
+            copy_asset(folder / name, short / name, short)
 
     kept = [json.loads(json.dumps(b)) for b in beats if b["beat_id"] not in drops]
     dropped = [b for b in beats if b["beat_id"] in drops]
@@ -270,18 +297,34 @@ def main():
     # portrait scenes for manim → auto center-cut for captured/user media only
     tsx = root_tsx_text()
     onda_rewired, onda_blocked = [], []
+
+    def invalidate(path):
+        # Keep old derivative assets recoverable without allowing a stale wide
+        # render or pre-rewrite audio to satisfy the new portrait plan.
+        if path.exists() or path.is_symlink():
+            backup = writable_path(short, '_stale/' + uuid.uuid4().hex + '-' + path.name)
+            backup.parent.mkdir(exist_ok=True)
+            path.rename(backup)
+
     for b in kept:
         bid = b["beat_id"]
-        # narration link FIRST — every kept beat needs its audio regardless of
-        # how (or whether) its visual slot resolves; the compiler is all-or-silent.
-        # A rewritten outro is the exception: its mp3 is regenerated, not linked.
-        if not b.get("short_outro_rewritten"):
+        # Copy narration independently. Missing sound is blocked by the compiler.
+        # A rewritten outro is regenerated only inside this derivative.
+        if b.get('short_outro_rewritten'):
+            invalidate(short / 'mp3' / f'beat-{bid}.mp3')
+        elif not is_source_report(b):
             mp3 = folder / (b.get("audio_file") or f"mp3/beat-{bid}.mp3")
-            mdst = short / "mp3" / mp3.name
-            if mp3.exists() and not mdst.exists():
-                mdst.symlink_to(Path("../..") / "mp3" / mp3.name)
+            mdst = short / 'mp3' / f'beat-{bid}.mp3'
+            if mp3.is_file():
+                copy_asset(mp3, mdst, short)
+            else:
+                invalidate(mdst)
+            b['audio_file'] = f'mp3/beat-{bid}.mp3'
         fx = float((b.get("shot", {}).get("focus") or [0.5, 0.5])[0])
         generated = is_remotion(b) or bool(b.get("graphic"))
+        if generated:
+            for sub, ext in (('media', '.mp4'), ('media', '.png'), ('media', '.jpg'), ('manim', '.mp4'), ('manim', '.mov')):
+                invalidate(writable_path(short, f'{sub}/{bid}{ext}'))
 
         # pantry: the human's slot, wins over every path incl. the Onda check
         override = None
@@ -300,7 +343,7 @@ def main():
             p916 = portrait_pattern(pattern, tsx)
             if p916:
                 b["shot"]["remotion"]["pattern"] = p916
-                b["shot"]["remotion"]["rendered"] = {"out": f"media/{bid}.mp4", "at": ""}
+                b['shot']['remotion'].pop('rendered', None)
                 onda_rewired.append(bid)
                 print(f"[short] {bid}  ONDA CHECK: {pattern} → {p916} (portrait "
                       f"re-render on short/; match the 916 zod schema — rule #4)")
@@ -333,48 +376,56 @@ def main():
                     src = (sub, p, ".mp4" if ext == ".mov" else ext)
                     break
             if src is None:
+                onda_blocked.append((bid, 'missing source media'))
                 continue                        # slate — nothing to cut
             sub, p, ext = src
             if sub == "manim" or generated:     # NEVER cut generated graphics
                 print(f"[short] {bid}  GENERATED — no cut; needs a portrait "
                       f"scene in short/scenes.py (render via run), or add "
                       f"pantry/{bid}-916.mp4")
+                onda_blocked.append((bid, 'native portrait scene'))
                 continue
-            cut = folder / sub / f"{bid}-916{ext}"
+            if is_source_report(b) or a.vertical:
+                copy_asset(p, short / 'media' / f'{bid}{ext}', short)
+                continue   # full source framing; compiler contains it, never crops
+            cut = writable_path(short, f"media/{bid}-916{ext}")
             if a.recut or not cut.exists():
-                if ext == ".mp4":
-                    vf = (f"crop='min(iw,ih*9/16)':ih:"
-                          f"'max(0,min(iw-ow,iw*{fx:.4f}-ow/2))':0")
-                    subprocess.run([FFMPEG, "-y", "-v", "error", "-i", str(p),
-                                    "-vf", vf, "-c:v", "libx264", "-preset",
-                                    "slow", "-crf", "16", "-an", str(cut)],
-                                   check=True)
-                else:
-                    from PIL import Image
-                    im = Image.open(p)
-                    w, h = im.size
-                    cw = min(w, int(h * 9 / 16))
-                    x = max(0, min(w - cw, int(fx * w - cw / 2)))
-                    im.crop((x, 0, x + cw, h)).save(cut)
+                with tempfile.TemporaryDirectory(prefix='.portrait-', dir=cut.parent) as scratch:
+                    candidate = Path(scratch) / ('cut' + ext)
+                    if ext == ".mp4":
+                        vf = (f"crop='min(iw,ih*9/16)':ih:"
+                              f"'max(0,min(iw-ow,iw*{fx:.4f}-ow/2))':0")
+                        subprocess.run([FFMPEG, "-y", "-v", "error", "-i", str(p),
+                                        "-vf", vf, "-c:v", "libx264", "-preset",
+                                        "slow", "-crf", "16", "-an", str(candidate)], check=True)
+                    else:
+                        from PIL import Image
+                        im = Image.open(p)
+                        w, h = im.size
+                        cw = min(w, int(h * 9 / 16))
+                        x = max(0, min(w - cw, int(fx * w - cw / 2)))
+                        im.crop((x, 0, x + cw, h)).save(candidate)
+                    os.replace(candidate, cut)
                 print(f"[short] {bid}  center-cut 16:9 -> {sub}/{cut.name} "
                       f"(focus x={fx:.2f}) — replace via pantry/{bid}-916{ext} "
                       f"if the cut doesn't work")
-            override = (sub, cut, ext)
+            override = ('media', cut, ext)
         sub, p, ext = override
         # pantry overrides mount into the short's media/ slot
         dsub = "media" if sub == "pantry" else sub
         dst = short / dsub / f"{bid}{ext}"
-        if dst.is_symlink() or dst.exists():
-            dst.unlink()
-        dst.symlink_to(Path("../..") / sub / p.name)
+        copy_asset(p, dst, short)
 
     # ── 4. the silent endcard: branded, read-only ────────────────────────
     if not a.no_endcard:
-        endcard_png(short / "media" / "END.png", a.handle, next_text, dark=True)
-        subprocess.run([FFMPEG, "-y", "-v", "error", "-f", "lavfi",
-                        "-i", "anullsrc=r=44100:cl=mono", "-t", f"{a.end_s:.2f}",
-                        "-c:a", "libmp3lame", "-q:a", "9",
-                        str(short / "mp3" / "beat-END.mp3")], check=True)
+        with tempfile.TemporaryDirectory(prefix='.endcard-', dir=short) as scratch:
+            png, mp3 = Path(scratch) / 'END.png', Path(scratch) / 'beat-END.mp3'
+            endcard_png(png, a.handle, next_text, dark=True)
+            subprocess.run([FFMPEG, "-y", "-v", "error", "-f", "lavfi",
+                            "-i", "anullsrc=r=44100:cl=mono", "-t", f"{a.end_s:.2f}",
+                            "-c:a", "libmp3lame", "-q:a", "9", str(mp3)], check=True)
+            copy_asset(png, short / 'media/END.png', short)
+            copy_asset(mp3, short / 'mp3/beat-END.mp3', short)
         kept.append({
             "beat_id": "END",
             "narration_text": "",
@@ -386,19 +437,22 @@ def main():
         })
 
     meta = dict(sheet["metadata"])
-    meta.update({"slug": f"{slug}-short", "aspect_ratio": "9:16", "fit": "crop",
-                 "kind": "short",
-                 "reformat": ("center-cut, focus-aware; pantry/<bid>-916.* is the "
-                              "human replacement slot; -916 overrides honored"),
-                 "derived_from": slug, "dropped_beats": drops,
-                 "playlist_short": "Shorts"})
+    meta.update({"slug": f"{slug}-{'vertical' if a.vertical else 'short'}", "aspect_ratio": "9:16", "fit": "pad",
+                 "kind": 'vertical' if a.vertical else 'short',
+                 "reformat": ('full-length; native portrait graphics; preserve source framing'
+                              if a.vertical else 'portrait graphics; captured-media crop in short/media only'),
+                 "derived_from": slug, "dropped_beats": drops})
+    meta.pop('playlist_short', None)  # playlist selection belongs to scheduling
     total = sum(beat_dur(b) for b in kept) + (OUTRO_REWRITE_EST_S if outro_rewritten else 0)
     meta["total_estimated_duration_seconds"] = round(total, 2)
-    (short / "beat_sheet.json").write_text(
-        json.dumps({"metadata": meta, "beats": kept}, indent=1, ensure_ascii=False))
+    blocked = [f'{bid}: {pattern}' for bid, pattern in onda_blocked]
+    if not a.vertical and total > SHORTS_CAP_S:
+        blocked.append('Over duration cap; preserve the report with --vertical or author a reviewed excerpt')
+    meta['short_validation'] = {'status': 'blocked' if blocked else 'ready', 'errors': blocked}
+    atomic_json(writable_path(short, 'beat_sheet.json'), {'metadata': meta, 'beats': kept})
 
-    cap = ("OK" if total <= SHORTS_CAP_S
-           else "⚠ STILL OVER the 3:00 Shorts cap — drop more (--drop) or check the plan")
+    cap = ('full-length vertical (no Short cap)' if a.vertical else
+           'OK' if total <= SHORTS_CAP_S else 'BLOCKED: over 3:00; use --vertical for the complete report')
     est = " (outro duration estimated until its audio regenerates)" if outro_rewritten else ""
     print(f"[short] {len(kept)} beats · ~{total:.1f}s "
           f"({int(total//60)}:{total%60:04.1f}) {cap}{est}")
@@ -414,21 +468,27 @@ def main():
         print(f"[short] ONDA CHECK ⚠ BLOCKED: "
               + "; ".join(f"{bid} needs {pat}916 in Root.tsx (or pantry/{bid}-916.mp4)"
                           for bid, pat in onda_blocked))
-    rel = folder.relative_to(folder.parents[1])
+    rel = shlex.quote(str(short))
     step = 1
     print("[short] next:")
     if outro_rewritten:
-        print(f"[short]   {step}. python3 runtime/scripts/generate_audio_kokoro.py {rel}/short   "
-              f"# regenerates ONLY the rewritten outro (missing mp3)")
+        print(f"[short]   {step}. python3 runtime/scripts/generate_audio_kokoro.py {rel} --only {kept[-1 if a.no_endcard else -2]['beat_id']}   "
+              f"# regenerates only the rewritten outro")
         step += 1
     if onda_rewired or onda_blocked:
-        print(f"[short]   {step}. python3 runtime/scripts/remotion_scenes.py {rel}/short   "
+        print(f"[short]   {step}. python3 runtime/scripts/remotion_scenes.py {rel}   "
               f"# FOREGROUND (rule #3) — portrait renders for the 916-rewired beats")
         step += 1
-    print(f"[short]   {step}. python3 runtime/scripts/compile.py {rel}/short --review --height 1920")
-    print(f"[short]   {step + 1}. publish the short with --playlist \"Shorts\" "
-          f"(the funnel: its description links the parent long)")
+    print(f"[short]   {step}. python3 runtime/scripts/compile.py {rel} --review --height 1920")
+    print('[short] Render only. Submission, related-video selection and scheduling are separate human workflows.')
+    if blocked:
+        print('[short] BLOCKED: ' + '; '.join(blocked), file=sys.stderr)
+        return 2
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        raise SystemExit(main())
+    except (BuildError, OSError, ValueError, KeyError) as exc:
+        raise SystemExit(f'[short] REFUSED: {exc}')

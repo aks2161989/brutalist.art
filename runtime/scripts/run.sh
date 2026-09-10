@@ -14,7 +14,7 @@
 #   Gate A (pre-flight, render-free): static_scene_check.py per pending scene.
 #   Gate B (post-render, pixel-true): manim_layout_audit.py --png per scene.
 #   Skip both with ART_QC=0.
-set -e
+set -eo pipefail
 REEL_IN="$1"; shift || true
 HEIGHT=2160   # 4K-native master (was 1080). Pass --height 1080 for a faster QC pass.
 if [ "$1" = "--height" ]; then HEIGHT="$2"; fi
@@ -28,6 +28,31 @@ REEL_DIR="$(cd "$(dirname "$REEL_IN")" 2>/dev/null && pwd)/$(basename "$REEL_IN"
 if [ ! -d "$REEL_DIR" ]; then
   echo "[run] no such reel dir: $REEL_IN"; exit 1
 fi
+record_run_failure() {
+  rc=$?
+  if [ "$rc" -ne 0 ]; then
+    PYTHONPATH="$ROOT/scripts" python3 - "$REEL_DIR" "$rc" <<'PY' || true
+import json, sys
+from pathlib import Path
+from build_safety import record_failure
+try:
+    state = json.loads((Path(sys.argv[1]) / 'build-state.json').read_text())
+except (OSError, ValueError):
+    state = {}
+if state.get('status') not in ('failed', 'blocked'):
+    record_failure(sys.argv[1], 'Review pipeline failed (exit ' + sys.argv[2] + '); see command output')
+PY
+  fi
+}
+trap record_run_failure EXIT
+PYTHONPATH="$ROOT/scripts" python3 - "$REEL_DIR" <<'PY'
+import sys
+from build_safety import atomic_json, writable_path
+atomic_json(writable_path(sys.argv[1], 'build-state.json'), {'status': 'planned'})
+for directory in ('manim', 'media', 'pantry', 'images', 'mp4', 'mp3', 'clips', '_qc'):
+    writable_path(sys.argv[1], directory + '/.check')
+PY
+python3 "$ROOT/scripts/build_safety.py" "$REEL_DIR"
 
 # ---- does this reel have ANY Manim beats at all? Same test beat_plan.fill_plan
 # uses (method == "manim"): a pure-Remotion/other reel has none, and should
@@ -35,11 +60,13 @@ fi
 # it has no use for.
 HAS_MANIM=1
 if [ -f "$REEL_DIR/beat_sheet.json" ]; then
-  HAS_MANIM=$(PYTHONPATH="$ROOT/scripts" python3 -c "
-import json, sys, beat_plan
+  HAS_MANIM=$(PYTHONPATH="$ROOT/scripts" python3 - "$REEL_DIR/beat_sheet.json" <<'PY'
+import json, beat_plan
+import sys
 bs = json.load(open(sys.argv[1]))
 print(1 if any(beat_plan.fill_plan(b).get('method') == 'manim' for b in bs.get('beats', [])) else 0)
-" "$REEL_DIR/beat_sheet.json")
+PY
+)
 fi
 
 GFX="$ROOT/manim"
@@ -62,15 +89,21 @@ elif [ "$(basename "$REEL_DIR")" != "vox-electoral-college" ]; then
   exit 2
 fi
 QC="$ROOT/qc"
+if [ "$ART_QC" = "1" ]; then
+  for gate in beat_lint.py gate_shape.py static_scene_check.py wcag_margin_check.py manim_layout_audit.py final_frame_check.py; do
+    [ -f "$QC/$gate" ] || { echo "[run] missing required QC tool: $gate"; exit 2; }
+  done
+fi
 mkdir -p "$REEL_DIR/manim" "$REEL_DIR/media" "$REEL_DIR/pantry" "$REEL_DIR/images" "$REEL_DIR/mp4"
 
 SCENES=""
 if [ -n "$GFXFILE" ]; then
-  SCENES=$(python3 -c "
-import re
-src = open('$GFX/$GFXFILE').read()
+  SCENES=$(python3 - "$GFX/$GFXFILE" <<'PY'
+import re, sys
+src = open(sys.argv[1]).read()
 print(' '.join(m.group(1) for m in re.finditer(r'class ([A-Z][A-Za-z0-9]*_\w+)\(Scene\)', src)))
-")
+PY
+)
 fi
 
 # ---- figure out which scenes are actually pending (slot not filled)
@@ -88,7 +121,7 @@ if [ -z "$PENDING" ]; then
 fi
 
 # ---- GATE F: no rendering without the paperwork set (facts + work order + prompts)
-if [ "${ART_FACTS:-1}" = "1" ] && [ -n "$PENDING" ]; then
+if [ "${ART_FACTS:-1}" = "1" ]; then
   for REQ in FACTCHECK.md SHOTLIST.md PROMPTS.md; do
     if [ ! -f "$REEL_DIR/$REQ" ]; then
       echo "[run] GATE F FAILED: $REEL_DIR has no $REQ — the paperwork set"
@@ -198,20 +231,15 @@ cd "$ROOT"
 # ---- Remotion fill-in: render every beat that carries shot.remotion.pattern to
 # media/<BID>.mp4 BEFORE compile, so annotated Remotion beats don't fall to slates.
 # run.sh renders Manim above; without this pass Remotion beats never rendered.
-# Soft-fail: a Remotion render error leaves that beat a slate, never aborts the run.
-if [ -f scripts/remotion_scenes.py ]; then
-  python3 scripts/remotion_scenes.py "$REEL_DIR" \
-    || echo "[run] remotion_scenes soft-fail — annotated Remotion beats stay slates"
-fi
+python3 scripts/remotion_scenes.py "$REEL_DIR"
 
 # (mascot outro stage removed in the brutalist toolkit — the outro is the
 #  ClaudeTitleOutro Remotion beat, rendered by remotion_scenes.py above)
 
 # slate cut — always ({slug}-slate.mp4: shows slates + beat labels)
 python3 scripts/compile.py "$REEL_DIR" --review --height "$HEIGHT"
-# final cut — clean master ({slug}.mp4) when no slates remain; refuses (soft) otherwise
-python3 scripts/compile.py "$REEL_DIR" --height "$HEIGHT" \
-  || echo "[run] final cut skipped — reel still has unfilled slates (the -slate.mp4 is ready)"
+# Review only. A clean final requires the compiler's mandatory verification
+# and atomic promotion, invoked explicitly with ./art final <reel>.
 
 # ---- GATE V: frame-level visual QC on the COMPILED reel (every beat: Manim,
 # Remotion, composer, slate). Catches edge-bleed/clipping, canvas underfill
@@ -220,14 +248,13 @@ if [ "$ART_QC" = "1" ] && [ -f "$QC/final_frame_check.py" ]; then
   echo "[run] GATE V — frame-level visual QC on the compiled reel"
   rc=0
   LENIENT=""; [ "$ART_STRICT" = "1" ] || LENIENT="--lenient"
-  python3 "$QC/final_frame_check.py" "$REEL_DIR" $LENIENT || rc=$?
-  if [ "$rc" -eq 3 ]; then
-    echo "[run] GATE V skipped — needs Pillow + numpy + ffmpeg (pip install pillow numpy)."
-  elif [ "$rc" -ge 2 ]; then
+  SLUG=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1])).get("metadata",{}).get("slug",sys.argv[2]))' "$REEL_DIR/beat_sheet.json" "$(basename "$REEL_DIR")")
+  python3 "$QC/final_frame_check.py" "$REEL_DIR" --mp4 "$REEL_DIR/$SLUG-slate.mp4" $LENIENT || rc=$?
+  if [ "$rc" -ge 2 ]; then
     echo "[run] GATE V FAILED: visual defects in the compiled cut —"
     echo "[run] see $REEL_DIR/_qc/REPORT.md and _qc/contact_sheet.png."
     echo "[run] Fix the scene source and re-run. (ART_STRICT=0 downgrades MAJOR to warnings.)"
-    [ "$ART_STRICT" = "1" ] && exit 2
+    exit 2
   fi
 fi
 
@@ -235,12 +262,16 @@ fi
 python3 scripts/todo.py "$REEL_DIR" >/dev/null 2>&1 || true
 
 # ---- deliverables layout: finished cuts -> mp4/, filled stills -> images/
-for f in "$REEL_DIR"/*.mp4 "$REEL_DIR"/short/*.mp4; do
-  [ -f "$f" ] && cp -f "$f" "$REEL_DIR/mp4/" || true
-done
-for f in "$REEL_DIR"/media/*.png; do
-  [ -f "$f" ] && cp -f "$f" "$REEL_DIR/images/" || true
-done
+PYTHONPATH="$ROOT/scripts" python3 - "$REEL_DIR" <<'PY'
+import sys
+from pathlib import Path
+from build_safety import copy_asset
+reel = Path(sys.argv[1])
+for pattern, destination in (('*.mp4', 'mp4'), ('short/*.mp4', 'mp4'), ('media/*.png', 'images')):
+    for source in reel.glob(pattern):
+        if source.is_file():
+            copy_asset(source, reel / destination / source.name, reel)
+PY
 echo "[run] done → $REEL_DIR  (QC gates: $([ "$ART_QC" = "1" ] && echo on || echo OFF))"
-echo "[run] this was the FULL machine pass: motion graphics + outro done;"
+echo "[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master."
 echo "[run] any remaining slates are YOUR slots — see $REEL_DIR/SHOTLIST.md"

@@ -26,6 +26,12 @@ their own report: the selected narrator sets it up, the report plays untouched, 
 responds, the viewer gets a prompt to go deeper. The skill's job is the frame,
 never a re-edit of the fellow's work.
 
+For the weekly two-video/four-file requirement and browser-only GitHub/Drive
+handoff, follow [FELLOWS-SUBMISSION.md](../../../docs/FELLOWS-SUBMISSION.md).
+Runtime approval records and safe-export commands are specified in
+[PIPELINE-SAFETY.md](../../../docs/PIPELINE-SAFETY.md). This fellows workflow does
+not generate or deliver captions. Research transcription is text, not a CC track.
+
 ## The shared skeleton (a sibling of ai-explainer / cli-explainer)
 
 Same Claude-branded bookends as the siblings; the MIDDLE is the fellow's own
@@ -93,7 +99,7 @@ documented re-voice decision for the series, never a silent per-episode choice.
 | Slot | Value |
 |---|---|
 | Channel | `@HumanitariansAI` — folder chip and HAI logo bug on every beat (LOGO LAW; full-size on the outro). |
-| Persona / voice | **Fellow-selected narrator** — one persistent Kokoro voice per fellow. Suggested default: `af_*` for female-coded names, `am_*` for male-coded names; the fellow's preference wins. Record `voice_policy`, `voice_approval`, and the selected voice ID in the beat sheet. |
+| Persona / voice | **Fellow-selected narrator** — one persistent Kokoro voice per fellow. The fellow's explicit choice and human approval are required; a suggestion is not approval. Record `voice_policy`, the selected voice ID, and the fingerprint-bound `metadata.approvals.voice` record. |
 | Skin | Claude fidelity skin for the composer bookends (`tokens/claude.ts` — never retint); RESULT/notes graphics render in the **humanitarians palette** (`tokens/humanitarians.ts`) per ASK→RESULT LAW. |
 | Register | Teardown-warm, celebratory-but-honest (the profile-modifier rule): make the fellow's invisible work visible; any skepticism points at the problem space, never at the fellow. Professor Bear's notes are the honest-feedback beat — that's where critique lives, and it is constructive by construction. |
 | Output | `fellows/[first-name-last-initial]/[YYYY-MM-DD-short-weekly-description]/` — all lowercase kebab-case. |
@@ -107,7 +113,10 @@ B00  INTRO       ClaudeComposerAsk cold open. command = "I wonder what
                  one-line what-it-is). greeting: `Fellows, [Name]` (the
                  profile-modifier pattern — the subject takes the persona
                  slot; overrides the world-language hello). Narration: the selected narrator
-                 introduces the report and fellow.
+                 introduces the report and fellow. For weekly submissions, the
+                 opening narration follows the required "Hi, I am [your name]
+                 and this video is about [summary of the topic]" line; branded
+                 bookends do not displace it. Disclose AI narration clearly.
 B01–B03  THE WORK   2–3 beats. The selected narrator summarizes what the fellow built — from
                  the transcript, one idea per beat. Visuals: frames pulled
                  from the report (Ken Burns; FELLOW'S-WORK carve-out, below)
@@ -139,19 +148,17 @@ fellow's name, program/cohort, project name, and their public links VERBATIM
 
 ## The transcript (whisper first, everything hangs off it)
 
-Before any beat is authored, transcribe the report with **faster-whisper**
-(the toolkit's caption engine — same pipeline as music-video / deck-lecture):
+Before any beat is authored, transcribe the report with **faster-whisper** for
+research. Do not run the caption-delivery pipeline:
 
 ```bash
 ffmpeg -i "[report].mov" -vn -ac 1 -ar 16000 transcript/report.wav
-python3 -c "from faster_whisper import WhisperModel; ..."   # or the runtime caption script
+python3 -c "from faster_whisper import WhisperModel; ..."   # research transcription only
 ```
 
-Write `transcript/report.txt` + `transcript/report.srt`. The transcript feeds
-FOUR things: (1) the 2–3 summary beats, (2) the draft of Professor Bear's
-notes, (3) `description.txt`, (4) the report beat's caption track — the reel's
-`.srt` splices measured narration windows around the report's own aligned
-captions, so CC ships for the WHOLE episode including the fellow's segment.
+Write `transcript/report.txt`, retaining timestamps where useful for checking
+claims. It feeds the summary beats, the draft of Professor Bear's notes and
+`description.txt`. No `.srt`, caption burn-in or caption upload is required.
 
 **Screenshots:** pull stills for the summary beats with
 `ffmpeg -ss [t] -i "[report].mov" -frames:v 1 media/B01.png` — pick frames
@@ -166,8 +173,9 @@ never-publish). The fellows-specific law set:
 
 - **THE REPORT IS THE CLOCK (the one exception to audio-first).** Everywhere
   else narration MP3s are the master clock. The report beat's clock is the
-  report's own measured runtime; its own audio is muxed as-is. Transcode
-  container/resolution to the reel spec (1920×1080 h264, letterbox — never
+  report's own measured runtime; its own audio remains on the timeline. Transcode
+  container/resolution to the reel spec (3840×2160 landscape or 2160×3840 vertical,
+  h264/AAC, contain/letterbox — never
   crop or stretch), but never retime, trim, speed up, or talk over it. If the
   human wants a trimmed cut, that is an explicit request logged in
   BUILD-LOG.md — never the skill's own call.
@@ -195,7 +203,10 @@ never-publish). The fellows-specific law set:
   register, as a starting point — but the notes beats never go to audio until
   Bear has edited or signed `NOTES.md`. The selected narrator reads them AS Bear's notes
   ("Professor Bear's notes—"), so shipping an unsigned draft is
-  impersonation, not a shortcut. GATE N is logged in BUILD-LOG.md.
+  impersonation, not a shortcut. GATE N is logged in BUILD-LOG.md and bound to
+  the notes and exact spoken text in `metadata.approvals.professor_notes`.
+  The runtime blocks pending or stale records; `--no-gate` is not a bypass.
+  Never have an AI sign a human's approval record.
 - **HONESTY (people-sharpened, from the profile modifier).** Only claims the
   fellow's own report makes — never invent an accomplishment, metric, quote,
   credential, or link. Soft attributions stay soft. Log the source video
@@ -209,24 +220,32 @@ never-publish). The fellows-specific law set:
    `description.txt`. Metadata: `audience: "Humanitarians AI"`,
    `palette: "claude"` bookends / `humanitarians` results, `engine: "kokoro"`,
    `voice: "[fellow-persistent-kokoro-id]"`, `voice_policy:
-   "persistent-fellow-selected"`, `voice_approval: "APPROVED | PENDING"`,
-   `register: "Teardown-warm"`.
-3. **GATE N** — Bear signs `NOTES.md`.
+   "persistent-fellow-selected"`, `profile: "fellow-report"`,
+   `register: "Teardown-warm"`. B04 declares `kind: "source_report"`,
+   `clock: "source"`, `audio_policy: "preserve"`.
+3. **Human gates** — the fellow approves the persistent voice; Bear reviews
+   `NOTES.md` and its exact spoken wording. Inspect `art approvals [reel]
+   --fingerprints` and record only real sign-offs as described in PIPELINE-SAFETY.
 4. **Audio**: `python3 runtime/scripts/generate_audio_kokoro.py [reel]` — narration
    beats only; B04 is pass-through.
 5. **Transcode the report** into `media/B04.mp4` (letterboxed, own audio) —
-   applying SOUND REPAIR here if the report's audio needs it (loudnorm always;
+   applying SOUND REPAIR here if the report's audio needs it (measured loudness repair;
    denoise/high-pass as required; log filters in BUILD-LOG.md).
 6. **Render + assemble**: Remotion beats via
    `runtime/scripts/remotion_scenes.py [reel]` (foreground), then
-   `compile.py [reel]` — conform to audio everywhere, to the report's runtime
-   on B04; splice the caption tracks.
+   `art run [reel]` — review only; conform to audio everywhere and the report's
+   runtime on B04. `art vertical [reel]` prepares a separate full-length portrait
+   sheet; finish its native portrait graphics and render it independently.
 7. **QC**: the frame-level VISUAL QC LAW pass (sample frames, 9-point rubric,
    `_qc/REPORT.md`) — check the letterbox, the bug placement over the
-   fellow's footage, and caption legibility across the splice.
+   fellow's footage, visual legibility and sound continuity across the splice.
+   `art final [reel]` requires the final gates; use height 2160 for landscape and
+   height 3840 for the 9:16 master. Failed checks must not be presented as a final.
 8. Ship `BUILD-PROMPT.md` beside the beat sheet, as every reel does. Human
-   reviews; publishing (youtube-publisher, Fellows playlist on
-   @humanitariansai) is a separate, human-authorized step.
+   reviews. Source and small documents go to GitHub; videos and large media go
+   to Drive. Notify the PM with both links. PM-approved review uploads go to the
+   Q playlist; Professors Brown and Nina decide publication. No toolkit command
+   uploads, schedules or publishes. See FELLOWS-SUBMISSION for the complete gates.
 
 ## Naming
 

@@ -17,7 +17,7 @@ which engine spoke.
 
 VOICE SELECTION (mixed-engine sheets supported):
   - beat["voice"] = "af_bella" | "am_adam" | …  → that Kokoro voice
-  - metadata["voice_kokoro"]                    → folder default (else af_heart fallback)
+  - metadata["voice_kokoro"] or metadata["voice"] → folder default (must agree)
   - beat["engine"] = "nbb" (or any non-"kokoro" value) → SKIPPED here;
     run generate_audio_nbb.py --only <those beats> for them. A sheet can mix
     nbb body beats with kokoro bookends.
@@ -33,7 +33,7 @@ MODEL FILES (one-time, ~330MB total, no account needed):
 Install:  pip install kokoro-onnx        (and ffmpeg on PATH)
 
 Usage:
-    python3 generate_audio_kokoro.py path/to/<slug>              # nothing gates it
+    python3 generate_audio_kokoro.py path/to/<slug>              # human approval gates apply
     python3 generate_audio_kokoro.py path/to/<slug> --dry-run
     python3 generate_audio_kokoro.py path/to/<slug> --only B03 B08
     python3 generate_audio_kokoro.py --list-voices
@@ -45,10 +45,13 @@ import shutil
 import struct
 import subprocess
 import sys
+import tempfile
 import wave
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_safety import (BuildError, atomic_json, default_voice, is_source_report,
+                          intentional_silence, validate_project, validate_approvals, writable_path)
 # Spoken-form safety net. Inlined on purpose: the sandbox kept this in
 # generate_audio.py alongside the PAID ElevenLabs engine, which is excluded from
 # this cut by design — so importing from it left the FREE default engine unable
@@ -71,7 +74,7 @@ def normalize_for_tts(text: str) -> str:
 
 FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 FFPROBE = shutil.which("ffprobe") or "ffprobe"
-DEFAULT_VOICE = "am_onyx"   # VOICE-LOCK.md: am_onyx always
+DEFAULT_VOICE = "am_onyx"   # Non-fellows fallback; fellows require an approved choice.
 
 
 def model_paths():
@@ -118,17 +121,19 @@ def lang_for(voice: str) -> str:
 
 
 def write_mp3(samples, sample_rate, out_mp3: Path):
-    """numpy float samples → wav (stdlib) → mp3 (ffmpeg). No soundfile dep."""
-    tmp = out_mp3.with_suffix(".tmp.wav")
+    """Copy-on-write output: never follow a Short's legacy link into its parent."""
     ints = [max(-32768, min(32767, int(s * 32767))) for s in samples]
-    with wave.open(str(tmp), "wb") as w:
-        w.setnchannels(1)
-        w.setsampwidth(2)
-        w.setframerate(sample_rate)
-        w.writeframes(struct.pack(f"<{len(ints)}h", *ints))
-    subprocess.run([FFMPEG, "-y", "-v", "error", "-i", str(tmp),
-                    "-c:a", "libmp3lame", "-q:a", "2", str(out_mp3)], check=True)
-    tmp.unlink()
+    with tempfile.TemporaryDirectory(prefix='.tts-', dir=out_mp3.parent) as scratch:
+        tmp = Path(scratch) / 'audio.wav'
+        encoded = Path(scratch) / 'audio.mp3'
+        with wave.open(str(tmp), "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(sample_rate)
+            w.writeframes(struct.pack(f"<{len(ints)}h", *ints))
+        subprocess.run([FFMPEG, "-y", "-v", "error", "-i", str(tmp),
+                        "-c:a", "libmp3lame", "-q:a", "2", str(encoded)], check=True)
+        os.replace(encoded, out_mp3)
 
 
 def measure(path: Path) -> float:
@@ -145,7 +150,7 @@ def main():
     ap.add_argument("--speed", type=float, default=1.0)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-gate", action="store_true",
-                    help="deprecated no-op; nothing gates free audio")
+                    help="deprecated; cannot bypass human approvals")
     ap.add_argument("--list-voices", action="store_true")
     ap.add_argument("--sheet", default="beat_sheet.json",
                     help="beat sheet filename to read/write (default: beat_sheet.json)")
@@ -160,7 +165,7 @@ def main():
         sys.exit("[kokoro] need a video folder (or --list-voices)")
 
     folder = a.folder.resolve()
-    sheet_path = folder / a.sheet
+    sheet_path = writable_path(folder, a.sheet)
     sheet = json.loads(sheet_path.read_text())
     # Schema normalisation: v1 uses "id"; v2 uses "beat_id". Accept both.
     for _b in sheet.get("beats", []):
@@ -174,16 +179,16 @@ def main():
                     _b["actual_duration_s"] = float(_b[_k])
                     break
     md = sheet["metadata"]
-    default_voice = md.get("voice_kokoro", DEFAULT_VOICE)
-
-    ped = folder / "PEDAGOGY.md"
-    if not (ped.exists() and "VERDICT: PASS" in ped.read_text()):
-        print("[kokoro] note: no PEDAGOGY.md VERDICT: PASS — generating anyway "
-              "(%s)" % "the four human gates are abolished; see VOICE-LOCK.md")
+    validate_project(sheet)
+    validate_approvals(folder, sheet)
+    selected_voice = default_voice(sheet)
 
     todo = []
     for b in sheet["beats"]:
         bid = b["beat_id"]
+        if is_source_report(b, sheet) or intentional_silence(b):
+            print(f"[kokoro] {bid} SKIPPED — source audio / intentional silence")
+            continue
         text = (b.get("narration_text") or "").strip()
         if not text:
             continue
@@ -199,7 +204,7 @@ def main():
             print(f"[kokoro] {bid}  engine={engine} — skipped (run its own "
                   f"generator, e.g. generate_audio.py --only {bid})")
             continue
-        voice = b.get("voice") or default_voice
+        voice = b.get("voice") or selected_voice
         todo.append((b, voice, text))
 
     if a.dry_run:
@@ -209,6 +214,9 @@ def main():
         print(f"[kokoro] {len(todo)} beat(s) would generate — cost: $0.00")
         return 0
 
+    if not todo:
+        print('[kokoro] no narration to generate')
+        return 0
     k = load_engine()
     known = set(k.get_voices())
     bad = sorted({v for _, v, _ in todo} - known)
@@ -216,26 +224,29 @@ def main():
         sys.exit(f"[kokoro] unknown voice(s): {', '.join(bad)} — "
                  f"see --list-voices")
 
-    (folder / "mp3").mkdir(exist_ok=True)
-    timings_path = folder / "mp3" / "timings.json"
+    writable_path(folder, 'mp3/timings.json').parent.mkdir(exist_ok=True)
+    timings_path = writable_path(folder, 'mp3/timings.json')
     timings = json.loads(timings_path.read_text()) if timings_path.exists() else {}
     for b, voice, text in todo:
         bid = b["beat_id"]
         samples, sr = k.create(normalize_for_tts(text), voice=voice,
                                speed=a.speed, lang=lang_for(voice))
-        out = folder / "mp3" / f"beat-{bid}.mp3"
+        out = writable_path(folder, f"mp3/beat-{bid}.mp3")
         write_mp3(samples, sr, out)
         dur = measure(out)
         b["audio_file"] = f"mp3/beat-{bid}.mp3"
         b["actual_duration_s"] = round(dur, 2)
         timings[bid] = round(dur, 2)
         print(f"[kokoro] beat-{bid}.mp3  {dur:.2f}s  voice={voice}")
-    sheet_path.write_text(json.dumps(sheet, indent=1, ensure_ascii=False))
-    timings_path.write_text(json.dumps(timings, indent=1))
+    atomic_json(sheet_path, sheet)
+    atomic_json(timings_path, timings)
     print(f"[kokoro] {len(todo)} beat(s) generated · cost $0.00 · durations "
           f"are GROUND TRUTH, same as generate_audio.py")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except BuildError as exc:
+        raise SystemExit(f'[kokoro] REFUSED: {exc}')

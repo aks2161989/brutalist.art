@@ -10,8 +10,8 @@ This script does the mechanical rest:
   - images  -> media/<BID>.png  (DOCUMENT beats: non-16:9 scans are cropped
                to 16:9, anchored top-center so the title stays — override
                with --doc-anchor 0..1, 0 = top)
-  - videos  -> media/<BID>.mp4 with the AUDIO STRIPPED (narration is the
-               only voice on the timeline)
+  - videos  -> media/<BID>.mp4; b-roll audio stripped, source_report audio
+               preserved (AAC for MP4 compatibility, including PCM .mov inputs)
   - sidecar stubs (<BID>.source.txt) created when missing — ai/higgsfield
     clips get a disclosure line per SKILL.md provenance rules
   - warns: clip shorter than the beat (freeze-pad territory), undersized
@@ -21,8 +21,9 @@ Usage: python3 scripts/pantry.py reels/<slug> [--doc-anchor 0.0]
 Idempotent: reprocesses whatever is in pantry/; compile's hash manifest
 decides what actually recompiles.
 """
-import argparse, json, re, shutil, subprocess, sys
+import argparse, json, re, shutil, subprocess, sys, tempfile, os
 from pathlib import Path
+from build_safety import is_source_report, writable_path, validate_project
 
 FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 FFPROBE = shutil.which("ffprobe") or "ffprobe"
@@ -46,11 +47,12 @@ def main():
                     help="vertical anchor for DOCUMENT 16:9 crops (0=top)")
     a = ap.parse_args()
     folder = a.folder.resolve()
-    pantry, media = folder / "pantry", folder / "media"
+    pantry, media = folder / "pantry", writable_path(folder, 'media/.check').parent
     if not pantry.is_dir():
         sys.exit(f"[pantry] no pantry/ in {folder}")
     media.mkdir(exist_ok=True)
     sheet = json.loads((folder / "beat_sheet.json").read_text())
+    validate_project(sheet)
     beats = {b["beat_id"]: b for b in sheet["beats"]}
 
     from PIL import Image
@@ -79,20 +81,27 @@ def main():
                 vw, vh = (int(x) for x in r.stdout.strip().splitlines()[0].split(","))
             except (ValueError, IndexError):
                 vw, vh = 16, 9
-            suffix = "-916" if vh > vw else ""
-            out = media / f"{bid}{suffix}.mp4"
-            subprocess.run([FFMPEG, "-y", "-v", "error", "-i", str(f),
-                            "-c:v", "copy", "-an", str(out)], check=True)
+            report = is_source_report(beat, sheet)
+            suffix = "-916" if vh > vw and not report else ""
+            out = writable_path(folder, f"media/{bid}{suffix}.mp4")
+            # Reports keep embedded sound and native framing for the compiler.
+            # Generated narration remains the soundtrack for ordinary b-roll.
+            with tempfile.TemporaryDirectory(prefix='.pantry-', dir=media) as scratch:
+                candidate = Path(scratch) / 'slot.mp4'
+                audio = ['-map', '0:a:0', '-c:a', 'aac', '-b:a', '192k'] if report else ['-an']
+                subprocess.run([FFMPEG, '-y', '-v', 'error', '-i', str(f),
+                                '-map', '0:v:0', '-c:v', 'copy'] + audio + [str(candidate)], check=True)
+                os.replace(candidate, out)
             if suffix:
                 print(f"[pantry] {bid}  PORTRAIT clip -> media/{out.name} (9:16 override)")
             d, need = probe_dur(out), float(beat.get("actual_duration_s") or 0)
             note = ""
-            if d and need and d < need * 0.85:
+            if not report and d and need and d < need * 0.85:
                 note = (f"  · clip {d:.1f}s < beat {need:.1f}s — will slow "
                         f"{need / d:.1f}x to fit" +
                         ("  ⚠ extreme slow-mo, consider a longer generation"
                          if need / d > 3.0 else ""))
-            print(f"[pantry] {bid}  VIDEO  sound stripped -> media/{bid}.mp4{note}")
+            print(f"[pantry] {bid} VIDEO sound {'preserved' if report else 'stripped'} -> {out.name}{note}")
             looks_gen = any(t in f.name for t in ("hf_", "humanitarians.ai", "midjourney", "_mj_", "grok"))
             if shot.get("source") == "archive" and looks_gen:
                 print(f"[pantry] {bid}  ⚠ sheet says source=archive but file looks "

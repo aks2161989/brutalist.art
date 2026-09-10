@@ -25,9 +25,14 @@ Usage:
 
 Free/local. No API calls. ffmpeg + Pillow + Python stdlib.
 """
-import argparse, hashlib, json, os, shutil, subprocess, sys
+import argparse, hashlib, json, os, shutil, subprocess, sys, tempfile, re, copy, math
+from datetime import datetime, timezone
 from collections import Counter
 from pathlib import Path
+from build_safety import (BuildError, ApprovalError, atomic_json, file_digest,
+                          is_source_report, intentional_silence, positive_duration,
+                          require_paperwork, validate_approvals, validate_project,
+                          writable_path, record_failure)
 
 # Ensure Unicode log output works on Windows terminals/pipes.
 if hasattr(sys.stdout, "reconfigure"):
@@ -45,7 +50,7 @@ LADDER_REFUSE = 0.15          # >15% short → loud warning (still freeze-padded
 def sh(cmd, **kw):
     r = subprocess.run(cmd, capture_output=True, text=True, **kw)
     if r.returncode != 0:
-        sys.exit(f"[art] ffmpeg failed:\n{' '.join(map(str, cmd))}\n{r.stderr[-1200:]}")
+        raise BuildError(f"[art] command failed:\n{' '.join(map(str, cmd))}\n{r.stderr[-1200:]}")
     return r
 
 def probe_dur(path):
@@ -218,8 +223,17 @@ def _log_replace(folder, bid, msg):
 
 
 def compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
+    # A failed rebuild must leave the previous cache entry intact.
+    with tempfile.TemporaryDirectory(prefix='.clip-', dir=out.parent) as scratch:
+        candidate = Path(scratch) / 'clip.mp4'
+        result = _compile_clip(folder, beat, candidate, w, h, fps, font, work, fit)
+        os.replace(candidate, out)
+        return result
+
+
+def _compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
     bid = beat["beat_id"]
-    dur = float(beat.get("actual_duration_s") or beat.get("estimated_duration_s") or 6.0)
+    dur = beat_duration(beat)
     shot = beat.get("shot", {})
     src, status = resolve_slot(folder, bid)
     # Per-clip normalize: near-visually-lossless so this pass is NOT a real
@@ -229,7 +243,14 @@ def compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
            "-pix_fmt", "yuv420p", "-r", str(fps), "-an", str(out)]
     treat = vf_treatment(shot.get("source", "own"), shot.get("treatment"))
 
-    if status in ("VIDEO", "MANIM"):
+    if is_source_report(beat):
+        if status != 'VIDEO':
+            raise BuildError(f'{bid}: source report video is missing')
+        # Embedded audio joins the master separately. Never retime, center-cut,
+        # stylize or crop the fellow's evidence to fit a narration estimate.
+        cmd = [FFMPEG, '-y', '-i', src, '-vf', vf_fit(w, h, 'pad') + f',tpad=stop_mode=clone:stop_duration={1/fps}',
+               '-t', f'{dur:.6f}'] + enc
+    elif status in ("VIDEO", "MANIM"):
         d = probe_dur(src) or dur
         vf = [vf_fit(w, h, fit)]
         if treat and status == "VIDEO":
@@ -310,7 +331,7 @@ def make_qc_sheet(folder, beats, clips, work, font):
     tiles, tw, th = [], 480, 270
     for b in beats:
         bid = b["beat_id"]
-        dur = float(b.get("actual_duration_s") or b.get("estimated_duration_s") or 6.0)
+        dur = beat_duration(b)
         clip = clips / f"{bid}.mp4"
         frame = work / f"qc-{bid}.png"
         subprocess.run([FFMPEG, "-y", "-ss", f"{dur / 2:.2f}", "-i", str(clip),
@@ -335,18 +356,112 @@ def make_qc_sheet(folder, beats, clips, work, font):
     return out
 
 
+def concat_line(path):
+    return "file '" + str(Path(path).resolve()).replace("'", "'\\''") + "'\n"
+
+
+def probe_streams(path):
+    r = sh([FFPROBE, '-v', 'error', '-show_streams', '-show_format', '-of', 'json', path])
+    return json.loads(r.stdout)
+
+
+def require_audible(path, label):
+    r = sh([FFMPEG, '-hide_banner', '-i', path, '-vn', '-af', 'volumedetect', '-f', 'null', '-'])
+    m = re.search(r'max_volume:\s*([-\w.]+) dB', r.stderr)
+    if not m or float(m.group(1)) <= -80:
+        raise BuildError(f'{label}: required audio is silent; declare audio_policy=silence only if intentional')
+
+
+def beat_duration(beat):
+    return positive_duration(beat.get('render_duration_s') or beat.get('actual_duration_s')
+                             or beat.get('estimated_duration_s'), beat['beat_id'])
+
+
+def prepare_timeline(folder, sheet, fps):
+    for beat in sheet['beats']:
+        if is_source_report(beat, sheet):
+            src, status = resolve_slot(folder, beat['beat_id'])
+            if status != 'VIDEO':
+                raise BuildError(f"{beat['beat_id']}: source report must exist at media/<beat_id>.mp4")
+            beat['kind'] = 'source_report'
+            beat['clock'] = 'source'
+            beat.setdefault('audio_policy', 'preserve')
+            beat['actual_duration_s'] = positive_duration(probe_dur(src), beat['beat_id'])
+        measured = positive_duration(beat.get('actual_duration_s') or beat.get('estimated_duration_s'), beat['beat_id'])
+        # Pad, never truncate, the sub-frame tail. Audio and video now share
+        # exactly the same frame boundaries without accumulating concat drift.
+        beat['render_duration_s'] = math.ceil(measured * fps - 1e-8) / fps
+
+
 def build_master_audio(folder, beats, cli_audio, tmp):
-    """Per-beat audio/ mp3s win; else --audio master; else silence."""
-    per_beat = [folder / (b.get("audio_file") or f"audio/{b['beat_id']}.mp3") for b in beats]
-    if all(p.exists() for p in per_beat):
-        lst = tmp / "audio.txt"
-        lst.write_text("".join(f"file '{p.resolve()}'\n" for p in per_beat))
-        out = tmp / "master.m4a"
-        sh([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", lst, "-c:a", "aac", str(out)])
-        return out, "per-beat narration"
-    if cli_audio and Path(cli_audio).exists():
-        return Path(cli_audio), "master track"
-    return None, "silent"
+    """Assemble a complete clocked audio timeline; a missing track is an error."""
+    total = sum(beat_duration(b) for b in beats)
+    if cli_audio:
+        if any(is_source_report(b) for b in beats):
+            raise BuildError('--audio cannot replace the embedded soundtrack of a source report')
+        path = Path(cli_audio)
+        if not path.is_file() or abs((probe_dur(path) or 0) - total) > 0.15:
+            raise BuildError('--audio must exist and match the complete timeline duration')
+        require_audible(path, 'Master track')
+        return path, 'explicit master track'
+    wavs = []
+    for b in beats:
+        bid = b['beat_id']
+        dur = beat_duration(b)
+        wav = tmp / f'audio-{bid}.wav'
+        if intentional_silence(b):
+            inputs = ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo']
+        else:
+            src = resolve_slot(folder, bid)[0] if is_source_report(b) else (
+                folder / (b.get('audio_file') or f'audio/{bid}.mp3'))
+            if src is None or not src.is_file():
+                raise BuildError(f'{bid}: missing required audio ({src}); no silent fallback')
+            streams = probe_streams(src)['streams']
+            if not any(s.get('codec_type') == 'audio' for s in streams):
+                raise BuildError(f'{bid}: source has no audio stream')
+            require_audible(src, bid)
+            if not is_source_report(b) and abs((probe_dur(src) or 0) - dur) > 0.15:
+                raise BuildError(f'{bid}: narration duration disagrees with the beat; regenerate/measure audio')
+            inputs = ['-i', src]
+        # Separate PCM segments avoid MP3 concat padding/drift; explicit padding
+        # only fills the segment's remaining tail, never shifts following beats.
+        sh([FFMPEG, '-y', '-v', 'error'] + inputs + ['-map', '0:a:0', '-vn',
+            '-af', 'apad', '-t', f'{dur:.6f}', '-ar', '48000', '-ac', '2', '-c:a', 'pcm_s16le', wav])
+        wavs.append(wav)
+    lst = tmp / 'audio.txt'
+    lst.write_text(''.join(concat_line(p) for p in wavs))
+    out = tmp / 'master.wav'
+    sh([FFMPEG, '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lst,
+        '-c:a', 'pcm_s16le', out])
+    return out, 'per-beat timeline (source audio preserved)'
+
+
+def verify_output(path, total, fps, audible):
+    probe = probe_streams(path)
+    kinds = {s.get('codec_type') for s in probe['streams']}
+    if not {'audio', 'video'} <= kinds:
+        raise BuildError('Final must contain decodable video and audio streams')
+    duration = positive_duration(probe.get('format', {}).get('duration'), 'Output')
+    if abs(duration - total) > max(0.15, 2 / fps):
+        raise BuildError(f'Output duration {duration:.3f}s does not match timeline {total:.3f}s')
+    sh([FFMPEG, '-v', 'error', '-xerror', '-i', path, '-f', 'null', '-'])
+    if audible:
+        require_audible(path, 'Compiled output')
+
+
+def final_preflight(folder, sheet, sheet_name):
+    require_paperwork(folder)
+    for name in ('beat_lint.py', 'gate_shape.py'):
+        gate = Path(__file__).resolve().parents[1] / 'qc' / name
+        if not gate.is_file():
+            raise BuildError(f'Missing required final gate: {gate.name}')
+        sh([sys.executable, gate, folder / sheet_name])
+    md = sheet.get('metadata') or {}
+    if md.get('kind') == 'short':
+        if md.get('short_validation', {}).get('status') != 'ready':
+            raise BuildError('Short needs a ready portrait plan before final export')
+        # Related-video selection and channel-wide spacing happen at scheduling
+        # time in the separate publishing workflow, not while rendering files.
 
 def _filled_by(beat, status):
     """Name the thing that actually filled this slot, for the build stamp."""
@@ -468,10 +583,7 @@ def stamp_sheet(folder, sheet, report, cut, sheet_name="beat_sheet.json"):
             "filled": len(report) - len(slates), "of": len(report),
             "slates": slates, "skin_warnings": warns,
         }
-        (folder / sheet_name).write_text(
-            json.dumps(sheet, indent=2, ensure_ascii=False),
-            encoding="utf-8"
-        )
+        atomic_json(writable_path(folder, sheet_name), sheet)
         print(f"[art] build stamp → {sheet_name} "
               f"({len(report) - len(slates)}/{len(report)} filled)")
     except Exception as e:                                  # never fatal
@@ -487,8 +599,7 @@ def main():
     ap.add_argument("--audio", help="master audio file (music bed / narration mix)")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--allow-slates", action="store_true",
-                    help="permit slates in a CLEAN master (default: refuse — "
-                         "a slate in a review cut is information, in a master it's a defect)")
+                    help="legacy review-only option; final masters always reject slates")
     ap.add_argument("--out", type=Path, default=None, metavar="DIR",
                     help="directory to write the master into — any folder, including a "
                          "Google Drive mount. Explicit --out always wins. Without it, a "
@@ -497,28 +608,80 @@ def main():
     ap.add_argument("--sheet", default="beat_sheet.json",
                     help="beat sheet filename (default: beat_sheet.json)")
     a = ap.parse_args()
+    try:
+        return compile_reel(a)
+    except (BuildError, OSError, ValueError, KeyError, TypeError, subprocess.SubprocessError) as exc:
+        if a.folder.is_dir():
+            record_failure(a.folder, exc, 'blocked' if isinstance(exc, ApprovalError) else 'failed')
+        print(f'[art] REFUSED: {exc}', file=sys.stderr)
+        return 2
+
+
+def compile_reel(a):
     folder = a.folder.resolve()
-    sheet = json.loads((folder / a.sheet).read_text(encoding="utf-8"))
+    sheet = json.loads(
+        writable_path(folder, a.sheet).read_text(encoding="utf-8")
+    )
+    original_sheet = copy.deepcopy(sheet)
+    validate_project(sheet)
+    atomic_json(writable_path(folder, "build-state.json"), {"status": "planned"})
+    validate_approvals(folder, sheet)
+
+    if not a.review:
+        if a.allow_slates:
+            raise BuildError(
+                "--allow-slates is review-only; a final cannot contain missing visuals"
+            )
+        final_preflight(folder, sheet, a.sheet)
+
+    if a.fps <= 0:
+        raise BuildError("FPS must be positive")
+
+    prepare_timeline(folder, sheet, a.fps)
     beats = sheet["beats"]
+    inputs = set()
+    for b in beats:
+        source, _ = resolve_slot(folder, b['beat_id'])
+        if source:
+            inputs.add(source.resolve())
+        if not is_source_report(b) and not intentional_silence(b):
+            inputs.add((folder / (b.get('audio_file') or f"mp3/beat-{b['beat_id']}.mp3")).resolve())
+    if a.audio:
+        inputs.add(Path(a.audio).resolve())
+        # A supplied master replaces ordinary per-beat narration requirements.
+        inputs = {p for p in inputs if p.is_file()}
+    for p in inputs:
+        if not p.is_file():
+            raise BuildError(f'missing required audio or media: {p}')
+    input_hashes = {str(p): file_digest(p) for p in sorted(inputs)}
+    if (sheet.get('metadata', {}).get('kind') == 'short'
+            and sum(beat_duration(b) for b in beats) > 180):
+        raise BuildError('Short exceeds 180 seconds after measurement; use a full-length vertical deliverable')
     ar = sheet.get("metadata", {}).get("aspect_ratio", "16:9")
     num, den = (int(x) for x in ar.split(":"))
+    if a.height <= 0 or a.height % 2 or a.fps <= 0 or num <= 0 or den <= 0:
+        raise BuildError('Height must be positive/even; FPS and aspect ratio must be positive')
     h = a.height; w = int(round(h * num / den / 2) * 2)
     fps, font = a.fps, find_font()
     drawtext = has_drawtext()
-    clips = folder / "clips"; clips.mkdir(exist_ok=True)
-    work = clips / "_work"; work.mkdir(exist_ok=True)
-    (folder / "media").mkdir(exist_ok=True)
+    clips = writable_path(folder, 'clips/manifest.json').parent; clips.mkdir(exist_ok=True)
+    work = writable_path(folder, 'clips/_work/.check').parent; work.mkdir(exist_ok=True)
+    writable_path(folder, '_qc/.check').parent.mkdir(exist_ok=True)
+    writable_path(folder, 'media/.check').parent.mkdir(exist_ok=True)
     man_path = clips / "manifest.json"
     manifest = json.loads(man_path.read_text()) if man_path.exists() else {}
+    # Validate/assemble all sound before spending time on visual renders.
+    audio, akind = build_master_audio(folder, beats, a.audio, work)
+    atomic_json(writable_path(folder, 'build-state.json'), {'status': 'rendering'})
 
     report, t0 = [], 0.0
     for b in beats:
         bid = b["beat_id"]
-        dur = float(b.get("actual_duration_s") or b.get("estimated_duration_s") or 6.0)
-        out = clips / f"{bid}.mp4"
+        dur = beat_duration(b)
+        out = writable_path(folder, f"clips/{bid}.mp4")
         src, status = resolve_slot(folder, bid)
         bshot = b.get("shot", {})
-        key = (f"L3|{w}x{h}@{fps}|{sheet.get('metadata', {}).get('fit', 'crop')}"
+        key = (f"L4|{w}x{h}@{fps}|{sheet.get('metadata', {}).get('fit', 'crop')}|report={is_source_report(b)}"
                f"|{dur:.3f}|{bshot.get('motion', '')}"
                f"|{bshot.get('focus', '')}|{bshot.get('treatment', '')}|"
                + (sha1(src) if src else "slate"))
@@ -526,25 +689,20 @@ def main():
             src, status = compile_clip(folder, b, out, w, h, fps, font, work,
                                        fit=sheet.get("metadata", {}).get("fit", "crop"))
             manifest[bid] = key
-            man_path.write_text(json.dumps(manifest, indent=1))  # crash-safe
+            atomic_json(man_path, manifest)
             print(f"[art] compiled {bid}  {status:6}  {dur:5.1f}s" +
                   (f"  ← {src.name}" if src else ""), flush=True)
         report.append((bid, t0, dur, status, b.get("shot", {}).get("type", "?")))
         t0 += dur
-    man_path.write_text(json.dumps(manifest, indent=1))
-
-    # BUILD STAMP: write what actually happened back into the beat sheet —
-    # before the master-law gate, so a refused master still leaves a record.
-    stamp_sheet(folder, sheet, report, cut=("review" if a.review else "master"),
-                sheet_name=a.sheet)
+    atomic_json(man_path, manifest)
 
     # THE MASTER LAW: no slates in a clean master. Review cuts show slates as
     # information; a master with a slate is an unfinished film shipping.
     slated = [bid for bid, _, _, status, _ in report if status == "SLATE"]
     if slated and not a.review and not a.allow_slates:
-        sys.exit(f"[art] REFUSED: clean master would carry {len(slated)} slate(s): "
+        raise BuildError(f"[art] REFUSED: clean master would carry {len(slated)} slate(s): "
                  f"{' '.join(slated)} — run run.sh to render/fill them "
-                 f"(or --allow-slates to override deliberately)")
+                 f"(use --review to inspect unfinished work)")
 
     # motion pantry lint (MOTION.md): no language carries > ~40% of beats
     def _eff_motion(b):
@@ -563,10 +721,8 @@ def main():
                   f"convert the excess to another language (MOTION.md)")
 
     lst = clips / "concat.txt"
-    lst.write_text("".join(f"file '{(clips / (b['beat_id'] + '.mp4')).resolve()}'\n"
-                           for b in beats))
-    total = sum(float(b.get("actual_duration_s") or b.get("estimated_duration_s") or 6.0) for b in beats)
-    audio, akind = build_master_audio(folder, beats, a.audio, clips)
+    lst.write_text(''.join(concat_line(clips / (b['beat_id'] + '.mp4')) for b in beats))
+    total = sum(beat_duration(b) for b in beats)
 
     slug = sheet.get("metadata", {}).get("slug", folder.name)
 
@@ -578,10 +734,10 @@ def main():
     #   2. $ART_OUT         the downloader's configured render folder (.env)
     #   3. <toolkit>/renders/   built-in default, so it works with zero config
     # A --review cut is a working artifact and always stays beside the reel.
-    if a.out:
-        out_dir = a.out
-    elif a.review:
+    if a.review:
         out_dir = folder
+    elif a.out:
+        out_dir = a.out
     else:
         env_out = os.environ.get("ART_OUT", "").strip()
         out_dir = Path(env_out).expanduser() if env_out \
@@ -657,7 +813,38 @@ def main():
     cmd += ["-c:v", "libx264", "-preset", "slow", "-crf", "16",
             "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest",
             "-t", f"{total:.3f}", str(out)]
-    sh(cmd)
+    # Encode to a candidate. A previous verified final remains untouched if any
+    # encode, approval re-check, media inspection or required QC gate fails.
+    with tempfile.TemporaryDirectory(prefix=f'.{slug}-candidate-', dir=out_dir) as scratch:
+        candidate = Path(scratch) / 'candidate.mp4'
+        cmd[-1] = str(candidate)
+        sh(cmd)
+        verify_output(candidate, total, fps, bool(a.audio) or any(not intentional_silence(b) for b in beats))
+        if not a.review:
+            atomic_json(writable_path(folder, 'build-state.json'), {'status': 'verifying'})
+            gate = Path(__file__).resolve().parents[1] / 'qc' / 'final_frame_check.py'
+            if not gate.is_file():
+                raise BuildError('Missing required final-frame checker')
+            # Use the resolved source-clock sheet, not stale authored estimates.
+            timeline = work / 'resolved-sheet.json'
+            atomic_json(timeline, sheet)
+            sh([sys.executable, gate, folder, '--mp4', candidate, '--sheet', timeline])
+            latest = json.loads((folder / a.sheet).read_text())
+            validate_approvals(folder, latest)
+            # No approval or source edit during an encode may authorize this cut.
+            if latest != original_sheet:
+                raise BuildError('Beat sheet changed during rendering; rebuild the new revision')
+            if any(not Path(p).is_file() or file_digest(p) != value for p, value in input_hashes.items()):
+                raise BuildError('Source media or narration changed during rendering; rebuild the new revision')
+        os.replace(candidate, out)
+    stamp_sheet(folder, sheet, report, cut=('review' if a.review else 'master'), sheet_name=a.sheet)
+    state = {'status': 'review' if a.review else 'ready', 'output': str(out.resolve()),
+             'sha256': file_digest(out), 'duration_s': total,
+             'input_sha256': input_hashes,
+             'at': datetime.now(timezone.utc).isoformat()}
+    if not a.review:
+        atomic_json(out.with_suffix('.verified.json'), state)
+    atomic_json(writable_path(folder, 'build-state.json'), state)
 
     n_slate = sum(1 for r in report if r[3] == "SLATE")
     if a.review:
@@ -670,4 +857,4 @@ def main():
           " ".join(f"{bid}:{st}" for bid, _, _, st, _ in report))
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

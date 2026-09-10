@@ -53,7 +53,7 @@ echo "[smoke] --- render + compile (run.sh) ---"
 # them MAJOR; that check is about production-content polish, not pipeline
 # health, and this script verifies the real signals (audio, streams, size)
 # itself below. GATE L and every render/compile step still run for real.
-if ! ART_QC=1 ART_STRICT=0 bash "$ROOT/scripts/run.sh" "$WORK" 2>&1 | tee "$WORK/.run.log"; then
+if ! ART_FACTS=0 ART_QC=1 ART_STRICT=0 bash "$ROOT/scripts/run.sh" "$WORK" 2>&1 | tee "$WORK/.run.log"; then
   fail "run.sh exited non-zero — see $WORK/.run.log"
 fi
 

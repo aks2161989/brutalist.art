@@ -28,14 +28,24 @@ Usage:
   final_frame_check.py --frames-dir <dir>   # test mode: analyze PNGs directly
 """
 import argparse, glob, json, os, subprocess, sys, tempfile
-
-import sys
+import argparse, glob, json, os, subprocess, sys, tempfile
+from pathlib import Path
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
-    
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+
+from build_safety import (
+    BuildError,
+    is_source_report,
+    positive_duration,
+    validate_project,
+    writable_path,
+    atomic_text,
+)
 try:
     from PIL import Image
     import numpy as np
@@ -103,7 +113,7 @@ def analyze_frame(path):
     defects = []
     ink_frac = ink.sum() / float(h * w)
     if ink_frac < 0.003:
-        return defects, 0.0  # near-empty frame (a fade / animate-in / hold) — skip, not a defect
+        return [('MAJOR', 'empty-frame', 'steady-state sample contains no visible content')], 0.0
 
     ys, xs = np.where(ink)
     x0, x1, y0, y1 = xs.min(), xs.max(), ys.min(), ys.max()
@@ -151,7 +161,7 @@ def sample_frames(mp4, outdir, fps=2):
     return sorted(glob.glob(os.path.join(outdir, "*.png")))
 
 
-def full_bleed_beats(reel):
+def full_bleed_beats(reel, sheet_path=None):
     """Beat ids that DECLARE themselves full-bleed, via `qc.full_bleed: true`.
 
     Some compositions fill the frame on purpose — a tiled logo sting, an
@@ -161,22 +171,24 @@ def full_bleed_beats(reel):
     whole reel. Underfill and every other check still apply.
     """
     try:
-        bs = json.load(open(os.path.join(reel, "beat_sheet.json")))
+        bs = json.load(open(sheet_path or os.path.join(reel, "beat_sheet.json")))
     except Exception:
         return set()
     return {b.get("beat_id") for b in bs.get("beats", [])
             if (b.get("qc") or {}).get("full_bleed") is True}
 
 
-def beat_spans(reel):
+def beat_spans(reel, sheet_path=None):
     """(beat_id, start_s, dur_s) per beat, from the beat sheet's durations."""
     try:
-        bs = json.load(open(os.path.join(reel, "beat_sheet.json")))
-    except Exception:
-        return []
+        bs = json.load(open(sheet_path or os.path.join(reel, "beat_sheet.json")))
+    except (OSError, ValueError) as exc:
+        raise BuildError(f'Cannot read QC beat sheet: {exc}')
+    validate_project(bs)
     t, spans = 0.0, []
     for b in bs.get("beats", []):
-        d = float(b.get("actual_duration_s") or b.get("estimated_duration_s") or 6.0)
+        d = positive_duration(b.get('render_duration_s') or b.get('actual_duration_s')
+                              or b.get('estimated_duration_s'), b.get('beat_id', '?'))
         spans.append((b.get("beat_id", "?"), t, d)); t += d
     return spans
 
@@ -190,10 +202,11 @@ def sample_beats(mp4, spans, outdir, fracs=(0.5, 0.85)):
         for fr in fracs:
             t = start + dur * fr
             out = os.path.join(outdir, f"{bid}_{int(fr*100)}.png")
-            subprocess.run(["ffmpeg", "-y", "-ss", f"{t:.2f}", "-i", mp4,
-                            "-frames:v", "1", out], capture_output=True)
-            if os.path.exists(out):
-                frames.append(out)
+            r = subprocess.run(["ffmpeg", "-y", "-ss", f"{t:.6f}", "-i", mp4,
+                                "-frames:v", "1", out], capture_output=True)
+            if r.returncode or not os.path.isfile(out) or os.path.getsize(out) == 0:
+                raise BuildError(f'Cannot inspect {bid} at {t:.3f}s; incomplete QC is not a pass')
+            frames.append(out)
     return frames
 
 
@@ -207,7 +220,10 @@ def contact_sheet(frames, out, cols=4, thumb=480):
     sheet = Image.new("RGB", (cols * tw, rows * th), (20, 20, 20))
     for i, im in enumerate(ims):
         sheet.paste(im.resize((tw, th)), ((i % cols) * tw, (i // cols) * th))
-    sheet.save(out)
+    with tempfile.TemporaryDirectory(prefix='.contact-', dir=Path(out).parent) as scratch:
+        candidate = Path(scratch) / 'contact.png'
+        sheet.save(candidate)
+        os.replace(candidate, out)
 
 
 def main():
@@ -215,14 +231,31 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("reel", nargs="?", help="reel dir (expects <slug>-slate.mp4 or <slug>.mp4)")
     ap.add_argument("--mp4")
+    ap.add_argument('--sheet', help='resolved timeline sheet; defaults to reel/beat_sheet.json')
     ap.add_argument("--frames-dir", help="test mode: analyze these PNGs directly")
     ap.add_argument("--fill-min", type=float, default=FILL_MIN)
     ap.add_argument("--lenient", action="store_true", help="downgrade MAJOR to warning")
     ap.add_argument("--quiet", action="store_true")
     a = ap.parse_args()
     FILL_MIN = a.fill_min
+    try:
+        with tempfile.TemporaryDirectory(prefix='brutalist-qc-') as scratch:
+            return inspect(a, scratch)
+    except (BuildError, OSError, ValueError, subprocess.SubprocessError) as exc:
+        try:
+            root = Path(a.frames_dir) if a.frames_dir else Path(a.reel or '.')
+            relative = 'REPORT.md' if a.frames_dir else '_qc/REPORT.md'
+            atomic_text(writable_path(root, relative), f'# Gate V — FAILED\n\n{exc}\n')
+        except (BuildError, OSError):
+            pass
+        sys.stderr.write(f'[gate-v] FAILED: {exc}\n')
+        return 2
 
-    tmp = None
+
+def inspect(a, tmp):
+    if a.reel:
+        writable_path(a.reel, '_qc/.check')
+
     if a.frames_dir:
         frames = sorted(glob.glob(os.path.join(a.frames_dir, "*.png")))
         outdir = a.frames_dir
@@ -233,17 +266,29 @@ def main():
                     [f for f in glob.glob(os.path.join(a.reel, "*.mp4")) if "-slate" not in f]
             mp4 = cands[0] if cands else None
         if not mp4 or not os.path.exists(mp4):
-            sys.stderr.write("[gate-v] no mp4 to check\n"); return 3
-        tmp = tempfile.mkdtemp()
-        spans = beat_spans(a.reel) if a.reel else []
+            raise BuildError('No mp4 to inspect; cannot report clean')
+        spans = beat_spans(a.reel, a.sheet) if a.reel else []
         # beat-aware steady-state sampling when we have the beat sheet; else uniform.
         frames = sample_beats(mp4, spans, tmp) if spans else sample_frames(mp4, tmp)
         outdir = os.path.join(a.reel or ".", "_qc"); os.makedirs(outdir, exist_ok=True)
 
-    exempt = full_bleed_beats(a.reel) if a.reel else set()
+    if not frames:
+        raise BuildError('No frames inspected; cannot report clean')
+    exempt = full_bleed_beats(a.reel, a.sheet) if a.reel else set()
+    reports = set()
+    if a.reel:
+        bs = json.load(open(a.sheet or os.path.join(a.reel, 'beat_sheet.json')))
+        reports = {b['beat_id'] for b in bs.get('beats', []) if is_source_report(b, bs)}
 
     worst = {}   # frame -> list of defects
     for f in frames:
+        bid = os.path.basename(f).rsplit('_', 1)[0]
+        if bid in reports:
+            # Source footage is not a flat-color title card. Confirm decoding
+            # and coverage here; humans review its content/framing, not ink-bbox heuristics.
+            with Image.open(f) as im:
+                im.load()
+            continue
         d, _ = analyze_frame(f)
         if d and exempt:
             # frames are named "<beat_id>_<pct>.png"
@@ -260,6 +305,9 @@ def main():
     n_major = sum(1 for d in worst.values() for sev, *_ in d if sev == "MAJOR")
     lines = ["# Gate V — visual QC report", "",
              f"Frames sampled: {len(frames)}  ·  BLOCKER: {n_block}  ·  MAJOR: {n_major}", ""]
+    if reports:
+        lines += ['Source-report samples: decoded/covered; template styling checks not applicable. '
+                  'Human content/framing review remains required.', '']
     for f in sorted(worst):
         lines.append(f"### {os.path.basename(f)}")
         for sev, kind, msg in worst[f]:
@@ -267,7 +315,7 @@ def main():
         lines.append("")
     if not worst:
         lines.append("Clean — no BLOCKER/MAJOR defects. ✓")
-    open(report, "w").write("\n".join(lines))
+    atomic_text(report, "\n".join(lines))
 
     if not a.frames_dir:
         contact_sheet(frames, os.path.join(os.path.dirname(report), "contact_sheet.png"))

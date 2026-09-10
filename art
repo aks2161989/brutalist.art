@@ -12,7 +12,9 @@
 #   ./art todo  <reel> [flags]   per-video beat ledger (which beats need filling, how)
 #   ./art run   <reel> [flags]   compile a review cut
 #   ./art shorts <reel> [flags]  derive the 9:16 Short (cap check + auto-shorten)
-#   ./art final <reel>           clean master cut — no review label (→ <slug>-cut.mp4)
+#   ./art vertical <reel>       full-length 9:16 companion (no shortening)
+#   ./art approvals <reel> --fingerprints  inspect human-review subjects (never signs)
+#   ./art final <reel>           verified master — no review label (→ <slug>.mp4)
 #   ./art doctor                 dependency readiness (wraps ./setup)
 #   ./art smoke                  real end-to-end render proof (examples/_smoke -> watchable mp4)
 #   ./art keys                   validate optional keys (Higgsfield login, SI key)
@@ -79,9 +81,15 @@ case "$cmd" in
   shorts)
     exec python3 "$ART_HOME/runtime/scripts/shorts.py" "$@"
     ;;
+  vertical)
+    exec python3 "$ART_HOME/runtime/scripts/shorts.py" "$@" --vertical
+    ;;
+  approvals)
+    exec python3 "$ART_HOME/runtime/scripts/build_safety.py" "$@"
+    ;;
   final)
     case " $* " in
-      *" --height "*) exec python3 "$ART_HOME/runtime/scripts/compile.py" "$@" ;;
+      *" --height "*|*" --height="*) exec python3 "$ART_HOME/runtime/scripts/compile.py" "$@" ;;
       *)              exec python3 "$ART_HOME/runtime/scripts/compile.py" "$@" --height 2160 ;;
     esac
     ;;

@@ -36,7 +36,13 @@ A clean 4K final is written to the first of these that is set:
 `renders/` is gitignored. A `--review` cut is a *working artifact* and always stays
 beside the reel — only the clean final follows the target above.
 
-**4K is the default.** `./art final` renders 2160p unless you pass `--height`.
+`./art run` produces a review only; `./art final` checks the actual candidate before
+promoting it. Missing approvals, missing sound, incomplete QC or failed rendering
+block a final. See [pipeline safety](docs/PIPELINE-SAFETY.md) for the checks and
+hash-bound export receipts. A successful export is not approval to publish.
+
+**Landscape 4K is the default.** `./art final` renders at height 2160 unless you
+pass `--height`. For a 9:16 **2160×3840** master, pass `--height 3840` explicitly.
 Code lanes (Remotion, Manim) are born at 4K and are never upscaled.
 
 ## 3 · 9:16 is a DIFFERENT beat sheet
@@ -45,14 +51,23 @@ A vertical cut is **not** a crop of the wide one. `shorts.py` derives a short in
 its own `short/` folder with **its own `beat_sheet.json`**, and that sheet is
 rewired to portrait components:
 
+For a complete vertical companion, use `./art vertical <reel>` instead. It writes
+`vertical/`, keeps all beats and the existing outro, adds no endcard, and never
+shortens the report to satisfy a Short cap. Both commands prepare sheets/assets;
+native portrait renders and final verification still follow.
+
 - If `Root.tsx` registers a composition named `<Pattern>916`, the short's sheet is
   **rewired to it** and the beat re-renders portrait. Props must satisfy the 916
   composition's own zod schema.
-- If no `916` composition exists, the beat is **flagged** — add the composition, or
+- If no `916` composition exists, the plan is **blocked** — add the composition, or
   drop a `pantry/<beat>-916.mp4|png`. It is not silently center-cut.
-- Generated graphics are never center-cut. Only captured/user media is, biased by
-  `shot.focus`, written as `<beat>-916.*` beside the source so it stays inspectable
-  and replaceable. `pantry/<beat>-916.*` beats everything.
+- Generated graphics are never center-cut. A Short may crop ordinary captured/user
+  media using `shot.focus`, but writes `<beat>-916.*` inside `short/media/`, never
+  beside the parent source. Source reports and full-length companions retain their
+  source framing. `pantry/<beat>-916.*` is the explicit replacement slot.
+- Audio/media files are independent copies, not links into the parent. Rewritten
+  outro audio is regenerated only inside the derivative. Missing portrait scenes
+  cannot be marked ready by reusing an old landscape render.
 
 Portrait compositions currently registered here:
 
@@ -69,3 +84,8 @@ dual-aspect law). Ratio-encoded legacy names (`*169.tsx`) are frozen; never add 
 You need no account, no key, and no upload permission to get a finished 4K file.
 Set `ART_OUT` (or pass `--out`) and render. What happens to the file afterwards is
 entirely yours.
+
+Humanitarians AI fellows follow an additional [weekly submission workflow](docs/FELLOWS-SUBMISSION.md):
+GitHub for source and small documents, Drive for the four media files, PM review,
+then the professors' publication decision. This is a handoff guide, not a toolkit
+upload feature.
