@@ -52,3 +52,4 @@ art.pre-scene-search
 # Records reel paths that live OUTSIDE this repo; never ship it.
 /runtime/remotion/_bench/
 .venv/
+/my_videos/
