@@ -1,0 +1,52 @@
+{
+ "metadata": {
+  "title": "Demo Canonical",
+  "slug": "demo-canonical",
+  "kind": "explainer",
+  "engine": "kokoro",
+  "voice": "someone",
+  "audience": "HAI",
+  "derived_from": "beat_sheet.json",
+  "register": "Plain",
+  "palette": "humanitarians",
+  "outro_source": "AUTHOR.MD :: Humanitarians AI",
+  "voice_kokoro": "af_bella",
+  "typography": {
+   "serif": "EB Garamond",
+   "sans": "Montserrat"
+  },
+  "channel_title": "@HumanitariansAI",
+  "_variant_todo": [
+   "rewrite every beat narration_text/text in the Plain register (runtime/prose/plain/PROSE.md + brands/hai.md) — method, when to use, when NOT to/where it fails; voice only, facts unchanged",
+   "optional: add ONE Irreducibly-Human tangent beat (0-1 per video, ONLY on a clear opportunity)",
+   "add CLI worked exercise as the SECOND-TO-LAST beat (paste-ready ASK→OUTPUT→CHANGE→OUTPUT, NEXT STEP; see skills/make/hai/SKILL.md §Step 4)",
+   "add/replace outro with Humanitarians AI outro from AUTHOR.MD :: Humanitarians AI (LAST beat)",
+   "verify ending order: body → [tangent] → [CLI exercise] → [outro]",
+   "then build: generate_audio_kokoro.py (voice af_bella) → palette=humanitarians → compile"
+  ]
+ },
+ "beats": [
+  {
+   "beat_id": "B00",
+   "narration_text": "Cold open ask.",
+   "shot": {
+    "remotion": {
+     "pattern": "ClaudeComposerAsk",
+     "rendered": {
+      "out": "media/B00.mp4",
+      "at": "old"
+     }
+    }
+   }
+  },
+  {
+   "beat_id": "B01",
+   "narration_text": "One body beat.",
+   "shot": {
+    "remotion": {
+     "pattern": "ClaudeCodeBeat"
+    }
+   }
+  }
+ ]
+}

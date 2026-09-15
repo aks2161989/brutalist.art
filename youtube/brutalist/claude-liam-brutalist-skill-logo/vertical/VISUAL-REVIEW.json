@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "f971dbe48eef4a7c82cd58515b018d69",
+  "source_sha256": "43f7abe9af3dc4f9a7af430799b4c04732a78b6f4ba39dddbdb812259f95d7f6",
+  "beat_sheet_sha256": "07b56335795af257554a8e1fdd8908c9a3a2d4039c293a210da739d661b3f109",
+  "video_sha256": "c9a9fb393e384ec024b1f9b3afbb375343e89aae23848ba0558786e6a0361a71",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "qc-sheet.png", "sha256": "12d27c065fd681e6b64cd6faf87da02595c40ac306f475b688732e34c41d4d44"},
+    {"path": "_qc/samples/B00_85.png", "sha256": "c8b86330aff776ac698f949052c3a05a6df6c636ee9e7185f10fc0bed4693fe0"},
+    {"path": "_qc/samples/B01_85.png", "sha256": "bed0824535ff95eb98bab0b1d54dd13e51df264a102dd6626b61ffd6dc8d46bb"},
+    {"path": "_qc/samples/B09_50.png", "sha256": "ea4e04dacc9f03623fe92b75a61bc8a19b09c34e5574421b434e06f9295f1914"},
+    {"path": "_qc/samples/B11_50.png", "sha256": "2003ac69e0f439ffe1ccd0d13cc7ac0443c85e86a369e0db3e9457452dbb16fd"}
+  ],
+  "notes": "Re-verified under run_id f971dbe4 (source re-snapshot; previous run_id 19539b2d; underlying SKILL.md content unchanged, SHA badfb2bc). Portrait companion, 12 beats, 317.25s, native 2160x3840 (not an upscaled/cropped landscape). Viewed qc-sheet.png (tiled portrait contact sheet), B00_85 (cold open native portrait: 'Hola, Liam', composer card reflows vertically, @HumanitariansAI chip — clean), B01_85 (hesitant writer portrait: 'The logo skill / plays a random / brand sting. / The MP3 / is the clock.' — 5 lines at lineSpacing 2.5, fills portrait safe area), B09_50 (verdict card portrait: all 6 lines visible in the card, legible text wrapping properly), B11_50 (outro portrait: 'The logo Skill.' title, @NikBearBrown handle per OUTRO-LOCK — mascot not visible at this frame position). No captions. Gate V BLOCKER=0 MAJOR=0 (from previous render session — renders not changed). Human review pending — Bear's viewing and editing is next."
+}

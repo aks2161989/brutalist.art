@@ -1,0 +1,131 @@
+{
+  "number": 21,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211",
+  "beats": 12,
+  "sheet_sha256": "7dcd5e5b272eb50264ce79e3c77cefaea8ec0c689161a5921157fd5cb876bee8",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "245.829000",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B03",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "learning-artifacts/week-01/capstone_guard.py",
+        "code": "# Capstone integration for Week 1: refuse or escalate\nfrom main import probabilities\n\nALLOWED    = {'PLANE', 'CAR'}\nBLOCKED    = {'UNICORN'}\nMARGIN_MIN = 0.25\n\ndef decide(labels, logits, temperature=1.0):\n    p = probabilities(logits, temperature)\n    order = sorted(range(len(p)), key=lambda i: -p[i])\n    top1, top2 = order[0], order[1]\n    margin = p[top1] - p[top2]\n    label  = labels[top1]\n    if label in BLOCKED:\n        return {'action': 'REFUSE',   'label': label, 'margin': margin}\n    if margin < MARGIN_MIN:\n        return {'action': 'ESCALATE', 'label': label, 'margin': margin}\n    if label not in ALLOWED:\n        return {'action': 'ESCALATE', 'label': label, 'margin': margin}\n    return {'action': 'ACT',           'label': label, 'margin': margin}",
+        "sparkLine": "REFUSE. ESCALATE. ACT.",
+        "codeSize": 0.038,
+        "sparkSize": 26
+      },
+      "intent": "Claude cream code card: capstone_guard.py \u2014 constants, decide(), ACT/ESCALATE/REFUSE branches."
+    },
+    {
+      "beat": "B06",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "learning-artifacts/week-01/test_capstone_guard.py",
+        "code": "import unittest\nfrom capstone_guard import decide\n\nBLOCKED_ROW = (['UNICORN','PLANE','CAR'], [3, 2, 1])\nTHIN_ROW    = (['PLANE','CAR','UNICORN'], [2.0, 1.9, 0.5])\nCLEAN_ROW   = (['PLANE','CAR','UNICORN'], [3, 1, 0])\n\nclass CapstoneGuard(unittest.TestCase):\n    def test_A_blocked_wins_refuse(self):\n        self.assertEqual(decide(*BLOCKED_ROW, 1.0)['action'], 'REFUSE')\n\n    def test_B_low_T_still_refuses_blocked(self):\n        # cold sampling does NOT rescue a BLOCKED top-1\n        self.assertEqual(decide(*BLOCKED_ROW, 1.0)['action'], 'REFUSE')\n        self.assertEqual(decide(*BLOCKED_ROW, 0.1)['action'], 'REFUSE')\n\n    def test_C_thin_margin_escalates(self):\n        # margin < MARGIN_MIN\n        self.assertEqual(decide(*THIN_ROW, 1.0)['action'], 'ESCALATE')\n\n    def test_D_clean_allowed_acts(self):\n        self.assertEqual(decide(*CLEAN_ROW, 1.0)['action'], 'ACT')\n\n    def test_E_invalid_temperature_propagates(self):\n        with self.assertRaises(ValueError):\n            decide(*CLEAN_ROW, 0)\n\nif __name__ == '__main__':\n    unittest.main()",
+        "sparkLine": "Refuse pinned. Escalate pinned.",
+        "codeSize": 0.028,
+        "sparkSize": 26
+      },
+      "intent": "Claude code card: test_capstone_guard.py \u2014 five unittest cases, real assertions."
+    },
+    {
+      "beat": "B07",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "unittest_run.log",
+        "code": "test_A_blocked_wins_refuse (CapstoneGuard) ... ok\ntest_B_low_T_still_refuses_blocked (CapstoneGuard) ... ok\ntest_C_thin_margin_escalates (CapstoneGuard) ... ok\ntest_D_clean_allowed_acts (CapstoneGuard) ... ok\ntest_E_invalid_temperature_propagates (CapstoneGuard) ... ok\n\n----------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n\n# receipts\n# REFUSE (T=1.0)  UNICORN p=0.66524  margin=0.42054\n# REFUSE (T=0.1)  UNICORN p=0.99996  margin=0.99991\n# ESCALATE       PLANE   p=0.46988  margin=0.04471\n# ACT             PLANE   p=0.84379  margin=0.72963\n# untested: whether ALLOWED, BLOCKED, MARGIN_MIN are the RIGHT policy\n#           (this suite pins mechanism, not human judgment)",
+        "sparkLine": "Five green. One human line left.",
+        "codeSize": 0.028,
+        "sparkSize": 26
+      },
+      "intent": "Claude code card: unittest passing output \u2014 five green; the untested line preserved."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B00.mp4",
+      "seconds": 13.4631056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B01.mp4",
+      "seconds": 13.766211199999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B02.mp4",
+      "seconds": 13.4862112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B03.mp4",
+      "seconds": 14.139999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B04.mp4",
+      "seconds": 23.0766669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B05.mp4",
+      "seconds": 13.626211199999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B06.mp4",
+      "seconds": 17.429999999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B07.mp4",
+      "seconds": 15.47,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/B08.mp4",
+      "seconds": 12.7866669,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/BVDT.mp4",
+      "seconds": 11.783333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/BHTF.mp4",
+      "seconds": 18.97,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-3-176e65f8-v-49d451700211/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/21-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

@@ -1,0 +1,23 @@
+usage: compile.py [-h] [--review] [--fps FPS] [--height HEIGHT]
+                  [--audio AUDIO] [--force] [--allow-slates] [--out DIR]
+                  [--sheet SHEET]
+                  folder
+
+positional arguments:
+  folder
+
+options:
+  -h, --help       show this help message and exit
+  --review
+  --fps FPS
+  --height HEIGHT
+  --audio AUDIO    master audio file (music bed / narration mix)
+  --force
+  --allow-slates   legacy review-only option; final masters always reject
+                   slates
+  --out DIR        directory to write the master into — any folder, including
+                   a Google Drive mount. Explicit --out always wins. Without
+                   it, a clean 4K final goes to $ART_OUT if set, else
+                   BRUTALIST_HOME/renders/; a --review cut always stays beside
+                   the reel.
+  --sheet SHEET    beat sheet filename (default: beat_sheet.json)

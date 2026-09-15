@@ -1,0 +1,860 @@
+{
+  "metadata": {
+    "title": "The logo Skill",
+    "slug": "claude-liam-brutalist-skill-logo-vertical",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "9:16",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "f971dbe48eef4a7c82cd58515b018d69",
+    "episode_id": "skill-logo",
+    "order": 15,
+    "note": "Skill teardown of skills/make/logo/SKILL.md (SOURCE-SNAPSHOT SHA-256 badfb2bc…; supervisor's episode.source_sha256 213d82e1…). The `logo` skill appends one brand sting after a reel's last beat: one random-once pick of (animation technique × brand SVG × brand MP3) locked into the beat, aspect-aware, MP3-clocked with a padded tail so the jingle is never cut. Teaches: (1) the anatomy — SKILL.md doctrine, logo.py scaffolder, LogoOutro.tsx scene, logos/[brand]/ pool, runtime/remotion/public/logo-outro/ staging; (2) the six-step flow — resolve alias · pick or reuse · copy+pad mp3 · stage svg · append beat · render+recompile; (3) MP3 IS THE CLOCK — --tail pads silence, frame rounding/mux -shortest can only trim silence never sound; (4) RANDOM ONCE THEN LOCKED — pick recorded at shot.remotion.picked, rebuilds stable, --reroll re-randomizes; (5) POOL CURATION — draw is uniform over *.svg so the pool is the quality bar (medhavy: 42 drawable / 25 unique / 12 rejected); (6) drawOn IS EARNED — only eligible when the SVG is path-only (no text/image/gradient/mask); (7) FALSIFIABILITY: there is no logos/nik-bear-brown/ by design — @NikBearBrown uses ClaudeTitleOutro's slug-seeded pixel mascot instead per OUTRO-LOCK.md. This teardown IS a claude-liam reel, so the outro is ClaudeTitleOutro (hardcoded @NikBearBrown handle per OUTRO-LOCK) — the folder chip on all inner composer beats is @HumanitariansAI per playlist. logo.py demoed live on a synthetic fixture reel in demo/ (three real runs captured in demo/logo-run.log: hai first pick, hai --reroll to fresh pick, hai locked reuse, medhavy fresh pick landing on drawOn). Portrait companion — native 9:16 layouts (SkillTeardown*916 wrappers, ClaudeComposerAsk916, BrutalistHesitantWriter916 with portrait-scale patch per feedback_hesitant_writer_portrait_scale, ClaudeVerdictArtifact916, ClaudeTitleOutro916). channel_title metadata deliberately omitted per feedback_channel_title_portrait_bleed.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/logo/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "logo",
+      "skill teardown",
+      "brand sting",
+      "LogoOutro",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T16:54:52",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hola, this is Liam, in for Bear. Today we tear down the logo skill. It is the one command that appends a brand sting after a reel's last beat — one random pick of animation, mark, and jingle, locked into the beat forever. The mp3 is the clock. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hola, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the logo skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Hola, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The logo Skill",
+            "command": "What does the `logo` skill actually do to a reel? Read skills/make/logo/SKILL.md and tell me — the mental model, not the README summary.",
+            "runningText": "reading skills/make/logo/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "appends ONE brand sting beat after the last beat",
+              "random-once pick of animation + SVG + MP3, locked",
+              "the MP3 is the clock — the jingle is never cut"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T20:28:35.211110+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.25,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 15.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the fixed-per-brand read to the actual claim: one RANDOM pick per reel. Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read — the one the word logo invites — is that every reel gets the same fixed brand sting. It does not. The logo skill spins a wheel across the brand's mark pool and jingle pool, one random pick per reel, then locks the pick into the beat so every rebuild is byte-for-byte identical. Random across reels, locked within one.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'The logo skill'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 'plays a fixed brand sting.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'fixed' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'fixed' deletes and 'random' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 3 lands: 'The MP3 is the clock.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "The logo skill\nplays a fixed\nbrand sting.\nThe MP3\nis the clock.",
+            "triggerWords": "fixed",
+            "replacementWords": "random",
+            "seed": "logo-bluf-vertical-2026-19539b2d-v2",
+            "face": "serif",
+            "fontSize": 130,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 14,
+            "jitter": 4,
+            "mistakeRate": 2,
+            "hesitateWithin": 0,
+            "hesitateBetween": 1,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T20:47:06.493710+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 18.13,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 18.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — anatomy of the logo skill: SKILL.md doctrine, logo.py, LogoOutro.tsx scene, logos/[brand]/ pool, runtime staging directory.",
+      "narration_text": "First, the anatomy. On the toolkit side there is SKILL.md — the doctrine, the laws, and the pool contract. Next to it, scripts slash logo dot py, a small deterministic scaffolder. The scene it drives is LogoOutro dot tsx — eight animation techniques, aspect-aware, duration derived from props. Alongside the toolkit sits logos slash brand slash — a flat pool of dot svg marks and dot mp3 jingles. And a staging tree under public slash logo-outro where the chosen svg is copied so Remotion's staticFile can serve it. Small on disk. Random where it matters.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'The logo folders.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.85",
+            "event": "callout box lands: 'a pool with no mp3s or svgs is a MISSING'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "logo",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "The logo folders.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/logo/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 1,
+                "icon": "🐍",
+                "name": "scripts/logo.py  (the scaffolder)"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "runtime/remotion/src/scenes/"
+              },
+              {
+                "indent": 1,
+                "icon": "🎬",
+                "name": "LogoOutro.tsx  (8 techniques, aspect-aware)"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "logos/[brand]/  (flat pool)"
+              },
+              {
+                "indent": 1,
+                "icon": "🖼️",
+                "name": "*.svg  (brand marks)",
+                "accent": true
+              },
+              {
+                "indent": 1,
+                "icon": "🎵",
+                "name": "*.mp3  (brand jingles)"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "runtime/remotion/public/logo-outro/[brand]/"
+              },
+              {
+                "indent": 1,
+                "icon": "🖼️",
+                "name": "chosen-mark.svg  (staged for staticFile)"
+              }
+            ],
+            "calloutText": "<b>A pool with no mp3s (or no svgs) is a MISSING.</b> logo.py logs exactly what to drop where in <b>BUILD-LOG.md</b> and stops — standing rule #3.",
+            "sparkLine": "Two pools. One flat glob."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T20:30:36.886859+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 32.94,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 32.958333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — six steps from `logo [reel] [brand]` to a rendered sting appended to the review cut.",
+      "narration_text": "The flow is six steps. Resolve the brand alias — nbb to bear-brown, hai to humanitarians, muz to musinique. Pick, or reuse the locked pick — animation, svg, mp3 chosen once by the system random. Copy the mp3 into the reel's audio folder and pad it with a silence tail so nothing gets cut. Stage the svg into the Remotion public tree so staticFile can find it. Append the beat after the last beat — type REMOTION, pattern LogoOutro, props carrying the pick. Then render via remotion scenes dot py and recompile. Same shape every reel.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Six steps. One appended beat.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'reel + brand alias' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "phase nodes reveal — 'PICK & LOCK' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'LogoOutro beat, aspect-clocked' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline916",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Six steps. One beat.",
+            "inputLabel": "reel + brand alias",
+            "outputLabel": "LogoOutro beat, aspect-clocked",
+            "phases": [
+              {
+                "label": "PICK & LOCK",
+                "desc": "animation × svg × mp3",
+                "accent": true
+              },
+              {
+                "label": "COPY + PAD",
+                "desc": "mp3 + apad tail"
+              },
+              {
+                "label": "STAGE SVG",
+                "desc": "→ public/logo-outro/[brand]/"
+              },
+              {
+                "label": "APPEND BEAT",
+                "desc": "pattern: LogoOutro"
+              }
+            ],
+            "footerNote": "One command.",
+            "sparkLine": "Random once. Locked forever."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T20:52:19.454146+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 31.94,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 31.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — THE MP3 IS THE CLOCK. --tail pads silence so frame rounding and mux -shortest can only trim silence, never sound.",
+      "narration_text": "First design decision, and it is the whole architecture. The MP3 is the clock. When logo dot py copies the jingle, it pads it with a trailing silence — one second by default — using ffmpeg apad. The padded length becomes the beat's durationS, and Remotion's calculateMetadata derives the frame count from it. The audible jingle therefore ends strictly inside the beat. Frame rounding, clip conform, and mux dash shortest can only ever trim silence. Never sound. Same law as the outro. Want a different length? Use a different mp3.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'The MP3 is the clock.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: apad tail · calculateMetadata · trims silence not sound"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'trim silence, never sound'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "The MP3 is the clock.",
+            "body": "logo.py copies the jingle to mp3/beat-<BID>.mp3, pads it with a trailing silence (--tail, default 1.0s) via ffmpeg apad, and measures the padded file with ffprobe. That length becomes props.durationS; Remotion's calculateMetadata derives durationInFrames from it. The audible jingle ends STRICTLY inside the beat — frame rounding, clip conform, and mux -shortest can only trim silence.",
+            "quote": "The MP3 is the clock — and the jingle is NEVER cut.",
+            "cite": "logo SKILL.md · The laws · #1",
+            "verdictLabel": "trim silence, never sound",
+            "verdictPositive": true,
+            "sparkLine": "Silence lives IN the clock."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T20:32:42.837191+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.78,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 28.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Design decision 2 — RANDOM ONCE, THEN LOCKED. Pick recorded at shot.remotion.picked; rebuilds stable; --reroll re-randomizes.",
+      "narration_text": "Second decision, and it is the one that makes rebuilds honest. The pick is random exactly once. Animation, svg, mp3 — chosen by SystemRandom, then written into the beat itself at shot dot remotion dot picked. Every subsequent run finds that block and reuses it, so your review cut and your final master are byte-for-byte the same sting. Want a fresh spin? Dash dash reroll discards the lock, picks again, and force re-renders. That is the whole random-versus-deterministic contract in one field.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Random once, then locked.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: SystemRandom · shot.remotion.picked · --reroll"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill '--reroll to re-spin the wheel'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "Random once, then locked.",
+            "body": "SystemRandom picks (animation × svg × mp3). The pick is written into the beat at shot.remotion.picked — so every re-run finds it and reuses it. Review cut = final master, byte for byte. --reroll discards the lock, picks fresh, and force re-renders. One reel = one lottery.",
+            "quote": "Random once, then locked… re-runs reuse it, so rebuilds are stable.",
+            "cite": "logo SKILL.md · The laws · #2",
+            "verdictLabel": "--reroll to re-spin",
+            "verdictPositive": true,
+            "sparkLine": "Random across reels. Locked within one."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T20:33:44.218288+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 27.31,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 27.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — POOL CURATION. Draw is uniform over *.svg so the pool IS the quality bar. medhavy shipped with wrong marks and byte-identical duplicates.",
+      "narration_text": "Third decision, and this one bites. The draw is uniform over every dot svg in the brand pool, which means the pool IS the quality bar. On September first, twenty twenty-six, logos slash medhavy shipped with two failure modes at once. Four marks belonged to a different company entirely — a wrong mark is drawable if it is in the pool. And twenty-two selected files were byte-identical renames of existing designs, so those combinations came up twice as often. Forty-two drawable files. Twenty-five unique designs. The fix was a rejected subdirectory that drops files from the glob without deleting anything.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Curate the pool.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: 42 drawable · 25 unique · 12 rejected"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'rasterise and look — grep finds nothing'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "Curate the pool.",
+            "body": "The draw is uniform over logos/<brand>/*.svg — the pool IS the quality bar. medhavy, 2026-09-01: 4 marks belonged to a different company (a wrong mark IS drawable); 22 files were byte-identical renames of existing designs (duplicates skew the odds). 42 drawable files → 25 unique designs. Fix: a _rejected/ subdirectory drops files from the glob without deleting anything.",
+            "quote": "Wordmarks are outlined paths — grep finds nothing. Rasterise and look.",
+            "cite": "logo SKILL.md · Curate the pool before you trust the draw",
+            "verdictLabel": "pool = quality bar",
+            "verdictPositive": false,
+            "sparkLine": "The lottery is only as fair as the pool."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T20:34:47.422977+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 38,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 33.05,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 33.083333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Design decision 4 — drawOn IS EARNED. Only enters the lottery when the svg is path-only (no text/image/gradient/mask).",
+      "narration_text": "Fourth decision. Seven of the eight animation techniques render the svg file itself — via Remotion's Img and staticFile — so any mark works, gradients, groups, whatever. But drawOn is different. It rasterises the mark's paths into a stroke that draws itself, then flood-fills. That requires clean path data. So logo dot py parses the svg first. If it finds a text element, an image, a gradient, a mask, or any visible non-path shape, drawOn is dropped from the lottery for that reel. Every other technique still competes. drawOn is earned.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'drawOn is earned.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: 8 techniques · Img-based · drawOn needs clean paths"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'text / image / gradient → drawOn out'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4",
+            "heading": "drawOn is earned.",
+            "body": "Seven techniques (springEntrance, rotation, kineticGrid, elasticPhysics, noiseWobble, trailEcho, glitchSlices) render the SVG file itself via Img + staticFile — any mark works. drawOn needs clean path data, so logo.py parses the SVG: any <text>, <image>, gradient, mask, or visible non-path shape drops drawOn from the lottery for that reel. Every other technique still competes.",
+            "quote": "drawOn is earned. The draw-on-stroke technique needs clean path data.",
+            "cite": "logo SKILL.md · The laws · #6",
+            "verdictLabel": "text/image/gradient → drawOn out",
+            "verdictPositive": true,
+            "sparkLine": "Seven for all. drawOn for the clean."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T20:35:49.888463+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 29.46,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 29.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — There is no logos/nik-bear-brown/ pool by design. The Bear channel uses ClaudeTitleOutro's slug-seeded pixel mascot per OUTRO-LOCK.md — a different outro architecture that reads no files at all.",
+      "narration_text": "Falsifiability. Read the sources together and you find a deliberate hole. There is no logos slash nik-bear-brown pool. Not missing. Not a bug. By design. The at NikBearBrown channel uses ClaudeTitleOutro instead — a Remotion scene whose pixel mascot is drawn from tiny rects in code, seeded by the reel slug, and reads no files at all. That is the OUTRO-LOCK contract. Which is why this teardown's outro is ClaudeTitleOutro — the falsifiability beat's own evidence is that the logo skill is not universal. Every other channel gets the random sting. The Bear channel gets the deterministic mascot card.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow FALSIFIABILITY · ACT 5 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'No nik-bear-brown pool.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: bear-brown · humanitarians · medhavy · musinique — no nbb by design"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'NBB channel → ClaudeTitleOutro, not LogoOutro'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "FALSIFIABILITY · ACT 5",
+            "heading": "No nik-bear-brown pool.",
+            "body": "The four brand pools are bear-brown, humanitarians, medhavy, musinique. There is NO logos/nik-bear-brown/ by design — @NikBearBrown uses ClaudeTitleOutro's slug-seeded pixel mascot (drawn from rects in ClaudeMascotScene.tsx, reads zero files). This teardown's outro is therefore ClaudeTitleOutro — the falsifiability evidence IS the outro architecture.",
+            "quote": "There is no logos/nik-bear-brown/, by design. @NikBearBrown does not use a logo sting — it uses ClaudeTitleOutro.",
+            "cite": "logo SKILL.md · Brands and aliases",
+            "verdictLabel": "NBB → ClaudeTitleOutro · everyone else → LogoOutro",
+            "verdictPositive": true,
+            "sparkLine": "One skill does not fit all channels."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T20:36:55.711720+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 33.49,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 33.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the skill in six lines.",
+      "narration_text": "The verdict. The logo skill appends one brand sting per reel — random once, locked forever. The mp3 is the clock, padded with a silence tail so the jingle is never cut. The draw is uniform over the pool, so curating the pool is the actual quality work. drawOn is earned — it needs clean path data or it is dropped from the lottery. Aspect follows the reel — nine sixteen or sixteen nine, no re-code. And the at NikBearBrown channel deliberately opts out — that channel uses ClaudeTitleOutro's pixel mascot, not this skill.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'A locked lottery. Silence at the end.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The logo Skill",
+            "artifactHeading": "A locked lottery. Silence at the end.",
+            "artifactLines": [
+              "Appends ONE brand sting beat per reel — random once, LOCKED at shot.remotion.picked.",
+              "The MP3 is the clock — padded with a silence tail (--tail 1.0s) so the jingle is NEVER cut.",
+              "Draw is uniform over logos/<brand>/*.svg — the POOL is the quality bar (curate before you trust it).",
+              "drawOn is EARNED — only enters the lottery when the SVG is path-only (no text/image/gradient/mask).",
+              "Aspect follows metadata.aspect_ratio — 9:16 → 1080×1920, otherwise → 1920×1080. No re-code.",
+              "@NikBearBrown opts out by design — that channel uses ClaudeTitleOutro's slug-seeded pixel mascot."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T20:37:33.740001+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.99,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 29.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready dry-run prompt. Liam reads aloud + discusses.",
+      "narration_text": "Your turn. Paste this into Claude Code. Read the logo skill's SKILL dot md. Pick one of your delivered reels — a real one — and pick a brand pool that fits it. Run logo dot py on the reel with the dash dash no-render and dash dash no-compile flags. That gives you the appended beat and the padded mp3 without touching your rendered master. Then check three things. Does the reel's beat sheet now carry a shot dot remotion dot picked block. Is the padded mp3's length equal to the jingle's length plus your tail. And if you re-run without dash dash reroll, does the pick stay identical. If all three answer yes, the lottery is locked and honest.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready dry-run prompt"
+          },
+          {
+            "at": "0.72",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · SPIN THE LOTTERY (DRY-RUN)",
+            "segment": "Lock a sting",
+            "command": "Read skills/make/logo/SKILL.md. Pick a delivered reel and a brand pool (hai | medhavy | muz). Run: python3 skills/make/logo/scripts/logo.py <reel> <brand> --no-render --no-compile. Assert three things: (1) shot.remotion.picked block written with locked:true; (2) ffprobe padded mp3 length ≈ jingle + --tail; (3) re-run without --reroll reuses the pick.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: picked block locked?",
+              "check: mp3 length = jingle + tail?",
+              "check: re-run stable?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T20:53:04.265560+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 44,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 34.35,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 34.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T16:54:52"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff. The falsifiability beat's own evidence is that this reel's outro must be ClaudeTitleOutro, not LogoOutro.",
+      "narration_text": "That was the logo Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The logo Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The logo Skill",
+            "slug": "claude-liam-brutalist-skill-logo"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T20:38:35.214936+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.33,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.3333333333333335,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-08T16:54:52"
+      }
+    }
+  ]
+}

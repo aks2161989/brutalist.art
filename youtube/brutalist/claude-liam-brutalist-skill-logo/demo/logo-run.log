@@ -1,0 +1,13 @@
+[logo] B01: humanitarians  anim=rotation  svg=humanitarians-logo-1.svg  mp3=humanitarians-2.mp3  jingle=11.88s  clock=12.88s  aspect=16:9
+[logo] next: python3 runtime/scripts/remotion_scenes.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-logo/demo/fixture-reel --only B01
+[logo]       python3 runtime/scripts/compile.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-logo/demo/fixture-reel --review
+[logo] B01: humanitarians  anim=kineticGrid  svg=humanitarians-logo-1.svg  mp3=humanitarians-6.mp3  jingle=14.44s  clock=15.44s  aspect=16:9
+[logo] next: python3 runtime/scripts/remotion_scenes.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-logo/demo/fixture-reel --only B01
+[logo]       python3 runtime/scripts/compile.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-logo/demo/fixture-reel --review
+[logo] reusing locked pick (use --reroll to re-randomize)
+[logo] B01: humanitarians  anim=kineticGrid  svg=humanitarians-logo-1.svg  mp3=humanitarians-6.mp3  jingle=14.44s  clock=15.44s  aspect=16:9
+[logo] next: python3 runtime/scripts/remotion_scenes.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-logo/demo/fixture-reel --only B01
+[logo]       python3 runtime/scripts/compile.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-logo/demo/fixture-reel --review
+[logo] B01: medhavy  anim=drawOn  svg=medhavy-logo-24.svg  mp3=medhavy-1.mp3  jingle=15.361s  clock=16.361s  aspect=16:9
+[logo] next: python3 runtime/scripts/remotion_scenes.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-logo/demo/fixture-reel --only B01
+[logo]       python3 runtime/scripts/compile.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-logo/demo/fixture-reel --review

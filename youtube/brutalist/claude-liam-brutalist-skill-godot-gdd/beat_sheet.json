@@ -1,0 +1,941 @@
+{
+  "metadata": {
+    "title": "The godot-gdd Skill",
+    "slug": "claude-liam-brutalist-skill-godot-gdd",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel_title": "@HumanitariansAI",
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Annyeong, Liam",
+    "greeting_note": "hello lexicon: Annyeong (Korean). Wagwan check: sum('claude-liam-brutalist-skill-godot-gdd') mod 10 = 3639 mod 10 = 9, not a Wagwan reel.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "0084792391494bda81c23c7b93a0404a",
+    "episode_id": "skill-godot-gdd",
+    "order": 14,
+    "note": "Skill teardown of skills/make/godot-gdd/SKILL.md (episode.source_sha256 8d5a62370d0c3af37fe88e2fe798846e1f3ad03fc1ed9a119ce6042b747f5220). Self-demo limitation: godot-gdd requires a real Godot game project with an existing GDD; this reel demonstrates the mechanism using teaching illustrations labeled as such. Outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md. folderLabel on body beats uses @HumanitariansAI per playlist channel adaptation. No pantry stills. No paid API, no upload.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/godot-gdd/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "godot-gdd",
+      "skill teardown",
+      "Godot 4",
+      "game design document",
+      "GDD",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-11T03:34:05",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear. No dark terminal.",
+      "narration_text": "Annyeong — this is Liam, in for Bear. There is a Brutalist skill called godot-gdd. Fellows look at that name and assume it writes the design document for them — or reads their game code and extracts one. It does neither. So I asked Claude to read the full skill and explain what actually happens when you point it at an existing Godot project with a GDD already written.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream page"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Annyeong, Liam' appears above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "command '/godot-gdd walker-jumpman/ GDD.md' types itself into the composer"
+          },
+          {
+            "at": "0.60",
+            "event": "send button arms terracotta; runningText appears"
+          },
+          {
+            "at": "0.75",
+            "event": "two RESULT lines land: sections found and output path"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The godot-gdd Skill",
+            "greeting": "Annyeong, Liam",
+            "command": "/godot-gdd walker-jumpman/ GDD.md",
+            "runningText": "reading GDD.md · mapping sections · building reel folder...",
+            "output": [
+              "8 sections found — 7 covered, 1 excluded by design",
+              "output: walker-jumpman/youtube/claude-liam-walker-jumpman-gdd/"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Fable 5",
+            "effortLabel": "High",
+            "durationSeconds": 19.01
+          },
+          "pattern": "ClaudeComposerAsk",
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-11T07:15:19.674376+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.01,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 19.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — BrutalistHesitantWriter BLUF. Misconception: 'godot-gdd generates a design document'. Correction: 'explains'. lead_silence_s: 0.8 for typing head start. Minimum 9s narration.",
+      "lead_silence_s": 0.8,
+      "narration_text": "godot-gdd reads an existing game design document and builds the film explaining it — section by section, status labeled, evidence grounded. Not a generator. The document must already exist. That constraint is the entire design of the skill.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on-with-correction",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream page; writer begins typing 'godot-gdd generates a design document'"
+          },
+          {
+            "at": "0.40",
+            "event": "word 'generates' appears in terracotta — hesitation, then backspace"
+          },
+          {
+            "at": "0.55",
+            "event": "replacement 'explains' typed; text normalizes to ink color"
+          },
+          {
+            "at": "0.70",
+            "event": "remaining lines complete; text holds for narration finish"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "text": "godot-gdd generates a design document\nfor any Godot game you point it at.\nCorrection: the GDD must already exist.\ngodot-gdd reads it and builds the film.",
+            "triggerWords": "generates",
+            "replacementWords": "explains",
+            "fontSize": 88,
+            "lineSpacing": 2.7,
+            "seed": "godot-gdd-gdd-skill-2026",
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5",
+            "face": "serif",
+            "align": "center",
+            "brandLabel": "@HumanitariansAI",
+            "durationSeconds": 15.07
+          },
+          "pattern": "BrutalistHesitantWriter",
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-11T07:32:24.301666+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.27,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.291666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK beat — godot-gdd pipeline as a four-stage flow. VERBATIM QUOTE on screen from SKILL.md. Shown before examples per teaching arc.",
+      "narration_text": "The pipeline has four stages. Read: the full GDD, including appendices and revision history. Map: every top-level section to a beat or an explicit, documented exclusion. Visualize: each requirement beside real game evidence or a clearly labeled proposed diagram. Assemble: via remotion-scenes and compile-py, same as every Brutalist film.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "flow-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title 'godot-gdd: The Pipeline' appears on cream"
+          },
+          {
+            "at": "0.1",
+            "event": "'Read' panel reveals with details"
+          },
+          {
+            "at": "0.35",
+            "event": "'Map' panel reveals"
+          },
+          {
+            "at": "0.55",
+            "event": "'Visualize' panel reveals"
+          },
+          {
+            "at": "0.75",
+            "event": "'Assemble' panel reveals; all four visible with spark line below"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "mode": "flow",
+            "title": "godot-gdd: The Pipeline",
+            "sparkLine": "Film builder, not document generator.",
+            "source": "Source: skills/make/godot-gdd/SKILL.md — 'An agent-driven film builder, not a GDD generator or a line-by-line reading.'",
+            "labels": [
+              "Read",
+              "Map",
+              "Visualize",
+              "Assemble"
+            ],
+            "details": [
+              "Full GDD: sections,\nappendices, revision\nhistory, open questions",
+              "Every section → beat\nor documented exclusion\nwith written reason",
+              "Requirement beside\nreal game evidence or\nlabeled proposed diagram",
+              "remotion_scenes.py\nthen compile.py\ngate-verified master"
+            ],
+            "cueSeconds": [
+              0.5,
+              5.0,
+              10.0,
+              15.0
+            ],
+            "selected": 3,
+            "durationSeconds": 19.8
+          },
+          "pattern": "WalkerGodotSetup",
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-11T07:16:46.578435+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.8,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 19.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:WalkerGodotSetup",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "Coverage contract — VERBATIM QUOTE LAW. Exact SKILL.md excerpt on screen. Every section must map to a beat or documented exclusion.",
+      "narration_text": "The coverage contract is the strictest rule. Every substantive top-level section must appear in the film — as a beat, or as an exclusion with a written reason. Skipping a section without a note is a violation, not a judgment call. The skill calls this mapping, not summarizing — and the distinction matters.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "design_status": "proposed",
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "card-reveal-with-highlight",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "GodotDesignBoard: title 'Coverage Contract', SKILL.md excerpt on left panel"
+          },
+          {
+            "at": "0.15",
+            "event": "first card 'Vision and Pillars' highlights in terracotta"
+          },
+          {
+            "at": "0.40",
+            "event": "second card 'Loops and Mechanics' highlights"
+          },
+          {
+            "at": "0.65",
+            "event": "third card 'Scope and Risks' highlights"
+          },
+          {
+            "at": "0.85",
+            "event": "fourth card 'Exclusions — written reason required' highlights"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "title": "Coverage Contract",
+            "section": "§ Section Mapping",
+            "excerpt": "Map every substantive top-level section to a narrated beat or an explicit, reasoned exclusion.",
+            "source": "Verbatim: skills/make/godot-gdd/SKILL.md",
+            "status": "PROPOSED FRAMEWORK · teaching illustration",
+            "visualLabel": "What the film must cover",
+            "layout": "cards",
+            "cards": [
+              {
+                "label": "Vision and Pillars",
+                "text": "Why the game, what player experience it targets"
+              },
+              {
+                "label": "Loops and Mechanics",
+                "text": "Core rules, ownership chain, acceptance criteria"
+              },
+              {
+                "label": "Scope and Risks",
+                "text": "Cut features, open decisions, revision history"
+              },
+              {
+                "label": "Exclusions",
+                "text": "Every skipped section needs a written reason — not a silent omission"
+              }
+            ],
+            "cues": [
+              {
+                "at": 3,
+                "card": 0
+              },
+              {
+                "at": 7,
+                "card": 1
+              },
+              {
+                "at": 12,
+                "card": 2
+              },
+              {
+                "at": 17,
+                "card": 3
+              }
+            ],
+            "durationSeconds": 16.47
+          },
+          "pattern": "GodotDesignBoard",
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-11T07:17:35.016717+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.47,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 16.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:GodotDesignBoard",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Status labeling — four required labels per SKILL.md. VERBATIM QUOTE on screen. The core distinction from a GDD reader or generator.",
+      "narration_text": "Every body beat carries one of four status labels. Proposed: a design intent not yet built. Implemented: the feature exists in source. Observed: a test or playthrough confirmed it. Pending: a human decision the film cannot make. These labels are not style choices — they are the distinction the skill exists to enforce.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "design_status": "proposed",
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "flow-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title 'Four Status Labels' and source line appear"
+          },
+          {
+            "at": "0.15",
+            "event": "'Proposed' panel reveals"
+          },
+          {
+            "at": "0.35",
+            "event": "'Implemented' panel reveals"
+          },
+          {
+            "at": "0.55",
+            "event": "'Observed' panel reveals"
+          },
+          {
+            "at": "0.75",
+            "event": "'Pending' panel reveals; all four visible"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "mode": "flow",
+            "title": "Four Status Labels",
+            "sparkLine": "A proposal is not a passing test.",
+            "source": "Source: skills/make/godot-gdd/SKILL.md — 'Label material as proposed, implemented, observed/tested, or human decision pending.'",
+            "labels": [
+              "Proposed",
+              "Implemented",
+              "Observed",
+              "Pending"
+            ],
+            "details": [
+              "Design intent\nnot yet built\nin source code",
+              "Feature exists\nin project source\ncode files",
+              "Test or playthrough\nconfirmed the\nbehavior",
+              "Human decision\nrequired — the\nfilm cannot make it"
+            ],
+            "cueSeconds": [
+              0.5,
+              5.5,
+              10.5,
+              15.5
+            ],
+            "selected": 3,
+            "durationSeconds": 17.34
+          },
+          "pattern": "WalkerGodotSetup",
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-11T07:18:12.114932+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.34,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 17.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:WalkerGodotSetup",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED-EXAMPLE",
+      "role_note": "WORKED EXAMPLE — causal chain walked through while framework is on screen. Framework-on-screen requirement satisfied by GodotDesignBoard with SKILL.md excerpt.",
+      "narration_text": "The design's causal chain is the frame for every explained section. Player experience produces a design rule. That rule has a system owner. The owner produces visible feedback. Feedback maps to an acceptance test. Walk every GDD section through that chain. Any missing link is a gap — and the film must name it, not paper over it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "design_status": "proposed",
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "flow-cards-with-arrows",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "GodotDesignBoard: title 'The Causal Chain', SKILL.md excerpt on left"
+          },
+          {
+            "at": "0.15",
+            "event": "'Player Experience' card highlights"
+          },
+          {
+            "at": "0.35",
+            "event": "'Design Rule' card highlights with arrow from previous"
+          },
+          {
+            "at": "0.55",
+            "event": "'Visible Feedback' card highlights with arrow"
+          },
+          {
+            "at": "0.75",
+            "event": "'Acceptance Test' card highlights — chain complete; arrow chain visible"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "title": "The Causal Chain",
+            "section": "§ Design Chain",
+            "excerpt": "Explain the design's causal chain: player experience → rule → system owner → visible feedback → acceptance test.",
+            "source": "Verbatim: skills/make/godot-gdd/SKILL.md",
+            "status": "PROPOSED FRAMEWORK · teaching illustration",
+            "visualLabel": "Walk every GDD section through this chain",
+            "layout": "flow",
+            "cards": [
+              {
+                "label": "Player Experience",
+                "text": "What the player sees, feels, or decides"
+              },
+              {
+                "label": "Design Rule",
+                "text": "The constraint the designer chose to produce that experience"
+              },
+              {
+                "label": "Visible Feedback",
+                "text": "What the engine shows — animation, sound, score"
+              },
+              {
+                "label": "Acceptance Test",
+                "text": "How you confirm the rule achieved the experience"
+              }
+            ],
+            "cues": [
+              {
+                "at": 3,
+                "card": 0
+              },
+              {
+                "at": 8,
+                "card": 1
+              },
+              {
+                "at": 13,
+                "card": 2
+              },
+              {
+                "at": 18,
+                "card": 3
+              }
+            ],
+            "durationSeconds": 17.9
+          },
+          "pattern": "GodotDesignBoard",
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-11T07:19:04.676313+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.9,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:GodotDesignBoard",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Checker command — VERBATIM QUOTE LAW. Exact syntax from SKILL.md. Shows what it does and does not verify. Self-demo labeled as documented interface (not a live run).",
+      "narration_text": "Before rendering and at handoff, you run the checker: art godot-gdd dash-dash-check, passing the reel path and the GDD path. It verifies source hash, section coverage, exact excerpts, evidence files, and beat status labels. What it cannot verify: whether the explanation is true, whether the game is fun, or whether the design was approved. Those stay human.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "code-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "code card appears: 'SKILL.md — godot-gdd checker'"
+          },
+          {
+            "at": "0.10",
+            "event": "command line reveals: './art godot-gdd --check REEL --gdd GDD.md'"
+          },
+          {
+            "at": "0.30",
+            "event": "VERIFIES comment block reveals line by line"
+          },
+          {
+            "at": "0.65",
+            "event": "CANNOT VERIFY section reveals — gap lines appear in comment style"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "title": "SKILL.md — godot-gdd checker",
+            "language": "bash",
+            "code": "# Run before rendering and at handoff:\n./art godot-gdd --check REEL --gdd GDD.md\n\n# Verifies:\n#   GDD source hash matches saved snapshot\n#   Every section covered or explicitly excluded\n#   Exact SKILL.md excerpts present in beats\n#   Evidence files referenced and hashed\n#   Beat status labels (proposed/implemented/observed/pending)\n\n# Cannot verify:\n#   Whether the explanation is actually true\n#   Whether the design is worth playing\n#   Human approvals — those are yours",
+            "sparkLine": "Structure verified. Truth, fun, and approval stay human.",
+            "brandLabel": "@HumanitariansAI",
+            "largeText": false,
+            "durationSeconds": 19.16
+          },
+          "pattern": "ClaudeCodeBeat",
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-11T07:19:54.061891+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.16,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 19.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Walker modifier — four bookends it adds. VERBATIM QUOTE from SKILL.md. Shows walker is same pipeline plus honest Claude bookends.",
+      "narration_text": "The walker modifier adds four explicit bookends to the standard walkthrough. First, a Claude composer opening shows the invocation — reconstructed and labeled, not a live session. Second, a hesitant writer beat states what is built versus proposed. Third, the design walkthrough proper. Then verdict and handoff. Walker is not a separate skill — it is the same pipeline with Claude bookends at the front.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "design_status": "proposed",
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "flow-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title 'The walker Modifier' and source line appear"
+          },
+          {
+            "at": "0.12",
+            "event": "'Claude Composer' step reveals"
+          },
+          {
+            "at": "0.35",
+            "event": "'Hesitant Writer' step reveals"
+          },
+          {
+            "at": "0.55",
+            "event": "'Design Walkthrough' step reveals"
+          },
+          {
+            "at": "0.75",
+            "event": "'Verdict and Handoff' step reveals; full chain visible"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "mode": "flow",
+            "title": "The walker Modifier",
+            "sparkLine": "Same pipeline. Four honest bookends added.",
+            "source": "Source: skills/make/godot-gdd/SKILL.md — walker adds Claude composer, hesitant-writer summary, walkthrough, verdict/handoff",
+            "labels": [
+              "Claude Composer",
+              "Hesitant Writer",
+              "Design Walkthrough",
+              "Verdict and Handoff"
+            ],
+            "details": [
+              "Reconstructed invocation\nlabeled explicitly —\nnot a live session",
+              "Built vs proposed,\nwhy the film\nreturns to the GDD",
+              "Section by section:\ndocument intent beside\ngame evidence",
+              "Verdict → Your Turn\n→ locked outro\nLiam signs off"
+            ],
+            "cueSeconds": [
+              0.5,
+              6.0,
+              12.0,
+              18.0
+            ],
+            "selected": 3,
+            "durationSeconds": 20.76
+          },
+          "pattern": "WalkerGodotSetup",
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-11T07:20:42.723857+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.76,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 20.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:WalkerGodotSetup",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "DESIGN-TELL",
+      "role_note": "Design tell — 'A proposal is not a passing test'. VERBATIM QUOTE LAW. Core philosophy: why this phrase, what it costs, what it buys. FALSIFIABILITY beat — stress-tests the framework.",
+      "narration_text": "The design tell is the phrase at the center of the skill: a proposal is not a passing test. A feature can be implemented while its player-experience hypothesis is untested. A test suite can pass while acceptance cases remain open. The skill enforces that distinction in every beat's status label — not pessimism, but precision. Collapsing design intent into implementation evidence is the failure the skill exists to prevent.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "design_status": "proposed",
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "card-reveal-with-highlight",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "GodotDesignBoard: title 'Design Tell', SKILL.md excerpt containing the key phrase"
+          },
+          {
+            "at": "0.20",
+            "event": "'The Phrase' card highlights in terracotta"
+          },
+          {
+            "at": "0.45",
+            "event": "'What It Costs' card highlights"
+          },
+          {
+            "at": "0.70",
+            "event": "'What It Buys' card highlights"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "title": "Design Tell",
+            "section": "§ A Proposal Is Not a Passing Test",
+            "excerpt": "Label material as proposed, implemented, observed/tested, or human decision pending. A feature can be implemented while its player-experience hypothesis remains untested.",
+            "source": "Verbatim: skills/make/godot-gdd/SKILL.md",
+            "status": "PROPOSED ANALYSIS · teaching illustration",
+            "visualLabel": "The phrase the skill repeats — and why",
+            "layout": "cards",
+            "cards": [
+              {
+                "label": "The Phrase",
+                "text": "'A proposal is not a passing test' — the skill's design constraint, not a style note"
+              },
+              {
+                "label": "What It Costs",
+                "text": "Every beat requires a status label; no shortcut from 'implemented' to 'accepted'"
+              },
+              {
+                "label": "What It Buys",
+                "text": "A GDD film that keeps design intent separate from implementation evidence"
+              }
+            ],
+            "cues": [
+              {
+                "at": 5,
+                "card": 0
+              },
+              {
+                "at": 13,
+                "card": 1
+              },
+              {
+                "at": 21,
+                "card": 2
+              }
+            ],
+            "durationSeconds": 22.42
+          },
+          "pattern": "GodotDesignBoard",
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-11T07:21:48.204384+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.42,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 22.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:GodotDesignBoard",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "Verdict — ClaudeVerdictArtifact. Recapitulates what godot-gdd does and does not do. No new claims; recapitulation only.",
+      "narration_text": "godot-gdd does one thing precisely: builds a film that walks through an existing game design document — section by section, status labeled, evidence on screen. What it does not do: write the GDD, change the game, approve the design, or certify it is worth playing. Those are yours. The film is the map. The territory stays human.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "artifact-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "verdict artifact card slides in on cream stage"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The GDD explainer, precisely scoped' appears"
+          },
+          {
+            "at": "0.30",
+            "event": "five verdict lines reveal sequentially"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "artifactTitle": "godot-gdd — Verdict",
+            "artifactHeading": "The GDD explainer, precisely scoped",
+            "brandLabel": "@HumanitariansAI",
+            "artifactLines": [
+              "Builds a film walking through an existing GDD — section by section",
+              "Labels every claim: proposed, implemented, observed, or pending",
+              "Shows requirements beside real game evidence or labeled diagrams",
+              "Does not write the GDD, change the game, or approve the design",
+              "Human judgment on fun, fairness, and approval is never delegated"
+            ],
+            "durationSeconds": 17.96
+          },
+          "pattern": "ClaudeVerdictArtifact",
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-11T07:22:36.708923+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.96,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 18.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR-TURN",
+      "role_note": "HANDOFF LAW — Your Turn. Paste-ready prompt with rubric; Liam reads aloud and discusses what to look for. greeting: 'Your turn.' per HANDOFF LAW.",
+      "narration_text": "Your turn. Here is a paste-ready prompt. Take a Godot game project you are working on or studying. Paste this into Claude: Walk me through the GDD for this project using the godot-gdd skill. Tell me which sections are implemented, which are still proposed, and flag any section where the acceptance test is missing or unmeasured. That last part — the missing acceptance test — is the gap most GDDs quietly hide.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "composer card appears; greeting 'Your turn.' above"
+          },
+          {
+            "at": "0.15",
+            "event": "prompt types into composer: 'Walk me through the GDD...'"
+          },
+          {
+            "at": "0.60",
+            "event": "send button arms; runningText: 'reading GDD · mapping sections · flagging gaps...'"
+          },
+          {
+            "at": "0.80",
+            "event": "output: '2 acceptance tests missing · 1 section pending human decision'"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "Your Turn",
+            "greeting": "Your turn.",
+            "command": "Walk me through the GDD for this project using the godot-gdd skill. Tell me which sections are implemented, which are still proposed, and flag any section where the acceptance test is missing or unmeasured.",
+            "runningText": "reading GDD · mapping sections · flagging gaps...",
+            "output": [
+              "mapped 8 sections · 2 acceptance tests missing",
+              "1 section pending human decision — flagged in beat sheet"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Fable 5",
+            "effortLabel": "High",
+            "durationSeconds": 20.93
+          },
+          "pattern": "ClaudeComposerAsk",
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-11T07:23:27.921900+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.93,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 20.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-11T03:34:05"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — ClaudeTitleOutro. Exact title restate. @NikBearBrown handle HARDCODED per OUTRO-LOCK.md. No narration over outro card. Jingle only.",
+      "narration_text": "Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 8,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "title-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title card: 'The godot-gdd Skill.' in serif, @NikBearBrown handle, slug-seeded mascot below"
+          }
+        ],
+        "remotion": {
+          "props": {
+            "title": "The godot-gdd Skill",
+            "slug": "claude-liam-brutalist-skill-godot-gdd",
+            "durationSeconds": 8.0
+          },
+          "pattern": "ClaudeTitleOutro",
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-11T07:23:49.079746+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 8.0,
+      "audio_policy": "silence",
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-11T03:34:05"
+      }
+    }
+  ]
+}

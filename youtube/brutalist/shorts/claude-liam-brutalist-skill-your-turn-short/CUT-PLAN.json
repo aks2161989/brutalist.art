@@ -1,0 +1,21 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "The your-turn skill standardizes the closing three beats (VERDICT then YOUR TURN then OUTRO) of every claude-explainer reel — all Liam, always closing, idempotent — with a paste-ready assignment as the sign-off.",
+  "parent_master_sha256": "bdeb47c89ce4ecf05cf70313aedee7f0e65a4c14a3f793aaaa2bf8362ee12d5a",
+  "kept_beats": ["B00", "B01", "B03", "B09", "B10", "B11", "B12", "B13"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "SKILL anatomy (SKILL.md + apply_your_turn.py folder tree) is generic skill-teardown scaffolding; belongs in the 16:9 long."},
+    {"beat_id": "B04", "reason": "Persona-aware handoff wording is an implementation detail — B11 verdict card summarizes it in one line."},
+    {"beat_id": "B05", "reason": "drafts.json human-gate mechanism is one of five numbered decisions; keeping just this one strands the 'First/Second decision…' scaffolding and B11 already captures the gate."},
+    {"beat_id": "B06", "reason": "Verdict-card fixes (84% width + strip leading numbers) are internal catalog repairs; not needed to explain what the skill does."},
+    {"beat_id": "B07", "reason": "'Liam reads the whole prompt' is already asserted in B03 ('Liam reads the whole thing aloud') and demonstrated live in B12."},
+    {"beat_id": "B08", "reason": "'Outro re-reads the title' is already asserted in B03 ('Liam re-reads the reel's own title') and demonstrated live in B13."}
+  ],
+  "cut_first_review": "B00 introduces Liam and asks Claude what your-turn actually rewrites. B01 corrects the misconception (closing-block, not whole-reel). B03 lands the three-beat block in order (VERDICT → YOUR TURN → OUTRO — Liam throughout). B09 runs the transformer on the demo/ fixture: changed=1, zero errors, idempotent. B10 states the one hard limitation (never touches body, never publishes, human-triggered re-upload). B11 collects the six-line split (bookends inherited / three beats owned / handoff persona-aware / drafts.json human gate / verdict card fixed / skip elsewhere). B12 hands off with the paste-ready assignment. B13 re-reads the title. Every transition is a native seam — no numbered-decision references leak in from the dropped middle beats.",
+  "planned_duration_s": 131.75,
+  "final_duration_s": 131.75,
+  "final_video_sha256": "4f2f38ce424a51ac73f3cf1cec91f2b0e1e7b93f681ee087cc235353a5660274",
+  "run_id": "bfb6c15f19af454ab8a8e43c589e1cbf",
+  "verified_at": "2026-09-12",
+  "rewrite_reason": null
+}

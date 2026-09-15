@@ -1,0 +1,17 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "What makes deep-explainer different from ai-explainer: it inherits the bookends, owns a multi-act middle governed by VOX LAW, and adds two hard gates (D1 slate previz, D2 shopping list after audio lock).",
+  "parent_master_sha256": "52b324328b06be1007cded5ea6b5cf54b77c1ffb518f9105eaeeddcc68e736ca",
+  "kept_beats": ["B00", "B01", "B03", "B06", "B07", "B10", "B11", "B14", "B16"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Generic folder-anatomy of what any skill is; already covered in the 16:9 long and in the parent explainer/ai-explainer shorts."},
+    {"beat_id": "B04", "reason": "Reveals the internal fixed-spine node list; a structural detail belonging to the long, not to a Short focused on the differentiators."},
+    {"beat_id": "B08", "reason": "Continuity scope (max run = 3 vox beats) is an internal contract that does not land without pantry/documentary context; the Short foregrounds the two hard gates instead."},
+    {"beat_id": "B12", "reason": "Output-contract folder tree repeats generic project anatomy; the verdict beat already communicates 'built into the owning book'."},
+    {"beat_id": "B13", "reason": "Extended limitation callback about pantry sourcing and long-form runtime; the Short's own honesty is that it derives from the long, not from a live end-to-end run."},
+    {"beat_id": "B15", "reason": "YOUR TURN paste-in prompt (~19s) is the long form's exercise; a Short does not read the exercise aloud, per BUILD-PROMPT §4."}
+  ],
+  "cut_first_review": "B00 introduces Liam and asks what deep-explainer does differently. B01 delivers the BLUF: not a longer ai-explainer — act-structured, with two hard gates the parent chassis lacks. B03 pays off the 'act-structured' claim by naming the inheritance chain (extends ai-explainer, which extends explainer). B06 and B07 name what the middle actually OWNS: multi-act pacing (duration is an output) and the VOX LAW that killed the 20–25% still quota. B10 and B11 are the promised two hard gates — D1 slate previz, D2 shopping-list-after-audio-lock. B14 recaps the split (bookends inherited, middle owned, two gates) and points viewers to ai-explainer for one-insight sources — closing the loop opened in B00. B16 is the locked Liam-in-for-Bear title outro. No numbered transitions are broken. B01's promise of 'two hard gates' is delivered by B10/B11. B14's mention of Gate D1, Gate D2, VOX LAW and multi-act body all remain grounded in retained beats. B14's mention of pantry/shopping list references vocabulary that B07/B11 already introduced. No 'as we just saw' references depend on dropped beats.",
+  "planned_duration_s": 119.79,
+  "rewrite_reason": null
+}

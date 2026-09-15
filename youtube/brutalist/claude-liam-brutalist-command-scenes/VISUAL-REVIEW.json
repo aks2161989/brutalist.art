@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "55a09dc2004f4348be10c7ea7756eb86",
+  "source_sha256": "384e2c8868f2b8a1ad7ce66280a4579ba318f957677cc2ec2d92b3ce0a8a0c52",
+  "beat_sheet_sha256": "fc2032510b77eb7662ebd48c11766e37e7f7f96c35084016827d28783c6bb5f6",
+  "video_sha256": "6bb15d47b2f32471288bae9e8a5af1a179e3d93e72d90bb4cc8510669a2821b3",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "427aeb9c5db62f4093f2280c7c0dd9bdf13385e2e293cb8a4616e29e12fecb32"}
+  ],
+  "notes": "Re-verified under run_id 55a09dc2004f4348be10c7ea7756eb86 (source_sha256 updated; no content change in art or scene_search.py vs previous build). Gate V (final_frame_check.py) re-run: frames=24 BLOCKER=0 MAJOR=0. Contact sheet re-read via image-capable Read tool: B00 lands as the Claude composer with 'Namaste, Liam' greeting and the three-line ask + output cascade; B01 (BrutalistHesitantWriter) shows 'art scenes finds / existing scenes.' after the two-word correction from 'writes/new'; B02-B08 read as ClaudeCodeBeat cards covering the case-branch dispatcher (art:67-70), the scenes.json schema, the three-tier scorer with IDF re-weighting, verbatim 'sankey flow' output, --check + --undocumented, alias equivalence + stop-word guard, and the yak-shaving-trombone miss with the TEMPLATE-MISSES.md log line; B09 lands the seven-line verdict artifact; B10 shows the paste-ready audit prompt inside the composer with 'Your turn.' greeting; B11 is the OUTRO-LOCK card with 'Brutalist Command: art scenes.' title and hardcoded @NikBearBrown handle. All 12/12 beats filled (0 slates). MP4 sha256 unchanged from Sep-09 build: 6bb15d47. Landscape export is 3840x2160 native. Human review pending."
+}

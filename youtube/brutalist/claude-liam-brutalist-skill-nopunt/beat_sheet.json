@@ -1,0 +1,830 @@
+{
+  "metadata": {
+    "title": "The nopunt Skill",
+    "slug": "claude-liam-brutalist-skill-nopunt",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "channel_title": "@HumanitariansAI",
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "7fd912b8ac884fc0a97edd25c5716c4e",
+    "episode_id": "skill-nopunt",
+    "order": 18,
+    "note": "Skill teardown of skills/make/nopunt/SKILL.md (episode.source_sha256 db5dbdc4…). The nopunt skill is the anti-punt catalog — the single place a Brutalist author checks before dropping ANY placeholder in a beat sheet. It answers 'can I draw this, and how?' with one triage: HOLD is only a genuine archival PHOTOGRAPH; everything else in the catalog animates, so leaving it unfilled is a PUNT (a bug, not a style choice). Step zero routes every beat through the library first (./art scenes). The catalog maps narration-shape → animation form → tool: Manim owns morphing math/geometry, Remotion owns composed cards / typography / UI, the app skin (ClaudeCodeBeat / composer / shell / GitHub) shows the REAL artifact, FormB cards list 2–5 named things with icons, FormA is the last-resort word card. A permanent block-list of 'punt costumes' names the same bug in different hats: gen-AI clip, unfilled fill_slates slate, a card whose narration names a visual, DoodleScene / DoodleChart, STILL src=archive for a concept. And SHOW/HOLD/CARD is the per-beat vocabulary — anything else is a PUNT. Voice: Kokoro am_onyx — Liam in for Bear (IN-FOR-BEAR LAW). Outro is ClaudeTitleOutro (hardcoded @NikBearBrown handle per OUTRO-LOCK); inner composer folder chip is @HumanitariansAI per playlist. Live demo captured in demo/nopunt-run.log — three real `./art scenes` invocations (search, --check hit, --check banned-costume, --check miss).",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/nopunt/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "nopunt",
+      "skill teardown",
+      "anti-punt catalog",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T20:45:59",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hola, this is Liam, in for Bear. Today we tear down the nopunt skill. It is the anti-punt catalog — the single place a Brutalist author checks before dropping any placeholder in a beat sheet. It answers one question. Can I draw this, and how. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hola, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the nopunt skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hola, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The nopunt Skill",
+            "command": "What does the `nopunt` skill actually do? Read skills/make/nopunt/SKILL.md and tell me — the mental model, not the section headings.",
+            "runningText": "reading skills/make/nopunt/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "the anti-punt catalog — one place to check before ANY placeholder",
+              "HOLD is only a genuine archival photograph — everything else animates",
+              "unfilled animatable content = PUNT (a bug, not a style choice)"
+            ]
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 14.57,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 14.583333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the 'nopunt is a style rule' misread to the actual claim: nopunt is authoring TRIAGE. Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read is that nopunt is a linter — a rejection tool that flags bad placeholders. It is not. The nopunt skill is a catalog. A routing table you check before you fill a beat. It maps narration shape to a real component, and it refuses the punt costumes that keep sneaking back in. Only a genuine archival photograph is a legitimate hold. Everything else, the catalog animates.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'The nopunt skill'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 'is a linter'"
+          },
+          {
+            "at": "0.55",
+            "event": "'linter' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'linter' deletes and 'catalog' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 3 lands: 'Check it before you fill a beat.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "The nopunt skill\nis a linter\nfor placeholders.\nCheck it before you fill a beat.",
+            "triggerWords": "linter",
+            "replacementWords": "catalog",
+            "seed": "nopunt-bluf-2026-7fd912b8-v1",
+            "face": "serif",
+            "fontSize": 148,
+            "lineSpacing": 1.25,
+            "align": "center",
+            "charMs": 20,
+            "jitter": 4,
+            "mistakeRate": 3,
+            "hesitateWithin": 1,
+            "hesitateBetween": 3,
+            "banner": ""
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 20.37,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 20.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — the anatomy of nopunt: the SKILL.md file itself, the catalog rows, the SHOW/HOLD/CARD vocabulary, the block-list, and the sibling skills that read it.",
+      "narration_text": "First, the anatomy. Nopunt is one file — SKILL dot md — and it does five jobs. It defines the HOLD versus PUNT rule. It publishes the catalog — a table of narration shape mapped to animation form and to the tool that renders it. It fixes the SHOW slash HOLD slash CARD vocabulary that every authoring loop reads. It names the punt costumes to reject on sight — the same bug in different hats. And it stays synced with the actual scene registry, so the lint has one source of truth. Sibling skills — ai dash explainer, deep dash explainer, cli dash explainer — do not repeat these rules. They reference this file.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'One file. Five jobs.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.85",
+            "event": "callout box lands: 'single source; siblings reference it'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "nopunt",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "One file. Five jobs.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/nopunt/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "accent": true,
+                "tag": "the catalog"
+              },
+              {
+                "indent": 2,
+                "icon": "•",
+                "name": "HOLD vs PUNT rule  (only real photos HOLD)"
+              },
+              {
+                "indent": 2,
+                "icon": "•",
+                "name": "the catalog rows  (narration → form → tool)"
+              },
+              {
+                "indent": 2,
+                "icon": "•",
+                "name": "SHOW / HOLD / CARD  (the per-beat vocabulary)"
+              },
+              {
+                "indent": 2,
+                "icon": "•",
+                "name": "punt costumes to reject  (block-list)"
+              },
+              {
+                "indent": 2,
+                "icon": "•",
+                "name": "teaching-arc checklist  (sheet-level exit)"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "referenced BY  (never repeat, always link)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "skills/make/ai-explainer/SKILL.md"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "skills/make/deep-explainer/SKILL.md"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "skills/make/cli-explainer/SKILL.md"
+              }
+            ],
+            "calloutText": "<b>Single source.</b> Nopunt owns the rules; sibling skills <b>reference</b> them. Change the catalog here, every authoring loop reads the new row.",
+            "sparkLine": "One catalog. Every reader syncs."
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 33.26,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 33.291666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — how a beat gets routed. Step zero is `./art scenes`, then tool choice, then SHOW/HOLD/CARD classification. If nothing fits, that is a design card, not a slate.",
+      "narration_text": "The pipeline. Every beat goes through five gates, and only the first is optional if you already know your component. Step zero — ask the library. Run art scenes with what the beat needs in plain words, and art scenes dash dash check the name it suggests. If the library has it, use it. Then route by narration shape. Moving mechanism, math, geometry — Manim. Composed card, typography, UI — Remotion. Real code, real terminal, real diff — the app skin. A short list of named things — FormB. Words with nothing to show — FormA. Then classify — SHOW, HOLD, or CARD. Anything else — including a genuine miss — becomes a design card. The catalog logs the miss to TEMPLATE dash MISSES dot md automatically. A miss is never a licence to slate.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Five gates. One is the library.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'a beat with content' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "phase nodes reveal — 'STEP ZERO' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'SHOW · HOLD · CARD (or design card)' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Five gates. One is the library.",
+            "inputLabel": "a beat with content — narration + intent",
+            "outputLabel": "SHOW · HOLD · CARD  (or a logged design-card miss)",
+            "phases": [
+              {
+                "label": "STEP ZERO",
+                "desc": "./art scenes '<what it needs>' · --check <Name>",
+                "accent": true
+              },
+              {
+                "label": "ROUTE BY SHAPE",
+                "desc": "moving/math → Manim · card/UI → Remotion · code → app skin · list → FormB · words → FormA"
+              },
+              {
+                "label": "CLASSIFY",
+                "desc": "SHOW (draws itself) · HOLD (real photograph only) · CARD (last-resort words)"
+              },
+              {
+                "label": "REJECT COSTUMES",
+                "desc": "gen-AI clip · unfilled slate · card that names a visual · DoodleScene · STILL src=archive"
+              },
+              {
+                "label": "LOG A MISS",
+                "desc": "genuine miss → TEMPLATE-MISSES.md · design card, not a slate"
+              }
+            ],
+            "footerNote": "Step zero is the cheapest way to avoid inventing a scene that already exists next door.",
+            "sparkLine": "Library first. Route second. Classify last."
+          }
+        }
+      },
+      "estimated_duration_s": 44,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 39.85,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 39.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — HOLD vs PUNT. Only a real archival photograph is a HOLD. Everything else animates, so unfilled is a PUNT (a bug, not a style choice).",
+      "narration_text": "First design decision, and it is the whole rule. HOLD versus PUNT. HOLD means the beat needs a genuine archival photograph — a real person, a real place, a real document, a real event — or a judgment only Bear can make. That is the only legitimate placeholder. Everything else is a PUNT. A slot the system could draw itself but deferred. Every row in the catalog below is animatable. So if a beat's content appears in the catalog and is left unfilled, that is a bug — not a design choice, not a stylistic hold, not a taste question. Author it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Only photographs HOLD.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: HOLD = real photograph or Bear-only judgment"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'unfilled animatable content = bug'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "Only photographs HOLD.",
+            "body": "HOLD = a genuine archival PHOTOGRAPH of a real person, place, document, or event — or a judgment only the creator can make. That is the ONLY legitimate placeholder. PUNT = a slot the system can draw or show itself but deferred. Every row in the nopunt catalog is animatable, so leaving that content unfilled is a bug — not a style choice.",
+            "quote": "HOLD (legitimate, keep as a slate placeholder): the beat needs a genuine archival PHOTOGRAPH of a real person, place, document, or event. PUNT (a bug, author it): a slot the system can draw/show itself but deferred.",
+            "cite": "nopunt SKILL.md · The one rule",
+            "verdictLabel": "unfilled animatable = bug",
+            "verdictPositive": true,
+            "sparkLine": "One legitimate placeholder. Everything else, author."
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 27.95,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 27.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Design decision 2 — THE CATALOG. Narration shape → animation form → tool. Six families cover everything animatable.",
+      "narration_text": "Second decision. The catalog. Every beat's narration has a shape, and the catalog maps that shape to a form and to the tool that renders it. Six families. Data and quantity — bars, stat cards, donuts, itemized lists. Structure and relationship — grids, funnels, flow diagrams, stacks, gates. Math and mechanism — equations built term by term, geometric transforms. Enumerated concepts — FormB cards, one icon per named thing. Code and app and interface — the real artifact, in the real skin. And text bookends — FormA and the four fixed beats. If a beat's content lands in any of these families, the tool is already picked. The author's job is just to route it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Six families. Every shape covered.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: bars → Manim · lists → FormB · code → app skin · …"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'shape → form → tool'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "Six families cover it.",
+            "body": "The catalog maps narration shape → animation form → tool. Data & quantity (bars, stats, donuts) → Manim / Remotion. Structure & relationship (grids, funnels, flows, stacks, gates) → Manim / FlowDiagram. Math & mechanism → Manim. Enumerated concepts (2–5 named things) → FormB. Code / app / interface → the real skin, live. Text bookends (act divider, aphorism, outro) → FormA / ClaudeComposerAsk / ClaudeVerdictArtifact / ClaudeTitleOutro.",
+            "quote": "MOVING mechanism / math / geometry / transform / plotted curve → Manim. Composed card / stat / typography / icon-grid / UI / document / karaoke text → Remotion. Real code / terminal / app / config / schema / diff / trace → the app SKIN.",
+            "cite": "nopunt SKILL.md · How to choose the tool",
+            "verdictLabel": "shape picks the tool",
+            "verdictPositive": true,
+            "sparkLine": "Every shape has a lane."
+          }
+        }
+      },
+      "estimated_duration_s": 42,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 36.44,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 36.458333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — PUNT COSTUMES. The block-list. Same bug in different hats. None is ever a valid fill for animatable content.",
+      "narration_text": "Third decision. The block-list. Nopunt names five punt costumes — the same bug in different hats — and none of them is ever a valid fill for animatable content. One — YOU dropping in a gen dash AI clip. Two — an unfilled fill underscore slates or remotion underscore scenes slate left in the master. Three — a FormA card whose narration names a visual, like the routing diagram or a funnel. Four — DoodleScene or DoodleChart, permanently cut from this register. Five — STILL source archive, drop a historical image, for a concept or a dataset. Each of these maps to a row in the catalog above. Draw it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Five costumes. One bug.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: five costumes named · each maps to a catalog row"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'draw it — never dress it up'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "Five costumes. One bug.",
+            "body": "The five punt costumes nopunt bans on sight: (1) a gen-AI clip / pantry still filling a concept slot; (2) an unfilled fill_slates or remotion_scenes slate in the master; (3) a FormA card whose narration NAMES a visual (\"the routing diagram\", \"a funnel\"); (4) DoodleScene / DoodleChart — permanently cut; (5) STILL src=archive standing in for a concept or dataset. Each maps to a catalog row. Author the row.",
+            "quote": "YOU → gen-AI clip → pantry · unfilled PIPELINE → fill_slates/remotion_scenes slate · a FormACard whose narration NAMES a visual · DoodleScene / DoodleChart · STILL src=archive 'drop a historical image' for a concept or dataset.",
+            "cite": "nopunt SKILL.md · Punt costumes to reject",
+            "verdictLabel": "draw it, never dress it up",
+            "verdictPositive": true,
+            "sparkLine": "Same bug, different hats. All banned."
+          }
+        }
+      },
+      "estimated_duration_s": 38,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 32.09,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 32.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Design decision 4 — SHOW/HOLD/CARD is the per-beat vocabulary. Every authoring loop uses it. Anything else is a PUNT.",
+      "narration_text": "Fourth decision, and it is the vocabulary every authoring loop reads. SHOW, HOLD, or CARD. SHOW — a real skin surface, a Manim diagram, a Remotion scene, or a legible artifact renders the beat's content, and its component is named in the shot block. HOLD — a real archival photograph, or a judgment only Bear can make, with a one dash line hold underscore reason next to it. CARD — a few words with nothing to show, an act divider or an aphorism, last resort. If a card's narration names a visual or makes a factual claim, that is a PUNT, not a card. Anything outside these three is a PUNT — a bug, not a style choice.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'SHOW · HOLD · CARD.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: three classes — each with its exit condition"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'anything else = PUNT'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4",
+            "heading": "SHOW · HOLD · CARD.",
+            "body": "SHOW — a real skin surface, Manim diagram, Remotion scene, or legible artifact renders the beat; component/scene ID is named in shot. HOLD — genuine archival photograph or a creator-only judgment; requires a one-line hold_reason. CARD — a few words with nothing to show (act divider, aphorism, breathing beat); last resort. A card whose narration names a visual or asserts a fact is a PUNT, not a card. Anything else is a PUNT.",
+            "quote": "SHOW / HOLD / CARD — the per-beat classification. Anything else is a PUNT — a bug, not a style choice.",
+            "cite": "nopunt SKILL.md · SHOW / HOLD / CARD",
+            "verdictLabel": "three classes, no fourth",
+            "verdictPositive": true,
+            "sparkLine": "Three classes. No fourth."
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 33.17,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 33.208333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — when the catalog GENUINELY misses. That is a scripting gap to FLAG (a design card), not a licence to slate.",
+      "narration_text": "Falsifiability. What if the catalog does not fit. It happens. A concept lands that has no row — nothing moves, no listable set, no code artifact, no real photo. Nopunt is explicit about this case. It is a scripting gap to FLAG — never a gen dash AI clip, never an archive still, never a card of words dressed up as a beat. The search writes the miss to TEMPLATE dash MISSES dot md by itself, with dash dash reel pointing at the reel that needed it, and the next author sees the ask. A miss is a design task. Build the component and the next reel finds it forever. But a miss is never a licence to slate.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow FALSIFIABILITY · ACT 5 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'A miss is a design card.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: catalog gap → TEMPLATE-MISSES.md · not a slate"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'a miss ≠ a licence to slate'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "FALSIFIABILITY · ACT 5",
+            "heading": "A miss is a design card.",
+            "body": "When nothing in the catalog genuinely fits, that is a scripting gap to FLAG — never a gen-AI clip, never an archive still, never a card of words. The `./art scenes` search logs the miss to TEMPLATE-MISSES.md by itself, tagged with the reel path via --reel. Build the component and the next reel finds it forever. But a miss is never a licence to slate.",
+            "quote": "Only when the library genuinely has nothing does the tool choice below apply, and that miss is a design card: the search writes it to TEMPLATE-MISSES.md itself. A miss is never a licence to slate, and never a licence to invent a punt costume.",
+            "cite": "nopunt SKILL.md · Step zero",
+            "verdictLabel": "log the miss, do not slate",
+            "verdictPositive": true,
+            "sparkLine": "A miss is a design card. Not a slate."
+          }
+        }
+      },
+      "estimated_duration_s": 38,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 33.26,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 33.291666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the skill in six lines.",
+      "narration_text": "The verdict. The nopunt skill is the anti dash punt catalog — the single place a Brutalist author checks before dropping any placeholder. HOLD is only a genuine archival photograph. Everything else in the catalog animates, so unfilled means bug. Step zero is the library — art scenes, then art scenes dash dash check. Narration shape picks the tool — Manim for moving math, Remotion for composed cards, the app skin for real code, FormB for lists, FormA for last resort words. SHOW slash HOLD slash CARD is the vocabulary. Anything else is a PUNT. And a genuine miss is a design card, never a slate.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The catalog. The vocabulary. The block-list.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The nopunt Skill",
+            "artifactHeading": "The catalog. The vocabulary. The block-list.",
+            "artifactLines": [
+              "One file — skills/make/nopunt/SKILL.md — is the single source; sibling skills reference it, never repeat it.",
+              "HOLD is ONLY a genuine archival photograph. Everything else in the catalog animates — unfilled = PUNT (bug).",
+              "Step zero is the library — ./art scenes '<needs>' and ./art scenes --check <Name>. A hit is a lead; open the file.",
+              "Narration shape picks the tool: Manim (moving math), Remotion (cards/UI), app skin (real code), FormB (lists), FormA (last-resort words).",
+              "SHOW / HOLD / CARD is the per-beat vocabulary. Anything else — a card that names a visual, a gen-AI clip, a DoodleScene — is a PUNT.",
+              "A genuine catalog miss is a design card, logged to TEMPLATE-MISSES.md — never a licence to slate."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T00:39:49.045573+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 42,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 32.79,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 32.791666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready audit prompt. Liam reads aloud + discusses. Safe: audits, never rewrites.",
+      "narration_text": "Your turn. Paste this into Claude Code. Read skills slash make slash nopunt slash SKILL dot md. Pick one delivered reel of your own — one you have already shipped, so nothing is at risk. Open its beat sheet dot json and classify every beat as SHOW, HOLD, or CARD, using the rule from section SHOW slash HOLD slash CARD. For any beat that does not fit those three, quote its narration text back and route it to a catalog row. And check three things at the sheet level. Is there a FRAMEWORK beat before the first worked example. Is there a FALSIFIABILITY beat that stress dash tests the framework. Does the YOUR TURN prompt in the sheet carry a rubric — a check the viewer can score. If any answer is no, name the fix. Do not rewrite. Just find the punts.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready audit prompt"
+          },
+          {
+            "at": "0.72",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · NOPUNT AUDIT",
+            "segment": "Find the punts in your own reel",
+            "command": "Read skills/make/nopunt/SKILL.md. Pick ONE delivered reel of your own at <book>/youtube/<my-slug>/. Open beat_sheet.json and classify every beat as SHOW, HOLD, or CARD (§ SHOW/HOLD/CARD). For any beat that fits none of the three — quote its narration_text and route it to a catalog row. At the sheet level, check: (a) FRAMEWORK beat present before the first worked example; (b) FALSIFIABILITY beat present that stress-tests the framework; (c) YOUR TURN beat carries a scorable rubric. Report the punts. Do NOT rewrite.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: every beat classifies as SHOW / HOLD / CARD?",
+              "check: FRAMEWORK · WORKED-EXAMPLE · FALSIFIABILITY · SCAFFOLDED-TASK · BOOKENDS · NO-SOURCE-NO-VERDICT?",
+              "check: any narration that NAMES a visual on a CARD beat = PUNT?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T00:41:15.094985+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 42,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 38.34,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 38.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T20:45:59"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "That was the nopunt Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The nopunt Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The nopunt Skill",
+            "slug": "claude-liam-brutalist-skill-nopunt"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T23:26:30.885738+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 5,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.46,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-08T20:45:59"
+      }
+    }
+  ]
+}

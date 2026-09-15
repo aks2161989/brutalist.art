@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "0da03d5644f54a68a0f5d10cf07bbf51",
+  "source_sha256": "24b1b0defb1df0b219e7aed1572ea9b85b632132fffdebd18742ce922ffaf3b4",
+  "beat_sheet_sha256": "857350e82c49f69976d19555569feaf6c878d75a3fe4eadba2dc1725df4850a5",
+  "video_sha256": "19ebee11cdd3ec9cd062fdca31a752d84ea6cacb726580f4ebeaa34adee13dc5",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/run-0da03d56/frame_B00_mid.png",
+      "sha256": "4773b8eb686a6946752d76332eecbc024e7fc6b9b53c6337f430384bef15ecce",
+      "notes": "ClaudeComposerAsk landscape B00 @ 6.94s: 'Selam, Liam' greeting, 'python3 provenance.py claude-liam-brutalist-runtime-provenance/' command, AUDIO/VIDEO/SLOTS output rows visible, folderLabel @HumanitariansAI confirmed, no edge bleed"
+    },
+    {
+      "path": "_qc/run-0da03d56/frame_B01_mid.png",
+      "sha256": "36e6a6d5447dc14d5e1a7fde1f90d1bdd6a46b008a4f67edf08aca5c40f280ca",
+      "notes": "BrutalistHesitantWriter landscape B01 @ 21.58s: hesitant-writer corrected sentence mid-animation, serif text within safe area, no overflow"
+    },
+    {
+      "path": "_qc/run-0da03d56/frame_B05_mid.png",
+      "sha256": "0a8dbe8051ba854c88c6519ebf12e3def53dc783ab5dd5ae55af8a0dde8cf7ef",
+      "notes": "ClaudeCodeBeat landscape B05 @ 114.29s: provenance-fixture/ scan output — AUDIO engine mismatch warning, VIDEO 9 files, SLOTS Brutalist-rendered 4 beats; legible monospace, no bleed"
+    },
+    {
+      "path": "_qc/run-0da03d56/frame_B09_mid.png",
+      "sha256": "75671759c7e3276aaffd04c0949a8f889ef51f0ed408ca18d3e159313fb8d72d",
+      "notes": "ClaudeVerdictArtifact landscape B09 @ 228.57s: 'What it actually gives you.' header, 8-point numbered list covering audio check, video count, slot map, build.filled_by, beat sheet requirement, ffprobe requirement, cost note, composability; card well within safe area"
+    },
+    {
+      "path": "_qc/run-0da03d56/frame_B11_outro.png",
+      "sha256": "b572387cfe6c3e26e37c73bf9470a7258c5f650a4b71c8cf79ef23d6ccd17658",
+      "notes": "HaiTitleOutro landscape B11 @ 267.87s: 'Brutalist Utility: provenance.py.' and '@HumanitariansAI' — correct episode title, correct channel handle, cream background, centered serif, no bleed"
+    }
+  ],
+  "notes": "Landscape 16:9 3840x2160 — 12 beats, 270.2s. Five frames freshly extracted from the passing landscape MP4 for this invocation (run_id 0da03d5644f54a68a0f5d10cf07bbf51). Video MP4 SHA-256 verified unchanged from compiler-verified build. Beat sheet SHA-256 verified unchanged. Inspected: B00 cold open (@HumanitariansAI confirmed, AUDIO/VIDEO/SLOTS summary visible), B01 HesitantWriter mid-animation (serif text within safe area), B05 fixture demo (engine mismatch warning visible, legible monospace code), B09 verdict card (8 points, all within safe area), B11 outro (correct title and channel). 0 blockers, 0 majors. Human review pending."
+}

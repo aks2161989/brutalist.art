@@ -1,0 +1,1035 @@
+{
+  "metadata": {
+    "title": "The godot-gamedev Skill",
+    "slug": "claude-liam-brutalist-skill-godot-gamedev-vertical",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "contain",
+    "captions": false,
+    "channel_title": "",
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Bula, Liam",
+    "greeting_note": "hello lexicon: Bula (Fijian). Portrait companion — same narration, native 9:16 scenes.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "d6a7b8125f8a4bc4bbd1122f104532f0",
+    "episode_id": "skill-godot-gamedev",
+    "order": 13,
+    "note": "Native full-length 9:16 portrait companion for claude-liam-brutalist-skill-godot-gamedev. Uses 916 scene variants where registered. SkillTeardownPipeline → SkillTeardownMechanism swap per feedback_skillteardown_pipeline_portrait.md (Pipeline916 edge-bleed BLOCKER). BrutalistHesitantWriter916 uses lineSpacing:2.6 and fontSize:130 per feedback_hesitant_writer_portrait_bluf_recipe.md. ClaudeTitleOutro916 slug-seeded @NikBearBrown per OUTRO-LOCK.md. Updated in run_id d6a7b8125f8a4bc4bbd1122f104532f0: B04/B05/B10 narration and props updated for SKILL.md code→visible-result teaching unit requirement.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/godot-gamedev/SKILL.md"
+    },
+    "build": {
+      "at": "2026-09-11T21:23:46",
+      "cut": "master",
+      "filled": 13,
+      "of": 13,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B12: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — ClaudeComposerAsk916 portrait variant. Same props, native 9:16 layout.",
+      "narration_text": "Bula — this is Liam, in for Bear. There is a Brutalist skill called godot-gamedev. Most fellows read that name and assume it writes Godot game code for you. It does not. So I asked Claude to read the full skill and explain what actually happens when you point it at a game.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream (portrait layout)"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Bula, Liam' appears above composer"
+          },
+          {
+            "at": "0.28",
+            "event": "command types the ask"
+          },
+          {
+            "at": "0.62",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "three RESULT lines land below card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Bula, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The godot-gamedev Skill",
+            "command": "What does `godot-gamedev` actually do? Read skills/make/godot-gamedev/SKILL.md — is this a game builder, a game player, or something else entirely?",
+            "runningText": "reading skills/make/godot-gamedev/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "High",
+            "output": [
+              "It takes games apart.",
+              "Not a builder — a reader.",
+              "It makes teaching films from source."
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-11T00:52:33.022929+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B00.mp3",
+      "actual_duration_s": 13.99,
+      "render_duration_s": 14.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — BrutalistHesitantWriter916. Portrait recipe: fontSize:130, lineSpacing:2.6, short lines ≤14 chars per feedback_hesitant_writer_portrait_bluf_recipe.md. lead_silence_s required.",
+      "narration_text": "The name fools you. godot-gamedev is a game reader, not a maker. It takes a Godot project you already built and produces a teaching film that explains how it works — component by component, traced from actual source.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 19,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on-correct",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream portrait frame; typing begins"
+          },
+          {
+            "at": "0.15",
+            "event": "'game-maker' types then strikes terracotta, 'game-reader' replaces"
+          },
+          {
+            "at": "0.55",
+            "event": "corrected text settles in portrait layout with generous line spacing"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "godot\ngame-maker\nnot a builder\na source teacher",
+            "triggerWords": "game-maker",
+            "replacementWords": "game-reader",
+            "fontSize": 150,
+            "lineSpacing": 2.6,
+            "align": "center",
+            "seed": "4065",
+            "mistakeRate": 2,
+            "hesitateWithin": 0,
+            "hesitateBetween": 1,
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-11T01:19:14.585383+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B01.mp3",
+      "actual_duration_s": 12.31,
+      "render_duration_s": 12.333333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "PIPELINE",
+      "role_note": "PORTRAIT SWAP per feedback_skillteardown_pipeline_portrait.md — SkillTeardownPipeline → SkillTeardownMechanism. Phase list moved to body field as arrow-joined string to avoid horizontal BLOCKER edge-bleed.",
+      "narration_text": "Here is the flow. You supply a path to a Godot project — the folder that contains the project-dot-godot file. Claude reads every runtime script, groups related components, and traces ownership and dependencies. It writes a beat sheet, generates narration, and the pipeline renders a four-K teaching film.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 23,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "spring-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heading 'Game in. Teaching film out.' settles on portrait frame"
+          },
+          {
+            "at": "0.2",
+            "event": "body text with phase chain reveals"
+          },
+          {
+            "at": "0.45",
+            "event": "quote block: pipeline phases as arrow string"
+          },
+          {
+            "at": "0.72",
+            "event": "verdict pill 'Four phases' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "GODOT-GAMEDEV · PIPELINE",
+            "heading": "Game in. Teaching film out.",
+            "body": "Game folder with project.godot → Claude reads and groups → beat sheet built → 4K teaching film rendered.",
+            "quote": "Read scripts → Trace components → Build beat sheet → Render film (Kokoro am_onyx + Remotion)",
+            "cite": "skills/make/godot-gamedev/SKILL.md · pipeline phases",
+            "verdictLabel": "Four phases",
+            "verdictPositive": true,
+            "sparkLine": "One pass through the machine."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-11T01:46:28.773607+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B02.mp3",
+      "actual_duration_s": 17.34,
+      "render_duration_s": 17.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "ANATOMY",
+      "role_note": "SkillTeardownAnatomy — portrait layout stacks files naturally. Two-mode explanation.",
+      "narration_text": "The skill has two modes. Standard opens on the game architecture and works through each component. Walker adds bookends: a Claude composer beat with a design-document prompt, a hesitant-writer summary of what was built, the development body, then verdict and your-turn. Walker mode is invoked by putting the word walker before the game path.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 25,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "reveal-per-file",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title settles in portrait frame"
+          },
+          {
+            "at": "0.12",
+            "event": "skill folder structure reveals top-to-bottom"
+          },
+          {
+            "at": "0.42",
+            "event": "SKILL.md entry appears (terracotta accent)"
+          },
+          {
+            "at": "0.62",
+            "event": "mode entries reveal; callout box appears below"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "godot-gamedev",
+            "eyebrow": "GODOT-GAMEDEV · ANATOMY",
+            "title": "Two modes: standard and walker.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/godot-gamedev/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "tag": "DOCTRINE",
+                "accent": true
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "references/"
+              },
+              {
+                "indent": 0,
+                "icon": "🎮",
+                "name": "standard mode"
+              },
+              {
+                "indent": 0,
+                "icon": "🚶",
+                "name": "walker mode"
+              }
+            ],
+            "calloutText": "<strong>Standard:</strong> architecture → components → verdict<br/><strong>Walker:</strong> GDD prompt + hesitant-writer bookends",
+            "calloutSub": "Both end: verdict → Your Turn → ClaudeTitleOutro",
+            "sparkLine": "The file is the instruction."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-11T01:47:27.476836+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B03.mp3",
+      "actual_duration_s": 17.86,
+      "render_duration_s": 17.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "GodotDevWorkbench916 — native portrait variant. Code mode with portrait stacked layout.",
+      "narration_text": "When the skill runs on a real game, Claude starts with project-dot-godot: config, autoloads, input map, renderer settings. Then it reads every runtime script. The teaching unit is a pair: one focused, readable excerpt — then immediately the visible result that excerpt produces in the game. A verbal description alone is not a result.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 21,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "line-highlight",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "Godot editor reconstruction in portrait — code panel top, notes bottom"
+          },
+          {
+            "at": "0.15",
+            "event": "line 1 highlights (extends CharacterBody2D)"
+          },
+          {
+            "at": "0.28",
+            "event": "lines 2-3 highlight (@export vars)"
+          },
+          {
+            "at": "0.45",
+            "event": "line 6 highlights (_physics_process)"
+          },
+          {
+            "at": "0.62",
+            "event": "lines 9-10 highlight (jump input)"
+          },
+          {
+            "at": "0.78",
+            "event": "bottom notes panel reveals: type, exports, input, built-in"
+          }
+        ],
+        "remotion": {
+          "pattern": "GodotDevWorkbench916",
+          "props": {
+            "mode": "code",
+            "title": "Reading a player script.",
+            "project": "walker-jumpman",
+            "path": "player.gd",
+            "source": "skills/make/godot-gamedev/SKILL.md · teaching illustration",
+            "code": "extends CharacterBody2D\n@export var speed: float = 200.0\n@export var jump_force: float = -400.0\nconst GRAVITY: float = 980.0\n\nfunc _physics_process(delta: float) -> void:\n\tif not is_on_floor():\n\t\tvelocity.y += GRAVITY * delta\n\tif Input.is_action_just_pressed(\"jump\") and is_on_floor():\n\t\tvelocity.y = jump_force\n\tvar dir := Input.get_axis(\"move_left\", \"move_right\")\n\tvelocity.x = dir * speed\n\tmove_and_slide()",
+            "startLine": 1,
+            "cues": [
+              {
+                "at": 0,
+                "line": 1,
+                "label": "extends CharacterBody2D — physics body type"
+              },
+              {
+                "at": 3,
+                "line": 2,
+                "label": "@export speed — Inspector-tunable"
+              },
+              {
+                "at": 6,
+                "line": 6,
+                "label": "_physics_process — every physics frame"
+              },
+              {
+                "at": 10,
+                "line": 9,
+                "label": "jump: input + is_on_floor guard"
+              },
+              {
+                "at": 14,
+                "line": 11,
+                "label": "horizontal axis from InputMap"
+              },
+              {
+                "at": 17,
+                "line": 13,
+                "label": "move_and_slide — built-in collision"
+              }
+            ],
+            "inspectorLabel": "Source notes — not Inspector values",
+            "notes": [
+              {
+                "label": "Script type",
+                "value": "CharacterBody2D — physics-body player"
+              },
+              {
+                "label": "@export vars",
+                "value": "speed: 200.0 · jump_force: -400.0"
+              },
+              {
+                "label": "Input map",
+                "value": "move_left, move_right, jump"
+              },
+              {
+                "label": "Built-in",
+                "value": "move_and_slide() — collision response"
+              },
+              {
+                "label": "Visible result",
+                "value": "Player moves at 200px/s horizontal;\njump sets velocity.y=-400 when is_on_floor"
+              }
+            ],
+            "output": [
+              "player.gd · code → visible result",
+              "Godot editor reconstruction"
+            ],
+            "durationSeconds": 21
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-12T01:19:32.379609+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B04.mp3",
+      "actual_duration_s": 18.3,
+      "render_duration_s": 18.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:GodotDevWorkbench916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "SkillTeardownMechanism — design tell: reconstruct, don't invent. Same landscape scene, portrait layout works as heading fills top portion.",
+      "narration_text": "The design tell is explicit in the skill file: label reconstructed editor views as Godot editor reconstruction, and supply source path and line numbers. The skill cannot draw a plausible-looking scene tree and call it the game. Every node, property, and texture path must come from a file Claude actually read. Code-result pairs are logged in the evidence ledger as teaching-contract-v1.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 23,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "spring-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heading and eyebrow settle on portrait frame"
+          },
+          {
+            "at": "0.2",
+            "event": "body text reveals"
+          },
+          {
+            "at": "0.45",
+            "event": "verbatim quote block appears"
+          },
+          {
+            "at": "0.72",
+            "event": "verdict pill 'Honest contract'"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "GODOT-GAMEDEV · DESIGN TELL",
+            "heading": "Reconstruct — don't invent.",
+            "body": "Every displayed node, property, and texture path must come from a file Claude actually read. Plausible-looking output is not evidence. Code-result pairs are logged in evidence as `teaching_contract: 'code-then-result-v1'`.",
+            "quote": "Label reconstructed editor views 'Godot editor reconstruction' and provide source path/line numbers. They are teaching views, not recordings of a live editing session. Never invent a debugger success line or a property value.",
+            "cite": "skills/make/godot-gamedev/SKILL.md",
+            "verdictLabel": "Honest contract",
+            "verdictPositive": true,
+            "sparkLine": "The label is the contract."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-12T01:20:25.502060+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B05.mp3",
+      "actual_duration_s": 20.93,
+      "render_duration_s": 20.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "GodotDevWorkbench916 tree mode — portrait stacks code/tree top, notes bottom. Separated from B04 by B05 per ILLUSTRATE LAW.",
+      "narration_text": "Beyond scripts, the skill reads saved scene files. Every dot-tscn reveals which nodes exist in a saved scene — but not which nodes exist at runtime. Code-created nodes do not appear in a saved file. The skill requires this distinction: saved scene versus runtime instance. A diagram that conflates the two is not evidence — it is invention.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "line-highlight",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "Godot editor reconstruction portrait — scene tree top, notes bottom"
+          },
+          {
+            "at": "0.15",
+            "event": "World (Node2D) root highlights"
+          },
+          {
+            "at": "0.3",
+            "event": "Player (CharacterBody2D) highlights"
+          },
+          {
+            "at": "0.45",
+            "event": "CollisionShape2D highlights"
+          },
+          {
+            "at": "0.6",
+            "event": "HUD (Control) highlights"
+          },
+          {
+            "at": "0.75",
+            "event": "bottom note: 'Code-created nodes NOT here'"
+          }
+        ],
+        "remotion": {
+          "pattern": "GodotDevWorkbench916",
+          "props": {
+            "mode": "tree",
+            "title": "Reading the scene tree.",
+            "project": "walker-jumpman",
+            "path": "world.tscn",
+            "source": "skills/make/godot-gamedev/SKILL.md · teaching illustration",
+            "treeLabel": "Scene (world.tscn)",
+            "tree": [
+              "World (Node2D)",
+              "  TileMapLayer",
+              "  Player (CharacterBody2D)",
+              "    CollisionShape2D",
+              "    AnimatedSprite2D",
+              "    Camera2D",
+              "  HUD (Control)",
+              "    ScoreLabel (Label)"
+            ],
+            "cues": [
+              {
+                "at": 0,
+                "line": 1,
+                "label": "World — root Node2D"
+              },
+              {
+                "at": 4,
+                "line": 3,
+                "label": "Player — CharacterBody2D"
+              },
+              {
+                "at": 8,
+                "line": 4,
+                "label": "CollisionShape2D — hitbox"
+              },
+              {
+                "at": 13,
+                "line": 7,
+                "label": "HUD — Control layer"
+              }
+            ],
+            "inspectorLabel": "Source notes — saved scene only",
+            "notes": [
+              {
+                "label": "Saved scene",
+                "value": "world.tscn — 8 nodes"
+              },
+              {
+                "label": "IMPORTANT",
+                "value": "Code-created nodes NOT here"
+              },
+              {
+                "label": "Player link",
+                "value": "player.gd attached to CharacterBody2D"
+              }
+            ],
+            "output": [
+              "world.tscn",
+              "Godot editor reconstruction"
+            ],
+            "durationSeconds": 24
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-11T01:50:45.087124+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B06.mp3",
+      "actual_duration_s": 19.52,
+      "render_duration_s": 19.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:GodotDevWorkbench916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "WalkerGodotSetup916 flow mode — portrait stacks flow labels vertically with ↓ arrows instead of →.",
+      "narration_text": "In walker mode, the film gains two bookends. First: a Claude composer beat with the prompt that opened the session — something like: 'Please use Walker to convert my game design document about dot-dot-dot.' Second: a hesitant-writer beat that types a summary of what was built and what this teardown explains. The development body follows.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 23,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "flow-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title 'Walker mode: bookended.' in portrait"
+          },
+          {
+            "at": "0.1",
+            "event": "GDD prompt stage — first item"
+          },
+          {
+            "at": "0.22",
+            "event": "↓ arrow and Source read appear"
+          },
+          {
+            "at": "0.34",
+            "event": "Component trace appears"
+          },
+          {
+            "at": "0.46",
+            "event": "Beat sheet appears"
+          },
+          {
+            "at": "0.58",
+            "event": "Narration appears"
+          },
+          {
+            "at": "0.7",
+            "event": "4K film appears"
+          }
+        ],
+        "remotion": {
+          "pattern": "WalkerGodotSetup916",
+          "props": {
+            "mode": "flow",
+            "title": "Walker mode: bookended.",
+            "sparkLine": "GDD prompt → source read → component film.",
+            "source": "skills/make/godot-gamedev/SKILL.md · walker mode",
+            "labels": [
+              "GDD prompt",
+              "Source read",
+              "Component trace",
+              "Beat sheet",
+              "Narration",
+              "4K film"
+            ],
+            "details": [
+              "Claude composer beat\nwith the design doc prompt",
+              "Every script, scene,\nasset, and resource",
+              "Ownership chains,\ninput→state→output",
+              "beat_sheet.json +\nCOMPONENTS.md",
+              "Kokoro am_onyx\nper-beat audio",
+              "Rendered via\nremotion_scenes.py"
+            ],
+            "cueSeconds": [
+              0.5,
+              2.2,
+              3.9,
+              5.6,
+              7.3,
+              9.0
+            ],
+            "durationSeconds": 23
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-11T01:51:43.328093+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B07.mp3",
+      "actual_duration_s": 17.39,
+      "render_duration_s": 17.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:WalkerGodotSetup916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "WalkerGodotSetup916 comparison mode — portrait stacks the two panels vertically. Separated from B07 by visual difference (flow→comparison).",
+      "narration_text": "godot-gamedev is one of two Godot skills in this toolkit. The other is godot-walkthrough. The distinction is the question asked. Walkthrough asks: how does the player experience the game — level by level. gamedev asks: how does the code make that experience — component by component. Same project, two films, different lens.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "comparison-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title 'Two Godot skills, different lens.' in portrait"
+          },
+          {
+            "at": "0.18",
+            "event": "godot-gamedev panel (terracotta top border) reveals top"
+          },
+          {
+            "at": "0.42",
+            "event": "godot-walkthrough panel reveals below"
+          }
+        ],
+        "remotion": {
+          "pattern": "WalkerGodotSetup916",
+          "props": {
+            "mode": "comparison",
+            "title": "Two Godot skills, different lens.",
+            "sparkLine": "Same project. Different question.",
+            "source": "skills/make/godot-gamedev/SKILL.md",
+            "labels": [
+              "godot-gamedev",
+              "godot-walkthrough"
+            ],
+            "details": [
+              "Code · scenes · assets · tests\nHow the code makes the experience\nTeaching film: component-by-component",
+              "Gameplay sequence · level by level\nHow the player experiences the game\nWalkthrough film: play-by-play"
+            ],
+            "cueSeconds": [
+              0.4,
+              2.2
+            ],
+            "selected": 0,
+            "durationSeconds": 24
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-11T01:52:40.939213+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B08.mp3",
+      "actual_duration_s": 17.11,
+      "render_duration_s": 17.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:WalkerGodotSetup916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "LIMITATION",
+      "role_note": "SkillTeardownMechanism — self-demo limitation. Portrait layout is fine for this component.",
+      "narration_text": "The self-demo gate is honest about its limit. To actually run godot-gamedev, you need a real Godot game with a project-dot-godot file. The skill runs a coverage check first — art godot-gamedev dash-dash-check. This reel shows the mechanism and the output scenes; a full end-to-end build requires bringing a game project as input.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 23,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "spring-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heading 'Self-demo needs a real game.' in portrait"
+          },
+          {
+            "at": "0.2",
+            "event": "body text"
+          },
+          {
+            "at": "0.45",
+            "event": "quote block with check command"
+          },
+          {
+            "at": "0.72",
+            "event": "verdict pill 'Honest limitation'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "GODOT-GAMEDEV · SELF-DEMO",
+            "heading": "Self-demo needs a real game.",
+            "body": "godot-gamedev requires a game project with project.godot as input. This reel shows the mechanism and output scenes; a full end-to-end build needs a real game.",
+            "quote": "Run `./art godot-gamedev --check REEL --game GODOT_PROJECT` before rendering and at handoff. It checks file coverage, hashes, source lines and beat references.",
+            "cite": "skills/make/godot-gamedev/SKILL.md",
+            "verdictLabel": "Honest limitation",
+            "verdictPositive": false,
+            "sparkLine": "Bring a game. Get a film."
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-11T01:53:33.838652+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B09.mp3",
+      "actual_duration_s": 18.62,
+      "render_duration_s": 18.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "VERDICT",
+      "role_note": "ClaudeVerdictArtifact916 — portrait verdict. CARD_W=0.90 (90% width) gives ~63% ink coverage with 4 lines without overflow.",
+      "narration_text": "What the skill gets right: it mandates code-and-result pairs — each excerpt is immediately followed by the game consequence, not deferred to a summary. It makes the evidence contract explicit: reconstruct, don't invent. The limitation is clear: this is a reader, not an omniscient explainer. Give it a shallow game and the teaching film will be shallow too.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "artifact-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "artifact panel in portrait — cream card"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The godot-gamedev skill.' settles"
+          },
+          {
+            "at": "0.28",
+            "event": "first artifact line lands"
+          },
+          {
+            "at": "0.45",
+            "event": "second line"
+          },
+          {
+            "at": "0.62",
+            "event": "third line"
+          },
+          {
+            "at": "0.78",
+            "event": "fourth line"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "The godot-gamedev skill.",
+            "brandLabel": "@HumanitariansAI",
+            "artifactLines": [
+              "Code → visible result: each excerpt, then its game consequence — not deferred.",
+              "Saved scene ≠ runtime tree — the key distinction.",
+              "Input required: a real game with project.godot.",
+              "Depth of film matches depth of game project."
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-12T01:21:03.582537+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B10.mp3",
+      "actual_duration_s": 18.22,
+      "render_duration_s": 18.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "HANDOFF",
+      "role_note": "HANDOFF LAW — ClaudeComposerAsk916. Greeting 'Your turn.' Prompt read aloud + discussed. Signs off 'Liam, in for Bear.'",
+      "narration_text": "Your turn. Here is the paste-ready prompt. 'Read skills-slash-make-slash-godot-gamedev-slash-SKILL-dot-M-D in full. I have a Godot 4 project at [path]. Produce a complete beat sheet for a godot-gamedev teaching film, standard mode. For each major component, name where it lives in the project, what data enters it, what it changes, and what the player sees.' Replace [path] with any Godot 4 project folder you have. When Claude comes back, check the component inventory against what you know about the game. If it misses a system, ask it to read that specific file and trace the dependency. The check is the work. Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 47,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in portrait"
+          },
+          {
+            "at": "0.06",
+            "event": "greeting 'Your turn.' appears"
+          },
+          {
+            "at": "0.12",
+            "event": "paste-ready prompt types into composer"
+          },
+          {
+            "at": "0.62",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "running text: 'reading your Godot project…'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · GODOT-GAMEDEV",
+            "segment": "Your Godot Project",
+            "command": "Read skills/make/godot-gamedev/SKILL.md in full. I have a Godot 4 project at [path]. Produce a complete beat_sheet.json for a godot-gamedev teaching film, standard mode. For each major component, name where it lives in the project, what data enters it, what it changes, and what the player sees.",
+            "runningText": "reading your Godot project…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "High",
+            "output": [
+              "Component inventory built.",
+              "Beat sheet ready to render.",
+              "Check: does the inventory match the game?"
+            ],
+            "animateTyping": true
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-11T01:02:01.943109+00:00"
+          }
+        }
+      },
+      "audio_file": "../mp3/beat-B11.mp3",
+      "actual_duration_s": 33.0,
+      "render_duration_s": 33.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T21:23:46"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — ClaudeTitleOutro916 portrait variant. @NikBearBrown HARDCODED per OUTRO-LOCK.md. Same slug seed. Sign-off in narration_text for record; audio_policy:silence keeps it mute.",
+      "narration_text": "Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 7,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "mascot-title",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "portrait outro — title in serif, @NikBearBrown handle, mascot"
+          },
+          {
+            "at": "0.45",
+            "event": "mascot animation (slug-seeded)"
+          },
+          {
+            "at": "0.7",
+            "event": "jingle plays"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The godot-gamedev Skill",
+            "slug": "claude-liam-brutalist-skill-godot-gamedev"
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-09-11T01:02:17.185277+00:00"
+          }
+        }
+      },
+      "audio_policy": "silence",
+      "render_duration_s": 7.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-11T21:23:46"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/exports/landscape/claude-liam-brutalist-skill-nopunt.mp4",
+  "sha256": "c79e549d591baaa800c3c4f0fcf7dd7eb3529dc3bbe43a6ce55171ff56dd8169",
+  "duration_s": 345.8333333333333,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B00.mp4": "0836e132b2e6efafb893e09282e0350e5e530b7692c5624d8c05159f83f3409e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B01.mp4": "a9fe1683bf23d819ce5c53c7e696927e7ccfc7d801afc28d69a8b9a249ca0d48",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B02.mp4": "96eac69c60b1791ddea6367e476acf87ac50f82858efa933b8721f65faeff5ff",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B03.mp4": "0362dbe5ab395053db664b6c2b4e51b0d50cea93e13d3f430a376ac8575dfedc",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B04.mp4": "2caf59757d642814ef8069fe9718d4bd05ebf69e8cef75959f4ab2f4723f2d4c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B05.mp4": "f2cba622d31b5edb29083d8fafc029b3ec7339703e2c73e175f9f6c1a0401989",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B06.mp4": "6148aeb098c5955320fd2eaa7103c6eb65fc75f18038291692d5cf49c1c666b0",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B07.mp4": "3a60bab25b98e63974d739777c4d326583bafb1792412cf6e76f912e7795fb46",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B08.mp4": "bebd6ff9ccda7fc0d953aff95056ddfde0599e0a8780f6d6160d35d603677a43",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B09.mp4": "3b6bba3d12a35691278f40f0d4d08df5e56157ed7b05c28e66bc85cc32ac54c0",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B10.mp4": "2993e5da87ebd4b677d4a7f8a8a80f797644dcdc09f7d3d72e9abdd17bd2ad73",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/media/B11.mp4": "7671ef23cc6e4fdc682ed2cedcfe01cb240785e482647604b5d0570b93d7c90e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B00.mp3": "74b9f0d60d0d49dd271e1cdfd0161e5d9512e9033458247f08a71007a10bd387",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B01.mp3": "67777dffcc75b90ccfda9e4b3db99469d50be8fd7d62a01d63b579f224703679",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B02.mp3": "8958cafaaf668ff66e79ac2faa1d446070018420858de830572d3c2c1aca8ca8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B03.mp3": "ccab79f1407b495f7d968324435a1cfda401aae22be43951c1b4dbd3280ccdfb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B04.mp3": "a7f7b53646a7f66562277e1f36a46efecb671993811175a3add9b146d51a41bb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B05.mp3": "9d1c2e485966dc60854e674bbee2193fed4e9407fc91519df35db31fb80f650c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B06.mp3": "110b1d1b429264548de725e9863737ba49e197374a3191eed34b273c8c945869",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B07.mp3": "6cf12d132bc3144687e1f7c8b07e69957b89f3e7ff502ac949b1a5c791e04f71",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B08.mp3": "893be141708914000ff33bfd4785279e81c7a2e40a5f53fa873edfde19589d66",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B09.mp3": "1569707a7d7582d64b3a378f282dd06388662aa2021f8abefc6e1a4e9c7beb97",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B10.mp3": "fb63f879b083d745104df000bd84c8ca72c2f8cbbeda3ff3258985fe56aaf291",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-nopunt/mp3/beat-B11.mp3": "12f9125083ec9b0a50a397ea8630e4304e6f8ffded6149dba7258329157afeec"
+  },
+  "at": "2026-09-09T00:45:59.107920+00:00"
+}

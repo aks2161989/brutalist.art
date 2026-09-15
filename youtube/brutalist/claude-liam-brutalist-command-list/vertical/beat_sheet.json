@@ -1,0 +1,795 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art --list",
+    "slug": "claude-liam-brutalist-command-list-vertical",
+    "topic": "BRUTALIST · COMMAND: ART --LIST",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Salaam, Liam",
+    "greeting_note": "hello lexicon: Arabic/Farsi (single-word). Wagwan check: sum(ord for c in 'claude-liam-brutalist-command-list') mod 10 == 6, not a Wagwan reel.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "c619fb86bdcd40079fc05e9378e8bbeb",
+    "episode_id": "command-list",
+    "order": 23,
+    "note": "Command teardown of ./art --list and its bare-word alias ./art list. Both share one case branch at art:58-80 (episode.source_sha256 85cf6a0a7a0c3d7b8bd6c2476522102460002fcbbc55b14f55065c46bc244ac1). The middle body reads the actual dispatcher — the case pattern, the 21 printf calls (1 header + 20 skills), the '%-22s %s\\n' format string — then a real failure (./art -list exits 2 with a hint on STDOUT, not stderr) and the recovery through ./art <skill> --help. Source grew from 16 to 20 skills: godot-waikthrough, godot-gamedev, godot-gdd and riff were added. All demo outputs in demo/RUN-LOG.md are verbatim from this workspace. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for human reviewer before publication. No paid API, no upload.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "branch_lines": "art:58-80",
+      "catchall_lines": "art:127-136"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "list",
+      "--list",
+      "command teardown",
+      "aliases",
+      "bash case",
+      "printf",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T07:43:15",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "derived_from": "claude-liam-brutalist-command-list",
+    "reformat": "full-length; native portrait graphics; preserve source framing",
+    "dropped_beats": [],
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    },
+    "total_estimated_duration_seconds": 190
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Salaam, this is Liam, in for Bear. Every fellow in Brutalist has typed dot slash art dash dash list at some point. What it does is smaller and more literal than most people think. It prints a hand-typed table of twenty skills. No lookup, no directory scan. Here is exactly what runs, and where it stops.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Salaam, Liam' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed ask appears in the composer"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'reading the entry point…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Salaam, Liam",
+            "topic": "BRUTALIST · COMMAND: ART --LIST",
+            "segment": "art --list",
+            "command": "What does ./art --list actually print — and where does it stop?",
+            "runningText": "reading the entry point…",
+            "output": [
+              "prints a 21-line skills table (1 header + 20 skills)",
+              "two aliases: --list and bare list",
+              "different scope from ./art help (the commands sheet)"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-12T11:35:12.563402+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.73,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 16.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Correction lands on the reel's actual misconception (runs vs prints; skill vs catalog).",
+      "narration_text": "Watch the writer walk this back, one word at a time. Art dash dash list does not run a skill in the toolkit. It prints the skills catalog. Twenty rows, one dispatcher, hard-coded in the bash file itself. Two aliases fire the same branch, and the branch is a printer, not a runner. Keep that split.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first line types: 'art --list runs the skills'"
+          },
+          {
+            "at": "0.45",
+            "event": "the word 'runs' turns terracotta, hesitates, backspaces, types 'prints'"
+          },
+          {
+            "at": "0.75",
+            "event": "the word 'skills' turns terracotta, hesitates, backspaces, types 'catalog'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected line settles: 'art --list prints the catalog.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art --list runs\nthe skills\nof our\nBrutalist\ntoolkit here.",
+            "triggerWords": "runs, skills",
+            "replacementWords": "prints, catalog",
+            "seed": "command-list-b01-v",
+            "face": "serif",
+            "fontSize": 130,
+            "lineSpacing": 2.4,
+            "align": "center",
+            "charMs": 16,
+            "jitter": 14,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-12T11:36:02.797456+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.13,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 16.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the shape of the dispatcher. Two aliases joined by a pipe, one branch.",
+      "narration_text": "The whole dispatcher is one bash case statement. The second branch of that case is two aliases joined by a pipe: dash dash list and the bare word list. Both hit the same body. You never need to remember which spelling; the case pattern takes both.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in with 'art' in the title bar"
+          },
+          {
+            "at": "0.20",
+            "event": "'case \"$cmd\" in' types"
+          },
+          {
+            "at": "0.40",
+            "event": "the '--list|list)' pattern types on its own line"
+          },
+          {
+            "at": "0.70",
+            "event": "the branch body (the first printf) types under it"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line settles under the card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art — the dispatcher (bash)",
+            "code": "case \"$cmd\" in\n  \"\"|-h|--help|help)\n    # …help body…\n    ;;\n  --list|list)                # ← two aliases, one branch\n    printf '%-22s %s\\n' \"SKILL\" \"ROLE\"\n    printf '%-22s %s\\n' \"ai-explainer\" \"builder — …\"\n    # …nineteen more printf calls…\n    ;;\n  *) echo \"unknown '$cmd'\"; exit 2 ;;\nesac",
+            "sparkLine": "Two aliases. One branch."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-12T11:36:34.425629+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 13.65,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 13.666666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the body is 21 printf calls. No directory scan, no plug-in discovery.",
+      "narration_text": "Here is the body. One printf for the header, then twenty more printfs, one per skill. Every row is a literal string in the file itself. There is no file system scan, no plug-in discovery, no configuration file. If a skill is missing from the table, it is missing because nobody added its printf.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card in; title reads 'art:58-80 — the --list body'"
+          },
+          {
+            "at": "0.25",
+            "event": "printf header types"
+          },
+          {
+            "at": "0.45",
+            "event": "twenty printf lines cascade in, highlighting new godot-* and riff entries"
+          },
+          {
+            "at": "0.85",
+            "event": "trailing comment types: '# no lookup. no scan.'"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art:58-80 — the --list body",
+            "code": "# 21 printf calls. 1 header + 20 skills.\nprintf '%-22s %s\\n' \"SKILL\" \"ROLE\"\nprintf '%-22s %s\\n' \"ai-explainer\" \"builder — Claude-branded explainer reel\"\nprintf '%-22s %s\\n' \"cli-explainer\" \"builder — prompt → code → moving output\"\nprintf '%-22s %s\\n' \"godot-waikthrough\" \"builder — real Godot gameplay + Liam riffs\"\nprintf '%-22s %s\\n' \"godot-gamedev\" \"builder — code, scenes, assets and art dive\"\nprintf '%-22s %s\\n' \"godot-gdd\" \"builder — GDD intent, scope and game evidence\"\nprintf '%-22s %s\\n' \"riff\" \"utility — render/inspect, then critique\"\n# …14 more printf calls…\nprintf '%-22s %s\\n' \"screen-clean\" \"doctrine — prepares screen recordings\"\n# no lookup. no scan. the file IS the table.",
+            "sparkLine": "21 printfs. No lookup."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-12T11:37:07.658123+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.09,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 16.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — the actual output captured from this workspace, verbatim.",
+      "narration_text": "This is the actual output on my terminal. Twenty-one lines. A header row that reads SKILL and ROLE, then twenty skills, sorted the way the file lists them. The table now includes four godot skills and a riff utility added since the last build. No colours, no pager. It prints, it exits zero, it is done.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art --list'"
+          },
+          {
+            "at": "0.15",
+            "event": "SKILL / ROLE header types"
+          },
+          {
+            "at": "0.25",
+            "event": "20 skill rows cascade in, starting with the new godot-* and riff entries"
+          },
+          {
+            "at": "0.90",
+            "event": "'$ echo $?  # 0' types below"
+          },
+          {
+            "at": "0.96",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art --list  (verbatim, 21 lines)",
+            "code": "SKILL                  ROLE\nai-explainer           builder — Claude-branded explainer reel (the tight cut)\ncli-explainer          builder — prompt → code → moving output (the build reel)\ngodot-waikthrough      builder — real Godot gameplay + Liam riffs; optional Walker bookends\ngodot-gamedev          builder — code, scenes, assets and art deep dive; optional Walker bookends\ngodot-gdd              builder — GDD intent, scope and game evidence; optional Walker bookends\nriff                   utility — render/inspect, then critique what visibly happens\n# …14 more rows…\nscreen-clean           doctrine — prepares screen recordings (Zoom/Teams/Meet) for use as a reel beat\n\n$ echo $?\n0",
+            "sparkLine": "21 lines. Exits 0. Done."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-12T11:37:40.487043+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.05,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 17.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the format string is the alignment contract.",
+      "narration_text": "The format string is worth reading. Percent dash twenty-two s, space, percent s, backslash n. That means: left-pad the first field to twenty-two characters, one space, then the second field, then a newline. Every row is aligned to the same twenty-two-character gutter, which is why the table is scannable without a monospace-aware terminal.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'the format string: %-22s %s\\n'"
+          },
+          {
+            "at": "0.25",
+            "event": "one printf line types in isolation"
+          },
+          {
+            "at": "0.55",
+            "event": "annotation types below decomposing each % slot"
+          },
+          {
+            "at": "0.85",
+            "event": "one rendered sample row types under the annotation"
+          },
+          {
+            "at": "0.95",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "the format string: '%-22s %s\\n'",
+            "code": "# one printf, the way every row in --list is emitted:\nprintf '%-22s %s\\n' \"ai-explainer\" \"builder — Claude-branded explainer reel (the tight cut)\"\n\n# the format string, decomposed:\n#   %-22s   → first arg, left-justified, padded to 22 chars\n#   ' '     → one literal space (the gutter)\n#   %s      → second arg, no padding\n#   \\n      → one newline\n\n# what the terminal prints for that call:\nai-explainer           builder — Claude-branded explainer reel (the tight cut)\n#^^^^^^^^^^^^^^^^^^^^^ ^\n# 22 chars              1-space gutter, then the role text runs on.",
+            "sparkLine": "22-char gutter. Scannable table."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T07:42:43.687920+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.88,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — extra arguments are silently ignored. --list is a printer, not a runner.",
+      "narration_text": "Watch what happens with extra arguments. Dot slash art list foo bar prints the same twenty-one lines and exits zero. The branch never reads the rest of the command line. Compare that to a runner branch like scenes or run, which passes every remaining argument straight to a Python script. List is a printer, not a runner.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art list foo bar  (extras ignored)'"
+          },
+          {
+            "at": "0.25",
+            "event": "invocation types; same 21-line output cascades in (abbreviated)"
+          },
+          {
+            "at": "0.55",
+            "event": "comment types under: '# diff bare vs list foo bar → IDENTICAL. exit 0.'"
+          },
+          {
+            "at": "0.75",
+            "event": "contrast row types under: 'scenes) exec python3 …scene_search.py \"$@\"'"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art list foo bar  (extras ignored)",
+            "code": "$ ./art list foo bar\nSKILL                  ROLE\nai-explainer           builder — Claude-branded explainer reel\n# …same 21 lines as ./art --list…\nscreen-clean           doctrine — prepares screen recordings\n\n$ diff <(./art list) <(./art list foo bar)\n$ echo $?\n0\n\n# the --list body never references \"$@\":\n--list|list)\n    printf ...\n    ;;\n\n# compare with a runner branch (art:88-90):\nscenes|scene|scene-search)\n    exec python3 \"…/scene_search.py\" \"$@\"\n    ;;",
+            "sparkLine": "--list is a printer, not a runner."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-12T11:38:13.277152+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.51,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 17.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — a real failure. ./art -list (single dash) is NOT an alias; hint lands on STDOUT via bare echo.",
+      "narration_text": "Now the near miss. Dot slash art dash list, with one dash instead of two, does not print the catalog. It falls into the star branch and exits two, with one hint line pointing you at dash dash list. Notice where that line lands. It is on standard output, from a bare echo. If you pipe standard out to a file, the hint disappears and only the exit code is left behind.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art -list  (the failure path)'"
+          },
+          {
+            "at": "0.25",
+            "event": "invocation types; hint line appears in terracotta on the next line"
+          },
+          {
+            "at": "0.50",
+            "event": "'$ echo $?' and '2' type below"
+          },
+          {
+            "at": "0.70",
+            "event": "source of the catch-all types under (art:127-129)"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art -list  (the failure path)",
+            "code": "$ ./art -list\nart: unknown skill '-list' (try ./art --list)\n$ echo $?\n2\n\n$ ./art -list 2>/dev/null\nart: unknown skill '-list' (try ./art --list)\n\n$ ./art -list >/dev/null\n$ echo $?\n2\n\n# From art:127-129 — the catch-all case:\n*)\n  dir=\"$(skill_dir \"$cmd\")\"\n  [ -z \"$dir\" ] && { echo \"art: unknown skill '$cmd' (try ./art --list)\"; exit 2; }\n  ;;",
+            "sparkLine": "Not the catalog. Exit 2. Hint on stdout."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-12T11:38:46.469508+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.22,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 19.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "RECOVERY — two commands cover the whole surface: --list to see, <skill> --help to read.",
+      "narration_text": "The recovery is two commands. Dot slash art dash dash list to see every skill by name. Then dot slash art followed by the skill name and dash dash help to open that skill's SKILL dot m-d in your pager. So the arc is: list to see what exists, then help on a specific skill to read what it does. Two commands, whole surface.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'wrong guess → recovery in two commands'"
+          },
+          {
+            "at": "0.20",
+            "event": "line 1 types: ./art --list"
+          },
+          {
+            "at": "0.45",
+            "event": "line 2 types: ./art fellows --help"
+          },
+          {
+            "at": "0.70",
+            "event": "comment: '# opens SKILL.md in $PAGER (defaults to cat)'"
+          },
+          {
+            "at": "0.88",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "wrong guess → recovery in two commands",
+            "code": "# 1. See every skill (name + one-line role):\n$ ./art --list\n\n# 2. Open one skill's SKILL.md in your pager:\n$ ./art fellows --help\n$ ./art ai-explainer --help\n$ ./art nopunt --help\n\n# From art:130-132 — the --help path inside the catch-all:\nif [ \"${1:-}\" = \"--help\" ] || [ \"${1:-}\" = \"-h\" ]; then\n  exec \"${PAGER:-cat}\" \"$dir/SKILL.md\"\nfi\n\n# So the whole surface, two commands:\n#   --list                → the catalog\n#   <skill> --help        → that skill's SKILL.md",
+            "sparkLine": "List, then --help on a skill."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-12T11:39:19.838020+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.49,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 17.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the split. Lines summarize what --list is and is not.",
+      "narration_text": "So the split. Art dash dash list is a printer. Two aliases, one branch, a hand-maintained table of twenty skills. Extra arguments are ignored; single dash and unknown tokens exit two with a hint on standard out. The recovery is two commands: dash dash list to see the names, then art followed by a skill name and dash dash help to read what that one does.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'art --list — the split'"
+          },
+          {
+            "at": "0.30",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.50",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.70",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.88",
+            "event": "line 4 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art --list vs list vs extras vs unknown token",
+            "artifactLines": [
+              "art --list — a printer of a hand-typed 21-line table (1 header + 20 skills).",
+              "art list — the bare-word alias, identical 21-line stdout, same exit 0 as --list.",
+              "extra positional arguments — silently ignored; the branch never reads \"$@\".",
+              "unknown token like -list or bogus — exit 2, one hint line on stdout (bare echo).",
+              "the branch body is just 21 printf calls in the file — no scan, no plug-in load.",
+              "recovery arc — ./art --list to see the names, then ./art <skill> --help to read one.",
+              "different scope from ./art help — that one prints the commands sheet, not the skills."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-12T11:39:59.400135+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.94,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 18.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code from the brutalist toolkit root. Ask it to run both aliases, diff the two outputs, count the rows, then open the case block that produces them and confirm every printf resolves to exactly one row of the printed table. What you should see is two identical outputs of twenty-one lines, twenty printf calls plus a header, and no orphans on either side.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your turn.' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "expected outcome lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Prove --list is a printer",
+            "command": "From the brutalist.art toolkit root, run ./art --list and ./art list. Save each stdout to /tmp/art-list-<alias>.txt with $? captured. Diff the two files, wc -l each, then open ./art at line 58 and count the printf calls in the --list|list) branch. Confirm that count equals the number of non-header rows in the printed table. Bonus: run ./art -list and ./art list foo bar; report each exit code and whether the stdout matches ./art --list.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "two identical stdouts, 21 lines each, exit 0",
+              "20 printf calls under --list|list) — one per row",
+              "./art -list exits 2 with a one-line hint on stdout"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-12T11:40:46.424136+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.97,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 20.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T07:43:15"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art dash dash list. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art --list.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art --list.",
+            "slug": "claude-liam-brutalist-command-list"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T07:45:39.256332+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.93,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.958333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T07:43:15"
+      }
+    }
+  ]
+}

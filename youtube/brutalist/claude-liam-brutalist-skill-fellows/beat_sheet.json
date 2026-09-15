@@ -1,0 +1,866 @@
+{
+  "metadata": {
+    "title": "The fellows Skill",
+    "slug": "claude-liam-brutalist-skill-fellows",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "channel_title": "@HumanitariansAI",
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "616bfc2fadd2479fadc72138c055fa1a",
+    "episode_id": "skill-fellows",
+    "order": 11,
+    "note": "Skill teardown of skills/make/fellows/SKILL.md (SOURCE-SNAPSHOT SHA-256 afd14d36…; supervisor's episode.source_sha256 76651492…; re-verified run 616bfc2f — SKILL.md content unchanged, toolkit baseline updated). The reel explains that `fellows` is a FRAME around a fellow's own video report — Claude-branded bookends and Professor Bear's notes wrap the fellow's file, which plays untouched. Teaches: the required beat spine, THE REPORT IS THE CLOCK (inverts audio-first for one beat), FELLOW'S-WORK CARVE-OUT of REBUILD LAW, GATE N (Bear's notes are Bear's words), persistent Kokoro voice per fellow (with SOUND REPAIR carve-out for bad audio), and the STANDARD HAI outro deviation from the siblings' title-restate. No fellow's report is transcribed or shipped — this teardown is source-backed per SELF-DEMO LAW's feasibility fallback (running a real report would require a fellow's video, human approval of NOTES.md via GATE N, and the fellow's persistent voice choice). Kokoro am_onyx throughout — free, local. No captions. Outro is ClaudeTitleOutro (OUTRO-LOCK.md locks @NikBearBrown handle) because this is a claude-liam TEARDOWN; the fellows skill it explains uses a DIFFERENT outro (the HAI standard outro), and that deviation is the falsifiability beat itself.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/fellows/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "fellows",
+      "skill teardown",
+      "Humanitarians AI",
+      "fellow report",
+      "GATE N",
+      "Claude",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T11:34:11",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hallo, this is Liam, in for Bear. Today we tear down the fellows skill. Every Humanitarians AI fellow ships weekly research videos — this is the skill that wraps their own recording without editing it. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hallo, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the fellows skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hallo, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The fellows Skill",
+            "command": "What is the `fellows` skill? Read skills/make/fellows/SKILL.md and tell me what it really does with a fellow's video.",
+            "runningText": "reading skills/make/fellows/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "a frame around a fellow's own recording",
+              "branded bookends · Professor Bear's notes · HAI outro",
+              "the report plays untouched — audio and timing"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T15:13:21.102371+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 13.16,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 13.166666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the misconception ('re-cuts') to the claim ('frames'). Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read — the one the name invites — is that fellows re-cuts the fellow's video into something Claude approves of. It does not. The fellow's report is the middle of the reel and it plays untouched. What the skill builds is the frame around it — bookends, notes, and a handoff.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'The fellows skill'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 're-cuts the fellows video.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'re-cuts' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'re-cuts' deletes and 'frames' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 3: 'The fellows report'"
+          },
+          {
+            "at": "0.90",
+            "event": "line 4: 'plays untouched.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "The fellows skill\nre-cuts the fellows video.\nThe fellows report\nplays untouched.",
+            "triggerWords": "re-cuts",
+            "replacementWords": "frames",
+            "seed": "fellows-bluf-2026-e71dd104",
+            "face": "serif",
+            "fontSize": 148,
+            "lineSpacing": 1.2,
+            "align": "center",
+            "charMs": 20,
+            "jitter": 4,
+            "mistakeRate": 3,
+            "hesitateWithin": 1,
+            "hesitateBetween": 3,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T15:32:47.966296+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 14.38,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.416666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — anatomy of the fellows skill folder plus the fellow's episode folder.",
+      "narration_text": "First, the anatomy. On the toolkit side there is SKILL.md — the doctrine, one required beat spine, five laws of its own, and a persistent voice contract. On the fellow's side there is a per-episode folder: first-name last-initial, then a dated slug. Inside it: the transcript, the source video sitting in media, a NOTES markdown Bear must sign before Kokoro will speak them, and a build log. Small on disk. Human where it matters.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'The fellows folders.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.85",
+            "event": "callout box lands: 'NOTES.md is a human gate'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "fellows",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "The fellows folders.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/fellows/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "fellows/[first-name-last-initial]/[YYYY-MM-DD-slug]/"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "transcript/report.txt"
+              },
+              {
+                "indent": 1,
+                "icon": "🎞",
+                "name": "media/B04.mp4  (the fellow's video)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "NOTES.md  (Bear-signed feedback)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.json"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "BUILD-LOG.md"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "channel: @HumanitariansAI"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "voice: fellow-chosen Kokoro · free · local"
+              }
+            ],
+            "calloutText": "<b>NOTES.md is a human gate.</b> The skill DRAFTS Professor Bear's notes from the transcript; Kokoro will not read them until Bear signs the exact wording.",
+            "sparkLine": "A frame around a fellow's file."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T15:15:00.611494+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.65,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 21.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — the required beat spine. Input: fellow's raw recording. Output: a wrapped reel + a signed NOTES.md.",
+      "narration_text": "The spine is fixed. Nine beats. The composer asks what the fellow has been working on. Two or three summary beats read from the transcript. Then the fellow's video plays as is — that is beat four. Two beats of Professor Bear's notes — feedback, then next steps. A Your Turn prompt, and the standard Humanitarians AI outro. Same shape every episode. Only the middle is the fellow's own material.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Nine beats. One fixed spine.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'fellow's raw recording' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "phase nodes reveal — 'THE REPORT' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'wrapped reel + signed NOTES.md' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Nine beats. One fixed spine.",
+            "inputLabel": "fellow's raw recording",
+            "outputLabel": "wrapped reel + signed NOTES.md",
+            "phases": [
+              {
+                "label": "ASK",
+                "desc": "composer cold open · what has [Name] been building?"
+              },
+              {
+                "label": "SUMMARY ×2–3",
+                "desc": "narrator reads the transcript · pulled frames"
+              },
+              {
+                "label": "THE REPORT",
+                "desc": "beat 4 · fellows own video · plays as is",
+                "accent": true
+              },
+              {
+                "label": "BEAR'S NOTES ×2",
+                "desc": "feedback + next steps · GATE N"
+              },
+              {
+                "label": "YOUR TURN + HAI OUTRO",
+                "desc": "handoff · standard HAI outro (not title-restate)"
+              }
+            ],
+            "footerNote": "Only the middle is the fellow's own material. Everything else is native rebuild in the humanitarians palette.",
+            "sparkLine": "Bookends around the fellow's file."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T15:15:50.386986+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 19.78,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 19.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — THE REPORT IS THE CLOCK. Inverts the parent explainer's audio-first law for beat 4 only.",
+      "narration_text": "First design decision, and it is the sharpest. Every other Brutalist skill is audio-first — Kokoro generates the narration and the visuals conform to that clock. Fellows inverts that for exactly one beat. Beat four's clock is the report's own runtime. No trim, no speed change, no voiceover, no re-timing. The compiler transcodes container and resolution, and stops there. A trimmed cut is only legal when a human explicitly asks for it in the build log.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'The report is the clock.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: never trim · never retime · never voice over"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'inverts audio-first, for beat 4 only'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "The report is the clock.",
+            "body": "Beat 4 is the ONE exception to audio-first. The report's own measured runtime drives that beat; its own audio stays on the timeline. Transcode container/resolution to reel spec (3840×2160 or 2160×3840, h264/AAC, contain/letterbox). NEVER trim, retime, speed up, or talk over it.",
+            "quote": "THE REPORT IS THE CLOCK (the one exception to audio-first). Everywhere else narration MP3s are the master clock. The report beat's clock is the report's own measured runtime.",
+            "cite": "fellows SKILL.md · THE REPORT IS THE CLOCK",
+            "verdictLabel": "inverts audio-first, for beat 4",
+            "verdictPositive": true,
+            "sparkLine": "Report drives. Bookends fit."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T15:16:38.672141+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 23.72,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 23.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Design decision 2 — FELLOW'S-WORK CARVE-OUT (of REBUILD LAW). Fellow's own frames play as themselves.",
+      "narration_text": "Second decision. Every claude explainer has a REBUILD law — figures and charts from a source are redrawn native, never screenshotted. Fellows carves out one exception. Frames pulled from the fellow's own report play as themselves — Ken Burns on a still, or the clip untouched. Their receipt is the point. Rebuilding it would falsify it. Everything else — context diagrams, notes cards, the credit card — stays under REBUILD law, in the humanitarians palette.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'The carve-out.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: fellow's frames = themselves; else = rebuild"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'the fellow's receipt is the point'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "The carve-out.",
+            "body": "Fellow's OWN frames and clips play as themselves (Ken Burns for a still, the clip untouched for a moving frame). Everything ELSE — context diagrams, comparison charts, notes cards — is rebuilt native in the humanitarians palette. Sibling of cli-explainer's ACTUAL-CODE LAW.",
+            "quote": "The fellow's artifact is the receipt; rebuilding it would falsify it. Everything that is NOT the fellow's own material is rebuilt native, REBUILD LAW unchanged.",
+            "cite": "fellows SKILL.md · FELLOW'S-WORK carve-out",
+            "verdictLabel": "the receipt is the point",
+            "verdictPositive": true,
+            "sparkLine": "Their frames, as themselves."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T15:17:25.122928+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 22.55,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 22.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — GATE N. Professor Bear's notes are Bear's words. Kokoro blocks pending or stale approvals.",
+      "narration_text": "Third decision, and it is where the skill earns its trust. Professor Bear's notes are Bear's words. The skill drafts them from the transcript, in plain register, as a starting point — but nothing goes to Kokoro until Bear has edited or signed NOTES markdown. The runtime hashes the notes and the exact spoken wording; a pending record, a stale hash, or a missing signature blocks Kokoro, Remotion, and any final. The dash-dash no-gate flag exists but it does not bypass this. Never have an AI sign a human's approval.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'GATE N.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: NOTES.md fingerprint + narration fingerprint"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'no bypass, no AI signing for a human'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "GATE N.",
+            "body": "metadata.approvals.professor_notes binds two SHA-256 fingerprints: NOTES.md content + exact spoken narration. Pending, missing or stale records BLOCK Kokoro generation, Remotion rendering, and final export. --no-gate does not bypass. The code never signs for a human.",
+            "quote": "The notes beats never go to audio until Bear has edited or signed NOTES.md. The runtime blocks pending or stale records; --no-gate is not a bypass. Never have an AI sign a human's approval record.",
+            "cite": "fellows SKILL.md · GATE N",
+            "verdictLabel": "no bypass, no AI signature",
+            "verdictPositive": true,
+            "sparkLine": "Bear's words. Bear's signature."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T15:18:11.761886+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 27.43,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 27.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Design decision 4 — PERSISTENT VOICE + SOUND REPAIR carve-out. Same fellow, same Kokoro voice across the series.",
+      "narration_text": "Fourth decision. Each fellow picks one Kokoro voice, once, and every episode in their series uses that voice. A name-based suggestion is a heuristic, never an identity claim. The fellow's explicit choice overrides it, and a later change is a documented re-voice for the whole series — never a silent per-episode swap. And the sound-repair carve-out: if the report's audio is bad — quiet, hummy, clipped — normalize it, denoise, high-pass. Timing stays. Voice stays. Every filter applied is logged in the build log.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Persistent voice.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: suggestion vs approval; SOUND REPAIR filters"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'never pitch, never time-stretch, never re-voice'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4",
+            "heading": "Persistent voice.",
+            "body": "One Kokoro voice per fellow, across the whole series. The fellow's explicit choice overrides any name-based heuristic. SOUND REPAIR (carve-out inside the carve-out): loudness-normalize, denoise (afftdn / arnndn), high-pass — TIMING UNTOUCHED, log every filter in BUILD-LOG.md.",
+            "quote": "Never pitch-shift, never time-stretch, never re-voice. Every filter applied is logged in BUILD-LOG.md.",
+            "cite": "fellows SKILL.md · SOUND REPAIR",
+            "verdictLabel": "never pitch · never stretch · never re-voice",
+            "verdictPositive": true,
+            "sparkLine": "One voice. One fellow. One series."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T15:18:58.065814+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 38,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 26.84,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 26.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — deliberate deviation from sibling skills. Fellows uses the standard HAI outro, NOT the title-restate ClaudeTitleOutro. Using the wrong outro is a defect, not a preference.",
+      "narration_text": "Falsifiability, and this is where the fellows skill deliberately breaks from its siblings. Every other claude explainer closes on the title-restate outro — the one locked to at-NikBearBrown. Fellows does not. The last beat of a fellows reel is the standard Humanitarians AI outro, in the humanitarians palette. Same channel as the folder chip. If someone ships a fellows reel with the title-restate outro, that is a defect — not a style choice. The outro follows the channel, and the channel is HAI.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow FALSIFIABILITY · ACT 5 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'A deliberate sibling break.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: HAI outro vs ClaudeTitleOutro contrast"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'wrong outro = defect, not preference'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "FALSIFIABILITY · ACT 5",
+            "heading": "A deliberate sibling break.",
+            "body": "Every other claude-explainer uses ClaudeTitleOutro (locked @NikBearBrown, OUTRO-LOCK.md). Fellows uses the STANDARD HAI outro (OutroSeries / OutroCTA, humanitarians palette, content from AUTHOR.MD). Same channel as the folder chip. The wrong outro on a fellows reel is a defect.",
+            "quote": "NOT the @NikBearBrown outro — fellows is a HAI channel reel; ClaudeTitleOutro and its lock (OUTRO-LOCK.md) do NOT apply here.",
+            "cite": "fellows SKILL.md · B08 OUTRO",
+            "verdictLabel": "wrong outro = defect",
+            "verdictPositive": false,
+            "sparkLine": "The outro follows the channel."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T15:19:44.775522+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 26.26,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 26.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the skill in six lines.",
+      "narration_text": "The verdict. Fellows is a frame around a fellow's own recording — nothing more, nothing less. The report is the clock, so the fellow's runtime rules beat four. The fellow's frames play as themselves. Professor Bear's notes require Bear's actual signature. The fellow picks a Kokoro voice once and keeps it across the whole series, and the audio can be repaired but never retimed. And the outro is the HAI outro — because fellows is a HAI reel. Skip any of these, and the frame breaks the very thing it exists to protect.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'A frame. Not a re-edit.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The fellows Skill",
+            "artifactHeading": "A frame. Not a re-edit.",
+            "artifactLines": [
+              "fellows wraps a fellow's own recording — the report itself plays untouched.",
+              "THE REPORT IS THE CLOCK: beat 4 inverts audio-first; source runtime rules.",
+              "FELLOW'S-WORK CARVE-OUT of REBUILD LAW: their frames play as themselves.",
+              "GATE N: NOTES.md is human-signed before Kokoro speaks it — no --no-gate bypass.",
+              "One Kokoro voice per fellow, across the whole series; SOUND REPAIR is legal, retiming is not.",
+              "The outro is the standard HAI outro — not ClaudeTitleOutro. The channel is @HumanitariansAI."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T15:21:13.104743+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 26.73,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 26.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready prompt Liam reads aloud + discusses. Dry-run planning pass — no fellow's report needed.",
+      "narration_text": "Your turn. Paste this into Claude Code: read the fellows skill, then plan — do not run — a dry-run fellows episode. Assume a hypothetical fellow with a two-minute report. Draft the composer ask, the two-beat summary from a fabricated transcript labeled clearly as a fixture, a NOTES markdown starter with feedback and next steps, a paste-ready Your Turn prompt, and the metadata approvals block for both voice and professor notes — with status pending. Read the plan and check three things. Does beat four's audio policy set preserve. Are both approvals authored as pending with fingerprints, not fake sign-offs. And does the outro name the standard HAI outro, never ClaudeTitleOutro.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready dry-run prompt"
+          },
+          {
+            "at": "0.72",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · PLAN A FELLOWS DRY-RUN",
+            "segment": "Plan a fellows reel without shipping it",
+            "command": "Read skills/make/fellows/SKILL.md. Then plan (DO NOT RUN) a dry-run fellows episode for a hypothetical fellow with a 2-min report: (1) the ClaudeComposerAsk cold open; (2) two summary beats from a fabricated transcript LABELED as a fixture; (3) a starter NOTES.md with feedback + next steps; (4) a Your Turn prompt; (5) metadata.approvals for voice and professor_notes as PENDING records with real subject fingerprints. Do not run generate_audio_kokoro.py or compile.py.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: does B04 declare kind: source_report + audio_policy: preserve?",
+              "check: are both approvals PENDING with real fingerprints (never fake sign-offs)?",
+              "check: does the outro name the standard HAI outro, not ClaudeTitleOutro?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T15:22:36.823516+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 44,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 35.73,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 35.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T11:34:11"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff. This teardown IS a claude-liam reel, so ClaudeTitleOutro applies here (the beat we just discussed is about how fellows itself uses a DIFFERENT outro).",
+      "narration_text": "That was the fellows Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The fellows Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The fellows Skill",
+            "slug": "claude-liam-brutalist-skill-fellows"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T15:12:08.878502+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.37,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-08T11:34:11"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "ea4f6e123fc446489cbedd621985299b",
+  "source_sha256": "793fe8c321b2c67520b95aece10173a71f7235b4ca8b8a47c644d691423711c7",
+  "beat_sheet_sha256": "8706cb0a3147e56b6c2e5b0e9500da44f3ed64585826f10b9f70c5b937c3cb8e",
+  "video_sha256": "0a345d44717058db9e6164b0acf6936b0031489cc422c930056018d1594d2ba9",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/CONTACT-SHEET.png", "sha256": "8ebb9bb6b711c10d33f7a8f2da3635a09235f5661857fe95069ea582e97552eb"},
+    {"path": "_qc/B00_50.png", "sha256": "875ab2029263d5239f72b75dabe5a177331aa97ab922cf467213404deaf52c1f"},
+    {"path": "_qc/B01_50.png", "sha256": "e8ea22c9d553e8d578de1ca04dbc2608285e236e173286ef0a622c223ba8a766"},
+    {"path": "_qc/B04_50.png", "sha256": "1f8260da6d1fa3bdb2e7f2872d2b6478ec7758be5584c864402b7a6ac6d81f0a"},
+    {"path": "_qc/B09_50.png", "sha256": "105080f414c26a28ae08ae34c523ec6cef513ee835b8ef95493b03bbf43917a0"},
+    {"path": "_qc/B09_85.png", "sha256": "f5262a043812303ba01fcb0dd1c913a6275813fd6ecf662bf49a94c49eb6fdd8"},
+    {"path": "_qc/B10_50.png", "sha256": "48152dd896ca6121c6715774761b671611d76142f2f2fd1e65afc68d22a2e3ad"},
+    {"path": "_qc/B11_50.png", "sha256": "350dd5d4f73c24f710b6ad9efd5c45768970f48529de2b8a4b1124ee82d40cff"}
+  ],
+  "notes": "Re-reviewed run ea4f6e12 (2026-09-12). Source sha change due to sibling skill modifications — nopunt content unchanged, beat sheet accurate. Vertical 2160x3840, h264, 345.79s, 12/12 beats filled, 0 slates. ffprobe-verified. Inspected: full contact sheet (12-beat portrait tile), B00 (ClaudeComposerAsk916 portrait layout: 'Hola, Liam', @HumanitariansAI folder chip, output lines within portrait safe area), B01 (BrutalistHesitantWriter portrait: 'nopunt / is a catalog. / Check it first.' — large serif fills portrait frame, linter→catalog swap confirmed, good vertical coverage), B04 (SkillTeardownMechanism916 portrait: 'Only photographs HOLD.' heading, verbatim quote block, verdict pill, all within SAFE916 inset), B09 at 50% and 85% (ClaudeVerdictArtifact portrait: all 6 lines legible, card within safe area at both samples), B10 (ClaudeComposerAsk916 'Your Turn': @HumanitariansAI chip, paste-ready prompt fits portrait composer), B11 (ClaudeTitleOutro portrait: title + @NikBearBrown per OUTRO-LOCK). Channel_title strip removed from vertical beat_sheet to prevent compile-overlay bleed past safe.b. No edge bleed, no overflow, no unresolved slates. Human review pending; nothing published."
+}

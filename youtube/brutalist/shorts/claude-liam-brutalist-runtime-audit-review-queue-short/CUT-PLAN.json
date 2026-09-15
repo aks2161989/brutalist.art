@@ -1,0 +1,17 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "audit_review_queue.py as a read-only batch inspector: it hashes beat sheets, samples frames at 70%, and flags stale masters — evidence for human review, never approval",
+  "parent_master_sha256": "a6c0604570d25bed4a14f35f2c8cb0f3644704ac0ba338bab579340d60b29348",
+  "kept_beats": ["B00", "B01", "B05", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Invocation flags walkthrough — three-flag CLI anatomy belongs in the 16:9 long; the Short covers purpose, not syntax"},
+    {"beat_id": "B03", "reason": "Four-phase pipeline anatomy (Parse/Audit/Sample/Report) is the long-form teardown; the Short communicates outcome not internals"},
+    {"beat_id": "B04", "reason": "Finding-category code walkthrough — four categories with code snippets is long-form detail; the verdict beat covers the key bite"},
+    {"beat_id": "B06", "reason": "Hard dependency list (PIL, math_layout_check, ffmpeg) is setup detail; the verdict covers the only bite that shapes how you use it"},
+    {"beat_id": "B08", "reason": "Failure-mode code walkthrough duplicates the silent-tile and hard-stop points already surfaced in the verdict; dropping avoids repetition"},
+    {"beat_id": "B10", "reason": "Detailed Your Turn exercise (two-reel batch run with step-by-step instructions) belongs in the 16:9 long; Short closes on the verdict"}
+  ],
+  "cut_first_review": "B00 establishes what audit_review_queue.py is and names its four outputs (beat sheet hash, master probe, frame samples, review leads) and its contract (never approves, never publishes). B01 corrects the core misconception — it documents source structure, it does not decide if a reel ships. B05 introduces the one design insight worth the Short: stale master detection, which names when source and render are out of sync. B07 shows real output from a live run (12 beats, 12 samples, 0 leads) — concrete proof the tool runs. B09 delivers the verdict: stale-master is unique to this tool, 70%-position is a deliberate design choice, and the silent-tile failure is the bite you must count manually. B11 closes with Liam's sign-off. No dangling references: none of the dropped beats are referenced by name in the kept narration. The transition from B01 (misconception) to B05 (design insight) skips the flag walkthrough but the narrative still flows: 'it doesn't approve' → 'here is what makes it useful' → 'here is real proof' → 'here is what bites'. No numbered-list transitions. No repeated conclusions.",
+  "planned_duration_s": 121.96,
+  "rewrite_reason": null
+}

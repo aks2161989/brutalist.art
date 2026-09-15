@@ -1,0 +1,61 @@
+=== INVOCATION 1: bare './art vertical <reel>' (full-length 9:16 companion) ================
+$ ./art vertical /tmp/claude-501/claude-shorts-demo
+[stdout]
+[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00
+[vertical] full-length companion: every source beat is retained
+[short] B00  ONDA CHECK: ClaudeComposerAsk → ClaudeComposerAsk916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B01  ONDA CHECK: BrutalistHesitantWriter → BrutalistHesitantWriter916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B02  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B03  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B04  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B05  ONDA CHECK: ClaudeVerdictArtifact → ClaudeVerdictArtifact916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B06  ONDA CHECK: ClaudeTitleOutro → ClaudeTitleOutro916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] 7 beats · ~214.0s (3:34.0) full-length vertical (no Short cap)
+[short] dropped: none · ends on the last beat (no endcard)
+[short] ONDA CHECK: 7 REMOTION beat(s) rewired to 916 compositions (B00, B01, B02, B03, B04, B05, B06) — they MUST be re-rendered portrait before compiling; any old center-cut media/<bid>-916.mp4 of a Remotion render is stale garbage (delete it).
+[short] next:
+[short]   1. python3 runtime/scripts/remotion_scenes.py /private/tmp/claude-501/claude-shorts-demo/vertical   # FOREGROUND (rule #3) — portrait renders for the 916-rewired beats
+[short]   2. python3 runtime/scripts/compile.py /private/tmp/claude-501/claude-shorts-demo/vertical --review --height 1920
+[short] Render only. Submission, related-video selection and scheduling are separate human workflows.
+[exit] 0
+
+=== INVOCATION 2: './art shorts <reel> --vertical' (dispatcher-agnostic form) ============
+$ ./art shorts /tmp/claude-501/claude-shorts-demo --vertical
+[stdout]
+[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00
+[vertical] full-length companion: every source beat is retained
+[short] B00  ONDA CHECK: ClaudeComposerAsk → ClaudeComposerAsk916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B01  ONDA CHECK: BrutalistHesitantWriter → BrutalistHesitantWriter916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B02  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B03  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B04  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B05  ONDA CHECK: ClaudeVerdictArtifact → ClaudeVerdictArtifact916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B06  ONDA CHECK: ClaudeTitleOutro → ClaudeTitleOutro916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] 7 beats · ~214.0s (3:34.0) full-length vertical (no Short cap)
+[short] dropped: none · ends on the last beat (no endcard)
+[short] ONDA CHECK: 7 REMOTION beat(s) rewired to 916 compositions (B00, B01, B02, B03, B04, B05, B06) — they MUST be re-rendered portrait before compiling; any old center-cut media/<bid>-916.mp4 of a Remotion render is stale garbage (delete it).
+[short] next:
+[short]   1. python3 runtime/scripts/remotion_scenes.py /private/tmp/claude-501/claude-shorts-demo/vertical   # FOREGROUND (rule #3) — portrait renders for the 916-rewired beats
+[short]   2. python3 runtime/scripts/compile.py /private/tmp/claude-501/claude-shorts-demo/vertical --review --height 1920
+[short] Render only. Submission, related-video selection and scheduling are separate human workflows.
+[exit] 0
+
+=== INVOCATION 3: './art vertical <reel> --drop B02' (REFUSED — cannot drop with vertical) ===
+$ ./art vertical /tmp/claude-501/claude-shorts-demo --drop B02
+[stdout+stderr]
+[short] REFUSED: --vertical preserves the full film; --drop is not allowed
+[exit] 1
+
+=== INVOCATION 4: './art shorts <reel> --vertical --drop B02' (same refusal, other spelling) ===
+$ ./art shorts /tmp/claude-501/claude-shorts-demo --vertical --drop B02
+[stdout+stderr]
+[short] REFUSED: --vertical preserves the full film; --drop is not allowed
+[exit] 1
+
+=== INVOCATION 5: './art vertical <reel> --output-dir <source>' (REFUSED — cannot replace source) ===
+$ ./art vertical /tmp/claude-501/claude-shorts-demo --output-dir /tmp/claude-501/claude-shorts-demo
+[stdout+stderr]
+[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00
+[vertical] full-length companion: every source beat is retained
+[short] REFUSED: Derivative output cannot replace the source or an ancestor
+[exit] 1

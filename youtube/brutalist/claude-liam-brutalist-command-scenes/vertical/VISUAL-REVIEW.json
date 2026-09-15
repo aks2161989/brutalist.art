@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "55a09dc2004f4348be10c7ea7756eb86",
+  "source_sha256": "384e2c8868f2b8a1ad7ce66280a4579ba318f957677cc2ec2d92b3ce0a8a0c52",
+  "beat_sheet_sha256": "89b8da12bee01b467b8d3ff293f9b76d6647c1056875a11987eed4e7fd5f9bbd",
+  "video_sha256": "06eb7031e272bac545d3a16c0ce48e0ebaeb9a3fedaeeb0b16d294233ce3aea8",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "1cd1e94fc6a4a82061d1321dde89de8e34744a6fbfc8d2ec3c119575670fb980"}
+  ],
+  "notes": "Re-verified under run_id 55a09dc2004f4348be10c7ea7756eb86 (source_sha256 updated; no content change in art or scene_search.py vs previous build). Gate V (final_frame_check.py, portrait safe area) re-run: frames=24 BLOCKER=0 MAJOR=0. Contact sheet re-read via image-capable Read tool: B00 lands as the ClaudeComposerAsk916 with 'Namaste, Liam' greeting in native portrait format; B01 (BrutalistHesitantWriter portrait) shows large serif 'art scenes / finds / existing scenes.' after correction — BLUF coverage at ~55% with fontSize 165/lineSpacing 2.7 per the hesitant-writer portrait patch; B02-B08 read as ClaudeCodeBeat916 cards with horizontally clipped long lines (documented limitation, Gate V passes because card is inside SAFE916); B09 verdict artifact visible; B10 composer shows 'Your turn.' with tightened portrait text; B11 ClaudeTitleOutro916 with title and handle. All 12/12 beats filled (0 slates). Two SKIN LINT warnings (B00/B11 -916 suffix mismatch) are expected for portrait cuts and recorded. MP4 sha256 unchanged from Sep-09 build: 06eb7031. Portrait export is 2160x3840 native full-length companion (not a Short). Human review pending."
+}

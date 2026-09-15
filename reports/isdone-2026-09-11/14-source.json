@@ -1,0 +1,166 @@
+{
+  "number": 14,
+  "relative": "Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations",
+  "beats": 24,
+  "sheet_sha256": "e1933cd705054e5c1ff041248bf331f36f2d6ff64a9ff0b1569cce276a900b6f",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/claude-liam-algorithmic-foundations-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "372.375000",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B00.mp4",
+      "seconds": 14.91,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B01.mp4",
+      "seconds": 3.5231055999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B02.mp4",
+      "seconds": 8.049999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B03.mp4",
+      "seconds": 2.03,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B04.mp4",
+      "seconds": 6.533333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B05.mp4",
+      "seconds": 6.475,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B06.mp4",
+      "seconds": 13.089999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B07.mp4",
+      "seconds": 2.1231056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B08.mp4",
+      "seconds": 10.4125,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B09.mp4",
+      "seconds": 7.583333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B10.mp4",
+      "seconds": 1.7731056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B11.mp4",
+      "seconds": 8.983105599999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B12.mp4",
+      "seconds": 13.206666899999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B13.mp4",
+      "seconds": 1.9131055999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B14.mp4",
+      "seconds": 6.1541669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B15.mp4",
+      "seconds": 6.6199217,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B16.mp4",
+      "seconds": 14.933333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B17.mp4",
+      "seconds": 1.4931055999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/B18.mp4",
+      "seconds": 21.419999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B19.mp4",
+      "seconds": 7.0,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/manim/B20.mp4",
+      "seconds": 7.35,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/BVDT.mp4",
+      "seconds": 17.873333099999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/BHTF.mp4",
+      "seconds": 12.7862112,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/youtube/claude-liam-algorithmic-foundations/media/BOUT.mp4",
+      "seconds": 6.6499999999999995,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/14-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

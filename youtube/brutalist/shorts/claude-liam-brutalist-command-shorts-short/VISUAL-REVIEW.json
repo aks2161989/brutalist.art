@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "c3c149dbdf064d1d99ee95c5f9350955",
+  "source_sha256": "63665ca998b113496edeef2a4ad166a9d473d7ab67e182c3d4d509664ea1ead8",
+  "beat_sheet_sha256": "751034492e18c080928e8e48bde896ade06817a580d4cc9a31bedf82aca5dab3",
+  "video_sha256": "d18a9cdf7219f25be0f776933fcb98758439177fd0ab177d4a2c0b63d216d750",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "ffca9df9fd3ce96ed7c3231d8403fc274dcab8c83d700857cd4f409165710d74"},
+    {"path": "_qc/frames/B00_15.png", "sha256": "6830b7c25caa9bf1637bf68565fbe57d10b9ad39d499c9f4dc1c9a171666609a"},
+    {"path": "_qc/frames/B00_50.png", "sha256": "b9b39265485b4e6d8287c525689bdb37458584f961a482741ccad8ec39bce554"},
+    {"path": "_qc/frames/B00_85.png", "sha256": "65cfab583b74aeed83733a57cd48bbef08052384e6b8638d654be60446026857"},
+    {"path": "_qc/frames/B01_15.png", "sha256": "f977ad49c79bc235c8bc49dffb818eb6310b2ea3bf59831b242c30921d71a8e4"},
+    {"path": "_qc/frames/B01_50.png", "sha256": "d6c44405e551f8d5a4ab7258ad7e42ba36c2d3ae7dba28f7e88c65ed3a976b01"},
+    {"path": "_qc/frames/B01_85.png", "sha256": "fdc1f9c82cbbebda0a422b7600ded558a4a3e710f98a883406fa3815d634a639"},
+    {"path": "_qc/frames/B03_15.png", "sha256": "062d78a6efd52cb91b998f14bd70a71a31546c067c4feddd92884e7b4f462f46"},
+    {"path": "_qc/frames/B03_50.png", "sha256": "d2901aea5a0d702585ff3496fa7202b643ce357e7a25177a1380c8b5d9e61683"},
+    {"path": "_qc/frames/B03_85.png", "sha256": "b6452e32a7e4fdcddf9ceb88e4e94ea35c69a45353379e60ed0c4094a0386303"},
+    {"path": "_qc/frames/B07_15.png", "sha256": "649a2c95eec0b8483e22e7302dcf716882791a4ba68f55d42411581ce6431449"},
+    {"path": "_qc/frames/B07_50.png", "sha256": "1e7a2e324552a1e8d0ac5bd8a191e871e3543c9155a44c5366668230c329bfe4"},
+    {"path": "_qc/frames/B07_85.png", "sha256": "d7eeefc610d821ec66668197f3a22f4cf2f37b618c59803530fbe820b2edea29"},
+    {"path": "_qc/frames/B09_15.png", "sha256": "34ee709196ea0c6b2c020de9931b58072b3f8c059eb6c18691b77e928784f2b5"},
+    {"path": "_qc/frames/B09_50.png", "sha256": "2d9bebd371b41fd93e0b9ea3509888e1b5a5280395323813a717fae2475a07cf"},
+    {"path": "_qc/frames/B09_85.png", "sha256": "17b89b29396f8d5247a811fa90825b2b0b0b556f7a04eff779a1ce4d483a12d1"},
+    {"path": "_qc/frames/B11_15.png", "sha256": "27f4420f6b92a13d64b7bc3f4dd2a066008ababa6130866be87e43f67b21f97b"},
+    {"path": "_qc/frames/B11_50.png", "sha256": "c186406ce488ce7e1dd33a9b39480240fb585780f735895123ebd73859d5be9b"},
+    {"path": "_qc/frames/B11_85.png", "sha256": "065cd9fae19c1fedd33cbdf19fd9825002a51e90a1970fa194029eae86a8ddb4"}
+  ],
+  "notes": "Native portrait 2160x3840, 124.67s (container 124.667s / video 124.667s / audio 124.672s — all strictly under 180s with >55s headroom). Rebuilt from updated parent (parent master 3481e57f…bcc89fd): B03 media replaced with parent's updated render (2026-09-12T17:22:21 — updated SHORTS LAW code block with 7 expanded rules vs 5; narration and audio unchanged). Six beats kept (B00 ASK ClaudeComposerAsk916 / B01 BLUF BrutalistHesitantWriter916 / B03 MECHANISM ClaudeCodeBeat916 / B07 WORKED_EXAMPLE ClaudeCodeBeat916 / B09 VERDICT ClaudeVerdictArtifact916 / B11 OUTRO ClaudeTitleOutro916); six mid-body detail beats dropped (B02 dispatcher code walk, B04 plan_drops() Python walk, B05 ONDA-CHECK helper walk, B06 pantry precedence walk, B08 --vertical + --drop refusal edge case, B10 extended Your Turn composer). B00/B01/B07/B09/B11 media and all mp3s retained byte-for-byte from prior build (build-state.json input_sha256 unchanged for those entries). 18 beat-relative frames at 15%/50%/85% of every retained beat plus a 6-beat contact sheet inspected via the image-capable Read tool: B00 composer greeting/topic chip/output lines on cream (portrait clean, no bleed); B01 hesitant writer corrected 4-line stanza 'art shorts / drops beats / and rewires / graphics.' at 85% with terracotta correction settled; B03 updated ClaudeCodeBeat916 — THE SHORTS LAW 5-rule code card (shorter rule descriptions with 'Plan with headroom', 'keep the hook', '--rewrite-outro', 'HAI scheduling'), spark line '< 3:00 or it never publishes.' visible at bottom, text fits SAFE916 with expected right-truncation on long monospace lines (composition-level layout, not a bleed); B07 cap-check log with 7-beat ONDA CHECK block and '~163.5s (2:43.5) OK' line; B09 8-line verdict artifact card on cream; B11 dark outro card with 'Brutalist Command: art shorts.' and @NikBearBrown. Audio decode healthy (mean -26.8 dB, max -3.0 dB, no clipping, 124.672s). Skin-lint warnings (ClaudeComposerAsk916 / ClaudeTitleOutro916 on the claude palette) inherited from parent by design. Human review pending."
+}

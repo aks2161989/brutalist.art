@@ -1,0 +1,920 @@
+{
+  "metadata": {
+    "title": "The sri-explainer Skill",
+    "slug": "claude-liam-brutalist-skill-sri-explainer-vertical",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Bonjour, Liam",
+    "greeting_note": "hello lexicon: French (single-word). Wagwan check: sum('claude-liam-brutalist-skill-sri-explainer') mod 10 == 7, not a Wagwan reel.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "a960d8bf6f6e4238996f9688a426dab9",
+    "episode_id": "skill-sri-explainer",
+    "order": 20,
+    "note": "Skill teardown of skills/make/sri-explainer/SKILL.md (episode.source_sha256 f243831c7108064b81c54617979906155fbe0e7811ea3dfcc5ff29f933a16344). SKILL.md updated since prior build: Notebook look camera rule corrected (static camera on ordinary 2D beats; orbit only on 3D beats). No beat narrates the camera rule — existing 14 beats remain factually accurate. Every Mechanism / Anatomy quote card is verbatim from that file. This is a Brutalist playlist episode ABOUT the skill — the narrator is Liam in for Bear (per IN-FOR-BEAR LAW). The skill's OWN persona in a live sri-explainer build would be Prof Sridhar himself (see B05). Voice: Kokoro am_onyx. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for human reviewer before publication. No pantry stills — VOX LAW correctly returns zero for a film whose evidence is a SKILL.md. No paid API, no upload. B10 documents the honest limitation: this reel demonstrates the mechanism, not an end-to-end chapter-to-video run (that would need a real Prof Sridhar chapter file, claude-sri added to ALLOWED_VOICES / brand_variant.py, and a factcheck pass on that chapter's numbers). · VERTICAL companion: portrait beats via native <Pattern>916 compositions; no beats cut.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/sri-explainer/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "sri-explainer",
+      "skill teardown",
+      "Prof Sridhar",
+      "chapter-to-video",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T03:21:21",
+      "cut": "master",
+      "filled": 14,
+      "of": 14,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B13: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Bonjour, this is Liam, in for Bear. There is a skill called sri-explainer that most fellows will read as another Brutalist explainer. It is not. It takes one chapter of a Prof Sridhar book and turns it into a video that teaches what that chapter is about — in Sridhar's own written voice. So I asked Claude to read the whole SKILL dot m-d and tell me what makes it its own thing.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Bonjour, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "command types the ask about sri-explainer"
+          },
+          {
+            "at": "0.62",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "three RESULT lines land in sequence"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Bonjour, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The sri-explainer Skill",
+            "command": "What does the `sri-explainer` skill actually do? Read skills/make/sri-explainer/SKILL.md and tell me the mental model — one chapter in, what comes out, and what it inherits vs. owns.",
+            "runningText": "reading skills/make/sri-explainer/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "chapter-to-video pipe; extends deep-explainer OR ai-explainer",
+              "narrated in Sridhar's OWN written voice (not Bear, not Liam, not HAI)",
+              "7 hard rules: derivation-compress, golden-test, negate-before-affirm…"
+            ]
+          }
+        }
+      },
+      "actual_duration_s": 19.01,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 19.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the 'another Brutalist explainer' misread to the actual claim: chapter-to-video pipe. Phrase-level trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "Watch the writer walk this back. Sri dash explainer does not take a concept and explain it. It takes a whole chapter — chapter in, video out, narrated in the register of the book itself.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "line 1 types: 'sri-explainer takes'"
+          },
+          {
+            "at": "0.35",
+            "event": "line 2 types: 'a concept.'"
+          },
+          {
+            "at": "0.60",
+            "event": "'concept' flashes terracotta (about to delete)"
+          },
+          {
+            "at": "0.70",
+            "event": "word deletes; 'chapter' types in"
+          },
+          {
+            "at": "0.90",
+            "event": "final corrected sentence stands"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "sri\ntakes a\nconcept.",
+            "triggerWords": "concept",
+            "replacementWords": "chapter",
+            "seed": "sri-explainer-bluf-98242bd1-v7",
+            "face": "serif",
+            "fontSize": 240,
+            "lineSpacing": 2.3,
+            "align": "center",
+            "charMs": 22,
+            "jitter": 6,
+            "mistakeRate": 2,
+            "hesitateWithin": 1,
+            "hesitateBetween": 3,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T04:09:06.408053+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 10.45,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 10.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — the anatomy of sri-explainer: SKILL.md plus two reference files (style + notebook look). Small doctrine, large inheritance.",
+      "narration_text": "Every skill on this toolkit is a folder Claude reads before working. Sri dash explainer is one SKILL dot m-d plus two reference files — the Prof Sridhar style doctrine, and the notebook look recipe. The file is short. What it extends is not.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 16,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY lands"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'One file, two references, three parents.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row — SKILL.md accent"
+          },
+          {
+            "at": "0.85",
+            "event": "callout: 'Small doctrine. Big inheritance.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "sri-explainer",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "One file, two references, three parents.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/sri-explainer/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "reference/"
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "prof-sridhar-style.md"
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "notebook-look.md"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "extends (parent chassis)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "skills/make/deep-explainer/SKILL.md"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "skills/make/ai-explainer/SKILL.md"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "skills/make/explainer/SKILL.md"
+              }
+            ],
+            "calloutText": "<b>Small doctrine. Big inheritance.</b> Sri-explainer owns register + chapter contract; the chassis, bookends, and laws come from the parents.",
+            "calloutSub": "extends deep-explainer (multi-section chapter) OR ai-explainer (single-mechanism chapter)",
+            "sparkLine": "One file. Every parent read too."
+          }
+        }
+      },
+      "actual_duration_s": 14.31,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 14.333333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "Lineage — the skill EXTENDS its parents. Nothing below repeals a parent law.",
+      "narration_text": "Read the first paragraphs and the skill says the quiet part out loud. Sri dash explainer extends ai dash explainer. And for a real chapter, it extends deep dash explainer — the multi dash act chassis. Nothing below repeals a parent law. So the four bookends, show don't tell, illustrate law, the vox law — those all come in for free.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · LINEAGE lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'It extends its parents.' types on"
+          },
+          {
+            "at": "0.35",
+            "event": "body block settles: chassis picks parent by chapter length"
+          },
+          {
+            "at": "0.60",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'INHERITED · not owned' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · LINEAGE",
+            "heading": "It extends its parents.",
+            "body": "Bookends, brand, laws, ILLUSTRATE LAW, SHOW-DON'T-TELL LAW, VOX LAW — all inherited from ai-explainer / deep-explainer / explainer. Sri-explainer only adds the chapter input contract, the Sridhar register, and the derivation-compression rule.",
+            "quote": "This skill EXTENDS ai-explainer, which extends explainer — nothing below repeals a parent law; this file adds the genre's own contracts, the same way deep-explainer does.",
+            "cite": "sri-explainer SKILL.md · Lineage — what governs when",
+            "verdictLabel": "INHERITED · not owned",
+            "verdictPositive": true,
+            "sparkLine": "The parents govern."
+          }
+        }
+      },
+      "actual_duration_s": 17.96,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 18.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "FRAMEWORK",
+      "role_note": "The chapter → beat spine. This is the SKILL's own default act structure — HOOK → SETUP → MECHANISM → GROUNDING → (DYNAMICS) → VERDICT → YOUR TURN → OUTRO.",
+      "narration_text": "Here is the spine, fixed — because it mirrors the chapter's own order. Cold open. Then HOOK — the chapter's own opening scene, a real image when the chapter has one. Then SETUP — the potential or the problem, equation on screen. Then MECHANISM — the two to four turns where something is actually decided. Then GROUNDING — the chapter's own numeric example, on screen. Optionally DYNAMICS. Then the verdict, the your turn, and the outro. This order is not this skill's invention. It is the chapter's.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · SPINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'The chapter is the storyboard.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'Cold open' lights up"
+          },
+          {
+            "at": "0.40",
+            "event": "four phase nodes light up left-to-right — HOOK · SETUP · MECHANISM · GROUNDING"
+          },
+          {
+            "at": "0.85",
+            "event": "output node OUTRO lands with footer note"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · SPINE",
+            "heading": "The chapter is the storyboard.",
+            "body": "HOOK → SETUP → MECHANISM → GROUNDING → optional DYNAMICS → VERDICT → YOUR TURN → OUTRO. The chapter’s own section order becomes the video’s own act order. Do not reinvent an arc; adapt the chapter’s.",
+            "quote": "The chapter’s own section order — hook → setup → derivation → grounding → (dynamics, if present) → bridge-forward — is the video’s own act order.",
+            "cite": "sri-explainer SKILL.md · The Sridhar register · Structure",
+            "verdictLabel": "SPINE · from the chapter",
+            "verdictPositive": true,
+            "sparkLine": "One chapter. One spine."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T04:00:27.648777+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 24.62,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 24.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 1 — Persona / channel: Prof Sridhar himself, not Bear / Liam / HAI. New channel key claude-sri. Voice am_onyx interim; not yet in ALLOWED_VOICES.",
+      "narration_text": "First decision that makes this its own skill. The persona is Prof Sridhar himself — the book's own author voice, in first person, the way the book is voiced. It is not Liam. It is not Bear. It is not H A I. When Sridhar's book teaches, Sridhar teaches. The channel key is claude dash sri. Today it borrows the am underscore onyx voice from claude dash liam as an interim default. Extending the voice roster is a follow up before the first real build.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 · PERSONA lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'Persona is Sridhar.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: author-voiced first person; new channel claude-sri"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'AUTHOR-VOICED · not Bear / not Liam / not HAI' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1 · PERSONA",
+            "heading": "Persona is Sridhar.",
+            "body": "New channel key: claude-sri. The narrator is Prof Sridhar himself, first-person, the way the book is voiced. Not a Claude-workflow persona like Liam or HAI. Voice: Kokoro am_onyx, reused from claude-liam as an INTERIM default — extending ALLOWED_VOICES and brand_variant.py is a documented follow-up.",
+            "quote": "Not a Claude-workflow demo persona like Liam or HAI: Sridhar narrates in first person as the chapter's author, the way the book itself is voiced.",
+            "cite": "sri-explainer SKILL.md · Persona & channel",
+            "verdictLabel": "AUTHOR-VOICED · not Bear / Liam / HAI",
+            "verdictPositive": true,
+            "sparkLine": "The book's own voice."
+          }
+        }
+      },
+      "actual_duration_s": 22.61,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 22.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 2 — the Sridhar register: NEGATION-BEFORE-AFFIRMATION; short punch sentences; concrete physical-scale anchors.",
+      "narration_text": "Second decision. The Sridhar register — derived directly from reading quantum dash mechanics dash vol one, not invented. The move you hear most in the book is negation before affirmation. State what a result is NOT before affirming what it IS. Short punch sentences after a longer explanatory one. Concrete physical scale over abstract claim. A number always anchored to something felt — an e V, a room temperature k B T — never a bare symbol.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 · REGISTER lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'Negate before affirm.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: three register moves — negation, punch-after-explanation, physical anchor"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'REGISTER · from the book itself' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2 · REGISTER",
+            "heading": "Negate before affirm.",
+            "body": "Three moves the book uses over and over: (1) negation-before-affirmation — say what a result is NOT before you say what it IS; (2) short punch-sentence after a longer explanatory one; (3) every number anchored to something felt (an eV, a room-temperature k_B·T) — never a bare symbol.",
+            "quote": "State what a result is NOT before affirming what it IS; short punch-sentences after a longer explanatory one; concrete physical-scale comparisons over abstract claims; numbers always anchored to something felt (an eV, a room-temperature k_B T), never a bare symbol.",
+            "cite": "sri-explainer SKILL.md · The Sridhar register",
+            "verdictLabel": "REGISTER · from the book itself",
+            "verdictPositive": true,
+            "sparkLine": "Anchor every number."
+          }
+        }
+      },
+      "actual_duration_s": 22.59,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 22.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 3 — DERIVATION-COMPRESSION LAW. Never all N steps. Extract 2–4 decision points; one beat each.",
+      "narration_text": "Third decision, and it is a compression rule. Never narrate every algebra line of a derivation — that is lecture capture, not an explainer. Extract the two to four points where something is actually decided — the moment a continuous quantity collapses to a discrete one, the moment a boundary condition kills a term — and give each its own illustrated beat. One beat per genuine turn, never one beat per algebra step.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 · DERIVATION-COMPRESSION LAW lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'One beat per turn.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: examples of what counts as a decision point"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'COMPRESS · never per algebra step' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3 · DERIVATION-COMPRESSION LAW",
+            "heading": "One beat per turn.",
+            "body": "A decision point is where something COLLAPSES — a continuous quantity becomes discrete, a boundary condition kills a term, an approximation is finally justified. Pick 2-4 of those from the chapter's derivation; give each its own illustrated beat. Everything else in that derivation is preparation and stays off the mic.",
+            "quote": "Never narrate all N steps of the chapter's derivation verbatim — that is lecture-capture, not an explainer. Extract the 2–4 points where something is actually decided … and give each its own illustrated beat.",
+            "cite": "sri-explainer SKILL.md · Hard rules · DERIVATION-COMPRESSION LAW",
+            "verdictLabel": "COMPRESS · never per algebra step",
+            "verdictPositive": true,
+            "sparkLine": "The turn, not the step."
+          }
+        }
+      },
+      "actual_duration_s": 21.57,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 21.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 4 — GOLDEN-TEST-ON-SCREEN LAW. Any number shown carries its own check (ratio, limit, conservation), spoken and shown. Sharper than parent DOUBLE-CHECK LAW.",
+      "narration_text": "Fourth decision, and this is the honesty gate. Any number shown on screen carries its own check. The ratio it satisfies, the limit it reduces to, the conservation law it obeys — spoken and shown. This is sharper than the parent's generic double check law because the book's own system prompt makes it non negotiable. Never assert a numeric result is physically correct without an independent checkable comparison on screen.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 · GOLDEN-TEST-ON-SCREEN LAW lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'Every number checks itself.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: three check families — ratio, limit, conservation"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'HONESTY · check on screen' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4 · GOLDEN-TEST-ON-SCREEN LAW",
+            "heading": "Every number checks itself.",
+            "body": "A number lands on screen with the check that validates it — the ratio to a known quantity, the limit it reduces to, the conservation law it obeys. The check is spoken AND shown. This is the parent chassis's DOUBLE-CHECK LAW sharpened for physics: no un-checked numeric result, ever.",
+            "quote": "Any number shown carries its own check, spoken and shown (the ratio/limit it satisfies) — sharper than the parent's generic DOUBLE-CHECK LAW because the book's own system prompt makes this non-negotiable: never assert a numeric result is physically correct without an independent, checkable comparison on screen.",
+            "cite": "sri-explainer SKILL.md · Hard rules · GOLDEN-TEST-ON-SCREEN LAW",
+            "verdictLabel": "HONESTY · check on screen",
+            "verdictPositive": true,
+            "sparkLine": "No unchecked number."
+          }
+        }
+      },
+      "actual_duration_s": 21.67,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 21.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 5 — HANDOFF-FROM-THE-CHAPTER LAW + BRIDGE-HONESTY LAW. YOUR TURN drawn from chapter's LLM Exercises; VERDICT names what the chapter didn't resolve.",
+      "narration_text": "Fifth decision, and it is about where the YOUR TURN prompt comes from. It comes from the chapter itself — from the L L M exercises section, if the chapter has one. Adapt, do not invent fresh. Same instinct as skill teardown's self demo law — the source's own material is the demo. Then the verdict states plainly what the chapter did NOT resolve and which future chapter does — matching the book's own what comes next honesty.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 5 · HANDOFF + BRIDGE-HONESTY lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The handoff is the chapter's.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: YOUR TURN from LLM Exercises · VERDICT names the open question"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'HANDOFF · from the chapter' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 5 · HANDOFF + BRIDGE-HONESTY",
+            "heading": "The handoff is the chapter's.",
+            "body": "YOUR TURN adapts a prompt from the chapter's own 'LLM Exercises' section (adapt, don't invent). VERDICT states plainly what the chapter did NOT resolve and which future chapter does — matching the book's own 'What Comes Next' honesty. Never imply the chapter closed a question it left open.",
+            "quote": "The Your Turn prompt is always drawn from the chapter's own \"LLM Exercises\" section (adapt, don't invent fresh) — the same instinct as skill-teardown's SELF-DEMO LAW: use the source's own material as the demo.",
+            "cite": "sri-explainer SKILL.md · Hard rules · HANDOFF-FROM-THE-CHAPTER LAW",
+            "verdictLabel": "HANDOFF · from the chapter",
+            "verdictPositive": true,
+            "sparkLine": "The chapter hands off."
+          }
+        }
+      },
+      "actual_duration_s": 21.72,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 21.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY / documented limitation. What sri-explainer needs that this reel does NOT execute (a chapter file, claude-sri wired in, factcheck on chapter numbers).",
+      "narration_text": "Now the limitation of this film. Actually running sri dash explainer end to end needs three things this Brutalist toolkit does not ship today. A chapter file from a Prof Sridhar book. The claude dash sri channel added to brand underscore variant dot py and to the allowed voices list in generate underscore audio underscore kokoro dot py. And a real end to end review pass on that chapter's own numbers. What you have watched is the skill's mechanism read from its own SKILL dot m-d — quotes verbatim, cites shown. When you run it yourself on a real Sridhar chapter, this is the doctrine your Claude is following.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · LIMITATION lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The honest limitation.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: three prerequisites listed for a real end-to-end run"
+          },
+          {
+            "at": "0.70",
+            "event": "body settles"
+          },
+          {
+            "at": "0.90",
+            "event": "verdict pill 'DOCUMENTED LIMITATION' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · LIMITATION",
+            "heading": "The honest limitation.",
+            "body": "A real sri-explainer build needs three things this reel does not execute: (1) a chapter file from a Prof Sridhar book; (2) the claude-sri channel added to generate_audio_kokoro.py's ALLOWED_VOICES and brand_variant.py's channel table; (3) a factcheck pass on that chapter's own numbers. What you watched is the skill's mechanism read from its own SKILL.md — quotes verbatim, cites shown. When you run it on a real chapter, this is the doctrine your Claude is following.",
+            "verdictLabel": "DOCUMENTED LIMITATION",
+            "verdictPositive": false,
+            "sparkLine": "The limitation is the finding."
+          }
+        }
+      },
+      "actual_duration_s": 33.54,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 33.541666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "VERDICT",
+      "role_note": "VERDICT artifact — six lines recapping the split. Bookends inherited; chassis inherited; register owned; handoff from chapter; when to reach for it and when to reach elsewhere.",
+      "narration_text": "So the split. Bookends inherited. Chassis inherited from deep dash explainer or ai dash explainer, chapter dependent. Register owned — Sridhar, in his own voice, negation before affirmation, every number checked. Handoff drawn from the chapter itself. Reach for it when your source is a Prof Sridhar chapter and you want the video written the way he writes.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales up on cream stage"
+          },
+          {
+            "at": "0.20",
+            "event": "heading 'The sri-explainer split.' lands"
+          },
+          {
+            "at": "0.30",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The sri-explainer Skill",
+            "artifactHeading": "The sri-explainer split.",
+            "artifactLines": [
+              "Bookends INHERITED — cold open, hesitant writer, verdict, YOUR TURN, title outro from ai-explainer.",
+              "Chassis INHERITED — deep-explainer for a multi-section chapter, ai-explainer for a single-mechanism chapter.",
+              "Register OWNED — Sridhar, first person, negate-before-affirm, every number anchored, every check on screen.",
+              "Spine follows the chapter's own order — HOOK → SETUP → MECHANISM → GROUNDING → (DYNAMICS) → VERDICT.",
+              "Handoff drawn from the chapter's own LLM Exercises; verdict names what the chapter left open.",
+              "REACH FOR IT when your source is a Prof Sridhar chapter. REACH ELSEWHERE — ai-explainer for a concept; cli-explainer for a build."
+            ]
+          }
+        }
+      },
+      "actual_duration_s": 18.79,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 18.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready planning prompt. Liam reads aloud + discusses what to look for. Safe: plans, does not spend.",
+      "narration_text": "Your turn. Paste this into Claude Code. Read the skill file. Then pick one chapter of a Prof Sridhar book — or any textbook you know deeply — and ask Claude to plan a sri dash explainer of it. Do not author beats yet. First surface the chapter's own act map — hook, setup, mechanism, grounding, dynamics if present — and pick the two to four derivation turns worth a beat each. If your source is not a chapter, ask Claude to tell you which sibling — ai dash explainer, deep dash explainer, cli dash explainer — is the right skill instead.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your turn.' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "paste-ready planning prompt types itself in"
+          },
+          {
+            "at": "0.75",
+            "event": "three-line viewer rubric fades in as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · SRI-EXPLAINER · YOUR TURN",
+            "segment": "Plan a sri-explainer on a chapter you know",
+            "command": "Read skills/make/sri-explainer/SKILL.md and skills/make/deep-explainer/SKILL.md. Pick ONE textbook chapter you know deeply. Do NOT author beats yet — first surface the chapter’s own act map (HOOK / SETUP / MECHANISM / GROUNDING / DYNAMICS if present) and pick the 2-4 derivation turns worth a beat each. Report which sibling — sri-explainer, deep-explainer, ai-explainer — fits this source.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: did Claude surface the chapter’s own act order?",
+              "check: 2-4 decision points named — not one per algebra step?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-09-09T04:01:13.087197+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 27.35,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 27.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T03:21:21"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "The sri dash explainer Skill. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The sri-explainer Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The sri-explainer Skill",
+            "slug": "claude-liam-brutalist-skill-sri-explainer"
+          }
+        }
+      },
+      "actual_duration_s": 5.27,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 5.291666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B13.mp4",
+        "filled_by": "media",
+        "at": "2026-09-12T03:21:21"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "f061799250704b5c8d66275c60755330",
+  "source_sha256": "352ad5312faac07b51e0fadb291d704850b35c94edec67d2b95b68411109e102",
+  "beat_sheet_sha256": "3cba69c61be198593a27b70dbdcbf61e596f022784e55956406bbde5818e81a0",
+  "video_sha256": "15c8209ca63fc8c820fc4f78112955dec5f81c12b1d9eab02f0887d1754b353b",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact-sheet-50pct.png",
+      "sha256": "47401836b075912ec785441604cd9215ef6939bbf82a1b6ed24e5a5579c91f1f"
+    }
+  ],
+  "notes": "Re-verification pass for run_id f061799250704b5c8d66275c60755330 (previous run e9d0a40ece9b404f8f731f406e0504b9 completed 2026-09-08; this invocation retried after Claude usage-limit reset). finance SKILL.md content unchanged (SOURCE-SNAPSHOT SHA b9827d21 matches previous build). Both exports confirmed intact with matching SHA-256. Portrait companion of The finance Skill teardown. Native 9:16 layouts at 2160x3840 (NOT a center-crop). Twelve beats, 323.4s, h264+AAC. Contact sheet re-inspected via image-capable Read tool: B00 ClaudeComposerAsk916 portrait composer correctly scaled; B01 BrutalistHesitantWriter916 serif fills safe area with portrait-aware scale (patch documented in memory feedback_hesitant_writer_portrait_scale), four-line text stacked correctly; B02-B03 anatomy+pipeline in portrait layout, text legible, no safe-area bleed; B04-B07 four MECHANISM beats portrait-adapted, all text within bounds; B08 FALSIFIABILITY (bank trap); B09 ClaudeVerdictArtifact916 five verdict lines; B10 ClaudeComposerAsk916 'Your Turn' composer; B11 ClaudeTitleOutro916 '@NikBearBrown' per OUTRO-LOCK, Liam sign-off. Gate V clean: 0 BLOCKER, 0 MAJOR at 24 sampled portrait frames. channel_title metadata deliberately omitted from portrait beat_sheet — compile-overlay bleeds past portrait safe.b (feedback_channel_title_portrait_bleed). No captions, no slates, no overflow. Human review pending."
+}

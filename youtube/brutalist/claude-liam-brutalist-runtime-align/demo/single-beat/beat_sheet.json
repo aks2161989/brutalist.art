@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "title": "align.py fixture",
+    "slug": "align-demo",
+    "fps": 24,
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx"
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "narration_text": "Whisper hears the words. The known text tells the writer.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 5,
+      "actual_duration_s": 3.48,
+      "audio_file": "mp3/beat-B00.mp3"
+    }
+  ]
+}

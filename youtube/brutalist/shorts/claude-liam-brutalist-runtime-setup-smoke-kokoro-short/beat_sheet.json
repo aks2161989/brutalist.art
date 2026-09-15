@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: setup_smoke_kokoro.py",
+    "slug": "claude-liam-brutalist-runtime-setup-smoke-kokoro-short",
+    "topic": "SETUP AUDIO GATE · BRUTALIST UTILITY",
+    "register": "Teardown (Feynman × MKBHD)",
+    "audience": "Humanitarians AI fellows using Claude Code",
+    "brand": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "aspect_ratio": "9:16",
+    "ground": "#FAF9F5",
+    "greeting": "Selam, Liam",
+    "folderLabel": "@HumanitariansAI",
+    "in_for_bear": true,
+    "captions": false,
+    "playlist": "Brutalist",
+    "typography": {
+      "serif": "EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "source": "runtime/scripts/setup_smoke_kokoro.py — SHA-256: 4e4df6611a34dcc1e001241769bc6479abf947effa58315d09cec4e8a04a0e30",
+    "build": {
+      "at": "2026-09-14T19:14:01",
+      "cut": "master",
+      "filled": 6,
+      "of": 6,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B10: palette=claude but the outro is 'ClaudeTitleOutroHAI916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "kind": "short",
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-runtime-setup-smoke-kokoro-vertical",
+    "dropped_beats": [
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B07"
+    ],
+    "total_estimated_duration_seconds": 107.5,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open / ASK",
+      "palette": "claude",
+      "narration_text": "Selam — this is Liam, in for Bear. When you run dot-slash setup, one check calls setup underscore smoke underscore kokoro dot py — the audio gate. It doesn't just ask whether Kokoro imports. It synthesizes a phrase, measures the decibels, and exits zero only if the audio is real. Here's why that distinction matters.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Selam, Liam",
+            "topic": "SETUP AUDIO GATE · BRUTALIST UTILITY",
+            "segment": "Brutalist Utility: setup_smoke_kokoro.py",
+            "command": "Why does ./setup synthesize actual audio to verify Kokoro — instead of just importing the library?",
+            "runningText": "reading setup_smoke_kokoro.py…",
+            "output": [
+              "setup_smoke_kokoro.py: setup's audio gate. Exits 0 only if the synth produces real sound.",
+              "Three guards (model files · ffmpeg · kokoro_onnx) then one synthesis, one volume check.",
+              "Importing works. Synthesizing silent audio also works. The -40 dB gate is what doesn't."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-14T13:04:42.825698+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": "greeting",
+            "event": "'Selam, Liam' serif greeting fades in above composer"
+          },
+          {
+            "at": 0.2,
+            "event": "Command types into composer; send button arms terracotta"
+          },
+          {
+            "at": 0.65,
+            "event": "Three RESULT lines appear"
+          },
+          {
+            "at": 0.95,
+            "event": "@HumanitariansAI chip at bottom-center"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 18.01,
+      "render_duration_s": 18.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-14T19:14:01"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF — hesitant writer overview",
+      "palette": "claude",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy version of this check imports the library and sees if any errors fire. But setup underscore smoke underscore kokoro synthesizes and measures real audio — because a broken install can import cleanly and produce silence. That's the distinction the gate is built on: not whether the code runs, but whether it makes sound.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "setup checks Kokoro\nby verifying\nthe import works.\nLoading the model\nis enough.",
+            "triggerWords": "import,enough",
+            "replacementWords": "synthesis,insufficient",
+            "seed": "54321",
+            "lineSpacing": 2.0,
+            "fontSize": 120,
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5",
+            "charMs": 1,
+            "hesitateBetween": 0,
+            "hesitateWithin": 0,
+            "jitter": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-14T13:22:54.511037+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Writer types misconception — 'import' and 'enough'"
+          },
+          {
+            "at": 0.55,
+            "event": "Hesitation; 'import' struck and replaced by 'synthesis'"
+          },
+          {
+            "at": 0.75,
+            "event": "'enough' struck and replaced by 'insufficient'"
+          },
+          {
+            "at": 0.9,
+            "event": "Corrected text holds: synthesis / insufficient"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 17.98,
+      "render_duration_s": 18.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-14T19:14:01"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "failure modes — what breaks and what you read",
+      "palette": "claude",
+      "narration_text": "Every failure path exits one with a specific note to stderr — the script's only output. 'Kokoro model files missing' means run setup with dash dash install. synthesis raised followed by an exception means the model is corrupted or incompatible. And 'synthesized audio too quiet' with the measured dB means the synthesis ran but produced nothing useful. Setup reads exit code only — its check function discards everything the script prints.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "setup_smoke_kokoro.py — failure messages",
+            "code": "# All five failure paths — stderr only, exit 1\n[smoke] Kokoro model files missing\n[smoke] ffmpeg not on PATH\n[smoke] kokoro_onnx not importable\n[smoke] synthesis raised <RuntimeError: ...>\n[smoke] synthesized audio too quiet (-60.0 dB <= -40.0 dB)\n# success path — also stderr:\n[smoke] kokoro synth OK — mean_volume -14.3 dB",
+            "sparkLine": "Each exit 1 names its exact cause."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-14T13:07:15.764201+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Comment header reveals: 'All five failure paths'"
+          },
+          {
+            "at": 0.2,
+            "event": "Three failure messages (model / ffmpeg / import)"
+          },
+          {
+            "at": 0.55,
+            "event": "synthesis raised + too quiet messages appear"
+          },
+          {
+            "at": 0.78,
+            "event": "Success path appears — terracotta"
+          },
+          {
+            "at": 0.9,
+            "event": "Spark line: 'Each exit 1 names its exact cause.'"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 23.49,
+      "render_duration_s": 23.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-14T19:14:01"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "verdict",
+      "palette": "claude",
+      "lead_silence_s": 0.5,
+      "narration_text": "The verdict. Setup underscore smoke underscore kokoro is the gap between 'Kokoro is installed' and 'Kokoro makes sound.' Three guards catch the obvious prerequisites. One synthesis catches the subtle failure — an install that imports cleanly but synthesizes nothing. The minus forty decibel gate is generous enough to ignore a whisper and strict enough to catch silence. That's the whole gate.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "stagger",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Brutalist Utility: setup_smoke_kokoro.py",
+            "artifactHeading": "The audio gate — five checks, one standard",
+            "artifactLines": [
+              "Three prerequisites: model files · ffmpeg · kokoro_onnx — each fails independently with a named [smoke] message.",
+              "One synthesis: k.create() on a throwaway phrase — not a module load, not a file existence check.",
+              "One gate: mean volume > -40 dB — real speech passes; silence or corruption fails.",
+              "Setup calls it, discards its output, and reports its own MISS. The gate is transparent to the user.",
+              "The design choice: synthesis reveals broken installs that import cleanly and produce nothing."
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-14T13:08:20.865515+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude artifact page opens portrait — title + heading"
+          },
+          {
+            "at": 0.15,
+            "event": "Five lines stagger in"
+          },
+          {
+            "at": 0.9,
+            "event": "Final line holds — design choice"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 20.44,
+      "render_duration_s": 20.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-14T19:14:01"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "your turn / handoff",
+      "palette": "claude",
+      "narration_text": "Your turn. Paste this prompt into Claude: read runtime slash scripts slash setup underscore smoke underscore kokoro dot py. If I add a new TTS backend to Brutalist, what would I need to change in this script to smoke-test it? What's the minimum gate that would catch a silent install? The answer is cleaner than you'd expect. The volume gate doesn't know which synth produced the audio — that part doesn't change. Look for what's separated from what's shared.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "SETUP AUDIO GATE · BRUTALIST UTILITY",
+            "segment": "Brutalist Utility: setup_smoke_kokoro.py",
+            "command": "Read runtime/scripts/setup_smoke_kokoro.py. If I add a new TTS backend to Brutalist, what would I need to change in this script to smoke-test it? What's the minimum gate that would catch a silent install?",
+            "runningText": "adapting the audio gate…",
+            "output": [
+              "Replace the Kokoro synthesis block with your backend's create() call.",
+              "Keep the WAV-write / volumedetect / -40 dB gate — those are backend-agnostic.",
+              "Update MODEL / VOICES path constants for the new backend's required files."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-14T13:09:03.554291+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": "greeting",
+            "event": "'Your turn.' greeting fades in"
+          },
+          {
+            "at": 0.15,
+            "event": "Paste-ready prompt types in"
+          },
+          {
+            "at": 0.65,
+            "event": "Three RESULT lines appear"
+          },
+          {
+            "at": 0.85,
+            "event": "runningText holds"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 21.78,
+      "render_duration_s": 21.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-14T19:14:01"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "outro — title restate + sign-off",
+      "palette": "claude",
+      "narration_text": "Brutalist Utility: setup underscore smoke underscore kokoro. Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 7,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "fade",
+        "remotion": {
+          "pattern": "ClaudeTitleOutroHAI916",
+          "props": {
+            "title": "Brutalist Utility: setup_smoke_kokoro.py",
+            "slug": "claude-liam-brutalist-runtime-setup-smoke-kokoro-vertical"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-14T15:06:28.660782+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Title restates poster-style in portrait"
+          },
+          {
+            "at": 0.4,
+            "event": "@HumanitariansAI handle + mascot appear"
+          },
+          {
+            "at": 0.7,
+            "event": "Liam, in for Bear — mascot animates"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 5.7,
+      "render_duration_s": 5.708333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeTitleOutroHAI916",
+        "at": "2026-09-14T19:14:01"
+      }
+    }
+  ]
+}

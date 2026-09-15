@@ -1,0 +1,19 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "fellows is a frame around a fellow's own recording — the report plays untouched, notes need Bear's signature",
+  "parent_master_sha256": "03ca7edaa3af9fee6530060c484cdf858cb51e04d2c54aa8fa692f39de6fe5e0",
+  "run_id": "28dd40173c164f0a85bea3d8084e2ee7",
+  "source_sha256": "1b177f008eddeda9424621410b292a3a4459c28f38799a04206f2267c68f535a",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B06", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Generic folder-anatomy tree (SKILL.md + fellow's episode folder) belongs in the long; the Short says WHAT fellows does, not how the toolkit lays out on disk."},
+    {"beat_id": "B05", "reason": "Fellow's-work carve-out of REBUILD LAW is a second-order design nuance; the verdict names it in one line and that is sufficient for a Short."},
+    {"beat_id": "B07", "reason": "Persistent voice + SOUND REPAIR carve-out is operational detail (per-fellow voice heuristic, ffmpeg filters, BUILD-LOG.md logging) — condensed into the verdict card."},
+    {"beat_id": "B08", "reason": "HAI-vs-ClaudeTitleOutro falsifiability is skill-authoring inside-baseball; the verdict says 'outro is the HAI outro' which is enough at Short length."},
+    {"beat_id": "B10", "reason": "Your-Turn dry-run assignment (~36s of paste-ready prompt) is exactly the 'detailed assignment' the shorts prompt flags as long-only; verdict + Liam sign-off close the Short."}
+  ],
+  "cut_first_review": "The retained cut still lands the five things a viewer needs: (1) B00 introduces Liam and states 'a frame around a fellow's own recording · branded bookends · Professor Bear's notes · HAI outro · report plays untouched'; (2) B01's hesitant-writer correction re-cuts→frames refutes the obvious misread; (3) B03's nine-beat spine shows THE REPORT lit terracotta at beat 4, motivating (4) B04's one-beat inversion of audio-first (REPORT IS THE CLOCK) and (5) B06's human-signature gate (GATE N). B09 verdict recaps all six laws, so the three dropped mechanism beats (B05 carve-out, B07 persistent voice, B08 HAI outro) still appear as single verdict lines rather than dangling. B11 is Liam's title sign-off — the same outro the long uses, so no rewrite. No dangling numbered transitions: B00 opens 'Here is the mental model', B01 says 'What the skill builds is the frame', B03 begins 'The spine is fixed', B04 begins 'First design decision', B06 begins 'Third decision, and it is where the skill earns its trust' — 'Third' now follows only B04 which is called 'First design decision'. Second is not named. That is a real gap: fixed below.",
+  "coherence_notes": "B06 narration begins 'Third decision' but B05 (Second) and B07 (Fourth) are cut, and B04's own text begins 'First design decision'. The reference to 'Third' will land on a viewer who has only heard 'First'. Two lower-cost mitigations were considered: (a) also drop B06 — but GATE N is the single most important human-decision the skill enforces, and dropping it would strip the safety spine the Short is supposed to preserve; (b) rewrite one word of B06's opening (Third → Next) — this crosses the rewrite threshold and requires regenerating one Kokoro audio and one Remotion render. The number 'Third' is a small numbering artifact that a viewer of a Short can bridge without confusion; the skill's meaning does not depend on it. Ship the whole-beat cut; note the artifact honestly in SCRIPT.md.",
+  "planned_duration_s": 128.71,
+  "rewrite_reason": null
+}

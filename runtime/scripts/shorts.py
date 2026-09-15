@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 """shorts.py — derive the 9:16 Shorts cut from a finished reel.
 
-THE SHORTS LAW: a Short is a DERIVATIVE CUT, not a re-edit. Shorts exist —
-in YouTube's world view — to get people to the 16:9 longs, and they have a
-HARD 3:00 cap. So:
+THE SHORTS LAW: every Short is STRICTLY UNDER 3:00, including endcards,
+audio tails and encoded-container rounding. This is our editorial rule:
 
-  1. CHECK LENGTH FIRST. At or under the cap → the whole reel reformats
-     16:9 → 9:16 (no beats cut, silent endcard appended). Never publishes.
-  2. OVER the cap → SHORTEN BY CUTTING BEATS, never by re-authoring —
-     cutting saves regeneration. Auto-planned here (longest middle beats go
+  1. CHECK LENGTH FIRST. Plan with headroom; final measured duration must be
+     < 180 seconds. A 3:00.000 file fails. Never publishes.
+  2. SHORTEN BY CUTTING COMPLETE BEATS FIRST. Keep this skill's high-level
+     purpose, useful result and essential caveat; leave generic skill anatomy
+     and detailed walkthroughs to the 16:9 long. Default fallback: longest middle beats go
      first; the hook, the hero, and the outro are protected; --keep/--drop
      override the plan), reviewable in the printed plan before you compile.
-  3. When beats were cut, the OUTRO IS REWRITTEN to say what was cut and to
-     send the viewer to the long for the full story. That outro narration is
-     the ONLY audio regenerated for a short — every other beat reuses the
-     parent's audio as independent copies, not symlinks.
+  3. Reuse retained narration and native portrait visuals as independent copies.
+     Keep the outro first; --rewrite-outro explicitly requests a new funnel outro.
+     If a coherent whole-beat cut cannot fit, author a focused short-only rewrite
+     and regenerate only changed beats. Never truncate speech or speed it up.
   4. Publishing is separate. HAI scheduling selects a currently popular related
      channel video and leaves at least one hour between channel-wide Shorts.
   5. --vertical creates a full-length companion, not a Short: no drops,
@@ -57,14 +57,14 @@ beat (the 16:9 outro's tease), override with --next.
 import argparse, json, shutil, subprocess, sys, shlex, uuid, tempfile, os
 from pathlib import Path
 from build_safety import (BuildError, atomic_json, copy_asset, is_source_report,
-                          validate_project, writable_path)
+                          validate_project, writable_path, positive_duration,
+                          SHORTS_CAP_S, require_short_duration)
 
 FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 CREAM = (243, 235, 221); INK = (47, 42, 38); TERRA = (211, 95, 67)
 W, H = 1080, 1920
 
-SHORTS_CAP_S = 180.0        # YouTube's hard cap for Shorts
-CAP_HEADROOM_S = 2.0        # never plan right up against the cap
+CAP_HEADROOM_S = 5.0        # aim at <= 2:55; verify the actual encoded file too
 OUTRO_REWRITE_EST_S = 16.0  # planning estimate for the rewritten outro
 
 
@@ -117,7 +117,8 @@ def endcard_png(out, handle, next_text, dark=True):
 
 
 def beat_dur(b):
-    return float(b.get("actual_duration_s") or b.get("estimated_duration_s") or 0)
+    return positive_duration(b.get('render_duration_s') or b.get("actual_duration_s")
+                             or b.get("estimated_duration_s"), b.get('beat_id', 'Beat'))
 
 
 def is_remotion(b):
@@ -137,6 +138,8 @@ def root_tsx_text():
 
 def portrait_pattern(pattern, tsx):
     """<pattern>916 if Root.tsx registers a portrait composition for it."""
+    if pattern.endswith('916') and f'id="{pattern}"' in tsx:
+        return pattern
     cand = f"{pattern}916"
     return cand if f'id="{cand}"' in tsx else None
 
@@ -172,15 +175,12 @@ def is_protected(b, beats, keep_ids):
 
 def plan_drops(beats, keep_ids, end_s):
     """Greedy: drop the LONGEST unprotected middle beats until the short —
-    including the endcard and the rewritten-outro estimate — fits under the
+    including the endcard and unchanged outro — fits under the
     cap. Returns the list of beat ids to drop."""
     budget = SHORTS_CAP_S - CAP_HEADROOM_S - end_s
     total = sum(beat_dur(b) for b in beats)
     if total <= budget:
         return []
-    # once anything drops, the outro is rewritten — swap its measured
-    # duration for the planning estimate
-    total = total - beat_dur(beats[-1]) + OUTRO_REWRITE_EST_S
     droppable = sorted((b for b in beats if not is_protected(b, beats, keep_ids)),
                        key=beat_dur, reverse=True)
     drops = []
@@ -204,6 +204,8 @@ def rewrite_outro(outro, dropped, long_title):
         f"That's the short version. The full video also covers {what} — "
         f"watch {long_title} for the whole story. The link is right below.")
     outro["actual_duration_s"] = 0           # re-measure after regeneration
+    outro.pop('render_duration_s', None)
+    outro['estimated_duration_s'] = OUTRO_REWRITE_EST_S
     outro["audio_file"] = f"mp3/beat-{outro['beat_id']}.mp3"
     outro["short_outro_rewritten"] = True
     return outro
@@ -225,9 +227,18 @@ def main():
                     help="end on the last kept beat (e.g. the bio kicker) instead of the silent branded card")
     ap.add_argument("--no-outro-rewrite", action="store_true",
                     help="keep the parent outro narration even when beats were cut")
+    ap.add_argument('--rewrite-outro', action='store_true',
+                    help='explicitly regenerate a funnel outro; default is cut-only')
+    ap.add_argument('--output-dir', type=Path,
+                    help='independent derivative directory (never the source or its ancestor)')
+    ap.add_argument('--slug', help='filename slug for the derivative')
     ap.add_argument('--vertical', action='store_true',
                     help='full-length 9:16 deliverable: no cap, dropping, new outro or endcard')
     a = ap.parse_args()
+    if not 0 <= a.end_s < SHORTS_CAP_S:
+        raise BuildError('--end-s must be finite, nonnegative and below 180')
+    if a.rewrite_outro and a.no_outro_rewrite:
+        raise BuildError('Choose --rewrite-outro or --no-outro-rewrite, not both')
     folder = a.folder.resolve()
     sheet = json.loads((folder / "beat_sheet.json").read_text())
     validate_project(sheet)
@@ -266,7 +277,9 @@ def main():
         raise BuildError(f'Unknown --drop beat(s): {sorted(unknown)}')
     if any(is_source_report(b) and b['beat_id'] in drops for b in beats):
         raise BuildError('Cannot drop a source report; author a separately reviewed excerpt or use --vertical')
-    short = folder / ('vertical' if a.vertical else 'short')
+    short = a.output_dir.absolute() if a.output_dir else folder / ('vertical' if a.vertical else 'short')
+    if short.resolve() == folder or folder.is_relative_to(short.resolve()):
+        raise BuildError('Derivative output cannot replace the source or an ancestor')
     if short.is_symlink():
         raise BuildError(f'{short} must be an independent directory, not a symlink')
     for d in ("media", "manim", "mp3"):
@@ -285,7 +298,7 @@ def main():
 
     # ── 2. THE FUNNEL OUTRO — the only regenerated audio in a short ─────
     outro_rewritten = False
-    if dropped and not a.no_outro_rewrite and kept:
+    if dropped and a.rewrite_outro and not a.no_outro_rewrite and kept:
         rewrite_outro(kept[-1], dropped, title)
         outro_rewritten = True
         print(f"[short] outro {kept[-1]['beat_id']} rewritten → mentions the cuts, "
@@ -322,6 +335,24 @@ def main():
             b['audio_file'] = f'mp3/beat-{bid}.mp3'
         fx = float((b.get("shot", {}).get("focus") or [0.5, 0.5])[0])
         generated = is_remotion(b) or bool(b.get("graphic"))
+        # A finished native portrait can be cut without cropping or re-rendering.
+        # The file dimensions, not just a metadata claim, must prove portrait.
+        if sheet['metadata'].get('aspect_ratio') == '9:16' and not b.get('short_outro_rewritten'):
+            native = next((folder / sub / f'{bid}{ext}' for sub, ext in (
+                ('media', '.mp4'), ('manim', '.mp4'), ('manim', '.mov'),
+                ('media', '.png'), ('media', '.jpg'))
+                if (folder / sub / f'{bid}{ext}').is_file()), None)
+            if native:
+                from compile import probe_wh
+                width, height = probe_wh(native)
+                if width and height and width * 16 == height * 9:
+                    for sub, ext in (('media', '.mp4'), ('media', '.png'), ('media', '.jpg'),
+                                     ('manim', '.mp4'), ('manim', '.mov')):
+                        invalidate(writable_path(short, f'{sub}/{bid}{ext}'))
+                    target_sub = 'manim' if native.suffix == '.mov' else 'media'
+                    copy_asset(native, short / target_sub / f'{bid}{native.suffix}', short)
+                    print(f'[short] {bid} native portrait reused unchanged')
+                    continue
         if generated:
             for sub, ext in (('media', '.mp4'), ('media', '.png'), ('media', '.jpg'), ('manim', '.mp4'), ('manim', '.mov')):
                 invalidate(writable_path(short, f'{sub}/{bid}{ext}'))
@@ -437,22 +468,27 @@ def main():
         })
 
     meta = dict(sheet["metadata"])
-    meta.update({"slug": f"{slug}-{'vertical' if a.vertical else 'short'}", "aspect_ratio": "9:16", "fit": "pad",
+    meta.update({"slug": a.slug or f"{slug}-{'vertical' if a.vertical else 'short'}", "aspect_ratio": "9:16", "fit": "pad",
                  "kind": 'vertical' if a.vertical else 'short',
                  "reformat": ('full-length; native portrait graphics; preserve source framing'
                               if a.vertical else 'portrait graphics; captured-media crop in short/media only'),
                  "derived_from": slug, "dropped_beats": drops})
     meta.pop('playlist_short', None)  # playlist selection belongs to scheduling
-    total = sum(beat_dur(b) for b in kept) + (OUTRO_REWRITE_EST_S if outro_rewritten else 0)
+    total = sum(beat_dur(b) for b in kept)
     meta["total_estimated_duration_seconds"] = round(total, 2)
     blocked = [f'{bid}: {pattern}' for bid, pattern in onda_blocked]
-    if not a.vertical and total > SHORTS_CAP_S:
-        blocked.append('Over duration cap; preserve the report with --vertical or author a reviewed excerpt')
+    if not a.vertical:
+        try:
+            require_short_duration(total, 'Planned Short')
+        except BuildError as exc:
+            blocked.append(str(exc))
     meta['short_validation'] = {'status': 'blocked' if blocked else 'ready', 'errors': blocked}
-    atomic_json(writable_path(short, 'beat_sheet.json'), {'metadata': meta, 'beats': kept})
+    derivative = {'metadata': meta, 'beats': kept}
+    validate_project(derivative)
+    atomic_json(writable_path(short, 'beat_sheet.json'), derivative)
 
     cap = ('full-length vertical (no Short cap)' if a.vertical else
-           'OK' if total <= SHORTS_CAP_S else 'BLOCKED: over 3:00; use --vertical for the complete report')
+           'OK' if total < SHORTS_CAP_S else 'BLOCKED: must be strictly under 3:00')
     est = " (outro duration estimated until its audio regenerates)" if outro_rewritten else ""
     print(f"[short] {len(kept)} beats · ~{total:.1f}s "
           f"({int(total//60)}:{total%60:04.1f}) {cap}{est}")

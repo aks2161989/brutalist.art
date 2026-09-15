@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/exports/landscape/claude-liam-brutalist-runtime-generate-audio-kokoro.mp4",
+  "sha256": "79097f9057d7dbac7ebe8e63496d462e69bbf3d150de00184dedf6a71c40592d",
+  "duration_s": 319.7083333333333,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B00.mp4": "01eafe5013b5c455624bcaf1017f833eac93d2563596f2bf84273ae21386660c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B01.mp4": "bd94a16611116fd830ade5320a3cb7c0b9779e2f573ff5909a5787ef342fe529",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B02.mp4": "7cfe29eb2d82e2fe7b8a122a5f2b8c9a7adb93eea49cec0b85a8a2841ba249a5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B03.mp4": "b139fce549a6f4ca5931ce92c5eb00d861975f35a21f057401aee3f90f4277e5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B04.mp4": "c026ccc72861b162f6bd542b6f5c35921946473d76ea3928e4c8cb63a3155f50",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B05.mp4": "3704e486ac1b21988e0dd9bd1f94057445f72e4cc238d158a4225099832afa2c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B06.mp4": "f964907e37831cf5de66f531a9a57059a0eabaf1f115d0d72983b344a7aa2438",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B07.mp4": "6cb8ed7c57dd1bcb7c29d0c166ef7ea062a5c391983a2c77417c5ad4f5e139e1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B08.mp4": "1c0085cfe245808da88cefc27401381b712b477d1fe9fb8aacc2fbc2357da31b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B09.mp4": "1fa1c09c9f016552e92280801814fea4769c3d5d67168bb7cc7362cb1c205f4f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B10.mp4": "89c9eddb7558972f63c7bc60261aa76c363264618c2301236df36eb440eb8304",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/media/B11.mp4": "237e516a2b0b04ff35f5c52bc156d848b4223478f0b2fe7abca9b638f54ee50d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B00.mp3": "a6634e1269769e411d10bf30945b2692a19c315e728e69c408b308bb6d00d72e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B01.mp3": "0fc5d50afb068586e1bfa1208e0eea442bb7b9b1e0eef22d4cdff0f5a4451c05",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B02.mp3": "e06a5e669c1902b60cf83419a1dae38c623919baecc2b1301849ef848d60f492",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B03.mp3": "ac48d701cf2ace2e6c55bcf2a87697b8559ec0bac80d542d9a011bc39a60ee94",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B04.mp3": "68802c438e1eb18447c3ac37072924acad9247397adaeec2be415e634b967442",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B05.mp3": "5dbfc8d5755b59dfbfd1f0d85a989cd8fb612e3363f5dbc14a59efe950352c35",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B06.mp3": "c383754737001a1beebf2469ac11e68de540bc564a6252bf8dea4342c361e6e4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B07.mp3": "bd4d4bd48d58f656f5f54b27241c03a9931bc2c60cfed11a00cb0f2a035ebca7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B08.mp3": "31ca2305e80d100c59dec1483b7d8420e2079b6af388fd26771bfbe8f2eabc5d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B09.mp3": "433e3fb9d6b857b09a9f186f42e4754378012b62edccc2981700b0a1e0c5dc0f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B10.mp3": "64eadc5082edad4aeb0aba4262f641ab8159cf2bd34c176d2f1957d355bc2b1a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-generate-audio-kokoro/mp3/beat-B11.mp3": "a4b0e44c7e34c3a410a82e76f9fa2889168614b9d92339188e9d879061bfe5f2"
+  },
+  "at": "2026-09-10T15:43:49.011265+00:00"
+}

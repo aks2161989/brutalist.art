@@ -1,0 +1,863 @@
+{
+  "metadata": {
+    "title": "The hai Skill",
+    "slug": "claude-liam-brutalist-skill-hai-vertical",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "9:16",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "d660d0c9949a427980931d1c010c2f47",
+    "episode_id": "skill-hai",
+    "order": 14,
+    "note": "Skill teardown of skills/make/hai/SKILL.md (SOURCE-SNAPSHOT SHA-256 ef01252f…; supervisor's episode.source_sha256 95726218…). `hai` is the AUDIENCE-PRESET that FORKS any reel/lecture/book into a new `hai-` sibling directory — the canonical source is never modified. Teaches: the six-step flow (SCAFFOLD · REWRITE PLAIN · optional tangent · CLI EXERCISE · HAI OUTRO · VERIFY), the non-destructive fork posture (brand_variant.py refuses to overwrite without --force), the Plain register's REQUIRED 'when NOT to and where it fails' line, the five-part CLI exercise schema (ask · output · change · output2 · next_step, BUILD vs RESEARCH), and batch mode's scope (scaffolds every reel and lecture in a book but leaves Steps 2–6 per-video). Falsifiability beat surfaces a real disagreement across three source files about which Kokoro voice HAI uses (SKILL.md af_kore vs brand_variant.py af_bella vs brands/hai.md am_onyx after ElevenLabs was removed 2026-09-03). This teardown IS a claude-liam reel — Kokoro am_onyx, Liam sign-off, ClaudeTitleOutro locked to @NikBearBrown per OUTRO-LOCK — because the falsifiability beat's OWN evidence is that outro follows channel. No paid capability required; no captions; brand_variant.py demoed live on a synthetic fixture reel (see demo/). Portrait companion — native 9:16 layouts (not a center-crop of the landscape master). channel_title metadata deliberately omitted — its compile-overlay bleeds past portrait safe.b (feedback_channel_title_portrait_bleed). Three SkillTeardown*916 wrappers plus the BrutalistHesitantWriter portrait-aware scale patch are copies of the guests episode's scene-source (credited in SOURCES.md), registered in this isolated toolkit's Root.tsx for this run.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/hai/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "hai",
+      "skill teardown",
+      "Humanitarians AI",
+      "brand variant",
+      "Plain register",
+      "CLI exercise",
+      "Claude",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T15:38:39",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hallo, this is Liam, in for Bear. Today we tear down the hai skill. It is the audience-preset that forks any reel into a Humanitarians AI cut — Plain register, muted palette, one required exercise. The trick is that the original is never touched. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hallo, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the hai skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Hallo, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The hai Skill",
+            "command": "What does the `hai` skill actually do to a reel? Read skills/make/hai/SKILL.md and tell me — I want the mental model, not the README summary.",
+            "runningText": "reading skills/make/hai/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "forks the reel into a new hai- directory",
+              "rewrites the register to Plain + adds a CLI exercise",
+              "source beat_sheet.json is never modified"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T19:11:41.954907+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.21,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 15.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the reformats-a-reel read to the actual claim: hai FORKS. Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read — the one the phrase brand variant invites — is that hai reformats an existing reel. It does not. Nothing is reformatted. Nothing is overwritten. Hai forks the sheet into a new hai- directory beside it, and every downstream change happens there. The source stays byte-identical.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'The hai skill'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 'reformats a reel'"
+          },
+          {
+            "at": "0.55",
+            "event": "'reformats' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'reformats' deletes and 'forks' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 3: 'for the HAI audience.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "The hai skill\nreformats a\nsource reel.\nThe source\nstays intact.",
+            "triggerWords": "reformats",
+            "replacementWords": "forks",
+            "seed": "hai-bluf-vertical-d660d0c9-v6",
+            "face": "serif",
+            "fontSize": 130,
+            "lineSpacing": 2.65,
+            "align": "center",
+            "charMs": 14,
+            "jitter": 4,
+            "mistakeRate": 2,
+            "hesitateWithin": 0,
+            "hesitateBetween": 1,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T19:37:43.145204+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 16.04,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 16.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — anatomy of the hai skill folder plus the hai- output directory next to the source.",
+      "narration_text": "First, the anatomy. On the toolkit side there is SKILL.md — the doctrine, the six-step flow, and the register rules. Next to it, brand_variant.py, a small deterministic scaffolder. On the output side, hai places a sibling directory beside whatever you pointed it at — for a reel, hai-slug beside the reel; for a lecture, into hai-lectures. Inside sits beat_sheet.hai.json, a metadata block already stamped for the humanitarians channel, and a _variant_todo checklist you work through with Claude. Small on disk. Human where it matters.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'The hai folders.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.85",
+            "event": "callout box lands: 'source beat_sheet.json is never touched'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "hai",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "The hai folders.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/hai/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "runtime/scripts/"
+              },
+              {
+                "indent": 1,
+                "icon": "🐍",
+                "name": "brand_variant.py  (the scaffolder)"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "[book]/youtube/[slug]/  (canonical — never modified)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.json"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "[book]/youtube/hai-[slug]/  (NEW — sibling)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.hai.json",
+                "accent": true,
+                "tag": "output"
+              },
+              {
+                "indent": 1,
+                "icon": "📝",
+                "name": "_variant_todo  (six-step checklist)"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "channel: @HumanitariansAI · palette: humanitarians"
+              }
+            ],
+            "calloutText": "<b>The source beat_sheet.json is never touched.</b> The scaffolder writes a new sibling directory and refuses to overwrite it without <b>--force</b>. Safe to run mid-production.",
+            "sparkLine": "A fork beside the source."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T19:13:24.184442+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.54,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 28.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — the required six-step flow. Input: any reel/lecture. Output: a hai- sibling with the Plain rewrite, one CLI exercise, and the HAI outro.",
+      "narration_text": "The flow is fixed. Six steps. Scaffold first — deterministic, no spend, no writes to the source. Then rewrite every beat's narration in the Plain register. Optional — at most one Irreducibly-Human tangent — a bounded aside, most reels get none. Second-to-last, insert one CLI worked exercise the viewer can actually paste and run. Last beat, replace with the Humanitarians AI outro. Then verify the ending order. Same shape every episode.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Six steps. One fixed shape.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'any reel or lecture' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "phase nodes reveal — 'CLI EXERCISE' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'hai- sibling · Plain + CLI + HAI outro' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline916",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Six steps. One shape.",
+            "inputLabel": "any reel or lecture",
+            "outputLabel": "hai- sibling with HAI outro",
+            "phases": [
+              {
+                "label": "SCAFFOLD",
+                "desc": "deterministic"
+              },
+              {
+                "label": "REWRITE (Plain)",
+                "desc": "method · use · fail"
+              },
+              {
+                "label": "CLI EXERCISE",
+                "desc": "genuinely runnable",
+                "accent": true
+              },
+              {
+                "label": "HAI OUTRO",
+                "desc": "from AUTHOR.MD"
+              }
+            ],
+            "footerNote": "The middle is your reel.",
+            "sparkLine": "Six steps. Source untouched."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T19:29:55.395980+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 23.53,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 23.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — NON-DESTRUCTIVE FORK. brand_variant.py won't overwrite without --force; SKILL.md's 'source files are never modified' standing rule.",
+      "narration_text": "First design decision, and it sets the safety posture. Every hai run writes to a new directory beside the source and never modifies beat_sheet.json, build scripts, or media. The scaffolder even refuses to overwrite its own output — you get an already-exists, use dash-dash force error, not a silent clobber. The doctrine reads: source files are never modified. The consequence: hai is safe to run against a canonical reel mid-production. Your original cut keeps rendering. The humanitarians cut branches off.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Non-destructive fork.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: new sibling dir · scaffolder refuses to overwrite · safe mid-production"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'safe to run mid-production'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "Non-destructive fork.",
+            "body": "Every hai run writes to a NEW sibling directory. Source beat_sheet.json, build scripts, and media are never modified. brand_variant.py exits with an 'already exists — use --force' error rather than clobber its own output. Safe to run against a canonical reel mid-production.",
+            "quote": "Source files (beat_sheet.json, build scripts, media) are never modified.",
+            "cite": "hai SKILL.md · Standing rules",
+            "verdictLabel": "safe to run mid-production",
+            "verdictPositive": true,
+            "sparkLine": "The source is never touched."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T19:15:17.461149+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 27.16,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 27.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Design decision 2 — PLAIN REGISTER. Not a tone, a checklist. The 'when NOT to and where it fails' line is REQUIRED.",
+      "narration_text": "Second decision. Plain register is not a softer tone — it is a checklist. Every rewritten beat leads with method, states when to use it, and, required, states when NOT to and where it fails. That third line is the AI main event for busy practitioners. It is not hedging. It is the diagnostic they need. If your rewrite has no failure mode named, you have not done the register. You have just changed adjectives.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Plain register.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: three-line checklist — method · when to use · when NOT to"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'no failure mode named = register skipped'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "Plain register.",
+            "body": "The rewrite is a three-line checklist: (1) METHOD — what it is, what it produces; (2) WHEN TO USE — the decision trigger; (3) WHEN NOT TO and where it fails. Line 3 is REQUIRED. A rewrite that skips it has not done the register — it has changed adjectives.",
+            "quote": "Required: when NOT to and where it fails — the AI main event for busy practitioners. This is not hedging; it is the diagnostic the audience needs. Do not skip.",
+            "cite": "hai SKILL.md · Step 2 · Rewrite the register (Plain)",
+            "verdictLabel": "no failure mode = register skipped",
+            "verdictPositive": false,
+            "sparkLine": "Method. Use. Fail."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T19:16:13.834646+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.03,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 21.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — THE CLI EXERCISE. Five-part schema; must be genuinely runnable, not illustrative.",
+      "narration_text": "Third decision, and it is the one that separates hai from a re-skin. The second-to-last beat is a CLI worked exercise, and the schema has five parts. A paste-ready claude ask. A concrete output description — a plot, a table, a sourced brief. One change — a single diff that deepens or stress-tests the result. The second output after the change. And a next step naming the viewer's own data or question. The rule is genuinely runnable. Not illustrative. Not synthetic. If the viewer cannot copy the ask and run it today, the exercise is a slate in disguise.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'The CLI exercise.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: five-part schema — ask · output · change · output2 · next step"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'not runnable = slate in disguise'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "The CLI exercise.",
+            "body": "Second-to-last beat. Five-part schema: (1) LANE — BUILD or RESEARCH; (2) ASK — paste-ready claude \"…\"; (3) OUTPUT — concrete description of what the run produces; (4) CHANGE — one diff that deepens or stress-tests the result; (5) OUTPUT 2 + NEXT STEP on the viewer's own data. If the viewer cannot copy and run it today, the beat is a slate in disguise.",
+            "quote": "Genuinely runnable. Not illustrative. Not synthetic.",
+            "cite": "hai SKILL.md · Step 4 · CLI worked exercise",
+            "verdictLabel": "not runnable = slate in disguise",
+            "verdictPositive": false,
+            "sparkLine": "Ask. Output. Change. Output. Next."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T19:17:11.212294+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 29.97,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 30.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Design decision 4 — BATCH MODE. Point at a book, one find + one loop per source; Steps 2–6 stay per-video.",
+      "narration_text": "Fourth decision. Point hai at a book directory and it scaffolds every reel and every lecture inside it — one find, one loop, one brand_variant.py per source. What batch mode does not do is the Plain rewrite, the tangent, the exercise, or the outro. Those are per-video, and the SKILL.md is explicit that a batch scaffolder is not a variant renderer. You get thirty _variant_todo checklists to work through with Claude, not thirty finished cuts.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Batch mode.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: find + loop over reels/ + lectures/; Steps 2–6 stay per-video"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'scaffolds many · renders one'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4",
+            "heading": "Batch mode.",
+            "body": "hai [book] runs the scaffold for every reel and every lecture in the book — one find, one loop, one brand_variant.py per source. It does NOT do the Plain rewrite, the tangent, the CLI exercise, or the outro. Those stay per-video. You get many _variant_todo checklists, not many finished cuts.",
+            "quote": "Then perform Steps 2–6 for each resulting hai- directory.",
+            "cite": "hai SKILL.md · Batch mode (book input)",
+            "verdictLabel": "scaffolds many · renders one",
+            "verdictPositive": true,
+            "sparkLine": "One find. One loop. Many stubs."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T19:18:07.717822+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 22.21,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 22.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — a real disagreement across three source files about the HAI Kokoro voice. Trust brands/hai.md; override the scaffolder; log the discrepancy.",
+      "narration_text": "Falsifiability. Read the sources together and you find a real disagreement about the HAI voice. SKILL.md says af_kore. The runtime scaffolder writes af_bella. And the current brand spec at brands slash hai dot md says am_onyx, after ElevenLabs was removed in September. Three files, three voices. This teardown IS a claude-liam reel, so we ship am_onyx with Liam's sign-off. But if you build a real HAI cut this week, treat brands slash hai dot md as the source of truth, override the scaffolder's voice field, and log the discrepancy. That is what the register asks of you: name the failure mode plainly.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow FALSIFIABILITY · ACT 5 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Three files, three voices.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: SKILL.md af_kore · brand_variant.py af_bella · brands/hai.md am_onyx"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from brands/hai.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'trust brands/hai.md · override in the sheet · log the discrepancy'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "FALSIFIABILITY · ACT 5",
+            "heading": "Three files, three voices.",
+            "body": "Read together, the sources disagree about the HAI Kokoro voice. SKILL.md line 10 says af_kore. brand_variant.py line 40 writes af_bella. brands/hai.md line 34 says am_onyx — after ElevenLabs was permanently removed on 2026-09-03. Trust the brand spec, override the scaffolder's default in the sheet, and log the discrepancy. This teardown IS claude-liam, so am_onyx is correct HERE.",
+            "quote": "There is no paid voice. ElevenLabs was permanently removed on 2026-09-03.",
+            "cite": "brands/hai.md · Voice",
+            "verdictLabel": "trust brands/hai.md · override · log",
+            "verdictPositive": true,
+            "sparkLine": "Read the sources together."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T19:19:05.925286+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 34.45,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 34.458333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the skill in six lines.",
+      "narration_text": "The verdict. Hai is a non-destructive fork with a checklist, not a re-skin. Six steps, one sibling directory beside the source. The Plain register is a diagnostic — the when NOT to line is mandatory. The CLI exercise must actually run. Batch mode scaffolds every reel and lecture in a book, but the register rewrite is still per-video. And the voice field is contested across three source files — trust brands slash hai dot md, override in the sheet, log the discrepancy.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'A fork. Not a re-skin.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The hai Skill",
+            "artifactHeading": "A fork. Not a re-skin.",
+            "artifactLines": [
+              "hai FORKS the reel into a new hai- sibling directory — the source is never modified.",
+              "SIX steps: scaffold · rewrite Plain · [tangent] · CLI exercise · HAI outro · verify.",
+              "Plain register is a checklist — the 'when NOT to and where it fails' line is REQUIRED.",
+              "CLI exercise has FIVE parts (ask · output · change · output2 · next step) and must genuinely RUN.",
+              "Batch mode scaffolds every reel + lecture in a book — Steps 2–6 stay per-video.",
+              "Voice field disagrees across three sources — trust brands/hai.md; override; log the discrepancy."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T19:19:42.640484+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 25.64,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 25.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready dry-run prompt. Liam reads aloud + discusses.",
+      "narration_text": "Your turn. Paste this into Claude Code. Read the hai skill. Pick one of your own reels — a real one you have already delivered — and run brand_variant.py on it with the hai argument. Confirm the source beat_sheet.json is byte-identical afterwards by comparing SHAs. Then, without shipping the reel, draft the Plain-register rewrite of one body beat — method, when to use, when NOT to and where it fails. Draft the CLI exercise using the five-part schema. Then check three things. Is the source SHA unchanged. Does every rewritten beat name a failure mode. Does the CLI ask genuinely run today, or is it illustrative.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready dry-run prompt"
+          },
+          {
+            "at": "0.72",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · PLAN A HAI DRY-RUN",
+            "segment": "Fork one of your reels",
+            "command": "Read skills/make/hai/SKILL.md. Pick one of your delivered reels. Record its beat_sheet.json SHA-256. Run: brand_variant.py <reel> hai. Assert the source SHA-256 is UNCHANGED. Then draft (DO NOT SHIP): (a) the Plain rewrite of ONE body beat — method, use, when NOT to; (b) the CLI exercise, five-part schema. Do not run compile or audio.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: source SHA unchanged?",
+              "check: failure mode named?",
+              "check: CLI ask runs today?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T19:26:05.063534+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 44,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 32.94,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 32.958333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T15:38:39"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "That was the hai Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The hai Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The hai Skill",
+            "slug": "claude-liam-brutalist-skill-hai"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T19:20:43.105593+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.18,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.2083333333333335,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-08T15:38:39"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/exports/vertical/claude-liam-brutalist-runtime-smithsonian-fetch-vertical.mp4",
+  "sha256": "33fe2c876bf07926b84fb0882f4b409a124aff40f32ab55e439800ef60bc9f3c",
+  "duration_s": 239.66666666666666,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B00.mp3": "c3c6d4769b94f15861f39873e2050130886f89423f174da4565bea9d0d9e7a41",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B01.mp3": "6a4ef0678988860d9b29b8a46a132039d43e02c6d0e02b4d93addf6f97373117",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B02.mp3": "1ab82551b1472f2301aed512744f2b6b91fb816bdb4d11368ae219ab3f25ed2c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B03.mp3": "bc27f35b95294d1f79483e97129787b36a56334f478326f3afd8fb0be887b93b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B04.mp3": "9a7076d00082fde5a3d084e722f8e8eae775d3e24940657349b1cd8655d3ac00",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B05.mp3": "f5c64eff37280ecd3824aed76284d854109a2bdb3f226efa7888d262cac6dc41",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B06.mp3": "faf6bd09d32869b8da4b9a2af3392416e0a05e9109cfd2c6b7a8c1b5e3692bc0",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B07.mp3": "d9e3a792aafc30993ab942bcb56a9f0b755516f90d150175585275d60a65c83a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B08.mp3": "2cfc5f0e392d512d00f81d4ebcfd58c7dfb09f2d53447c2f410e8da6869c5feb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B09.mp3": "52c9068d993acfe488e54e3b8c87a2602155d88668a5755f3ba6a6099d2881bb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/mp3/beat-B10.mp3": "a519bc6db20a9acd4a38973f700f5747e7bad1cbb9dbd5a58977f3295347d7ee",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B00.mp4": "faf1ed20ee4be8e19ad04efa519ae4df58ad94387a8b4f93ef5099baa671ed21",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B01.mp4": "3224ed9de7a4c29e0c27d5fdd2790de9ea2a182e72c95318fd836dc86110a325",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B02.mp4": "2612493ae90ae9498afc49e78d6b0ed336ee5554e8bdf787e1addf8663ce6939",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B03.mp4": "0a126842576df21b21a2d104a9a30b91e236c34b01beabcc10edc775ff3b9624",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B04.mp4": "e7a158e82a13c3a0fff14252816da960c0611f1ca68e8fca0cdb071773f37bc4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B05.mp4": "e9e7ec2e14f2b61394aedc3c85749904eb10b783d8a7ba599aa7b7b1a3476e08",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B06.mp4": "12e37053e2f7a4028b6b233c7b434f9431dedea1a0dc6b18254a2a38414db1c3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B07.mp4": "67e9a9cd73d2fcfcdbd198055cb7970dcce3c8dfe677fcc32d7c64f690bb0a0b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B08.mp4": "4e881b2c3b40fd4956a4e6d63b2a97fe0847baf6a299290f498a43608373df56",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B09.mp4": "6a53e530084ec82f5abb1fa6fae3ed054b6fbfedaaeda20a4321a8f053f97189",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B10.mp4": "3348bd9bc34744e3c608d607b926bf3f4d628ac4f0e13dd5189ff42cd11cf627",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-smithsonian-fetch/vertical/media/B11.mp4": "d643e28321b21963e639015fc4b9954562d81dfa2e2f88519546383caa7fb5c4"
+  },
+  "at": "2026-09-15T00:38:32.426311+00:00"
+}

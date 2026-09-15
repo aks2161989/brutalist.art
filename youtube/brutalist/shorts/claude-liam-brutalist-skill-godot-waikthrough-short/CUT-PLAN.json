@@ -1,0 +1,41 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "godot-waikthrough turns a Godot game into a narrated walkthrough film by playing it, capturing the real viewport, and invoking riff to explain mechanism and trade-off",
+  "parent_master_sha256": "d29377d6e945c3c03e6c52e992b135c7b5bb675df03a14d1d284bf8421bef164",
+  "kept_beats": ["B00", "B01", "B02", "B06", "B08", "B10", "B11", "B12"],
+  "dropped_beats": [
+    {
+      "beat_id": "B03",
+      "reason": "Anatomy beat explaining the two-mode file structure belongs in the 16:9 long; the Short establishes what the skill does without needing a folder tree"
+    },
+    {
+      "beat_id": "B04",
+      "reason": "Phase 1 inventory detail (GDD vs built/planned/broken cards) is worked-example depth for the long film; the pipeline overview in B02 covers the concept"
+    },
+    {
+      "beat_id": "B05",
+      "reason": "Phase 2 capture terminal walkthrough is implementation detail belonging in the long film; B02 establishes that the real viewport is captured"
+    },
+    {
+      "beat_id": "B07",
+      "reason": "Walker mode four-bookend sequence is advanced-use anatomy; the Short does not need to explain the full bookend ordering to be coherent"
+    },
+    {
+      "beat_id": "B09",
+      "reason": "Falsifiability/self-demo beat partially overlaps B08 (the honesty contract); the essential limitation — requires a real running game — is preserved in B10 Verdict narration"
+    }
+  ],
+  "cut_first_review": "B00 introduces Liam and the misconception. B01 corrects it: riffs, not records. B02 gives the five-phase pipeline overview so the viewer understands the shape. B06 zooms in on the riff mechanic (heart of the skill). B08 states the honesty contract — do not secretly fix the game. B10 renders the verdict and names the structural limitation. B11 hands off a paste-ready prompt for the viewer's own Godot project and signs off 'Liam, in for Bear.' B12 is the silent outro. No dangling references: B02→B06 is a natural zoom from pipeline overview to the key step; B08→B10 flows from constraint to verdict; B10→B11 flows from summary to action. The self-demo limitation ('a full build needs a real running game') is present in B10 without needing B09's meta-commentary about the reel itself.",
+  "planned_duration_s": 157.92,
+  "rewrite_reason": null,
+  "beat_durations_s": {
+    "B00": 16.15,
+    "B01": 15.55,
+    "B02": 22.68,
+    "B06": 20.5,
+    "B08": 21.67,
+    "B10": 20.54,
+    "B11": 33.83,
+    "B12": 7.0
+  }
+}

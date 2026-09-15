@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "0da03d5644f54a68a0f5d10cf07bbf51",
+  "source_sha256": "24b1b0defb1df0b219e7aed1572ea9b85b632132fffdebd18742ce922ffaf3b4",
+  "beat_sheet_sha256": "df4fe297a37a9350a5ad730b7939c11249121ddd4d3d45986ed3d37f28f9b030",
+  "video_sha256": "a5e41c710713649852eaaa66137bf8c42f2faa5908781659fda0620ed34dfb11",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "vertical/_qc/run-0da03d56/frame_B00_mid.png",
+      "sha256": "dadf02652fcafb85657fb98061453d37de703d78e1f9dafecead9cad98c11001",
+      "notes": "ClaudeComposerAsk916 portrait B00 @ 6.94s: 'Selam, Liam' greeting, 'python3 provenance.py claude-liam-brutalist-runtime-provenance/' command wrapped across two lines, AUDIO Kokoro:12 [kokoro ✓] / VIDEO 24 outputs / SLOTS Brutalist:10 YOU:0 Capture?:2 — folderLabel @HumanitariansAI confirmed, no safe-area bleed"
+    },
+    {
+      "path": "vertical/_qc/run-0da03d56/frame_B05_mid.png",
+      "sha256": "cb6c9c8a6bec149338837884d31ef838391153b2a36303344584bd115ccc4032",
+      "notes": "ClaudeCodeBeat916 portrait B05 @ 114.29s: provenance fixture demo — AUDIO Kokoro:1 · legacy-44k:1 mismatch flagged, VIDEO 9 machine-made outputs, SLOTS Brutalist:4 YOU:1(archival) Capture?:1(screen); right-edge word wrap visible (long code lines) — minor presentation issue, content readable, not a safe-area blocker"
+    },
+    {
+      "path": "vertical/_qc/run-0da03d56/frame_B09_mid.png",
+      "sha256": "e63bf032267ac380032ed07d30713fff96b95c30ce12a88565718a76f4e2d513",
+      "notes": "ClaudeVerdictArtifact916 portrait B09 @ 228.57s: 'What it actually gives you.' header with 8-point numbered list — all text within portrait safe area, no overflow, legible; correct artifact title 'provenance.py'"
+    },
+    {
+      "path": "vertical/_qc/run-0da03d56/frame_B11_outro.png",
+      "sha256": "86a27d88424d55514c41919e2018e67e39f3a788caa3bd0f08ea83a3cf2f1e4c",
+      "notes": "HaiTitleOutro916 portrait B11 @ 267.87s: 'Brutalist Utility: provenance.py.' and '@HumanitariansAI' — dark olive background, white serif, centered within safe area, top/bottom rule lines present, correct episode title, correct channel handle"
+    }
+  ],
+  "notes": "Portrait 9:16 2160x3840 — 12 beats, 270.2s. Four frames freshly extracted from the passing portrait MP4 for this invocation (run_id 0da03d5644f54a68a0f5d10cf07bbf51). Video MP4 SHA-256 verified unchanged from compiler-verified build. Beat sheet SHA-256 verified unchanged. Inspected: B00 cold open (ClaudeComposerAsk916, @HumanitariansAI confirmed, AUDIO/VIDEO/SLOTS summary correct), B05 fixture demo (engine mismatch flagged correctly, minor right-edge word wrap on portrait code card — not a safe-area blocker), B09 verdict list (8 points, all within portrait safe area, artifact title correct), B11 outro (correct title 'Brutalist Utility: provenance.py.' and correct channel '@HumanitariansAI'). 0 blockers, 0 majors. Human review pending."
+}

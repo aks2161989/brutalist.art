@@ -1,0 +1,29 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "align.py is the word clock — it TIMES known narration text onto measured audio; it does not transcribe. Short shows why the misconception matters, the pipeline, the essential fallback that keeps it honest, and the one-line verdict.",
+  "parent_master_sha256": "bd94b7252670e9c1ff526cd9daa0a4a6f64dca7c72ace6f491a56e1f089d6500",
+  "parent_reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-align",
+  "kept_beats": ["B00", "B01", "B02", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B03", "reason": "MECHANISM 1 — --help CLI surface: internal reference detail; the long-form is the right home for the argparse walkthrough."},
+    {"beat_id": "B04", "reason": "WORKED EXAMPLE 1 — the single-beat words.json layout: a code-cascade the Short can imply from the verdict; belongs in the long."},
+    {"beat_id": "B05", "reason": "MECHANISM 2 — whisper_words() source listing: internal implementation detail (try/except import, CPU int8 init); belongs in the long."},
+    {"beat_id": "B06", "reason": "MECHANISM 3 — align_words() SequenceMatcher listing: 33-line code beat; the Short states the mechanism at high level in B02 and B09."},
+    {"beat_id": "B08", "reason": "WORKED EXAMPLE 2 — the number-drift case: a second concrete example the long-form Short does not need for its high-level explanation."},
+    {"beat_id": "B10", "reason": "YOUR_TURN — 28-second exercise prompt: a detailed CTA the brief permits cutting from Shorts."}
+  ],
+  "cut_first_review": "The kept sequence reads: ask (B00) → misconception correction (B01) → pipeline framework (B02) → fallback + [warn] safety limitation (B07) → verdict (B09) → outro (B11). B01 states that align.py does not transcribe; B02 states the phase-flow (beat sheet + mp3 → whisper → matcher → interpolate → emit); B07 states the falsifiability rule (no anchors ⇒ even_spread + explicit warning that word-keyed tracks are unreliable); B09 restates the whole surface in the order it runs and confirms three downstream consumers. B07 references even_spread without prior show — the narration itself explains it (\"It calls even spread. Words divide the beat duration evenly\"), so the transition is coherent without B03–B06 code beats. B09 opens with \"So —\" which lands naturally after the safety beat. Outro B11 preserves the Liam-in-for-Bear disclosure and @NikBearBrown handle per OUTRO-LOCK.",
+  "planned_duration_s": 90.26,
+  "planned_beat_durations": {
+    "B00": 11.79,
+    "B01": 12.63,
+    "B02": 19.00,
+    "B07": 19.42,
+    "B09": 21.67,
+    "B11": 5.75
+  },
+  "rewrite_reason": null,
+  "endcard": false,
+  "outro_rewrite": false,
+  "run_id": "789b802ec1d34a00bfdf4d6e3f1fff4f"
+}

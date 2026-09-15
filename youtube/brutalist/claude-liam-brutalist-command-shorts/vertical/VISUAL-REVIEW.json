@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "915961a4e22f469590e497ffe1dd9a7f",
+  "source_sha256": "2d0d192fefff25f6f9a44c6a5cd588dc1b958f2f19fc2abc48cc0c2d89bd1f01",
+  "beat_sheet_sha256": "3fbeaa323bac81cbc71c3032064da1948b0b3b33830e15c05bdc83b3de0cd1f4",
+  "video_sha256": "3481e57f74bc4527f7e075b2126449716bf98a6c3ad5f1b0df79c6362bcc89fd",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "8da96ebeb8be5f950d4550e065bc6306ef618325a002d9f95145d842713aa68e"},
+    {"path": "_qc/final-contact-sheet.png", "sha256": "6211b85bbf8df7dd3f17789a9562966d231a93d729ec5fbdba1eb2fabd48a999"}
+  ],
+  "notes": "Vertical 2160x3840 · 296.3s · h.264+AAC · 12/12 beats filled. Source updated: art dispatcher shorts/vertical cases moved from art:81-86 to art:102-107 (new commands added before them); shorts.py SHORTS LAW docstring rules 2/3/4 expanded. B02 ClaudeCodeBeat916 title corrected from 'art:81-86' to 'art:102-107'; code block shows correct line comments. B03 code card updated to remove 'verbatim' claim and reflect current expanded docstring (condensed for card fit). Narration unchanged — only Remotion re-renders for B02 and B03, then full recompile. Gate V: 0 BLOCKER / 0 MAJOR (24 frames sampled). contact_sheet.png (per-beat Gate V sampling) and final-contact-sheet.png (3x4 sample of exported vertical) opened with image-capable Read tool. B00 ClaudeComposerAsk916 portrait composer in safe area; B01 BrutalistHesitantWriter916 shows 'art shorts / drops beats / and rewires / graphics.' corrected BLUF at fontSize 180 / lineSpacing 2.6; B02-B08 ClaudeCodeBeat916 portrait code cards inside safe area; B09 ClaudeVerdictArtifact916 8-line verdict; B10 ClaudeComposerAsk916 Your Turn paste-ready prompt; B11 ClaudeTitleOutro916 outro. Skin-lint warns B00 and B11 use 916 variants (standing practice for portrait builds in this playlist). Human review pending."
+}

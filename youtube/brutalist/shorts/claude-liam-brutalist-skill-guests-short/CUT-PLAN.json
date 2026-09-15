@@ -1,0 +1,21 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "A frame around a guest's recording — six beats not nine, Professor Bear's notes absent by design, and GATE G moves the signoff from Bear to the guest",
+  "parent_master_sha256": "3d99d32a70dfc8189eeae5f0e673a9a25e6f203118553ee41d4c115598868880",
+  "kept_beats": ["B00", "B01", "B03", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "SkillTeardownAnatomy — folder tree belongs in the long"},
+    {"beat_id": "B04", "reason": "Mechanism 1 (absence-not-toggle) is compressed into B01 BLUF and the verdict; keeping the standalone act would leave a dangling 'First design decision' without ACTS 2–4"},
+    {"beat_id": "B05", "reason": "Mechanism 2 (GATE G) — dangling 'Second decision' without acts 1/3/4; the verdict names GATE G in one line"},
+    {"beat_id": "B06", "reason": "Mechanism 3 (screen-clean) — dangling 'Third decision'; the verdict covers the never-cut-the-talk rule in one line"},
+    {"beat_id": "B07", "reason": "Mechanism 4 (naming/voice) — dangling 'Fourth decision'; the verdict covers channel voice in one line"},
+    {"beat_id": "B08", "reason": "Falsifiability — the outro-follows-channel argument is Brutalist-craft, not the useful high-level answer for the Short"},
+    {"beat_id": "B10", "reason": "Your Turn — the detailed dry-run assignment prompt belongs in the 16:9 long"}
+  ],
+  "cut_first_review": "B00 introduces Liam-in-for-Bear and names the one structural difference. B01 (BrutalistHesitantWriter) states the difference: guests prunes a beat because a board member is not a fellow — Professor Bear's notes are absent by design. B03 (SkillTeardownPipeline) lays out the fixed six-beat spine and calls out that the recap is descriptive with no evaluation. B09 (ClaudeVerdictArtifact) compresses the four mechanism acts into six verdict lines (six-beat spine, absence, GATE G, screen-clean, channel voice, HAI outro), so the dropped B04–B07/B08 content is not lost — only its long-form treatment. B11 is the ClaudeTitleOutro sign-off. Transitions: B00's 'Here is the mental model.' → B01's 'The easy read…' works. B01's 'absent by design, not disabled by flag' → B03's 'The spine is fixed. Six beats. Not nine.' works (spine follows from the pruning). B03's 'Only the middle is the guest's own material.' → B09's 'The verdict.' works. B09 → B11's 'That was the guests Skill.' is the original close. No numbered acts survive, so no dangling 'First/Second/Third design decision' remains. Screen-clean and GATE G surface only in the verdict as self-defining phrases ('GATE G moves the signature from Bear to the guest'; 'Screen-clean cleans the recording, but the talk itself is never trimmed to fit a runtime') — acceptable in a compressed summary.",
+  "planned_duration_s": 81.71,
+  "final_measured_duration_s": 81.708,
+  "rewrite_reason": null,
+  "run_id": "2c8cb7d4b9e7486c88488b9396afadba",
+  "source_sha256": "b414ed2479d64033f05ce67115cdd6ba366b2014b87d5fca20ac17e968c119e0"
+}

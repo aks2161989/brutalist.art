@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "713f16bacfaa4ed28908ef6a8db68b4c",
+  "source_sha256": "a26a0a3c80441d1ab0d99ff56784a04698edbcfaaf0a1fb6ea8f2dc06401fe13",
+  "beat_sheet_sha256": "8def55f8190404f15456cff9689e37b756682945588707de4d5366300981e7be",
+  "video_sha256": "3c225d4dcd97bd689277605c8f557afcc1720d37a9f12478baba570e5492de1d",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "1c7806916679015cf1b16181ddb5d3381fab5b72e13df82133579d29a66c4605"}
+  ],
+  "notes": "Re-verified 2026-09-13 against new invocation run_id 713f16bacfaa4ed28908ef6a8db68b4c (previous run_id ee4093952a4c4010a7cab3e6729cd376). Source file on disk SHA 4de916f41e66c8c29d4617f09422ab9c7da8e3e03cbdfcaf66c4751aa52e7a47 — content unchanged from the previous build. Renders not rebuilt (source content unchanged, FEEDBACK.md has no corrections). Portrait master 2160x3840, 319.7s, 12/12 beats filled with native 9:16 Remotion mp4s (ClaudeComposerAsk916, BrutalistHesitantWriter916, SkillTeardownMechanism916 in place of landscape pipeline strip per portrait feedback, ClaudeCodeBeat916, ClaudeVerdictArtifact916, ClaudeTitleOutro916). Portrait contact sheet re-inspected on this invocation: cold open (B00 — portrait composer card 'Ahoj, Liam' + @HumanitariansAI chip), BLUF (B01 — 4-line serif 'kokoro / is / free and / local.' filling safe area), mechanism framework (B02 — SkillTeardownMechanism916), code cards B03–B08, verdict B09, Your Turn B10, outro B11 (title wraps with overflowWrap:anywhere). 0 BLOCKER, 0 MAJOR — see _qc/REPORT.md. Minor: motion pantry advisory accepted as documented deviation. Human review pending."
+}

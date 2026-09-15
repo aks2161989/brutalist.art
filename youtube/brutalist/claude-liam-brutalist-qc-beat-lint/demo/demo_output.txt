@@ -1,0 +1,9 @@
+=== CLEAN RUN ===
+[beat-lint] clean — beat mix OK (fixture_clean.json)
+exit=0
+
+=== DEFECT RUN ===
+[beat-lint] 2 defect(s) in fixture_defect.json:
+  B03  [single-sentence-remotion] lane:remotion beat uses text-card pattern 'SlateCard' — a talking slide. Give it a real illustration pattern OR convert to a VOX-ANIM placeholder (lane:vox, placeholder:vox-anim).
+  B05  [single-sentence-remotion] lane:remotion beat uses text-card pattern 'TextCard' — a talking slide. Give it a real illustration pattern OR convert to a VOX-ANIM placeholder (lane:vox, placeholder:vox-anim).
+exit=2

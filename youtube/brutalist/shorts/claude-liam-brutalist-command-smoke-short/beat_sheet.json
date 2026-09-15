@@ -1,0 +1,457 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art smoke",
+    "slug": "claude-liam-brutalist-command-smoke-short",
+    "topic": "BRUTALIST · COMMAND: ART SMOKE",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Aloha, Liam",
+    "greeting_note": "hello lexicon: Aloha (Hawaiian, one word). Fresh — does not repeat scene-index=Bonjour, scenes/help=Namaste, icons=Sawubona, list=Salaam, icon-build=Merhaba, run=Ciao, shorts=Salam, todo/vertical=Hola, approvals=Selam, doctor=Jambo. Slug char-sum mod 10 == 5, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "2ddfc76b87a144178b4762a9e7639b35",
+    "episode_id": "command-smoke",
+    "order": 35,
+    "note": "Command teardown of ./art smoke — the dispatcher case at art:100-102 that execs runtime/scripts/smoke_test.sh with $@ forwarded (no flags exist). smoke_test.sh builds the examples/_smoke/ fixture in a throwaway mktemp scratch dir (cp -R FIXTURE/. WORK/), runs Kokoro narration (generate_audio_kokoro.py), then run.sh (which routes through GATE L beat-mix lint, GATE SHAPE, the zero-Manim skip path, the no-Remotion skip path, compile.py's slate pass, and GATE V frame-level QC — ART_STRICT=0 so GATE V's canvas-fill/negative-space MAJORs on the deliberately bare slates do not stop the build), and lands a compiled slate mp4 on disk. Then it verifies the DECODED output: GATE SIZE > 20000 bytes, GATE TYPE = ffprobe decodes both a video and an audio stream, GATE AUDIO = ffmpeg volumedetect on the compiled mp4's own audio track shows mean_volume > -40 dB. The fixture ships as two deliberately bare narration slates so the render+compile stages get exercised end to end without needing a full Remotion project (that's the point — a green ./art doctor confirms deps import; a green ./art smoke proves the mp4 renders and can be decoded). Verbatim demo captured on this workstation shows both the current-shipped failure (the tip-of-tree examples/_smoke/beat_sheet.json has metadata.slug='_smoke', which the recent build_safety.validate_project regex '[A-Za-z0-9][A-Za-z0-9._-]*' rejects — smoke_test.sh exits 1 at GATE 0 with 'REFUSED: metadata.slug must be a filename, not a path', even though ./art doctor on the same box reports every FEATURE green) and the reproduction of the pass path (the fixture slug is patched in a work copy to satisfy the regex — 636229-byte smoke-slate.mp4, video+audio streams, mean_volume -24.2 dB). No paid API, no upload, no network calls; a local .mktemp-shim/mktemp wrapper reroutes smoke_test.sh's mktemp -d output from the App-Sandbox-blocked /var/folders default into $TMPDIR (smoke_test.sh itself is not modified). Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. episode.source_sha256 cf4037bbf6d98fd50f59af03b0ccf1a020822f94c7d3f0a021382d8144c80831.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:100-102",
+      "runner_script": "runtime/scripts/smoke_test.sh",
+      "fixture": "examples/_smoke/beat_sheet.json",
+      "validator": "runtime/scripts/build_safety.py:186-187"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "smoke",
+      "smoke_test.sh",
+      "examples/_smoke",
+      "Kokoro",
+      "ffmpeg",
+      "volumedetect",
+      "run.sh",
+      "compile.py",
+      "end-to-end proof",
+      "command teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-09T22:37:24",
+      "cut": "master",
+      "filled": 6,
+      "of": 6,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B10: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-command-smoke-vertical",
+    "dropped_beats": [
+      "B02",
+      "B04",
+      "B05",
+      "B06",
+      "B09"
+    ],
+    "total_estimated_duration_seconds": 127.42,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Aloha, this is Liam, in for Bear. The ask — art doctor is all green on this box. Prove to me the pipeline actually renders a video, not just that the imports work.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Aloha, Liam' types above the composer"
+          },
+          {
+            "at": "0.25",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'running ./art smoke…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Aloha, Liam",
+            "topic": "BRUTALIST · COMMAND: ART SMOKE",
+            "segment": "art smoke",
+            "command": "art doctor is all green on this box. Prove to me the pipeline actually renders a video, not just that the imports work.",
+            "runningText": "running ./art smoke…",
+            "output": [
+              "builds examples/_smoke/ in a throwaway scratch dir — Kokoro → run.sh → compile.py",
+              "verifies the compiled mp4's DECODED size, streams, and mean_volume (> -40 dB)",
+              "SMOKE PASS = a watchable slate cut. Exit 0. Otherwise exit 1 with the failing gate."
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T01:32:50.625022+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 9.64,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 9.666666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-09T22:37:24"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Correction is the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art smoke does not check dependencies — art doctor already does that, in isolation. Smoke renders a real video, decodes it, and measures the audio. A green result is a decoded mp4, not a passing import.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art smoke / checks deps.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'checks' turns terracotta, hesitates, backspaces, types 'renders'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'deps' turns terracotta, hesitates, backspaces, types 'video'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art smoke / renders video.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art smoke\nchecks deps.",
+            "triggerWords": "checks, deps",
+            "replacementWords": "renders, video",
+            "seed": "smoke-b01",
+            "face": "serif",
+            "fontSize": 155,
+            "lineSpacing": 7.0,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T02:15:53.073746+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.34,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-09T22:37:24"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK 2 — the pipeline smoke_test.sh drives and the three decoded gates it verifies.",
+      "narration_text": "What smoke_test.sh actually does. It copies the tiny fixture at examples slash underscore smoke into a throwaway scratch directory, then walks it through the real pipeline — Kokoro narration, then run dot sh's render and compile pass, then three verify gates on the compiled mp4 that actually lands on disk. Size — greater than twenty thousand bytes. Type — ffprobe decodes both a video and an audio stream. Audio — ffmpeg volumedetect reads a mean volume above negative forty decibels. Every one of those numbers comes out of the DECODED file, not the process exit code.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'smoke_test.sh — one pipeline, three decoded gates'"
+          },
+          {
+            "at": "0.20",
+            "event": "the pipeline block types (scratch dir, Kokoro, run.sh)"
+          },
+          {
+            "at": "0.55",
+            "event": "the three GATE lines type below it"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "smoke_test.sh — one pipeline, three decoded gates",
+            "code": "# Setup — a throwaway scratch dir so re-runs never dirty examples/_smoke:\nFIXTURE=\"$REPO/examples/_smoke\"\nWORK=\"$(mktemp -d 2>/dev/null || mktemp -d -t art-smoke)\"\ntrap 'rm -rf \"$WORK\"' EXIT\ncp -R \"$FIXTURE/.\" \"$WORK/\"\n\n# Pipeline — the real one every reel goes through:\npython3 \"$ROOT/scripts/generate_audio_kokoro.py\" \"$WORK\"          # narrate\nART_FACTS=0 ART_QC=1 ART_STRICT=0 bash \"$ROOT/scripts/run.sh\" \"$WORK\"  # render + compile\n\n# Verify — three gates that read the DECODED mp4 on disk:\nOUT=\"$WORK/_smoke-slate.mp4\"\n[ \"$(wc -c < \"$OUT\")\" -gt 20000 ]                                         # GATE SIZE\nffprobe -show_entries stream=codec_type -of csv=p=0 \"$OUT\" | grep -q video # GATE TYPE\nffmpeg -i \"$OUT\" -af volumedetect -f null - 2>&1 | grep mean_volume        # GATE AUDIO",
+            "sparkLine": "Scratch dir. Real pipeline. Three decoded gates."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T01:43:00.793852+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 33.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 33.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T22:37:24"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FAILURE_RECOVERY",
+      "role_note": "FALSIFIABILITY — the shipped-fixture regression captured verbatim on this box. Recovery: patch the fixture slug (or the regex).",
+      "narration_text": "One failure worth showing — the real one on tip of tree today. Run art smoke against the shipped fixture and it exits one at GATE zero, before Kokoro even loads. The reason is not a missing dependency. It is a static validator, added recently to fail closed on unsafe slugs, that rejects the fixture's own slug because it starts with an underscore. And this is exactly why art smoke exists. Art doctor on the same box is all green — the imports are fine — but the pipeline cannot render this fixture. Recovery is a one-line patch: rename the fixture slug from underscore-smoke to smoke, or widen the regex to accept the fixture the toolkit ships with. Fix that one thing and the same pipeline lands a green mp4.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 46,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'recovery (verbatim; shipped fixture, tip of tree)'"
+          },
+          {
+            "at": "0.15",
+            "event": "BEFORE: ./art smoke against shipped fixture prints the refusal + exit 1"
+          },
+          {
+            "at": "0.50",
+            "event": "the offending regex + slug print next"
+          },
+          {
+            "at": "0.75",
+            "event": "RECOVERY: patch the fixture slug OR widen the regex; smoke passes"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "recovery   (verbatim; shipped fixture on tip of tree)",
+            "code": "# BEFORE — run against the fixture the toolkit actually ships:\n$ ./art smoke\n[smoke] building examples/_smoke in /tmp/…/art-smoke.2940021608\n[smoke] --- GATE 0: Kokoro narration ---\n[kokoro] REFUSED: metadata.slug must be a filename, not a path\n[smoke] FAIL: generate_audio_kokoro.py failed — see …/.audio.log\n[exit $?] = 1\n\n# WHY — build_safety.py:186-187\nif not isinstance(slug, str) or not re.fullmatch(\n     r'[A-Za-z0-9][A-Za-z0-9._-]*', slug):\n    raise BuildError('metadata.slug must be a filename, not a path')\n\n# examples/_smoke/beat_sheet.json ships with:  \"slug\": \"_smoke\"\n# The leading underscore does not match the anchor class [A-Za-z0-9].\n\n# RECOVERY — one line, either side of the seam:\n#   (a) rename the fixture slug:   \"slug\": \"smoke\"   (drop the underscore)\n#   (b) OR widen the regex to accept a leading underscore in the fixture.\n\n# AFTER — same pipeline, one character patched:\n[kokoro] beat-B00.mp3  8.73s  voice=af_bella\n[art] wrote $WORK/smoke-slate.mp4  (13.9s)\n[smoke] SMOKE PASS — examples/_smoke built a real, watchable slate cut end to end.\n[exit $?] = 0",
+            "sparkLine": "One char. Fixture blocked. Doctor still green. Fix: rename."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T01:46:15.021695+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 37.93,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 37.958333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T22:37:24"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, in the order you use it.",
+      "narration_text": "So — art smoke. The end-to-end proof. One dispatcher case, no flags. It builds a bare fixture in a throwaway scratch dir, drives it through Kokoro and run dot sh's real skip paths, and then reads the compiled mp4 back from disk with three decoded gates. It exits zero when SIZE, TYPE, and AUDIO all clear. Run it after art doctor whenever you touch anything in the render or compile paths. A green art doctor means the deps import. A green art smoke means a fellow can actually make a video today.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'art smoke — the whole surface, in the order you use it'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art smoke — the whole surface, in the order you use it",
+            "artifactLines": [
+              "bare invocation — ./art smoke; no flags, no args, no configuration. One verb.",
+              "one script, one fixture — smoke_test.sh drives examples/_smoke through Kokoro → run.sh → compile.py in a throwaway mktemp scratch dir.",
+              "three decoded gates — SIZE > 20000 bytes; TYPE = ffprobe decodes both a video and an audio stream; AUDIO = ffmpeg volumedetect > -40 dB mean_volume.",
+              "reads the mp4 that landed — every gate reads the DECODED output. A green process exit is not proof. Silent audio streams still fail.",
+              "the gap ./art doctor cannot see — doctor imports every dep in isolation; smoke proves the imports still glue into a watchable file.",
+              "exit 0 all-green; exit 1 on the first failing gate — run this after every change to the render or compile path."
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T01:39:07.222657+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 27.16,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 27.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-09T22:37:24"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Command: art smoke. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art smoke.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art smoke.",
+            "slug": "claude-liam-brutalist-command-smoke"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T01:40:33.504953+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.23,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 5.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-09T22:37:24"
+      }
+    }
+  ]
+}

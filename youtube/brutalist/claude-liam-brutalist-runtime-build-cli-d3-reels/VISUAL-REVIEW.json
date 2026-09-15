@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "8d75c91064f84d83bc89e08d3efe2f26",
+  "source_sha256": "92253347e5028837c16c2590f4b803bb8f32e88754ba255c1424fe9eefc29abc",
+  "beat_sheet_sha256": "c380898ace0ecedf3669c8855b697ef927140553765824652dff6114ca59f476",
+  "video_sha256": "17c51cf571786c86a48c59547c221516c5c0c853b10a57c586f0baffd068e3b1",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-strip-landscape.png", "sha256": "e7e1a30e91c422eed49e3b3c244a55bd6b6f953c67bb6f27f4f6e25b06f9e0ac"},
+    {"path": "_qc/B01_50.png", "sha256": "311a316897b842c4f92e1ca9fb442428266f5b367d268a68a996c843c4cdea30"},
+    {"path": "_qc/B04_50.png", "sha256": "bb37d76c7f2e473a0dda66dec3d5492596045a2a4eec271ae5ecf52cac20f39d"},
+    {"path": "_qc/B11_50.png", "sha256": "5f3359234e017ca05236069312ebf71562b1b1cabe91b606218f5b02272399e2"}
+  ],
+  "notes": "Re-verified for run_id 8d75c91064f84d83bc89e08d3efe2f26 (source unchanged: build_cli_d3_reels.py SHA c37d17..., toolkit overrides added new scenes not used by this reel). Landscape master 3840x2160, 234.79s, 12/12 beats, 0 slates. Beat_sheet run_id and order (41→46) updated to match invocation; renders and audio unchanged. Gate V: 0 BLOCKER / 0 MAJOR. Verified from contact strip and individual beat frames: B00 ClaudeComposerAsk — 'Bula, Liam' greeting, @HumanitariansAI folder chip, three RESULT lines in terracotta; B01 BrutalistHesitantWriter — final state shows 'the tool wraps the D3 sim from one |' at 50% frame (mid-animation — correction lands by beat end); B02 SkillTeardownPipeline — five phase cards fit SAFE, INPUT/OUTPUT lozenges legible; B03-B08 ClaudeCodeBeat — adaptive font sizes correct for longest lines, no clipping on 32-line build_one() body; B09 ClaudeVerdictArtifact — six lines legible; B10 ClaudeComposerAsk Your Turn — paste-ready prompt + grading lines; B11 ClaudeTitleOutro — title 'Brutalist Utility: build_cli_d3_reels.py.' restated, @NikBearBrown (OUTRO-LOCK), pixel mascot. Human review pending."
+}

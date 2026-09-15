@@ -1,0 +1,25 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "screen-clean is the shared preprocessor that turns a screen recording into a safe reel beat: five passes, one review artifact, flags what a human still has to decide.",
+  "parent_master_sha256": "1d655dc3c4ae8ceb319d0136b056756aa3fac7a628cac47413d20c1ca858c357",
+  "kept_beats": ["B00", "B01", "B03", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "On-disk anatomy (SKILL.md doctrine + fellows/guests folders) — repository geography that belongs in the long."},
+    {"beat_id": "B04", "reason": "Rationale for being shared/ignorant-of-speaker is already stated in the B00 opener and reinforced by B03's pipeline; a full mechanism act on it is long-form material."},
+    {"beat_id": "B05", "reason": "Pass 1 audio-gate deep dive (volumedetect, -91.0/-21.1 dB fixtures, 90 s window) — Pipeline (B03) already states the gate; the numeric demo belongs in the long."},
+    {"beat_id": "B06", "reason": "Pass 2 A/B/C aspect-fit table (pillarbox vs. full-crop vs. taskbar-crop, pixel widths, cream-not-black) — heavy internals; Pipeline names the rule, Verdict re-states the outcome."},
+    {"beat_id": "B08", "reason": "Falsifiability / four-frame contact sheet — proof-artifact detail belongs in the long; Verdict already lists the sheet as deliverable."},
+    {"beat_id": "B10", "reason": "Your Turn dry-run homework — Shorts prompt allows detailed CTA to be cut; not a source-report and no dropped caveat depends on it."}
+  ],
+  "cut_first_review": "B00 sets Liam-in-for-Bear and states the thesis: shared preprocessor, five passes, one review artifact, never publishes. B01 (BLUF, hesitant writer) corrects the misread — screen-clean does not auto-blur, it flags what a human still needs to look at. B03 walks the five passes as one sentence per pass, naming Pass 4 as the one that flags-and-waits. B07 slows down on that same Pass 4 to state the doctrine plainly — 'is this embarrassing' is judgment, not arithmetic — which is the honest human-decision limitation of the skill. B09 is the verdict artifact: six lines that recapitulate what was actually taught (gate at -40 dB, taskbar crop with cream bars, flag-not-decide, 1920×1080 + contact sheet). B11 is Liam's four-second sign-off. Transitions: B00→B01 (thesis to misconception correction), B01→B03 (misconception to the five-pass mechanism it references), B03→B07 (pipeline to the one pass that will not decide), B07→B09 (limitation to the artifact recap), B09→B11 (verdict to sign-off). Nothing in the retained narration references B02/B04/B05/B06/B08/B10 by name; B09's verdict lines stand on their own because each restates the mechanism it names.",
+  "planned_duration_s": 120.08,
+  "planned_beat_durations_s": {
+    "B00": 16.0,
+    "B01": 18.625,
+    "B03": 26.625,
+    "B07": 32.125,
+    "B09": 30.791666666666668,
+    "B11": 3.9583333333333335
+  },
+  "rewrite_reason": null
+}

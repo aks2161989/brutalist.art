@@ -1,0 +1,65 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "19a16e82a31c49af966402996eed5e63",
+  "source_sha256": "2d0d192fefff25f6f9a44c6a5cd588dc1b958f2f19fc2abc48cc0c2d89bd1f01",
+  "beat_sheet_sha256": "64da14d1c020a5832295ffeead808dbd741d31ec9230a2d4ced2abd48dde762e",
+  "video_sha256": "6b8ea03f4b1d04c67b245f09e4ab59df34316b519438936fbda34ee031d64e9c",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/landscape/contact-sheet.png",
+      "sha256": "4e92177749762e3bc5a0b105365a1bc039bffe1abc86adc403ea6762dc441eea"
+    },
+    {
+      "path": "_qc/landscape/frames/B02_15.png",
+      "sha256": "31d1869033a44da3856a761663de25182d862ddd972689f934f3901135f95040"
+    },
+    {
+      "path": "_qc/landscape/frames/B02_50.png",
+      "sha256": "28dc28a916d91e4469dafc88129033eb166d144c7872ed1cc4fb3f3cd4feacc8"
+    },
+    {
+      "path": "_qc/landscape/frames/B02_85.png",
+      "sha256": "1946212e8f8ee40e52b1ed24660bc5bc02d493462332221dc9eb0eb42411f7f3"
+    },
+    {
+      "path": "_qc/landscape/frames/B03_50.png",
+      "sha256": "b9474bc862d5443c9a5e3d01e34d8901e7ea400cd69805d67bf68a43a26c71dc"
+    },
+    {
+      "path": "_qc/landscape/frames/B04_50.png",
+      "sha256": "cf375a931d817143cb98a77dbd55deaa2f7aa1e2696bda32ec4522c4713dfe6a"
+    },
+    {
+      "path": "_qc/landscape/frames/B05_50.png",
+      "sha256": "437dd0f88a8ef9a041980a8b5a946ccfe0b504f2e0fbdd996e2cd0f1190b9ca8"
+    },
+    {
+      "path": "_qc/landscape/frames/B06_50.png",
+      "sha256": "661a7a3f7d641812d47f5f5418aa0a929df44de4f61112686972168eecfa2c7d"
+    },
+    {
+      "path": "_qc/landscape/frames/B07_50.png",
+      "sha256": "20d11711644589098f6fe44cae47c36ee222db8123a6586f1d76f280be3a85ad"
+    },
+    {
+      "path": "_qc/landscape/frames/B08_50.png",
+      "sha256": "7c5aaf58f453ced4c6679d5999f10dc1aeeff818e816d4d18fa2be93354861fd"
+    },
+    {
+      "path": "_qc/landscape/frames/B09_50.png",
+      "sha256": "3b6cc45554b5eddd3902358aac8860065ff469d39dc876318f202e3dadd4de04"
+    },
+    {
+      "path": "_qc/landscape/frames/B10_50.png",
+      "sha256": "b7c5191ad8c8aeeeaf2a3f40fe4c07695433404612860a1df147d15b0cf7d8e1"
+    },
+    {
+      "path": "_qc/landscape/frames/B11_50.png",
+      "sha256": "8b2f046f9a267416fbda8a383259462cf79b618ea1f782b00a4b493fc5abf84e"
+    }
+  ],
+  "notes": "Re-verified this invocation (run_id 19a16e82a31c49af966402996eed5e63). Video SHA-256 and beat_sheet SHA-256 unchanged from ac6edaa build — no re-render needed. Frame files re-extracted from same video; B09_50.png hash differs from prior record due to re-extraction at a different animation timestamp within the animated beat (content verified: ClaudeVerdictArtifact 8-item verdict, clean and legible). All other frame hashes match prior build exactly. Frames directly inspected this invocation: B00_50 ClaudeComposerAsk 'Hola Liam' with art vertical topic and @HumanitariansAI channel handle — correct. B09_50 ClaudeVerdictArtifact 8-item verdict list for art vertical — correct. B11_50 ClaudeTitleOutro 'Brutalist Command: art vertical.' with @NikBearBrown handle — title correct, channel handle is hardcoded component accepted per prior build. B02_15/50/85 hashes match ac6edaa build (art:102-107 line reference confirmed in prior review). Audio 247.5s. Zero BLOCKER, zero MAJOR. One accepted WARN: code-cascade 58% of beats. Human review pending."
+}

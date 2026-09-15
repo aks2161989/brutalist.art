@@ -1,0 +1,836 @@
+{
+  "metadata": {
+    "title": "The riff Skill",
+    "slug": "claude-liam-brutalist-skill-riff",
+    "topic": "BRUTALIST · SKILL: RIFF",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Bula, Liam",
+    "greeting_note": "hello lexicon: Bula (Fijian, one word). Fresh — does not repeat Selam (approvals), Bonjour (scene-index), Namaste (help), Sawubona (icons), Salaam (list), Merhaba (icon-build), Ciao (run), Salam (shorts), Hola (todo/vertical), Annyeong (godot-gdd), Konnichiwa (godot-gamedev). Slug char-sum mod 10 == 3, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "deb461319da4431a9518a6feef4fa1ec",
+    "episode_id": "skill-riff",
+    "order": 22,
+    "note": "Skill teardown of skills/make/riff/SKILL.md. The riff skill is commentary grounded in visible evidence: look before writing, footage carries evidence, voice carries the verdict. SELF-DEMO LAW: B05 shows the actual ./art scenes search run during this build — the 'look before writing' step applied to the toolkit's own scene library. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for human reviewer before publication. No paid API, no upload, no network calls. episode.source_sha256 17e4452d1dd418ef1260622bc52139744d1bcf4fd13edc041cfcdb73a9643e75.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_path": "skills/make/riff/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "riff",
+      "skill",
+      "commentary",
+      "evidence-first",
+      "look before writing",
+      "RIFF.md",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-11T12:42:10",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. ASK→RESULT: ask lands answered; narration introduces Liam in for Bear. ILLUSTRATE LAW: UI is the subject here.",
+      "narration_text": "Bula, this is Liam, in for Bear. The riff skill watches before it speaks. You hand it a local clip, a Remotion scene, or a rendered artifact. It probes the thing, inspects frames and the event sequence, then writes commentary grounded in what visibly happens — not what the filename suggests.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Bula, Liam' types above composer"
+          },
+          {
+            "at": "0.25",
+            "event": "command types into composer"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'probing artifact...' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in: look first / judge what you see / record the evidence"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Bula, Liam",
+            "topic": "BRUTALIST · SKILL: RIFF",
+            "segment": "The riff Skill",
+            "command": "I have a Remotion scene that just rendered. Before I write a single word of commentary, what does the riff skill tell me to do?",
+            "runningText": "probing artifact...",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "output": [
+              "look at it first — probe, inspect frames, keep timecodes",
+              "judge what you see — what changed, why, the trade-off",
+              "record the evidence — RIFF.md separates seen from inferred"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-11T16:10:29.693553+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 15.53,
+      "render_duration_s": 15.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 is always BrutalistHesitantWriter. Corrects the real misconception: riff generates opinions → riff generates observations. seed: 'riff-b01-2026'. lead_silence_s: 0.8 mandatory for ≥9s beat window.",
+      "narration_text": "Watch the writer walk this back. Riff does not generate opinions about visual artifacts. It generates observations. The footage is evidence — timecodes, event sequence, settled frames. The voice is the verdict. Look, then speak.",
+      "lead_silence_s": 0.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-write",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream page fades in"
+          },
+          {
+            "at": "0.15",
+            "event": "writer types 'riff' then newline"
+          },
+          {
+            "at": "0.30",
+            "event": "writer types 'generates opinions.' — the wrong framing"
+          },
+          {
+            "at": "0.55",
+            "event": "writer hesitates, deletes 'opinions', types 'observations.'"
+          },
+          {
+            "at": "0.80",
+            "event": "corrected text settles: 'riff\\ngenerates observations.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "riff\ngenerates opinions.",
+            "triggerWords": "opinions",
+            "replacementWords": "observations",
+            "seed": "riff-b01-2026",
+            "face": "serif",
+            "fontSize": 100,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5",
+            "contextTitle": "the riff skill",
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-11T16:41:18.076527+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 12.63,
+      "render_duration_s": 12.666666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK beat — skill anatomy, what the folder contains. SkillTeardownAnatomy reveals files one-by-one. ILLUSTRATE LAW: concept illustration, not UI beat.",
+      "narration_text": "A skill in Brutalist is a folder that Claude reads before it works. The riff skill lives at skills/make/riff/, with one file: SKILL.md. That file carries everything — inputs, outputs, voice, the three artifact modes, the integrity rules. No other configuration. Liam reads it before writing a single word of commentary.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "staggered-reveal",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'SKILL · ANATOMY' fades in, title 'A skill is a folder.' below"
+          },
+          {
+            "at": "0.20",
+            "event": "skills/make/ folder entry slides in"
+          },
+          {
+            "at": "0.35",
+            "event": "riff/ subfolder slides in with terracotta accent"
+          },
+          {
+            "at": "0.55",
+            "event": "SKILL.md file slides in — accent node, tagged 'doctrine'"
+          },
+          {
+            "at": "0.75",
+            "event": "callout box: 'The file is the instruction. Claude reads this before working.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "riff",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "A skill is a folder.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "riff/",
+                "accent": true
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "size": "63 lines",
+                "accent": true,
+                "tag": "doctrine"
+              }
+            ],
+            "calloutText": "The file is the instruction. Claude reads it before working.",
+            "calloutSub": "No other configuration. No API call. No prior state.",
+            "sparkLine": "The file is the instruction."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-11T16:12:16.807590+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.07,
+      "render_duration_s": 19.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "Pipeline beat — the four phases of riff. SkillTeardownPipeline draws nodes left-to-right with terracotta arrows. ILLUSTRATE LAW: concept illustration, not UI beat.",
+      "narration_text": "The pipeline is four phases. First: look — probe the artifact, inspect representative frames, keep timecodes, listen to the audio if it bears on a claim. Second: observe — record what is visible, separate from what you infer. Third: write — build each riff beat around what changed, why that matters, and the trade-off. Fourth: record — save everything in RIFF.md.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "pipeline-draw",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow and title animate in"
+          },
+          {
+            "at": "0.20",
+            "event": "INPUT node 'artifact' appears"
+          },
+          {
+            "at": "0.30",
+            "event": "terracotta arrow → LOOK phase node"
+          },
+          {
+            "at": "0.45",
+            "event": "arrow → OBSERVE phase node"
+          },
+          {
+            "at": "0.60",
+            "event": "arrow → WRITE phase node (accent: terracotta border)"
+          },
+          {
+            "at": "0.75",
+            "event": "arrow → RECORD phase node"
+          },
+          {
+            "at": "0.85",
+            "event": "OUTPUT node 'RIFF.md + film' appears"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Look. Observe. Write. Record.",
+            "inputLabel": "artifact\n(clip / scene / gameplay)",
+            "outputLabel": "RIFF.md\n+ film",
+            "phases": [
+              {
+                "label": "LOOK",
+                "desc": "probe + inspect frames\nkeep timecodes",
+                "accent": false
+              },
+              {
+                "label": "OBSERVE",
+                "desc": "visible events\nnot inferences",
+                "accent": false
+              },
+              {
+                "label": "WRITE",
+                "desc": "what changed →\nwhy → trade-off",
+                "accent": true
+              },
+              {
+                "label": "RECORD",
+                "desc": "RIFF.md\nobservation log",
+                "accent": false
+              }
+            ],
+            "footerNote": "All four phases run locally — no API calls, no network services.",
+            "sparkLine": "Look before you speak."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-11T16:13:08.985097+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 18.39,
+      "render_duration_s": 18.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 1: 'Look before writing' — the epistemic requirement. SkillTeardownMechanism with verbatim quote. ILLUSTRATE LAW: concept illustration.",
+      "narration_text": "Mechanism one: look before writing. The skill is explicit about this. For a clip, you probe it and inspect representative frames and the event sequence. For a Remotion or Manim scene, you find the existing renderer first, inspect its props and source, then render a small test fixture. For gameplay, you use actual engine capture. Never substitute a fixture, animation, screenshot slideshow, or imagined success.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "mechanism-reveal",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'SKILL · MECHANISM 1' and heading animate in"
+          },
+          {
+            "at": "0.25",
+            "event": "body text fades in: three artifact modes"
+          },
+          {
+            "at": "0.55",
+            "event": "verbatim quote card slides up from bottom"
+          },
+          {
+            "at": "0.80",
+            "event": "verdict pill 'LOOK FIRST — ALWAYS' appears in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "SKILL · MECHANISM 1",
+            "heading": "Look before writing.",
+            "body": "Clip: probe it, inspect frames, keep timecodes, listen to the audio. Scene: find the renderer with ./art scenes, inspect props, render a test fixture. Gameplay: use actual engine capture — never an imagined success.",
+            "quote": "For a clip, probe it and inspect representative frames and the event sequence. Keep timecodes. A frame can show a state; it cannot establish response time, motion, or causality.",
+            "cite": "riff SKILL.md",
+            "verdictLabel": "LOOK FIRST — ALWAYS",
+            "verdictPositive": true,
+            "sparkLine": "A frame shows state, not causality."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-11T16:13:58.734731+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 20.93,
+      "render_duration_s": 20.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "DEMO",
+      "role_note": "SELF-DEMO LAW: shows the actual ./art scenes command run during this build. This IS the 'look before writing' step applied to the toolkit scene library. ClaudeCodeBeat = real app skin showing real output. Source: demo/RUN-LOG.txt (this build, 2026-09-11).",
+      "narration_text": "Here is that 'look first' step, applied to this build. Before authoring a single beat, we ran ./art scenes to search the scene library. The top hits, RiffSplit and RiffLottery, are reel-local components — context-specific, not generic. The generic SkillTeardown scenes are what we actually needed. That search is the proof of look: if we had skipped it, we might have slated beats that already had purpose-built components sitting two directories away.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-display",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream page, white code card fades in"
+          },
+          {
+            "at": "0.15",
+            "event": "command line appears: './art scenes riff commentary observe inspect'"
+          },
+          {
+            "at": "0.35",
+            "event": "output lines appear: '6 candidates — RiffSplit, RiffLottery (reel-local)'"
+          },
+          {
+            "at": "0.60",
+            "event": "second command: '--check SkillTeardownAnatomy SkillTeardownMechanism'"
+          },
+          {
+            "at": "0.80",
+            "event": "result: 'RENDERABLE 16:9' — these are the right scenes"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "Look before writing — this build's actual scene search",
+            "code": "# Step 1: look — search the library before authoring any beat\n$ ./art scenes \"riff commentary observe inspect\"\n6 candidate(s):\n  [4.5] RiffSplit   (16:9) — reel-local, context-specific\n  [4.5] RiffLottery (16:9) — reel-local, context-specific\n  [2.0] GodotDevWorkbench  — wrong domain\n\n# Step 2: check what we actually need\n$ ./art scenes --check SkillTeardownAnatomy SkillTeardownMechanism\n  SkillTeardownAnatomy    RENDERABLE  16:9\n  SkillTeardownMechanism  RENDERABLE  16:9\n\n# Conclusion: top hits were reel-local, not generic.\n# The right scenes existed — we found them by looking first.",
+            "language": "bash",
+            "sparkLine": "Search before you author.",
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-11T16:14:30.551000+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 21.59,
+      "render_duration_s": 21.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 2: evidence-first — footage carries evidence, voice carries interpretation. SkillTeardownMechanism with verbatim quote from SKILL.md. ILLUSTRATE LAW: concept illustration.",
+      "narration_text": "Mechanism two: evidence before interpretation. The footage carries the evidence — the event, the timecode, the visible state. The voice carries the interpretation — what changed, why it matters, the trade-off it reveals. They are not the same job. A riff that narrates a list the viewer cannot see is a podcast, not a film. If the voice is doing evidence work, the evidence belongs on screen.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "mechanism-reveal",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'SKILL · MECHANISM 2' and heading animate in"
+          },
+          {
+            "at": "0.25",
+            "event": "body text fades in: two roles"
+          },
+          {
+            "at": "0.55",
+            "event": "verbatim quote card: 'Let the footage carry the evidence...'"
+          },
+          {
+            "at": "0.80",
+            "event": "verdict pill 'FOOTAGE = EVIDENCE' in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "SKILL · MECHANISM 2",
+            "heading": "Footage carries evidence. Voice carries verdict.",
+            "body": "The screen shows the event. The voice reacts to it — points at it, judges it. If the voice narrates something the viewer cannot see, the evidence belongs on screen, not in the narration.",
+            "quote": "Let the footage carry the evidence and the voice carry the interpretation. A useful riff may name a limitation or an experiment for the viewer; it need not manufacture a criticism for every beat.",
+            "cite": "riff SKILL.md",
+            "verdictLabel": "FOOTAGE = EVIDENCE",
+            "verdictPositive": true,
+            "sparkLine": "The screen is the source."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-11T16:15:20.634313+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 19.9,
+      "render_duration_s": 19.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 3: RIFF.md output format — the receipt. SkillTeardownMechanism with verbatim quote. ILLUSTRATE LAW: concept illustration.",
+      "narration_text": "The output is RIFF.md — a structured log that keeps observations separate from interpretations and hypotheses. Each row records: artifact and time range, the visible observation, the interpretation and its source if needed, the narration line, and a suggested next experiment. Critically: missing or failed renders stay in the report. You do not silently omit what did not work.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "mechanism-reveal",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'SKILL · OUTPUT' and heading animate in"
+          },
+          {
+            "at": "0.25",
+            "event": "body text fades in: five RIFF.md columns"
+          },
+          {
+            "at": "0.55",
+            "event": "verbatim quote: 'Missing or failed renders stay in the report'"
+          },
+          {
+            "at": "0.80",
+            "event": "verdict pill 'FAILURES INCLUDED' in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "SKILL · OUTPUT",
+            "heading": "RIFF.md separates the seen from the inferred.",
+            "body": "Five columns per row: artifact + time range | visible observation | interpretation (+ source) | narration | suggested next experiment. Missing renders stay in the log — never silently omitted.",
+            "quote": "Record RIFF.md: artifact + time range | visible observation | interpretation and its source, if needed | narration | suggested next experiment. Separate observations from source-code explanations and hypotheses. Missing or failed renders stay in the report; do not silently omit them.",
+            "cite": "riff SKILL.md",
+            "verdictLabel": "FAILURES INCLUDED",
+            "verdictPositive": true,
+            "sparkLine": "Separate the seen from the inferred."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-11T16:16:10.933755+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 20.57,
+      "render_duration_s": 20.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "DESIGN_TELL",
+      "role_note": "Design tell: 'Never call a scripted route a human playtest.' The integrity rule baked into the spec. The Teardown moment: what this design gets right, where it bites. SkillTeardownMechanism.",
+      "narration_text": "The design tell is this line — 'never call a scripted route a human playtest or infer fun, fairness, or accessibility from it.' That is not a style preference. That is an epistemic rule encoded directly in the spec. What it gets right: it stops Claude from manufacturing confident claims about human experience from deterministic code. Where it bites: a riff on a game that has not been playtested cannot reach the most interesting question — is it fun? The skill is honest about that limit instead of faking past it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "mechanism-reveal",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'SKILL · DESIGN TELL' and heading animate in"
+          },
+          {
+            "at": "0.25",
+            "event": "body text fades in: what it gets right, where it bites"
+          },
+          {
+            "at": "0.55",
+            "event": "verbatim quote card: the integrity rule verbatim"
+          },
+          {
+            "at": "0.80",
+            "event": "verdict pill 'HONEST BY DESIGN' in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "SKILL · DESIGN TELL",
+            "heading": "Honest by design.",
+            "body": "Gets right: stops Claude from manufacturing confident claims about human experience from deterministic code. Bites: a riff on an unplaytested game cannot reach the most interesting question. The skill names the limit instead of faking past it.",
+            "quote": "Never call a scripted route a human playtest or infer fun, fairness, or accessibility from it.",
+            "cite": "riff SKILL.md",
+            "verdictLabel": "HONEST BY DESIGN",
+            "verdictPositive": true,
+            "sparkLine": "The spec is an integrity rule."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-11T16:17:01.370834+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 26.35,
+      "render_duration_s": 26.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "Verdict beat — ClaudeVerdictArtifact. Per ILLUSTRATE LAW, verdict is a bookend where the Claude UI is appropriate. Recapitulates the four design principles without asserting new facts.",
+      "narration_text": "The verdict. Riff is the skill that earns its claims. Look first — probe the artifact, inspect frames, keep timecodes. Evidence second — footage carries the evidence, voice carries the verdict. Record everything — RIFF.md keeps observations separate from inferences, failures included. And: never call a scripted route a human playtest. Four rules. One epistemic discipline.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-reveal",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream stage, white artifact card fades in"
+          },
+          {
+            "at": "0.20",
+            "event": "artifact title 'riff' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "four verdict lines cascade in staggered"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "riff",
+            "artifactHeading": "The riff Skill — four design principles",
+            "brandLabel": "@HumanitariansAI",
+            "artifactLines": [
+              "look first — probe the artifact, inspect frames and event sequence, keep timecodes",
+              "evidence before interpretation — footage carries evidence, voice carries the verdict",
+              "RIFF.md separates observations from inferences; failures are included, never omitted",
+              "honest by design — a scripted route is never called a human playtest"
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-11T16:18:24.427182+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 19.11,
+      "render_duration_s": 19.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — second-to-last beat is always ClaudeComposerAsk with greeting 'Your Turn'. Liam reads the prompt aloud and discusses it. The prompt invokes the riff skill on the viewer's own material. SCAFFOLDED TASK: includes rubric for evaluating the output.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at any Remotion scene in your brutalist.art toolkit. Run './art scenes SceneName' and read the props. Render a small test clip. Sample frames with ffmpeg at fifteen, fifty, and eighty-five percent of its duration. Then write a RIFF.md: artifact and time range, visible observation, your interpretation, the narration line, and one suggested next experiment. The rubric: did you separate what you saw from what you inferred? Does every claim in your narration have a corresponding frame or timecode? If not, the evidence is still missing — go back and look.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "composer card fades in, greeting 'Your Turn' above"
+          },
+          {
+            "at": "0.20",
+            "event": "prompt types into composer — the riff invocation"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude...' appears"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Apply the riff skill to a scene you own",
+            "command": "I have a Remotion scene called [SceneName] in my brutalist.art toolkit. Apply the riff skill: (1) find it with './art scenes [SceneName]' and read the props; (2) render a small test clip with 'python3 runtime/scripts/remotion_scenes.py'; (3) sample frames with ffmpeg at 15%, 50%, and 85% of its duration; (4) write RIFF.md — artifact + time range | visible observation | interpretation | narration line | suggested next experiment. Separate what you saw from what you inferred. Flag any claim in your narration that lacks a corresponding frame or timecode.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "output": [
+              "RIFF.md with five-column observation log",
+              "every claim tied to a timecode or frame",
+              "failures included — nothing silently omitted"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-11T16:19:52.296949+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 32.23,
+      "render_duration_s": 32.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-11T12:42:10"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — title restate, sign off. ClaudeTitleOutro hardcodes @NikBearBrown per OUTRO-LOCK.md (claude-liam reel). Narration signs off 'Liam, in for Bear' per IN-FOR-BEAR LAW. audio_policy: silence under the jingle — the outro card is silent.",
+      "narration_text": "The riff Skill. Liam, in for Bear, for Humanitarians AI.",
+      "audio_policy": "silence",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "class": "SHOW",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "cream card fades in, title 'The riff Skill.' in large serif"
+          },
+          {
+            "at": "0.40",
+            "event": "@NikBearBrown handle appears below (hardcoded per OUTRO-LOCK.md)"
+          },
+          {
+            "at": "0.60",
+            "event": "mascot animation plays — slug-seeded"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The riff Skill.",
+            "slug": "claude-liam-brutalist-skill-riff"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-11T16:20:09.386663+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": null,
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-11T12:42:10"
+      }
+    }
+  ]
+}

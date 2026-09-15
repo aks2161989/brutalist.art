@@ -1,0 +1,744 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: remotion_scenes.py",
+    "slug": "claude-liam-brutalist-runtime-remotion-scenes",
+    "topic": "BRUTALIST TOOLKIT · UTILITY",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect": "16:9",
+    "captions": false,
+    "playlist": "Brutalist",
+    "channel_handle": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "order": 53,
+    "run_id": "5886489043694263be44af6a46ffbcaf",
+    "build": {
+      "at": "2026-09-14T10:48:18",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN — ASK",
+      "lane": "BOOKEND",
+      "narration_text": "Sawadee — this is Liam, in for Bear. remotion_scenes.py is the Brutalist pipeline's Remotion runner. It looks like a thin shell around npx remotion render. It's not. It's a gated, provenance-stamping layer that makes scene rendering safe, repeatable, and traceable for every beat in the reel.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B00.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "ASK",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Cream page, serif greeting 'Sawadee, Liam' above the composer"
+          },
+          {
+            "at": "0.10",
+            "event": "Command types itself in"
+          },
+          {
+            "at": "0.60",
+            "event": "Terracotta send button arms"
+          },
+          {
+            "at": "0.75",
+            "event": "Three result lines stagger in — the ask lands answered"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Sawadee, Liam",
+            "topic": "BRUTALIST TOOLKIT · UTILITY",
+            "segment": "Brutalist Utility: remotion_scenes.py",
+            "command": "Explain remotion_scenes.py. What does it do, and when do I use it instead of npx remotion render directly?",
+            "runningText": "reading the source…",
+            "folderLabel": "@HumanitariansAI",
+            "output": [
+              "reads beat_sheet.json for shot.remotion.pattern entries",
+              "renders only slate beats — not every scene, not manually",
+              "stamps provenance, updates consumer index, exits 0 on success"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-14T06:26:26.657236+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.28,
+      "render_duration_s": 16.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF — EXECUTIVE SUMMARY",
+      "lane": "BOOKEND",
+      "lead_silence_s": 0.8,
+      "narration_text": "remotion_scenes.py renders only pattern-tagged slate beats — not every scene, not anything you point it at. It's a gated provenance-stamper: it reads the beat sheet, checks what's already filled, renders the gaps, then writes the receipts.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 14,
+      "audio_file": "mp3/beat-B01.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "BLUF",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Cream page, writer begins typing the first draft"
+          },
+          {
+            "at": "0.35",
+            "event": "ALL is typed in terracotta — about to be deleted"
+          },
+          {
+            "at": "0.50",
+            "event": "ALL erased, 'only pattern-tagged slates' typed in"
+          },
+          {
+            "at": "0.70",
+            "event": "thin erased, 'gated provenance-stamper' typed in"
+          },
+          {
+            "at": "0.85",
+            "event": "Final corrected text holds steady"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Renders ALL Remotion beats.\nFilled skip; blank ones render.\nStamps the beat, thin: no stray renders.",
+            "triggerWords": "ALL,thin",
+            "replacementWords": "only pattern-tagged,gated",
+            "seed": "53",
+            "fontSize": 72,
+            "lineSpacing": 2.6,
+            "align": "center",
+            "charMs": 25
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-14T07:01:10.115577+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 12.71,
+      "render_duration_s": 12.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "lane": "BODY",
+      "narration_text": "Four steps, one pass. First, detect: slate_resolves checks each beat — if media slash BXX dot mp4 already exists, skip it. Second, render: npx remotion render, scale two, CRF sixteen. Third, extend: the last frame freeze-holds to match the measured audio duration. Fourth, stamp: provenance is written back into beat_sheet.json, and the consumer index is updated.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 26,
+      "audio_file": "mp3/beat-B02.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "DIAGRAM",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Eyebrow and title animate in"
+          },
+          {
+            "at": "0.15",
+            "event": "INPUT node appears: beat_sheet.json + pattern beats"
+          },
+          {
+            "at": "0.30",
+            "event": "detect phase node appears"
+          },
+          {
+            "at": "0.45",
+            "event": "render phase node appears"
+          },
+          {
+            "at": "0.60",
+            "event": "extend phase node appears"
+          },
+          {
+            "at": "0.75",
+            "event": "stamp phase node appears"
+          },
+          {
+            "at": "0.85",
+            "event": "OUTPUT node appears: media/BXX.mp4 + stamped JSON + consumers.json"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "title": "Four steps, one pass.",
+            "inputLabel": "beat_sheet.json\n+ pattern beats",
+            "outputLabel": "media/BXX.mp4\n+ stamped JSON\n+ consumers.json",
+            "phases": [
+              {
+                "label": "detect",
+                "desc": "slate_resolves() — is beat unfilled?",
+                "accent": false
+              },
+              {
+                "label": "render",
+                "desc": "npx remotion render, --scale=2, --crf=16",
+                "accent": true
+              },
+              {
+                "label": "extend",
+                "desc": "freeze last frame → audio duration",
+                "accent": false
+              },
+              {
+                "label": "stamp",
+                "desc": "provenance back to beat_sheet.json",
+                "accent": false
+              }
+            ],
+            "footerNote": "consumers.json tracks which patterns appear in which reels",
+            "sparkLine": "Four steps. One safe pass."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-14T06:27:20.590579+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.78,
+      "render_duration_s": 21.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "THE ENTRY TICKET",
+      "lane": "BODY",
+      "narration_text": "The script ignores every beat that doesn't have shot dot remotion dot pattern set. That single field is the entry ticket. No pattern, no render — the beat stays a slate. The pattern also selects which Remotion composition to render by name.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B03.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "CODE",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Code card slides in, filename beat_sheet_example.json"
+          },
+          {
+            "at": "0.15",
+            "event": "Lines reveal staggered — JSON structure of a beat's shot block"
+          },
+          {
+            "at": "0.70",
+            "event": "pattern line is visible in terracotta context — the entry ticket"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "beat_sheet_example.json — shot block",
+            "code": "\"shot\": {\n  \"type\": \"GRAPHIC\",\n  \"source\": \"remotion\",\n  \"remotion\": {\n    \"pattern\": \"ClaudeComposerAsk\",\n    \"props\": {\n      \"greeting\": \"Hola, Liam\",\n      \"command\": \"...\"\n    }\n  }\n}",
+            "sparkLine": "Pattern present → this beat renders."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-14T06:27:44.630582+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 13.87,
+      "render_duration_s": 13.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "THE RENDER CORE",
+      "lane": "BODY",
+      "narration_text": "render_beat builds this command. npx remotion render, the entry point, the composition name, a temp candidate path, and three quality flags. Scale two supersamples the 1920 by 1080 composition to true 4K. Image-format png removes Remotion's default JPEG quality ceiling on flat brand color. CRF sixteen gives a clean master. Props are written to a temp file and passed with --props.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B04.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "CODE",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Code card slides in, filename render_beat.py"
+          },
+          {
+            "at": "0.15",
+            "event": "Lines reveal: npx remotion render command assembly"
+          },
+          {
+            "at": "0.50",
+            "event": "--scale=2 line visible — supersampling call"
+          },
+          {
+            "at": "0.65",
+            "event": "--image-format=png line visible"
+          },
+          {
+            "at": "0.75",
+            "event": "--crf=16 and --props lines visible"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "render_beat.py — the command",
+            "code": "cmd = [\"npx\", \"remotion\", \"render\",\n       ENTRY, pattern, str(candidate),\n       f\"--props={props_path}\",\n       \"--concurrency=1\",\n       \"--scale=2\",\n       \"--image-format=png\",\n       \"--crf=16\"] + browser_flags()",
+            "sparkLine": "--scale=2 → supersampled text."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-14T06:28:09.698949+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.91,
+      "render_duration_s": 22.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MATCHING THE AUDIO CLOCK",
+      "lane": "BODY",
+      "narration_text": "Remotion compositions end when the animation ends — at a fixed frame count. Audio beats can be longer. Without intervention, compile.py would slow-motion stretch a short clip to fill extra time. extend_clip_to_duration prevents that: it appends freeze-frames by cloning the last frame with ffmpeg's tpad filter, holding the clip exactly as long as the measured audio duration.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B05.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "CODE",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Code card slides in, filename extend_clip_to_duration.py"
+          },
+          {
+            "at": "0.15",
+            "event": "ffmpeg command lines reveal"
+          },
+          {
+            "at": "0.45",
+            "event": "tpad=stop_mode=clone line visible — freeze mechanism"
+          },
+          {
+            "at": "0.65",
+            "event": "-t duration line visible — holds to exact length"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "extend_clip_to_duration.py — freeze-hold",
+            "code": "cmd = [FFMPEG, \"-y\", \"-i\", str(out),\n       \"-vf\",\n       f\"tpad=stop_mode=clone\"\n       f\":stop_duration={duration_s:.3f}\",\n       \"-t\", f\"{duration_s:.3f}\",\n       \"-c:v\", \"libx264\",\n       \"-preset\", \"medium\",\n       \"-crf\", \"12\",\n       \"-pix_fmt\", \"yuv420p\",\n       str(tmp)]",
+            "sparkLine": "Freeze, don't stretch."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-14T06:28:34.658090+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.99,
+      "render_duration_s": 21.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "THREE GATES",
+      "lane": "BODY",
+      "narration_text": "Three gates run before any beat renders. validate_project checks the beat sheet is structurally sound. validate_approvals is the fellows safety gate — a reel that requires approval cannot render until it has one. slate_resolves is the idempotency check: media file already there and no --force flag? Skip. Reruns are always safe.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B06.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "CARD",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Title 'Three Gates' reveals"
+          },
+          {
+            "at": "0.20",
+            "event": "validate_project box appears — schema sanity"
+          },
+          {
+            "at": "0.45",
+            "event": "validate_approvals box appears — fellows safety"
+          },
+          {
+            "at": "0.70",
+            "event": "slate_resolves box appears — idempotency check"
+          }
+        ],
+        "remotion": {
+          "pattern": "FormBCard",
+          "props": {
+            "title": "Three gates before any render.",
+            "items": [
+              {
+                "label": "validate_project",
+                "sub": "beat sheet schema must be structurally sound"
+              },
+              {
+                "label": "validate_approvals",
+                "sub": "fellows reel requires approval before rendering"
+              },
+              {
+                "label": "slate_resolves",
+                "sub": "media file exists + no --force? skip silently"
+              }
+            ]
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-14T07:13:07.697104+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.83,
+      "render_duration_s": 17.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:FormBCard",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "DEMO: --list",
+      "lane": "BODY",
+      "narration_text": "The --list flag shows every beat carrying shot dot remotion dot pattern — without rendering anything. State is SLATE or filled. B00 and B01 are slates. B02 shows as filled because media slash B02 dot mp4 exists on disk. B03 has no pattern field and doesn't appear at all. This is the safe way to audit a reel before a long render pass.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B07.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "CODE",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Terminal output card slides in — --list command and its output"
+          },
+          {
+            "at": "0.20",
+            "event": "B00 SLATE line visible"
+          },
+          {
+            "at": "0.40",
+            "event": "B01 SLATE line visible"
+          },
+          {
+            "at": "0.60",
+            "event": "B02 filled line visible — media file exists on disk"
+          },
+          {
+            "at": "0.80",
+            "event": "Spark line: 'No render, just the plan.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "terminal — --list output",
+            "code": "$ python3 scripts/remotion_scenes.py demo_reel/ --list\n\n  B00   SLATE  pattern=ClaudeComposerAsk  (reel-local)\n  B01   SLATE  pattern=FormACard          (reel-local)\n  B02   filled pattern=ClaudeTitleOutro   (reel-local)\n\n# B03 has no shot.remotion.pattern — not listed at all",
+            "sparkLine": "No render, just the plan."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-14T06:30:07.740544+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.78,
+      "render_duration_s": 21.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FAILURE MODE",
+      "lane": "BODY",
+      "narration_text": "When npx remotion render exits nonzero, render_beat returns a FAIL: string with the pattern name and the last 800 bytes of stderr. The beat goes into the failures list. The script continues to the next beat. At the end, failures go to stderr and exit code two is returned. The previous media slot is never overwritten — atomic_json and os.replace keep it clean. Fix the composition, run again with --force --only BXX.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 26,
+      "audio_file": "mp3/beat-B08.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "MECHANISM",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Eyebrow FAILURE MODE + heading appear"
+          },
+          {
+            "at": "0.20",
+            "event": "Body text reveals: FAIL: return path"
+          },
+          {
+            "at": "0.55",
+            "event": "Quote block appears: PIPELINE-SAFETY.md citation"
+          },
+          {
+            "at": "0.80",
+            "event": "RECOVERY verdict pill appears"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "FAILURE MODE",
+            "heading": "Fail loud, preserve the last good clip.",
+            "body": "render_beat() returns \"FAIL: <pattern>\\n<last 800 bytes of stderr>\". Beat added to failures list. Script continues. At the end: failures → stderr, exit code 2. os.replace only runs on success — no overwrite on failure.",
+            "quote": "A failed forced render does not replace the previous media slot.",
+            "cite": "docs/PIPELINE-SAFETY.md",
+            "verdictLabel": "RECOVERY: --force --only BXX",
+            "verdictPositive": true,
+            "sparkLine": "Fix the composition. Run again."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-14T06:30:52.898201+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.93,
+      "render_duration_s": 22.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "lane": "BOOKEND",
+      "narration_text": "The verdict: remotion_scenes.py is the safe boundary between your beat sheet and Remotion. You get supersampled 4K output, audio-clock-matched clips, idempotent reruns, approval gates, and failure isolation — none of which npx remotion render gives you on its own. Run it before compile.py, never after.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B09.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "VERDICT",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Artifact page animates in with title and heading"
+          },
+          {
+            "at": "0.20",
+            "event": "Verdict lines stagger in one by one"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "remotion_scenes.py",
+            "artifactHeading": "Verdict: Gated, not raw.",
+            "artifactLines": [
+              "Run: python3 runtime/scripts/remotion_scenes.py <REEL>",
+              "Only pattern-tagged slate beats render — filled beats skip",
+              "--scale=2 + PNG frames → true 4K supersampled text",
+              "Freeze-hold matches audio clock — no slow-motion stretch",
+              "--list audits without rendering; --only BXX targets one beat",
+              "Exit 2 on any failure; previous media preserved"
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-14T06:32:06.790259+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.43,
+      "render_duration_s": 17.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "HANDOFF — YOUR TURN",
+      "lane": "BOOKEND",
+      "narration_text": "Your turn. Paste this prompt into Claude with your reel path. Ask it to run remotion_scenes.py, then read the consumer index and confirm the pattern was recorded. What you should see: the command, SLATE or filled status lines, the updated consumers.json entry, and exactly what --force would re-render versus skip.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B10.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "HANDOFF",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Cream page, 'Your turn.' greeting above the composer"
+          },
+          {
+            "at": "0.15",
+            "event": "Prompt types itself in the composer"
+          },
+          {
+            "at": "0.70",
+            "event": "Three expected output lines appear below"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST TOOLKIT · UTILITY",
+            "segment": "Brutalist Utility: remotion_scenes.py",
+            "command": "I have a reel at ~/my-reel/ with some beats already filled and some slate. Run remotion_scenes.py to fill only the empty beats, then show me the consumer index to confirm the pattern was logged. What flags do I use and what does the output tell me?",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@HumanitariansAI",
+            "output": [
+              "python3 runtime/scripts/remotion_scenes.py ~/my-reel/",
+              "check _bench/consumers.json for the pattern entry",
+              "use --force --only BXX to re-render a single failed beat"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-14T06:33:11.806985+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.34,
+      "render_duration_s": 17.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T10:48:18"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "lane": "BOOKEND",
+      "narration_text": "Brutalist Utility: remotion_scenes.py. Liam, in for Bear.",
+      "audio_policy": "silence",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 6,
+      "audio_file": "mp3/beat-B11.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "scene_type": "OUTRO",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Title card fades in: 'Brutalist Utility: remotion_scenes.py'"
+          },
+          {
+            "at": "0.30",
+            "event": "@NikBearBrown handle appears below"
+          },
+          {
+            "at": "0.55",
+            "event": "Mascot animates under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Utility: remotion_scenes.py.",
+            "slug": "claude-liam-brutalist-runtime-remotion-scenes"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-14T06:33:26.907981+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 6.0,
+      "render_duration_s": 6.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-14T10:48:18"
+      }
+    }
+  ]
+}

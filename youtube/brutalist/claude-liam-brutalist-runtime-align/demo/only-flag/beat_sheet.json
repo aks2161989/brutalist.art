@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "align.py --only fixture",
+    "slug": "align-demo3",
+    "fps": 24,
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx"
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "narration_text": "One clock, three consumers.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 2.47
+    },
+    {
+      "beat_id": "B01",
+      "narration_text": "The Remotion plane, the SRT publisher, the karaoke overlay.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 4.35
+    },
+    {
+      "beat_id": "B02",
+      "narration_text": "One narration lands three ways.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 2.77
+    }
+  ]
+}

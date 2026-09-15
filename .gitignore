@@ -51,3 +51,20 @@ art.pre-scene-search
 # generated per-render: maps components -> the reels that used them.
 # Records reel paths that live OUTSIDE this repo; never ship it.
 /runtime/remotion/_bench/
+
+# Local Brutalist playlist factory: state, Claude logs, dependency snapshots.
+/.repoloop/
+# Film-as-code: commit recipes and evidence; hand off large media through Drive.
+/youtube/brutalist/**/exports/
+/youtube/brutalist/**/clips/
+/youtube/brutalist/**/audio/
+/youtube/brutalist/**/mp3/
+/youtube/brutalist/**/*.mp3
+/youtube/brutalist/**/*.mp4
+/youtube/brutalist/**/*.mov
+/youtube/brutalist/**/*.wav
+/youtube/brutalist/**/*.m4a
+/youtube/brutalist/**/*.webm
+/youtube/brutalist/**/_build/
+/youtube/brutalist/**/_stale/
+/youtube/brutalist/**/_previous-build/

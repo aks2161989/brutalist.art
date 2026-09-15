@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "738dc432a7ab423fae14aaca169b73fd",
+  "source_sha256": "cd91c7629215668fc384f7ede73832e62d91423c676f62711f3a3cfa17cc9da7",
+  "beat_sheet_sha256": "8f9b44579415fc5cec38aae839d43adabfc5e604f4b064f613cceb169c1c4896",
+  "video_sha256": "bc8acd5074866633ae8626c11e0ef134c2fbe527121049bca060bedd9af57f46",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-sheet.png", "sha256": "35fe6088ce1130422228be596a843fe462131515d32c8a9fc30ad3ac08e928b4"},
+    {"path": "_qc/frames/B00-p15.png", "sha256": "1ce8e5f12e121094dc08f676ecd7cf55d4a89c0df256d4ba17ce7cb635b5f2e6"},
+    {"path": "_qc/frames/B00-p50.png", "sha256": "7b4f81555f132cc8591af3b7c67b6873d30d9fec928f45cff6d916f650c336b6"},
+    {"path": "_qc/frames/B00-p85.png", "sha256": "3cb11641b24f77c9cf216d569160bee685abbed090f4c30a5c25961178881cee"},
+    {"path": "_qc/frames/B01-p50.png", "sha256": "e392268c0ed1c8bfcca32b628875de87d09e159729dda482fe948c535b4b9bbc"},
+    {"path": "_qc/frames/B01-p85.png", "sha256": "1f371f30c09e345832b7f55ee43b3ca91ea09520950b806a3520aa28827a0866"},
+    {"path": "_qc/frames/B04-p50.png", "sha256": "82ad1a0ecb84f37b95277268e3dc106bb6e95478687793586cf9224180480e96"},
+    {"path": "_qc/frames/B05-p50.png", "sha256": "916643154aab42a164aca5bdce564967284a96d4d23de2be0de5be2b37c36855"},
+    {"path": "_qc/frames/B08-p50.png", "sha256": "05f1f5b6e118763fe5b67279c7adb3cc33fac759edff90a039e5310b34d2adf3"},
+    {"path": "_qc/frames/B09-p50.png", "sha256": "6e1fd43f81f4855b8ab1996b195575496a109f1fdf5f0896132680bfb5332952"},
+    {"path": "_qc/frames/B11-p50.png", "sha256": "64a9fad7d5603a5a4b2455dcc60e7165ae1ba34cc342f77e7f9115adbed97ba1"},
+    {"path": "_qc/frames/B11-p85.png", "sha256": "8166a4ba4787535ba415304590b1816f5d85645b592479fdd39482b566c2892d"}
+  ],
+  "notes": "Re-verified under run_id 738dc432a7ab423fae14aaca169b73fd (2026-09-12). Export byte-identical to original build (SHA-256 bc8acd50…). Parent vertical beat sheet current SHA-256 07b56335…; retained beats B00/B01/B04/B05/B08/B09/B11 are unchanged from the parent (confirmed by content comparison). Container 155.375 s, video stream 155.375 s, audio stream 155.375 s — all strictly under 180 s. Dimensions 2160×3840. Frame hashes re-verified against _qc/frames/ on disk — all 12 entries match. Whole-beat cut of the 12-beat vertical parent: kept B00 (ClaudeComposerAsk916), B01 (BrutalistHesitantWriter916), B04 (SkillTeardownMechanism916 · ACT 1), B05 (ACT 2), B08 (FALSIFIABILITY ACT 5), B09 (ClaudeVerdictArtifact916), B11 (ClaudeTitleOutro916) — 7 beats, 155.375 s; dropped B02 anatomy, B03 pipeline, B06 pool curation, B07 drawOn earned, B10 Your-Turn. No narration rewritten, no audio regenerated, no visuals altered. Short is native 2160×3840, Kokoro am_onyx, no burned-in captions. 0 blockers. 0 majors. Human review by Bear pending."
+}

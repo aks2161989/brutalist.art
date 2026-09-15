@@ -1,0 +1,852 @@
+{
+  "metadata": {
+    "title": "The fashionista Skill",
+    "slug": "claude-liam-brutalist-skill-fashionista",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "channel_title": "@HumanitariansAI",
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "ca12337c8e2c43d0a0add834b390efd7",
+    "episode_id": "skill-fashionista",
+    "order": 10,
+    "note": "Skill teardown of skills/make/fashionista/SKILL.md (SOURCE-SNAPSHOT SHA-256 22614f44…; supervisor's episode.source_sha256 1b129e85…). The reel explains that `fashionista` is an EXPERIMENT in AI describability — not a fashion series. It teaches the three-beat structure (INTRO / VIDEO / OUTRO), the GATE ASK rule (never name the garment), VIDEO IS THE MASTER CLOCK (inverts audio-first law), STATED CONFIDENCE, the two error sources (generator vs describer), and the CALLS.json ledger that closes the correction loop. No fashion demo is run — this teardown is source-backed per SELF-DEMO LAW's feasibility fallback. Uses ClaudeTitleOutro (OUTRO-LOCK.md locked @NikBearBrown handle); @HumanitariansAI is the playlist folder chip inside composer beats. Kokoro am_onyx throughout — free, local. No captions.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/fashionista/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "fashionista",
+      "skill teardown",
+      "AI describability",
+      "confidence",
+      "Claude",
+      "Humanitarians AI",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T10:16:18",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hallo, this is Liam, in for Bear. Today we tear down the fashionista skill. Read the name and you expect a fashion series. It is not. It is an experiment about AI describability, running one trial per episode, and you are the scoring function. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hallo, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the fashionista skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hallo, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The fashionista Skill",
+            "command": "What is the `fashionista` skill? Read skills/make/fashionista/SKILL.md and tell me what it is really testing.",
+            "runningText": "reading skills/make/fashionista/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "an experiment, not a fashion series",
+              "the audience is the scoring function",
+              "hedging is the content, not weakness"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T14:04:46.651688+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 15.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the misconception ('tutorial') to the claim ('experiment'). Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read — the one the name invites — is that this is a fashion tutorial. It is not. Fashionista is a confidence experiment. Every episode is one trial. You are the judge. The whole machine exists to log one row of guesses and their confidences, then wait for you to correct them.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'Fashionista is a'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 'fashion tutorial.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'tutorial' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'tutorial' deletes and 'experiment' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 3: 'Every episode is one trial.'"
+          },
+          {
+            "at": "0.90",
+            "event": "line 4: 'You are the judge.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Fashionista is a\nfashion tutorial.\nEvery episode is one trial.\nYou are the judge.",
+            "triggerWords": "tutorial",
+            "replacementWords": "experiment",
+            "seed": "fashionista-bluf-2026-35c7a846",
+            "face": "serif",
+            "fontSize": 148,
+            "lineSpacing": 1.2,
+            "align": "center",
+            "charMs": 28,
+            "jitter": 4,
+            "mistakeRate": 3,
+            "hesitateWithin": 1,
+            "hesitateBetween": 8,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T14:05:35.029341+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.23,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 15.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — anatomy of the fashionista skill folder plus the artifacts a trial produces.",
+      "narration_text": "First, the anatomy. A skill in this toolkit is a folder Claude reads before working. The fashionista folder is short by design. SKILL.md is the doctrine — three beats, eight gates, one register. The gates enforce the experiment: full-frame video, no on-screen text, subject-only narration, an ask that never names the garment. And the artifact each day writes is the same shape every time — a CALLS.json ledger, one row per garment term claimed, with a verdict slot waiting for a human to fill in.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'The fashionista folder.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.82",
+            "event": "callout box lands: 'the artifact is the CALLS.json row'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "fashionista",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "The fashionista folder.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/fashionista/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "size": "doctrine · 3 beats · 8 gates",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "books/fashionista/<date>/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "CALLS.json",
+                "size": "the ledger — one row per garment term"
+              },
+              {
+                "indent": 1,
+                "icon": "🎞",
+                "name": "media/B01.mp4",
+                "size": "the source clip"
+              },
+              {
+                "indent": 1,
+                "icon": "🎞",
+                "name": "media/B02.mp4",
+                "size": "the 9:16 portrait clip"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "kokoro am_onyx · free · local"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "never publishes — verdict-loop lives in the comments"
+              }
+            ],
+            "calloutText": "<b>The artifact is the CALLS.json row.</b> The reel exists to produce it — one term, one confidence, a verdict slot waiting for you.",
+            "sparkLine": "The gate is the experiment."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T14:06:23.636380+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 27.01,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 27.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — the three-beat structure INTRO / VIDEO / OUTRO. Input: a source clip. Output: one trial + a CALLS row.",
+      "narration_text": "The structure of one episode is short and rigid. INTRO, two to three seconds — the Claude composer asks what someone is wearing, never naming the garment. THE VIDEO, full frame — the source clip plays and Liam's commentary rides on top. OUTRO, two to three seconds — the title card holds while a spoken correction ask goes out to the audience. Total runtime equals clip duration plus about five seconds. Video is the master clock — the reel does not stretch, does not pad, does not slow.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Three beats. Clip plus five.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'source video' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "three phase nodes reveal, 'THE VIDEO' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'one trial · one CALLS row' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Three beats. Clip plus five.",
+            "inputLabel": "source video",
+            "outputLabel": "one trial · one CALLS row",
+            "phases": [
+              {
+                "label": "INTRO",
+                "desc": "composer ask · never names garment"
+              },
+              {
+                "label": "THE VIDEO",
+                "desc": "full frame · call on top · corner stamp only",
+                "accent": true
+              },
+              {
+                "label": "OUTRO",
+                "desc": "title card · spoken correction ask"
+              }
+            ],
+            "footerNote": "Total runtime = clip + ~5 s. Video is the master clock — no stretch, no pad, no slow.",
+            "sparkLine": "Clip drives. Words fit."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T14:07:11.953198+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 25.47,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 25.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — GATE ASK. The cold-open ask never contains the garment name. This is the sharpest, most enforceable rule in the skill.",
+      "narration_text": "First design decision, and it is the sharpest. GATE ASK — the cold-open ask never contains the garment name. The default is `Hey Claude, what is she wearing?` or `Hey Claude, what is he wearing?` — that pattern, nothing more. If the ask text contains any garment term from the beat sheet, the build fails. The naming is the AI's job, on camera. That rule guarantees the video is a real test — the answer cannot leak into the question.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'GATE ASK.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: default ask pattern + failure rule"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'the ask cannot leak the answer'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "GATE ASK.",
+            "body": "Default ask: `Hey Claude, what is she wearing?` or `Hey Claude, what is he wearing?` — that pattern only. If the ask text matches any garment term in the beat sheet, the build FAILS. The pattern lives in the title and in the first two lines of the description too.",
+            "quote": "NEVER name the garment in the ask. The naming is the AI's job, on camera.",
+            "cite": "fashionista SKILL.md · Structure / Gates table",
+            "verdictLabel": "the ask cannot leak the answer",
+            "verdictPositive": true,
+            "sparkLine": "The question stays clean."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T14:08:00.121393+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.06,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 21.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Design decision 2 — VIDEO IS THE MASTER CLOCK. Inverts the parent explainer's audio-first law.",
+      "narration_text": "Second design decision. Every other skill in this toolkit is audio-first — the narration is generated, then the visuals conform to it. Fashionista inverts that law and says so in every build log. The video is the master clock. Extract frames first, build a motion timeline — what happens at what second. Write the call against that timeline. And if the narration runs long — do not stretch the clip, do not loop it, do not freeze-pad it, do not slow it. Cut words. The video does not move.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Video is the master clock.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: no stretch · no loop · no freeze · no slow"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'inverts audio-first — deliberately'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "Video is the master clock.",
+            "body": "Extract frames → build a MOTION TIMELINE (what happens at what second) → write the call against that timeline. Never stretch · never loop · never freeze-pad · never slow. If the call runs long, CUT WORDS — the video does not move.",
+            "quote": "Video is the master clock. If the narration runs long: CUT WORDS. The video does not move.",
+            "cite": "fashionista SKILL.md · VIDEO IS THE MASTER CLOCK",
+            "verdictLabel": "inverts audio-first, on purpose",
+            "verdictPositive": true,
+            "sparkLine": "Clip fixed. Words flex."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T14:08:48.737669+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 24.75,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 24.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — STATED CONFIDENCE. Sports-announcer register. Hedging is content.",
+      "narration_text": "Third decision. The register is sports announcer with stated confidence. Present tense. Short sentences. Energy. And every garment term is spoken with a confidence the viewer can hear. `That's a sherwani — I'm confident.` Or: `I want to say lehenga, but the length is fighting me on that.` Hedging is not weakness. It is the content. And when the announcer catches themselves reaching for the famous word over the precise one — lehenga, kimono, kaftan, blazer — they name that failure mode out loud. That is the honest signal the audience is scoring.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Stated confidence.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: two example calls (confident vs hedged)"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'hedging is data'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "Stated confidence.",
+            "body": "\"That's a sherwani — I'm confident.\"   vs.   \"I want to say lehenga, but the length is fighting me on that.\"  When the announcer reaches for the famous word (lehenga · kimono · kaftan · blazer) over the precise one, they name the failure mode on camera.",
+            "quote": "Hedging is content, not weakness. A call the announcer is unsure of is the most interesting moment.",
+            "cite": "fashionista SKILL.md · The call — sports announcer with stated confidence",
+            "verdictLabel": "hedging is data",
+            "verdictPositive": true,
+            "sparkLine": "Uncertainty is the subject."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T14:09:37.730182+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 26.9,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 26.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FALSIFIABILITY",
+      "role_note": "Falsifiability — two stacked error sources. GENERATOR ERROR vs DESCRIBER ERROR. The move nobody else in AI-video makes.",
+      "narration_text": "Falsifiability, and this is where the skill earns its keep. These are generated garments. So a wrong episode can be wrong in two distinct ways. Generator error — the render shows something no real garment of that type does. The image is wrong. Describer error — the render is coherent and the name is wrong. The call is wrong. When they are separable, the announcer says which one. When they are not, they say that too. Nobody else in AI video separates those two lanes, and that is the most interesting thing this series does.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow FALSIFIABILITY · ACT 4 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Two stacked errors.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: generator vs describer, plus the not-separable case"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'nobody else does this'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "FALSIFIABILITY · ACT 4",
+            "heading": "Two stacked errors.",
+            "body": "GENERATOR ERROR — the render shows something no real garment of that type does. The IMAGE is wrong.  DESCRIBER ERROR — the render is coherent and the name is wrong. The CALL is wrong.  When separable, say which. When not, say that too.",
+            "quote": "Nobody else is doing this and it is the most interesting thing the series does.",
+            "cite": "fashionista SKILL.md · Two stacked error sources",
+            "verdictLabel": "nobody else separates the two lanes",
+            "verdictPositive": false,
+            "sparkLine": "Two lanes of wrongness."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T14:10:26.312816+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 25.45,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 25.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "Design tell — the CALLS.json ledger. The verdict slot stays null until a human fills it. Without this the loop evaporates.",
+      "narration_text": "Design tell. Each day writes a small file — books slash fashionista slash date slash CALLS.json — one row per garment term claimed. Term, confidence, reasoning, timestamp in the clip, alternatives considered, and a verdict slot that stays null until a human fills it from the comments. That is why the outro's spoken ask is mandatory. `If you know this garment, tell me what I got wrong.` Every episode. Without that ask, the verdict slot never fills, and the correction loop evaporates. The ledger is the artifact the whole skill exists to produce.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow DESIGN · TELL lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'The CALLS ledger.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: schema fields + verdict:null"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'the correction loop is the point'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "DESIGN · TELL",
+            "heading": "The CALLS ledger.",
+            "body": "books/fashionista/<date>/CALLS.json — one row per garment term:  term · confidence · reasoning · timestamp_in_clip · alternatives_considered · verdict.  The verdict slot stays null until a human fills it from the comments.",
+            "quote": "The verdict slot stays null until a human fills it from comments. Without this the correction loop evaporates.",
+            "cite": "fashionista SKILL.md · CALLS ledger",
+            "verdictLabel": "the correction loop is the point",
+            "verdictPositive": true,
+            "sparkLine": "One row. One waiting slot."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T14:11:15.040415+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.52,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 28.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the skill.",
+      "narration_text": "The verdict. Fashionista is an experiment, not a fashion series. Every episode is one trial. The audience is the scoring function, and the uncertainty is the subject. Gate ask keeps the answer out of the question. Video is the master clock. Every garment term is spoken with stated confidence — hedging is content. And two stacked error sources — generator versus describer — get logged in a CALLS.json ledger with a verdict slot waiting for you. Skip the correction ask and the loop evaporates. Do it well and the series has something to falsify.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'An experiment. Not a series.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The fashionista Skill",
+            "artifactHeading": "An experiment. Not a series.",
+            "artifactLines": [
+              "fashionista is one trial per episode; the audience is the scoring function.",
+              "GATE ASK: the cold-open ask never names the garment — the AI names it on camera.",
+              "Video is the master clock. No stretch, no loop, no freeze-pad, no slow.",
+              "Every garment term is spoken with STATED CONFIDENCE — hedging is content.",
+              "Two error lanes: GENERATOR ERROR (image wrong) vs DESCRIBER ERROR (call wrong).",
+              "CALLS.json ledger — verdict slot stays null until you correct it in the comments."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T14:12:39.943422+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.65,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 28.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready prompt Liam reads aloud + discusses. Dry-run planning pass — no source video needed.",
+      "narration_text": "Your turn. Paste this into Claude Code: read the fashionista skill, then plan a dry-run trial. Pick a garment you have seen in a photo, draft an ask that never names it, and write a candidate CALLS.json row — term, confidence, reasoning, two alternatives considered, and verdict null. Then answer one more question. If your call turned out to be wrong, would it be a generator error or a describer error? Or is it not separable? Read Claude's plan and check three things. Does the drafted ask stay inside the `what is he wearing` pattern? Does the row have all six fields including the null verdict? And does Claude commit to which error lane matters most, or say honestly that it cannot tell?",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready dry-run prompt"
+          },
+          {
+            "at": "0.72",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · PLAN A FASHIONISTA TRIAL",
+            "segment": "Dry-run a CALLS row",
+            "command": "Read skills/make/fashionista/SKILL.md. Then plan a dry-run trial for a garment you have in mind: (1) draft an INTRO ask in the `Hey Claude, what is he/she wearing?` pattern that never names the garment; (2) write a candidate CALLS.json row — term, confidence, reasoning, alternatives_considered, verdict:null; (3) name which error lane (GENERATOR or DESCRIBER) would matter most, or say it is not separable. Do not run any paid API.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: does the ask stay inside the 'what is he wearing' pattern?",
+              "check: does the CALLS row have all six fields, verdict:null?",
+              "check: does Claude commit to an error lane, or honestly say 'not separable'?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T14:13:55.588249+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 34.05,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 34.083333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T10:16:18"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "That was the fashionista Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The fashionista Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The fashionista Skill",
+            "slug": "claude-liam-brutalist-skill-fashionista"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T14:03:32.864112+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.67,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.7083333333333335,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-08T10:16:18"
+      }
+    }
+  ]
+}

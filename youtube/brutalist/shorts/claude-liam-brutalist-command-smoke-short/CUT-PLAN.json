@@ -1,0 +1,19 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art smoke is the end-to-end proof: it renders the tiny examples/_smoke fixture through the real Kokoro -> run.sh -> compile.py pipeline, then reads the compiled mp4 back with three DECODED gates (size, both streams, mean_volume > -40 dB). Green art doctor only proves the imports; green art smoke proves a fellow can actually make a video today.",
+  "parent_master_sha256": "36730f52dbd7c1696f1ebbd15daad26db144907bcac3c07b5c9a3feae7fee803",
+  "run_id": "c8743064e7904da6a10203c4c47185ef",
+  "kept_beats": ["B00", "B01", "B03", "B07", "B08", "B10"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "FRAMEWORK 1 (art:100-102 dispatcher case, 14.0s). Nice-to-have context; the two-line 'exec smoke_test.sh with $@' shell block is a detail that belongs in the 16:9 long. B03 already establishes that smoke_test.sh is the single script that owns every rule."},
+    {"beat_id": "B04", "reason": "MECHANISM 1 (examples/_smoke fixture body, 21.33s). Detailed 30-line JSON walkthrough. B01 + B07 already carry the load: 'bare, deliberately minimal fixture' is the thesis; B07 quotes the actual failing slug field. The full fixture JSON is a long-form asset."},
+    {"beat_id": "B05", "reason": "MECHANISM 2 (GATE AUDIO deep dive, 25.54s). Zoom into the volumedetect regex + awk floor check for one of the three gates. B03 already lists all three gates in plain English with the -40 dB floor. Deep-dive on the shell parsing is a long-form beat."},
+    {"beat_id": "B06", "reason": "WORKED_EXAMPLE (verbatim passing run, 25.38s). B07 already contains the same 'AFTER' block (Kokoro synth, compiled slate, exit 0) as its recovery half, so keeping both would restate the pass path twice. B07 is the stronger cut because it opens with the real-world failure the shipped fixture actually shows on tip-of-tree."},
+    {"beat_id": "B09", "reason": "YOUR_TURN (composer + read-the-script prompt, 25.0s). Shorts-prompt override: extended Your Turn is not required. B08's verdict already closes the argument; dropping the composer keeps the Short well under 180 s."}
+  ],
+  "cut_first_review": "Retained six beats tell the whole story in order without a rewrite. B00 opens with Liam's Aloha and the ask (prove the pipeline renders, not just that imports work). B01 hesitates from 'checks deps' to 'renders video' — the exact misconception the command corrects, and the direct answer to B00. B03 explains how smoke_test.sh does it: copy fixture to scratch, drive Kokoro -> run.sh -> compile.py, then read the DECODED mp4 with three gates (SIZE, TYPE, AUDIO > -40 dB). B07 shows the concrete falsifiable moment on tip-of-tree — art doctor green but art smoke exits 1 at GATE 0 because build_safety's slug regex rejects '_smoke' — and the one-character recovery. B08 restates the whole surface in the order a fellow uses it and lands 'green doctor = imports import; green smoke = a fellow can make a video today.' B10 closes with Liam, in for Bear, for @HumanitariansAI. No dropped beat leaves a dangling reference in the kept narration: B03 introduces examples/_smoke by name before B07 quotes it; B07's own text names GATE 0 and 'the recent validator,' both self-contained. No numbered transitions, no repeated conclusions.",
+  "planned_duration_s": 127.42,
+  "final_measured_duration_s": 127.416667,
+  "video_sha256": "d72a303cda74b05d4166554ce40e127c3a5ff6574d48f2c3732cd8ced8eb60c2",
+  "rewrite_reason": null
+}

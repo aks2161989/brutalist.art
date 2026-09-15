@@ -1,22 +1,13 @@
 ---
 name: explainer
 description: >
-  Vox-style mixed-media explainer videos — a PRODUCTION COMPOSITING PIPELINE,
-  not a previz renderer. Voiceover (Kokoro) or a music bed is the master
-  clock; the film is a composite of Manim motion-graphics fragments, Ken Burns
-  animation over stills (archival downloads or human-supplied pantry stills),
-  public-domain footage, and a Remotion annotation plane (REMOTION.md) — all
-  unified by the editorial newsprint treatment and assembled per beat. Two-axis
-  shot system (type × source), slot contract (swap media/[beat].png|.mp4 by
-  filename, rebuild recompiles only changed slots). Use when the user types
-  `vox`, `vox-explainer`, `vox style`, or asks for a Vox-style /
-  editorial-collage / isotype explainer. Audio-first, phase-gated; Kokoro VO
-  is free and local; stills sourced from Smithsonian CC0 (smithsonian_fetch.py)
-  or human-supplied pantry files. AI video beats (Higgsfield i2v): Higgsfield
-  CLI present + user approves → clip generated; CLI present + user declines →
-  free path (Ken Burns still); CLI absent → free path runs silently, todo.py
-  logs "free fallback (Higgsfield would upgrade this)". No ElevenLabs, ever.
-  FLUX and nano-banana are out of scope; use brutalist-art/.
+  Produce Vox-style mixed-media, editorial-collage and isotype explainer
+  videos. Use for vox, vox-explainer or a Vox-style film request. This is
+  the audio-first, phase-gated production compositing pipeline: measured
+  narration, per-beat Manim/Remotion visuals, necessary archival evidence
+  and replaceable media slots. Kokoro is free/local; paid media requires
+  explicit approval. No ElevenLabs. FLUX and nano-banana are outside this
+  public toolkit's scope.
 metadata:
   tags: vox, isotype, explainer, mixed-media, compositing, manim, remotion, kenburns
 ---
@@ -152,6 +143,10 @@ reels/[slug]/
 
 ## VOX LAW — a still is EVIDENCE, never texture
 
+Before requesting a still, apply [EXECUTABLE-EVIDENCE.md](../../../docs/EXECUTABLE-EVIDENCE.md).
+Locally reproducible code, errors, tables and charts must be executed and
+rendered from their evidence, not sourced as terminal/notebook photographs.
+
 **Binds every explainer** — `ai-explainer`, `cli-explainer`, `deep-explainer`,
 and anything built on this chassis.
 
@@ -225,6 +220,9 @@ newsprint-ground renders at beat duration:
 
 ## The equation tangent (rule owner: `EQUATIONS.md`, bundled beside this file)
 
+All mathematical visuals also follow [MATH-TYPESETTING.md](../../../docs/MATH-TYPESETTING.md),
+including equations outside tangents and in every derived film skill.
+
 When an equation appears, the film takes a short tangent — the five-zone
 template from `EQUATIONS.md` (bundled beside this skill; originally
 brutalist/EQUATIONS.md), translated into Vox language. A
@@ -250,7 +248,7 @@ only ("…and that's demographic parity. Back to …").
   named turns crimson in equation + glossary row + example value at once);
   pink values box → **terracotta-tinted panel**; white mechanics → newsprint
   ground + ink serif; KaTeX → **MathTex** (italic variables, roman operators;
-  `_math()` falls back to italic serif where LaTeX is absent). Data numbers
+  no plain-text fallback: use another structured renderer if LaTeX is absent). Data numbers
   mono, never the equation.
 - Components in `animated_graphics.py`: `EquationTangent` (+ `EquationCard`,
   `SentencePair`, `GlossaryTable`, `WorkedExample`, `ValuesClaim`); fixture

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "8d75c91064f84d83bc89e08d3efe2f26",
+  "source_sha256": "92253347e5028837c16c2590f4b803bb8f32e88754ba255c1424fe9eefc29abc",
+  "beat_sheet_sha256": "03afce39611f089d4b93cb2ff9de8a37efe32d1630ecf97f458a09ba0e7d241b",
+  "video_sha256": "849929b4cbd476cb0782fa8359926923ba58132902db4008a883a29242aa7d17",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-strip-vertical.png", "sha256": "cea26a87d278ccaefc17d54a0e1e2a43791afb9fc94fd0977bc4ef5371c5110b"},
+    {"path": "_qc/B01_50.png", "sha256": "a383e02e5f1dcf269cd26c022c478639de259fedc1853d47cb527f98307bbe3c"},
+    {"path": "_qc/B04_50.png", "sha256": "f6bb749830549f0a90b0e46e5b72a00fec5ce4a324eb52914f6f8d134839d86d"},
+    {"path": "_qc/B11_50.png", "sha256": "2d5d5e8d67be7982cf18854e654b2e0a6d3d558986c5c1ac5cb3ec78afa7a61a"}
+  ],
+  "notes": "Re-verified for run_id 8d75c91064f84d83bc89e08d3efe2f26 (source unchanged: build_cli_d3_reels.py SHA c37d17..., toolkit overrides added new scenes not used by this reel). Vertical master 2160x3840, 234.79s, 12/12 native-portrait beats, 0 slates. Beat_sheet run_id and order (41→46) updated to match invocation; renders and audio unchanged. Gate V: 0 BLOCKER / 0 MAJOR. Verified from contact strip and individual beat frames: B00 ClaudeComposerAsk916 — full-height portrait, 'Bula, Liam' large serif greeting, @HumanitariansAI folder chip, output lines fit SAFE916; B01 BrutalistHesitantWriter916 — 5-line layout, 'wraps' corrected in dark ink at 50% frame, 'prompt' still terracotta (mid-animation, corrects to HTML by beat end), fills portrait safe area; B02 SkillTeardownMechanism916 — pipeline body text fits portrait; B03-B08 ClaudeCodeBeat916 — code legible in portrait card, sparkLines visible; B09 ClaudeVerdictArtifact916 — 6 artifact lines in portrait; B10 ClaudeComposerAsk916 — Your Turn prompt + grading output; B11 ClaudeTitleOutro916 — 'Brutalist Utility: / build_cli_d3_reels. / py.' wraps three lines with terracotta period, @NikBearBrown (OUTRO-LOCK). Human review pending."
+}

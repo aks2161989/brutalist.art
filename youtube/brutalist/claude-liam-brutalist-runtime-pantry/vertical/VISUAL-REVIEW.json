@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "fe9516e11ca34baf8eca2990dd34a561",
+  "source_sha256": "fc867e67d4879765d95430ecb151efb235a53b27073acf62a341b33456e39a13",
+  "beat_sheet_sha256": "3f97a106cd122aea8f057847e5fc3b741da7a52837c6682d83c82233d1e4fb63",
+  "video_sha256": "912b1076d47765d9a51d7af44cafe3a3e629957687080a212fb0d81a3a5df845",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "54ed41f6c86c112a06c5383edd9daac1f1c59a6f556e946547a3550cde522882"
+    },
+    {
+      "path": "_qc/review/vert_t5s.png",
+      "sha256": "a3d31ed79f73caa35fc21363f68bb203cf03873facb61c7feedb01b49eeeb060"
+    },
+    {
+      "path": "_qc/review/vert_t30s.png",
+      "sha256": "c12aaef704997d277dbb60aa04c222353d880f0616595a51432327b4e412a794"
+    },
+    {
+      "path": "_qc/review/vert_t92s.png",
+      "sha256": "5e6e12488762438a4d1fa5ae4b3e8ea0c3690df7031cc363752e69f8fce08305"
+    },
+    {
+      "path": "_qc/review/vert_t157s.png",
+      "sha256": "6a09c67c352ac758f97884bc126a31a9d715ea2338df8a5c3f3bc9efd35f528e"
+    },
+    {
+      "path": "_qc/review/vert_last.png",
+      "sha256": "f81659d75002f4f56461142aac32e0182dc9ae9e0f37df09c2a32dc790d60b83"
+    }
+  ],
+  "notes": "Production run for invocation fe9516e11ca34baf8eca2990dd34a561 (2026-09-14). Toolkit pantry.py sha256=5b059be171601690a436487ba1eb1d0ebefd58d4d4b0b796e971a427e201ba35; invocation source_sha256=fc867e67d4879765d95430ecb151efb235a53b27073acf62a341b33456e39a13 (supervisor-computed identifier). Native portrait master 2160x3840 h264+aac, 184.708s, 12 beats. Gate V ran inside compile.py: BLOCKER=0 MAJOR=0. Output: exports/vertical/claude-liam-brutalist-runtime-pantry-vertical.mp4. All body beats rendered with portrait-native 916 compositions. Compile produced two SKIN LINT warnings (ClaudeComposerAsk916 and ClaudeTitleOutro916 naming variants) — these are expected for the native portrait channel adaptation; not a build failure. Reviewed five frames directly with image-capable Read tool: t=5s ClaudeComposerAsk916 portrait cold-open — 'Bula, Liam' greeting, @HumanitariansAI chip, command text, three output lines — all within 2160x3840 safe area, no edge bleed; t=30s SkillTeardownMechanism916 B02 portrait — 'Raw finds never go straight to media/.' heading, body text, THE PANTRY LAW quote card, IDEMPOTENT label, sparkLine — fills portrait safe area; t=92s ClaudeCodeBeat916 B06 portrait — video-path code visible; right-edge truncation on longest lines within card (audio list literal) is a minor legibility limitation, not a safe-area bleed; Gate V passed; t=157s ClaudeVerdictArtifact916 B09 portrait — 'The naming law works.' six numbered lines fully readable; last frame ClaudeTitleOutro916 — 'Brutalist Utility: pantry.py.' word-wraps correctly, @NikBearBrown centered (OUTRO-LOCK.md compliant). No captions, no burned-in transcript, no safe-area bleed, no unresolved slates. Minor: portrait code cards with long lines may benefit from a shorter code excerpt in a future revision. Human viewing and editing is next; no upload, no commit."
+}

@@ -1,0 +1,737 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: smithsonian_fetch.py",
+    "slug": "claude-liam-brutalist-runtime-smithsonian-fetch",
+    "topic": "BRUTALIST · UTILITIES",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "aspect": "16:9",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "playlist": "Brutalist",
+    "channel_handle": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Annyeong, Liam",
+    "greeting_note": "Annyeong (Korean) — fresh for this batch. Liam two-word budget satisfied.",
+    "color_semantics": "Fidelity claude palette. ONE terracotta #D97757 accent per beat — marks the key mechanism or the highlighted element. Everything else warm ink on cream.",
+    "note": "ILLUSTRATE LAW: ClaudeComposerAsk at B00/B10 only (UI beats); body beats use SkillTeardownPipeline, SkillTeardownMechanism, ClaudeCodeBeat. OUTRO: ClaudeTitleOutroHAI for @HumanitariansAI (never ClaudeTitleOutro which hardcodes @NikBearBrown).",
+    "derived_from": "runtime/scripts/smithsonian_fetch.py — SHA-256 1934656d6e640bea90ecf2dccc892d0f0a060a6a256f5ba783296cbcbe6f8733",
+    "run_id": "97515f0a2ece4d7f990c05fbbcf1bce8",
+    "build": {
+      "at": "2026-09-14T16:56:13",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B11: palette=claude but the outro is 'ClaudeTitleOutroHAI' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN — ASK",
+      "lane": "BOOKEND",
+      "narration_text": "Hi, this is Liam, in for Bear. smithsonian_fetch.py brings CC0 images from the Smithsonian Institution into your Brutalist reel — one at a time, with provenance. It searches a local index, resolves the full-resolution URL through the SI API, downloads, optionally upscales with Topaz Photo AI, and shelves the result. Let me show you what it actually does.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B00.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Greeting 'Annyeong, Liam' appears above composer"
+          },
+          {
+            "at": "0.10",
+            "event": "Command types: python3 runtime/scripts/smithsonian_fetch.py \"UNIVAC computer console\""
+          },
+          {
+            "at": "0.55",
+            "event": "Send button arms; running indicator: 'fetching from Smithsonian Open Access...'"
+          },
+          {
+            "at": "0.70",
+            "event": "Output lines stagger in one by one"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Annyeong, Liam",
+            "topic": "BRUTALIST · UTILITIES",
+            "segment": "smithsonian_fetch.py",
+            "command": "python3 runtime/scripts/smithsonian_fetch.py \"UNIVAC computer console\"",
+            "folderLabel": "@HumanitariansAI",
+            "runningText": "fetching from Smithsonian Open Access…",
+            "output": [
+              "CC0 image fetched and upscaled.",
+              "Provenance sidecar written.",
+              "Dropped into pantry/ — ready for intake."
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-14T16:05:43.760145+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.48,
+      "render_duration_s": 20.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF — EXECUTIVE SUMMARY",
+      "lane": "BOOKEND",
+      "narration_text": "The framing that sticks wrong is that this is just a download tool. It's not. It's a provenance pipeline: CC0-only by design, an upscale step through Topaz Photo AI when that tool is present, and a source sidecar — SI object id, credit, license, URL — written automatically next to every image. You don't track attribution; the script does it for you.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 22,
+      "lead_silence_s": 0.8,
+      "audio_file": "mp3/beat-B01.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Text types: 'Image downloader. / Tracked manually.'"
+          },
+          {
+            "at": "0.30",
+            "event": "'downloader' struck through; 'provenance-pipeline' types in (terracotta)"
+          },
+          {
+            "at": "0.60",
+            "event": "'manually' struck; 'automatically' types in (terracotta)"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "downloader.\ntracked manually.",
+            "triggerWords": "downloader,manually",
+            "replacementWords": "provenance-pipeline,automatically",
+            "seed": "5515",
+            "fontSize": 180,
+            "lineSpacing": 3.0,
+            "align": "center",
+            "face": "serif"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-14T18:42:00+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.99,
+      "render_duration_s": 19.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK — 6-STAGE PIPELINE",
+      "lane": "BODY",
+      "narration_text": "The pipeline is metadata-first. The index must already exist — built by smithsonian_index.py — before you fetch anything. A lookup finds the record by id or text search. Resolve calls the SI content-detail endpoint for the full-resolution CC0 URL. Download, upscale with Topaz if available, and shelve with the provenance sidecar.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B02.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "build-in",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Eyebrow: UTILITY · PIPELINE; Title: 'Metadata-first.'"
+          },
+          {
+            "at": "0.15",
+            "event": "INDEX node appears (input)"
+          },
+          {
+            "at": "0.25",
+            "event": "LOOKUP node appears"
+          },
+          {
+            "at": "0.35",
+            "event": "RESOLVE node appears — terracotta-accented (the interesting gate)"
+          },
+          {
+            "at": "0.50",
+            "event": "DOWNLOAD node appears"
+          },
+          {
+            "at": "0.65",
+            "event": "UPSCALE node appears"
+          },
+          {
+            "at": "0.75",
+            "event": "SHELVE node appears (output, terracotta border)"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "title": "Metadata-first.",
+            "inputLabel": "index.jsonl",
+            "outputLabel": "shelved image + sidecar",
+            "phases": [
+              {
+                "label": "LOOKUP",
+                "desc": "by id or text search",
+                "accent": false
+              },
+              {
+                "label": "RESOLVE",
+                "desc": "CC0 URL via content-detail endpoint",
+                "accent": true
+              },
+              {
+                "label": "DOWNLOAD",
+                "desc": "streaming fetch",
+                "accent": false
+              },
+              {
+                "label": "UPSCALE",
+                "desc": "Topaz Photo AI (optional)",
+                "accent": false
+              }
+            ],
+            "footerNote": "Index must exist first — run smithsonian_index.py",
+            "sparkLine": "Fetch one. Shelve with provenance."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-14T16:06:43.029648+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.71,
+      "render_duration_s": 19.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WORKED EXAMPLE — TEXT SEARCH",
+      "lane": "BODY",
+      "narration_text": "Here is a text search. The script tokenizes your query — dropping stop words, short words, and domain noise like smithsonian, collection, national — then scores every record in the local index. Candidates display with their SI unit, object type, and thumbnail URL. You pick a number, or pass --yes to auto-accept the top hit.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B03.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Code card: command line appears"
+          },
+          {
+            "at": "0.20",
+            "event": "Search output: ranked candidates with SI unit, object_type tags"
+          },
+          {
+            "at": "0.60",
+            "event": "Interactive prompt: 'Enter number to fetch (or 0 to abort)'"
+          },
+          {
+            "at": "0.80",
+            "event": "--yes flag annotation highlighted in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "smithsonian_fetch.py “UNIVAC computer console”",
+            "code": "$ python3 runtime/scripts/smithsonian_fetch.py \"UNIVAC computer console\"\n\nTop 10 match(es) for 'UNIVAC computer console':\n\n  [1]  nmah_12345        NMAH     UNIVAC I Console and Control Panel [computer]\n         thumbnail: ids.si.edu/ids/deliveryService?id=NMAH...\n  [2]  nmah_67890        NMAH     UNIVAC II Operator Console  [computer]\n  [3]  nmah_11111        NMAH     UNIVAC Operations Manual    [documentation]\n\nEnter number to fetch (or 0 to abort, or SI object id): _\n\n# --yes flag: auto-accepts top hit (use carefully on ambiguous queries)",
+            "sparkLine": "Token score wins."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-14T16:07:09.600497+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.86,
+      "render_duration_s": 17.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM — SCORING SYSTEM",
+      "lane": "BODY",
+      "narration_text": "The ranking isn't alphabetical — it's designed. A word in the title scores four points; a token match scores two. Hardware types — computer, terminal, instrument — get a 1.5 bonus. Ephemera types — pamphlet, photograph, report — get a one-point penalty. When you search for a computer, you want the machine, not the manual. That preference is baked in.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B04.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "build-in",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Eyebrow + heading: 'The ranking is intentional.'"
+          },
+          {
+            "at": "0.20",
+            "event": "Body: score table animates in (title+4, token+2, apparatus+1.5, ephemera-1)"
+          },
+          {
+            "at": "0.55",
+            "event": "Verbatim quote block: APPARATUS_TYPES / EPHEMERA_TYPES from source"
+          },
+          {
+            "at": "0.80",
+            "event": "Verdict pill: APPARATUS > EPHEMERA"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "UTILITY · SCORING",
+            "heading": "The ranking is intentional.",
+            "body": "Title match: +4 pts · Token match: +2 pts\nApparatus type bonus: +1.5 (computer, terminal, instrument…)\nEphemera type penalty: −1.0 (pamphlet, photograph, report…)\nStop words stripped — smithsonian, national, collection, museum",
+            "quote": "APPARATUS_TYPES: computer, mainframe, console, instrument…\nEPHEMERA_TYPES: documentation, pamphlet, manual, photograph…",
+            "cite": "smithsonian_fetch.py lines 74–86",
+            "verdictLabel": "APPARATUS > EPHEMERA",
+            "verdictPositive": true,
+            "sparkLine": "Hardware beats the manual."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-14T16:07:55.773169+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.01,
+      "render_duration_s": 18.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM — CC0 URL RESOLUTION",
+      "lane": "BODY",
+      "narration_text": "Resolving the full-resolution image URL is a two-stage lookup. S3-indexed records already have the URL stored directly. API-indexed records call the SI content-detail endpoint. The script navigates the nested JSON — descriptiveNonRepeating, online_media, media array — looking for type Images and access CC0. First hit wins. Fallback: any CC0 media. If nothing is CC0, the record is skipped.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B05.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Code card: GET endpoint and JSON navigation path"
+          },
+          {
+            "at": "0.30",
+            "event": "CC0 access gate highlighted in terracotta"
+          },
+          {
+            "at": "0.60",
+            "event": "S3 fast-path annotation vs API-indexed path"
+          },
+          {
+            "at": "0.80",
+            "event": "Fallback: any CC0 media annotated"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "CC0 URL resolution — content-detail endpoint",
+            "code": "# API-indexed records: call content-detail for full-res URL\nGET https://api.si.edu/openaccess/api/v1.0/content/{record_id}\n\n# Navigate nested JSON:\nresponse\n  └─ content\n       └─ descriptiveNonRepeating\n            └─ online_media\n                 └─ media[]\n                      └─ type: \"Images\"  +  access: \"CC0\"  ← GATE\n\n# S3-indexed records: image_url stored directly — skip resolve step\n# Fallback: any CC0 media (any type)\n# Nothing CC0 found → record skipped, None returned",
+            "sparkLine": "CC0 or skip."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-14T16:08:22.397013+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 23.36,
+      "render_duration_s": 23.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM — TOPAZ OPTIONAL GATE",
+      "lane": "BODY",
+      "narration_text": "Upscaling is optional. The script checks whether tpai — the Topaz Photo AI CLI — exists at its expected path. Found: it runs the upscale, then compares source and output dimensions and logs the scale ratio. If the output isn't actually larger, you see WARN. Not found: the script says so, shelves the original, and moves on. No silent failure; no hard dependency.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 19,
+      "audio_file": "mp3/beat-B06.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "build-in",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Heading: 'Topaz upscale: optional, graceful.'"
+          },
+          {
+            "at": "0.20",
+            "event": "Two paths: tpai FOUND (upscale + compare) vs tpai MISSING (shelve original)"
+          },
+          {
+            "at": "0.55",
+            "event": "WARN path highlighted when output not larger than source"
+          },
+          {
+            "at": "0.75",
+            "event": "Verdict pill: DEGRADES GRACEFULLY"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "UTILITY · UPSCALE",
+            "heading": "Topaz upscale: optional, graceful.",
+            "body": "tpai FOUND → upscale → compare dimensions → log ratio\n    WARN if output_w ≤ source_w  (not actually larger)\ntpai MISSING → print notice → shelve original → continue\n\nNo hard dependency. No silent failure.",
+            "quote": "if not Path(TPAI).exists():\n    print('[si-fetch] tpai not found — shelving original')\n    return None",
+            "cite": "smithsonian_fetch.py _upscale() lines 289–322",
+            "verdictLabel": "DEGRADES GRACEFULLY",
+            "verdictPositive": true,
+            "sparkLine": "Optional. Honest."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-14T16:09:12.847560+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.54,
+      "render_duration_s": 20.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM — PROVENANCE SIDECAR",
+      "lane": "BODY",
+      "narration_text": "Every shelved image gets a .source.txt sidecar. It records: CC0, the SI object id, the title, the institutional unit, the credit line, the source URL, and the Smithsonian Open Access license statement. When you use this image a year from now, the provenance is sitting in the same folder. The pantry intake reads it. You don't have to remember anything.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 19,
+      "audio_file": "mp3/beat-B07.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Code card title: 'The sidecar travels with the image.'"
+          },
+          {
+            "at": "0.20",
+            "event": "Sidecar fields appear line by line: CC0, SI_ID, Title, Unit, Credit"
+          },
+          {
+            "at": "0.55",
+            "event": "Source URL and License lines appear"
+          },
+          {
+            "at": "0.75",
+            "event": "Filename pattern: si-{id}-{slug}.source.txt highlighted"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "library/smithsonian/images/si-{id}-{slug}.source.txt",
+            "code": "CC0\nSI_ID: nmah_12345\nTitle: UNIVAC I Console and Control Panel\nUnit: NMAH\nCredit: Smithsonian National Museum of American History\nSource URL: https://ids.si.edu/ids/deliveryService?id=NMAH-...\nLicense: CC0 — Smithsonian Open Access https://www.si.edu/openaccess\n\n# Written by _write_sidecar() — always, unconditionally.\n# Pantry intake reads this sidecar for attribution.",
+            "sparkLine": "Provenance automatic."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-14T16:09:44.914895+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.29,
+      "render_duration_s": 19.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "PANTRY INTEGRATION — --copy",
+      "lane": "BODY",
+      "narration_text": "Pass --copy with a reel path and --beat B07 to move the shelved image into your reel's pantry folder. The script converts JPEG to PNG for pantry intake — pantry.py expects PNGs. After the copy it prints the next step: open the image, inspect the framing, then run pantry.py. Note: --copy requires --beat; omit the beat id and the script exits immediately with a clear message.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B08.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Code card: --copy --beat command"
+          },
+          {
+            "at": "0.25",
+            "event": "Output: pantry path printed; JPEG→PNG conversion note"
+          },
+          {
+            "at": "0.55",
+            "event": "Next-step message appears: 'LOOK at it; run pantry.py'"
+          },
+          {
+            "at": "0.75",
+            "event": "Failure path: --copy without --beat → sys.exit in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "smithsonian_fetch.py --copy --beat",
+            "code": "$ python3 runtime/scripts/smithsonian_fetch.py \\\n    --id nmah_12345 \\\n    --copy ./youtube/my-reel \\\n    --beat B07\n\n[si-fetch] Copying to pantry: youtube/my-reel/pantry/B07-univac-i-console.png\n  next: LOOK at it; if it holds, run  python3 runtime/scripts/pantry.py my-reel\n  Set shot.focus per the subject; sidecar is pre-filled (CC0).\n\n# --copy without --beat:\n$ python3 runtime/scripts/smithsonian_fetch.py --id nmah_12345 --copy ./reel\n[si-fetch] --copy requires --beat BID   ← exits immediately",
+            "sparkLine": "One flag, one step."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-14T16:10:15.529269+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.35,
+      "render_duration_s": 21.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "lane": "BOOKEND",
+      "narration_text": "What smithsonian_fetch.py gets right: strictly CC0, provenance travels with every image, index-first design means fast local search without hammering the SI API, and Topaz upscale degrades gracefully when the tool isn't there. Where it bites: the index must be pre-built — that's a separate smithsonian_index.py step. And --yes auto-accepts the top search hit — use it carefully on ambiguous queries, because the ranker gets hardware right but isn't infallible.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B09.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "stagger",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Artifact card appears: title 'smithsonian_fetch.py'"
+          },
+          {
+            "at": "0.15",
+            "event": "Heading: 'What it gets right, where it bites.' stagger-reveals"
+          },
+          {
+            "at": "0.30",
+            "event": "Gets-right lines stagger in one by one"
+          },
+          {
+            "at": "0.65",
+            "event": "Bites lines stagger in (terracotta accent on BITES items)"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "smithsonian_fetch.py",
+            "artifactHeading": "What it gets right, where it bites.",
+            "artifactLines": [
+              "CC0-only strict — only genuinely open images make it through.",
+              "Provenance travels automatically — sidecar every time.",
+              "Index-first: fast local search, no API spam.",
+              "Topaz upscale is optional — degrades gracefully.",
+              "One image at a time — explicit accept prevents bulk mistakes.",
+              "BITES: index must be pre-built (smithsonian_index.py required).",
+              "BITES: --yes auto-accepts top hit — ambiguous queries get wrong hardware."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-14T16:11:50.779196+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.58,
+      "render_duration_s": 25.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "HANDOFF — YOUR TURN",
+      "lane": "BOOKEND",
+      "narration_text": "Here's your prompt. Paste this into Claude with your reel folder and topic in mind. Claude reads both scripts — the indexer and the fetcher — searches for a CC0 image relevant to your topic, fetches and shelves it, and drops it into pantry with the right beat prefix. The test of success: open the .source.txt next to the shelved image and confirm it shows CC0, the correct SI object id, and a credit line that matches the Smithsonian record. If the sidecar is right, the provenance chain is intact.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 26,
+      "audio_file": "mp3/beat-B10.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Greeting 'Your turn.' above composer"
+          },
+          {
+            "at": "0.10",
+            "event": "Prompt types in: read both scripts, search CC0, fetch and shelve"
+          },
+          {
+            "at": "0.55",
+            "event": "Send arms; running: 'reading scripts, searching index…'"
+          },
+          {
+            "at": "0.70",
+            "event": "Output lines: sidecar verification test"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · UTILITIES",
+            "segment": "smithsonian_fetch.py audit",
+            "command": "Read runtime/scripts/smithsonian_fetch.py and smithsonian_index.py. Search the Smithsonian Open Access collection for a CC0 image relevant to my reel topic: <topic>. Fetch the best hardware match (prefer apparatus over ephemera), shelve it with its provenance sidecar, and copy it into my-reel/pantry/ as B07-<slug>.png. Then print the contents of the .source.txt so I can verify the CC0 attribution is complete.",
+            "folderLabel": "@HumanitariansAI",
+            "runningText": "reading scripts, searching index…",
+            "output": [
+              "Shelved image: library/smithsonian/images/si-{id}-{slug}.jpg",
+              "Sidecar verified: CC0 + SI_ID + credit line.",
+              "Pantry copy: my-reel/pantry/B07-{slug}.png"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-14T16:13:10.274880+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.33,
+      "render_duration_s": 26.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T16:56:13"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "lane": "BOOKEND",
+      "narration_text": "Brutalist Utility: smithsonian_fetch.py. Liam, in for Bear.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 8,
+      "audio_policy": "silence",
+      "silent": false,
+      "audio_file": "mp3/beat-B11.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade-in",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Outro: title + @HumanitariansAI mascot (slug-seeded)"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutroHAI",
+          "props": {
+            "title": "Brutalist Utility: smithsonian_fetch.py",
+            "slug": "claude-liam-brutalist-runtime-smithsonian-fetch"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-14T16:13:25.785239+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 8.0,
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutroHAI",
+        "at": "2026-09-14T16:56:13"
+      }
+    }
+  ]
+}

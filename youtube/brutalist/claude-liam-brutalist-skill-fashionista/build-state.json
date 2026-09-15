@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/exports/landscape/claude-liam-brutalist-skill-fashionista.mp4",
+  "sha256": "7f384f6161e716a43f44010f202fa923596bfd2315b3cb3581e93398693135a1",
+  "duration_s": 276.0,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B00.mp4": "0acd794eac726688d0427ee27078e5abd44c682fc6ac82558cf4637a1045c98f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B01.mp4": "dac6fcd0aa918df494d32a4c42ac60d4bfe27734f324b9d64ee3f2b2417b8b32",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B02.mp4": "36fd651bd7a67a0d4a88c2c9be88b23728987291a9ebd34efd2efdc4d02f8349",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B03.mp4": "2cd7f958d4975deab5741995eef45e1ebdccf313b3e5f725bb9f94d7ad81af6a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B04.mp4": "fea546a70c11f31f69b3679c5039bc802b09c9800d050c02adc766ed01d907fe",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B05.mp4": "6a4ff175c0dea26ca12851a4dc86c5b2ce30cf6eecd0d9c57dd534cd709d2261",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B06.mp4": "02f89c3d077a298db2fb9a63c4c1a176251e15ff854275df1bf9fcc76bcfb791",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B07.mp4": "d3c939c4ee17c85c8d01a69a99162b89cffd03729e76c6f0a7b00bbf1d7cea13",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B08.mp4": "4a1c23b8f8f9d733d572e1cc2092dc1ec424f68d82fad595fd7fb8035d9aa7d4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B09.mp4": "46ef4f80ff409ed7f0520064817e2f8689ebdd12a68e6b4e738961e68680f7fe",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B10.mp4": "5ac459b7c0e8521290c09fbc29f7790ce7ac0b9fcfa71656cba3d64f38abc6b9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/media/B11.mp4": "89b5a3bff45e5142c8b050e5a8fba30efa98d7747f2b17505a4a2a2db9c9db45",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B00.mp3": "7841d64cec6321b5ec88c2c385a7a0c63930a9dc994a5af6601d7a4316a0fe16",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B01.mp3": "a5787250c53f45c96fcd715142b85b6645cda8aada7b42ec24089366da4d89c3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B02.mp3": "d2a9a4c2d8547ded60c887cffe526662fd14ceb825f55d52d70092e0f174b602",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B03.mp3": "04b20f8ff05e93dbdfa70b938c5fdb9ed5b7e5b1eda74825973d155b559cdca8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B04.mp3": "2f2ed859e582130eb9c65d52353e962ba1aa4bb5d2d14b6b332d53a4289631e2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B05.mp3": "9ec73460b4cc54bc67df0489e3cf36d68958af7d14f7cc713ef0f8ebb2b473e8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B06.mp3": "a4bed495044410c486d50d1b365740ebadc38fdd26f9961eb18577645f777439",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B07.mp3": "9e3b05ef7c5b263e54a7e2bdcfa7bca0f3952f86b0380abae5b3636f53cc5388",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B08.mp3": "bb1b67dbd3c041ba291608cfcb19f8e6e96a29b74d89f63eb7e4ab999243d088",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B09.mp3": "9078adc2662ae4e0f9490a71410f9c3893ebfaff4de5f4679ec071493d514f21",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B10.mp3": "92fbcc391d97e59f20fa670459e02212c2717e8c136bfbb6940bf27c72920458",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-fashionista/mp3/beat-B11.mp3": "365284f631c9a5c9a07878bcef88d58929ee2f3295bf99b7f03e9de945fdd4b5"
+  },
+  "at": "2026-09-08T14:16:18.412196+00:00"
+}

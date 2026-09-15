@@ -1,0 +1,181 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "91d8e873ca5e413e8379a0c0c9179ed4",
+  "source_sha256": "483139bcf62ef08758f530f0aa0f9444d69359fb6813a6c9765b19a2912bad06",
+  "beat_sheet_sha256": "47f09c5bd8a54669e70af3633e032293123c883571270d775c5614c04abe82ef",
+  "video_sha256": "5ba4652f27a4314c24ee398c26a03213501cd13e2a01ab9f2b68915c125bcff7",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/frames/B00_15pct.png",
+      "beat": "B00",
+      "position": "15pct",
+      "sha256": "b92f446c79e4845616017ec0015609d7915127c79ea983a9cc6e797a9afcdd9a"
+    },
+    {
+      "path": "_qc/frames/B00_50pct.png",
+      "beat": "B00",
+      "position": "50pct",
+      "sha256": "b15d48f15e3bf21324f9174f12e0bd948eb62c36dc1fa528d21d0584994b9e14"
+    },
+    {
+      "path": "_qc/frames/B00_85pct.png",
+      "beat": "B00",
+      "position": "85pct",
+      "sha256": "01085f6c94fff82b467291775b50e4cb4eb661b22624b10215aafcf1f35bc84a"
+    },
+    {
+      "path": "_qc/frames/B01_15pct.png",
+      "beat": "B01",
+      "position": "15pct",
+      "sha256": "5c0e0020ac5bc7dd5e7a2ab0ed4107dae4f4d203e074d6731aee28f95f468a0e"
+    },
+    {
+      "path": "_qc/frames/B01_50pct.png",
+      "beat": "B01",
+      "position": "50pct",
+      "sha256": "2b4f4c5d80efa96a62b51eb2960baf0a0edd1ac11550c0cd669bf5002bbe5299"
+    },
+    {
+      "path": "_qc/frames/B01_85pct.png",
+      "beat": "B01",
+      "position": "85pct",
+      "sha256": "172bfd46a6a11326343bbc9fdfce19487fff95996b2e21e4eab3a89d72ad002c"
+    },
+    {
+      "path": "_qc/frames/B04_15pct.png",
+      "beat": "B04",
+      "position": "15pct",
+      "sha256": "2998a482667a64a724f2fa7e8dc80bd21abb4b351d8c6e37bbfaf6e36c88b304"
+    },
+    {
+      "path": "_qc/frames/B04_50pct.png",
+      "beat": "B04",
+      "position": "50pct",
+      "sha256": "4d3eed9399abac912354344a4c29d52466f5e8573ec315a5d5208870280f40d0"
+    },
+    {
+      "path": "_qc/frames/B04_85pct.png",
+      "beat": "B04",
+      "position": "85pct",
+      "sha256": "145f0f4b80e5fdb04d8175959bb3cfd8fdbfa0d04389de34f3ba83efcddd88f6"
+    },
+    {
+      "path": "_qc/frames/B05_15pct.png",
+      "beat": "B05",
+      "position": "15pct",
+      "sha256": "dfa6dc66b58f67b0212ae2caac1d7854d7aa4ceb7bd863deb92f1f552b043ade"
+    },
+    {
+      "path": "_qc/frames/B05_50pct.png",
+      "beat": "B05",
+      "position": "50pct",
+      "sha256": "e1c04ed88abe596f8afcfd5f973672a3f9fc852f92719357c75e372304b8ff82"
+    },
+    {
+      "path": "_qc/frames/B05_85pct.png",
+      "beat": "B05",
+      "position": "85pct",
+      "sha256": "5a7c707b3da3f1aabe344f39d2938c8a5f2560327934b0357f55f46a4401fb6d"
+    },
+    {
+      "path": "_qc/frames/B08_15pct.png",
+      "beat": "B08",
+      "position": "15pct",
+      "sha256": "690393ec0e0ce231880388aaee47f802b352a85c8218c540d907565f8ee72ac5"
+    },
+    {
+      "path": "_qc/frames/B08_50pct.png",
+      "beat": "B08",
+      "position": "50pct",
+      "sha256": "01e48f76e8c9b73dd8e00c49321657170f2209e91f8fc1a54f3b57ae6b20c123"
+    },
+    {
+      "path": "_qc/frames/B08_85pct.png",
+      "beat": "B08",
+      "position": "85pct",
+      "sha256": "4120338f5662f298c1bf57e79f2116f41d16301cd8ab2fe059dc1f02b80f9386"
+    },
+    {
+      "path": "_qc/frames/B09_15pct.png",
+      "beat": "B09",
+      "position": "15pct",
+      "sha256": "8432ac0dddeb39ba80be3b8b07895cc0bd75e10dc64437355da8c67b2386d71b"
+    },
+    {
+      "path": "_qc/frames/B09_50pct.png",
+      "beat": "B09",
+      "position": "50pct",
+      "sha256": "8a4e2ded78fccbe53ddf9e365c1c19de3b8709d5383a9f51f78504c4dfe4ac07"
+    },
+    {
+      "path": "_qc/frames/B09_85pct.png",
+      "beat": "B09",
+      "position": "85pct",
+      "sha256": "0520605b102fa9883337ed974af217edf7ba6689a280e53a929c4da0aa241472"
+    },
+    {
+      "path": "_qc/frames/B10_15pct.png",
+      "beat": "B10",
+      "position": "15pct",
+      "sha256": "4d353a1218e6ec6182c31d460051a0cd3d3c830e70009cdc4fc86f8874b278d9"
+    },
+    {
+      "path": "_qc/frames/B10_50pct.png",
+      "beat": "B10",
+      "position": "50pct",
+      "sha256": "e1e81f2800e6c40b8886d59a1faf36f6d7ebd48e24900bdc396c8130098e598c"
+    },
+    {
+      "path": "_qc/frames/B10_85pct.png",
+      "beat": "B10",
+      "position": "85pct",
+      "sha256": "2f7c3237d9e2737ac8caad48076520cf9e922e417862dacf67aa341d9daf037f"
+    },
+    {
+      "path": "_qc/frames/B11_15pct.png",
+      "beat": "B11",
+      "position": "15pct",
+      "sha256": "a13a76090ec67c8a66d85b3f5e6319167b380477af4fad04669d306baa41dddb"
+    },
+    {
+      "path": "_qc/frames/B11_50pct.png",
+      "beat": "B11",
+      "position": "50pct",
+      "sha256": "b4e9a6f7ec5bb903a6897fb5a75402b1275faeef6edd14ee110471e554d047de"
+    },
+    {
+      "path": "_qc/frames/B11_85pct.png",
+      "beat": "B11",
+      "position": "85pct",
+      "sha256": "90796fc6475183cd1e2c70786b2cf653cb85e240d03fa534273d59fd2c8d3cef"
+    },
+    {
+      "path": "_qc/frames/B12_15pct.png",
+      "beat": "B12",
+      "position": "15pct",
+      "sha256": "bb8a70558da6710187ee385e04f310f4f550c72ba3e9750032bbd44c858edf9c"
+    },
+    {
+      "path": "_qc/frames/B12_50pct.png",
+      "beat": "B12",
+      "position": "50pct",
+      "sha256": "dfafcd95b3d05222f3a3040e6296af2ff0b0964a6f93c452096ad7dbe22037e2"
+    },
+    {
+      "path": "_qc/frames/B12_85pct.png",
+      "beat": "B12",
+      "position": "85pct",
+      "sha256": "70b15eb450e41ff9e237d1806f3049d9cce5d066c2d6896b758d9b5f9ffbee15"
+    },
+    {
+      "path": "_qc/frames/final.png",
+      "beat": "B12",
+      "position": "final",
+      "sha256": "b0fa70e6e7dc19087c2a71363ada953d13eab01621b4564dbc1da3b44056f1e0"
+    }
+  ],
+  "notes": "Short 2160x3840 · 159.625s · H.264 + AAC · run_id 91d8e873ca5e413e8379a0c0c9179ed4. Rebuilt from updated parent vertical (run_id d6a7b812) — B04/B05/B10 re-rendered with code→visible-result teaching unit requirement. Source sha 483139bc · parent master sha 3c4c7be3. 9 beats kept (B00 B01 B04 B05 B08 B09 B10 B11 B12), 4 dropped (B02 B03 B06 B07). All 9 native portrait clips copied from parent vertical (2160x3840). Container/video/audio duration all 159.625s — all strictly < 180.0s. 28 frames extracted (15%/50%/85% per beat + final) and inspected. B00 (50pct): ClaudeComposerAsk916 — 'Bula, Liam' greeting, BRUTALIST · SKILL TEARDOWN topic, godot-gamedev question in composer, three result lines ('It takes games apart. / Not a builder — a reader. / It makes teaching films from source.') — cream ground, clean portrait framing, @HumanitariansAI chip. B01 (50pct): BrutalistHesitantWriter916 — large serif 'godot / game-reader / not a builder / a source teacher' on cream; generous lineSpacing:2.6, corrected BLUF fills portrait frame well, no overflow. B04 (50pct): GodotDevWorkbench916 code mode — 'Reading a player script.' title, player.gd code panel with line 6 highlighted (_physics_process), source notes panel (CharacterBody2D, speed/jump_force, move_left/right/jump, move_and_slide), 'Godot editor reconstruction · source-backed teaching view' label, 'player.gd · code → visible result' output annotation — updated with visible-result teaching unit. B05 (50pct): SkillTeardownMechanism916 — 'Reconstruct — don't invent.' heading, body text including 'Code-result pairs are logged in evidence as teaching_contract: code-then-result-v1', verbatim SKILL.md quote, 'HONEST CONTRACT' verdict pill, 'The label is the contract.' spark line — clean. B08 (50pct): WalkerGodotSetup916 comparison — 'Two Godot skills, different lens.' with stacked cards (godot-gamedev terracotta border / godot-walkthrough dark border), 'Same project. Different question.' spark line — both cards readable. B09 (50pct): SkillTeardownMechanism916 — 'Self-demo needs a real game.' heading, check command quote, 'HONEST LIMITATION' pill, 'Bring a game. Get a film.' spark line — clean. B10 (50pct): ClaudeVerdictArtifact916 — 'Verdict' header, 'The godot-gamedev skill.' heading, 4 terracotta-numbered lines all within card including updated 'Code → visible result: each excerpt, then its game consequence — not deferred.' B11 (50pct): ClaudeComposerAsk916 'Your turn.' — paste-ready prompt fully visible, Liam sign-off at end of narration. B12 (50pct+final): ClaudeTitleOutro916 — dark olive ground, 'The godot-gamedev Skill.' serif title wraps cleanly, '@NikBearBrown' handle per OUTRO-LOCK. 2 SKIN LINT warnings (ClaudeComposerAsk916/ClaudeTitleOutro916) are cosmetic and expected. No captions, no off-frame content, no slates. Human review pending."
+}

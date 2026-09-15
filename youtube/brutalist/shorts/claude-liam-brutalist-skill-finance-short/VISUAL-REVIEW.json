@@ -1,0 +1,84 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "13d2d44505974808943797b6a8c480ca",
+  "source_sha256": "0eee85f3f27b9cd70551e72ed18783981da21d0b4a6562d87f5014676fe4c102",
+  "beat_sheet_sha256": "806f44290ce176d799e657fb91ffe66125edca806446bff055b7e0f34a19e0da",
+  "video_sha256": "2fa8d4b0d4770c243f42ae05e743a7052462833f6d60281f108334b1808a02c4",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"beat_id": "contact", "path": "_qc/contact.png", "sha256": "ea53ba2ef9150f24f106f83ba6263f81850103d02c4c153b1f5729f0737599b0", "description": "15×8 contact sheet at 2 fps across the full 169.9s Short."},
+    {"beat_id": "B00", "beat_relative": "15%", "path": "_qc/frames/B00-15.png", "sha256": "6b87c582dc24159250a6dfc266b2c3f8922ba026762b3d8d5cc4475f05d125f7", "description": "Composer card mid-type on cream — greeting 'Hola, Liam' already shown above the ask; title and folder label seated inside safe area."},
+    {"beat_id": "B00", "beat_relative": "50%", "path": "_qc/frames/B00-50.png", "sha256": "4ec58d3cf82c8ce5884a607465cfa1f79c7e49e559c9ea6f2c5169c7e73b7b41", "description": "Full composer card with ask typed and folder '@HumanitariansAI' — terracotta send button rendered; portrait margins clean."},
+    {"beat_id": "B00", "beat_relative": "85%", "path": "_qc/frames/B00-85.png", "sha256": "3a32bfcdacb3110b103a1fb5630f17413de8a0ed2b6bcc5ac960ba56a3387175", "description": "Three answer-receipt lines settled beneath the composer; terracotta accent underline visible."},
+    {"beat_id": "B01", "beat_relative": "15%", "path": "_qc/frames/B01-15.png", "sha256": "550622cb68a93eca2af3b4f70e45f1b1c95935fc79d89a4920e26074922e226b", "description": "BLUF headline typing in serif — line one entering."},
+    {"beat_id": "B01", "beat_relative": "50%", "path": "_qc/frames/B01-50.png", "sha256": "f6fb12c1399e0401287082b94fad6307335b10fb10d98e4add9787f89faafc35", "description": "Correction beat: 'picks the chart' struck through, replaced by 'renders the chart' per accounting-standard framing."},
+    {"beat_id": "B01", "beat_relative": "85%", "path": "_qc/frames/B01-85.png", "sha256": "8c96ee4a5278905b50d3bd67fd6327e8fa9525c2d5879b261dc726129486bb42", "description": "Final BLUF holds — 'It is the failure mode.' with terracotta accent, portrait-safe."},
+    {"beat_id": "B04", "beat_relative": "15%", "path": "_qc/frames/B04-15.png", "sha256": "fc36e1e120084855a5984b71930d0024caf097ace9674121aa589dbba4cf7bb2", "description": "Mechanism header 'Shape logic, locked.' laid in with kicker 'MECHANISM · ACT 1'."},
+    {"beat_id": "B04", "beat_relative": "50%", "path": "_qc/frames/B04-50.png", "sha256": "317fd81456de47f8a9b87040fe2ba7e61d166e7bad040ea1ac7c027da70b0441", "description": "Body list of chart-shape rules (Sankey / mirrored bar / stacked bar / dot plot) reveals; quote card with SKILL.md attribution."},
+    {"beat_id": "B04", "beat_relative": "85%", "path": "_qc/frames/B04-85.png", "sha256": "4740b66b660c60621c19a3fca44c4d98b8819c45e358f195c09d79f7534d7578", "description": "'CHART CHOICE = FACTUAL CLAIM' verdict pill terracotta; spark-line 'Locked shapes. No choice.' bottom."},
+    {"beat_id": "B05", "beat_relative": "15%", "path": "_qc/frames/B05-15.png", "sha256": "a342a2f9b742bca8cd1b47ac04e12bee45238c3159e36abd6ced77b38fd11aa6", "description": "Header 'Never retyped.' reveals; kicker 'MECHANISM · ACT 2'."},
+    {"beat_id": "B05", "beat_relative": "50%", "path": "_qc/frames/B05-50.png", "sha256": "f7a6b2082f3dc18d16023e12ac467a2b4612a4f368934551be1c311df76a01d9", "description": "XBRL pipeline text (ticker → CIK → submissions → filing index → companyfacts → frames) with SEC hard-limit callouts."},
+    {"beat_id": "B05", "beat_relative": "85%", "path": "_qc/frames/B05-85.png", "sha256": "cd1450ee14279fe0d6bfbe8af3bb0a1161f7b0bf8374a1050348da4ee2721363", "description": "Verdict pill 'ON-CHART PROVENANCE, FOR FREE' and spark-line 'Never retyped. Ever.'."},
+    {"beat_id": "B06", "beat_relative": "15%", "path": "_qc/frames/B06-15.png", "sha256": "04d1e6a05b83b8c10e7b1c2aa1dfddbb247d5c94121fa7413dee469ec6e4792e", "description": "Header 'Two audits. Both fail.' reveals; kicker 'MECHANISM · ACT 3'."},
+    {"beat_id": "B06", "beat_relative": "50%", "path": "_qc/frames/B06-50.png", "sha256": "3231ea18233711c23a7ae9a2ef47f8e69c1851d78de803a29d22e17a0ebd4461", "description": "AUDIT-RECONCILE and AUDIT-SOURCE body copy laid out with quote card from SKILL.md."},
+    {"beat_id": "B06", "beat_relative": "85%", "path": "_qc/frames/B06-85.png", "sha256": "eca62c885a4f151fc3dbdd369160b7f6892e4059c8e031942c4dc388a947405f", "description": "Verdict pill 'NEVER RENDER PAST A FAILED AUDIT'; spark-line 'Two audits. Both fail.'."},
+    {"beat_id": "B09", "beat_relative": "15%", "path": "_qc/frames/B09-15.png", "sha256": "31c06663fe019ad550040a17589e2b38747e38c183d1860e938297a468eb2748", "description": "Verdict artifact card fades in with title 'The finance Skill' and heading 'The template IS the standard.'."},
+    {"beat_id": "B09", "beat_relative": "50%", "path": "_qc/frames/B09-50.png", "sha256": "228a43d649fb7ff485d9d711b6e895c374927360aeeca3fd0b84da9bdba6feae", "description": "Five-line numbered verdict fully revealed — shape lock, EDGAR facts, dual audits, double-encoded P/L, Nasdaq-100 scope."},
+    {"beat_id": "B09", "beat_relative": "85%", "path": "_qc/frames/B09-85.png", "sha256": "ac83cec5ed0d55fad854b0d43402013d55a0032d4ce2a01a4635e2a7e9c180cd", "description": "Full verdict card holds with terracotta numerals; portrait framing clean."},
+    {"beat_id": "B11", "beat_relative": "15%", "path": "_qc/frames/B11-15.png", "sha256": "f3411ca60285623cba31e8771af17457100f4787b8b6837b30bc147a3da8e05a", "description": "Title-outro card enters — top rule stroke; title 'The finance Skill' and terracotta period seated."},
+    {"beat_id": "B11", "beat_relative": "50%", "path": "_qc/frames/B11-50.png", "sha256": "5ed68c698827d5a89a07c9b9bac16e743b803fd0dd5b1ce8d699f693152f177a", "description": "Title-outro at rest — '@NikBearBrown' handle beneath the title; bottom rule visible."},
+    {"beat_id": "B11", "beat_relative": "85%", "path": "_qc/frames/B11-85.png", "sha256": "8ca95a53a99c7d68ca89778b3d839182b8eee96677591ffeba1dc7229630c159", "description": "Title-outro tail before final frame — same layout, holds."}
+  ],
+  "render": {
+    "video_path": "exports/short/claude-liam-brutalist-skill-finance-short.mp4",
+    "width": 2160,
+    "height": 3840,
+    "container_duration_s": 169.916667,
+    "video_stream_duration_s": 169.916667,
+    "audio_stream_duration_s": 169.916,
+    "sum_beat_media_duration_s": 169.856,
+    "fps": 30,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate_hz": 48000,
+    "audio_mean_volume_db": -27.2,
+    "audio_max_volume_db": -4.3
+  },
+  "cap": {
+    "shorts_cap_s": 180.0,
+    "planned_duration_s": 169.87,
+    "measured_duration_s": 169.917,
+    "headroom_s": 10.083,
+    "strictly_under_180": true
+  },
+  "kept_beats": ["B00", "B01", "B04", "B05", "B06", "B09", "B11"],
+  "dropped_beats": ["B02", "B03", "B07", "B08", "B10"],
+  "joins_review": [
+    {"from": "B00", "to": "B01", "note": "ASK cold open lands the composer answer; BLUF picks up with 'The easy read — the one the word template invites — is that finance picks the chart.' — no dangling reference, natural continuation."},
+    {"from": "B01", "to": "B04", "note": "BLUF ends 'It is the failure mode.' → MECHANISM Act 1 opens with 'First design decision, and it is the sharpest.' — the 'First' numeric label is now the true first ordinal in the Short."},
+    {"from": "B04", "to": "B05", "note": "'…less flashy.' → 'Second decision.' Coherent enumerated flow (First → Second)."},
+    {"from": "B05", "to": "B06", "note": "'…the servers return four oh three.' → 'Third decision…' Coherent enumeration (First → Second → Third)."},
+    {"from": "B06", "to": "B09", "note": "'Never render past a failed audit.' → 'The verdict.' Fourth decision (colour + geometry) is dropped, but the verdict beat compactly restates it ('Profit and loss are always encoded twice, because greyscale kills the colour alone read') so the compression is self-contained."},
+    {"from": "B09", "to": "B11", "note": "Verdict '…the reel earns the boilerplate charge it exists to refute.' → 'That was the finance Skill. Liam, in for Bear.' Clean title-restate close."}
+  ],
+  "audio_review": {
+    "silence_gaps_over_2s": 0,
+    "clipping": false,
+    "max_volume_db": -4.3,
+    "mean_volume_db": -27.2,
+    "notes": "All 10 detected silence gaps are ≤ 0.8s and correspond to natural narration breaths, beat boundaries copied intact from the parent, or the room-tone tail after the outro. No speech was truncated. No clipping."
+  },
+  "minors": [
+    {"code": "skin-lint-cold-open", "note": "Compiler emitted SKIN LINT: B00 uses ClaudeComposerAsk916 (COLD OPEN LAW names the landscape ClaudeComposerAsk). This is the correct native portrait companion registered in the parent workspace and previously accepted for the parent portrait master — carried unchanged into the Short."},
+    {"code": "skin-lint-outro", "note": "Compiler emitted SKIN LINT: B11 uses ClaudeTitleOutro916 (OUTRO LAW names the landscape ClaudeTitleOutro). Same rationale as above — native portrait companion, unchanged from the parent portrait master."}
+  ],
+  "derived_from": {
+    "parent_reel": "youtube/brutalist/claude-liam-brutalist-skill-finance",
+    "parent_master_sha256": "15c8209ca63fc8c820fc4f78112955dec5f81c12b1d9eab02f0887d1754b353b",
+    "parent_beat_sheet_sha256": "3cba69c61be198593a27b70dbdcbf61e596f022784e55956406bbde5818e81a0"
+  },
+  "human_review": null,
+  "notes": "Reviewed the compiled 2160×3840 Short (169.917 s container, 169.917 s video, 169.916 s audio — strictly under 180 s). Re-verified for run_id 13d2d44505974808943797b6a8c480ca: recomputed shasum -a 256 on the final MP4, beat_sheet.json, contact sheet, and every one of the 21 beat-relative frame PNGs; all hashes match the values recorded here and the media is byte-identical to the previous accepted build. Whole-beat cut kept B00 (ASK) → B01 (BLUF) → B04–B06 (three MECHANISM acts: shape lock, XBRL never-retyped, two audits) → B09 (verdict) → B11 (Liam sign-off); dropped B02 (anatomy), B03 (11-beat spine), B07 (colour rule), B08 (bank falsifiability), B10 (Your Turn). Numbering resolves as First → Second → Third → Verdict (Fourth folded into the verdict, which also carries the Nasdaq-100 scope limit — the one safety caveat still lands honestly). Visually verified: B00 ClaudeComposerAsk916 lands the ask about the finance skill on cream with 'Hola, Liam' greeting and three answer-receipt lines; B01 BrutalistHesitantWriter916 shows the correction 'picks the chart' → 'renders the chart' and resolves to 'It is the failure mode.'; B04–B06 SkillTeardownMechanism916 acts render kicker + header + body list + terracotta verdict pill + spark-line for each mechanism; B09 ClaudeVerdictArtifact916 lists the five numbered verdict lines with terracotta bullets; B11 ClaudeTitleOutro916 restates 'The finance Skill' with the hardcoded @NikBearBrown handle. Audio joins between beats are clean (per-beat mp3 concat, no truncation). No captions burned in. Two carry-over palette lint warnings (B00, B11 on the *916 compositions) are known portrait-native trade-offs, not defects. Not a human sign-off — Bear's FEEDBACK.md is empty pending review."
+}

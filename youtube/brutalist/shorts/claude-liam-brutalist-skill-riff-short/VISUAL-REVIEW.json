@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "bf6b2e66a7c74977847f88d811822bfb",
+  "source_sha256": "f03a063ad4ed53282f8f879f9a2d9aaf0d3b13a7ab172bac81f3c00f6a4bc871",
+  "beat_sheet_sha256": "40e108607f959cd3f12802dad074f61eb8ab9cc6385062f0d84abdfb7c404d06",
+  "video_sha256": "59fbc417aef8728542408e1f2bf1e05a7dd9f8cd019ba6387d195267cfe29ceb",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/B00_15pct.jpg", "sha256": "e5d2d9b9682dd20966f9cf4947339936c10ecde931ee8f22266291557fbb0113"},
+    {"path": "_qc/B00_50pct.jpg", "sha256": "630c3ea67917cbac1292c1ed8aaf07a4e883b8a5341e64bb9d1252db5f7a789b"},
+    {"path": "_qc/B00_85pct.jpg", "sha256": "af66b7969ab19f7cda3719b19587eda9cfa5f6267018d583e04c33b0a9ccd8e2"},
+    {"path": "_qc/B01_15pct.jpg", "sha256": "6976a1c595cc4b36beb14599ec51e92599d07646c8f718613dc846a56d012162"},
+    {"path": "_qc/B01_50pct.jpg", "sha256": "9b0fcc9be51bc6ca584be62e6b9240940af007e64ff5833695eed6d550abbbc0"},
+    {"path": "_qc/B01_85pct.jpg", "sha256": "f948632a4ba431cfd67fd9b1cf81103d0d2a59cb6d01d638d8acd2edf69c3221"},
+    {"path": "_qc/B04_15pct.jpg", "sha256": "49a9e60a54c7b67a21101f90cea795da0b3828ca98b6e40bfc7f89578cf59f79"},
+    {"path": "_qc/B04_50pct.jpg", "sha256": "98933396b892f3a3297ae6e23b38033f71bc7277d882f7cf296c3cccef4b658f"},
+    {"path": "_qc/B04_85pct.jpg", "sha256": "b16c773b109787ad8eb53b58793f55f767f04f25b36059cd82c15ee1fd98a39c"},
+    {"path": "_qc/B08_15pct.jpg", "sha256": "5298f8cb93d59ff3c93a3d951be54c3ac86104f4215d97e36fd501cae09b1f5d"},
+    {"path": "_qc/B08_50pct.jpg", "sha256": "c2c3ec120c1b0f76c200971112c44c3fa3da224fe82c7ad68746d36a92a187c0"},
+    {"path": "_qc/B08_85pct.jpg", "sha256": "90dfba46e7595948f17c1974f4ba09cc93f4d8308899d2d7b9b44d53e07f43c2"},
+    {"path": "_qc/B09_15pct.jpg", "sha256": "6fbddcf391ac13541abb3a11e85c3f5d780c0c4f0eb778642de7d5e53322f820"},
+    {"path": "_qc/B09_50pct.jpg", "sha256": "9d67b4bd872980e1dc77b20a2b935a7d27c06cd556889643f341f67a156ed78f"},
+    {"path": "_qc/B09_85pct.jpg", "sha256": "4f1646fc4154f9d267912e09a48a2e6dd3319593c4a1c441f9bafcc0d357e4db"},
+    {"path": "_qc/B11_15pct.jpg", "sha256": "02a9ade023f5780d86619c3e948130cd98af7b6441effb679cbe4d46b9451957"},
+    {"path": "_qc/B11_50pct.jpg", "sha256": "5683702d14ef49994e60d5a6a5ba1632aae4140c354d9fa805f673c9721aa15b"},
+    {"path": "_qc/B11_85pct.jpg", "sha256": "fe5e7b53e39c38a68ffa96708ef4175cc5c9ec1744b8ebf59e78f46e6c3aa48b"}
+  ],
+  "notes": "Inspected 18 frames (beat-relative 15/50/85% for all 6 kept beats). B00: ClaudeComposerAsk916 cold open — portrait framing clean, 'BRUTALIST · SKILL: RIFF' label top-left, 'The riff Skill' title and 'Bula, Liam' greeting legible, Claude chat mock-up with riff-specific prompt rendered, tool-response output ('probing artifact... look at it first...') fully visible, @HumanitariansAI label present, no overflow. B01: BrutalistHesitantWriter916 BLUF — 15% frame shows pre-correction 'generates opinions' (red highlight), 50% and 85% show post-correction 'riff generates observations.' in black serif; 'the riff skill' contextTitle top-left, @HumanitariansAI bottom-right, cream background correct; ink coverage is center-weighted as expected for this scene type. B04: FormACard916 mechanism card — 15% shows 'MECHANISM 1: LOOK BEFORE WRITING' header with all five sub-items legible (Clip/Scene/Gameplay/Never substitute rules); 50% and 85% include the epistemic quote 'A frame can show a state; it cannot establish response time, motion, or causality.' — all text within portrait safe area. B08: FormACard916 design-tell card — 'DESIGN TELL: HONEST BY DESIGN' header visible across all frames; quoted rule ('Never call a scripted route a human playtest...') legible; 15% frame shows 'Gets right: stops Claude from manufacturing confident claims about' (card still animating); 50% and 85% show complete card including 'human experience from deterministic code' and 'Bites: can't reach is it fun? without an actual human playtest.' — no overflow. B09: FormACard916 verdict card — 15% shows 'OUTPUT: RIFF.md / Four design principles:' (card start, animated build); 50% shows all four numbered rules (look first, footage=evidence, RIFF.md seen/inferred, honest by design); 85% shows complete card including '4. honest by design — a scripted route ≠ a human playtest'. B11: ClaudeTitleOutro916 — dark olive background stable across all three frames, 'The riff Skill.' white bold serif and '@NikBearBrown' subtitle legible and centered, clean sign-off with no overflow, no captions. No burned-in captions, no portrait overflow, no cropped text detected across all 18 frames."
+}

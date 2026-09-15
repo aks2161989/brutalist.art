@@ -1,0 +1,640 @@
+{
+  "metadata": {
+    "title": "Download Brutalist with Claude Code",
+    "slug": "claude-liam-brutalist-download-and-set-up-vertical",
+    "topic": "HUMANITARIANS AI · BRUTALIST",
+    "register": "Teardown",
+    "audience": "Humanitarians AI fellows",
+    "brand": "claude",
+    "persona": "Liam (in for Bear)",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "playlist": "Brutalist",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "run_id": "db8a5a5b2c0f4d74a8c148cc6c2b2e9e",
+    "episode_id": "download-and-set-up",
+    "order": 2,
+    "note": "The second film in the Brutalist playlist for @HumanitariansAI. Audience: fellows who already have Claude Code and now want to try Brutalist. Argument: downloading Brutalist is not an install wizard, it's a git clone plus a free doctor script; the Claude Code subscription is what runs the agent, but the Brutalist pipeline itself (Kokoro, Manim, Remotion) is free. Paid API is a separate, optional lane. ILLUSTRATE LAW: Claude UI only at B00 ASK and B08 YOUR TURN. Body beats are concept illustrations (Dbc*). Custom native outro (DbcOutro) hardcodes @HumanitariansAI to respect OUTRO-LOCK on the shipped ClaudeTitleOutro.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art"
+    },
+    "tags": [
+      "Humanitarians AI",
+      "Brutalist",
+      "Claude Code",
+      "setup",
+      "git clone",
+      "Kokoro",
+      "free"
+    ],
+    "approvals": {
+      "voice": {
+        "status": "pending",
+        "reviewer_type": "human",
+        "reviewed_by": "",
+        "reviewed_at": "",
+        "subject_sha256": "kokoro/am_onyx"
+      }
+    },
+    "kind": "vertical",
+    "reformat": "full-length; native portrait graphics; preserve source framing",
+    "derived_from": "claude-liam-brutalist-download-and-set-up",
+    "fit": "pad",
+    "build": {
+      "at": "2026-09-10T19:50:27",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B09: palette=claude but the outro is 'DbcOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "kind": "narration",
+      "narration_text": "Ciao. This is Liam, in for Bear. You already have Claude Code. So downloading Brutalist is one paste into the composer. Not a wizard, not a package. A git clone, a free doctor script, and a readiness table. Here is what actually happens.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream Claude page fades in with the topic eyebrow and the segment 'Download Brutalist'"
+          },
+          {
+            "at": "0.3",
+            "event": "greeting 'Ciao, Liam' resolves above the composer"
+          },
+          {
+            "at": "0.6",
+            "event": "the ask types itself into the composer"
+          },
+          {
+            "at": "0.85",
+            "event": "running indicator appears, then three concrete output lines settle beneath"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Ciao, Liam",
+            "topic": "HUMANITARIANS AI · BRUTALIST",
+            "segment": "Download Brutalist",
+            "command": "Clone the public Brutalist toolkit into this folder and run the free setup doctor for me.",
+            "runningText": "reading the setup script…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Desktop",
+            "output": [
+              "git clone https://github.com/nikbearbrown/brutalist.art .",
+              "./setup --install  →  free deps + Kokoro voice model",
+              "./setup  →  readiness table (✅/❌ per feature)"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T01:20:36.778171+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "actual_duration_s": 12.99,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 13.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "kind": "narration",
+      "narration_text": "Most fellows hear download and picture an installer. A .dmg, a click through, a license. That is not what this is. Brutalist is a git clone plus a free doctor script. The clone is your source tree. The doctor tells you exactly which pieces are ready. That is the whole idea, and it is worth caring about because everything you do next is just editing files in that folder.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-then-correct",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream ground; a serif line begins typing on centre"
+          },
+          {
+            "at": "0.25",
+            "event": "writer types 'Downloading Brutalist means running an installer.'"
+          },
+          {
+            "at": "0.55",
+            "event": "writer pauses on 'running an installer'; the phrase turns terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "writer deletes the phrase and types 'a git clone plus a free doctor script'"
+          },
+          {
+            "at": "0.95",
+            "event": "final sentence sits corrected: 'Downloading Brutalist means a git clone plus a free doctor script.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "Downloading\nBrutalist\nis\nrunning\nan\ninstaller.",
+            "triggerWords": "running, an, installer",
+            "replacementWords": "just, a, git-clone",
+            "fontSize": 320,
+            "lineSpacing": 1.35,
+            "align": "center",
+            "seed": "dbc-b01",
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5",
+            "mistakeRate": 6,
+            "hesitateWithin": 3,
+            "hesitateBetween": 15,
+            "charMs": 50,
+            "jitter": 25
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T01:58:02.810645+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "actual_duration_s": 18.67,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 18.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "kind": "narration",
+      "narration_text": "Here is the paste-ready request. Open Claude Code in an empty folder. Paste this. It clones the public toolkit repo from github dot com slash nikbearbrown slash brutalist dot art into your folder, runs the free installer for you, and reports back which features are ready. You never leave the composer.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "prompt-arrives",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'BRUTALIST · PASTE-READY' and title 'One paste. Two commands.'"
+          },
+          {
+            "at": "0.20",
+            "event": "composer-shaped card fades in with the ask typed inside"
+          },
+          {
+            "at": "0.55",
+            "event": "three response chips appear beneath: clone, install, verify"
+          },
+          {
+            "at": "0.80",
+            "event": "terracotta caption 'no wizard — just files' sits under the card"
+          }
+        ],
+        "remotion": {
+          "pattern": "DbcPasteReady916",
+          "props": {
+            "sparkLine": "One paste. Two commands. Real files on disk."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T01:22:38.906786+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "actual_duration_s": 16.94,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 16.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:DbcPasteReady916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WORKED EXAMPLE · CLONE",
+      "kind": "narration",
+      "narration_text": "This is what the clone actually drops onto your disk. A shell script called setup. A shell script called art. A skills folder with the builder recipes. A runtime folder with the Kokoro voice, the Remotion project, and the Python scripts that do the work. A docs folder. A README. That is your toolkit. No hidden state, no global install, nothing outside this folder.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "tree-arrives",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'BRUTALIST · WHAT LANDS ON DISK' and title 'A folder. Nothing outside it.'"
+          },
+          {
+            "at": "0.20",
+            "event": "brutalist.art/ folder header animates in"
+          },
+          {
+            "at": "0.30",
+            "event": "children arrive one per beat: setup, art, README.md"
+          },
+          {
+            "at": "0.55",
+            "event": "skills/, runtime/, docs/, brands/ arrive"
+          },
+          {
+            "at": "0.80",
+            "event": "terracotta chip marks setup and art as the two entry points"
+          }
+        ],
+        "remotion": {
+          "pattern": "DbcCloneTree916",
+          "props": {
+            "sparkLine": "A clone is a folder. Everything lives inside it."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T23:48:42.726475+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 24,
+      "actual_duration_s": 19.18,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 19.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:DbcCloneTree916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED EXAMPLE · SETUP DOCTOR",
+      "kind": "narration",
+      "narration_text": "Now run the doctor. Dot slash setup dash dash install once, to pull the free dependencies. Then plain dot slash setup, over and over, to see the readiness table. Green means the feature is live. Red means one dependency is missing, and the doctor tells you exactly which install command to run. It is the same script the sandbox in this reel just executed — the readings on screen are real.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "table-arrives",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'BRUTALIST · READINESS TABLE' and title 'Green means ready.'"
+          },
+          {
+            "at": "0.15",
+            "event": "terminal card opens with '$ ./setup' typed on top"
+          },
+          {
+            "at": "0.25",
+            "event": "table header 'FEATURE  STATUS' arrives"
+          },
+          {
+            "at": "0.35",
+            "event": "rows arrive: audio (Kokoro), captions, Manim beats, Manim equations, Remotion beats, slates, fonts"
+          },
+          {
+            "at": "0.80",
+            "event": "final green line: 'All core features ready. Cost: $0.00.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "DbcDoctor916",
+          "props": {
+            "sparkLine": "The doctor tells you what's blocked, and how to fix it."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-10T23:44:01.809147+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "actual_duration_s": 20.57,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 20.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:DbcDoctor916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "FRAMEWORK · SUBSCRIPTION vs API",
+      "kind": "narration",
+      "narration_text": "This part trips fellows up, so read it slowly. Your Claude Code subscription is what lets the agent think and write. That is one lane. A paid Anthropic API key is a different lane — optional, metered, only needed if you script Claude outside the desktop app. Brutalist itself doesn't spend a cent. Kokoro is a local voice model. Remotion renders on your machine. Manim runs on your machine. Free by default — that is the shape of this tool.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "lanes-fill",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'BRUTALIST · THREE LANES' and title 'Subscription. Optional key. Free pipeline.'"
+          },
+          {
+            "at": "0.20",
+            "event": "left lane 'CLAUDE CODE SUBSCRIPTION' with the composer icon lights"
+          },
+          {
+            "at": "0.40",
+            "event": "middle lane 'PAID ANTHROPIC API' arrives, marked OPTIONAL in terracotta"
+          },
+          {
+            "at": "0.60",
+            "event": "right lane 'BRUTALIST PIPELINE' arrives with Kokoro / Remotion / Manim rows"
+          },
+          {
+            "at": "0.85",
+            "event": "banner underneath: 'Setup spends $0.00'"
+          }
+        ],
+        "remotion": {
+          "pattern": "DbcLanes916",
+          "props": {
+            "sparkLine": "Subscription runs the agent. Brutalist itself is free."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T01:31:54.851886+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "actual_duration_s": 21.55,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 21.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:DbcLanes916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY",
+      "kind": "narration",
+      "narration_text": "Now the honest limits. Setup does not sign you into anything — no accounts are created. Setup does not touch any file outside the folder you cloned into. Setup does not upload. It does download one thing from the public internet the first time you run install — the Kokoro voice model, about three hundred forty megabytes, straight from a GitHub release. That is the whole network footprint.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "rows-arrive",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'BRUTALIST · SETUP HONESTY' and title 'What setup won't do.'"
+          },
+          {
+            "at": "0.25",
+            "event": "row one: 'No accounts created.' 'setup asks for zero credentials.'"
+          },
+          {
+            "at": "0.50",
+            "event": "row two: 'No files outside this folder.' 'everything lives in the clone.'"
+          },
+          {
+            "at": "0.75",
+            "event": "row three: 'No upload. One download.' '~340MB Kokoro voice model from a GitHub release.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "DbcNotClaims916",
+          "props": {
+            "sparkLine": "The tool has a shape. That shape is the honesty."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T01:28:05.404527+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "actual_duration_s": 19.2,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 19.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:DbcNotClaims916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "kind": "narration",
+      "narration_text": "Verdict, in three lines. Clone the repo — you have the toolkit. Run the doctor — you know exactly what is ready. Keep the free lane — the pipeline itself never asks for a card. That is how you download Brutalist.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-lines",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card animates in, cream stage"
+          },
+          {
+            "at": "0.15",
+            "event": "artifact title 'Verdict' and heading 'Download Brutalist, in three lines.'"
+          },
+          {
+            "at": "0.30",
+            "event": "line 1 arrives on cue"
+          },
+          {
+            "at": "0.55",
+            "event": "line 2 arrives"
+          },
+          {
+            "at": "0.80",
+            "event": "line 3 arrives"
+          }
+        ],
+        "remotion": {
+          "pattern": "DbcVerdict916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "Download Brutalist, in three lines.",
+            "artifactLines": [
+              "Clone the public repo. You now own the toolkit as plain files.",
+              "Run ./setup --install once, then ./setup any time. The doctor tells you what's ready.",
+              "The pipeline is free by default. Your Claude Code subscription runs the agent; Brutalist itself never asks for a card."
+            ],
+            "sparkLine": "That is how you download Brutalist."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T01:29:06.021313+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "actual_duration_s": 11.48,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 11.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:DbcVerdict916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "YOUR TURN",
+      "kind": "narration",
+      "narration_text": "Your turn. Open Claude Code in an empty folder and paste this prompt. It clones the toolkit, runs the free installer, reads back the readiness table, and asks you which feature you want to try first. When Claude hands back the table, look at it — red rows are the doctor telling you which install command to run next. That is the loop. Now you have Brutalist on disk.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream Claude page with topic eyebrow"
+          },
+          {
+            "at": "0.2",
+            "event": "greeting 'Your Turn' resolves above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "the paste-ready prompt types itself into the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "running indicator 'paste this into Claude…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three expected-outcome lines settle below"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "HUMANITARIANS AI · BRUTALIST",
+            "segment": "Download Brutalist",
+            "command": "In this empty folder, clone https://github.com/nikbearbrown/brutalist.art into the current directory, run ./setup --install for me, then read ./setup back and tell me which features are green and which are red. If any are red, quote the install command the doctor prints and ask me if you should run it.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Desktop",
+            "output": [
+              "clones the public toolkit into the current folder",
+              "runs ./setup --install (free deps + Kokoro voice)",
+              "reads back the readiness table and asks before running any fix"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T01:29:50.362722+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "actual_duration_s": 18.39,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 18.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-10T19:50:27"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "kind": "narration",
+      "narration_text": "That was Download Brutalist with Claude Code. Liam, in for Bear. For Humanitarians AI.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "restate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "poster serif title restates: Download Brutalist with Claude Code — terracotta period"
+          },
+          {
+            "at": "0.45",
+            "event": "@HumanitariansAI handle fades in beneath"
+          },
+          {
+            "at": "0.75",
+            "event": "'LIAM, IN FOR BEAR.' subline arrives"
+          }
+        ],
+        "remotion": {
+          "pattern": "DbcOutro916",
+          "props": {
+            "title": "Download Brutalist with Claude Code.",
+            "subline": "Liam, in for Bear."
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T01:30:20.572526+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 8,
+      "actual_duration_s": 5.91,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 5.916666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:DbcOutro916",
+        "at": "2026-09-10T19:50:27"
+      }
+    }
+  ]
+}

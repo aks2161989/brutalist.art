@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "93dcd0b48786428bbd378a7326cfe38e",
+  "source_sha256": "57645eabff7977171f9117c9b0576fd2450e3e252c01508656a64547cf7572c5",
+  "beat_sheet_sha256": "90c8016288030df9e1ee63178a91196c2bdc46f53688a8df43dcec588f480750",
+  "video_sha256": "70b2a5ac9ee53d540969b6f6d2204df79032e3ab1feed89b10a70bb67998e8f3",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames/B00-15.png", "sha256": "690789b71a9ec1fb368e6bc3c03dc193b8080e8b4b13568796fd3657a5100445"},
+    {"path": "_qc/frames/B00-50.png", "sha256": "abd008e1f6a6d8a15109f95af29d85784c5cc67bcc0732e33bd2f2b2584b08a2"},
+    {"path": "_qc/frames/B00-85.png", "sha256": "aa25f145a8fb8c358401ff6e857d05eadace4de4aef3290f4ec901e1d3e57e37"},
+    {"path": "_qc/frames/B01-15.png", "sha256": "ce1bf0eafbe784702a7d98ea552d170d6c73ced3b11157dfaab8d15a7bfc161d"},
+    {"path": "_qc/frames/B01-50.png", "sha256": "217290ddfab6de520473f1d2a40bac4efb0b8f41875e7753b072d498565e2954"},
+    {"path": "_qc/frames/B01-85.png", "sha256": "60bd833de236a3f6f55a01893166728ce71e8266179489e04b223c0c13aecf5f"},
+    {"path": "_qc/frames/B04-15.png", "sha256": "ad44be66dd5c2b3e68f9f1076ad03762f2a7c583ec44eeb8dfe721c736f44fcf"},
+    {"path": "_qc/frames/B04-50.png", "sha256": "96cc78b273d76dd36444c758c24b455b8d405e9cc40cbd1ae9fa6b6793d56a60"},
+    {"path": "_qc/frames/B04-85.png", "sha256": "4714cb39f6359c0d856ab97ed8e9eeb9edfcea1aa74473a21a89ce798d4cd338"},
+    {"path": "_qc/frames/B05-15.png", "sha256": "6e5a01234bcb8aeb1957a9efb9e7a227df898fe1572d03955cd91e4b7b4b4d49"},
+    {"path": "_qc/frames/B05-50.png", "sha256": "7aaceb820f378ffa45f4d2d0eceedb3968341648b0dc8d93e53cf857ae62dfec"},
+    {"path": "_qc/frames/B05-85.png", "sha256": "55c42f41df679e00d423451fcbf0356c7092aaae41d4c7669b043967eb88ba28"},
+    {"path": "_qc/frames/B08-15.png", "sha256": "a0288bb3a62fa123879f5bbe17f80e9da7b4078330b16db6f66d70089837eece"},
+    {"path": "_qc/frames/B08-50.png", "sha256": "8813c25fc197d3ca2a421e65d05ac96aa046183f45bbee45b98cc9fa39d0a8a5"},
+    {"path": "_qc/frames/B08-85.png", "sha256": "705b6a0ef1debf1cdf7df0e06afe69d135c4ed786ba2d7faac9017d445350690"},
+    {"path": "_qc/frames/B11-15.png", "sha256": "cca1a1678e628f722d73ef256989a9ec62515ff67d08704e87a087c43493f6f8"},
+    {"path": "_qc/frames/B11-50.png", "sha256": "d59f8e49741b16cf852af24c329db84b9dd5e1475d6e9ed19e1d7b39ccb8eb72"},
+    {"path": "_qc/frames/B11-85.png", "sha256": "512062683ad4a91755d067895bed641189d78e1a7c00bb60b662e2e6396cb690"}
+  ],
+  "notes": "Re-verified run_id 93dcd0b48786428bbd378a7326cfe38e (2026-09-12). Video, beat sheet and all input media are byte-identical to the 2026-09-09 build: MP4 SHA-256 70b2a5ac unchanged, beat_sheet SHA-256 90c8016 unchanged. All 18 frame PNGs re-hashed from disk; B11-50.png hash updated to match current file (ccb8eb72 vs bcb8eb72 in prior VISUAL-REVIEW — file was re-extracted between runs). Frames visually inspected: B00-50 shows ClaudeComposerAsk with '620 renderable compositions' library-search answer, @HumanitariansAI handle, clean portrait framing; B04-50 shows ClaudeCodeBeat scoring function (id > synonym > haystack, IDF re-weight, derived penalty) — long lines clip right edge as noted in prior review (known ClaudeCodeBeat916 portrait limitation, narration names each item aloud); B08-50 shows yak-shaving-trombone miss with exit 1 and TEMPLATE-MISSES.md log, legible; B11-50 shows ClaudeTitleOutro 'Brutalist Command: art scenes.' with @NikBearBrown handle (inherited from parent outro — minor, not a blocker). Container 115.083s, video 115.042s, audio 115.083s — all strictly under 180.0s Short Law with 64.9s headroom. 6 whole beats retained (B00 ASK, B01 BLUF/HesitantWriter, B04 MECHANISM/ranker, B05 WORKED_EXAMPLE/sankey-flow, B08 FALSIFIABILITY/yak-shaving-trombone, B11 OUTRO). No dangling numbered transitions. No captions, no SRT/VTT. Parent film preserved unchanged. Bear's human review pending."
+}

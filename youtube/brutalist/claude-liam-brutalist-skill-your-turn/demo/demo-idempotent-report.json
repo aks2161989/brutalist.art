@@ -1,0 +1,17 @@
+{
+  "changed": [
+    {
+      "slug": "claude-liam-fixture-your-turn-demo",
+      "file": "fixture-beat_sheet.applied.json",
+      "notes": [
+        "verdict: cleaned + handoff (from Bear)",
+        "your-turn: set relevant prompt + narration",
+        "outro: Liam re-reads title"
+      ]
+    }
+  ],
+  "inserted_verdict": [],
+  "skipped": [],
+  "needs_prompt": [],
+  "errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art doctor is a live-verification readiness checker: it imports every Python dep, actually runs ffmpeg, and makes Kokoro speak — a green row is a spoken proof, not a receipt from a package manager.",
+  "parent_master_sha256": "b0554d945529b6c3a8cb1791c816a92c7502fd6179b3f4cdd4fc941aa8c47591",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B06", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Dispatcher-case source (art:96-99, three lines) is generic anatomy. The Short still says 'art doctor wraps setup with $@ forwarded' in the verdict; the code walkthrough belongs in the 16:9 long."},
+    {"beat_id": "B05", "reason": "The bash 3.2 / dynamic OK_<id>/MISS_<id> eval trick is deep implementation. Not needed to explain what the command does at a high level; the safety claim carried by B06 is what matters."},
+    {"beat_id": "B07", "reason": "The setup:156-172 aggregation-loop walkthrough (13 atomic checks → 7 features) is internal. B03 already establishes 'seven features, one table' and B08 shows the missing-hint print behaviour in action."},
+    {"beat_id": "B10", "reason": "Your Turn composer beat is a 21.7s long-form CTA prompt read aloud verbatim. It belongs in the 16:9 long. A Short doesn't need to dictate a Claude Code exercise; sign-off in B11 closes the beat cleanly."}
+  ],
+  "cut_first_review": "Opening (B00) lands the ask 'tell me what's actually installed — don't install anything, just verify' with Liam introduced. B01's hesitant writer corrects 'installs deps' to 'verifies live', which is the reel's actual misconception; that lets B03 drop straight into the two-mode surface and seven-feature table without needing the dispatcher source. B04 shows the verbatim green run, so the table isn't abstract. B06 delivers the essential honest caveat — a green row means Kokoro spoke a phrase above -40 dB, not that pip returned 0 — which is the safety limitation this Short must preserve. B08 falsifies the claim by hiding the model file and showing the red row + fix line + exit 1, and points at --install as the fresh-box recovery. B09 verdict restates the whole surface as a summary the viewer can leave with; B11 closes with the title, Liam-in-for-Bear, and the @HumanitariansAI signoff. Every transition still works: B01 sets the misconception, B03 introduces the surface, B04 shows success, B06 explains why the green is honest, B08 shows the failure/fix, B09 recaps, B11 signs off. No dangling references to dropped beats — B02's 'three lines, one case' is folded into B09's first bullet; B05's bash 3.2 detail is a mechanism the viewer never sees the code for, so its removal costs nothing at this altitude; B07's loop is implicit in the FEATURES table B03 already shows; B10's exercise is not referenced anywhere else in the retained narration.",
+  "planned_duration_s": 141.55,
+  "rewrite_reason": null
+}

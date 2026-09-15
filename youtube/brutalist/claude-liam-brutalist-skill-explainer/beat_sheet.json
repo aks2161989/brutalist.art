@@ -1,0 +1,789 @@
+{
+  "metadata": {
+    "title": "The explainer Skill",
+    "slug": "claude-liam-brutalist-skill-explainer",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "channel_title": "@HumanitariansAI",
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "251584521128464e8b35431dce545cb1",
+    "episode_id": "skill-explainer",
+    "order": 9,
+    "note": "Skill teardown of skills/make/explainer/SKILL.md (SOURCE-SNAPSHOT SHA-256 b0b761f4…; invocation source_sha256 c6bf131d…). Rebuilt 2026-09-11: source changed since the 2026-09-08 run. New content: VOX LAW gained a reference to EXECUTABLE-EVIDENCE.md — locally reproducible code/tables/charts must be executed and rendered, not photographed. B07 narration and props updated to cover this; B07 audio and scene re-rendered; both landscape and vertical recompiled. All other beats unchanged. The reel explains that `explainer` is a PRODUCTION COMPOSITING PIPELINE — not a previz renderer, not a style. Uses ClaudeTitleOutro (OUTRO-LOCK.md locked @NikBearBrown handle); @HumanitariansAI is the playlist folder chip inside composer beats. Kokoro am_onyx throughout — free, local. No captions.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/explainer/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "explainer",
+      "skill teardown",
+      "vox",
+      "compositing",
+      "Claude",
+      "Humanitarians AI",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-11T16:40:07",
+      "cut": "master",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Aloha, this is Liam, in for Bear. Today we tear down the skill every other explainer inherits from — the one just called `explainer`. Not the AI cut, not the CLI cut, not the deep cut. The parent. What is it, really? And how does it decide what ends up on screen? Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Aloha, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types: 'What is the explainer skill?'"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Aloha, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The explainer Skill",
+            "command": "What is the `explainer` skill? Read skills/make/explainer/SKILL.md and tell me what it actually is and what its two hard rules are.",
+            "runningText": "reading skills/make/explainer/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "it is a compositing PIPELINE, not a style",
+              "two-axis shot system: type × source",
+              "the still must be evidence, not texture"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T13:20:27.745012+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 25,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.42,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 15.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the reel's actual misconception ('style') into its claim ('pipeline'). Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy mistake — the one every fellow makes first — is thinking Vox is a look. Cream paper, editorial serif, hand-drawn ring. It is not. Vox is a pipeline. It laundered any source you throw at it — an archive photo, a Manim fragment, a public-domain reel — through one treatment. Sources never match. The treatment does. That is why the film reads as one film.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'The explainer'"
+          },
+          {
+            "at": "0.15",
+            "event": "typed line 2: 'skill is a'"
+          },
+          {
+            "at": "0.25",
+            "event": "typed line 3: 'style.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'style' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'style' deletes and 'pipeline' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "final couplet: 'Sources never match. / The treatment does.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "The explainer skill\nis a style.\nSources never match.\nThe treatment does.",
+            "triggerWords": "style",
+            "replacementWords": "pipeline",
+            "seed": "explainer-bluf-2026-45e2af0d",
+            "face": "serif",
+            "fontSize": 180,
+            "lineSpacing": 1.18,
+            "align": "center",
+            "charMs": 28,
+            "jitter": 4,
+            "mistakeRate": 3,
+            "hesitateWithin": 1,
+            "hesitateBetween": 8,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T13:34:06.128705+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 18.84,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 18.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — anatomy of the explainer skill folder: what is on disk and what it governs.",
+      "narration_text": "First, a skill is a folder Claude reads before working. The explainer folder is bigger than most because it governs everything downstream. SKILL.md is the doctrine. MOTION.md holds the pantry of seven motion languages. REMOTION.md is the annotation-plane spec. EQUATIONS.md is the equation-tangent template. The scripts folder is the runtime belt — the audio maker, the pantry cropper, the compiler, the outro machine. Every other explainer extends this file.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'The parent explainer folder.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.80",
+            "event": "callout box lands: 'every explainer extends this file'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "explainer",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "The parent explainer folder.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/explainer/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "size": "doctrine",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "MOTION.md",
+                "size": "seven motion languages"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "REMOTION.md",
+                "size": "annotation plane spec"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "EQUATIONS.md",
+                "size": "equation-tangent template"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "governs: ai-explainer · cli-explainer · deep-explainer"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "runtime belt: generate_audio_kokoro · pantry · compile · outro"
+              }
+            ],
+            "calloutText": "<b>Every other explainer inherits this chassis.</b> The Claude cut adds a skin; the doctrine underneath is <i>this</i>.",
+            "sparkLine": "The parent teaches the shape."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T13:22:06.532944+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 23.82,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 23.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — the four visible phases of what an explainer film does.",
+      "narration_text": "Here is the pipeline. Script becomes beats. Beats become a Kokoro voiceover — free, local, and the master clock. Then media flows in per beat from four sources: Manim fragments, treated stills over Ken Burns, public-domain footage, and Remotion annotations. Compile conforms every slot to the audio window and hands out one watchable master. That is the whole loop. Anything else is a modifier on top of it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'One clock. Four sources.' fades in"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'script · beats' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "four phase nodes reveal, 'audio' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'watchable master · one file' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "One clock. Four sources.",
+            "inputLabel": "script · beats",
+            "outputLabel": "watchable master",
+            "phases": [
+              {
+                "label": "audio",
+                "desc": "Kokoro · the master clock",
+                "accent": true
+              },
+              {
+                "label": "media",
+                "desc": "Manim · stills · footage"
+              },
+              {
+                "label": "remotion",
+                "desc": "annotation plane"
+              },
+              {
+                "label": "compile",
+                "desc": "conform + concat"
+              }
+            ],
+            "footerNote": "Every beat is a per-beat mp4. Nothing gets baked before its audio window is measured.",
+            "sparkLine": "Audio decides. Media follows."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T13:22:53.979627+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.7,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 21.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — the LAUNDERING FUNCTION. The thesis of the whole skill.",
+      "narration_text": "First design decision, and it is the thesis. Quote from the SKILL file: Vox is not a style, it is a laundering function. Any source you feed it — an archival photo, a FLUX still, a public-domain reel, a Manim fragment, a Remotion card — passes through one treatment. Desaturate about eighty percent. Contrast raised to about one-point-fifteen. Seated on a real newsprint scan. That is why mixed media reads as a single film. The sources never match. The treatment does.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'The laundering function.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: desaturate · contrast · newsprint ground"
+          },
+          {
+            "at": "0.55",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'kills the style-vs-substance debate'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "The laundering function.",
+            "body": "Any source — archival photo, FLUX still, PD reel, Manim fragment, Remotion card — goes through ONE treatment: desaturate ~80%, contrast 1.15, seated on a real newsprint scan. That is why mixed media reads as one film.",
+            "quote": "Not a style — a laundering function. Sources never match; the treatment does.",
+            "cite": "explainer SKILL.md · What Vox actually is",
+            "verdictLabel": "kills the style-vs-substance debate",
+            "verdictPositive": true,
+            "sparkLine": "One treatment, many sources."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T13:23:41.802532+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 22.53,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 22.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "Design decision 2 — the TWO-AXIS shot system. Separates presentation (locked) from provenance (swappable).",
+      "narration_text": "Second decision. Every beat has two independent tags. Shot dot type is the presentation form — is it a still, a piece of footage, a document, a graphic, a composite, or a title card. Type gets locked at the plan gate and never changes. Shot dot source is the provenance — did it come from an archive, an AI generator, or your own file. Source is late-bound and swappable. Collapse the two and every media swap becomes a re-edit. Separate them and swaps are free. Drop a new file in media, the reel rebuilds, only that slot recompiles.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Two axes. Free swaps.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "body: type (STILL/FOOTAGE/DOCUMENT/GRAPHIC/COMPOSITE/CARD) × source (archive/ai/own)"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'swaps stay free'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "Two axes. Free swaps.",
+            "body": "shot.type ∈ {STILL · FOOTAGE · DOCUMENT · GRAPHIC · COMPOSITE · CARD} — locked at plan gate.  shot.source ∈ {archive · ai · own} — late-bound. Independent axes. Swapping an ai still for an archive still keeps type=STILL — no re-edit.",
+            "quote": "Collapsing them makes every swap a re-edit; separating them makes swaps free.",
+            "cite": "explainer SKILL.md · THE TWO-AXIS SHOT SYSTEM",
+            "verdictLabel": "swaps stay free",
+            "verdictPositive": true,
+            "sparkLine": "Type locks. Source swaps."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T13:24:30.489987+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 29.27,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 29.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — the SLOT CONTRACT. Every beat is a per-beat clip; precedence + rebuild economics.",
+      "narration_text": "Third decision — the slot contract. Every beat on the timeline is one conformed per-beat mp4. The precedence at compile is: a hand-added mp4 in media beats a Manim mp4 in manim beats a still image with Ken Burns beats a slate. That means the very first pass is always a watchable film. A slate is a standard production stand-in, not a bug — it says fill this slot later. Change a slot's input and only that clip recompiles. The rest of the reel is byte-for-byte identical. That is why swaps cost nothing.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'The slot contract.' lands"
+          },
+          {
+            "at": "0.30",
+            "event": "body: precedence ladder media/ > manim/ > media/*.png > slate"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'first pass is always watchable'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "The slot contract.",
+            "body": "Precedence at compile: media/[beat].mp4  >  manim/[beat].mp4  >  media/[beat].png  >  SLATE. First pass is a watchable film with slates in unfilled slots. Change one input → only that clip recompiles.",
+            "quote": "Rebuild recompiles ONLY slots whose input hash changed, then re-concats.",
+            "cite": "explainer SKILL.md · THE SLOT CONTRACT",
+            "verdictLabel": "first pass is always watchable",
+            "verdictPositive": true,
+            "sparkLine": "Swap by filename. Nothing re-edits."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T13:25:18.954626+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.5,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 28.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FALSIFIABILITY",
+      "role_note": "Design tell / falsifiability — VOX LAW: a still is EVIDENCE, never texture. The one rule that stays strict.",
+      "narration_text": "Here is where the skill bites. VOX LAW: a still exists for exactly one reason — the still IS the evidence. The actual record the argument turns on. The updated skill adds a sharper edge. If your evidence is locally reproducible — a table, a chart, a test run, code output — execute it and render it. A terminal photograph is decoration. The running output is the evidence. Princeton's actual admissions record — yes. A stock photo of a university — no. The test: could this still be swapped for any other still of the same subject without changing what the beat proves? If yes, it is decoration. Cut it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow DESIGN · TELL lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'A still is evidence.' lands"
+          },
+          {
+            "at": "0.30",
+            "event": "body: EXECUTABLE-EVIDENCE.md edge + swap test"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'execute it — render it'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "DESIGN · TELL",
+            "heading": "A still is evidence.",
+            "body": "New in the updated skill (EXECUTABLE-EVIDENCE.md): if your evidence is locally reproducible — code output, a table, a chart, a test run — execute it and render the result. A terminal photograph is decoration; the running output is the evidence. Swap test: could this still be replaced by any other still of the same subject without changing what the beat proves? If YES, cut it.",
+            "quote": "There is no share to hit… any prior guidance stating a target percentage of vox body beats is superseded by this law.",
+            "cite": "explainer SKILL.md · VOX LAW + EXECUTABLE-EVIDENCE.md",
+            "verdictLabel": "execute it — render it",
+            "verdictPositive": true,
+            "sparkLine": "Evidence, never texture."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-11T20:38:45.985994+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 38,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 30.59,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 30.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the skill.",
+      "narration_text": "The verdict. The explainer skill is the chassis every other explainer bolts onto. It is a compositing pipeline, not a style. The Kokoro voiceover is the master clock, and free. The two-axis shot system separates presentation from provenance so swaps stay cheap. The slot contract makes the first pass a watchable film with slates. And VOX LAW keeps every still that reaches the timeline load-bearing. Do this well, and mixed media reads as one film. Break the last rule, and you shipped a slide show.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'A pipeline. Not a style.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The explainer Skill",
+            "artifactHeading": "A pipeline. Not a style.",
+            "artifactLines": [
+              "explainer is the chassis. AI-, CLI-, deep-explainer all inherit it verbatim.",
+              "Kokoro is the master clock — free, local, and the reason nothing waits.",
+              "shot.type is locked at plan gate; shot.source is late-bound so swaps stay free.",
+              "Precedence: media/[beat].mp4 > manim/[beat].mp4 > media/[beat].png > SLATE.",
+              "VOX LAW: a still is EVIDENCE, never texture. If it swaps, cut it.",
+              "First pass is always a watchable film — slates are a request, not a defect."
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T13:27:29.072968+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 26.71,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 26.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready prompt Liam reads aloud + discusses. The prompt scaffolds the viewer to run `slate cut` on their own concept.",
+      "narration_text": "Your turn. Paste this into Claude Code inside a fresh reels folder: run slate cut on the concept — write a short script, plan the beats, generate Kokoro audio, and produce a watchable review cut with slates in every human-media slot. Then read the film back and check three things. Does every body beat have a specific job — a comparison, a mechanism, a claim on screen — that only that beat can do? Is every planned still a piece of evidence, not atmosphere? And if you swapped any one still for another of the same subject, would the beat still prove what it claims? If it would, cut that still and let a Remotion or Manim beat carry the idea.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready slate cut prompt"
+          },
+          {
+            "at": "0.70",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · CUT YOUR OWN EXPLAINER",
+            "segment": "Run `slate cut` on your concept",
+            "command": "Run `slate cut` on the following concept: [your one-line topic]. Write a short script, plan beats, generate Kokoro audio, and produce a watchable review cut with slates in every human-media slot. Do not run any paid API. Keep every still under VOX LAW.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: does every body beat have ONE specific job only it can do?",
+              "check: is every planned still evidence — the record the beat proves?",
+              "check: apply the swap test. If any still fails it, cut the still."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T13:28:39.948947+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 42,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 32.58,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 32.583333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-11T16:40:07"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "That was the explainer Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The explainer Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The explainer Skill",
+            "slug": "claude-liam-brutalist-skill-explainer"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T13:19:14.741893+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.48,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 3.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-11T16:40:07"
+      }
+    }
+  ]
+}

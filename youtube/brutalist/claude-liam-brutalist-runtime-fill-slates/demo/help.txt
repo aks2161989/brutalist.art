@@ -1,0 +1,9 @@
+usage: fill_slates.py [-h] [--apply] [--books BOOKS] [reel]
+
+positional arguments:
+  reel
+
+options:
+  -h, --help     show this help message and exit
+  --apply
+  --books BOOKS

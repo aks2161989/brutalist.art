@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "17e546b62d984759b811b112f45053a6",
+  "source_sha256": "0bd241b3d3b792330b10a0037c370271ed86a2600f3afe30a7a5856bc15171ff",
+  "beat_sheet_sha256": "83193f75fe2d3874f14987bf0f58c40c6d59a221ff7aa454b251001dd258ca61",
+  "video_sha256": "7cf40571044364272286afec6527a142aefe8ae5dc118fd6ece2d0baf0f376c5",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "4a751d13ebe2981d8455e602549a4a380339c312d31e24c016fb39060c3a083c"
+    },
+    {
+      "path": "_qc/review/land_t5s.png",
+      "sha256": "e76c6b829bb396678935d25e9630886f4f19d6cdb30ba8954f30ea84a24efb42"
+    },
+    {
+      "path": "_qc/review/land_t50s.png",
+      "sha256": "43bf269fc8a719a838fbd21c4c6f890a2d27ade89191ed49dc3098be75f9eeea"
+    },
+    {
+      "path": "_qc/review/land_t100s.png",
+      "sha256": "dab7d1715d9dd8388a201bbe1c4cf58e27e9c93c0b85172c83952db8c8f31302"
+    },
+    {
+      "path": "_qc/review/land_t190s.png",
+      "sha256": "af295840685286265436f43bbcc81bd7e71bf928f2c0150fe04f8eb02eb8cad3"
+    },
+    {
+      "path": "_qc/review/land_last.png",
+      "sha256": "7a03e94a90f1cb76850482ba0a89fe5a26524f23cbe56d2f9c49c2d4498839d5"
+    }
+  ],
+  "notes": "Run 5886489043694263be44af6a46ffbcaf (2026-09-14, attempt 3). Landscape 3840x2160, duration=212.04s, 12/12 beats filled, 0 slates. Gate V: python3 runtime/qc/final_frame_check.py <reel> --mp4 exports/landscape/claude-liam-brutalist-runtime-remotion-scenes.mp4 → frames=24 BLOCKER=0 MAJOR=0. Previous run landscape had correct QC but wrong --out path (master.mp4 directory); re-compiled with --out exports/landscape to correct path. Directly viewed frames: land_t5s.png (t=5s) — B00 ClaudeComposerAsk cold open: 'BRUTALIST TOOLKIT · UTILITY' eyebrow, 'Brutalist Utility: remotion_scenes.py' title, 'Sawadee, Liam' serif greeting, command question in composer, '@HumanitariansAI' folder chip, three monospace output lines — all within safe area, no bleed. land_t50s.png (t=50s) — B02 SkillTeardownPipeline: 'Four steps, one pass.' title with detect→render→extend→stamp pipeline nodes, INPUT/OUTPUT boxes, footer note and sparkline — legible and balanced. land_t100s.png (t=100s) — B05 ClaudeCodeBeat: extend_clip_to_duration.py code card showing tpad freeze-hold ffmpeg command, 'Freeze, don’t stretch.' sparkline — monospace legible throughout. land_last.png (last frame) — B11 ClaudeTitleOutro: 'Brutalist Utility: remotion_scenes.py.' title over '@NikBearBrown' handle with pixel mascot (OUTRO-LOCK.md locked handle; flag for human reviewer before channel switch to @HumanitariansAI). No captions, no slates, no edge-bleed, @HumanitariansAI visible in B00/B10 body beats. Human viewing/editing is next; no upload, no commit."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/exports/vertical/claude-liam-brutalist-download-and-set-up-vertical.mp4",
+  "sha256": "77e741e2b946a9efa2d659dbaa805e893c4126117bc0b7c7d3b04899a843d7a8",
+  "duration_s": 165.08333333333331,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B00.mp4": "8cc778ab06a46ecdc45a32923427ecea45e16570b31f341308fc629556c3a765",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B01.mp4": "84f87e42c764a12ab8255327b41c5dedef7a2b5a1f18716ded88cc5e99a5edf7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B02.mp4": "8a904e0b9d216ee1dfa84897d4bd0670ef4c5aae4d60cfcb9affe71e8fadfabe",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B03.mp4": "0ec7658d4ef90261f4b921245d8639363a683f47e094612f157c2396877009e5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B04.mp4": "30231a14b73dd2248901d7d67dab5f6487770699ed09e4ad4c1777fbb52b4ca1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B05.mp4": "4188fca2ac63fc555104353815b48cabcf06bb6d5eb32d9b58d925e17f7e6404",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B06.mp4": "9af80bae2aef4ebcf6fe4692c782b04cf4521134d85245fc43588f5288110a53",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B07.mp4": "534be02671a2a7c1080ec892ab6c5f3ac5b697ef2a0dcf04c29dcbb7166d9529",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B08.mp4": "6a41a5089b980a9a853b6280ce6c4deb8657ac762c61bd2fa54c19eebfe1b653",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/media/B09.mp4": "fc3e4933777000eda6b06a85d3ce89f0f5574cb3bbdc89acb82a15114ee4c32e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B00.mp3": "a238c5a447c40dadc176e2a96eaa5f5f87f83d4cf309aa9a3335808e7568a967",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B01.mp3": "a2b674403d10db78aef378002debfdf682f0fd3becc42998b7156b89a12c4183",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B02.mp3": "7c1ba81bc1873d7c740ee9109662907a39e0ac00452f82bd7683a3b2a8eb5529",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B03.mp3": "203d63c3c29aa1b88bdd08de1ae1fa272b1888f3f72d831c3364d9295e916f20",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B04.mp3": "2f48b029246233822789e4cb7970bf1cdc56b07eb4b3d5cd3fc31aba974013fc",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B05.mp3": "c3106d3f55fe5dbc2b353cc6363e67bc6190a552783ee57b5b45c077ecc1c0bd",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B06.mp3": "e945fcbc95c6a30ec0b7dfae04e89f58bf985b2637528696dccf37d45d0c1359",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B07.mp3": "20fc3dd1aed842d4a4f6ebaffccbda7349a7b3380bfe4219179e801479b5a9e4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B08.mp3": "e65caadcf92ce722c3029bd4f09766654a334f9d5d03f740af0d62cdde8048f0",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-download-and-set-up/vertical/mp3/beat-B09.mp3": "af0a047e43f1ece959f384bc4577619c62d7f2fea0daf02c2dc3e9c82fca72a2"
+  },
+  "at": "2026-09-10T23:50:27.199944+00:00"
+}

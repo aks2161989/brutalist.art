@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "6c0371edd995440282af8302483b99ec",
+  "source_sha256": "ea0b3e2048fa8d6979e5c10f263c7bfe7701d61a0fe41e99bf33e8487dc41b09",
+  "beat_sheet_sha256": "7ae65275560d2817d5340a389cb0a1c9a1a0a8a893fc89b271b7ae6495e6d942",
+  "video_sha256": "1b3b85c9a03ff5fddfcb3aa50d2511c7d228f05291ff735578cf99be3952a2bd",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames-landscape/start.png",        "sha256": "c7196cff2f733d86cdced9027ba39c942852a354c492fcbcb422e6a733587e98"},
+    {"path": "_qc/frames-landscape/bluf.png",          "sha256": "1a1cfa7e96b9705e40fd0b50b5b44b26078b25c40f5d07209b6befc8c8dd8cb1"},
+    {"path": "_qc/frames-landscape/framework-B02.png", "sha256": "0ca1c55e86039ef16c4dfa335cdbe941d2a90bc105c24d4a593ad61051ba7055"},
+    {"path": "_qc/frames-landscape/mechanism-1.png",   "sha256": "fecfde30b5bfd018a7fb61ecf00312d2b81879b511f2b502127a1b7de1467a98"},
+    {"path": "_qc/frames-landscape/mechanism-2.png",   "sha256": "dbfa5c37cd213eafa3f10dfb5facef08118c9ddfd26cd45d86cc7afccac34c7f"},
+    {"path": "_qc/frames-landscape/failure.png",       "sha256": "061f43c0b9c2f74ee44d7a85f3a5dc29d15a67f2cf90132c91e73e6a50acb30c"},
+    {"path": "_qc/frames-landscape/verdict.png",       "sha256": "81f0a6935917a6c15891ec131952730b0cf39f60e975e27f0ac1a69151f7e484"},
+    {"path": "_qc/frames-landscape/your-turn.png",     "sha256": "c6e0f96d8cd2ca7f335bd3dedc4b97441b33ce4be26a71275cdec0729994e695"},
+    {"path": "_qc/frames-landscape/end.png",           "sha256": "c3064e2bfe9209edc9349ef84a8a7d43b84ac7545c843cdc1d64d040e736ff44"},
+    {"path": "_qc/contact_sheet.png",                  "sha256": "94f171125372dd60f6866d3d722ee52dcbc4088a8f10a7b6117ea947deb420d2"}
+  ],
+  "notes": "Re-verification pass for run_id 6c0371edd995440282af8302483b99ec (previous invocation interrupted by Claude usage limit). Landscape 3840x2160 · 200.875s · H.264 + AAC 48kHz stereo · 13MB. Gate-V re-run this session: 24 frames sampled, BLOCKER 0, MAJOR 0. Five key frames inspected by image-capable Read tool: start shows ClaudeComposerAsk cold open with 'Selam, Liam' greeting, 'art approvals' question label, @HumanitariansAI folder chip, cream background — correct; bluf shows BrutalistHesitantWriter mid-animation ('art approvals' / 'signs|' terracotta cursor) — correct two-line layout, fills safe area; framework-B02 shows ClaudeCodeBeat at art:108-110 with the approvals dispatcher case and explanation — 'One case. No aliases. Two verbs.' caption at bottom; verdict shows ClaudeVerdictArtifact 6 lines titled 'art approvals — the whole surface, in the order you use it'; end frame confirms ClaudeTitleOutro 'Brutalist Command: art approvals.' with terracotta period, @NikBearBrown handle (OUTRO-LOCK — flagged for human reviewer before publication), and pixel mascot. Contact sheet shows all 12 beats in a grid; code cards properly contained on white cards within cream safe area; no edge-bleed visible. LIMITATION: portrait code cards truncate long lines at right edge (accepted, same as prior run; salient content visible; landscape master has full lines). Human review pending."
+}

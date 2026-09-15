@@ -1,0 +1,19 @@
+{
+  "files": [
+    "runtime/remotion/src/scenes.json",
+    "runtime/remotion/src/TrainTeacher.tsx",
+    "runtime/remotion/src/RequireReport.tsx",
+    "runtime/remotion/src/Root.tsx",
+    "runtime/remotion/src/scenes/BrutalistHesitantWriter.tsx",
+    "runtime/remotion/src/scenes/ClaudeVerdictArtifact.tsx",
+    "runtime/remotion/src/scenes/GodotDevWorkbench.tsx",
+    "runtime/remotion/src/scenes/WalkerGodotSetup.tsx",
+    "runtime/remotion/src/scenes/ClaudeCodeBeat.tsx",
+    "runtime/remotion/src/scenes/ClaudeComposerAsk.tsx",
+    "runtime/remotion/src/scenes/ClaudeVerdictArtifact916.tsx",
+    "runtime/remotion/src/scenes/BarChart.tsx",
+    "runtime/remotion/src/illustrations/previews.tsx"
+  ],
+  "baseline_sha256": "1f083d565788621915aaf57e23ea0d0c81efb295606e3bd4d1546d81cb77baad",
+  "note": "Overlay on the local toolkit snapshot recorded in SOURCE-SNAPSHOT.json, not blindly on another revision."
+}

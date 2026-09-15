@@ -1,0 +1,30 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "What ./art help actually does: prints a 17-line usage sheet extracted from the art file's own header by sed. Four aliases share one branch. Different scope from ./art --list.",
+  "parent_reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-help",
+  "parent_master_sha256": "b35bce6f260ee81026a027eba381258f6c0df605408b8a84cfb01f68b65e18d3",
+  "parent_source_sha256": "e9ca6bd73b9d358e3070eacbabafad0ab3bea099af5d05e46906e6b6d0f5f405",
+  "run_id": "2c495c5f99c840f6adc567ad1aa16613",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B05", "B06", "B09", "B11"],
+  "dropped_beats": [
+    {
+      "beat_id": "B02",
+      "reason": "FRAMEWORK shape of the dispatcher (whole case statement, several branches). The Short only needs the help body; B03 shows the actual sed pipe and B05 shows the four aliases sharing that body. Keeping B02 duplicates that content with a wider tour."
+    },
+    {
+      "beat_id": "B07",
+      "reason": "FALSIFIABILITY — ./art bogus exits 2. The verdict beat (B09) already summarises 'unknown token — exit 2, one line to stderr, points to --list', so the fellow audience gets the caveat without the extra worked failure."
+    },
+    {
+      "beat_id": "B08",
+      "reason": "RECOVERY path — ./art --list then ./art <skill> --help. B06 already contrasts help vs --list (the essential scope split); B09 verdict states 'art <skill> --help — that skill's SKILL.md, opened in $PAGER'. Extending into a full recovery walk repeats what the verdict states."
+    },
+    {
+      "beat_id": "B10",
+      "reason": "YOUR TURN composer with a long paste-into-Claude-Code prompt. Cut-first override permits dropping the extended exercise from a Short; the long film retains it. Removing this saves 19.4s and lets the outro land immediately after the verdict."
+    }
+  ],
+  "cut_first_review": "Retained narration: (B00) Liam introduces the aliases and the 'help = the file's own header, extracted at run time' idea; (B01) hesitant BLUF corrects 'lists every skill' → 'lists every command'; (B03) shows the two-sed body that produces the help (now correctly references art:56 after 2026-09-11 source update); (B04) shows the verbatim 17-line output with smoke+keys note (updated 2026-09-11); (B05) shows the four aliases hitting the same case branch (art:55); (B06) contrasts help (commands) with --list (skills catalog); (B09) verdict summarises four scopes; (B11) outro sign-off. Transitions work because B00 sets up the two claims (four aliases; header-extracted) and B03/B04/B05 pay them off in order; B06 handles the near-miss; B09 restates the four scopes. B03 and B04 media updated 2026-09-12 to match parent vertical rebuild (art line numbers corrected after godot-* dispatch added to art script on 2026-09-11).",
+  "planned_duration_s": 107.375,
+  "rewrite_reason": null
+}

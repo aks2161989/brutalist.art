@@ -1,0 +1,17 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art shorts derives a 9:16 sibling from a finished reel: caps under 3:00, drops whole beats greedily, rewires Remotion beats to their 916 compositions instead of cropping.",
+  "parent_master_sha256": "3481e57f74bc4527f7e075b2126449716bf98a6c3ad5f1b0df79c6362bcc89fd",
+  "kept_beats": ["B00", "B01", "B03", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "FRAMEWORK code walk of two dispatcher cases in art:81-86; long-form anatomy of a bash case belongs in the 16:9 film. The BLUF (B01), SHORTS LAW (B03) and verdict (B09) already establish that --vertical is a separate contract."},
+    {"beat_id": "B04", "reason": "MECHANISM code walk of plan_drops(): 12 lines of Python and CAP_HEADROOM math. The Short states the greedy-longest-first policy in B03 and again in B09; internal Python is long-form territory."},
+    {"beat_id": "B05", "reason": "MECHANISM code walk of the ONDA CHECK is_remotion / portrait_pattern helpers. B01 and B09 already state that Remotion beats get rewired to <pattern>916 and never cropped; the source-level implementation is long-form."},
+    {"beat_id": "B06", "reason": "MECHANISM code walk of the pantry precedence order. B09 already names pantry as the winning override; the fixed precedence list is long-form."},
+    {"beat_id": "B08", "reason": "FALSIFIABILITY corner case (--vertical + --drop refusal). Useful edge case, but not core to explaining what the command does. Fits the 16:9 film's coverage of both verbs."},
+    {"beat_id": "B10", "reason": "Extended Your Turn composer with pantry/ONDA recovery steps. The Shorts prompt explicitly permits omitting the extended Your Turn; the outro (B11) still points viewers at the long form."}
+  ],
+  "cut_first_review": "The retained cut opens with Liam introducing art shorts and its central editorial rule (B00), lets the hesitant writer correct the two common misreadings (B01: 'speeds up / crops' -> 'drops beats / rewires the render'), reads the SHORTS LAW itself verbatim from the module docstring (B03), grounds the theory in a real cap-check log against the fixture reel (B07: 214s -> 163.5s by dropping B02), summarizes the entire surface in the order a user hits it (B09), and signs off (B11). Transitions: B00 -> B01 both live under the 'plan first, never speeds up, never crops' idea; B01 -> B03 moves from BLUF to the law it summarizes; B03 -> B07 moves from law to real invocation output; B07 -> B09 moves from one worked case to the whole surface; B09 -> B11 closes. No dropped beat leaves a dangling reference in what remains.",
+  "planned_duration_s": 129.18,
+  "rewrite_reason": null
+}

@@ -1,0 +1,6 @@
+{
+  "claude-liam-fixture-your-turn-demo": {
+    "prompt": "I just watched a fixture reel demonstrating the your-turn skill's transformer. I understand the closing block rewrites the last three beats, but I want to see the mechanism on something concrete. Can you (1) show me a diff of what the transformer changed in this fixture's VERDICT, YOUR TURN, and OUTRO beats, (2) explain why the handoff line here is 'Thanks Bear, let's recap with Claude.' and not 'Let's recap with Claude.', and (3) point out which artifactLines it stripped leading numbers from?",
+    "recap": null
+  }
+}

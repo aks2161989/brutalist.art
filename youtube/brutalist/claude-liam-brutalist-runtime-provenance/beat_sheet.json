@@ -1,0 +1,920 @@
+{
+  "metadata": {
+    "slug": "claude-liam-brutalist-runtime-provenance",
+    "title": "Brutalist Utility: provenance.py",
+    "playlist": "Brutalist",
+    "channel": "@HumanitariansAI",
+    "aspect_ratio": "16:9",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "captions": false,
+    "palette": "claude",
+    "register": "Teardown",
+    "persona": "Liam, in for Bear",
+    "run_id": "78dfda38d8884ee8b8562365a0bf3b50",
+    "build": {
+      "at": "2026-09-14T05:22:33",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B11: palette=claude but the outro is 'HaiTitleOutro' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Selam — this is Liam, in for Bear. Every Brutalist reel is a mix: the pipeline makes some of the media, you make the rest. Provenance dot py runs one command and tells you which is which — audio fingerprint, output directory, and per-beat slot, all at once.",
+      "lead_silence_s": 0,
+      "scene": "ClaudeComposerAsk",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Selam, Liam",
+            "command": "python3 provenance.py claude-liam-brutalist-runtime-provenance/",
+            "topic": "provenance.py",
+            "segment": "Brutalist Utility",
+            "runningText": "scanning your reel…",
+            "output": [
+              "■ claude-liam-brutalist-runtime-provenance",
+              "  AUDIO   engine(fingerprint): Kokoro:12   [beat_sheet says: kokoro]",
+              "  VIDEO   Brutalist outputs (final/clips/manim/mp4): 24 files — all machine-made",
+              "  SLOTS   Brutalist-rendered:      10 ['B00','B01','B02','B03','B04','B05','B06','B07','B08','B09']",
+              "          YOU (gen-AI/archival):   0 []",
+              "          Capture? (auto or yours): 2 ['B10','B11']  ← sheet doesn't say"
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-14T09:18:35.808044+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "greeting 'Selam, Liam' fades in above the composer"
+          },
+          {
+            "at": 0.3,
+            "event": "command types into composer: python3 provenance.py claude-liam-brutalist-runtime-provenance/"
+          },
+          {
+            "at": 0.6,
+            "event": "running indicator appears; output lines reveal one by one"
+          }
+        ]
+      },
+      "props": {
+        "greeting": "Selam, Liam",
+        "command": "python3 provenance.py claude-liam-brutalist-runtime-provenance/",
+        "topic": "provenance.py",
+        "segment": "Brutalist Utility",
+        "runningText": "scanning your reel…",
+        "output": [
+          "■ claude-liam-brutalist-runtime-provenance",
+          "  AUDIO   engine(fingerprint): Kokoro:12   [beat_sheet says: kokoro]",
+          "  VIDEO   Brutalist outputs (final/clips/manim/mp4): 24 files — all machine-made",
+          "  SLOTS   Brutalist-rendered:      10 ['B00','B01','B02','B03','B04','B05','B06','B07','B08','B09']",
+          "          YOU (gen-AI/archival):   0 []",
+          "          Capture? (auto or yours): 2 ['B10','B11']  ← sheet doesn't say"
+        ],
+        "folderLabel": "@HumanitariansAI"
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 13.89,
+      "render_duration_s": 13.916666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Provenance dot py lists your reel's files and counts them — it's a provenance check, not a completeness check. Each file gets a label: Brutalist, meaning the pipeline rendered it; or YOU, meaning a human or gen-AI filled that slot; or Capture-question-mark, when the sheet is ambiguous.",
+      "lead_silence_s": 0.8,
+      "scene": "BrutalistHesitantWriter",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "provenance.py lists files.\nIt's a completeness check.",
+            "triggerWords": "completeness",
+            "replacementWords": "provenance",
+            "seed": "provenance-47",
+            "fontSize": 180,
+            "lineSpacing": 2.5,
+            "align": "center"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-14T04:44:15.836433+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "writer types 'provenance.py lists / your reel's files and counts them. / It's a completeness check.'"
+          },
+          {
+            "at": 0.5,
+            "event": "'completeness' highlighted terracotta — writer pauses and reconsiders"
+          },
+          {
+            "at": 0.75,
+            "event": "'completeness' struck through and replaced with 'provenance'"
+          },
+          {
+            "at": 0.9,
+            "event": "final text settled: '... It's a provenance check.'"
+          }
+        ]
+      },
+      "props": {
+        "text": "provenance.py lists files.\nIt's a completeness check.",
+        "triggerWords": "completeness",
+        "replacementWords": "provenance",
+        "seed": "provenance-47",
+        "fontSize": 180,
+        "lineSpacing": 2.5,
+        "align": "center"
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 15.38,
+      "render_duration_s": 15.416666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Provenance dot py reads three layers. First, audio: it fingerprints each MP3 by sample rate — 24 kilohertz means Kokoro, 44 kilohertz means something older. Second, video outputs: your slug dot mp4, clips, and Manim renders are always machine-made, so they're labeled Brutalist automatically. Third, per-beat slots in your media folder: that classification comes from the beat sheet itself.",
+      "scene": "SkillTeardownPipeline",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "title": "Three layers of evidence.",
+            "inputLabel": "reel/",
+            "outputLabel": "report",
+            "phases": [
+              {
+                "label": "Audio",
+                "desc": "MP3 sample rate fingerprint",
+                "accent": false
+              },
+              {
+                "label": "Outputs",
+                "desc": "slug.mp4 · clips/ · manim/ — always Brutalist",
+                "accent": true
+              },
+              {
+                "label": "Slots",
+                "desc": "beat sheet metadata per beat",
+                "accent": false
+              }
+            ],
+            "footerNote": "Source: runtime/scripts/provenance.py",
+            "sparkLine": "Audio. Outputs. Slots."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-14T04:11:34.363447+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "eyebrow 'UTILITY · PIPELINE' appears, then title 'Three layers of evidence.'"
+          },
+          {
+            "at": 0.2,
+            "event": "INPUT node 'reel/' reveals left"
+          },
+          {
+            "at": 0.35,
+            "event": "Phase 1 'Audio: MP3 sample rate fingerprint' appears"
+          },
+          {
+            "at": 0.5,
+            "event": "Phase 2 'Outputs: slug.mp4 · clips/ · manim/ — always Brutalist' appears in terracotta"
+          },
+          {
+            "at": 0.65,
+            "event": "Phase 3 'Slots: beat sheet metadata per beat' appears"
+          },
+          {
+            "at": 0.8,
+            "event": "OUTPUT node 'report' reveals right; spark line 'Audio. Outputs. Slots.' fades in"
+          }
+        ]
+      },
+      "props": {
+        "eyebrow": "UTILITY · PIPELINE",
+        "title": "Three layers of evidence.",
+        "inputLabel": "reel/",
+        "outputLabel": "report",
+        "phases": [
+          {
+            "label": "Audio",
+            "desc": "MP3 sample rate fingerprint",
+            "accent": false
+          },
+          {
+            "label": "Outputs",
+            "desc": "slug.mp4 · clips/ · manim/ — always Brutalist",
+            "accent": true
+          },
+          {
+            "label": "Slots",
+            "desc": "beat sheet metadata per beat",
+            "accent": false
+          }
+        ],
+        "footerNote": "Source: runtime/scripts/provenance.py",
+        "sparkLine": "Audio. Outputs. Slots."
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 21.95,
+      "render_duration_s": 21.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "The audio fingerprint is four lines. It calls ffprobe on each MP3 and reads the sample rate. Twenty-four thousand? Kokoro — free local TTS, the pipeline's own voice. Forty-four thousand or higher? Legacy — something pre-Kokoro. No rate returned means ffprobe couldn't read the file, so it reports a question mark. The beat sheet's declared engine is printed alongside for comparison.",
+      "scene": "ClaudeCodeBeat",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "provenance.py — audio_engine()",
+            "code": "def sr(path):\n    r = subprocess.run(\n        [\"ffprobe\",\"-v\",\"error\",\"-show_entries\",\n         \"stream=sample_rate\",\"-of\",\"default=nk=1:nw=1\",str(path)],\n        capture_output=True, text=True)\n    try: return int(r.stdout.strip().splitlines()[0])\n    except Exception: return None\n\ndef audio_engine(path):\n    s = sr(path)\n    if s is None:       return \"?\", None\n    if s >= 44100:      return \"legacy-44k\", s\n    if s <= 24000:      return \"Kokoro\", s\n    return f\"?({s})\", s",
+            "sparkLine": "Sample rate is the fingerprint."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-14T04:12:01.308584+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "code card slides up, title bar shows 'provenance.py — audio_engine()'"
+          },
+          {
+            "at": 0.15,
+            "event": "function definition and ffprobe call reveal"
+          },
+          {
+            "at": 0.4,
+            "event": "conditional logic lines reveal: 44100 → legacy-44k, 24000 → Kokoro"
+          },
+          {
+            "at": 0.75,
+            "event": "spark line 'Sample rate is the fingerprint.' appears"
+          }
+        ]
+      },
+      "props": {
+        "title": "provenance.py — audio_engine()",
+        "code": "def sr(path):\n    r = subprocess.run(\n        [\"ffprobe\",\"-v\",\"error\",\"-show_entries\",\n         \"stream=sample_rate\",\"-of\",\"default=nk=1:nw=1\",str(path)],\n        capture_output=True, text=True)\n    try: return int(r.stdout.strip().splitlines()[0])\n    except Exception: return None\n\ndef audio_engine(path):\n    s = sr(path)\n    if s is None:       return \"?\", None\n    if s >= 44100:      return \"legacy-44k\", s\n    if s <= 24000:      return \"Kokoro\", s\n    return f\"?({s})\", s",
+        "sparkLine": "Sample rate is the fingerprint."
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 20.97,
+      "render_duration_s": 21.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "The slot classifier reads the beat sheet, not the file itself. It looks at three fields: shot dot remotion dot pattern, build dot filled-by, and shot dot type. If any of those says 'remotion' or 'manim', the slot is Brutalist — the pipeline rendered it. If shot dot type says AI-VIDEO, archival, or historical image, the slot is YOU — you or a gen-AI tool supplied it. The design insight here is that the beat sheet is the provenance record. It encodes not just what plays but who made it.",
+      "scene": "SkillTeardownMechanism",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "UTILITY · MECHANISM",
+            "heading": "The beat sheet is the provenance record.",
+            "body": "slot_provenance() reads three fields: shot.remotion.pattern, build.filled_by, and shot.type. Remotion or Manim → Brutalist. AI-VIDEO / archival / historical-image → YOU.",
+            "quote": "a pipeline AUTO-CAPTURE (D3 sim via capture_sim.py) OR a clip you dropped. The old sheets do not record which; the new build stamp does.",
+            "cite": "provenance.py lines 47–51",
+            "verdictLabel": "The sheet encodes the maker.",
+            "verdictPositive": true,
+            "sparkLine": "The sheet knows who made it."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-14T04:12:53.770498+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "eyebrow 'UTILITY · MECHANISM', heading 'The beat sheet is the provenance record.' appear"
+          },
+          {
+            "at": 0.25,
+            "event": "body text reveals: three fields the classifier reads"
+          },
+          {
+            "at": 0.55,
+            "event": "verbatim quote from provenance.py source reveals in card"
+          },
+          {
+            "at": 0.8,
+            "event": "verdict label 'The sheet encodes the maker.' appears; spark line fades in"
+          }
+        ]
+      },
+      "props": {
+        "eyebrow": "UTILITY · MECHANISM",
+        "heading": "The beat sheet is the provenance record.",
+        "body": "slot_provenance() reads three fields: shot.remotion.pattern, build.filled_by, and shot.type. Remotion or Manim → Brutalist. AI-VIDEO / archival / historical-image → YOU.",
+        "quote": "a pipeline AUTO-CAPTURE (D3 sim via capture_sim.py) OR a clip you dropped. The old sheets do not record which; the new build stamp does.",
+        "cite": "provenance.py lines 47–51",
+        "verdictLabel": "The sheet encodes the maker.",
+        "verdictPositive": true,
+        "sparkLine": "The sheet knows who made it."
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 26.45,
+      "render_duration_s": 26.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Here's the command on a real fixture. Audio shows Kokoro colon one and legacy-44k colon one — there's a mismatch. The beat sheet says kokoro, but one MP3 came in at 44 kilohertz. Provenance dot py surfaces that immediately. The video line counts nine machine-made outputs. Slots: four Brutalist — B00 through B03 all have shot dot remotion set. B04 is YOU because its shot type is archival. B05 is Capture-question-mark because shot type is screen, which the classifier can't resolve.",
+      "scene": "ClaudeCodeBeat",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "provenance.py — demo run on fixture",
+            "code": "$ python3 provenance.py provenance-fixture/\n\n■ provenance-fixture\n  AUDIO   engine(fingerprint): Kokoro:1 · legacy-44k:1\n          [beat_sheet says: kokoro]   ← mismatch!\n  VIDEO   Brutalist outputs: 9 files — all machine-made\n  SLOTS   Brutalist-rendered:      4  ['B00','B01','B02','B03']\n          YOU (gen-AI/archival):   1  ['B04']\n          Capture? (auto or yours): 1  ['B05']",
+            "sparkLine": "Three lists, one command."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-14T04:13:23.214262+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "code card up, title 'provenance.py — demo run on fixture'"
+          },
+          {
+            "at": 0.1,
+            "event": "command line reveals"
+          },
+          {
+            "at": 0.25,
+            "event": "AUDIO line reveals — shows 'Kokoro:1 · legacy-44k:1' mismatch in terracotta"
+          },
+          {
+            "at": 0.5,
+            "event": "VIDEO line reveals: 9 machine-made outputs"
+          },
+          {
+            "at": 0.65,
+            "event": "SLOTS lines reveal: Brutalist:4, YOU:1, Capture?:1"
+          },
+          {
+            "at": 0.85,
+            "event": "spark line 'Three lists, one command.' appears"
+          }
+        ]
+      },
+      "props": {
+        "title": "provenance.py — demo run on fixture",
+        "code": "$ python3 provenance.py provenance-fixture/\n\n■ provenance-fixture\n  AUDIO   engine(fingerprint): Kokoro:1 · legacy-44k:1\n          [beat_sheet says: kokoro]   ← mismatch!\n  VIDEO   Brutalist outputs: 9 files — all machine-made\n  SLOTS   Brutalist-rendered:      4  ['B00','B01','B02','B03']\n          YOU (gen-AI/archival):   1  ['B04']\n          Capture? (auto or yours): 1  ['B05']",
+        "sparkLine": "Three lists, one command."
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 31.3,
+      "render_duration_s": 31.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Capture-question-mark is the honest label for ambiguity. Brutalist means the pipeline rendered the slot — you can trace it back to a scene file or a Manim script. YOU means a human or gen-AI tool explicitly provided the media — the beat sheet says so. Capture-question-mark means a media file exists in the slot but the beat sheet doesn't record whether it came from capture-sim dot py or from you dropping a clip in. Older beat sheets almost always have Capture-question-marks. Newer ones with a build dot filled-by field have fewer.",
+      "scene": "FormBCard",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "FormBCard",
+          "props": {
+            "title": "The three slot labels.",
+            "items": [
+              {
+                "icon": "BOX",
+                "label": "Brutalist",
+                "sub": "The pipeline rendered it: a Remotion scene, a Manim clip, or a compiled output file. You can trace it to the scene file or script."
+              },
+              {
+                "icon": "BOX",
+                "label": "YOU",
+                "sub": "You or gen-AI explicitly supplied it. The beat sheet records this in shot.type as AI-VIDEO, archival, or historical-image."
+              },
+              {
+                "icon": "BOX",
+                "label": "Capture?",
+                "sub": "Ambiguous. Could be a pipeline auto-capture from capture_sim.py, or a clip you dropped in. Older beat sheets do not record which."
+              }
+            ]
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-14T04:31:22.174749+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title 'The three slot labels.' appears"
+          },
+          {
+            "at": 0.2,
+            "event": "'Brutalist' item reveals with robot icon"
+          },
+          {
+            "at": 0.45,
+            "event": "'YOU' item reveals with person icon"
+          },
+          {
+            "at": 0.7,
+            "event": "'Capture?' item reveals with question icon in terracotta — the ambiguous case"
+          }
+        ]
+      },
+      "props": {
+        "title": "The three slot labels.",
+        "items": [
+          {
+            "icon": "BOX",
+            "label": "Brutalist",
+            "sub": "The pipeline rendered it: a Remotion scene, a Manim clip, or a compiled output file. You can trace it to the scene file or script."
+          },
+          {
+            "icon": "BOX",
+            "label": "YOU",
+            "sub": "You or gen-AI explicitly supplied it. The beat sheet records this in shot.type as AI-VIDEO, archival, or historical-image."
+          },
+          {
+            "icon": "BOX",
+            "label": "Capture?",
+            "sub": "Ambiguous. Could be a pipeline auto-capture from capture_sim.py, or a clip you dropped in. Older beat sheets do not record which."
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 28.82,
+      "render_duration_s": 28.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:FormBCard",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Three things must be in place for provenance dot py to give a useful report. First: ffprobe on your PATH — it's the audio fingerprinter, and without it, every MP3 returns a question mark. Second: beat-sheet dot json in the reel folder — without it the script runs but reports no beats, giving you only the audio and output counts. Third: the media folder with per-beat dot mp4 files — if those are absent, the slot map is empty. Beat-plan dot py is optional: if it's importable, the script uses fill-plan data; if the import fails, it silently continues.",
+      "scene": "SkillTeardownAnatomy",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "provenance.py",
+            "eyebrow": "UTILITY · PREREQUISITES",
+            "title": "What it needs to run.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "reel/",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.json",
+                "accent": true,
+                "tag": "required"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "mp3/  (or  audio/)",
+                "accent": false
+              },
+              {
+                "indent": 2,
+                "icon": "🎵",
+                "name": "B00.mp3 … BNN.mp3",
+                "accent": false,
+                "tag": "audio files"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "media/",
+                "accent": false,
+                "tag": "optional"
+              },
+              {
+                "indent": 2,
+                "icon": "🎬",
+                "name": "B00.mp4 … BNN.mp4",
+                "accent": false,
+                "tag": "slot files"
+              }
+            ],
+            "calloutText": "ffprobe must be on your PATH.",
+            "calloutSub": "Without it: every audio file returns '?' for engine.",
+            "sparkLine": "ffprobe + beat sheet = report."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-14T04:14:17.729255+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "eyebrow 'UTILITY · PREREQUISITES', title 'What it needs to run.' appear"
+          },
+          {
+            "at": 0.2,
+            "event": "reel/ folder node reveals"
+          },
+          {
+            "at": 0.3,
+            "event": "beat_sheet.json entry reveals with [required] tag — terracotta accent"
+          },
+          {
+            "at": 0.45,
+            "event": "mp3/ folder and *.mp3 entries reveal"
+          },
+          {
+            "at": 0.6,
+            "event": "media/ folder and B**.mp4 entries reveal"
+          },
+          {
+            "at": 0.75,
+            "event": "callout 'ffprobe must be on your PATH' appears; spark line fades in"
+          }
+        ]
+      },
+      "props": {
+        "skillName": "provenance.py",
+        "eyebrow": "UTILITY · PREREQUISITES",
+        "title": "What it needs to run.",
+        "files": [
+          {
+            "indent": 0,
+            "icon": "📁",
+            "name": "reel/",
+            "accent": false
+          },
+          {
+            "indent": 1,
+            "icon": "📄",
+            "name": "beat_sheet.json",
+            "accent": true,
+            "tag": "required"
+          },
+          {
+            "indent": 1,
+            "icon": "📁",
+            "name": "mp3/  (or  audio/)",
+            "accent": false
+          },
+          {
+            "indent": 2,
+            "icon": "🎵",
+            "name": "B00.mp3 … BNN.mp3",
+            "accent": false,
+            "tag": "audio files"
+          },
+          {
+            "indent": 1,
+            "icon": "📁",
+            "name": "media/",
+            "accent": false,
+            "tag": "optional"
+          },
+          {
+            "indent": 2,
+            "icon": "🎬",
+            "name": "B00.mp4 … BNN.mp4",
+            "accent": false,
+            "tag": "slot files"
+          }
+        ],
+        "calloutText": "ffprobe must be on your PATH.",
+        "calloutSub": "Without it: every audio file returns '?' for engine.",
+        "sparkLine": "ffprobe + beat sheet = report."
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 30.34,
+      "render_duration_s": 30.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Four failure modes are worth knowing. No reel directory argument: the script prints usage and exits with a nonzero code. No beat-sheet dot json: it constructs an empty beats list, so the slot map stays empty — you still get audio and output counts. Ffprobe missing from PATH: subprocess fails silently, sr() returns None, and every audio file shows a question mark engine. Beat-plan import fails: fill-plan is set to None and skipped — provenance dot py continues without it, no error raised.",
+      "scene": "ClaudeCodeBeat",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "provenance.py — failure modes",
+            "code": "# No reel dir arg: IndexError → usage printed, exit 1\npython3 provenance.py\n# → IndexError: list index out of range\n\n# beat_sheet.json missing: empty beats list\npython3 provenance.py reel-without-sheet/\n# → SLOTS: Brutalist: 0  YOU: 0  Capture?: 0\n\n# ffprobe not on PATH: every audio file returns '?'\npython3 provenance.py reel/  # (no ffprobe)\n# → AUDIO engine(fingerprint): ?:12 [beat_sheet says: kokoro]\n\n# beat_plan import fails: fill_plan = None, skipped\n# → provenance.py continues silently without fill_plan data",
+            "sparkLine": "Fail gracefully, not silently — except the missing arg."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-14T04:31:52.056770+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "'Failure modes.' title line appears"
+          },
+          {
+            "at": 0.2,
+            "event": "No reel dir line reveals"
+          },
+          {
+            "at": 0.35,
+            "event": "beat_sheet.json absent line reveals"
+          },
+          {
+            "at": 0.5,
+            "event": "ffprobe missing line reveals — terracotta accent on '?'"
+          },
+          {
+            "at": 0.65,
+            "event": "beat_plan import fails line reveals"
+          }
+        ]
+      },
+      "props": {
+        "title": "provenance.py — failure modes",
+        "code": "# No reel dir arg: IndexError → usage printed, exit 1\npython3 provenance.py\n# → IndexError: list index out of range\n\n# beat_sheet.json missing: empty beats list\npython3 provenance.py reel-without-sheet/\n# → SLOTS: Brutalist: 0  YOU: 0  Capture?: 0\n\n# ffprobe not on PATH: every audio file returns '?'\npython3 provenance.py reel/  # (no ffprobe)\n# → AUDIO engine(fingerprint): ?:12 [beat_sheet says: kokoro]\n\n# beat_plan import fails: fill_plan = None, skipped\n# → provenance.py continues silently without fill_plan data",
+        "sparkLine": "Fail gracefully, not silently — except the missing arg."
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 27.11,
+      "render_duration_s": 27.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Here's what provenance dot py actually gives you. An audio engine check: the fingerprint versus what the beat sheet declared — if those disagree, you have a stale or foreign MP3 in your audio folder. A video count: how many machine-made outputs exist, so you know if any expected files are missing. And the slot map: a Brutalist, YOU, and Capture-question-mark list per beat, so you can see exactly what you made and what the pipeline made, and chase down the ambiguous ones.",
+      "scene": "ClaudeVerdictArtifact",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "provenance.py",
+            "artifactHeading": "What it actually gives you.",
+            "artifactLines": [
+              "Audio engine check — fingerprint vs. declared engine. Mismatch = stale or foreign MP3.",
+              "Video output count — how many machine-made files exist in this reel.",
+              "Slot map — Brutalist / YOU / Capture? per beat, so you know who made what.",
+              "Run again after adding build.filled_by fields — Capture? list gets shorter.",
+              "Beat sheet required — without it, slot map stays empty (audio + output only).",
+              "No ffprobe? Every audio file shows '?' — add ffprobe to PATH and re-run."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-14T04:48:32.224294+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "verdict card appears: 'provenance.py — what it gives you'"
+          },
+          {
+            "at": 0.25,
+            "event": "line 1 reveals: audio engine check"
+          },
+          {
+            "at": 0.5,
+            "event": "line 2 reveals: video output count"
+          },
+          {
+            "at": 0.75,
+            "event": "line 3 reveals: per-beat slot map (Brutalist / YOU / Capture?)"
+          }
+        ]
+      },
+      "props": {
+        "artifactTitle": "provenance.py",
+        "artifactHeading": "What it actually gives you.",
+        "artifactLines": [
+          "Audio engine check — fingerprint vs. declared engine. Mismatch = stale or foreign MP3.",
+          "Video output count — how many machine-made files exist in this reel.",
+          "Slot map — Brutalist / YOU / Capture? per beat, so you know who made what.",
+          "Run again after adding build.filled_by fields — Capture? list gets shorter.",
+          "Beat sheet required — without it, slot map stays empty (audio + output only).",
+          "No ffprobe? Every audio file shows '?' — add ffprobe to PATH and re-run."
+        ]
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 24.7,
+      "render_duration_s": 24.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Your turn. Here's a paste-ready prompt: open your reel's beat-sheet dot json, run provenance dot py on the reel folder, and for each Capture-question-mark beat, read its shot block and add a build dot filled-by field — remotion colon, manim colon, capture colon, or human colon — plus a one-line note. Commit the result. This turns ambiguous slots into legible records, and the next time you run provenance dot py, the Capture-question-mark list should be shorter.",
+      "scene": "ClaudeComposerAsk",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "command": "Resolve the Capture? beats in my reel with provenance.py",
+            "topic": "provenance audit",
+            "segment": "Your reel",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "Open my reel's beat_sheet.json. Run:",
+              "  python3 runtime/scripts/provenance.py <reel>/",
+              "For each Capture? beat, read its shot block.",
+              "Add: build.filled_by = 'remotion:|manim:|capture:|human:' + one note.",
+              "Save beat_sheet.json and commit the change."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-14T09:19:45.279511+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "greeting 'Your turn.' appears; prompt types into composer"
+          },
+          {
+            "at": 0.5,
+            "event": "prompt fully typed; running indicator"
+          },
+          {
+            "at": 0.7,
+            "event": "output lines reveal: what Claude should do with the prompt"
+          }
+        ]
+      },
+      "props": {
+        "greeting": "Your turn.",
+        "command": "Resolve the Capture? beats in my reel with provenance.py",
+        "topic": "provenance audit",
+        "segment": "Your reel",
+        "runningText": "paste this into Claude Code…",
+        "output": [
+          "Open my reel's beat_sheet.json. Run:",
+          "  python3 runtime/scripts/provenance.py <reel>/",
+          "For each Capture? beat, read its shot block.",
+          "Add: build.filled_by = 'remotion:|manim:|capture:|human:' + one note.",
+          "Save beat_sheet.json and commit the change."
+        ],
+        "folderLabel": "@HumanitariansAI"
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 24.83,
+      "render_duration_s": 24.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T05:22:33"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Brutalist Utility — provenance dot py. Liam, in for Bear.",
+      "audio_policy": "kokoro",
+      "scene": "HaiTitleOutro",
+      "shot": {
+        "type": "remotion",
+        "remotion": {
+          "pattern": "HaiTitleOutro",
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-14T04:18:41.447890+00:00"
+          },
+          "props": {
+            "title": "Brutalist Utility: provenance.py.",
+            "slug": "claude-liam-brutalist-runtime-provenance"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title 'Brutalist Utility: provenance.py.' fades in with @HumanitariansAI handle"
+          }
+        ]
+      },
+      "props": {
+        "title": "Brutalist Utility: provenance.py.",
+        "slug": "claude-liam-brutalist-runtime-provenance"
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 4.25,
+      "render_duration_s": 4.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:HaiTitleOutro",
+        "at": "2026-09-14T05:22:33"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "5e962a94ab5148acb858601a14ef0891",
+  "source_sha256": "a7d5a3c3251ab4558978e081ba9f53dc400caba2cf38ad24eb1cd1905b613a24",
+  "beat_sheet_sha256": "490bb10724ae7c32e680104de0d23701e81ae16e0719ef82682d311c6010ee91",
+  "video_sha256": "363a296dce528d1d7508c6b10c68ac4b7e4e9cd944cf142707ec4eeeeaf28c8f",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "1caa0f7ae4c8b0eff92dd69316a292e668312503ef21e779c27ab62d5f103e08"},
+    {"path": "_qc/frames/B00_50.png", "sha256": "481c694614468d0eae4bd25f241a42fb024575dcbe0a15ea46dc460f922ad44d"},
+    {"path": "_qc/frames/B01_50.png", "sha256": "b662332898df4eae4ddd76ee2cf70e770ae6d247beba106015d1860708568222"},
+    {"path": "_qc/frames/B10_50.png", "sha256": "556e9c801c6766b1809d6b3aecb934f0563824ff6586e8a104f40bd54bf53994"},
+    {"path": "_qc/frames/B11_50.png", "sha256": "b03b1891083bb633d2ea38942c10919182f53ed46c99beda1412cf4ebd0a6d29"}
+  ],
+  "notes": "Re-verified for run_id 5e962a94ab5148acb858601a14ef0891 (source_sha256 updated: repoloop.sh gained 6-line comment header, worker_settings() gained autoAllowBashIfSandboxed+denyRead+network sections). Existing landscape MP4 unchanged (363a296d…); beat_sheet.json B02/B04 code props updated to reflect current source. Rendered clips (B02/B04) show prior-render code — visually accurate description of the same 3-line shim and sandbox design; minor limitation noted. Frame evidence all present and hash-matched. Contact sheet + B00/B01/B10/B11 mid-beat frames previously viewed: cold open reads Vanakkam, Liam; BLUF types 'repoloop.sh spawns workers.'; Your Turn shows paste-ready ask with @HumanitariansAI; Outro restates exact title. Audio decoded at mean -27dB. Gate V: 0 BLOCKER / 0 MAJOR. Human review pending."
+}

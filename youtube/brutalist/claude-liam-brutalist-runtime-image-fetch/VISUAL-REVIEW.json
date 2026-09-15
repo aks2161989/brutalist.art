@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "9d5576ce6cb14f248b161f113c62173b",
+  "source_sha256": "5b4c7db2d27216fa082e9b88351376100d66f99de9945d1ed4286ce66592db13",
+  "beat_sheet_sha256": "7a087094793f59cae9f9eee22df46089a039acc05e411a6a3da7de0310f7034a",
+  "video_sha256": "30d347849109e528e33474d47ad0c21eec100af5dd9c6458adb8b28d6ed3d9e5",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "852d9d833930f8dd3f08fb37ace82fd0db9e0894beaed3f6e131d5aec8bc56d9"
+    },
+    {
+      "path": "_qc/review/land_t5s.png",
+      "sha256": "59aface0945b685fcf487526ee1cfe84bb6946ff8fc98f553702804cbfd495a7"
+    },
+    {
+      "path": "_qc/review/land_t20s.png",
+      "sha256": "5d6ecd74dc03c217f1bbf09a0591b38d285be41cccdf4babc2f95fcbf6eda510"
+    },
+    {
+      "path": "_qc/review/land_t60s.png",
+      "sha256": "530575e72f760c21ed6cfc0196d0d3ebc248492b72b18a97616af3ba8439dcf8"
+    },
+    {
+      "path": "_qc/review/land_t86s.png",
+      "sha256": "44c873628c781f704ef8903f675b0b980ecf0eaec03f97aec529313c5d320458"
+    },
+    {
+      "path": "_qc/review/land_t120s.png",
+      "sha256": "86f3696143d337a782209d7ae67843b85326f0246ab1a6cbca643d80c1351298"
+    },
+    {
+      "path": "_qc/review/land_t146s.png",
+      "sha256": "82f464a794ea5f07aac5a6d3582af26c719fd01c041b9cfdfb7bab19c9c29cf9"
+    },
+    {
+      "path": "_qc/review/land_t168s.png",
+      "sha256": "b669ebd5004fa9a89b78dc43d30c2deecff75d7a99d58e33caa6a68236b4d6b2"
+    }
+  ],
+  "notes": "Re-verified for run_id 9d5576ce6cb14f248b161f113c62173b. Video and frame files are identical to prior successful build (e3271f85256140a6a524dc9dcf74f13e) — no rebuild required; all SHA-256 hashes independently confirmed this invocation. B09 outro: ClaudeTitleOutroHAI — dark olive background, 'Brutalist Utility: image_fetch.py.' white serif bold, '@HumanitariansAI' centered below (correct channel handle, not @NikBearBrown). Landscape frames directly inspected in prior invocation: land_t5s (B00 ClaudeComposerAsk cold-open — 'BRUTALIST UTILITY' eyebrow, 'image_fetch.py' title, 'Selam, Liam' large serif greeting, full request text legible, '@HumanitariansAI' folder chip, four output lines visible). land_t20s (B01 BrutalistHesitantWriter — 'image_fetch.py / is a pipeline.' corrected sentence, large serif fills safe area). land_t60s (B03 ClaudeCodeBeat terminal — 'The --url flag' title bar, two-path CLI code legible: smithsonian no-URL and nasa with-URL paths, spark line). land_t86s (B04/B05 SkillTeardownMechanism — 'FOUR ADAPTERS' content). land_t120s (B06 SkillTeardownMechanism — 'DESIGN TELL', 'Topaz is a peer, not a requirement.' serif headline, body text, code quote, verdict badge). land_t146s (B07 ClaudeVerdictArtifact — 'The archival shelf, in one call.' four numbered points fully readable). land_t168s (B09 ClaudeTitleOutroHAI — dark olive background, 'Brutalist Utility: image_fetch.py.' white serif bold, '@HumanitariansAI' centered below — correct channel handle, no mascot). No captions, no slates, no unresolved visuals. Gate V: 20 frames sampled previously, BLOCKER=0, MAJOR=0 on exports/landscape/claude-liam-brutalist-runtime-image-fetch.mp4. Dimensions: 3840x2160, 172.2s, 1 audio track. Skin lint OUTRO LAW warning expected and intentional for HAI reels. Human review and editing next; no upload, no commit."
+}

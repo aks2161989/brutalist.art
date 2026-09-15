@@ -1,0 +1,12 @@
+{
+  "artifactTitle": "The nopunt Skill",
+  "artifactHeading": "The catalog. The vocabulary. The block-list.",
+  "artifactLines": [
+    "One file — skills/make/nopunt/SKILL.md — is the single source; sibling skills reference it, never repeat it.",
+    "HOLD is ONLY a genuine archival photograph. Everything else in the catalog animates — unfilled = PUNT (bug).",
+    "Step zero is the library — ./art scenes '<needs>' and ./art scenes --check <Name>. A hit is a lead; open the file.",
+    "Narration shape picks the tool: Manim (moving math), Remotion (cards/UI), app skin (real code), FormB (lists), FormA (last-resort words).",
+    "SHOW / HOLD / CARD is the per-beat vocabulary. Anything else — a card that names a visual, a gen-AI clip, a DoodleScene — is a PUNT.",
+    "A genuine catalog miss is a design card, logged to TEMPLATE-MISSES.md — never a licence to slate."
+  ]
+}

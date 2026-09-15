@@ -1,0 +1,202 @@
+{
+  "number": 26,
+  "relative": "info-7375-conducting-ai/youtube/problem-formulation-part-1",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1",
+  "beats": 30,
+  "sheet_sha256": "f58b3bf472f1e64176a8bfbfa6506d7028a60975f5a889c7e74ebbe50e29db92",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/problem-formulation-part-1-slate.mp4",
+  "stale": false,
+  "width": 1280,
+  "height": 720,
+  "duration": "443.238667",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B00.mp4",
+      "seconds": 11.608105599999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B01.mp4",
+      "seconds": 10.0625,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B02.mp4",
+      "seconds": 3.0625,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B03.mp4",
+      "seconds": 11.141666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B04.mp4",
+      "seconds": 9.9458331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B05.mp4",
+      "seconds": 13.095833099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B06.mp4",
+      "seconds": 9.712499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B07.mp4",
+      "seconds": 11.6083331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B08.mp4",
+      "seconds": 12.774999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B09.mp4",
+      "seconds": 14.2916669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B10.mp4",
+      "seconds": 2.275,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B11.mp4",
+      "seconds": 13.649999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B12.mp4",
+      "seconds": 11.083333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B13.mp4",
+      "seconds": 10.7916669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B14.mp4",
+      "seconds": 2.5956056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B15.mp4",
+      "seconds": 10.908333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B16.mp4",
+      "seconds": 12.424999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B17.mp4",
+      "seconds": 12.220833099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B18.mp4",
+      "seconds": 13.620833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B19.mp4",
+      "seconds": 2.1581056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B20.mp4",
+      "seconds": 12.395833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B21.mp4",
+      "seconds": 13.095833099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B22.mp4",
+      "seconds": 11.987499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B23.mp4",
+      "seconds": 2.5666669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B24.mp4",
+      "seconds": 14.8166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B25",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/B25.mp4",
+      "seconds": 14.2333331,
+      "status": "sampled"
+    },
+    {
+      "beat": "BCRY",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/BCRY.mp4",
+      "seconds": 9.595833099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/BVDT.mp4",
+      "seconds": 15.195833099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/BHTF.mp4",
+      "seconds": 14.554166899999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/problem-formulation-part-1/clips/BOUT.mp4",
+      "seconds": 3.2083330999999995,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/26-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

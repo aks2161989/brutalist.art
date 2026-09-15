@@ -1,0 +1,334 @@
+{
+  "number": 15,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45",
+  "beats": 28,
+  "sheet_sha256": "c1a9cc0a1a199954882199c631dbf3bcc9e1c483e7366f0ffc4f46986304847b",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "402.950000",
+  "audio_stream": true,
+  "declared_slates": [
+    "B06",
+    "B11",
+    "B16",
+    "B20",
+    "B24"
+  ],
+  "findings": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of three hand-lettered index cards on a wooden desk. Left card: 'old: x - 1'. Middle card: 'inadequate: return 3'. Right card: 'intended: x + 1'. Ken Burns pushes toward the right card on the spoken word 'defend'.",
+      "path": "pantry/B06.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B11",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-lettered ledger. Column headers 'x=2' and 'x=5'. Rows 'old' with '1' and '4'; 'inadequate' with '3' and '3'; 'intended' with '3' and '6'. Ken Burns pushes toward the 'intended' row on the spoken word 'defending'.",
+      "path": "pantry/B11.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B16",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of two hand-lettered code cards. Left card: 'return x - 1' with a small ink minus in the left margin. Right card: 'return x + 1' with a small terracotta plus in the left margin. Ken Burns pushes toward the right card on the spoken word 'mean'.",
+      "path": "pantry/B16.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-lettered four-row ledger. Columns: obligation, assertion, reason. Rows: 'a change exists' \u00b7 'changed \u2260 []' \u00b7 'no changes'; 'in scope' \u00b7 'set diff = \u2205' \u00b7 'out of scope'; 'checks passed' \u00b7 'flag is True' \u00b7 'checks failed or absent'; 'human review' \u00b7 'approved is True' \u00b7 'human review required'. Ken Burns pushes toward the last row on the spoken words 'stand for'.",
+      "path": "pantry/B20.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of five hand-lettered index cards on a wooden desk, joined by hand-drawn ink arrows in sequence: 'issue' \u2192 'plan' \u2192 'diff' \u2192 'checks' \u2192 'decision'. Ken Burns pushes across the row from left to right, landing on 'decision' on the spoken word 'lives'.",
+      "path": "pantry/B24.png",
+      "exists": false,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of three hand-lettered index cards on a wooden desk. Left card: 'old: x - 1'. Middle card: 'inadequate: return 3'. Right card: 'intended: x + 1'. Ken Burns pushes toward the right card on the spoken word 'defend'.",
+      "path": "pantry/B06.png",
+      "exists": false
+    },
+    {
+      "beat": "B11",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-lettered ledger. Column headers 'x=2' and 'x=5'. Rows 'old' with '1' and '4'; 'inadequate' with '3' and '3'; 'intended' with '3' and '6'. Ken Burns pushes toward the 'intended' row on the spoken word 'defending'.",
+      "path": "pantry/B11.png",
+      "exists": false
+    },
+    {
+      "beat": "B16",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of two hand-lettered code cards. Left card: 'return x - 1' with a small ink minus in the left margin. Right card: 'return x + 1' with a small terracotta plus in the left margin. Ken Burns pushes toward the right card on the spoken word 'mean'.",
+      "path": "pantry/B16.png",
+      "exists": false
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-lettered four-row ledger. Columns: obligation, assertion, reason. Rows: 'a change exists' \u00b7 'changed \u2260 []' \u00b7 'no changes'; 'in scope' \u00b7 'set diff = \u2205' \u00b7 'out of scope'; 'checks passed' \u00b7 'flag is True' \u00b7 'checks failed or absent'; 'human review' \u00b7 'approved is True' \u00b7 'human review required'. Ken Burns pushes toward the last row on the spoken words 'stand for'.",
+      "path": "pantry/B20.png",
+      "exists": false
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of five hand-lettered index cards on a wooden desk, joined by hand-drawn ink arrows in sequence: 'issue' \u2192 'plan' \u2192 'diff' \u2192 'checks' \u2192 'decision'. Ken Burns pushes across the row from left to right, landing on 'decision' on the spoken word 'lives'.",
+      "path": "pantry/B24.png",
+      "exists": false
+    }
+  ],
+  "code_displays": [
+    {
+      "beat": "B04",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/06/candidates.py",
+        "code": "def old(x):\n    return x - 1\n\ndef inadequate_patch(x):\n    return 3\n\ndef intended_patch(x):\n    return x + 1",
+        "sparkLine": "Three rules. Two inputs. One intended repair.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: the three candidate implementations as literal Python functions."
+    },
+    {
+      "beat": "B08",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/06/two_inputs.py",
+        "code": "for x in [2, 5]:\n    print(x,\n          old(x),\n          inadequate_patch(x),\n          intended_patch(x))\n# 2  1  3  3\n# 5  4  3  6",
+        "sparkLine": "Two inputs. Two lines of evidence.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: the two-input probe as literal Python, with the printed output as inline comments."
+    },
+    {
+      "beat": "B13",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/06/diff.py",
+        "code": "import difflib\n\ndef diff(before, after):\n    return \"\".join(difflib.unified_diff(\n        before.splitlines(True),\n        after.splitlines(True),\n        fromfile=\"before.py\",\n        tofile=\"after.py\",\n    ))",
+        "sparkLine": "The diff reports text, not behavior.",
+        "codeSize": 0.048,
+        "sparkSize": 28
+      },
+      "intent": "Code card in Claude cream skin: the verbatim diff() function from the chapter's reference implementation."
+    },
+    {
+      "beat": "B18",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/06/review.py",
+        "code": "def review(changed, allowed, checks_passed, approved):\n    reasons = []\n    if not changed:\n        reasons.append(\"no changes\")\n    if set(changed) - set(allowed):\n        reasons.append(\"out of scope\")\n    if checks_passed is not True:\n        reasons.append(\"checks failed or absent\")\n    if approved is not True:\n        reasons.append(\"human review required\")\n    return {\"merge_ready\": not reasons, \"reasons\": reasons}",
+        "sparkLine": "Four obligations. One summary.",
+        "codeSize": 0.034,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: the verbatim review() function from the chapter's reference implementation."
+    },
+    {
+      "beat": "B22",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/06/decisions.py",
+        "code": "review([\"app.py\"], [\"app.py\"],\n       checks_passed=True, approved=True)\n# -> {\"merge_ready\": True, \"reasons\": []}\n\nreview([\"app.py\"], [\"app.py\"],\n       checks_passed=True, approved=False)\n# -> {\"merge_ready\": False,\n#     \"reasons\": [\"human review required\"]}\n\nreview([\"app.py\", \"prod.env\"], [\"app.py\"],\n       checks_passed=True, approved=True)\n# -> {\"merge_ready\": False,\n#     \"reasons\": [\"out of scope\"]}",
+        "sparkLine": "Accept. Revise. Reject.",
+        "codeSize": 0.033,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: three review() calls against the same changed target with different approval and scope, and the outcome each produces."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B00.mp4",
+      "seconds": 12.9262112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B01.mp4",
+      "seconds": 9.799999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B02.mp4",
+      "seconds": 2.1233330999999995,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B03.mp4",
+      "seconds": 8.843333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B04.mp4",
+      "seconds": 11.9933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B05.mp4",
+      "seconds": 11.433333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/clips/B06.mp4",
+      "seconds": 10.8791669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B07.mp4",
+      "seconds": 1.9133330999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B08.mp4",
+      "seconds": 11.176666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B09.mp4",
+      "seconds": 11.5266669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B10.mp4",
+      "seconds": 10.126666899999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/clips/B11.mp4",
+      "seconds": 10.4416669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B12.mp4",
+      "seconds": 2.03,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B13.mp4",
+      "seconds": 13.5566669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B14.mp4",
+      "seconds": 10.569999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B15.mp4",
+      "seconds": 11.0366669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/clips/B16.mp4",
+      "seconds": 11.462499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B17.mp4",
+      "seconds": 2.3099999999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B18.mp4",
+      "seconds": 13.486666900000001,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B19.mp4",
+      "seconds": 14.279999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/clips/B20.mp4",
+      "seconds": 11.024999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B21.mp4",
+      "seconds": 2.17,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B22.mp4",
+      "seconds": 13.7433331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/B23.mp4",
+      "seconds": 13.486666900000001,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/clips/B24.mp4",
+      "seconds": 11.2291669,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/BVDT.mp4",
+      "seconds": 15.959999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/BHTF.mp4",
+      "seconds": 18.7131056,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-06-claude-code-and-diff-review-41aee361-v-e595ab53fa45/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/15-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

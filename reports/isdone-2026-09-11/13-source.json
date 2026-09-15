@@ -1,0 +1,310 @@
+{
+  "number": 13,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f",
+  "beats": 28,
+  "sheet_sha256": "e0ff473e5342010d55d4c4e85774e45f8777bbbf9edaad5f309e68a227ac54b3",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "382.958008",
+  "audio_stream": true,
+  "declared_slates": [
+    "B06",
+    "B10",
+    "B16",
+    "B20",
+    "B24"
+  ],
+  "findings": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "A plain overhead photograph of a hand-lettered index card. Lines read: '1. Inspect the specified source. 2. Return a source-grounded summary. 3. Do not alter the source files.' Ken Burns pushes toward line 3 on the spoken word 'unchanged'.",
+      "path": "pantry/B06.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B10",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "A captured terminal session showing six passing tests on the lesson's surfaces/missing/classify module. Six green dots, six PASSED lines, a '6 passed' summary. Ken Burns pushes toward the summary line.",
+      "path": "pantry/B10.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B16",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of three hand-lettered index cards laid out on a wooden desk. Each card shows a trace (reason / reason-read-reason / reason-read-write) with its classifier label and a marginal note reading 'target? authority? outcome?'. Ken Burns pushes toward the third card on the spoken word 'authority'.",
+      "path": "pantry/B16.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with three ruled columns: 'source', 'intended target', 'authorization'. One row filled in for the folder-summary task; the authorization cell holds a hand-written 'ABSENT' with a hairline underline. Ken Burns pushes toward the ABSENT cell on the spoken word 'absent'.",
+      "path": "pantry/B20.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a wooden desk with two items: a printed copy of Anthropic's 'Building effective agents' post (title visible), and an open notebook whose left page carries three hand-lettered axis labels: capability, control, permission. Ken Burns pushes toward the notebook on the spoken word 'axes'.",
+      "path": "pantry/B24.png",
+      "exists": false,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "A plain overhead photograph of a hand-lettered index card. Lines read: '1. Inspect the specified source. 2. Return a source-grounded summary. 3. Do not alter the source files.' Ken Burns pushes toward line 3 on the spoken word 'unchanged'.",
+      "path": "pantry/B06.png",
+      "exists": false
+    },
+    {
+      "beat": "B10",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "A captured terminal session showing six passing tests on the lesson's surfaces/missing/classify module. Six green dots, six PASSED lines, a '6 passed' summary. Ken Burns pushes toward the summary line.",
+      "path": "pantry/B10.png",
+      "exists": false
+    },
+    {
+      "beat": "B16",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of three hand-lettered index cards laid out on a wooden desk. Each card shows a trace (reason / reason-read-reason / reason-read-write) with its classifier label and a marginal note reading 'target? authority? outcome?'. Ken Burns pushes toward the third card on the spoken word 'authority'.",
+      "path": "pantry/B16.png",
+      "exists": false
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with three ruled columns: 'source', 'intended target', 'authorization'. One row filled in for the folder-summary task; the authorization cell holds a hand-written 'ABSENT' with a hairline underline. Ken Burns pushes toward the ABSENT cell on the spoken word 'absent'.",
+      "path": "pantry/B20.png",
+      "exists": false
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a wooden desk with two items: a printed copy of Anthropic's 'Building effective agents' post (title visible), and an open notebook whose left page carries three hand-lettered axis labels: capability, control, permission. Ken Burns pushes toward the notebook on the spoken word 'axes'.",
+      "path": "pantry/B24.png",
+      "exists": false
+    }
+  ],
+  "code_displays": [
+    {
+      "beat": "B08",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/03/surfaces.py",
+        "code": "SURFACES = {\n    \"chat\":      {\"reason\"},\n    \"assistant\": {\"reason\", \"read\"},\n    \"agent\":     {\"reason\", \"read\", \"write\"},\n}",
+        "sparkLine": "reason \u2286 assistant \u2286 agent \u2014 teaching sets, not a product taxonomy.",
+        "codeSize": 0.048,
+        "sparkSize": 26
+      },
+      "intent": "The SURFACES dict as an Onda-style code card in the Claude cream skin; spark line names the ladder."
+    },
+    {
+      "beat": "B09",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/03/missing.py",
+        "code": "def missing(surface, required):\n    if surface not in SURFACES:\n        raise ValueError(\"Unknown teaching surface\")\n    return sorted(set(required) - SURFACES[surface])",
+        "sparkLine": "M = R \\ C. The arithmetic cannot authenticate its inputs.",
+        "codeSize": 0.048,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin showing the missing() function; spark line names the arithmetic and its limit."
+    },
+    {
+      "beat": "B13",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/03/classify.py",
+        "code": "def classify(events):\n    allowed = {\"reason\", \"read\", \"write\"}\n    if set(events) - allowed:\n        raise ValueError(\"Unknown event\")\n    if \"write\" in events:\n        return \"agent\"\n    return \"assistant\" if \"read\" in events else \"chat\"",
+        "sparkLine": "Write wins. Then read. Then default to chat.",
+        "codeSize": 0.048,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin showing the classify() function; spark line names the priority."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B00.mp4",
+      "seconds": 13.673105599999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B01.mp4",
+      "seconds": 9.87,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B02.mp4",
+      "seconds": 2.73,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B03.mp4",
+      "seconds": 11.479999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B04.mp4",
+      "seconds": 12.0866669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B05.mp4",
+      "seconds": 10.756666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/clips/B06.mp4",
+      "seconds": 9.9458331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B07.mp4",
+      "seconds": 1.8433330999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B08.mp4",
+      "seconds": 10.989999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B09.mp4",
+      "seconds": 10.989999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/clips/B10.mp4",
+      "seconds": 10.9375,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B11.mp4",
+      "seconds": 10.85,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B12.mp4",
+      "seconds": 2.4266669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B13.mp4",
+      "seconds": 10.709999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B14.mp4",
+      "seconds": 10.756666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B15.mp4",
+      "seconds": 10.756666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/clips/B16.mp4",
+      "seconds": 9.712499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B17.mp4",
+      "seconds": 2.5666669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B18.mp4",
+      "seconds": 9.45,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B19.mp4",
+      "seconds": 11.549999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/clips/B20.mp4",
+      "seconds": 9.333333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B21.mp4",
+      "seconds": 3.0566668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B22.mp4",
+      "seconds": 10.92,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/B23.mp4",
+      "seconds": 12.4833331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/clips/B24.mp4",
+      "seconds": 10.9375,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/BVDT.mp4",
+      "seconds": 17.0333331,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/BHTF.mp4",
+      "seconds": 16.2862112,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-03-chat-assistant-agent-917a8954-v-c29f43702f6f/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/13-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

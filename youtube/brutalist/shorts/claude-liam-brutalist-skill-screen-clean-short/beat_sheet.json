@@ -1,0 +1,459 @@
+{
+  "metadata": {
+    "title": "The screen-clean Skill",
+    "slug": "claude-liam-brutalist-skill-screen-clean-short",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "9:16",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "d62d43443f00442ca2d944b570799073",
+    "episode_id": "skill-screen-clean",
+    "order": 19,
+    "note": "Short derivative of claude-liam-brutalist-skill-screen-clean-vertical. Whole-beat cut: B00/B01/B03/B07/B09/B11 retained (6/12). Re-verified 2026-09-12 under run_id 64ff9b82; parent SKILL.md unchanged (c50640bf). All six media files SHA-match the parent vertical; export 128.125s, 2160×3840, strictly under 180s cap. Gate V: 0 BLOCKER, 0 MAJOR. screen-clean is the SHARED preprocessor: five passes (PROBE / ASPECT-FIT / LEGIBILITY / PRIVACY-SCAN / TRIM), returns cleaned 1920×1080 beat + contact sheet, never publishes.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/screen-clean/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "screen-clean",
+      "skill teardown",
+      "shared preprocessor",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T21:35:57",
+      "cut": "master",
+      "filled": 6,
+      "of": 6,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-skill-screen-clean-vertical",
+    "dropped_beats": [
+      "B02",
+      "B04",
+      "B05",
+      "B06",
+      "B08",
+      "B10"
+    ],
+    "total_estimated_duration_seconds": 128.12,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW - Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Bonjour, this is Liam, in for Bear. Today we tear down the screen dash clean skill. It is the shared preprocessor that turns a screen recording — Zoom, Teams, Meet, or QuickTime — into a beat that fits inside a reel. Five passes. One review artifact. Never publishes. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Bonjour, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the screen-clean skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Bonjour, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The screen-clean Skill",
+            "command": "What does the `screen-clean` skill actually do to a screen recording? Read skills/make/screen-clean/SKILL.md and tell me — the mental model, not the frontmatter blurb.",
+            "runningText": "reading skills/make/screen-clean/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "shared preprocessor called by fellows and guests",
+              "five passes: PROBE / ASPECT-FIT / LEGIBILITY / PRIVACY / TRIM",
+              "returns 1920×1080 beat + contact sheet — never publishes"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T00:16:37.075231+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.96,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 16.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T21:35:57"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW - hesitant writer corrects the 'auto-blurs' misread to the actual mechanism 'flags'. Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The name reads like a cleaner. It is not one. The screen dash clean skill does not sanitize your desktop or decide what is embarrassing on your behalf. It runs five passes over the recording, applies safe defaults, and flags what a human still needs to look at. The proof of a good pass is not the number of pixels cropped. It is the contact sheet at the end.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'screen-clean'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 'auto-blurs your desktop'"
+          },
+          {
+            "at": "0.55",
+            "event": "'auto-blurs' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'auto-blurs' deletes and 'flags' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 3 lands: 'into a safe reel beat.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "The screen-clean skill\nauto-blurs\nyour desktop\ninto a safe reel beat.\nThe proof is\nthe sheet.",
+            "triggerWords": "auto-blurs",
+            "replacementWords": "flags",
+            "seed": "screen-clean-bluf-vertical-2026-2c0eeb9a-v2",
+            "face": "serif",
+            "fontSize": 160,
+            "lineSpacing": 2.7,
+            "align": "center",
+            "charMs": 14,
+            "jitter": 4,
+            "mistakeRate": 3,
+            "hesitateWithin": 0,
+            "hesitateBetween": 1,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T00:30:00.056424+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 18.6,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 18.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-08T21:35:57"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline - five passes from screen recording to cleaned beat + contact sheet.",
+      "narration_text": "The flow is five passes, and only one of them ever decides anything on your behalf. Pass one — probe the file and decode the audio. Pass two — aspect fit, measured against the taskbar, padded with cream bars, never cropped from the top. Pass three — legibility, sampled from real frames at output size. Pass four — privacy scan, which flags every incidental thing on screen and waits for a human. Pass five — dead dash air trim on the ends only. Middle edits are the caller's job, not this one's.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Five passes. One review artifact.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'screen recording · 16:10 · Zoom · Teams · Meet · QuickTime' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "phase nodes reveal — 'PROBE' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'cleaned 1920×1080 + contact sheet' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline916",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Five passes. One review artifact.",
+            "inputLabel": "screen recording · 16:10 · Zoom / Teams / Meet / QuickTime",
+            "outputLabel": "cleaned 1920×1080 beat · contact sheet · numbers report",
+            "phases": [
+              {
+                "label": "PROBE",
+                "desc": "ffprobe + volumedetect · gate at mean_volume < -40 dB",
+                "accent": true
+              },
+              {
+                "label": "ASPECT-FIT",
+                "desc": "measure taskbar · crop it only · pad cream · never top"
+              },
+              {
+                "label": "LEGIBILITY",
+                "desc": "sample frames at output size · illegibility is a finding"
+              },
+              {
+                "label": "PRIVACY-SCAN",
+                "desc": "list every incidental item · flag survives-crop · wait"
+              },
+              {
+                "label": "TRIM",
+                "desc": "leading + trailing silence only · never the middle"
+              }
+            ],
+            "footerNote": "Middle edits are the CALLER's job — never screen-clean's.",
+            "sparkLine": "One gate. Four flags. A sheet."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T00:19:17.030429+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 26.6,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 26.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline916",
+        "at": "2026-09-08T21:35:57"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Design decision 4 - Pass 4 privacy scan. Flag, never decide. 'Is this embarrassing' is judgment, not arithmetic.",
+      "narration_text": "Fourth decision, and this is the line the skill will not cross. Pass four is a privacy scan. screen dash clean lists every incidental thing it sees — clock, dock icons, browser tab titles, notification toasts, filenames, calendar previews. Then it marks which ones the taskbar crop already removes, and which ones survive into the reel. Then it waits. It does not auto blur. It does not decide. Is this embarrassing is a judgment call, not arithmetic. And the doctrine is explicit — this matters more for fellows, who are on personal machines with their own life on screen, than for board members who present deliberately.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 · PASS 4 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Flag. Never decide.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: list surface · mark survives-crop vs. removed-by-crop · wait"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'judgment, not arithmetic'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4 · PASS 4",
+            "heading": "Flag. Never decide.",
+            "body": "The scan lists: system clock and date · dock/taskbar icons and badges · browser tab titles · notification toasts · visible filenames and paths · calendar or mail content. Marks which items SURVIVE the crop and which the crop REMOVES. Then waits for a human. This matters more for fellows — personal machines, real life on screen — than for board members who present deliberately.",
+            "quote": "Never auto-blur and never decide on someone's behalf — 'is this embarrassing' is judgment, not arithmetic.",
+            "cite": "screen-clean SKILL.md · Pass 4",
+            "verdictLabel": "judgment, not arithmetic",
+            "verdictPositive": true,
+            "sparkLine": "Not arithmetic. Judgment."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T00:23:17.943632+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 32.09,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 32.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T21:35:57"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT - artifact card. Six lines that recapitulate the skill.",
+      "narration_text": "The verdict. screen dash clean is the shared preprocessor for any skill that drops a recording into a reel. It is deliberately ignorant of who is speaking. Format is orthogonal to relationship. Pass one is a gate — mean volume below negative forty and the build stops. Pass two crops the taskbar, pads the rest with cream, and never touches the top of the frame. Pass four flags what is on screen and waits for a human. And the deliverable back to the caller is a cleaned nineteen twenty by ten eighty video plus a contact sheet you can actually look at. Small skill. Sharp job.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'A gate. A crop. A flag. A sheet.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The screen-clean Skill",
+            "artifactHeading": "A gate. A crop. A flag. A sheet.",
+            "artifactLines": [
+              "Shared preprocessor called by fellows, guests, and anything else that drops a recording into a reel.",
+              "Pass 1 is a gate: decode the audio with ffmpeg -af volumedetect; if mean_volume is below -40 dB, STOP.",
+              "Pass 2 crops the measured taskbar (~72 px), pads with cream bars (#FAF9F5), and never touches the top.",
+              "Pass 3 samples real frames at output size; an illegible screen share is a finding, not a defect to paper over.",
+              "Pass 4 flags every incidental item on screen and waits for a human — never auto-blurs, never decides.",
+              "Delivers to the caller: cleaned 1920×1080 video + a four-frame contact sheet + a measured-numbers report."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T00:24:53.977701+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 30.78,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 30.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-08T21:35:57"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK - title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "That was the screen dash clean Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The screen-clean Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The screen-clean Skill",
+            "slug": "claude-liam-brutalist-skill-screen-clean"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T00:25:55.139380+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.95,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.9583333333333335,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-08T21:35:57"
+      }
+    }
+  ]
+}

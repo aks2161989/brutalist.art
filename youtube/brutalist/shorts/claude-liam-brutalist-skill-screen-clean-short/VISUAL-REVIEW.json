@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "d62d43443f00442ca2d944b570799073",
+  "source_sha256": "d42c802e56d1910c3180bb56aa61473cb8c9b09a1a58ae54aa9bdf2a4eb6e864",
+  "beat_sheet_sha256": "812c100461a50bd626df23dae93d7183090cf2622c4134d0ee6cbb3b6f9a3e6b",
+  "video_sha256": "baa1d8d0271f6e86ee2fa92ad5fff03b86bb32df4aae9ac242843855bc69fe22",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames/B00_15.jpg", "sha256": "ab5c75e5b98369736e946819cac56dfad7a8426e5883ea01299286fc65e54c66"},
+    {"path": "_qc/frames/B00_50.jpg", "sha256": "98835858548bb0278a8bade50d2938e43cc040e9c0e9760262b94629ee73dcb3"},
+    {"path": "_qc/frames/B00_85.jpg", "sha256": "e15db93045359d5285d14191fda165c46eb0d4adbd87527788871e223598b388"},
+    {"path": "_qc/frames/B01_15.jpg", "sha256": "7afe8a24a63602367d10366b7775fbc8d28592802d37be74c6abc303358f79bc"},
+    {"path": "_qc/frames/B01_50.jpg", "sha256": "57646338b29645f0c9c31de7dbe598a7d6a48cd37eccd081ef6da00556cfdf26"},
+    {"path": "_qc/frames/B01_85.jpg", "sha256": "6b82e3ad495a225afbc60f642fea874b2cccf9d4281bab3265fb50b0b1987ca3"},
+    {"path": "_qc/frames/B03_15.jpg", "sha256": "0d592cc8ab2064d3db42e4e5721be764fb47be5e04b38151679e2fce90751750"},
+    {"path": "_qc/frames/B03_50.jpg", "sha256": "3efb5279270d57e238f7a6db39663b548fbc2851b23d625600e0da1e177ac11a"},
+    {"path": "_qc/frames/B03_85.jpg", "sha256": "ea155f669cd82ff76f6c685cbacd5f6e8a436a091d0782d06017cb84ca5d4ece"},
+    {"path": "_qc/frames/B07_15.jpg", "sha256": "4001acec8fe4191e12040971d1934a6ff64feeead7a61c3a83ca7308d1889304"},
+    {"path": "_qc/frames/B07_50.jpg", "sha256": "538f9087f42e045780e1f26dc80758d6ebde8017fb3e709359d0a03c5b444e26"},
+    {"path": "_qc/frames/B07_85.jpg", "sha256": "53580d1823b22652bc475ae77c97c91bd20b1b873f4b57f36ddc95529bb8d867"},
+    {"path": "_qc/frames/B09_15.jpg", "sha256": "eef0c8ef3d771f34a57076495fb8558aa077d3258d7eb519cc024a8ea11a5618"},
+    {"path": "_qc/frames/B09_50.jpg", "sha256": "311030ebbb4c15e7a9dea54540723033c0df3cc1d27faba6bbbd2a280398e7b7"},
+    {"path": "_qc/frames/B09_85.jpg", "sha256": "267a05f30a8132d976ac4f27376334d6662c9ace6a8dcc8a7f759708b67587e6"},
+    {"path": "_qc/frames/B11_15.jpg", "sha256": "e0509b168c23edeef7229b6c508856dfb620144b3f68beda13ee61e106fced0c"},
+    {"path": "_qc/frames/B11_50.jpg", "sha256": "e4f741533bd8e1f9015cc703e773fb25f4f93a1a946dc10c7cd6518422948932"},
+    {"path": "_qc/frames/B11_85.jpg", "sha256": "7304ce5bec34a3b9df743fb76d1746537a1819590e604e44a9b22011cdfd0351"}
+  ],
+  "notes": "Re-verified under run_id d62d43443f00442ca2d944b570799073 (2026-09-12). Six retained beats (B00, B01, B03, B07, B09, B11) of a 12-beat parent. Whole-beat cut with no rewrites; parent narration audio and native 2160x3840 renders reused unchanged. Export SHA-256 baa1d8d0271f6e86ee2fa92ad5fff03b86bb32df4aae9ac242843855bc69fe22 verified stable; beat_sheet SHA-256 c625601abf15b53dec27112f7e2a04df10fbb5b1be39fd62c48a93a97983c1de. Container/video/audio all measured at 128.125s, strictly under the 180.0s Shorts cap. Frames sampled at beat-relative 15%, 50%, 85% for each retained beat: B00 shows the ClaudeComposer cold open with the ask visible and the three result lines (shared preprocessor / five passes / never publishes); B01 shows the BLUF hesitant-writer landing on 'flags' and closing 'The proof is the sheet.'; B03 shows the pipeline diagram with all five phase nodes (PROBE / ASPECT-FIT / LEGIBILITY / PRIVACY-SCAN / TRIM) and the output node; B07 shows the Pass-4 mechanism card with the enumerated incidental-item list, the verbatim SKILL.md quote, and the 'JUDGMENT, NOT ARITHMETIC' verdict pill; B09 shows the six-line verdict artifact card; B11 shows the outro title and @NikBearBrown handle. Silence gaps at all five joins measured 0.5-0.8s (natural breathing) via ffmpeg silencedetect; no dead-air > 1s and no chopped speech. Skin-lint warnings on B00/B11 are template-vs-native-portrait mismatches by design and non-blocking. Human review by Bear is still pending; not uploaded or scheduled."
+}

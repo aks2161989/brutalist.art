@@ -1,0 +1,11 @@
+total 48
+drwx------@  4 bear  staff    128 Aug 31 15:25 .
+drwxr-xr-x@ 20 bear  staff    640 Sep  1 12:36 ..
+-rw-r--r--@  1 bear  staff  23099 Sep  2 13:20 SKILL.md
+drwx------@  5 bear  staff    160 Aug  2 16:27 reference
+total 32
+drwx------@ 5 bear  staff   160 Aug  2 16:27 .
+drwx------@ 4 bear  staff   128 Aug 31 15:25 ..
+-rw-------@ 1 bear  staff  2516 Aug  2 15:58 continuity.md
+-rw-r--r--@ 1 bear  staff  4869 Aug  2 16:27 shopping-list.md
+-rw-------@ 1 bear  staff  3715 Aug  2 15:58 vox-beats.md

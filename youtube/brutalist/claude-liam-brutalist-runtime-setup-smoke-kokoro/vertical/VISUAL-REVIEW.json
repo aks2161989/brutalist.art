@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "580a77e919fa4d31800dd4e0122db3f1",
+  "source_sha256": "2eaefa185e41434837dfaddeda16ab53e39b2b645ccc149a18fbbd9dc8fc402f",
+  "beat_sheet_sha256": "0a056d2be7b1c9d3e079a4a4355bee3326b5f567f578163113de37894d4bdbfd",
+  "video_sha256": "8a0c5e37845a496a5fb4387aefd84eb46b325c69d76e96824f96792d08711b8b",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "07cd3a365de2ac106ea215771b08bec9680fc5f83dd4ce8161bc8aac4e5a50b0"
+    },
+    {
+      "path": "_qc/b10_vertical_hai.png",
+      "sha256": "99853c1c1ef5ecdb0fdcfdf0c00a229007746be0927cbd69421967f134265b49"
+    }
+  ],
+  "notes": "Production run for invocation aa15571b4a4a4dd59660f813aa595f7c (2026-09-14); re-review continues prior successful export with frame evidence restored. Rebuilt from prior successful run (123ab360) with one blocker fix: B10 outro replaced ClaudeTitleOutro916 (@NikBearBrown hardcoded) with ClaudeTitleOutroHAI916 (@HumanitariansAI) per playlist spec. Gate V: python3 runtime/qc/final_frame_check.py <reel-vertical> --mp4 <vertical.mp4> → frames=22 BLOCKER=0 MAJOR=0. Directly viewed vertical/_qc/contact_sheet.png and extracted B10 frame at t=205s. Contact sheet: B00 ClaudeComposerAsk916 portrait (three output lines stacked, @HumanitariansAI chip, within portrait safe area); B01 BrutalistHesitantWriter916 portrait (five-line layout, 'synthesis/insufficient' correction, ≥55% coverage confirmed); B02 ClaudeCodeBeat916 pipeline comment block; B03–B07 ClaudeCodeBeat916 code cards (guard/synthesis/volume/failure/cleanup — legible in portrait width). B10 vertical outro directly verified by frame extraction at t=205s: dark polarity (slug seed odd → white-on-charcoal); 'Brutalist Utility: setup_smoke_kokoro.py.' wraps correctly with overflowWrap:anywhere; '@HumanitariansAI' handle visible below title; ink-extent markers at top/bottom 6% for Gate V fill ≥55%. Liam sign-off law satisfied. channel_title absent from vertical/beat_sheet.json metadata — no compile-overlay bleed at portrait safe.b. No captions, no unresolved slates, no edge bleed in 22 sampled frames. Human viewing and editing before upload."
+}

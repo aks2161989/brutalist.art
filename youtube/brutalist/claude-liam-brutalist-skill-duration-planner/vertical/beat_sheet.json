@@ -1,0 +1,800 @@
+{
+  "metadata": {
+    "title": "The duration-planner Skill",
+    "slug": "claude-liam-brutalist-skill-duration-planner-vertical",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "9:16",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "7385b5694ce94579bc3e260bb879c388",
+    "episode_id": "skill-duration-planner",
+    "order": 8,
+    "note": "Skill teardown of skills/make/duration-planner/SKILL.md (SOURCE-SNAPSHOT SHA-256 07dc8136…; supervisor's episode.source_sha256 3a51e374…). The reel explains that pacing is duration-as-output, not duration-as-target: script sizing and consolidation-floor holds size the video to the content. Uses ClaudeTitleOutro (locked @NikBearBrown handle) per OUTRO-LOCK.md; @HumanitariansAI is the playlist folder chip inside the composer beats. Kokoro am_onyx throughout — free, local. No captions.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/duration-planner/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "duration-planner",
+      "skill teardown",
+      "pacing",
+      "Claude",
+      "Humanitarians AI",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T07:41:42",
+      "cut": "master",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B10: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "reformat": "full-length; native portrait graphics; preserve source framing",
+    "derived_from": "claude-liam-brutalist-skill-duration-planner",
+    "dropped_beats": [],
+    "total_estimated_duration_seconds": 214.01,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Sawadee, this is Liam, in for Bear. Today we tear down a skill that answers a question every fellow keeps hitting: how long should this video be? The honest answer is you don't decide. The content decides. The skill is called duration-planner, and here is how it actually works.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Sawadee, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types: 'How long should this video be?'"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Sawadee, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The duration-planner Skill",
+            "command": "How long should this video be? Read skills/make/duration-planner/SKILL.md and tell me how the skill actually decides.",
+            "runningText": "reading skills/make/duration-planner/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "duration is an OUTPUT, not a target",
+              "script-sizing and holds are the two real levers",
+              "content_type sets the consolidation floor"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T11:15:01.296867+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 14.57,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 14.583333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the reel's actual misconception ('target') into its claim ('output'). Trigger uses SINGLE TOKENS per BrutalistHesitantWriter contract; multi-word phrases silently never match.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy assumption is that duration is a target you hit — thirty seconds, one minute, five. The skill argues the opposite. Duration is an output. You size the script and let the content sit for the time it needs to land. Everything else is production convenience or padding.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "first two lines type: 'Duration is a\\ntarget you hit.'"
+          },
+          {
+            "at": "0.35",
+            "event": "'target' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.45",
+            "event": "'target' deletes and 'output' types in"
+          },
+          {
+            "at": "0.65",
+            "event": "second couplet types in: 'Size the script.\\nHold to the floor.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "Your\nvideo\nduration\nis your\ntarget.\nSize the\nscript.",
+            "triggerWords": "target",
+            "replacementWords": "output",
+            "seed": "duration-planner-bluf-2026-vB",
+            "face": "serif",
+            "fontSize": 210,
+            "lineSpacing": 1.15,
+            "align": "center",
+            "banner": "",
+            "charMs": 55,
+            "jitter": 4,
+            "hesitateBetween": 0,
+            "hesitateWithin": 0,
+            "mistakeRate": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T11:40:39.458868+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 17,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 15.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — anatomy of the duration-planner skill file: what's on disk, what it references.",
+      "narration_text": "A skill is a folder Claude reads first. The duration-planner folder is small. One SKILL file. One short reference file with the evidence and the floor-ceiling table. One advisory script that reads timings and reports. That's it. The doctrine is short because the discipline is what does the work — and the discipline is refusing to treat duration as a target.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Small file. Load-bearing rule.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.80",
+            "event": "callout box lands: 'Duration is an OUTPUT, never a target'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "duration-planner",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "Small file. Load-bearing rule.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/duration-planner/",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "size": "the doctrine",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "reference/",
+                "size": ""
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "duration-evidence.md",
+                "size": "floor/ceiling table"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "scripts/",
+                "size": ""
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "pace_check.py",
+                "size": "advisory — never edits"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "reads: mp3/timings.json (Kokoro clock)",
+                "size": ""
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "reads: beat_sheet.json content_type",
+                "size": ""
+              }
+            ],
+            "calloutText": "<b>Duration is an OUTPUT, never a target.</b> Your two real levers are <i>script-sizing</i> and <i>holds</i>.",
+            "sparkLine": "The floor is the rule."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T11:16:31.636172+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 18.79,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 18.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — how the skill decides pacing beat by beat.",
+      "narration_text": "Here is the pipeline. Every beat carries a content_type set at storyboard time. Storyboard becomes the master clock when Kokoro measures the narration. The skill reads those two together against a floor table: if the narration is below its content_type's floor, recommend a hold. If it is over the ceiling, recommend a split. Total runtime is what falls out. The skill reports it and stops.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Five phases. Runtime is a byproduct.' fades in"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'beat_sheet + timings.json' appears"
+          },
+          {
+            "at": "0.30",
+            "event": "four phase nodes reveal, --floor lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'total runtime · reported' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline916",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Five phases. Runtime is a byproduct.",
+            "inputLabel": "beat_sheet + timings.json",
+            "outputLabel": "total runtime · reported",
+            "phases": [
+              {
+                "label": "content_type",
+                "desc": "storyboard tag"
+              },
+              {
+                "label": "measure",
+                "desc": "Kokoro clock"
+              },
+              {
+                "label": "floor → hold",
+                "desc": "below → hold",
+                "accent": true
+              },
+              {
+                "label": "ceiling → split",
+                "desc": "over → more beats"
+              }
+            ],
+            "footerNote": "Advisory only. The skill never edits the sheet.",
+            "sparkLine": "Content decides. Skill reports."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T11:17:16.802479+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 20.16,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 20.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — duration is an output. The thesis.",
+      "narration_text": "First design decision, and it's the thesis. Quote from the SKILL file: duration is an output, never a target. A complex mechanism lands at three or four minutes. A definitional explainer at thirty to sixty seconds. Both are correct. A uniform target has no learning basis — it's a production convenience that either compresses the content and destroys integration, or pads it and adds extraneous load. Either way, learning fails.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Duration is an output.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: three-minute mechanism vs thirty-second definition contrast"
+          },
+          {
+            "at": "0.55",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.80",
+            "event": "verdict pill 'kills the 30s/1min production myth' lands terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "Duration is an output.",
+            "body": "A complex mechanism lands at 3–4 minutes. A definitional explainer at 30–60 seconds. BOTH are correct. A uniform target compresses the content OR pads it — either extraneous load, either learning failure.",
+            "quote": "Duration is an OUTPUT, never a target.",
+            "cite": "duration-planner SKILL.md",
+            "verdictLabel": "kills the 30s/1min production myth",
+            "verdictPositive": true,
+            "sparkLine": "Content decides the clock."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T11:18:01.741627+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.7,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 21.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "Worked example / Design decision 2 — the consolidation floor and the content_type table.",
+      "narration_text": "Second decision. Every beat has a content_type, and each content_type has a consolidation floor — the minimum time working memory needs to register the new element before the beat cuts. A title beat needs three to five seconds. A structure or geometric beat, six to eight. A mechanism step, six to ten. An equation step, seven to twelve. If your narration lands under the floor, don't shorten the next beat and don't speed up the voice. Add a hold.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'The consolidation floor.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "body: the content_type floors reveal one row at a time"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block: 'Floors are minimums, enforced with holds.'"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'floor ≠ padding — it's the load-bearing rule'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "The consolidation floor.",
+            "body": "title → 3–5s  ·  realworld → 4–5s  ·  structure → 6–8s  ·  data → 6–8s  ·  mechanism → 6–10s  ·  equation → 7–12s. Below the floor → HOLD. Over the ceiling → SPLIT.",
+            "quote": "Floors are minimums, enforced with holds.",
+            "cite": "duration-planner SKILL.md · The consolidation floor",
+            "verdictLabel": "the load-bearing rule",
+            "verdictPositive": true,
+            "sparkLine": "Working memory needs the seconds."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T11:18:47.933811+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 22.51,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 22.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — holds are automatic. The audio-first sync contract.",
+      "narration_text": "Third decision. Holds are now automatic. The scene base applies a HOLD_FLOOR: after each beat's narration it holds the final frame up to the content_type floor. The compile step pads that beat's audio with matching silence, so audio and video stay in sync. You can turn it off per video with hold_floor false in the metadata. The load-bearing detail: re-render and re-assemble together — both read the same pacing table, and rendering with one setting while assembling with another desyncs the reel.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'HOLD_FLOOR — built in at render.' lands"
+          },
+          {
+            "at": "0.30",
+            "event": "body: scene base holds final frame; assemble pads audio to match"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block: 're-render AND re-assemble together'"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'consolidation built in · no manual holds'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "HOLD_FLOOR — built in at render.",
+            "body": "Scene base holds final frame to the content_type floor. Assemble pads audio with matching silence — video and voice stay locked. Off-switch: hold_floor: false in metadata. Both steps read the SAME bn_pacing table.",
+            "quote": "Re-render AND re-assemble together; rendering with one and assembling with the other would desync.",
+            "cite": "duration-planner SKILL.md · audio-first reality",
+            "verdictLabel": "consolidation built in · no manual holds",
+            "verdictPositive": true,
+            "sparkLine": "Same table. Both sides."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T11:19:35.565458+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 25.86,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 25.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FALSIFIABILITY",
+      "role_note": "Design tell / falsifiability — padding is a coherence violation, and engagement is not the target.",
+      "narration_text": "Here is where the skill bites. Once the idea has landed, adding decorative motion or filler graphics to reach one minute is a coherence violation — extraneous load that degrades learning. Padding to hit thirty seconds is exactly as wrong as compressing to hit it. And the six-minute engagement rule everyone quotes? That's a watch-time finding from open MOOCs. It doesn't replicate in real courses, and it isn't a learning result. The trade the skill accepts: shorter watchtime, cleaner schema.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow DESIGN · TELL lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Padding is a coherence violation.' lands"
+          },
+          {
+            "at": "0.30",
+            "event": "body: extraneous load, six-minute rule debunk"
+          },
+          {
+            "at": "0.60",
+            "event": "quote: 'Padding to reach 1:00 is as wrong as compressing to reach 0:30.'"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'trades watchtime for schema' (negative pill — the real cost)"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "DESIGN · TELL",
+            "heading": "Padding is a coherence violation.",
+            "body": "Motion after the idea has landed is extraneous load — not a style, a defect. The six-minute engagement rule is a MOOC watchtime finding; it does not replicate in enrolled courses and it is not a learning result.",
+            "quote": "Padding to reach 1:00 is as wrong as compressing to reach 0:30.",
+            "cite": "duration-planner SKILL.md · Don't pad",
+            "verdictLabel": "trades watchtime for schema",
+            "verdictPositive": false,
+            "sparkLine": "Engagement is not the target."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T11:20:21.266394+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 24.32,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 24.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the beat.",
+      "narration_text": "The verdict. The duration-planner skill is small on disk and long on discipline. Content_type drives the floor. Kokoro drives the clock. Holds land the beats. Splits break up over-full ones. Total runtime is a byproduct — the skill reports it and stops. And it refuses to pad or compress to hit a number production wanted for its own convenience.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The duration-planner verdict.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "five verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The duration-planner Skill",
+            "artifactHeading": "Small file. Long discipline.",
+            "artifactLines": [
+              "Duration is an output — the content decides the clock, never a fixed 30s or 1min target.",
+              "content_type on every beat sets the consolidation floor working memory needs.",
+              "Kokoro narration is the master clock; assemble.py pads audio to match the video hold.",
+              "Below-floor beats get a hold; over-ceiling beats split into two ideas, never one long one.",
+              "Total runtime is a byproduct — the skill reports it and stops. pace_check.py never edits.",
+              "Refuses to pad or compress to hit a target: coherence violation, not a style choice."
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T11:20:56.145978+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 23,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 18.58,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 18.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready prompt Liam reads aloud + discusses. The prompt scaffolds the viewer to run the skill on their own reel.",
+      "narration_text": "Your turn. Paste this into Claude Code inside your own reel folder: run the duration-planner skill on my beat sheet and timings. For every beat, tell me the content_type, the floor, the measured narration, whether it needs a hold, and whether any beat is over its ceiling and should split. Report total runtime as an output, and do not edit the sheet. Then check three things. Are the below-floor beats getting holds, not shorter next beats? Is any over-ceiling beat one idea or two? And is anything padded to hit a target? If yes, cut the padding — don't ship the coherence violation.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready duration-planner prompt"
+          },
+          {
+            "at": "0.70",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · PACE YOUR OWN REEL",
+            "segment": "Run duration-planner on your reel",
+            "command": "Run the duration-planner skill on my beat sheet and timings. For every beat, report content_type, floor, measured narration, whether it needs a hold, and whether any beat is over its ceiling and should split. Report total runtime as an output. Do not edit the sheet.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: below-floor beats getting HOLDS, not shorter next beats",
+              "check: over-ceiling beats — one idea or two? split if two.",
+              "check: any padding to a target? cut it — don't ship the coherence violation."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T11:21:39.249196+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 42,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.57,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 28.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T07:41:42"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "That was the duration-planner Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The duration-planner Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The duration-planner Skill",
+            "slug": "claude-liam-brutalist-skill-duration-planner"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T11:21:54.110977+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.95,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 3.9583333333333335,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-08T07:41:42"
+      }
+    }
+  ]
+}

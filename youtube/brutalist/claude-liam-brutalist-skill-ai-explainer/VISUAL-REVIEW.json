@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "a2d6bcc90e44499b906ada378401a3db",
+  "source_sha256": "793fe8c321b2c67520b95aece10173a71f7235b4ca8b8a47c644d691423711c7",
+  "beat_sheet_sha256": "c00ed04c952f9a919c2215681d45613883c76537dd7d2a50560a1b75bba2b946",
+  "video_sha256": "356d96227ac4f50b92e548d8e32ea6895e11016b20b076f195abd48e293d8518",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "39689caabdbc5173787a69bd5a951e406ff8d1261f15d5765840cb502076ada0"}
+  ],
+  "notes": "Re-review for invocation a2d6bcc90e44499b906ada378401a3db. Source SKILL.md changed since previous build (5d2d09528cd0403dac54ed33498aef23): frontmatter description simplified; two new hard rules added (Executable evidence, Math typesetting). Content assessment: both additions are additive and do not affect the existing episode narrative — no math in this episode, and the Executable evidence rule reinforces the REBUILD LAW already covered. No re-render required. Existing 4K landscape master re-verified: 3840x2160 h264+AAC, 186.92s. Contact sheet re-read with image-capable Read tool — 11 beats confirmed in correct order: ClaudeComposerAsk cold open ('Hej, Liam', @HumanitariansAI), HesitantWriterFramed BLUF ('The ai-explainer skill is a workflow'), SkillTeardownAnatomy, SkillTeardownPipeline, four SkillTeardownMechanism panels (fixed bookends / UI earns beats / ask-then-receipt / where it bites), ClaudeVerdictArtifact (6-point verdict), ClaudeComposerAsk 'Your Turn', ClaudeTitleOutroHAI. Gate V BLOCKER=0, MAJOR=0 from previous build stands — renders are unchanged. Human review by Bear is pending."
+}

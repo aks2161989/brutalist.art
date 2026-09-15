@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "789b802ec1d34a00bfdf4d6e3f1fff4f",
+  "source_sha256": "63d4bf6e92b4ead5a124ae81cb26017ef17cd9df805c68430f4506d7abd3eab6",
+  "beat_sheet_sha256": "3f4f48040b4c00ae85659575bfc990cc0891405697084b41ee613089050d03e2",
+  "video_sha256": "fe10ba4bb77b66796a421e19d7416e6183893a3926c992301a536a8c5753da40",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"beat_id": "B00", "pct": 0.15, "t_s": 1.769, "path": "_qc/beat_frames/B00_15.jpg", "sha256": "eb6682fa546d975444819b1612061ff9a0165d5dca265d2131a3b40d7c5061db"},
+    {"beat_id": "B00", "pct": 0.50, "t_s": 5.895, "path": "_qc/beat_frames/B00_50.jpg", "sha256": "b6cc59685eb52f52007ff074c4567a736d643c41be445b0b2608fc90a21bdc85"},
+    {"beat_id": "B00", "pct": 0.85, "t_s": 10.022, "path": "_qc/beat_frames/B00_85.jpg", "sha256": "47fa925e04951036969d30b4a94f823c0673afbd2901ec3810af057c9a77efd6"},
+    {"beat_id": "B01", "pct": 0.15, "t_s": 13.685, "path": "_qc/beat_frames/B01_15.jpg", "sha256": "1004aea2c99757f48d4acf49e3225d4e6ce81f05b0b645c298e401e4e2a3783b"},
+    {"beat_id": "B01", "pct": 0.50, "t_s": 18.105, "path": "_qc/beat_frames/B01_50.jpg", "sha256": "871f4ce9d4df504c09a0b38526bcadce2772b2bba1a92dce3284b089212d4ab3"},
+    {"beat_id": "B01", "pct": 0.85, "t_s": 22.525, "path": "_qc/beat_frames/B01_85.jpg", "sha256": "081e808abe39647277954817783b2bea5263bef6c20489e9dd2cbccf64eaf620"},
+    {"beat_id": "B02", "pct": 0.15, "t_s": 27.270, "path": "_qc/beat_frames/B02_15.jpg", "sha256": "ab6e286db6792cd0d21f4fda76c521474dbc0d26e2fec5d2dd1307bc41f0fe69"},
+    {"beat_id": "B02", "pct": 0.50, "t_s": 33.920, "path": "_qc/beat_frames/B02_50.jpg", "sha256": "2998980efd1863cc04c9b769cad0c148167009a92910a70bd43430dbb9b0d40b"},
+    {"beat_id": "B02", "pct": 0.85, "t_s": 40.570, "path": "_qc/beat_frames/B02_85.jpg", "sha256": "e8a2d3888fb989935cfabe4a822a78bbde77debea58a1abe453258f8e34a74a5"},
+    {"beat_id": "B07", "pct": 0.15, "t_s": 46.333, "path": "_qc/beat_frames/B07_15.jpg", "sha256": "aac42ee34b2fa493853a9855315cf89aa91cb9935907559d87022780d1482a63"},
+    {"beat_id": "B07", "pct": 0.50, "t_s": 53.130, "path": "_qc/beat_frames/B07_50.jpg", "sha256": "a85f0c2cef919c4d837e48ba1721306df8738c305d58e578e87e058dcde1a73b"},
+    {"beat_id": "B07", "pct": 0.85, "t_s": 59.927, "path": "_qc/beat_frames/B07_85.jpg", "sha256": "40e1fd4e08aa2d8c7f05c56578b75646d1d44f8e003cc3119d8cdf599b51f2f2"},
+    {"beat_id": "B09", "pct": 0.15, "t_s": 66.091, "path": "_qc/beat_frames/B09_15.jpg", "sha256": "962b29e33c673b7b3cd4b26a958535ef159467f3640de5cf477f53002dafd804"},
+    {"beat_id": "B09", "pct": 0.50, "t_s": 73.675, "path": "_qc/beat_frames/B09_50.jpg", "sha256": "1c1cc457f7fd21681386afe85f3400c2ccc64f5de62ff61fcaacabe805f3d51b"},
+    {"beat_id": "B09", "pct": 0.85, "t_s": 81.260, "path": "_qc/beat_frames/B09_85.jpg", "sha256": "3efe99d290901df26f54f7ddd0cb5b502eb02a56336147ba89695ba3cbdb90a8"},
+    {"beat_id": "B11", "pct": 0.15, "t_s": 85.373, "path": "_qc/beat_frames/B11_15.jpg", "sha256": "45a4a07019913afc1395c3ca97ee9d69638a40f4628840e6d6a68b01267d2d5f"},
+    {"beat_id": "B11", "pct": 0.50, "t_s": 87.386, "path": "_qc/beat_frames/B11_50.jpg", "sha256": "132e332194ef89279dbf0a18db07aaf5131ac84b044fb28e8916c8c7fcd25c03"},
+    {"beat_id": "B11", "pct": 0.85, "t_s": 89.399, "path": "_qc/beat_frames/B11_85.jpg", "sha256": "efc70e1cf5356c25f1633f580fd63db5139ebfb2976250d8db3c5083659154e8"}
+  ],
+  "notes": "6-beat whole-beat cut of the parent portrait companion (parent SHA-256 bd94b7252670e9c1ff526cd9daa0a4a6f64dca7c72ace6f491a56e1f089d6500). Final MP4 90.250s / 2160x3840 / audio 90.250s / max_volume -3.0 dB / mean -27.2 dB. Reviewed 18 beat-relative frames (15/50/85% of each retained beat) at 540x960 preview scale. B00 shows the ClaudeComposerAsk916 card with the 'Shalom, Liam' greeting, 'runtime/scripts/align.py' segment chip, the full ask in the composer, @HumanitariansAI folder chip, and the three cascading output rows below — all inside SAFE916. B01's hesitant-writer sequence executes the 'transcribes -> times' and 'guesses -> knows' swaps cleanly, the trigger swap targets only the intended tokens (no collision with preserved lines), and the corrected line settles inside the safe area. B02's SkillTeardownMechanism916 replaces the horizontal Pipeline strip that trips SAFE916 in portrait; body + pull-quote + verdict chip + spark line all fit vertically. B07's ClaudeCodeBeat916 renders the even_spread + [warn] listing with adequate margins and legible mono. B09's ClaudeVerdictArtifact916 shows all six numbered surface bullets — the falsifiability rule (fallback) survives the cut. B11's ClaudeTitleOutro916 shows the locked @NikBearBrown handle and slug-seeded mascot; title 'Brutalist Utility: align.py.' is legible. No unwanted captions, no crop artefacts, no black frames, no clipping, no scene mid-word cutoff. Portrait SAFE916 respected throughout. Human review pending (Bear/HAI editorial pass).",
+  "limitations": [
+    "AI visual review only; Bear/HAI human review is the final gate.",
+    "Skin lint advisory warnings for B00 and B11 are expected (portrait 916 aliases of ClaudeComposerAsk and ClaudeTitleOutro); no action required.",
+    "Beat-relative preview frames are stored at 540x960 (from a 2160x3840 source) for review efficiency; full-resolution frames can be re-extracted from the parent's vertical/media/<BID>.mp4 on demand."
+  ]
+}

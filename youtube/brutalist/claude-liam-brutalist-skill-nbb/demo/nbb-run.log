@@ -1,0 +1,46 @@
+# nbb skill — safe local demo log
+# All commands ran in the isolated toolkit against a synthetic fixture reel
+# (demo/fixture-reel/). No source files outside demo/ were touched.
+
+## Run 1 — first scaffold on the fixture
+
+$ python3 runtime/scripts/brand_variant.py \
+    youtube/brutalist/claude-liam-brutalist-skill-nbb/demo/fixture-reel nbb
+
+[variant] wrote .../demo/nbb-fixture-reel/beat_sheet.nbb.json  audience=NikBearBrown  register=Teardown  palette=teardown  engine=kokoro  voice=am_onyx
+[variant] 3 beats to rewrite in Teardown — next: follow skills/make/nbb/SKILL.md
+
+## Run 2 — source-not-modified proof + refuse-without-force
+
+$ shasum -a 256 demo/fixture-reel/beat_sheet.json
+9ee2f785d74523ce5c030d567b9bda7e49bf397bc08e28d1de081b635d28b879  demo/fixture-reel/beat_sheet.json
+
+$ python3 runtime/scripts/brand_variant.py demo/fixture-reel nbb
+[variant] .../demo/nbb-fixture-reel/beat_sheet.nbb.json already exists (use --force to reset it from canonical)
+
+$ shasum -a 256 demo/fixture-reel/beat_sheet.json
+9ee2f785d74523ce5c030d567b9bda7e49bf397bc08e28d1de081b635d28b879  demo/fixture-reel/beat_sheet.json
+
+## What the diff shows (metadata rewrite, source unchanged)
+
+Fixture source           ->  nbb variant
+audience: "Brutalist"    ->  audience: "NikBearBrown"
+palette: "claude"        ->  palette: "teardown"
+                         +  register: "Teardown"
+                         +  outro_source: "AUTHOR.MD :: NikBearBrown"
+                         +  typography: {Montserrat, EB Garamond, PT Mono}
+                         +  _variant_todo: [ 5 checklist items for Claude ]
+                         +  derived_from: "beat_sheet.json"
+
+Every beat kept its beat_id/act/shot. actual_duration_s was dropped so
+durations recompute for the new (Teardown-register) narration. The
+canonical demo/fixture-reel/beat_sheet.json is byte-identical before and
+after (same SHA-256).
+
+## What the script did NOT do (by design)
+
+- did NOT rewrite narration_text (that is Step 2 -- Claude, guided by SKILL.md)
+- did NOT insert the LLM exercise beat (Step 3)
+- did NOT insert the NikBearBrown outro (Step 4)
+- did NOT touch the source beat_sheet.json (STANDING RULE -- source never modified)
+- did NOT generate audio, render, or compile (build is a separate stage)

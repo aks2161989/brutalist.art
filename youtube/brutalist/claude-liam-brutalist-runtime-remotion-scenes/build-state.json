@@ -1,0 +1,32 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/exports/landscape/claude-liam-brutalist-runtime-remotion-scenes.mp4",
+  "sha256": "7cf40571044364272286afec6527a142aefe8ae5dc118fd6ece2d0baf0f376c5",
+  "duration_s": 212.04166666666666,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B00.mp4": "47bf4aa523ac2bea3fcdc9368c46936619fa9b0592abd54f4f70cb64fb6cd9be",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B01.mp4": "6a8cd55f91ee56d7877893f23e07f7be8fc27a64b2582febdcfae507481a9350",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B02.mp4": "e2581ec64a07256436a46c5976b9e4c4aacb9bed9482f54bc654993cd518504f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B03.mp4": "b220522a42d6e43dfbfd4b4ac5b87f3d03e5bca9c14a300e29b018da400b6ebd",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B04.mp4": "690480b29617ede1ca160ff4642dc804954d535040b8f2a408d4791a25ab8102",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B05.mp4": "8828fad9dcd3c03c5be680911d296839f835bc8ba69bc4c72128f5899e7808a3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B06.mp4": "7d87f9b772a00e8d8888eaebb23757c7c90c3d041c65b1120ea46f2e397770b2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B07.mp4": "12bd83587b4a4f90782e46b2e5d406112cbd21fc1fd33af9cbfaafbc53b759fc",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B08.mp4": "bc0f3779c449338b1b7b3f26ac7d718958f5132db19e8db86030fcefb1c796b5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B09.mp4": "3734ff9d5f43eb9f818f6a0b4478b5ec98f0800c74523a913eb063198b4937a3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B10.mp4": "8983d6eacc461afbedfbe9e5f677ba2e5fb234fc7e3fc491959935d1651dec4a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/media/B11.mp4": "859ca02822950d94c778b391f45a721b477ebb1c8b0ee6bc87dc8b0d02d89cf3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B00.mp3": "aeae21583a7eacb4aa21e5d07f867fcd6c4fee739ecc6c04e2abb5b64a93ecba",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B01.mp3": "a894d47f3daa76ab8f18052bbb1462ac1bbb6d31f0d8c9fafc257659eea1fc55",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B02.mp3": "69a4acd3eff4e1ba99ac8ba6e0f749de2225d8a6be69f92704ddc70d1f0327dc",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B03.mp3": "a003f61bafccc89f97ac02c429fe3b9c0b80ae4910a52a7eba37467895ed6ab5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B04.mp3": "966ddd394370dfac56ed82d8c847119700bd7c4370d736a7342406b80cbed638",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B05.mp3": "e0340644c467b54a1c1fe15acf69d2ff582bb83dbb330c1d558f2bdebf099b13",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B06.mp3": "64e65b7c5f15bf0331e22e0b60a3cf18d82d6b0eb8959a259202ffa51dbf9f53",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B07.mp3": "52d73f91851b40cf40886e5bb4d5c0d4dfcbc0bfc85261a463d2f4383851e3c1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B08.mp3": "fa754aabf3e2b8e79e6a7a81a7020fb54603ce05b9edc8dc91ff5c949f7b9b86",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B09.mp3": "6e708a505813fd142aa822afab8c0b4e2df94a3528829e04c31352d72486da92",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-remotion-scenes/mp3/beat-B10.mp3": "b678a1bb39f709e49c5851467767a3a29c661c1836eaa386a1747eac8c1d90e9"
+  },
+  "at": "2026-09-14T14:48:18.168098+00:00"
+}

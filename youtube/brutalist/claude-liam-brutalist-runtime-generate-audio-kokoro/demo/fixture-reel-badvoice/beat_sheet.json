@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "title": "Demo fixture — unknown-voice failure",
+    "slug": "demo-badvoice",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "captions": false,
+    "approvals": {}
+  },
+  "beats": [
+    {"beat_id": "B00", "narration_text": "This beat asks for a voice that Kokoro does not ship.", "voice": "am_nonexistent", "engine": "kokoro"}
+  ]
+}

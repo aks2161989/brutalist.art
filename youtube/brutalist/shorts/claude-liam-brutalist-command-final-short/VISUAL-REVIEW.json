@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "e8f021cee8f34c40bbdbf7ccaa783ca7",
+  "source_sha256": "1b743b9e19c74312150a0a6907c16e2ea34cf35f81621e6e2d2a6e4206fe8d4f",
+  "beat_sheet_sha256": "9946fea5ebb3f237329f6c965544bf2bdcbaf549269c023a4ddadc91203288cc",
+  "video_sha256": "f732f7fc5dee3a9da52a7fc70a05c7c97b625c944b4f656ccf665e690ef1a024",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"beat_id": "B00", "pct_of_beat": 15, "timestamp_s": 2.231, "path": "_qc/previews/B00-p15.png", "sha256": "5ea08a0a678b14af89c0f541091ccc14fced5d28949d5fdb0c0f6dbf8b069339"},
+    {"beat_id": "B00", "pct_of_beat": 50, "timestamp_s": 7.438, "path": "_qc/previews/B00-p50.png", "sha256": "ef47cf01e96b57513c5f78a8bcfd9936ad1fa30517460b76da8db6be1ff4bbf8"},
+    {"beat_id": "B00", "pct_of_beat": 85, "timestamp_s": 12.644, "path": "_qc/previews/B00-p85.png", "sha256": "a483830168682720c545f2305108cf7ece3c656e45590b24b0df04e6a57262d8"},
+    {"beat_id": "B01", "pct_of_beat": 15, "timestamp_s": 17.425, "path": "_qc/previews/B01-p15.png", "sha256": "7043e55e46278f04314c40c0655b78d74198471154b4ad9df4ad34ceac390c6a"},
+    {"beat_id": "B01", "pct_of_beat": 50, "timestamp_s": 21.509, "path": "_qc/previews/B01-p50.png", "sha256": "044df365deb9547543e9c81bf4e067c322cdffa02c6b088c50ad2279b54d0f2f"},
+    {"beat_id": "B01", "pct_of_beat": 85, "timestamp_s": 25.592, "path": "_qc/previews/B01-p85.png", "sha256": "ebb865bf97077a253104c506f33f7dcbf570d79d8169e6282b5956b26ab09b2d"},
+    {"beat_id": "B06", "pct_of_beat": 15, "timestamp_s": 31.286, "path": "_qc/previews/B06-p15.png", "sha256": "ae16b670c95a3c6a38b85aac18cc993634aa146954c873380fafa94bb0eb5e80"},
+    {"beat_id": "B06", "pct_of_beat": 50, "timestamp_s": 40.488, "path": "_qc/previews/B06-p50.png", "sha256": "644f9bc1c4677335f3287e632ba9a99328b911617a8e5a20b563b834027d69ca"},
+    {"beat_id": "B06", "pct_of_beat": 85, "timestamp_s": 49.690, "path": "_qc/previews/B06-p85.png", "sha256": "d95e81a4e766afc02d191b110d41f5af8a1fb29b3d8b4295f1e18dd4d362ed36"},
+    {"beat_id": "B07", "pct_of_beat": 15, "timestamp_s": 57.353, "path": "_qc/previews/B07-p15.png", "sha256": "7072d6fd26477034dc93184c6015d49c4c17fa2b61d9782acec659f2795fa361"},
+    {"beat_id": "B07", "pct_of_beat": 50, "timestamp_s": 66.030, "path": "_qc/previews/B07-p50.png", "sha256": "1bd717cfe88668b687977e5023429846e7a89664969809d254de45b008c80551"},
+    {"beat_id": "B07", "pct_of_beat": 85, "timestamp_s": 74.707, "path": "_qc/previews/B07-p85.png", "sha256": "86e3ed2fee06cdb6d591e12f071efa23d179cfddf0be0921984eaa8db147091a"},
+    {"beat_id": "B09", "pct_of_beat": 15, "timestamp_s": 81.795, "path": "_qc/previews/B09-p15.png", "sha256": "bccab725397f6dfff083eea118663cc34c01d4ea5ceb3db03d0620bc625a2cfa"},
+    {"beat_id": "B09", "pct_of_beat": 50, "timestamp_s": 89.655, "path": "_qc/previews/B09-p50.png", "sha256": "a155c030c1022af0133dc268352162170ac4bea10ed93248744ea017130ee8e9"},
+    {"beat_id": "B09", "pct_of_beat": 85, "timestamp_s": 97.515, "path": "_qc/previews/B09-p85.png", "sha256": "20695a250328c4919e75351c21b98dd7001ab9b3ab0f47bbd35b00ea34036083"},
+    {"beat_id": "B11", "pct_of_beat": 15, "timestamp_s": 101.678, "path": "_qc/previews/B11-p15.png", "sha256": "7f759106cfcefe93dc41223b74a9df79681fdc5e76ffcb7e25dd4913c390f187"},
+    {"beat_id": "B11", "pct_of_beat": 50, "timestamp_s": 103.530, "path": "_qc/previews/B11-p50.png", "sha256": "2f5c229d85ab8deede66e38f419655abf4b3470de4cab495be0b5baa7634cc4c"},
+    {"beat_id": "B11", "pct_of_beat": 85, "timestamp_s": 105.382, "path": "_qc/previews/B11-p85.png", "sha256": "9e5b25867661e389ff9cbdd81a0955b7faff106609df14a30d1eb42eead5539a"}
+  ],
+  "notes": "Re-verified 2026-09-14 (run_id e8f021cee8f34c40bbdbf7ccaa783ca7). Rebuild reason: parent vertical B06 was re-rendered on 2026-09-13T00:50:54 with updated compile.py atomic block — line ref shifted from :800-822 to :803-825, 'timeline = work / resolved-sheet.json' and 'atomic_json(timeline, sheet)' lines added, file-existence guard ('not Path(p).is_file() or') added to input hash check. Short's B06 copied from parent vertical (SHA f2c7487325a8bf6ce85e11ad60a1a8f9cbf26ab02c302f0af8b944c6bfa1d852). Cut plan unchanged: 6/12 whole-beat cut (B00/B01/B06/B07/B09/B11). Opened and inspected beat-relative 15/50/85% frames for all six retained beats. B00-p50 shows the Claude composer with 'Hei, Liam' greeting, 'Compile this reel to a verified 4K master' ask, three-line output card, folder chip @HumanitariansAI. B01-p85 shows 'art final / verifies / twice.' — BLUF settled cleanly. B06-p50 shows atomic write card with UPDATED title bar 'compile.py:803-825 — atomic replace', TemporaryDirectory → verify_output → gate → atomic_json(timeline, sheet) → validate_approvals → os.replace; file-existence guard visible as 'if any(not Path(p).is_file('; spark line 'Encode into a temp. Replace only after every check clears.' — update confirmed in frame. B07-p50 shows verified.json receipt writer with status/output/sha256/duration_s/input_sha256/at keys and 'Ready is a machine claim. Publication is a human step.' spark. B09-p50 shows full six-line verdict artifact card. B11-p50 shows locked ClaudeTitleOutro: 'Brutalist Command: art final.' with terracotta period and '@NikBearBrown' handle. Gate V: 0 blockers, 0 majors (18 frames sampled). Container 105.375s, video 105.375s, audio 105.375s — all strictly under the 180s cap. Human review pending in FEEDBACK.md."
+}

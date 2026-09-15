@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "616bfc2fadd2479fadc72138c055fa1a",
+  "source_sha256": "76651492332afb6c378d6c70e9a3ce916046c10fedfcdde5378e4cb089561f58",
+  "beat_sheet_sha256": "f80d72178dc75a39f29b1c7ee2c854d4b7687ce48bf05f7b16b19a6cc2edb261",
+  "video_sha256": "03ca7edaa3af9fee6530060c484cdf858cb51e04d2c54aa8fa692f39de6fe5e0",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-vertical.png", "sha256": "86fd1d9ec20216f79ef82f8567d31111956821de98e84c9d3de6b91c1e554ca6"},
+    {"path": "_qc/contact_sheet.png", "sha256": "27b352ef7cfbc18587b12dbf7c1cae8c28a3965527581a160ed45f5a7e6200e8"}
+  ],
+  "notes": "Re-verified for run 616bfc2f (portrait companion). Trigger: toolkit baseline updated; skills/make/fellows/SKILL.md content unchanged (afd14d36 hash confirmed). Existing vertical export verified: SHA-256 03ca7eda confirmed against file on disk; ffprobe reports 2160×3840 24/1 fps 261.875s AAC stereo — correct native 4K portrait spec. Contact sheet (contact-vertical.png) and 12 hero frames (V_*.jpg) re-read directly with image-capable Read tool. V_6s (B00): portrait composer reflows correctly — 'Hallo, Liam' greeting, ask command, @HumanitariansAI chip, three result lines, no overflow. V_78s (B04): 'The report is the clock.' mechanism card — eyebrow MECHANISM · ACT 1, heading, body, verbatim SKILL.md quote in quote block, verdict pill 'INVERTS AUDIO-FIRST, FOR BEAT 4', spark line 'Report drives. Bookends fit.' — all within portrait safe area. V_260s (B11): 'The fellows Skill.' terracotta period, @NikBearBrown handle — correct per OUTRO-LOCK.md. Portrait contact sheet confirms: native 2160×3840 (not center-cropped landscape); SkillTeardownAnatomy916, SkillTeardownPipeline916, SkillTeardownMechanism916 wrappers all reflow cleanly; BrutalistHesitantWriter portrait-aware scale patch active (fontSize=118 lineSpacing=2.2 coverage ~56%); ClaudeVerdictArtifact916 and ClaudeComposerAsk916 render within SAFE916. Two expected SKIN LINT warnings on B00/B11 (portrait-native 916 names vs aspect-blind landscape name check) — not defects. 0 BLOCKER, 0 MAJOR. Human review pending."
+}

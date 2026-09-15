@@ -1,0 +1,1 @@
+[capture_sim] ERROR: sim not found: /private/tmp/nonexistent.html

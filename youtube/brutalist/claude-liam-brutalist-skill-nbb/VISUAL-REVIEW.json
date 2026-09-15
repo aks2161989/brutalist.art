@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "15399db63828493f9926fb6d112b0488",
+  "source_sha256": "587d1b6fa24c89c077ae62083025ab4052b4ca542d135535377f176652541f3d",
+  "beat_sheet_sha256": "4b61d1b9248782ef4bae7ab9e4362c84205e93f6b8eec8fd7ec1208806dd998f",
+  "video_sha256": "4e49fb1c235b53049f588e2927ad2631cf086cd8948beb58b670040616375d63",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/review-15399db6/frame_B00_cold_open.png", "sha256": "b2dd97db90317d4cd4647513bb2bb87e43372d0921240f956ebc4c754c270104"},
+    {"path": "_qc/review-15399db6/frame_B01_bluf.png", "sha256": "2c0cc0e07f0028d997db599d75038a71b57631fb2f10c7e9219ad5a5d7370be6"},
+    {"path": "_qc/review-15399db6/frame_B02_anatomy.png", "sha256": "65924cebd9a76e6db52c7546adf456b98467b94f06fa190eabd8f60895514a3a"},
+    {"path": "_qc/review-15399db6/frame_B03_pipeline.png", "sha256": "781920f575b869f85d7d54ad2f4bb6c70f475d9c98701dc9b874446fda6f42db"},
+    {"path": "_qc/review-15399db6/frame_B09_verdict.png", "sha256": "376368430f80f0da84012cb761690e8caf9fdd5e5eb1155a4fe392e44055ed17"},
+    {"path": "_qc/review-15399db6/frame_B11_outro.png", "sha256": "eb74ba0585d8e4ec1e189ae0f14ac4b727d0ba2bb0af96d77fc6cf8f83197450"}
+  ],
+  "notes": "Landscape master 3840x2160 (native 4K, 346.04s, h264+aac). Re-reviewed under run_id 15399db63828493f9926fb6d112b0488 (retry pass to supply current frame evidence; exports unchanged — video_sha256 and beat_sheet_sha256 match prior verified build). source_sha256 is the current invocation's episode.source_sha256 (skills/make/nbb/SKILL.md). Frames extracted with ffmpeg at t=2s/26s/52s/86s/285s/344s and inspected with Read tool. B00: ClaudeComposerAsk — cream ground, 'BRUTALIST · SKILL TEARDOWN' eyebrow, 'Hola, Liam' greeting, nbb command text, @HumanitariansAI folder chip, Claude/Teardown labels, @HumanitariansAI footer. B01: BrutalistHesitantWriter post-correction — 'scaffolds' in place of 'rewrites', 4 lines legible in large serif, no edge bleed. B02: SkillTeardownAnatomy — full 10-row folder tree, SKILL.md DOCTRINE tag (terracotta), callout box 'Source is NEVER modified', sparkline. B03: SkillTeardownPipeline — 5-phase horizontal flow, SCAFFOLD node lit terracotta, output 'nbb-[slug]/beat_sheet.nbb.json · Teardown · am_onyx', footer and sparkline. B09: ClaudeVerdictArtifact — 'The nbb Skill' header, 'A scaffold. Then a rewrite.' heading, all 6 verdict lines legible within card. B11: ClaudeTitleOutro — cream ground, 'The nbb Skill.' with terracotta period, '@NikBearBrown' handle (OUTRO-LOCK correct), slug-seeded pixel mascot. No burned-in captions, no unresolved slates, no channel_title bleed. 12/12 beats filled. Human review by Bear pending."
+}

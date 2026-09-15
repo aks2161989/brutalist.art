@@ -1,0 +1,21 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/exports/short/claude-liam-brutalist-skill-logo-motion-short.mp4",
+  "sha256": "7414ce4fbd82f54cdd2ffe19d826a41799e4a3beaec4deb925a87aeffb57b6b8",
+  "duration_s": 139.04166666666666,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/media/B00.mp4": "416fffd44fd6a5cb714421a105f091016e53fb1211e17749ea9bca39f55753c5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/media/B01.mp4": "a1d9f57da94aa3749d30fe355789a2faed512c6f2fe426be94104fbfc912092f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/media/B04.mp4": "8f8c55e26d34e647036ba5a7133ab06d744dd48f7a84353f28a4264c8450aabb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/media/B05.mp4": "42a29850881cc8a20276a67fc328fc80aa3de73d459739262fce80870538c4b6",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/media/B09.mp4": "04898e47f03167418627779785bc7c334097e6eeb816812a6e96471fac8f27a9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/media/B11.mp4": "423d9612c48163787ede18a07dfbef2ef595e9e260ce19063f9a01a8ce473059",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/mp3/beat-B00.mp3": "d36c203227e64f7f95c40958abcc80edf325a9af9cfae41231d06371711dc4e0",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/mp3/beat-B01.mp3": "13fd3071079a7e95fb6b2b90f52e14fc23683f4f9bf0f1031857efa5dc258d4a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/mp3/beat-B04.mp3": "6432a773ecd258e15afca4258dcc5254d76edd043b83a622c4bf85fc52c27027",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/mp3/beat-B05.mp3": "f602a730cbbd8bf68ceb4d4e83f14192e9e14645fb7819334e06ba227f3b4e4e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/mp3/beat-B09.mp3": "6ff8838da4fcced72e091f18605d1213b895d6897db850da16ab9da16ab9c6ea",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-logo-motion-short/mp3/beat-B11.mp3": "1bcf7852a3a0ca54eeb651be2b88fbc812bbb320305ce6046e0261e7d8f67711"
+  },
+  "at": "2026-09-09T01:16:40.705616+00:00"
+}

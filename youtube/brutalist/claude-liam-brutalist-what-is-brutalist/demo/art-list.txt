@@ -1,0 +1,17 @@
+SKILL                  ROLE
+ai-explainer           builder — Claude-branded explainer reel (the tight cut)
+cli-explainer          builder — prompt → code → moving output (the build reel)
+deep-explainer         builder — 5-10 min documentary episode (vox pantry beats)
+anthropics             builder — reads Anthropic artifacts against their own claims; practitioner-report register
+fashionista            builder — AI fashion-call experiment; sports-announcer call + correction ask; Kokoro am_onyx
+fellows                builder — wraps a HAI fellow's video report in Claude bookends for @HumanitariansAI
+finance                builder — templatized SEC EDGAR filings reel; 11 beats, 5 charts, fully deterministic
+guests                 builder — wraps a board-member or invited-speaker video in Claude bookends for @HumanitariansAI
+nbb                    persona — Teardown register, Liam in for Bear (Kokoro am_onyx)
+hai                    persona — Plain register (simple, direct), Kokoro Bella (af_bella)
+explainer              doctrine — parent chassis the builders inherit (not an entry point)
+your-turn              doctrine — the closing three-beat standard
+logo                   builder — brand sting outro; random-once animation + brand SVG + jingle (the mp3 is the clock)
+duration-planner       doctrine — duration is an output, never a target
+nopunt                 doctrine — maps animatable beat-types to Brutalist primitives; consult before placing any placeholder
+screen-clean           doctrine — prepares screen recordings (Zoom/Teams/Meet) for use as a reel beat

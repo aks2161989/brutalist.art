@@ -1,0 +1,477 @@
+{
+  "metadata": {
+    "title": "The cli-explainer Skill.",
+    "slug": "claude-liam-brutalist-skill-cli-explainer-short",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "style": "ai-explainer",
+    "tool": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Namaste, Liam",
+    "folderLabel": "@HumanitariansAI",
+    "handle": "@HumanitariansAI",
+    "in_for_bear": true,
+    "playlist": "Brutalist",
+    "captions": false,
+    "aspect_ratio": "9:16",
+    "skill_teardown": {
+      "modifier": "skill-teardown",
+      "source": "skills/make/cli-explainer/SKILL.md",
+      "source_sha256": "f7aab411d1f3be7300e4c819c7371e9f1f3bbc5bb60457633fcac8f9f3cddaa6"
+    },
+    "note": "cli-explainer skill teardown for the @HumanitariansAI Brutalist playlist (episode 06). The reel USES the ai-explainer skill-teardown modifier applied to cli-explainer's own SKILL.md. Every on-screen quote is from the file at that hash; every command shown in the demo/ log ran against the isolated toolkit copy. The isolated toolkit's ClaudeTitleOutro carries a handle prop so the outro reads @HumanitariansAI instead of the hardcoded @NikBearBrown of the public library; the BrutalistHesitantWriter scale is patched portrait-aware; four native 916 compositions were registered in Root.tsx. See SOURCES.md.",
+    "build": {
+      "at": "2026-09-11T16:12:38",
+      "cut": "master",
+      "filled": 7,
+      "of": 7,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B12: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "kind": "short",
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-skill-cli-explainer-vertical",
+    "dropped_beats": [
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09"
+    ],
+    "total_estimated_duration_seconds": 98.71,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "INTRO",
+      "role_note": "COLD OPEN LAW — open on the Claude UI, ask shown answered; IN-FOR-BEAR introduction",
+      "narration_text": "Namaste. This is Liam, in for Bear. I asked Claude what happens when I type c-l-i at the composer. Not because I don't know — because half the room has a Claude subscription and no idea a skill by that name exists.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 17,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0%",
+            "event": "composer cold-opens on the Claude cream page; 'Namaste, Liam' greeting settles above the input"
+          },
+          {
+            "at": "20%",
+            "event": "the ask types itself into the composer, letter by letter"
+          },
+          {
+            "at": "70%",
+            "event": "runningText 'reading the skill…' animates below the send button"
+          },
+          {
+            "at": "82%",
+            "event": "three RESULT lines land in sequence, one per beat"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Namaste, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The cli-explainer Skill",
+            "command": "What does typing `cli` at Claude actually do in this toolkit?",
+            "runningText": "reading the skill…",
+            "folderLabel": "@HumanitariansAI",
+            "output": [
+              "it resolves to skills/make/cli-explainer/SKILL.md",
+              "365 lines of markdown Claude reads before drafting",
+              "the file writes the reel — not a screen recorder"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T12:08:23.438656+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 12.03,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 12.041666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T16:12:38"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 hesitant writer; the reel's misconception corrected in place",
+      "narration_text": "Here is the whole video in one breath. c-l-i-dash-explainer does not record a terminal. It commissions a reel — Claude reads the file and writes the video. Twelve minutes from now, that distinction is the only sentence I want you to keep.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 19,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "hesitant-writer",
+        "show": [
+          {
+            "at": "0-15%",
+            "event": "cream page, blinking caret; the first line types itself"
+          },
+          {
+            "at": "15-70%",
+            "event": "the writer types the newcomer's framing then corrects it — 'records' is struck through and replaced by 'commissions'; 'terminals' is replaced by 'reels'"
+          },
+          {
+            "at": "70-100%",
+            "event": "the corrected sentence settles as the reel's claim; caret keeps its beat"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "The\ncli-explainer\nskill\nrecords\nyour\nterminals.",
+            "triggerWords": "records, terminals",
+            "replacementWords": "commissions, reels",
+            "seed": "cli-explainer-bluf-2026-09-08",
+            "fontSize": 175,
+            "lineSpacing": 1.14,
+            "align": "center",
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 42,
+            "jitter": 10,
+            "showCaret": true
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T12:07:27.729494+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 13.14,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 13.166666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-11T16:12:38"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "ANATOMY — a skill is a folder",
+      "role_note": "SkillTeardownAnatomy — the SKILL.md file structure inside skills/make/cli-explainer/",
+      "narration_text": "A skill in this toolkit is a folder. Two files sit under skills-slash-make-slash-cli-explainer. SKILL dot m-d, three hundred sixty-five lines of plain markdown, and a reference directory with one example beat sheet. That is the whole skill. No compiled binary, no daemon, no service. Claude reads the file, and the file writes the reel.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0-15%",
+            "event": "eyebrow + folder title settle: 'skills/make/cli-explainer'"
+          },
+          {
+            "at": "15-70%",
+            "event": "each file appears in sequence, one per named line"
+          },
+          {
+            "at": "70-100%",
+            "event": "callout lands: 'the file writes the reel'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "cli-explainer",
+            "oldName": "terminal-screencast",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "A skill is a folder.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/cli-explainer/",
+                "size": ""
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "size": "365 lines · 3,262 words",
+                "accent": true,
+                "tag": "the instructions"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "reference/",
+                "size": ""
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "example-cli-beat_sheet.json",
+                "size": "one worked reel"
+              }
+            ],
+            "calloutText": "Claude reads the file. The file writes the reel.",
+            "calloutSub": "No compiled binary. No daemon. No service.",
+            "sparkLine": "The file is the instruction."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T12:09:10.675886+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.52,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 18.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy916",
+        "at": "2026-09-11T16:12:38"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "PIPELINE — the required spine",
+      "role_note": "SkillTeardownPipeline — the CLI-video required beat spine, verbatim structure from SKILL.md §'The required beat spine'",
+      "narration_text": "The file is not a suggestion. It fixes the shape of every CLI reel to a nine-step spine. Cold open, problem, ask, code, output, revision, code again, better output, summary, hand-off, outro. Same in every reel. The creative work happens inside the frame. The frame itself is locked.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "pipeline",
+        "show": [
+          {
+            "at": "0-15%",
+            "event": "eyebrow + title 'The required beat spine.' land"
+          },
+          {
+            "at": "15-80%",
+            "event": "INPUT node → each phase draws itself in narration order → OUTPUT node"
+          },
+          {
+            "at": "80-100%",
+            "event": "footer note settles under the spine"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline916",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "The required beat spine.",
+            "inputLabel": "TRIGGER",
+            "outputLabel": "REEL",
+            "phases": [
+              {
+                "label": "INTRO",
+                "desc": "cold open"
+              },
+              {
+                "label": "PROBLEM",
+                "desc": "before the loop"
+              },
+              {
+                "label": "BUILD LOOP",
+                "desc": "ask · code · output",
+                "accent": true
+              },
+              {
+                "label": "REVISION",
+                "desc": "cycle 2"
+              },
+              {
+                "label": "HANDOFF",
+                "desc": "summary · outro"
+              }
+            ],
+            "footerNote": "Source: skills/make/cli-explainer/SKILL.md — 'the required beat spine'.",
+            "sparkLine": "Same spine, every reel."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T12:19:37.565238+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 17.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline916",
+        "at": "2026-09-11T16:12:38"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "VERDICT",
+      "role_note": "ClaudeVerdictArtifact — the summary, the artifact page",
+      "narration_text": "The verdict. c-l-i-dash-explainer is instructions, not software. It reads like an editorial style guide because that is what it is. It doesn't record your terminal — it commissions a reel about what you asked Claude for. Reading the file beats watching a tutorial.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 21,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "stagger",
+        "show": [
+          {
+            "at": "0-90%",
+            "event": "three artifact lines stagger in, one per spoken claim"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The cli-explainer Skill.",
+            "artifactHeading": "What cli-explainer actually is",
+            "artifactLines": [
+              "Instructions, not software — 365 lines of markdown Claude reads before drafting the reel; there is no compiled binary, no daemon, no service.",
+              "The narrative spine is locked in every reel it produces (intro · problem · ask · code · output · revision · summary · handoff · outro); the skin is a --tool flag.",
+              "A CLI reel without a check-and-change is incomplete in 16:9 — the doctrine names its own edge case (the shorts cut) in the same paragraph.",
+              "It ships as a folder: SKILL.md plus reference/example-cli-beat_sheet.json — the file is the instruction, and Claude is the compiler."
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T12:14:21.007406+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.61,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 14.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-11T16:12:38"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "NEXT STEPS",
+      "role_note": "HANDOFF LAW — 'Your turn.' greeting, a real paste-ready prompt read aloud",
+      "narration_text": "Your turn — here is the prompt, read it with me. Use c-l-i-dash-explainer to build a Brutalist reel about the smallest command in my own workflow. Read skills-slash-make-slash-cli-explainer-slash-SKILL-dot-m-d first. Then propose a beat sheet before you draft narration. The bite is the second sentence. You are asking Claude to read the file, not summarize its name. Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0-10%",
+            "event": "composer cold to the 'Your turn.' greeting"
+          },
+          {
+            "at": "10-70%",
+            "event": "the suggested prompt types itself in, word by word"
+          },
+          {
+            "at": "70-90%",
+            "event": "runningText 'paste this into Claude…' settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The cli-explainer Skill",
+            "command": "Use cli-explainer to build a Brutalist reel about the smallest command in my own workflow. Read skills/make/cli-explainer/SKILL.md first, then propose a beat sheet before you draft narration.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T12:14:57.958870+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.01,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 20.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T16:12:38"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — title restate; @HumanitariansAI handle override for this playlist",
+      "narration_text": "The cli-explainer Skill. Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "fade",
+        "show": [
+          {
+            "at": "0-100%",
+            "event": "title card fades in: poster serif title with terracotta period, handle beneath"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The cli-explainer Skill.",
+            "slug": "claude-liam-brutalist-skill-cli-explainer",
+            "handle": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-09-08T12:15:13.697455+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 3.29,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 3.2916666666666665,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-11T16:12:38"
+      }
+    }
+  ]
+}

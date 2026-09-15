@@ -1,0 +1,455 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art scene-index",
+    "slug": "claude-liam-brutalist-command-scene-index-short",
+    "topic": "BRUTALIST · COMMAND: ART SCENE-INDEX",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Bonjour, Liam",
+    "greeting_note": "hello lexicon: Bonjour (French), one word — fresh, does not repeat scenes=Namaste, icons=Sawubona, list=Salaam, icon-build=Merhaba, help=Namaste. Wagwan check: sum('claude-liam-brutalist-command-scene-index') mod 10 == 9, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "7fbbc6577e9d434aa02b367381fe29af",
+    "episode_id": "command-scene-index",
+    "order": 27,
+    "note": "Command teardown of ./art scene-index — the case at art:92-95 that wraps `python3 runtime/scripts/build_scene_index.py runtime/remotion/src --todo`. THE LAW: 'a scene is usable only if Root.tsx declares a <Composition> for it.' The tool parses Root.tsx (banners, <Folder>, <Composition>), follows the import map to each backing file, extracts each component's own header comment (or DERIVES search text from file evidence when no header exists), and writes runtime/remotion/src/scenes.json + SCENE-DOC-TODO.md. Current isolated toolkit inventory: 620 renderable compositions, 118 undocumented (running on derived search text), 0 unresolved (every registered id has a backing file). Falsifiability beat: a scratch toolkit with two .tsx files in scenes/ but only one <Composition> in Root.tsx — the orphan is invisible until Root.tsx registers it. Recovery: add the <Composition>, re-run scene-index. Unlike ./art scenes there are no aliases: the dispatcher case matches only 'scene-index'. All demo output in demo/RUN-LOG.txt is verbatim from this workspace against the isolated toolkit's scenes.json. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. No paid API, no upload, no network calls. episode.source_sha256 38ca86b097b8c3ac89f97c04f549f5894f2ccd66ba1bbbfc115615141181f4bd.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:92-95",
+      "build_scene_index": "runtime/scripts/build_scene_index.py",
+      "output_index": "runtime/remotion/src/scenes.json",
+      "backfill_list": "SCENE-DOC-TODO.md"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "scene-index",
+      "build_scene_index",
+      "scenes.json",
+      "SCENE-DOC-TODO",
+      "library-first",
+      "Root.tsx",
+      "Composition",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T12:22:26",
+      "cut": "master",
+      "filled": 6,
+      "of": 6,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-command-scene-index-vertical",
+    "dropped_beats": [
+      "B02",
+      "B04",
+      "B06",
+      "B07",
+      "B08",
+      "B10"
+    ],
+    "total_estimated_duration_seconds": 105.624,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Bonjour, this is Liam, in for Bear. Six hundred and twenty renderable compositions live in Brutalist. Art scenes searches that index. Art scene-index writes it. When you add a component to Root dot tsx, the search cannot see it until you re-index. This is the tool that closes that loop.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Bonjour, Liam' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed ask appears in the composer"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'reading Root.tsx…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Bonjour, Liam",
+            "topic": "BRUTALIST · COMMAND: ART SCENE-INDEX",
+            "segment": "art scene-index",
+            "command": "After adding a Remotion component, re-read Root.tsx and regenerate the scene index the library-first search uses.",
+            "runningText": "reading Root.tsx…",
+            "output": [
+              "wraps: python3 runtime/scripts/build_scene_index.py runtime/remotion/src --todo",
+              "writes: runtime/remotion/src/scenes.json + SCENE-DOC-TODO.md",
+              "law: a scene is renderable only if Root.tsx declares a <Composition> for it"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-12T12:21:51.147446+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.7,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 15.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T12:22:26"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Corrects the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art scene-index does not read the scenes for you. It reads Root dot tsx and rewrites the index that art scenes searches. Search reads the index. Scene-index writes it. That is the whole distinction this reel turns on.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 15,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art scene-index reads / the scenes.'"
+          },
+          {
+            "at": "0.50",
+            "event": "the word 'reads' turns terracotta, hesitates, backspaces, types 'rewrites'"
+          },
+          {
+            "at": "0.75",
+            "event": "the word 'scenes' turns terracotta, hesitates, backspaces, types 'index'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art scene-index rewrites / the index.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art scene-index\nreads\nthe scenes.",
+            "triggerWords": "reads, scenes",
+            "replacementWords": "rewrites, index",
+            "seed": "command-scene-index-b01",
+            "face": "serif",
+            "fontSize": 155,
+            "lineSpacing": 2.9,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T13:33:58.349983+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 13.8,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 13.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T12:22:26"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — THE LAW: registered wins. A .tsx without a <Composition> is invisible.",
+      "narration_text": "Here is the law the tool exists to enforce. A scene is usable only if Root dot tsx declares a Composition for it. A dot tsx file sitting in scenes slash is not enough — several exist that no Composition references, and they are invisible to the pipeline. So the index is generated from Root dot tsx for that exact reason. Registered is the only truth. Everything else in the folder is a draft.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'THE LAW — registered wins'"
+          },
+          {
+            "at": "0.30",
+            "event": "the two-line law types in first"
+          },
+          {
+            "at": "0.60",
+            "event": "the source comment cascade — from build_scene_index.py"
+          },
+          {
+            "at": "0.88",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "build_scene_index.py — the doctrine at the top",
+            "code": "# THE LAW: a scene is usable only if Root.tsx declares a\n#          <Composition id=\"...\"> for it. A .tsx file in scenes/\n#          is NOT enough - several exist that no composition\n#          references, and they are invisible to the pipeline.\n#          This index is generated from Root.tsx for that reason:\n#          REGISTERED IS THE ONLY TRUTH.\n#\n# THE INDEX IS THE SEARCH SURFACE. scene_search.py can only find\n# a scene through the text stored here, so this script's job is\n# to carry as much of the component's own account of itself as\n# possible - imports, header, props, synonyms.",
+            "sparkLine": "Registered is the only truth."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T13:25:19.190610+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.74,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 21.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T12:22:26"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — the actual output line, verbatim.",
+      "narration_text": "So the bare invocation. Dot slash art scene-index. It runs, it prints two lines and exits zero. Six hundred and twenty renderable compositions. One hundred and eighteen of them are running on derived search text. Zero unresolved — every registered id has a backing file on disk. Two files change on disk: scenes dot json under runtime slash remotion slash src, and SCENE-DOC-TODO markdown at the repo root.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art scene-index'"
+          },
+          {
+            "at": "0.25",
+            "event": "the two output lines type in"
+          },
+          {
+            "at": "0.55",
+            "event": "the ls output types under a divider"
+          },
+          {
+            "at": "0.88",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art scene-index   (verbatim from this workspace)",
+            "code": "$ ./art scene-index\nscenes.json - 620 renderable, 118 undocumented, 0 unresolved (no backing file)\nSCENE-DOC-TODO.md - 118 scenes need a header sentence\n\n$ echo $?\n0\n\n$ ls -l runtime/remotion/src/scenes.json  SCENE-DOC-TODO.md\n-rw-r--r--  1 bear  staff   12548  Sep 12 08:10  SCENE-DOC-TODO.md\n-rw-r--r--  1 bear  staff  565983  Sep 12 08:10  runtime/remotion/src/scenes.json\n\n# 620 renderable    - registered <Composition>s in Root.tsx\n# 118 undocumented  - components with no header comment (derived text)\n# 0   unresolved    - every registered id has a backing .tsx / .ts file",
+            "sparkLine": "620 · 118 · 0. Two files on disk."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-12T12:22:54.523806+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.93,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 21.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T12:22:26"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface. One line each, in the order you actually use it.",
+      "narration_text": "So the surface. Bare art scene-index re-reads Root dot tsx and writes two files. Scenes dot json — the six hundred and twenty entry index that art scenes searches. SCENE-DOC-TODO markdown — the one hundred and eighteen entry backfill list from the todo flag baked into the wrapper. There are no aliases; the dispatcher matches only scene-index. And the law under all of it: a scene is renderable only if Root dot tsx declares a Composition for it. A file on disk is a draft. Root dot tsx is the truth.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'The surface'"
+          },
+          {
+            "at": "0.30",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.42",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.55",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.67",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.80",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art scene-index — the whole surface, in the order you actually use it",
+            "artifactLines": [
+              "bare invocation — re-reads Root.tsx and writes scenes.json + SCENE-DOC-TODO.md; exits 0.",
+              "wraps: python3 runtime/scripts/build_scene_index.py runtime/remotion/src --todo — flag is baked in.",
+              "writes scenes.json (620 entries: id, aspect, folder, desc, when, props, synonyms, desc_source).",
+              "writes SCENE-DOC-TODO.md (118 rows: every scene running on machine-derived search text).",
+              "no aliases — the dispatcher case at art:92-95 matches only the exact string 'scene-index'.",
+              "documented vs derived — a scene with its own header outranks one whose text was inferred.",
+              "the payoff — art scenes reads scenes.json; if your component is not indexed, the library cannot find it.",
+              "the law it enforces — a scene is renderable only if Root.tsx declares a <Composition> for it."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-12T12:24:03.741658+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.73,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 26.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-12T12:22:26"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art scene-index. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art scene-index.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art scene-index.",
+            "slug": "claude-liam-brutalist-command-scene-index"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T13:29:28.129212+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.59,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T12:22:26"
+      }
+    }
+  ]
+}

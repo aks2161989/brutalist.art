@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "20860bda8f2846a7b16ea4b0c872bacc",
+  "source_sha256": "2c869074b988b04264927caa69cc4440589a0e18d6636701aba89ccc5d4fdeed",
+  "beat_sheet_sha256": "75f87e5b502932c65c750eb4a1d51771c622bf8829a58297842f42c621036f0b",
+  "video_sha256": "6c429f1d0683cd3cc196408569454ed0b2ab8869f15e8e2c324a53a78ee7b200",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "4084eb4592b703bd04ac6ea606c6b6544f77572acf98cf1090f02c48be10ef40"},
+    {"path": "_qc/beat_samples/B00-50.jpg", "sha256": "f66a4dc2dc08764e6dfa834b3ed5a05c127e49c95ff148feab00c6ec98d9553f"},
+    {"path": "_qc/beat_samples/B01-85.jpg", "sha256": "73918a59a3266a4e3fd51366d46aa81a11f586efcf1781c4f221405d52c0898b"},
+    {"path": "_qc/beat_samples/B04-85.jpg", "sha256": "3a58108b6bb032746682b1a46ed43a27d4da650e06d1cae6d64ef9473fa7f276"},
+    {"path": "_qc/beat_samples/B05-50.jpg", "sha256": "445b5dd9707fc11565d1a68abfa66316db119ceeedfb62e0435f77de0e20c8e9"},
+    {"path": "_qc/beat_samples/B10-85.jpg", "sha256": "7d5be1c29105089e10d2b23c22ee34f2f03bc579acff98df1ad32155cb867abe"},
+    {"path": "_qc/beat_samples/B11-50.jpg", "sha256": "a5b200ed5bcf09926dd4c7d60f07745f8ce7fb346168ee789a106bcb05b59ad6"}
+  ],
+  "notes": "Read the 3x7 contact sheet plus six per-beat 15/50/85% samples via the image-capable Read tool. All seven retained beats (B00, B01, B03, B04, B05, B10, B11) render at native 2160x3840, fill the safe area, land their terracotta accent once per beat, and carry no burned-in captions. B00 cold-open composer resolves the four-line answer with @HumanitariansAI folder chip. B01 hesitant writer completes the 'demo -> claim' correction and steady-state shows six stacked serif lines with the period landed. B03 composer types the specific first ask with the three-line output ('60s target, 12 beats / voice locked: am_onyx / stop at review-cut.mp4'). B04 verdict card resolves seven terracotta-numbered pipeline steps. B05 verdict card resolves six numbered receipt lines including the honest limitation ('not a Short, not a published master, a receipt' and 'human review is a separate step'). B10 composer resolves the paste-ready [my tiny question] prompt with terracotta GOOD/BAD lines. B11 outro (dark polarity) restates 'Your First Brutalist Project.' with terracotta period, @HumanitariansAI, and BRUTALIST-03 sub-mark. Container/video/audio durations all 75.750s (strictly under the 180.0s Shorts cap). Audio decoded via ffmpeg volumedetect: mean_volume -26.8 dB, max_volume -4.4 dB (healthy speech, ~4 dB headroom, no clipping). Retained media files inherited byte-identical from the parent portrait companion (verified via input_sha256 map in exports/short/*.verified.json), so parent's Gate-V-tuned typography carries through. Skin-lint flags on B00/B11 are expected (portrait aspect + HAI outro variant) and match the parent's documented rationale. Human review pending."
+}

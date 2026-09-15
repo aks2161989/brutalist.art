@@ -1,0 +1,827 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: align.py",
+    "slug": "claude-liam-brutalist-runtime-align",
+    "topic": "BRUTALIST · UTILITY: ALIGN.PY",
+    "kind": "utility",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Shalom, Liam",
+    "greeting_note": "hello lexicon: Shalom (Hebrew, one word). Fresh — does not repeat any greeting already used in the claude-liam-brutalist-* series (Aloha, Bonjour, Ciao, Habari, Hallo, Hei, Hej, Hola, Jambo, Konnichiwa, Merhaba, Namaste, Salaam, Salam, Sawadee, Sawubona, Selam, Vanakkam). Slug char-sum mod 10 == 2, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "33e2b4ebabdb435c9c09331280ce2f05",
+    "episode_id": "runtime-align",
+    "order": 39,
+    "note": "Utility teardown of runtime/scripts/align.py — the 182-line word clock that runs at audio lock (REMOTION.md build-order step 1). Reads narration_text + audio_file from beat_sheet.json, uses faster-whisper (CPU int8) for word-level TIMING only, aligns the KNOWN narration words onto those timestamps via difflib.SequenceMatcher, interpolates the gaps linearly between anchors, pins pre- and post-anchor words to the first/last anchor, and emits mp3/words.json with beat-local startFrame/endFrame at the film fps (metadata.fps overrides ART_FPS_DEFAULT=24). Falls back to even_spread over actual_duration_s (or mp3/timings.json entry, or 0.0) when nothing anchors — with an explicit [warn] print that word-keyed tracks on that beat are unreliable. Three consumers: the Remotion plane, stage_publish.py's SRT cues, the karaoke derivative. Only remote dependency is faster-whisper's initial CTranslate2 model fetch from huggingface.co — with the model cached under ~/.cache/huggingface/hub and HF_HUB_OFFLINE=1 to satisfy the sandbox proxy, every demo in demo/RUN-LOG.txt is verbatim on this workstation. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. episode.source_sha256 89e0f38ded269908fab42362723f9dab3d87f449bf08e70cad05a4e4efb3c33e.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "source_file": "runtime/scripts/align.py",
+      "public_source_url": "https://github.com/nikbearbrown/brutalist.art/blob/main/runtime/scripts/align.py"
+    },
+    "tags": [
+      "Brutalist",
+      "align.py",
+      "word clock",
+      "faster-whisper",
+      "SequenceMatcher",
+      "kokoro",
+      "Remotion",
+      "audio lock",
+      "utility teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-10T01:50:28",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Shalom, this is Liam, in for Bear. The ask — the audio is generated, the beats are timed to it, and I want a per-word clock I can hang the animations on. Do not re-transcribe. Do not guess. Use what we already know.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 16,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Shalom, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'invoking align.py…' appears"
+          },
+          {
+            "at": "0.84",
+            "event": "three output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Shalom, Liam",
+            "topic": "BRUTALIST · UTILITY: ALIGN.PY",
+            "segment": "runtime/scripts/align.py",
+            "command": "The audio is generated, the beats are timed to it, and I want a per-word clock I can hang the animations on. Do not re-transcribe. Do not guess. Use what we already know.",
+            "runningText": "invoking align.py…",
+            "output": [
+              "reads narration_text + mp3 from beat_sheet.json — no re-typing",
+              "faster-whisper supplies TIMING; SequenceMatcher matches known words onto those seconds",
+              "emits mp3/words.json — three downstream consumers read it"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T05:40:12.363692+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 11.78,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 11.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer. Correction is the reel's actual misconception: align.py does NOT transcribe.",
+      "narration_text": "Watch the writer walk this back. Align dot py does not transcribe. Whisper listens for TIMING, the beat sheet already holds the WORDS, and the two are stitched together — the known text lands on the moments the audio actually spoke.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'align.py / transcribes audio.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'transcribes' turns terracotta, hesitates, backspaces, types 'times'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'audio' turns terracotta, hesitates, backspaces, types 'words'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'align.py / times the words.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "align.py\ntranscribes audio.",
+            "triggerWords": "transcribes, audio",
+            "replacementWords": "times, words",
+            "seed": "align-b01",
+            "face": "serif",
+            "fontSize": 260,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T05:41:08.918151+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 12.61,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 12.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the word-clock pipeline as a horizontal phase-flow.",
+      "narration_text": "Here is the pipeline. Take the beat sheet, which already carries the narration text. Take the mp3 files that came out of Kokoro. Feed each mp3 to faster whisper for word level timestamps. Match the recognised words to the known words with SequenceMatcher. Fill any gaps by interpolating between anchors. Emit a single words dot json for the whole reel.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "phase-flow",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE + title 'The word clock' fade in"
+          },
+          {
+            "at": "0.22",
+            "event": "INPUT box 'beat_sheet.json + mp3/*.mp3' lands"
+          },
+          {
+            "at": "0.40",
+            "event": "WHISPER phase appears with terracotta arrow"
+          },
+          {
+            "at": "0.55",
+            "event": "SEQUENCEMATCHER phase appears"
+          },
+          {
+            "at": "0.68",
+            "event": "INTERPOLATE phase appears"
+          },
+          {
+            "at": "0.80",
+            "event": "EMIT phase appears"
+          },
+          {
+            "at": "0.90",
+            "event": "OUTPUT box 'mp3/words.json' lands"
+          },
+          {
+            "at": "0.96",
+            "event": "spark line settles under the diagram"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "title": "The word clock — one pass, one file.",
+            "inputLabel": "beat_sheet.json\n+ mp3/*.mp3",
+            "outputLabel": "mp3/words.json",
+            "phases": [
+              {
+                "label": "WHISPER",
+                "desc": "word-level TIMING",
+                "accent": true
+              },
+              {
+                "label": "MATCH",
+                "desc": "SequenceMatcher",
+                "accent": false
+              },
+              {
+                "label": "INTERPOLATE",
+                "desc": "fill the gaps",
+                "accent": false
+              },
+              {
+                "label": "EMIT",
+                "desc": "frame-locked json",
+                "accent": true
+              }
+            ],
+            "footerNote": "One narration, three consumers downstream.",
+            "sparkLine": "Known text · measured audio · one clock."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T05:41:57.203872+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.97,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 19.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 1 — the CLI surface, verbatim from --help + what the folder must contain.",
+      "narration_text": "The command surface is small. One required positional: the reel folder. Two optional flags. Dash dash model picks the faster whisper size — base is the default. Dash dash only takes beat ids so a rerun only touches those. Under the folder align dot py expects a beat sheet dot json and an mp3 directory that generate audio kokoro already filled.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'align.py — CLI surface (verbatim from --help)'"
+          },
+          {
+            "at": "0.22",
+            "event": "the usage block types"
+          },
+          {
+            "at": "0.55",
+            "event": "the positional + options list type"
+          },
+          {
+            "at": "0.82",
+            "event": "the fixture-layout comment types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "align.py — CLI surface (verbatim from --help)",
+            "code": "$ python3 runtime/scripts/align.py -h\nusage: align.py [-h] [--model MODEL] [--language LANGUAGE]\n                [--only [ONLY ...]] folder\n\nalign.py — the word clock (REMOTION.md, build-order step 1).\n\npositional arguments:\n  folder               reel folder (has beat_sheet.json + mp3/)\n\noptions:\n  -h, --help           show this help message and exit\n  --model MODEL        faster-whisper model size   (default: base)\n  --language LANGUAGE                              (default: en)\n  --only [ONLY ...]    only these beat_ids\n\n# expected fixture layout:\n#   <folder>/beat_sheet.json        ← narration_text + audio_file per beat\n#   <folder>/mp3/beat-<BID>.mp3     ← already produced by generate_audio_kokoro.py\n#   <folder>/mp3/timings.json       ← optional; per-beat measured durations\n#   <folder>/mp3/words.json         ← WRITTEN by align.py (or merged on rerun)",
+            "sparkLine": "One folder, one output. Rerun with --only."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T06:04:14.103454+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.57,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 20.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE 1 — one beat happy-path. Verbatim from demo/RUN-LOG.txt section 2.",
+      "narration_text": "One beat, one line of narration, one mp3. Run align dot py. It writes words dot json under mp3 slash. Each word carries the exact narration text — including the trailing period on words dot — and a start frame and end frame at the film fps. Frames are beat local. Start frame zero is the first frame of THIS beat's clip, not the reel.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads the fixture path"
+          },
+          {
+            "at": "0.20",
+            "event": "the [ok] status lines type"
+          },
+          {
+            "at": "0.42",
+            "event": "the words.json body types row by row"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "demo/single-beat/mp3/words.json   (verbatim)",
+            "code": "$ HF_HUB_OFFLINE=1 python3 runtime/scripts/align.py demo/single-beat\n[ok] B00: 10 words @ 24fps\n[ok] wrote demo/single-beat/mp3/words.json  (aligned 1, fallback 0)\n\n$ cat demo/single-beat/mp3/words.json\n{\n  \"fps\": 24,\n  \"beats\": {\n    \"B00\": [\n      {\"text\": \"Whisper\", \"startFrame\": 0,  \"endFrame\":  8},\n      {\"text\": \"hears\",   \"startFrame\": 12, \"endFrame\": 16},\n      {\"text\": \"the\",     \"startFrame\": 16, \"endFrame\": 19},\n      {\"text\": \"words.\",  \"startFrame\": 19, \"endFrame\": 26},\n      {\"text\": \"The\",     \"startFrame\": 32, \"endFrame\": 34},\n      {\"text\": \"known\",   \"startFrame\": 34, \"endFrame\": 38},\n      {\"text\": \"text\",    \"startFrame\": 38, \"endFrame\": 47},\n      {\"text\": \"tells\",   \"startFrame\": 47, \"endFrame\": 53},\n      {\"text\": \"the\",     \"startFrame\": 53, \"endFrame\": 58},\n      {\"text\": \"writer.\", \"startFrame\": 58, \"endFrame\": 65}\n    ]\n  }\n}",
+            "sparkLine": "Exact narration text. Beat-local frames."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-10T06:04:48.024830+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.56,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 19.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 2 — whisper_words() function; the one place align.py talks to a model.",
+      "narration_text": "Inside align dot py, one function talks to Whisper. Whisper words returns a flat list of triples: the word, its start second, its end second. It runs on CPU with int eight quantisation — no GPU required, small enough to ship on a laptop. If faster whisper is not installed, the process exits with the pip line printed in place. That is the only remote dependency in this whole script.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'align.py:49-66 — whisper_words()'"
+          },
+          {
+            "at": "0.22",
+            "event": "the try/except import block types"
+          },
+          {
+            "at": "0.55",
+            "event": "the model init + transcribe line types"
+          },
+          {
+            "at": "0.80",
+            "event": "the flat-triple return types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "align.py:49-66 — whisper_words()",
+            "code": "def whisper_words(audio_path: str, model_size: str, language: str):\n    try:\n        from faster_whisper import WhisperModel\n    except ImportError:\n        sys.exit(\n            \"align: faster-whisper not installed (REMOTION.md word clock).\\n\"\n            \"    pip install faster-whisper\\n\"\n            \"(CPU is fine; pulls ctranslate2 + downloads a small model on first run).\"\n        )\n    model = WhisperModel(model_size, device=\"cpu\", compute_type=\"int8\")\n    segments, _ = model.transcribe(audio_path, language=language,\n                                   word_timestamps=True)\n    out = []\n    for seg in segments:\n        for w in (seg.words or []):\n            t = w.word.strip()\n            if t:\n                out.append((t, float(w.start), float(w.end)))\n    return out",
+            "sparkLine": "CPU int8. Timing only. One remote dep."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-10T06:05:20.965587+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.08,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 21.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 3 — align_words(): SequenceMatcher matching-blocks + linear interpolation of gaps.",
+      "narration_text": "Here is the clever bit. Normalise both sides — the known narration and the whisper output — to lowercase alphanumeric. Feed them to SequenceMatcher and take the matching blocks. Each block anchors a run of known words directly onto whisper timestamps. Words outside the matches — the interior gaps — interpolate linearly between the surrounding anchors. Words before the first anchor pin to that first anchor. Words after the last anchor pin to that last anchor. Nothing is left floating.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'align.py:69-101 — align_words()'"
+          },
+          {
+            "at": "0.20",
+            "event": "the norm + SequenceMatcher block types"
+          },
+          {
+            "at": "0.48",
+            "event": "the anchor-detection block types"
+          },
+          {
+            "at": "0.72",
+            "event": "the pre/post pin block types"
+          },
+          {
+            "at": "0.88",
+            "event": "the interior-gap interpolation loop types"
+          },
+          {
+            "at": "0.96",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "align.py:69-101 — align_words()",
+            "code": "def align_words(known, recognized):\n    from difflib import SequenceMatcher\n    for w in known:\n        w[\"start\"] = w[\"end\"] = None\n    a = [norm(w[\"text\"]) for w in known]\n    b = [norm(r[0]) for r in recognized]\n    sm = SequenceMatcher(a=a, b=b, autojunk=False)\n    for ai, bi, size in sm.get_matching_blocks():\n        for k in range(size):\n            known[ai + k][\"start\"] = recognized[bi + k][1]\n            known[ai + k][\"end\"]   = recognized[bi + k][2]\n\n    anchors = [i for i, w in enumerate(known) if w[\"start\"] is not None]\n    if not anchors:\n        return None                              # → even_spread fallback\n    first, last = anchors[0], anchors[-1]\n\n    # pin pre-first and post-last to the neighbouring anchor\n    for i in range(first):\n        known[i][\"start\"] = known[i][\"end\"] = known[first][\"start\"]\n    for i in range(last + 1, len(known)):\n        known[i][\"start\"] = known[i][\"end\"] = known[last][\"end\"]\n\n    # linearly interpolate the interior gaps between anchor pairs\n    for idx in range(len(anchors) - 1):\n        a0, a1 = anchors[idx], anchors[idx + 1]\n        gap = a1 - a0\n        if gap <= 1: continue\n        t0, t1 = known[a0][\"end\"], known[a1][\"start\"]\n        span   = max(t1 - t0, 0.0)\n        for j in range(1, gap):\n            known[a0 + j][\"start\"] = t0 + span * (j       / gap)\n            known[a0 + j][\"end\"]   = t0 + span * ((j+0.9) / gap)\n    return known",
+            "sparkLine": "Anchor. Pin. Interpolate. Nothing floats."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-10T06:05:54.648301+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 23.34,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 23.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 4 — even_spread() fallback + the explicit [warn] print. The falsifiability beat.",
+      "narration_text": "When Whisper anchors nothing — silent audio, non speech, the wrong language — align dot py does not fail the reel. It calls even spread. Words divide the beat duration evenly. It also prints a warning: word keyed tracks on this beat are unreliable. That warning is the point. The clock still exists; the timings on that one beat are averages, not observations. The reel keeps rendering.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'align.py:104-109 + 158-165 — even_spread + [warn]'"
+          },
+          {
+            "at": "0.22",
+            "event": "the even_spread() body types"
+          },
+          {
+            "at": "0.55",
+            "event": "the caller branch in main() types"
+          },
+          {
+            "at": "0.80",
+            "event": "the [warn] print statement types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "align.py:104-109 + 158-165 — even_spread + [warn]",
+            "code": "def even_spread(known, duration_s):\n    per = duration_s / max(len(known), 1)\n    for i, w in enumerate(known):\n        w[\"start\"] = i * per\n        w[\"end\"]   = (i + 0.9) * per\n    return known\n\n# inside main(), after align_words() returns None:\ntimed = align_words(flat, recognized) if recognized else None\nif timed is None:\n    if not dur:\n        print(f\"[skip] {bid}: no alignment and no duration to spread over\")\n        continue\n    timed = even_spread(flat, float(dur))\n    n_fallback += 1\n    print(f\"[warn] {bid}: NO anchors — even spread over {dur}s \"\n          f\"(word-keyed tracks on this beat are unreliable)\")",
+            "sparkLine": "Fallback exists. Warning exists. Rendering continues."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T06:06:31.127408+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.41,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 19.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE 2 — the drift case. Kokoro respells; SequenceMatcher interpolates over the spoken window; downstream sees the digits.",
+      "narration_text": "The drift case. Narration says the digits nineteen twenty six. Kokoro speaks nineteen twenty six as three words. Whisper timestamps three words. SequenceMatcher does not anchor the digit token, so it interpolates the digit over the whole span of the audio those three spoken words occupy. Downstream, the karaoke overlay renders the digits — not the respelling. The audio and the on screen text finally agree.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'demo/number-drift/ — the drift case'"
+          },
+          {
+            "at": "0.20",
+            "event": "the narration_text and spoken-tokens rows type"
+          },
+          {
+            "at": "0.55",
+            "event": "the words.json rows for '1926,' type"
+          },
+          {
+            "at": "0.85",
+            "event": "the read-out shows the digits, not the respelling"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "demo/number-drift/ — narration digits vs spoken respelling",
+            "code": "# beat_sheet.json (input):\nnarration_text: \"In 1926, the pipeline first shipped.\"\n\n# what Kokoro spoke, and what Whisper timestamped:\naudio (spoken):   in   nineteen   twenty   six   the   pipeline   first   shipped\nwhisper tokens:  [in] [nineteen] [twenty] [six] [the] [pipeline] [first] [shipped]\n\n# words.json (output — narration text preserved verbatim):\n{\n  \"fps\": 24,\n  \"beats\": {\n    \"B01\": [\n      {\"text\": \"In\",        \"startFrame\":  0, \"endFrame\":  3},\n      {\"text\": \"1926,\",     \"startFrame\":  3, \"endFrame\": 29},\n      {\"text\": \"the\",       \"startFrame\": 36, \"endFrame\": 38},\n      {\"text\": \"pipeline\",  \"startFrame\": 38, \"endFrame\": 47},\n      {\"text\": \"first\",     \"startFrame\": 47, \"endFrame\": 59},\n      {\"text\": \"shipped.\",  \"startFrame\": 59, \"endFrame\": 70}\n    ]\n  }\n}\n\n# '1926,' bracket = the audio span of 'nineteen twenty six'.\n# karaoke overlay reads the digits; the composer never renders 'nineteen twenty-six'.",
+            "sparkLine": "Digits preserved. Respelling invisible."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T06:07:02.648195+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.4,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 21.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole file, in the order it does its job.",
+      "narration_text": "So — align dot py. The word clock. It ingests known text and measured audio, produces a per word timeline in frames at the film fps, and refuses to guess when the audio disagrees. It runs at audio lock, between generate audio and render. Rerun it whenever a beat's mp3 changes. One narration, three consumers: the Remotion plane, the SRT publisher, the karaoke overlay. Exact text. No drift.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'align.py — the whole surface, in the order it does its job'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "align.py — the whole surface, in the order it does its job",
+            "artifactLines": [
+              "input — beat_sheet.json (narration_text + audio_file per beat) + mp3/*.mp3 already generated.",
+              "recognise — faster-whisper (CPU int8, base model default) supplies word-level TIMING only.",
+              "align — SequenceMatcher matching-blocks anchor known words onto whisper seconds; norm() lowers punct/case.",
+              "interpolate — linear gap-fill between anchors; pre-first and post-last pin to the nearest anchor.",
+              "emit — mp3/words.json with beat-local startFrame/endFrame at metadata.fps (default 24).",
+              "fallback — no anchors + known duration → even_spread + explicit [warn]; no anchors + no duration → [skip]."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-10T05:46:41.439197+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.63,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 21.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at any reel that already has audio: run align dot py on the reel, cat the resulting words dot json, and tell me — for each beat — the total word count, whether the run said aligned or fallback, and the biggest single gap in seconds between two adjacent end frame and start frame values. Watch for whether Claude is tempted to smooth those gaps by re running with a larger dash dash model. That is not the fix. The gap is a real breath in the narration; the model change would hide it, not close it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Read align.py output — grade the gaps",
+            "command": "Point Claude Code at any reel folder that already has beat_sheet.json + mp3/ filled: (1) run `python3 runtime/scripts/align.py <that folder>` and save stdout+stderr to /tmp/align.log; (2) cat mp3/words.json into your context; (3) for each beat, tell me — the total word count, whether the run line said `aligned` or `fallback`, and the biggest single gap in seconds between two adjacent words (end_time_i vs start_time_{i+1}). (4) Do NOT re-run with a larger --model to try to shrink the gaps. Explain in one line what a gap actually is when the narration itself paused, and why a bigger model would hide that pause instead of closing it.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — /tmp/align.log holds the full stdout with per-beat status + tail line",
+              "step 2 — per beat: word count · aligned|fallback · largest end→start gap in seconds",
+              "step 3 — one-line note that a gap is a breath, not a bug"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T05:48:09.272753+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 28.05,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 28.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-10T01:50:28"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Utility: align dot py. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Utility: align.py.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Utility: align.py.",
+            "slug": "claude-liam-brutalist-runtime-align"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-10T05:48:32.671035+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.72,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-10T01:50:28"
+      }
+    }
+  ]
+}

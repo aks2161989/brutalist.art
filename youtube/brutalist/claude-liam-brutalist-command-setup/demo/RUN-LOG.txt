@@ -1,0 +1,94 @@
+====================================================================
+./setup — verbatim runs against this isolated toolkit.
+Toolkit: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/workspaces/claude-liam-brutalist-command-setup/toolkit
+Date UTC: 2026-09-10T02:32:43+00:00
+Toolkit setup SHA-256:            75040062dfcb20d0437a5a358abc516ed6e4b1e4e9020aaac926e1b9d5b2208d
+Toolkit requirements.txt SHA-256: c443062622f54a95539c1606add857acc9fcf7c0402955c411bc66bc9a98ddce
+Toolkit art SHA-256:              9bb77a7c84701d23ab6e73f0a4f48592f17748ffad2c7114b62687bb7f97d0e9
+====================================================================
+
+==== SECTION 1 — the setup surface (verbatim ./setup --help of a kind: setup:1-16) ====
+#!/usr/bin/env bash
+# setup — the doctor for the brutalist toolkit (free by default).
+#
+#   ./setup            # check everything, print the readiness table
+#   ./setup --install  # install the core Python deps + Remotion's node deps, then check
+#
+# Core features require no paid services or API keys. Everything below is free
+# and local. Optional Higgsfield CLI login unlocks AI video beats; ElevenLabs is
+# permanently removed. Exit 0 if all required features are ready; exit 1 otherwise.
+#
+# Readiness is decided ONLY by live verification below — importing every
+# Python dep, actually running ffmpeg/ffprobe, and synthesizing + decoding
+# one real Kokoro phrase (mean_volume > -40 dB). An install step's own exit
+# code is reported (INSTALL_FAILED) but never substitutes for a check: a
+# green table means the checks passed, not that `pip install` returned 0.
+set -uo pipefail
+
+==== SECTION 2 — ./setup with all deps green ====
+$ ./setup
+
+[1mbrutalist — readiness (free-only toolkit: no keys, ever)[0m
+
+  FEATURE                      STATUS
+  -------                      ------
+  audio (Kokoro Bella/Onyx)    [32m✅ ready[0m
+  captions + word clock        [32m✅ ready[0m
+  Manim beats                  [32m✅ ready[0m
+  Manim equation beats         [32m✅ ready[0m
+  Remotion beats + bookends    [32m✅ ready[0m
+  slates / previz / compile    [32m✅ ready[0m
+  fonts (EB Garamond + Oswald) [32m✅ ready[0m
+
+[32mAll core features ready. Voices: Bella (af_bella) and Onyx (am_onyx). Cost: $0.00.[0m
+Run `./art keys` to check optional Higgsfield login.
+A green table above means every dependency checks out live — it does NOT
+mean a video actually renders. Run `./art smoke` for that proof: it builds
+the tiny examples/_smoke/ fixture end to end and verifies the DECODED
+mp4 (audio volume, real video/audio streams, non-zero file).
+[exit $?] = 0
+
+==== SECTION 3 — ./setup with the Kokoro model file missing ====
+# temporarily hide the model files by unlinking runtime/models symlink
+$ ./setup
+
+[1mbrutalist — readiness (free-only toolkit: no keys, ever)[0m
+
+  FEATURE                      STATUS
+  -------                      ------
+  audio (Kokoro Bella/Onyx)    [31m❌ blocked[0m
+        · model files ship with this toolkit — if missing: curl -LO from github.com/thewh1teagle/kokoro-onnx releases (model-files-v1.0)
+        · Kokoro failed to synthesize + decode a test phrase above -40 dB — check model files, kokoro_onnx install, and ffmpeg (run runtime/scripts/setup_smoke_kokoro.py directly to see why)
+  captions + word clock        [32m✅ ready[0m
+  Manim beats                  [32m✅ ready[0m
+  Manim equation beats         [32m✅ ready[0m
+  Remotion beats + bookends    [32m✅ ready[0m
+  slates / previz / compile    [32m✅ ready[0m
+  fonts (EB Garamond + Oswald) [32m✅ ready[0m
+
+[31mSomething is blocked — see above.[0m
+[exit $?] = 1
+
+==== SECTION 4 — recovery: restore the model files and re-check ====
+# on a fresh install the fix would be:  ./setup --install
+$ ./setup
+
+[1mbrutalist — readiness (free-only toolkit: no keys, ever)[0m
+
+  FEATURE                      STATUS
+  -------                      ------
+  audio (Kokoro Bella/Onyx)    [32m✅ ready[0m
+  captions + word clock        [32m✅ ready[0m
+  Manim beats                  [32m✅ ready[0m
+  Manim equation beats         [32m✅ ready[0m
+  Remotion beats + bookends    [32m✅ ready[0m
+  slates / previz / compile    [32m✅ ready[0m
+  fonts (EB Garamond + Oswald) [32m✅ ready[0m
+
+[32mAll core features ready. Voices: Bella (af_bella) and Onyx (am_onyx). Cost: $0.00.[0m
+Run `./art keys` to check optional Higgsfield login.
+A green table above means every dependency checks out live — it does NOT
+mean a video actually renders. Run `./art smoke` for that proof: it builds
+the tiny examples/_smoke/ fixture end to end and verifies the DECODED
+mp4 (audio volume, real video/audio streams, non-zero file).
+[exit $?] = 0

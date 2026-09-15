@@ -1,0 +1,425 @@
+{
+  "number": 9,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246",
+  "beats": 49,
+  "sheet_sha256": "36efa87fa50a5f61186aa7f3c8eba63bf776b05e2f112d7fb577bcac97f53447",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246-slate.mp4",
+  "stale": true,
+  "width": 3840,
+  "height": 2160,
+  "duration": "649.375000",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B05",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/01/one_step.py",
+        "code": ">>> next_token_distribution(prefix)\n\n# vocabulary: ~50,000 tokens\n# output: one probability per token\n\n{\n  'Paris':   0.4821,\n  ' Paris':  0.0930,\n  'France':  0.0117,\n  'Lyon':    0.0083,\n  ...  # every other token gets a share\n}\n# sums to 1.0  \u2014  ordering is over strings",
+        "sparkLine": "One step is a distribution over the whole vocabulary.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in Claude cream skin."
+    },
+    {
+      "beat": "B20",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/01/inside_a_step.py",
+        "code": "for layer in stack:               # ~ dozens of these\n    vecs = attention(vecs, context) # bank | river  \u2192  bank | savings\n    vecs = feed_forward(vecs)       # stored patterns applied\n\nfinal = vecs[-1]                    # last position\nscores = project(final, vocab)      # one score per token\nprobs  = softmax(scores)            # normalize into a distribution",
+        "sparkLine": "Attention \u00b7 Feed-forward \u00b7 Repeat \u00b7 Normalize.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in Claude cream skin."
+    },
+    {
+      "beat": "B28",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/01/probabilities.py",
+        "code": "import math\n\ndef probabilities(logits, temperature=1.0):\n    peak = max(logits)\n    weights = [math.exp((x - peak) / temperature)\n               for x in logits]\n    total = sum(weights)\n    return [w / total for w in weights]",
+        "sparkLine": "Exponentiate. Normalize. Return probabilities.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in Claude cream skin."
+    },
+    {
+      "beat": "B29",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/01/walk_it_forward.py",
+        "code": ">>> probabilities([1, 2, 3])\n\n# peak    = 3\n# shifted = [-2, -1, 0]\n# weights = [0.1353, 0.3679, 1.0000]\n# total   \u2248 1.5032\n\n[0.09, 0.24, 0.67]     # sums to 1",
+        "sparkLine": "Exponentiate. Normalize. Return a distribution.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in Claude cream skin."
+    },
+    {
+      "beat": "B31",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/01/shift.py",
+        "code": "peak = max(logits)          # 3\nshifted = [x - peak for x in logits]\n# shifted = [-2, -1, 0]\nweights = [math.exp(s) for s in shifted]\n# weights \u2248 [0.1353, 0.3679, 1.0]",
+        "sparkLine": "Subtract the peak. Exponents stay small.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in Claude cream skin."
+    },
+    {
+      "beat": "B33",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/01/equal_large_scores.py",
+        "code": ">>> probabilities([1000, 1000])\n\n# peak    = 1000\n# shifted = [0, 0]\n# weights = [1, 1]\n# total   = 2\n\n[0.5, 0.5]     # the shared offset never survived",
+        "sparkLine": "The trick lives in the shifted column.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in Claude cream skin."
+    },
+    {
+      "beat": "B34",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "execute_examples.py",
+        "code": "import math\nmath.exp(1000)\n\n# Captured stderr (exit code 1)\nOverflowError: math range error",
+        "sparkLine": "Python raises an exception. It does not return infinity.",
+        "largeText": true
+      },
+      "intent": "Render executed Python evidence from evidence/executed-examples.json; not a screen recording."
+    },
+    {
+      "beat": "B40",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/01/sample.py",
+        "code": "import random\nfrom collections import Counter\n\ndef sample(logits, count=1000, seed=7,\n           temperature=1.0):\n    rng = random.Random(seed)\n    return dict(Counter(rng.choices(\n        range(len(logits)),\n        probabilities(logits, temperature),\n        k=count)))",
+        "sparkLine": "seed \u00b7 count \u00b7 temperature \u2014 three separate dials.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in Claude cream skin."
+    },
+    {
+      "beat": "B42",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "execute_examples.py",
+        "code": "# weights: the preceding softmax probabilities\nimport random\nrng = random.Random(7)\nprint(rng.choices(range(3), weights=weights, k=12))\n\n# Run A\n[1, 1, 2, 0, 2, 2, 0, 2, 0, 2, 0, 1]\n# Run B (same seed and weights)\n[1, 1, 2, 0, 2, 2, 0, 2, 0, 2, 0, 1]",
+        "sparkLine": "Same sequence. Not an answer key.",
+        "largeText": true
+      },
+      "intent": "Render executed Python evidence from evidence/executed-examples.json; not a screen recording."
+    }
+  ],
+  "evidence_file_candidates": [
+    "evidence/executed-examples.json"
+  ],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B00.mp4",
+      "seconds": 13.02,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B01.mp4",
+      "seconds": 9.0062112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B02.mp4",
+      "seconds": 2.7066669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B03.mp4",
+      "seconds": 13.16,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B04.mp4",
+      "seconds": 10.6633331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B05.mp4",
+      "seconds": 9.94,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B06.mp4",
+      "seconds": 11.9933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B07.mp4",
+      "seconds": 2.0533331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B08.mp4",
+      "seconds": 15.399999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B09.mp4",
+      "seconds": 13.44,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B10.mp4",
+      "seconds": 1.8199999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B11.mp4",
+      "seconds": 12.7166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B12.mp4",
+      "seconds": 10.8733331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B13.mp4",
+      "seconds": 9.799999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B14.mp4",
+      "seconds": 2.1233330999999995,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B15.mp4",
+      "seconds": 12.529999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B16.mp4",
+      "seconds": 14.746666899999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B17.mp4",
+      "seconds": 13.649999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B18.mp4",
+      "seconds": 2.0999999999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B19.mp4",
+      "seconds": 9.799999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B20.mp4",
+      "seconds": 12.1566669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B21.mp4",
+      "seconds": 13.813333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B22.mp4",
+      "seconds": 1.7966668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B23.mp4",
+      "seconds": 13.9066669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B24.mp4",
+      "seconds": 14.863333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B25",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B25.mp4",
+      "seconds": 14.0,
+      "status": "sampled"
+    },
+    {
+      "beat": "B26",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B26.mp4",
+      "seconds": 3.8733330999999995,
+      "status": "sampled"
+    },
+    {
+      "beat": "B27",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B27.mp4",
+      "seconds": 9.2166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B28",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B28.mp4",
+      "seconds": 8.1666669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B29",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B29.mp4",
+      "seconds": 10.43,
+      "status": "sampled"
+    },
+    {
+      "beat": "B30",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B30.mp4",
+      "seconds": 2.6833331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B31",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B31.mp4",
+      "seconds": 8.6566669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B32",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B32.mp4",
+      "seconds": 8.843333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B33",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B33.mp4",
+      "seconds": 10.1733331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B34",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B34.mp4",
+      "seconds": 10.4762112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B35",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B35.mp4",
+      "seconds": 3.29,
+      "status": "sampled"
+    },
+    {
+      "beat": "B36",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B36.mp4",
+      "seconds": 9.2866669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B37",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B37.mp4",
+      "seconds": 9.87,
+      "status": "sampled"
+    },
+    {
+      "beat": "B38",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B38.mp4",
+      "seconds": 9.17,
+      "status": "sampled"
+    },
+    {
+      "beat": "B39",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B39.mp4",
+      "seconds": 2.73,
+      "status": "sampled"
+    },
+    {
+      "beat": "B40",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B40.mp4",
+      "seconds": 9.45,
+      "status": "sampled"
+    },
+    {
+      "beat": "B41",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B41.mp4",
+      "seconds": 11.27,
+      "status": "sampled"
+    },
+    {
+      "beat": "B42",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B42.mp4",
+      "seconds": 9.66,
+      "status": "sampled"
+    },
+    {
+      "beat": "B43",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B43.mp4",
+      "seconds": 2.8233330999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B44",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B44.mp4",
+      "seconds": 7.699999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B45",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/B45.mp4",
+      "seconds": 10.1733331,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/BVDT.mp4",
+      "seconds": 19.4366669,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/BHTF.mp4",
+      "seconds": 13.533105599999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-01-randomness-and-first-prompts-4d3c6a1e-v-a56eeb35f246/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "reports/isdone-2026-09-11/09-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

@@ -1,0 +1,426 @@
+{
+  "metadata": {
+    "title": "What Is Brutalist?",
+    "slug": "claude-liam-brutalist-what-is-brutalist-short",
+    "topic": "HUMANITARIANS AI · BRUTALIST",
+    "register": "Teardown",
+    "audience": "Humanitarians AI fellows",
+    "brand": "claude",
+    "persona": "Liam (in for Bear)",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "playlist": "Brutalist",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "run_id": "7c55b78a2b834162813babc7e106ae2b",
+    "episode_id": "what-is-brutalist",
+    "order": 1,
+    "note": "The first film in the Brutalist playlist for @HumanitariansAI. The audience: fellows who already have Claude Code and now need the mental model of what Brutalist is on disk. Argument: the beat sheet is a plain-text recipe; the film is a pure function of that recipe; the judgment stays human. ILLUSTRATE LAW — the Claude UI appears only where it IS the subject (B00 ask, B08 handoff). Body beats are concept illustrations (WibRecipe / WibPipeline / WibChange / WibDivision / WibNotClaims). Custom native outro (WibOutro) hardcodes @HumanitariansAI so ClaudeTitleOutro's @NikBearBrown lock is respected.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art"
+    },
+    "tags": [
+      "Humanitarians AI",
+      "Brutalist",
+      "Claude",
+      "film as code",
+      "beat sheet",
+      "no code"
+    ],
+    "approvals": {
+      "voice": {
+        "status": "pending",
+        "reviewer_type": "human",
+        "reviewed_by": "",
+        "reviewed_at": "",
+        "subject_sha256": "kokoro/am_onyx"
+      }
+    },
+    "build": {
+      "at": "2026-09-08T18:19:48",
+      "cut": "master",
+      "filled": 6,
+      "of": 6,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B09: palette=claude but the outro is 'WibOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "kind": "short",
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-what-is-brutalist-vertical",
+    "dropped_beats": [
+      "B02",
+      "B03",
+      "B05",
+      "B08"
+    ],
+    "total_estimated_duration_seconds": 94.79,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "kind": "narration",
+      "narration_text": "Ciao. This is Liam, in for Bear. Brutalist is a video toolkit for Humanitarians AI fellows, but it isn't a video editor. It's film as code. The recipe lives on GitHub, the rendered film lives on Drive, and the version history lives in commits. Here is what that actually means when you sit down to build one.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream Claude page fades in with the topic eyebrow and the segment 'What Is Brutalist?'"
+          },
+          {
+            "at": "0.3",
+            "event": "greeting 'Ciao, Liam' resolves above the composer"
+          },
+          {
+            "at": "0.6",
+            "event": "the ask types itself into the composer"
+          },
+          {
+            "at": "0.85",
+            "event": "running indicator appears, then three concrete output lines settle beneath"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Ciao, Liam",
+            "topic": "HUMANITARIANS AI · BRUTALIST",
+            "segment": "What Is Brutalist?",
+            "command": "Explain what Brutalist actually is. Not the slogan — the thing on disk.",
+            "runningText": "reading the toolkit…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Desktop",
+            "output": [
+              "a beat sheet is a plain-text recipe",
+              "the film is a pure function of the recipe",
+              "judgment stays human — everything else automates"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T00:15:23.623708+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 25,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.79,
+      "render_duration_s": 16.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T18:19:48"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "kind": "narration",
+      "narration_text": "Most people hear video toolkit and picture an editor. Timelines, drag and drop, sliders. That is not what this is. Brutalist is the plain-text recipe your film is built from. Change the recipe, run the pipeline, and a new film comes out. That is the whole idea, and it is worth caring about because it means your film is versionable, reviewable, and rebuildable — like any other piece of code.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-then-correct",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream ground; a serif line begins typing on centre"
+          },
+          {
+            "at": "0.25",
+            "event": "writer types 'Brutalist is a video editor for AI clips.'"
+          },
+          {
+            "at": "0.60",
+            "event": "writer pauses on the phrase 'a video editor for AI clips'; the phrase turns terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "writer deletes the phrase and types 'the plain-text recipe your film is built from'"
+          },
+          {
+            "at": "0.95",
+            "event": "final sentence sits corrected: 'Brutalist is the plain-text recipe your film is built from.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "Brutalist\nis a\nvideo\neditor.\nActually,\ntext.",
+            "triggerWords": "editor",
+            "replacementWords": "recipe",
+            "fontSize": 380,
+            "lineSpacing": 1.35,
+            "align": "center",
+            "seed": "wib-b01",
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5",
+            "mistakeRate": 6,
+            "hesitateWithin": 3,
+            "hesitateBetween": 15,
+            "charMs": 50,
+            "jitter": 25
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T00:26:32.715321+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 20.03,
+      "render_duration_s": 20.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-08T18:19:48"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED EXAMPLE · PURE FUNCTION",
+      "kind": "narration",
+      "narration_text": "Watch what change actually costs. Here is beat zero's greeting field — Ciao, Liam. Edit that one string to Hola, re-render only beat zero, and the greeting on screen becomes Hola. Nothing else moves. No timeline nudge, no manual conform. Every visual is a pure function of the recipe. Change one field, one thing on screen changes.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "edit-and-rerender",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "left card shows the JSON line: \"greeting\": \"Ciao, Liam\""
+          },
+          {
+            "at": "0.30",
+            "event": "the word 'Ciao' is struck through; EDITED tag lights terracotta"
+          },
+          {
+            "at": "0.50",
+            "event": "shell line appears: python3 remotion_scenes.py --only B00"
+          },
+          {
+            "at": "0.60",
+            "event": "re-rendering pulse"
+          },
+          {
+            "at": "0.70",
+            "event": "right card: greeting swaps from Ciao to Hola in the rendered composer"
+          },
+          {
+            "at": "0.85",
+            "event": "caption 'Spanish hello.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "WibChange916",
+          "props": {
+            "sparkLine": "One field. One thing on screen."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T00:19:38.218975+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 18.11,
+      "render_duration_s": 18.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:WibChange916",
+        "at": "2026-09-08T18:19:48"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY",
+      "kind": "narration",
+      "narration_text": "Now the honest part — the part every practical tool needs. Brutalist does not upload. It renders a four K file and stops. Brutalist does not require a paid API. Kokoro is local, and Claude runs on your subscription. And Brutalist is not a judge of taste. It will render any bad idea you feed it. Watching the cut and deciding it is worth releasing is your job. Those three limits are the shape of the tool.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "rows-arrive",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow 'BRUTALIST · THE HONEST NOT-LIST'; title 'What Brutalist isn't.'"
+          },
+          {
+            "at": "0.30",
+            "event": "row one: 'Not a publisher.' + 'It renders a 4K file. You upload it.'"
+          },
+          {
+            "at": "0.55",
+            "event": "row two: 'Not a paid API.' + 'Kokoro runs locally. Claude runs on your subscription.'"
+          },
+          {
+            "at": "0.80",
+            "event": "row three: 'Not a judge of taste.' + 'It will render any bad idea. Watching the cut is your job.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "WibNotClaims916",
+          "props": {
+            "sparkLine": "The tool has a shape. That shape is the honesty."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T00:21:56.146899+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 20.46,
+      "render_duration_s": 20.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:WibNotClaims916",
+        "at": "2026-09-08T18:19:48"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "kind": "narration",
+      "narration_text": "Verdict, in three lines. The recipe is text — read the JSON, read the film. The film is a pure function of the recipe — change one property, one thing on screen changes. And the judgment is yours — everything else can be automated. That is what Brutalist actually is.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-lines",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card animates in, cream stage"
+          },
+          {
+            "at": "0.15",
+            "event": "artifact title 'Verdict' and heading 'Film as code, in three lines.'"
+          },
+          {
+            "at": "0.30",
+            "event": "line 1 arrives on cue"
+          },
+          {
+            "at": "0.55",
+            "event": "line 2 arrives"
+          },
+          {
+            "at": "0.80",
+            "event": "line 3 arrives"
+          }
+        ],
+        "remotion": {
+          "pattern": "WibVerdict916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "Film as code, in three lines.",
+            "artifactLines": [
+              "The recipe is text. Read the JSON — you have read the film.",
+              "The film is a pure function of the recipe. Change one field, one thing on screen changes.",
+              "Judgment stays yours. The draft, the voice, the render, the verify — every step can be automated."
+            ],
+            "sparkLine": "That is what Brutalist actually is."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T00:22:56.206253+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 14.44,
+      "render_duration_s": 14.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:WibVerdict916",
+        "at": "2026-09-08T18:19:48"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "kind": "narration",
+      "narration_text": "That was What Is Brutalist? Liam, in for Bear. For Humanitarians AI.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "restate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "poster serif title restates: What Is Brutalist? — terracotta question mark"
+          },
+          {
+            "at": "0.45",
+            "event": "@HumanitariansAI handle fades in beneath"
+          },
+          {
+            "at": "0.75",
+            "event": "'LIAM, IN FOR BEAR.' subline arrives"
+          }
+        ],
+        "remotion": {
+          "pattern": "WibOutro916",
+          "props": {
+            "title": "What Is Brutalist?",
+            "subline": "Liam, in for Bear."
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T00:24:12.697984+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 10,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 4.86,
+      "render_duration_s": 4.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:WibOutro916",
+        "at": "2026-09-08T18:19:48"
+      }
+    }
+  ]
+}

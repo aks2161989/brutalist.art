@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/exports/landscape/claude-liam-brutalist-skill-finance.mp4",
+  "sha256": "ca9125553ecd3a4e89246893e1e166e46e52dcd8f1f19c78da20ad85cb8d5d14",
+  "duration_s": 323.4583333333333,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B00.mp4": "8036d7016aed0fffe88643584139240fd49aaa43df110d4cd7434e2a53b36c76",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B01.mp4": "9aeada854c3fd6e30eabfd18276949b1e4766835c2d02d7dc3d1537448518ffc",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B02.mp4": "5a7e7314d338702a6e5996f848734ffbc235542e9c63d4aea3941d4ecb36b171",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B03.mp4": "9bcda70849d61a7872be24b6568ed0e3817a2150513acb985b0f7f6a608e9ec2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B04.mp4": "6fdc6d16a2653f09d04629acf5f092f52428b2b5828c0054340e1c1c0a2d6f22",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B05.mp4": "17d6e224e1afccd6f024641e4bfbc550af45a5a4f4be184fdfd19449df5dd83a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B06.mp4": "547ad10d2c0cea496ba69db1f806c1d50984660781359e6019da5d3d40c06842",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B07.mp4": "ddc6ae0bebb8550dfa2633b1f40a6c1ef45daa87506556b7b2f8e248fb7e760d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B08.mp4": "d1038db4853e568a812cc3fd01f2b3ce2835a0a98465cf28a1309d9451122c77",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B09.mp4": "cbacbd67b391cca9304a48274267f5dde33854502ebd9b59a1f313d4568f020f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B10.mp4": "42351b3059ea4d315afac192e11521f9e55f6bdccaac7651f6eed33d2db0eeec",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/media/B11.mp4": "0f08a445715fc1217468b9c2b0edaecbb14abe4a8bc9acbb1005e96bb12e9cb2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B00.mp3": "95d0ba0f0424ff48472a707acf202f6390894e0e4d66bc8272a2e39fadd961c3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B01.mp3": "d8024ecf283707e7c0caaa83ed9d4e0e17861a44187c77ee0cccf267a1120964",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B02.mp3": "9eae15fed844a83ed51509dcf00b85f853c6bbc4a096f98f29ccfe95e80f8a40",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B03.mp3": "a5abd6968414a0e00081427a29cc761f9e9fd5f766ad8baa89c81ba3a5487f41",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B04.mp3": "745d98369e9d39cb735eda5650e340d428d03cb9c7e47441eb32af60b5cf9d5f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B05.mp3": "ae29647ee10b4686b9466707cc864a4b60dac9ae14be610af456dd056925ad2b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B06.mp3": "0e1cba7b181fe035b56d43d3d1aec0f93ce1c01010ccfda57122d5768bf14728",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B07.mp3": "1220d6369a28d80f9e248688f8ebd5b3b6bf22b706a5a5203bbc325f102d4c78",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B08.mp3": "a71a476e14a1c3224c7a01fbd145330d8ab92cfad8a2414a62b38b0115162310",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B09.mp3": "af76adb6d5ce67e62efdce07c01d413b18612a6c6425a32b174625156b933d2d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B10.mp3": "cc511fa2b0114686f85f39a0d4b71d9ba2416b38e99b789b00799df18ec1bc2d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-finance/mp3/beat-B11.mp3": "ff0d1d0ea1968cb68188e7f5b53bc4b405205228d845c7dd061e3166677b3814"
+  },
+  "at": "2026-09-08T17:27:02.371160+00:00"
+}

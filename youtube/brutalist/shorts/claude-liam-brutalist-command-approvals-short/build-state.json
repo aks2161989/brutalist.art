@@ -1,0 +1,25 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/exports/short/claude-liam-brutalist-command-approvals-short.mp4",
+  "sha256": "b2a0de33775471e2fd923e22487732f66afd89f7fd9605c535155b12774bba35",
+  "duration_s": 126.75,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/media/B00.mp4": "cb1942f1c4e52710289a7fb0d543a97b5e3369fdd9a67e37898134fe9b93530c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/media/B01.mp4": "378c3302d1c1a2d4713bb826e496c636fea6ecd09c960100a070e0e56687aa8b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/media/B03.mp4": "5c0d21c05e2212ce3c3924a9f3432ea871e63a6066ccf21a3753d527e34e00a0",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/media/B05.mp4": "667cdb9fa2d8cb7b3857da14aea1eacf3a23792111f286fdff842208e0d70838",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/media/B06.mp4": "cdb8a6e79eef4059ac3ff5ab605f4ba91533942fdbd7603f5de6d4ef2f94d5ab",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/media/B08.mp4": "4388fab93df7f9aac38dfec7ec146370c0f8f3eb176c5a2dd9d68e6ba8af645b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/media/B09.mp4": "f564867ea5c496692203f2b88aeb866c1ccb1f031be2895bde111bc9e29342c0",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/media/B11.mp4": "3d52e33d477280894a4d2bbb91d5ab3df1efd2549e327550613f8173477f550b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/mp3/beat-B00.mp3": "d581cbc53ae236a72f3f2884b24beab08a645e9e975a77c2bcaca4884da3e578",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/mp3/beat-B01.mp3": "c9c2023ac04a7998fa1c8986691469a8e9613357cd906e588c0d68de688b5e46",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/mp3/beat-B03.mp3": "b4677dfb61e03d476fc8c2622ade363a344737e082f36768b64f542055b1f1d4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/mp3/beat-B05.mp3": "1081d3db0fdeb1350290cd7dd42840a7c616df710390fa8b3f8ef7b98163b571",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/mp3/beat-B06.mp3": "a8975ca526c9aec201aafd1aa79cfd64ab84bcde477041f7216d85901bc5b8eb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/mp3/beat-B08.mp3": "d43c3121e70d3aab21ca83558f00446fcbe493105d7fb48169f92a25d9fda3a8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/mp3/beat-B09.mp3": "14bae473e7cc46c87274632d5159d64c0b72d3d71bc54a91a5080cd99f9b9b49",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-approvals-short/mp3/beat-B11.mp3": "8703e970320f7d2183d21476c9bbf101faea8ab9274aa4de177f21febc0c9dbd"
+  },
+  "at": "2026-09-12T21:43:25.912586+00:00"
+}

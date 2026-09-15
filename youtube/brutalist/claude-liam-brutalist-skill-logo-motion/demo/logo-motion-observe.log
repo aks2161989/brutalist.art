@@ -1,0 +1,84 @@
+# demo/logo-motion-observe.log
+
+## 1. Confirm the shipped skill file
+$ ls skills/make/logo-motion/
+SKILL.md
+reference
+scripts
+
+$ ls skills/make/logo-motion/scripts/
+trace_logo.py
+
+$ ls skills/make/logo-motion/reference/
+TIMING.md
+
+## 2. The one scene the skill drives
+$ ls runtime/remotion/src/scenes/LogoMotion.tsx
+runtime/remotion/src/scenes/LogoMotion.tsx
+
+$ wc -l runtime/remotion/src/scenes/LogoMotion.tsx
+     351 runtime/remotion/src/scenes/LogoMotion.tsx
+
+## 3. The shipped per-brand parts file
+$ head -4 runtime/remotion/src/logos/medhavy.ts
+// GENERATED — potrace trace of the medhavy lockup, 42 connected components.
+// Regenerate with skills/make/logo-motion/scripts/trace_logo.py. Do not hand-edit.
+// Path data is whitespace-collapsed: potrace hard-wraps `d`, and a raw newline
+// inside a TS string literal is a syntax error, not a cosmetic issue.
+
+$ wc -l runtime/remotion/src/logos/medhavy.ts
+      67 runtime/remotion/src/logos/medhavy.ts
+
+## 4. LOGOS registry (currently one entry)
+13:import {MEDHAVY_PARTS, MEDHAVY_VIEWBOX, MEDHAVY_TRANSFORM, LogoPart} from '../logos/medhavy';
+101:const LOGOS: Record<string, {parts: LogoPart[]; viewBox: string; transform: string}> = {
+102:  medhavy: {parts: MEDHAVY_PARTS, viewBox: MEDHAVY_VIEWBOX, transform: MEDHAVY_TRANSFORM},
+177:  const {parts, viewBox, transform} = LOGOS[logo] ?? LOGOS.medhavy;
+
+## 5. Phase defaults, verbatim from the shipped schema
+33: *     p=0.03..0.16  fragments converge, already ghost-faint   sd  2.9
+34: *     p=0.16..0.43  settled, still a ghost                    sd  2.6  <- floor
+38: *     p=0.80  95% materialised                                sd 28.4
+44: * wrong. If you shorten the ghost phase, you lose the sting.
+59:      buildStart: z.number().default(0.03),
+63:      ghost: z.number().default(0.44),
+65:      materialise: z.number().default(0.83),
+67:    .default({buildStart: 0.03, build: 0.157, ghost: 0.44, materialise: 0.83}),
+84:   * That move IS the geometric transition; without it the ghost just fades up.
+95:  /** Depth of the emboss at full ghost, as a fraction of the mark's height. */
+150:// The materialisation is slow at both ends — it creeps out of the ghost floor and
+155:/** Mix a colour toward the page — how a ghost is made. */
+
+## 6. Camera pull-back defaults, verbatim from the shipped schema
+88:      scale: z.number().default(6.5),
+89:      rotate: z.number().default(-19),
+91:      x: z.number().default(0.16),
+92:      y: z.number().default(0.12),
+
+## 7. trace_logo.py flags (no execution — read-only inspection)
+usage: trace_logo.py [-h] --name NAME --out OUT [--threshold THRESHOLD]
+                     [--scale SCALE] [--min-area MIN_AREA] [--pad PAD]
+                     [--roles ROLES]
+                     image
+
+positional arguments:
+  image
+
+options:
+  -h, --help            show this help message and exit
+  --name NAME           export prefix, e.g. medhavy -> MEDHAVY_PARTS
+  --out OUT
+  --threshold THRESHOLD
+                        ink is darker than this (0-255)
+  --scale SCALE         upsample before tracing
+  --min-area MIN_AREA   drop components smaller than this
+  --pad PAD             padding around the ink, pre-upsample
+  --roles ROLES         names for largest, second-largest, and the rest
+
+## 8. TIMING.md — the measured crossings (evidence)
+34:p 0.80        sd 28.4      95% materialised
+38:Crossings: **5% at p=0.36, 50% at p=0.64, 95% at p=0.80.**
+
+## 9. The exemplar reel folder mentioned in the skill file
+181:  - `youtube/medhavy-logo-sting-onyx/` (Medhavy AI, 11.700 s) — **the pattern**:
+184:  - `youtube/medhavy-logo-sting/` (Medhavy AI, 11.500 s) — the same sting with the

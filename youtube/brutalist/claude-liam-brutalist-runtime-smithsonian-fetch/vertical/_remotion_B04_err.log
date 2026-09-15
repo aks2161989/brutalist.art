@@ -1,0 +1,31 @@
+-------------
+Version mismatch:
+- On version: 4.0.486
+  - @remotion/bundler node_modules/@remotion/bundler/package.json
+  - @remotion/canvas-capture ../../../../../../runtime/remotion/node_modules/@remotion/canvas-capture/package.json
+  - @remotion/cli node_modules/@remotion/cli/package.json
+  - @remotion/compositor-darwin-arm64 ../../../../../../runtime/remotion/node_modules/@remotion/compositor-darwin-arm64/package.json
+  - remotion node_modules/remotion/package.json
+  - @remotion/licensing ../../../../../../runtime/remotion/node_modules/@remotion/licensing/package.json
+  - @remotion/media-utils ../../../../../../runtime/remotion/node_modules/@remotion/media-utils/package.json
+  - @remotion/player ../../../../../../runtime/remotion/node_modules/@remotion/player/package.json
+  - @remotion/renderer node_modules/@remotion/renderer/package.json
+  - @remotion/streaming ../../../../../../runtime/remotion/node_modules/@remotion/streaming/package.json
+  - @remotion/studio-server ../../../../../../runtime/remotion/node_modules/@remotion/studio-server/package.json
+  - @remotion/studio-shared ../../../../../../runtime/remotion/node_modules/@remotion/studio-shared/package.json
+  - @remotion/studio ../../../../../../runtime/remotion/node_modules/@remotion/studio/package.json
+  - @remotion/timeline-utils ../../../../../../runtime/remotion/node_modules/@remotion/timeline-utils/package.json
+  - @remotion/media-parser ../../../../../../runtime/remotion/node_modules/@remotion/media-parser/package.json
+  - @remotion/zod-types ../../../../../../runtime/remotion/node_modules/@remotion/zod-types/package.json
+  - @remotion/web-renderer ../../../../../../runtime/remotion/node_modules/@remotion/web-renderer/package.json
+- On version: 4.0.490
+  - @remotion/paths ../../../../../../runtime/remotion/node_modules/@remotion/paths/package.json
+You may experience breakages such as:
+- React context and hooks not working
+- Type errors and feature incompatibilities
+- Failed renders and unclear errors
+To resolve:
+- Make sure your package.json has all Remotion packages pointing to the same version.
+- Remove the `^` character in front of a version to pin a package.
+- Run `npx remotion versions --log=verbose` to see the path of the modules resolved.
+-------------

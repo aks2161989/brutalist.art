@@ -1,0 +1,322 @@
+{
+  "number": 11,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45",
+  "beats": 28,
+  "sheet_sha256": "8d989ca73caadb171ca970a44bc4e38ed80d1b1f3c8b84323f752f778eea3d14",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "445.706000",
+  "audio_stream": true,
+  "declared_slates": [
+    "B06",
+    "B10",
+    "B15",
+    "B20",
+    "B24"
+  ],
+  "findings": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of two hand-lettered index cards on a wooden desk. Left card: 'Policy: repeated lookup / Budget: 2 / Status: budget-exhausted'. Right card: 'lookup color \u2192 blue / finish answer=red / Status: finished'. Ken Burns pushes toward the right card on the spoken word 'finished-red'.",
+      "path": "pantry/B06.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B10",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page carrying two hand-drawn boxes. Left: 'POLICY \u00b7 iter(actions)'. Right: 'CONTROLLER \u00b7 loop \u00b7 dispatch + append'. A single arrow from left to right labelled 'next()'. Ken Burns pushes toward the arrow on the spoken words 'one call'.",
+      "path": "pantry/B10.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B15",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page carrying four numbered lines in hand-lettered ink: '1. budget invalid \u2192 ValueError', '2. out of actions \u2192 incomplete', '3. finish \u2192 finished', '4. out of turns \u2192 budget-exhausted'. Ken Burns pushes toward line 3 on the spoken word 'finished'.",
+      "path": "pantry/B15.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of two hand-lettered index cards side by side on a wooden desk. Left card in red-ink lettering: 'answer: red'. Right card in blue-ink lettering: 'observation: blue'. A hairline drawn between them. Below the cards, a small serif caption reads 'finished + contradicted'. Ken Burns pushes toward the caption on the spoken word 'contradicted'.",
+      "path": "pantry/B20.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-lettered three-row ledger. Columns: policy, budget, status, trace length. Rows: 'lookup*'  \u00b7 2 \u00b7 budget-exhausted \u00b7 2 ; 'lookup'  \u00b7 1 \u00b7 budget-exhausted \u00b7 1 ; 'lookup'  \u00b7 4 \u00b7 incomplete \u00b7 1. Ken Burns pushes toward row two on the spoken words 'trace length one'.",
+      "path": "pantry/B24.png",
+      "exists": false,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of two hand-lettered index cards on a wooden desk. Left card: 'Policy: repeated lookup / Budget: 2 / Status: budget-exhausted'. Right card: 'lookup color \u2192 blue / finish answer=red / Status: finished'. Ken Burns pushes toward the right card on the spoken word 'finished-red'.",
+      "path": "pantry/B06.png",
+      "exists": false
+    },
+    {
+      "beat": "B10",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page carrying two hand-drawn boxes. Left: 'POLICY \u00b7 iter(actions)'. Right: 'CONTROLLER \u00b7 loop \u00b7 dispatch + append'. A single arrow from left to right labelled 'next()'. Ken Burns pushes toward the arrow on the spoken words 'one call'.",
+      "path": "pantry/B10.png",
+      "exists": false
+    },
+    {
+      "beat": "B15",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page carrying four numbered lines in hand-lettered ink: '1. budget invalid \u2192 ValueError', '2. out of actions \u2192 incomplete', '3. finish \u2192 finished', '4. out of turns \u2192 budget-exhausted'. Ken Burns pushes toward line 3 on the spoken word 'finished'.",
+      "path": "pantry/B15.png",
+      "exists": false
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of two hand-lettered index cards side by side on a wooden desk. Left card in red-ink lettering: 'answer: red'. Right card in blue-ink lettering: 'observation: blue'. A hairline drawn between them. Below the cards, a small serif caption reads 'finished + contradicted'. Ken Burns pushes toward the caption on the spoken word 'contradicted'.",
+      "path": "pantry/B20.png",
+      "exists": false
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-lettered three-row ledger. Columns: policy, budget, status, trace length. Rows: 'lookup*'  \u00b7 2 \u00b7 budget-exhausted \u00b7 2 ; 'lookup'  \u00b7 1 \u00b7 budget-exhausted \u00b7 1 ; 'lookup'  \u00b7 4 \u00b7 incomplete \u00b7 1. Ken Burns pushes toward row two on the spoken words 'trace length one'.",
+      "path": "pantry/B24.png",
+      "exists": false
+    }
+  ],
+  "code_displays": [
+    {
+      "beat": "B05",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/04/wrong_finish_fixture.py",
+        "code": "records = {\"color\": \"blue\"}\npolicy  = [{\"name\": \"lookup\", \"key\": \"color\"},\n           {\"name\": \"finish\", \"answer\": \"red\"}]\nrun(policy, records)\n# -> {'status': 'finished',\n#     'answer': 'red',\n#     'trace': [{'turn': 1, 'action': 'lookup',\n#                'observation': 'blue'}]}",
+        "sparkLine": "Finish is a request to stop, not a proof.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Code card in the Claude cream skin \u2014 the wrong-finish fixture as a Python literal: records, policy, and the returned dict."
+    },
+    {
+      "beat": "B08",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/04/the_two_inputs.py",
+        "code": "policy  = [\n    {\"name\": \"lookup\", \"key\": \"office\"},\n    {\"name\": \"finish\", \"answer\": \"505A Dana Hall\"},\n]\nrecords = {\"office\": \"505A Dana Hall\"}",
+        "sparkLine": "A scripted list, not a learned model.",
+        "codeSize": 0.048,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: a scripted policy list and a records mapping as Python literals; spark line names the deliberately limited use of 'policy'."
+    },
+    {
+      "beat": "B12",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/04-the-agent-loop/code/main.py",
+        "code": "def run(policy, records, max_turns=4):\n    if type(max_turns) is not int or max_turns < 1:\n        raise ValueError(\"Positive turn budget required\")\n    trace = []\n    iterator = iter(policy)\n    for turn in range(max_turns):\n        try:\n            action = next(iterator)\n        except StopIteration:\n            return {\"status\": \"incomplete\", \"trace\": trace}\n        name = action.get(\"name\")\n        if name == \"finish\":\n            return {\"status\": \"finished\",\n                    \"answer\": action.get(\"answer\", \"\"),\n                    \"trace\": trace}\n        observation = (records.get(action.get(\"key\"), \"not found\")\n                       if name == \"lookup\" else \"error: tool not allowed\")\n        trace.append({\"turn\": turn + 1, \"action\": name,\n                      \"observation\": observation})\n    return {\"status\": \"budget-exhausted\", \"trace\": trace}",
+        "sparkLine": "Four exits. One per boundary.",
+        "codeSize": 0.032,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: the verbatim run() function from the lesson's reference implementation."
+    },
+    {
+      "beat": "B17",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/04/wrong_finish_return.py",
+        "code": "{\n  \"status\": \"finished\",\n  \"answer\": \"red\",\n  \"trace\": [\n    {\"turn\": 1,\n     \"action\": \"lookup\",\n     \"observation\": \"blue\"}\n  ]\n}",
+        "sparkLine": "Finished. Trace length one. Answer disagrees.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: the exact returned dict from the wrong-finish run \u2014 verbatim from the research fixture."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B00.mp4",
+      "seconds": 16.0762112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B01.mp4",
+      "seconds": 8.8666669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B02.mp4",
+      "seconds": 2.2166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B03.mp4",
+      "seconds": 12.5533331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B04.mp4",
+      "seconds": 10.569999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B05.mp4",
+      "seconds": 11.97,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/clips/B06.mp4",
+      "seconds": 11.2583331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B07.mp4",
+      "seconds": 2.5433331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B08.mp4",
+      "seconds": 13.1366669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B09.mp4",
+      "seconds": 13.370000000000001,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/clips/B10.mp4",
+      "seconds": 10.5,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B11.mp4",
+      "seconds": 2.17,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B12.mp4",
+      "seconds": 13.486666900000001,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B13.mp4",
+      "seconds": 14.373333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B14.mp4",
+      "seconds": 12.763333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/clips/B15.mp4",
+      "seconds": 10.85,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B16.mp4",
+      "seconds": 2.1466668999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B17.mp4",
+      "seconds": 13.696666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B18.mp4",
+      "seconds": 13.579999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B19.mp4",
+      "seconds": 12.296666899999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/clips/B20.mp4",
+      "seconds": 10.8208331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B21.mp4",
+      "seconds": 2.4033330999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B22.mp4",
+      "seconds": 14.279999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/B23.mp4",
+      "seconds": 15.049999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/clips/B24.mp4",
+      "seconds": 14.554166899999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/BVDT.mp4",
+      "seconds": 20.323105599999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/BHTF.mp4",
+      "seconds": 22.189999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-04-the-agent-loop-7c0e3c01-v-044f98487d45/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/11-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "2105289f3f3846c2870c68ad6e4c57dc",
+  "source_sha256": "1ab627266e10e1ed8a0e4e704f38180f261b647013dd27eeac51767b61381560",
+  "beat_sheet_sha256": "f6415bc73c4ce951065b93145ce75385e37c1d9a4505f762bac554377cd37b88",
+  "video_sha256": "bdd2734e347886af13c93f11a651d25228fde504c80bf6492d7768c6bc4656f4",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "ea30accdc4f06c6eb0b3b7c460993ace57ad4acaf947a079f7f90d6913800209"}
+  ],
+  "notes": "Landscape 3840x2160 master (222.8s, 12 beats) reviewed via runtime/qc/final_frame_check.py (24 frames, 0 BLOCKER, 0 MAJOR) and by opening the extracted contact sheet with the image-capable Read tool. This is a re-render of run 0ff7fe5f to correct three beats that showed stale output format from the old brand_variant.py: B04 (hai variant demo output was multi-line indented; now correctly single-line per actual RUN-LOG), B07 (main() body code now includes the copy_build_scripts() call and lecture-segment strip loop; narration updated from 'three things' to 'four things' covering the new copy_build_scripts step; audio regenerated at 30.51s from 26.62s), B08 (refusal cases output now single-line per actual tool behavior). Cold open (B00, Yassou/Liam ClaudeComposerAsk) lands answered with three-line output cascade. BLUF (B01) shows 'brand_variant.py' correcting 'rewrites narration' to 'stamps metadata'. Framework (B02) uses SkillTeardownPipeline with RESOLVE→STAMP→TODO→EMIT phase-flow. Code beats (B03-B08) show verbatim CLI help, updated single-line hai variant output, AUD dict, get_brand_dir(), updated main() body with segment loop and copy_build_scripts, updated single-line refusal cases. Verdict (B09) is ClaudeVerdictArtifact with six ordered bullets. Your Turn (B10) is ClaudeComposerAsk greeting 'Your Turn'. Outro (B11) is ClaudeTitleOutro with hardcoded @NikBearBrown per OUTRO-LOCK.md — flagged for the human reviewer. No burned-in captions, no subtitle track, no unresolved slates. Human review pending."
+}

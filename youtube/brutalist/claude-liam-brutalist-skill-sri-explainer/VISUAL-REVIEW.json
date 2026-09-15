@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "c3a07c61cd754824ab5b03ae08c15dbb",
+  "source_sha256": "90f0672c0c11cd36398e8b4a38eee060ed76b88bbc79a6c604470ef797e2029b",
+  "beat_sheet_sha256": "23f8bceb45cbab62db63dd37510462a1e7756b998803c814b3f0afd2022db1f4",
+  "video_sha256": "b0d0e60a03bda0e896525f74fe7bdb433cda8fd96403e8c1f51196edcfb8235a",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "92d407558600e6e0b692d2851597e6f8bbb1b9b5b54163a5cbdcef2feed0f80c"},
+    {"path": "_qc/B00_mid.png", "sha256": "3c1d63b2b8b5c02566401630359203400fc644b73372317153e647cf376e5cfa"},
+    {"path": "_qc/B02_mid.png", "sha256": "634f766cb045d90d32b9a5236c2c57bdf4018c0a4e4ab769e5e8fc640e1420c6"},
+    {"path": "_qc/B04_mid.png", "sha256": "3c579652f536329b16d75592c09e8e612930683cf85afa5e8a6cb6e8d7cb0458"},
+    {"path": "_qc/B05_mid.png", "sha256": "7fca9ee33b4728650d555ebe0978d4816468d04abf2823013efbfbfde77cab9a"},
+    {"path": "_qc/B09_mid.png", "sha256": "15e0b9d201f32dbf19f0d47f03f191b04c1ca947d462d81dfc8251473304db88"},
+    {"path": "_qc/B11_mid.png", "sha256": "b667fa2109938e6f85a8dff554e67d3b7df967294a16819e19b5a016c1b33351"},
+    {"path": "_qc/B12_mid.png", "sha256": "a07cb631daf006c18b4c20ede793bf3eb3e1a70f4621579e0ef44de8d1d0a78e"},
+    {"path": "_qc/B13_mid.png", "sha256": "f7c52019f6108750dae8e65681d19928b36c074d4695e805988585742b4252ba"}
+  ],
+  "notes": "Landscape 3840x2160 master, 281.75s, 14/14 beats filled, zero unresolved slates. Gate V clean (frames=28 BLOCKER=0 MAJOR=0). Frames inspected directly in this invocation (run_id c3a07c61cd754824ab5b03ae08c15dbb): B00 (ClaudeComposerAsk — 'BRUTALIST · SKILL TEARDOWN' supertitle, 'The sri-explainer Skill' heading, 'Bonjour, Liam' greeting, prompt about sri-explainer mental model, @HumanitariansAI folder chip, three result lines: chapter-to-video pipe / Sridhar's own written voice / 7 hard rules); B02 (SkillTeardownAnatomy — 'One file, two references, three parents.' headline, folder tree showing skills/make/sri-explainer/SKILL.md + reference/prof-sridhar-style.md + reference/notebook-look.md + three parent SKILL.md files with annotation card 'Small doctrine. Big inheritance.'); B11 (ClaudeVerdictArtifact — 'The sri-explainer split.' with six numbered lines: Bookends INHERITED / Chassis INHERITED / Register OWNED / Spine / Handoff / REACH FOR IT); B12 (ClaudeComposerAsk 'Your turn.' — 'Plan a sri-explainer on a chapter you know', paste-ready prompt visible, @HumanitariansAI chip, three viewer checks); B13 (ClaudeTitleOutro — 'The sri-explainer Skill.' on dark olive background, '@NikBearBrown' handle per OUTRO-LOCK, pixel mascot). Contact sheet and remaining mid-beat frames confirm cream/off-white backgrounds, correct typefaces, no caption text, no edge bleed. Video and beat_sheet hashes match the prior successful build (no regeneration required — source SKILL.md change in commit 109241e did not affect narration or visual content). Human review pending; nothing published."
+}

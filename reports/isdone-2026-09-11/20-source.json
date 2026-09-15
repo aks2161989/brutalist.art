@@ -1,0 +1,191 @@
+{
+  "number": 20,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a",
+  "beats": 22,
+  "sheet_sha256": "8efeb01db67f6dc4014b8d734a82d047f7c92f613a899b83d260f9d36eabb5e7",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/review.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "304.026667",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B09",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/03/main.py",
+        "code": "def missing(surface, required):\n    if surface not in SURFACES:\n        raise ValueError(\"Unknown teaching surface\")\n    return sorted(set(required) - SURFACES[surface])",
+        "sparkLine": "Guard. Subtract. Return the gap.",
+        "codeSize": 0.055,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in the Claude cream skin: missing() with its guard."
+    },
+    {
+      "beat": "B10",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/03/main.py",
+        "code": "def classify(events):\n    allowed = {\"reason\", \"read\", \"write\"}\n    if set(events) - allowed:\n        raise ValueError(\"Unknown event\")\n    if \"write\" in events:\n        return \"agent\"\n    return \"assistant\" if \"read\" in events else \"chat\"",
+        "sparkLine": "Observed events classify. They do not authorize.",
+        "codeSize": 0.05,
+        "sparkSize": 26
+      },
+      "intent": "Onda code card: classify() from lesson 3."
+    },
+    {
+      "beat": "B13",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/04/main.py",
+        "code": "def run(policy, records, max_turns=4):\n    if type(max_turns) is not int or max_turns < 1:\n        raise ValueError(\"Positive turn budget required\")\n    trace, it = [], iter(policy)\n    for turn in range(max_turns):\n        try: action = next(it)\n        except StopIteration: return {\"status\": \"incomplete\", \"trace\": trace}\n        name = action.get(\"name\")\n        if name == \"finish\":\n            return {\"status\": \"finished\", \"trace\": trace}\n        obs = (records.get(action.get(\"key\"), \"not found\")\n               if name == \"lookup\" else \"error: tool not allowed\")\n        trace.append({\"turn\": turn+1, \"action\": name, \"observation\": obs})\n    return {\"status\": \"budget-exhausted\", \"trace\": trace}",
+        "sparkLine": "Bounded. Explicit. Exits are distinct.",
+        "codeSize": 0.028,
+        "sparkSize": 24
+      },
+      "intent": "Onda code card: run() from lesson 4 \u2014 the bounded loop."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B00.mp4",
+      "seconds": 9.356211199999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B01.mp4",
+      "seconds": 10.5,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B02.mp4",
+      "seconds": 2.2866668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B03.mp4",
+      "seconds": 11.9933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B04.mp4",
+      "seconds": 10.8966669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B05.mp4",
+      "seconds": 2.2399999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B06.mp4",
+      "seconds": 14.513333099999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B07.mp4",
+      "seconds": 2.0533331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B08.mp4",
+      "seconds": 11.76,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B09.mp4",
+      "seconds": 10.6633331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B10.mp4",
+      "seconds": 9.66,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B11.mp4",
+      "seconds": 10.756666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B12.mp4",
+      "seconds": 1.8199999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B13.mp4",
+      "seconds": 12.529999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B14.mp4",
+      "seconds": 12.459999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B15.mp4",
+      "seconds": 11.783333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B16.mp4",
+      "seconds": 2.2166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B17.mp4",
+      "seconds": 13.766666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/B18.mp4",
+      "seconds": 14.279999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/BVDT.mp4",
+      "seconds": 12.6,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/BHTF.mp4",
+      "seconds": 20.6962112,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-02-agent-surfaces-and-loops-5aeb372a-v-d091b3c0441a/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/20-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

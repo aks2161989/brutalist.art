@@ -1,0 +1,31 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/exports/vertical/claude-liam-brutalist-skill-duration-planner-vertical.mp4",
+  "sha256": "82e1bd11b25b1243becdf762631892904c774deb296f6b5c47db59b6aafca39c",
+  "duration_s": 214.125,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B00.mp4": "9492e9a750941132389db23f0ba1d192d4fcd1ef832a82e688b26ae93a7184eb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B01.mp4": "21608c6c47dbee3cc5582059e57916cdc227743b184c5845db42c3f0bca1f856",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B02.mp4": "7a3f5a9c6de2a3ee79926da5c13a3bb56c71647104b35a900fb5d18aaf47bf42",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B03.mp4": "fd633eecb628bf3301f4e3a2da91f2e404e9a43ce2afc46e1668a3dc58a9ade2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B04.mp4": "b0f2cacdd34f5f8828af961f10d9fb730c82ba46a405231975d90ca34ce6946a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B05.mp4": "656b8ec975f6875ba94e36a6712ae5d6f72a879f21208bd23446e6b38b293597",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B06.mp4": "654e5df18422d5b59d2a9cb6e24b6b3859a28df7e99bdab1961804365a4afbf9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B07.mp4": "eb34d6c029908d94408b3643274191df7278db39452f17356f3aff6b46f13f15",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B08.mp4": "91c8d4ed05e1a06aa60741a1079fe3b8282fc39689a1c514be09bbffdc6bb7be",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B09.mp4": "ab0025e75c9b9c822e335f4425396a4633b80f045d3f426e4d71ac87bb3a02eb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/media/B10.mp4": "2a2858f406550631989f6d8304550a21f16925a8e3a18d63a3dace66681c9b40",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B00.mp3": "82cb4578655a2de67855289dda0749a90f31bdcb739097f3818f610d80f6756b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B01.mp3": "9df8f9ac125c74f12aec9395d758f347c8d6558ee4ea7da207b8bcfcb19ae602",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B02.mp3": "8ad1614b60be548705832dbd22d4bd9646144614caceeb03989847daa9af505f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B03.mp3": "d270c150e4256064225f8771b848f2ce38b88992dff4df85e90e0699ba071f44",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B04.mp3": "0969752698158f7bab36cd17b36ad6ef7a8f50775072ed30be291390a09362db",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B05.mp3": "33f2e1132c3bc3c0161dd3fb8905bc08aca0b5dcb5b407b35d4f4a0e74b9c160",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B06.mp3": "94ef2c36e42a2d9a7ac174cda7511e455e3b175f54320ce3625b5d15bf47d413",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B07.mp3": "91cd19aca160a72bf9ce661d499d22195a9a0714eb58e3956f810de477eea6f2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B08.mp3": "8a88bb8b500f25c634b71e92cc1c793d3a612d5eb62a8dd4e6f19530e62572a6",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B09.mp3": "45b7ae6551333523cef43937afd61c3e57043d9ffaade9db2d501269082e0e4d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-duration-planner/vertical/mp3/beat-B10.mp3": "9369dbd0695b523d112ebb3ce02cadb0ba1469e0aa7b9b18da74c1c2009ee2a5"
+  },
+  "at": "2026-09-08T11:41:42.102509+00:00"
+}

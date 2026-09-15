@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "note": "This is a skill teardown episode, not an actual GDD film. Evidence references the SKILL.md itself as the document being explained.",
+  "document": {
+    "path": "skills/make/godot-gdd/SKILL.md",
+    "sha256": "7115c92a9e6b45f477706736918d6cf375a47df2bd4fae5d0a58c6ea7c79581c",
+    "captured_at": "2026-09-11T06:52:13.460790+00:00",
+    "version_note": "Snapshot per SOURCE-SNAPSHOT.json"
+  },
+  "sections": [
+    {
+      "heading": "Opening and invocation",
+      "beat_ids": ["B00", "B02"],
+      "coverage": "Pipeline overview and cold-open invocation illustration"
+    },
+    {
+      "heading": "Read before explaining",
+      "beat_ids": ["B03", "B05"],
+      "coverage": "Coverage contract (B03) and causal chain worked example (B05)"
+    },
+    {
+      "heading": "A proposal is not a passing test",
+      "beat_ids": ["B04", "B08"],
+      "coverage": "Status labels (B04) and design tell (B08)"
+    },
+    {
+      "heading": "Visualize the GDD with the game",
+      "beat_ids": ["B05"],
+      "coverage": "Causal chain framework covers the visualization requirement"
+    },
+    {
+      "heading": "Liam and Walker structure",
+      "beat_ids": ["B07"],
+      "coverage": "Walker modifier four bookends"
+    },
+    {
+      "heading": "Evidence, rendering and handoff",
+      "beat_ids": ["B06"],
+      "coverage": "Checker command interface and limits"
+    },
+    {
+      "heading": "Output file list (GDD-COVERAGE.md, gdd-evidence.json, RIFF.md etc.)",
+      "exclusion": "Listing all output filenames in narration is a podcast move; covered implicitly in B02 assemble stage. Documented in GDD-COVERAGE.md exclusions."
+    }
+  ],
+  "excerpts": [
+    {
+      "beat_id": "B02",
+      "source_line_approx": 11,
+      "text": "An agent-driven film builder, not a GDD generator or a line-by-line reading."
+    },
+    {
+      "beat_id": "B03",
+      "source_line_approx": 37,
+      "text": "Map every substantive top-level section to a narrated beat or an explicit, reasoned exclusion."
+    },
+    {
+      "beat_id": "B04",
+      "source_line_approx": 47,
+      "text": "Label material as proposed, implemented, observed/tested, or human decision pending."
+    },
+    {
+      "beat_id": "B05",
+      "source_line_approx": 38,
+      "text": "Explain the design's causal chain: player experience → rule → system owner → visible feedback → acceptance test."
+    },
+    {
+      "beat_id": "B08",
+      "source_line_approx": 47,
+      "text": "Label material as proposed, implemented, observed/tested, or human decision pending. A feature can be implemented while its player-experience hypothesis remains untested."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "skills/make/godot-gdd/SKILL.md",
+      "sha256": "7115c92a9e6b45f477706736918d6cf375a47df2bd4fae5d0a58c6ea7c79581c",
+      "method": "file read + SHA-256 from SOURCE-SNAPSHOT.json",
+      "supports": "All verbatim excerpts in beats B02-B08"
+    }
+  ],
+  "self_demo_limitation": {
+    "status": "documented",
+    "reason": "godot-gdd requires a real Godot game project with an existing GDD.md. No game project was available in this sandbox. All teaching illustrations are labeled as proposed framework or teaching illustration in their scene status banners.",
+    "fallback": "SKILL.md documented interface shown for checker (B06); pipeline stages shown as labeled flow diagrams (B02, B04, B07); coverage contract shown as labeled cards (B03, B05, B08)"
+  }
+}

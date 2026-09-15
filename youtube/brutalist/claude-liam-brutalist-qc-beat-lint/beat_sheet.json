@@ -1,0 +1,654 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: beat_lint.py",
+    "slug": "claude-liam-brutalist-qc-beat-lint",
+    "topic": "BRUTALIST UTILITIES",
+    "playlist": "Brutalist",
+    "register": "Teardown",
+    "audience": "Humanitarians AI fellows using Claude Code",
+    "brand": "claude-liam",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "aspect": "16:9",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "persona": "Liam, in for Bear",
+    "build": {
+      "at": "2026-09-14T22:49:25",
+      "cut": "review",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B11: palette=claude but the outro is 'ClaudeTitleOutroHAI' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Annyeong. I'm Liam, in for Bear. Your beat sheet is a JSON file — the blueprint for every scene, every narration line, and every rendering lane in your Brutalist reel. Before audio is cut and before Remotion touches a frame, beat_lint.py reads that file and enforces two hardening rules. Exit zero means clean. Exit two means there are defects — and the build does not continue.",
+      "shot": {
+        "lane": "bookend",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Annyeong, Liam",
+            "topic": "BRUTALIST UTILITIES",
+            "segment": "beat_lint.py",
+            "command": "I'm about to write a beat sheet for my explainer reel. How do I know if the beat mix is correct before I spend any time rendering?",
+            "runningText": "reading beat_sheet.json…",
+            "output": [
+              "→ beat_lint.py checks your mix at author time",
+              "→ flags text-card beats wearing illustration clothes",
+              "→ exits 0 if clean, exits 2 with defects"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-15T02:23:25.935442+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Composer window slides in; greeting 'Annyeong, Liam' visible"
+          },
+          {
+            "at": 0.15,
+            "event": "Command types into composer"
+          },
+          {
+            "at": 0.5,
+            "event": "Running text appears: 'reading beat_sheet.json…'"
+          },
+          {
+            "at": 0.7,
+            "event": "Three result lines animate in one by one"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 19.95,
+      "render_duration_s": 19.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "lead_silence_s": 0.8,
+      "narration_text": "Here's what beat_lint actually does, and it matters to get this right. The tool is not a general placeholder hunter. It targets one specific failure: a Remotion content beat whose rendering pattern is a generic text card — a SlateCard, a TextCard, a TitleCard — when it should be a real illustration. That is an explainer wearing a slideshow's bones. The second thing it catches is an illegal placeholder type. Everything else in your sheet is your responsibility.",
+      "shot": {
+        "lane": "remotion",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "beat_lint.py checks your beat sheet\nbefore the render starts,\ncatching placeholder beats\nthat could slip past unnoticed.",
+            "triggerWords": "placeholder beats",
+            "replacementWords": "text-card beats wearing illustration clothes",
+            "seed": "571",
+            "lineSpacing": 2.5,
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5",
+            "charMs": 12,
+            "mistakeRate": 8,
+            "hesitateWithin": 5,
+            "hesitateBetween": 10
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-15T03:15:57.146039+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Writer begins typing first line: 'beat_lint.py checks your beat sheet'"
+          },
+          {
+            "at": 0.3,
+            "event": "Second and third lines type in; fourth line begins"
+          },
+          {
+            "at": 0.55,
+            "event": "Writer hesitates at 'placeholder beats', deletes, retypes 'text-card beats wearing illustration clothes'"
+          },
+          {
+            "at": 0.8,
+            "event": "Final corrected text sits on screen; caret blinks"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 22.29,
+      "render_duration_s": 22.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Beat_lint is a plan-time check, not a render-time check. That distinction is the point. Run it before you generate audio, before you touch Remotion. It reads your beat_sheet.json, loops through every beat, and applies three rules. A beat that passes all three is clean. A beat that trips any one gets reported with its beat ID, the rule it broke, and a fix instruction. The whole sheet exits two — blocks the build — if any defect exists.",
+      "shot": {
+        "lane": "remotion",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "BeatLintPipeline",
+          "props": {
+            "sparkLine": "Plan-time. Not render-time."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-15T03:16:25.403363+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "beat_sheet.json node appears on left"
+          },
+          {
+            "at": 0.2,
+            "event": "Arrow draws right to beat_lint.py node (center)"
+          },
+          {
+            "at": 0.45,
+            "event": "Two branches draw: green PASS (exit 0) and red FAIL (exit 2) with beat ID + fix text"
+          },
+          {
+            "at": 0.7,
+            "event": "'Plan-time. Not render-time.' spark line fades in at top"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 21.33,
+      "render_duration_s": 21.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:BeatLintPipeline",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "The exemption list is as important as the rule. Bookend beats, ask beats, card beats, and Manim graphics are all exempt — they're either structural or already proved themselves as real rendered graphics. The rule only fires on lane-colon-remotion beats — current-generation sheets that explicitly declare their lane. Older sheets that predate the lane field are not re-litigated. The amnesty is deliberate: it prevents retroactive failures on reels you shipped before this rule existed.",
+      "shot": {
+        "lane": "remotion",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "beat_lint.py — exempt classes",
+            "code": "TEXT_CARD_PATTERNS = {\"slatecard\", \"textcard\",\n                      \"titlecard\", \"cardtext\", \"quotecard\"}\nEXEMPT_LANES = {\"bookend\", \"ask\", \"card\"}\nGRAPHIC_LANES = {\"manim\"}\n\n# exempt: structural / UI beats\nif lane in EXEMPT_LANES:       continue\n# exempt: real rendered graphics\nif lane in GRAPHIC_LANES \\\n   or typ in (\"GRAPHIC\",\"MANIM\",\"DOCUMENT\"): continue\n# exempt: structural act card\nif typ == \"CARD\":              continue\n# exempt: still/vox-anim placeholders\nif is_still_placeholder(sh) \\\n   or is_voxanim_placeholder(sh): continue",
+            "sparkLine": "The exempt list matters."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-15T02:24:25.288008+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Code card slides in; TEXT_CARD_PATTERNS set visible"
+          },
+          {
+            "at": 0.25,
+            "event": "EXEMPT_LANES and GRAPHIC_LANES lines highlight in terracotta"
+          },
+          {
+            "at": 0.5,
+            "event": "Exempt checks scroll into view with their continue statements"
+          },
+          {
+            "at": 0.75,
+            "event": "Spark line 'The exempt list matters.' appears at bottom"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 25.77,
+      "render_duration_s": 25.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Rule three fires when lane is remotion AND the pattern is in the text-card set: SlateCard, TextCard, TitleCard, CardText, or QuoteCard. The message is precise: it names the beat ID, calls it a talking slide, and gives you two exits. Give the beat a real illustration pattern — a ShellSession, a BarChart, a custom Remotion scene — or convert it to a vox-anim placeholder, which is the legal way to hold a slot for pantry media. Both fixes pass the lint.",
+      "shot": {
+        "lane": "remotion",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "beat_lint.py — Rule 3 condition",
+            "code": "# RULE 3: Remotion content beat fell back to a text card.\n# Only fires on lane:remotion — current-gen sheets.\n# Older sheets without a lane are not re-litigated.\nif lane == \"remotion\" and patt in TEXT_CARD_PATTERNS:\n    defects.append((\n        bid,\n        \"single-sentence-remotion\",\n        f\"lane:remotion beat uses text-card pattern \"\n        f\"'{pattern}' — a talking slide. \"\n        f\"Give it a real illustration pattern OR \"\n        f\"convert to a VOX-ANIM placeholder \"\n        f\"(lane:vox, placeholder:vox-anim).\"\n    ))",
+            "sparkLine": "lane:remotion + text card = defect."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-15T02:24:53.597401+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Code card slides in; condition line 'if lane == remotion' visible"
+          },
+          {
+            "at": 0.3,
+            "event": "'and patt in TEXT_CARD_PATTERNS' highlighted in terracotta"
+          },
+          {
+            "at": 0.55,
+            "event": "defects.append block scrolls into view"
+          },
+          {
+            "at": 0.8,
+            "event": "Spark line 'lane:remotion + text card = defect.' appears"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 24.92,
+      "render_duration_s": 24.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Rule four defines the only two legal placeholder types. A STILL placeholder: lane vox, type STILL or COMPOSITE — you're reserving a slot for a photograph or a generated clip you'll drop into the pantry. A VOX-ANIM placeholder: lane vox, placeholder vox-anim — pantry media that Remotion will animate vox-style. A SlateCard is legal ONLY in these two cases, or as an act card or a bookend. Everywhere else it is a defect.",
+      "shot": {
+        "lane": "remotion",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "beat_lint.py — Rule 4: Legal Placeholders",
+            "code": "# STILL placeholder — lane:vox, type:STILL or COMPOSITE\n# Reserves a slot for a photo or pantry clip\nstill_beat = {\n  \"lane\": \"vox\",  \"type\": \"STILL\"\n}\n\n# VOX-ANIM placeholder — lane:vox, placeholder:vox-anim\n# Pantry media animated vox-style by Remotion\nvox_beat = {\n  \"lane\": \"vox\",  \"placeholder\": \"vox-anim\"\n}\n\n# SlateCard is legal ONLY in these two cases,\n# or as an act card or a bookend.",
+            "sparkLine": "Two legal forms. Everywhere else: defect."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-15T02:34:41.439078+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Title 'Rule 4 — Two Legal Placeholder Types' fades in"
+          },
+          {
+            "at": 0.3,
+            "event": "STILL placeholder box slides in with lane:vox type:STILL labels"
+          },
+          {
+            "at": 0.6,
+            "event": "VOX-ANIM placeholder box slides in with terracotta accent on placeholder label"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 22.91,
+      "render_duration_s": 22.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "DEMO",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Run it from the toolkit root. Point it at a reel directory or directly at a beat_sheet.json file. A clean sheet prints one line: beat-lint, clean, beat mix OK, and the filename. Exit zero. The build continues. That is all you want to see.",
+      "shot": {
+        "lane": "remotion",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "beat_lint.py — clean run",
+            "code": "# Run from the toolkit root. Point at a reel directory.\n$ python3 runtime/qc/beat_lint.py path/to/my-reel/\n\n[beat-lint] clean — beat mix OK (beat_sheet.json)\n\n# Exit 0 — the build continues.",
+            "sparkLine": "Exit 0. The build continues."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-15T03:16:54.037135+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Shell window appears; command begins typing"
+          },
+          {
+            "at": 0.4,
+            "event": "Command finishes; output line appears in green"
+          },
+          {
+            "at": 0.7,
+            "event": "New prompt caret blinks — shell ready"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 14.02,
+      "render_duration_s": 14.041666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ShellSession",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "DEMO",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "A defective sheet prints the count, then one line per defect: beat ID, rule name in brackets, and the full message. The message tells you exactly which pattern tripped the rule and gives you the fix. Exit two. The build stops here. Nothing renders until you fix the beat sheet. This is the whole value of running it early: a five-second check before you spend any time on audio or scenes.",
+      "shot": {
+        "lane": "remotion",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "beat_lint.py — defect run",
+            "code": "$ python3 runtime/qc/beat_lint.py demo/fixture_defect.json\n\n[beat-lint] 2 defect(s) in fixture_defect.json:\n\n  B03  [single-sentence-remotion]\n       lane:remotion beat uses text-card pattern\n       'SlateCard' — a talking slide.\n       Give it a real illustration pattern OR\n       convert to vox-anim (lane:vox, placeholder:vox-anim).\n\n  B05  [single-sentence-remotion] same.\n\n# Exit 2 — fix beat_sheet.json before rendering.",
+            "sparkLine": "Exit 2. Fix the beat sheet first."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-15T03:17:24.333280+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Shell window; command types"
+          },
+          {
+            "at": 0.35,
+            "event": "Defect count line appears in terracotta"
+          },
+          {
+            "at": 0.5,
+            "event": "B03 defect line animates in; rule name in brackets highlighted"
+          },
+          {
+            "at": 0.7,
+            "event": "B05 defect line animates in; both defects visible"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 19.48,
+      "render_duration_s": 19.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ShellSession",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "VERDICT",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Here's the design tell. Beat_lint has a deliberate scope: it enforces the minimum structural contract, not the quality of your illustrations. It doesn't check whether your ShellSession actually shows something meaningful, whether your BarChart data is correct, or whether any vox-anim placeholder ever gets filled. It also doesn't know about patterns not in its text-card set — a custom scene with a nonsensical name passes clean. The linter is an author-time sanity check, not a substitute for visual review.",
+      "shot": {
+        "lane": "bookend",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "beat_lint.py — Verdict",
+            "artifactHeading": "Author-time sanity check. Not a quality gate.",
+            "artifactLines": [
+              "✓  Catches: lane:remotion beats with text-card patterns",
+              "✓  Catches: illegal placeholder types (not STILL or vox-anim)",
+              "✓  Catches: branding mismatches (known channels only)",
+              "✓  Gives fix instructions in every defect message",
+              "—  Scope: enforces minimum structural contract only",
+              "✗  Does not check: illustration quality or relevance",
+              "✗  Does not check: whether placeholders ever get filled",
+              "✗  Does not check: custom scene pattern correctness",
+              "✗  Does not re-litigate: older sheets without lane field"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-15T02:29:01.495151+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Verdict artifact card slides in"
+          },
+          {
+            "at": 0.2,
+            "event": "Title and heading resolve"
+          },
+          {
+            "at": 0.4,
+            "event": "Green checkmark lines animate in one by one"
+          },
+          {
+            "at": 0.7,
+            "event": "Red X lines animate in — scope limitations visible"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 25.6,
+      "render_duration_s": 25.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "MECHANISM",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "There's a third rule that runs before the beat loop: Rule seven checks branding. A JSON file next to the script — brand_labels.json — maps channel identifiers to a fixed series kicker and a folder chip. If your beat sheet's brand field matches a channel in that file, and your topic or folderLabel doesn't match what's registered, you get a branding defect. Unknown channels pass silently. Edit brand_labels.json to add or change channels — no code change required.",
+      "shot": {
+        "lane": "remotion",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "beat_lint.py — Rule 7: Branding Contract",
+            "code": "# brand_labels.json maps channel → kicker + chip\n# Known channels: claude-medhavy, claude-hai,\n#                 claude-musinique\n\n# Rule 7 fires when brand matches AND either:\n#   metadata.topic != registered kicker\n#   metadata.folderLabel != registered chip\n\n# Unknown channels → pass silently\n# Edit brand_labels.json to register channels.\n# No Python code change required.",
+            "sparkLine": "Edit brand_labels.json. No code change."
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-15T02:35:10.577517+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Title 'Rule 7 — Branding Contract' fades in"
+          },
+          {
+            "at": 0.25,
+            "event": "Fixed kicker box slides in"
+          },
+          {
+            "at": 0.5,
+            "event": "Folder chip box slides in"
+          },
+          {
+            "at": 0.75,
+            "event": "brand_labels.json box slides in with terracotta accent on 'Edit' line"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 24.83,
+      "render_duration_s": 24.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "HANDOFF",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Your turn. Take this prompt and run it against your own reel. What you're looking for: beat_lint exits zero and every lane-colon-remotion beat in your sheet has a real illustration scene registered against it. If it exits two, the message tells you exactly what to change. That five-second check at the start of your session saves you from discovering the problem at compile time.",
+      "shot": {
+        "lane": "bookend",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST UTILITIES",
+            "segment": "beat_lint.py",
+            "command": "Run python3 runtime/qc/beat_lint.py on my reel directory. Report every defect with its beat ID and the fix. If any beat trips rule three, show me what a corrected lane:remotion beat with a real illustration pattern looks like for that beat's content. If any beat trips rule four, show me the exact vox-anim placeholder syntax. Exit the session only after beat_lint exits zero.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-15T02:30:16.885489+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Composer opens; 'Your turn.' greeting visible"
+          },
+          {
+            "at": 0.15,
+            "event": "Prompt types into composer"
+          },
+          {
+            "at": 0.8,
+            "event": "Prompt fully typed; running text 'paste this into Claude…' appears"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 19.2,
+      "render_duration_s": 19.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T22:49:25"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "audio_policy": "silence",
+      "narration_text": "Liam, in for Bear.",
+      "shot": {
+        "lane": "bookend",
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeTitleOutroHAI",
+          "props": {
+            "title": "Brutalist Utility: beat_lint.py",
+            "slug": "claude-liam-brutalist-qc-beat-lint"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-15T02:30:30.934396+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Title card fades in: 'Brutalist Utility: beat_lint.py' with terracotta period"
+          },
+          {
+            "at": 0.3,
+            "event": "@HumanitariansAI handle resolves below title"
+          }
+        ]
+      },
+      "actual_duration_s": 6.0,
+      "render_duration_s": 6.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutroHAI",
+        "at": "2026-09-14T22:49:25"
+      }
+    }
+  ]
+}

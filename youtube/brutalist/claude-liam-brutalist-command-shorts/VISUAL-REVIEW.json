@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "915961a4e22f469590e497ffe1dd9a7f",
+  "source_sha256": "2d0d192fefff25f6f9a44c6a5cd588dc1b958f2f19fc2abc48cc0c2d89bd1f01",
+  "beat_sheet_sha256": "2c62ad71501bd893aeda5c1d4507b99975c11b92df52f57d367ddf528f835b5a",
+  "video_sha256": "8b2e678a97c02d0fd1156cd88e937f76867855cd4b46108be08e761e66a3b2b2",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "09e53ea8fdb391fe12083d86f7cbdfe99ab825e755642468bbaef758060257e5"},
+    {"path": "_qc/final-contact-sheet.png", "sha256": "370b9f4742335ea6d4330152b582ccc23626babf2b612d73dc4f0523a65402bc"}
+  ],
+  "notes": "Landscape 3840x2160 · 296.3s · h.264+AAC · 12/12 beats filled. Source updated: art dispatcher shorts/vertical cases moved from art:81-86 to art:102-107 (new commands added before them); shorts.py SHORTS LAW docstring rules 2/3/4 expanded. B02 ClaudeCodeBeat title corrected from 'art:81-86' to 'art:102-107'; code block shows correct line comments. B03 code card updated to remove 'verbatim' claim and reflect the current expanded docstring (condensed for card fit). Narration for both beats is unchanged (still accurate). Audio was not regenerated — only Remotion re-renders for B02 and B03, then full recompile. Gate V ran: 0 BLOCKER / 0 MAJOR (24 frames sampled, contact_sheet.png + final-contact-sheet.png opened with image-capable Read tool). B00 Salam cold open, B01 hesitant BLUF 'shorts drops. / and rewires it.' correction, B02-B08 code cards inside safe area, B09 verdict artifact 8 lines, B10 Your Turn composer, B11 outro ClaudeTitleOutro with @NikBearBrown per OUTRO-LOCK. code-cascade histogram WARNING (7/12, 58%) is intentional for a command teardown that shows Python source. Human review pending."
+}

@@ -1,0 +1,75 @@
+{
+ "metadata": {
+  "slug": "demo-reel",
+  "title": "Demo Reel (disposable fixture for fill_slates.py)",
+  "voice_kokoro": "am_onyx",
+  "engine": "kokoro",
+  "palette": "claude",
+  "topic": "FILL_SLATES DEMO",
+  "note": "Two beats will register as SLATES (no media, no pattern, not silent). One beat has an existing pattern (skipped). One beat is silent (skipped). One beat already has media/B04.mp4 on disk (skipped)."
+ },
+ "beats": [
+  {
+   "beat_id": "B00",
+   "name": "cold open",
+   "narration_text": "This first beat has no media and no remotion pattern yet, so fill_slates will stamp it.",
+   "shot": {
+    "remotion": {
+     "pattern": "FormACard",
+     "provenance": "proven-core/FormACard",
+     "version": "1",
+     "props": {
+      "lines": [
+       "This first beat has no media and no remotion pattern yet,…"
+      ],
+      "dark": false
+     }
+    }
+   }
+  },
+  {
+   "beat_id": "B01",
+   "name": "second beat",
+   "narration_text": "Another empty beat — a full sentence so the truncate helper actually trims to eleven words with an ellipsis at the end here.",
+   "shot": {
+    "remotion": {
+     "pattern": "FormACard",
+     "provenance": "proven-core/FormACard",
+     "version": "1",
+     "props": {
+      "lines": [
+       "Another empty beat — a full sentence so the truncate helper…"
+      ],
+      "dark": false
+     }
+    }
+   }
+  },
+  {
+   "beat_id": "B02",
+   "name": "pre-authored composer beat",
+   "narration_text": "This beat already carries a shot.remotion.pattern, so fill_slates leaves it alone.",
+   "shot": {
+    "remotion": {
+     "pattern": "ClaudeComposerAsk",
+     "props": {
+      "greeting": "Hola, Liam"
+     }
+    }
+   }
+  },
+  {
+   "beat_id": "B03",
+   "name": "silent breather",
+   "narration_text": "",
+   "silent": true,
+   "shot": {}
+  },
+  {
+   "beat_id": "B04",
+   "name": "already-rendered beat",
+   "narration_text": "This one has a real media/B04.mp4 on disk, so fill_slates skips it.",
+   "shot": {}
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Tiny Wave — a disposable D3 fixture</title>
+<style>
+  body { margin: 0; background: #FFFFFF; color: #2A1A0E;
+         font-family: system-ui, sans-serif; }
+  svg  { display: block; margin: 24px auto; }
+  .accent { stroke: #C8102E; }
+</style>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<svg width="640" height="240"></svg>
+<label>k: <input id="k" type="range" min="1" max="6" value="2" step="0.1"></label>
+<script>
+// Disposable synthetic fixture — a sine wave whose wavenumber k is a slider.
+// The one-file HTML is the whole "sim"; build_cli_d3_reels.py reads it and
+// stamps its inline <script> straight into the B03 code beat.
+const svg = d3.select('svg');
+const W = 640, H = 240, mid = H / 2;
+const x = d3.scaleLinear().domain([0, 2 * Math.PI]).range([0, W]);
+const y = d3.scaleLinear().domain([-1, 1]).range([H - 12, 12]);
+const line = d3.line().x(d => x(d[0])).y(d => y(d[1]));
+const path = svg.append('path').attr('fill', 'none').attr('class', 'accent').attr('stroke-width', 2);
+const sample = k => d3.range(0, 2 * Math.PI, 0.02).map(t => [t, Math.sin(k * t)]);
+const redraw = () => path.attr('d', line(sample(+document.getElementById('k').value)));
+document.getElementById('k').addEventListener('input', redraw);
+redraw();
+</script>

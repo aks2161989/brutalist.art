@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "e66ff34b0ab34b038ee5d5d5b8cb13b4",
+  "source_sha256": "30d1a0602e5816a06a443392ae6edbf3ac24abec02a10d14a575c6dd6aa13f46",
+  "beat_sheet_sha256": "c0574b923b4316619791734106027d55c5825236f4e429810626ae5758b75900",
+  "video_sha256": "cc0a885f6663f08270f5c169a707be66ab48e1055e9ea754c9a0bf1f159c4327",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "90328740cb2dfd31ad103769ff1afa82fb894f5daeaae13d82ccf0e169c2874e"},
+    {"path": "_qc/B00_evidence.png", "sha256": "5b3ea2dd6d7e5efcf895f9fcc2083f3300945a83c78b7c4558b6a2a2fd569363"},
+    {"path": "_qc/B01_evidence.png", "sha256": "882114ebadfbc51c5325d49114ac9674571ed2931c03b453131c07b9ba8413f9"},
+    {"path": "_qc/B04_evidence.png", "sha256": "74ab5c7287c4fa4262e287a23348ab58c7370940d7b662a048c1b1593b659bfd"},
+    {"path": "_qc/B09_evidence.png", "sha256": "bbdf2bf80c14211b16badf3fc46a2999d8627e576ef25ec46cfe36c794a8a632"},
+    {"path": "_qc/B10_evidence.png", "sha256": "c7b796d9f9af826299357a63adb4da611b9b4c5ff5cca93389650a65182a0561"},
+    {"path": "_qc/B11_evidence.png", "sha256": "904ebb0f7ad790870794eb17de0db0deeb20f538a396db406e2e41cd52026dde"}
+  ],
+  "notes": "Re-verified on invocation e66ff34b0ab34b038ee5d5d5b8cb13b4 (resume after usage-limit pause). MP4 hash confirmed unchanged: cc0a885f. Landscape 3840x2160, 167.875s, 12/12 beats filled, 0 slates. Frames re-read and inspected this session: full 12-beat contact sheet (all thumbnails filled, no slates), B00 mid-frame (ClaudeComposerAsk cold open — 'Hola, Liam' greeting, 'art todo my-reel/ --open' in composer, @NikBearBrown folder chip, four terracotta answer lines correctly describing beat_sheet.json reads and todo.json/STATUS.md/ToDo.md writes plus --open filter), B10 (ClaudeComposerAsk 'Your Turn' variant with paste-ready 'Run ./art todo on this reel folder' prompt, three grade rubric lines, @NikBearBrown chip), B11 (ClaudeTitleOutro — 'Brutalist Command: art todo.' title, red period, @NikBearBrown per OUTRO-LOCK, slug-seeded terracotta mascot, clean safe-area margins). No captions, no overflows, no unresolved slates, all narration audible per previous build-state gate. Human review pending; nothing published."
+}

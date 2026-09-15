@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "4d4269b669dd4b84a92a266e5bff804f",
+  "source_sha256": "a0cfc6ba0c3e56fd162d80c940e4fbf31594739d7c7283dcfe3c9a0ae90c39ed",
+  "beat_sheet_sha256": "ccd5871751d120fec9c93b6c06ca52ba9b8657b8a2a881dc51a16f54b4bf0f95",
+  "video_sha256": "6f5f0824b1c025afedb0bfc0dada0f8ca5dc6af43e496f3e89c6f02c86aaa686",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "b18c9ed3c55e515a3f5c73b0b25ee8c1377bba0b0085697f4a8ea5cbcab60212"}
+  ],
+  "notes": "Re-verification pass for SKILL.md source change (run_id 4d4269b669dd4b84a92a266e5bff804f). SKILL.md §4 gained frame-fraction duration rules and qc.contrast_regions spec; §1–§3 teaching content unchanged — no beat rebuild required. Landscape 3840x2160, 269.3s, 13/13 beats filled, 0 slates. Gate V re-run clean: frames=26, BLOCKER=0, MAJOR=0. Contact sheet read directly with image-capable Read tool: B00 ClaudeComposerAsk — cream page, 'Annyeong, Liam' greeting, 'The godot-waikthrough Skill' topic, ask about what the skill actually does, three RESULT lines ('It plays the game.', 'Riff captures the why.', 'It makes a narrated walkthrough film.'), @HumanitariansAI folder label. B01 BrutalistHesitantWriter — BLUF text 'godot-waikthrough riffs the game. Plays it through the actual input path. Riff narrates the mechanism.' legible across paired frames; 'records'→'riffs' correction visible. B02 WalkerGodotSetup flow — 'Play in. Narrated film out.' title, five phase nodes (Identify, Capture, Riff, Assemble, Render) with details. B03 SkillTeardownAnatomy — 'Two modes: standard and walker.' with file listing and callout. B04 GodotDesignBoard — Phase 1 feature inventory cards (Built/Planned/Broken). B05 WalkerGodotSetup terminal — dark capture command with labeled scripted-input output. B06 GodotDevWorkbench code mode — 'The riff mechanic.' RIFF.md structure with highlighted fields. B07 WalkerGodotSetup flow — Walker mode four bookends sequence. B08 SkillTeardownMechanism — 'Don't fix the game.' design tell with verbatim SKILL.md quote. B09 SkillTeardownMechanism — 'If it can't run, report the blocker.' falsifiability gate with honest limitation verdict. B10 ClaudeVerdictArtifact — 'Verdict / The godot-waikthrough skill.' four artifact lines, @HumanitariansAI brand label. B11 ClaudeComposerAsk — 'Your turn.' greeting, paste-ready feature inventory prompt, coverage.json output lines. B12 ClaudeTitleOutro — 'The godot-waikthrough Skill' title, @NikBearBrown handle, mascot, jingle. No captions, no subtitle overlays, no slates, no overflow observed. MP4 hash verified: 6f5f0824b1c025afedb0bfc0dada0f8ca5dc6af43e496f3e89c6f02c86aaa686. Human review pending; nothing published."
+}

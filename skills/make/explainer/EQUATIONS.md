@@ -57,6 +57,10 @@ spotlighted stays ink/gray.)
 
 ## Typesetting
 
+The shared [math-in-films rule](../../../docs/MATH-TYPESETTING.md) governs all
+equations, not only this tangent. Any structured renderer is acceptable;
+missing LaTeX never justifies flattening fractions and indices into prose.
+
 - The **symbolic form is real math, not mono** — italic variables (Roman + Greek),
   roman operators/numbers/functions (`log`, `max`). Render it with **KaTeX** (the deck
   already does), never as a screenshot. JetBrains Mono is reserved for *data numbers*

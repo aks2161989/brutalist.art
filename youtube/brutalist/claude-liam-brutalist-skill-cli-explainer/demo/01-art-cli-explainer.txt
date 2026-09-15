@@ -1,0 +1,3 @@
+art: 'cli-explainer' → /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/workspaces/claude-liam-brutalist-skill-cli-explainer/toolkit/skills/make/cli-explainer/SKILL.md
+This skill is agent-driven: open its SKILL.md in your CLI and follow the phases.
+Runtime scripts live in runtime/scripts/ (call via python3, or use ./art run <reel>).

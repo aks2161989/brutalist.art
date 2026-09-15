@@ -1,0 +1,19 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "riff generates observations (not opinions) by looking at the artifact before writing — the epistemic discipline of evidence-first commentary",
+  "parent_master_sha256": "ed2ca4f709268b96450a5db5f11d9c59decc931910283bf1c43a0f0c6aa20959",
+  "kept_beats": ["B00", "B01", "B04", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Skill anatomy (folder structure, SKILL.md line count) — generic repo detail that belongs in the 16:9 long"},
+    {"beat_id": "B03", "reason": "Four-phase pipeline breakdown — the verdict (B09) already compresses the full pipeline into four bullet rules"},
+    {"beat_id": "B05", "reason": "Self-demo of ./art scenes search — production detail, not the skill's core purpose"},
+    {"beat_id": "B06", "reason": "Mechanism 2 (evidence vs. interpretation separation) — the verdict (B09) covers 'footage = evidence, voice = verdict' cleanly"},
+    {"beat_id": "B07", "reason": "RIFF.md five-column schema — output format detail; the verdict names it without needing the full column breakdown"},
+    {"beat_id": "B10", "reason": "Full Your Turn exercise prompt (32s) — too long for Short; the long film handles the detailed handoff"}
+  ],
+  "cut_first_review": "B00 introduces Liam and the core idea (riff watches before it speaks). B01 delivers the BLUF via HesitantWriter: observations not opinions. B04 establishes the primary mechanism: look before writing, never substitute imagined success. B08 gives the honest design limitation: a scripted route cannot establish fun or playtest fairness — the skill knows its limit. B09 verdicts all four rules cleanly without requiring B06 or B07 to have been seen. B11 closes with Liam's sign-off. No dangling references: 'Mechanism one' in B04 reads naturally as a standalone rule; 'RIFF.md' in B09 is self-explanatory as an output file name. The cut stands alone.",
+  "planned_duration_s": 102.68,
+  "final_measured_duration_s": 102.67,
+  "final_video_sha256": "59fbc417aef8728542408e1f2bf1e05a7dd9f8cd019ba6387d195267cfe29ceb",
+  "rewrite_reason": null
+}

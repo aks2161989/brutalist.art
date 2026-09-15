@@ -1,0 +1,105 @@
+############################################################
+# 1. Empty folder — no beat_sheet.json
+############################################################
+$ ls /tmp/claude-501/approvals-demo-empty/
+
+$ ./art approvals /tmp/claude-501/approvals-demo-empty
+[safety] REFUSED: [Errno 2] No such file or directory: '/tmp/claude-501/approvals-demo-empty/beat_sheet.json'
+[exit 1]
+
+$ ./art approvals /tmp/claude-501/approvals-demo-empty --fingerprints
+[safety] REFUSED: [Errno 2] No such file or directory: '/tmp/claude-501/approvals-demo-empty/beat_sheet.json'
+[exit 1]
+
+############################################################
+# 2. Plain command reel — no gates armed
+############################################################
+$ cat /tmp/claude-501/approvals-demo-command/beat_sheet.json | head -12
+{
+  "metadata": {
+    "title": "Demo \u2014 a plain command reel",
+    "slug": "approvals-demo-command",
+    "kind": "command",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "approvals": {}
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+
+$ ./art approvals /tmp/claude-501/approvals-demo-command --fingerprints
+{}
+[exit 0]
+
+$ ./art approvals /tmp/claude-501/approvals-demo-command
+[exit 0]
+
+############################################################
+# 3. Fellows reel — voice + professor_notes gates armed
+############################################################
+$ cat /tmp/claude-501/approvals-demo-fellows/beat_sheet.json | head -18
+{
+  "metadata": {
+    "title": "Demo \u2014 a fellows reel that arms both gates",
+    "slug": "approvals-demo-fellows",
+    "kind": "fellows",
+    "profile": "fellows",
+    "engine": "kokoro",
+    "voice_kokoro": "af_bella",
+    "voice": "af_bella",
+    "voice_policy": "persistent-fellow-selected",
+    "approvals": {}
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Hi.",
+      "shot": {
+
+$ ./art approvals /tmp/claude-501/approvals-demo-fellows --fingerprints
+{
+  "voice": {
+    "subject_sha256": "d3486a7ac5d092a1899e7d5610728c96d03bf769ed2c423635e04dbd98e04bf4"
+  },
+  "professor_notes": {
+    "notes_sha256": "09686350c01479dc973d5db1877fffc2c1245e64f6cc4159f0b29fc398f2d77b",
+    "narration_sha256": "c3ad137b26ebf89d37b0165a0c03dd69e971f82d2c221082bda5bbbf0ba154ed"
+  }
+}
+[exit 0]
+
+$ ./art approvals /tmp/claude-501/approvals-demo-fellows
+[safety] REFUSED: GATE voice: missing, pending or stale human approval; inspect build_safety.py <reel> --fingerprints
+[exit 1]
+
+############################################################
+# 4. Fellows reel AFTER approvals written — verification passes
+############################################################
+# Paste the fingerprints from step 3 into metadata.approvals with
+# status=approved, reviewer_type=human, reviewed_by=Bear, reviewed_at.
+$ ./art approvals /tmp/claude-501/approvals-demo-fellows
+[safety] REFUSED: GATE professor_notes: missing, pending or stale human approval; inspect build_safety.py <reel> --fingerprints
+[exit 1]
+
+############################################################
+# 5. STALE approval — narration edited AFTER the human reviewed
+############################################################
+# B05 narration_text changed from 'Great pacing. Tighten the fourth beat.'
+# to 'Great pacing. Tighten the fourth beat AND cut the sixth.'
+$ ./art approvals /tmp/claude-501/approvals-demo-fellows
+[safety] REFUSED: GATE professor_notes: missing, pending or stale human approval; inspect build_safety.py <reel> --fingerprints
+[exit 1]
+
+$ ./art approvals /tmp/claude-501/approvals-demo-fellows --fingerprints
+{
+  "voice": {
+    "subject_sha256": "d3486a7ac5d092a1899e7d5610728c96d03bf769ed2c423635e04dbd98e04bf4"
+  },
+  "professor_notes": {
+    "notes_sha256": "09686350c01479dc973d5db1877fffc2c1245e64f6cc4159f0b29fc398f2d77b",
+    "narration_sha256": "e133218aca8bd5595213da2529ee068576b4f5b814a1b04a2253efbdd890ce68"
+  }
+}
+[exit 0]

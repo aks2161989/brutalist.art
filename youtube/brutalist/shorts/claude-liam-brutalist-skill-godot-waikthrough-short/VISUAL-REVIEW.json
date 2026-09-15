@@ -1,0 +1,224 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "b5f2c3a4defc4e56aa6012dc9e7f7ccd",
+  "source_sha256": "1cac1d318fa29ff8a401ee97ade679b5ae5e3b1c9d19da39f86ce57b837e95d0",
+  "beat_sheet_sha256": "d64e67358c7a1de90f95c491f739c0abf4541058cc9dfa1b54e3f17bf99a087d",
+  "video_sha256": "b21995abfff4b7341cca60f95b88523ba44679f4f5a41d49afebec5cb36fdbc8",
+  "output_path": "exports/short/claude-liam-brutalist-skill-godot-waikthrough-short.mp4",
+  "output_dimensions": "2160x3840",
+  "output_duration_s": 158.041667,
+  "blockers": 0,
+  "majors": 0,
+  "kind": "short",
+  "aspect_ratio": "9:16",
+  "kept_beats": ["B00", "B01", "B02", "B06", "B08", "B10", "B11", "B12"],
+  "dropped_beats": ["B03", "B04", "B05", "B07", "B09"],
+  "notes": "Viewed 24 frames (beat-relative 15%/50%/85% for all 8 kept beats). B00_50p: cream portrait ClaudeComposerAsk916, 'The godot-waikthrough Skill' heading, 'Annyeong, Liam' greeting, composer card and result lines legible — Liam intro confirmed. B08_50p: 'Don't fix the game.' heading, body text, verbatim quote block, 'HONEST CONTRACT' verdict pill, 'Observe. Don't change.' spark line — honesty contract clear. B12_85p: dark olive background, 'The godot-waikthrough Skill.' title, '@NikBearBrown' handle — outro settled. All 8 beats are native 2160x3840 portrait, no cropping. Text legible at safe-area margins across all inspected frames. Content coverage present in upper and lower safe-area thirds. Intro (B00) has 'Annyeong — this is Liam, in for Bear'. Sign-off (B11) ends 'Liam, in for Bear.' B12 shows @NikBearBrown. No burned-in captions. Container 158.04s, video 158.04s, audio 158.04s — all strictly under 180.0s. Two inherited skin_lint warnings (ClaudeComposerAsk916, ClaudeTitleOutro916) are portrait variants by design, not blockers. Human review pending.",
+  "review": {
+    "overall": "PASS",
+    "portrait_framing": "PASS — all beats native 2160x3840, no cropping required",
+    "legibility": "PASS — text readable at safe-area margins on all inspected frames",
+    "safe_area_coverage": "PASS — ink/content present in upper and lower safe-area thirds across all beats",
+    "coherence": "PASS — intro → BLUF → pipeline → riff mechanic → honesty contract → verdict → handoff → outro flows without dangling references",
+    "liam_intro": "PASS — B00 contains 'Annyeong — this is Liam, in for Bear'",
+    "liam_signoff": "PASS — B11 narration ends 'Liam, in for Bear.' B12 outro shows @NikBearBrown",
+    "no_captions": "PASS — no burned-in caption track",
+    "duration_under_180s": "PASS — container 158.04s, video 158.04s, audio 158.04s (all < 180.0)",
+    "skin_lint": "INFO — SKIN LINT warnings for ClaudeComposerAsk916 vs ClaudeComposerAsk and ClaudeTitleOutro916 vs ClaudeTitleOutro are inherited from the vertical source beat sheet (documented in build metadata) and are not blockers for a 9:16 Short"
+  },
+  "frames": [
+    {
+      "beat_id": "B00",
+      "pct": 15,
+      "timecode_s": 2.4,
+      "path": "_qc/frames/B00_15p.jpg",
+      "sha256": "c7cb1b94c492cf2e3527b09f038d580c149230ea261b602b596eca027eaad370",
+      "note": "ClaudeComposerAsk916 — cream, composer card visible"
+    },
+    {
+      "beat_id": "B00",
+      "pct": 50,
+      "timecode_s": 8.1,
+      "path": "_qc/frames/B00_50p.jpg",
+      "sha256": "ac84b560c7cab15128785ad8117addf52d7d495dd1bfd0b3456cbeaf0f259bd8",
+      "note": "Greeting 'Annyeong, Liam', command typed, three result lines visible"
+    },
+    {
+      "beat_id": "B00",
+      "pct": 85,
+      "timecode_s": 13.8,
+      "path": "_qc/frames/B00_85p.jpg",
+      "sha256": "c0e6b158de70b26b9f8404521014d7e5d60a2e49263ad2b551ce9689d8571129",
+      "note": "Full composer card settled with result lines"
+    },
+    {
+      "beat_id": "B01",
+      "pct": 15,
+      "timecode_s": 18.5,
+      "path": "_qc/frames/B01_15p.jpg",
+      "sha256": "d5b00c71a870211b9455b276dc863ce3e8f02ba05ee4d03c0cb385822a12220d",
+      "note": "BrutalistHesitantWriter916 — typing in progress"
+    },
+    {
+      "beat_id": "B01",
+      "pct": 50,
+      "timecode_s": 24.0,
+      "path": "_qc/frames/B01_50p.jpg",
+      "sha256": "8439517f16f9a670b199dfdb0cd7d44774b6ee3cea512ff689e76c8803279532",
+      "note": "Corrected text: 'godot-waikthrough riffs the game. Capture in. Film out.' — clear and legible"
+    },
+    {
+      "beat_id": "B01",
+      "pct": 85,
+      "timecode_s": 29.5,
+      "path": "_qc/frames/B01_85p.jpg",
+      "sha256": "7a6622c2e6a63d717859be995f308beca060ca285bd27207dc03a97e22d61469",
+      "note": "Text settled, safe area well covered"
+    },
+    {
+      "beat_id": "B02",
+      "pct": 15,
+      "timecode_s": 35.2,
+      "path": "_qc/frames/B02_15p.jpg",
+      "sha256": "35c751c071c9d25982d953ed4a2fd6f1b411f66aebceae7f44573d6936b6110f",
+      "note": "SkillTeardownMechanism916 — heading visible"
+    },
+    {
+      "beat_id": "B02",
+      "pct": 50,
+      "timecode_s": 43.1,
+      "path": "_qc/frames/B02_50p.jpg",
+      "sha256": "d76e3118970f72f3a51d7a8b7808114cde65985295c043f35347592b3af83165",
+      "note": "Pipeline chain and quote block visible — 'Five phases' verdict pill, 'Identify → capture → riff → render.' spark line"
+    },
+    {
+      "beat_id": "B02",
+      "pct": 85,
+      "timecode_s": 51.1,
+      "path": "_qc/frames/B02_85p.jpg",
+      "sha256": "af8186f0330363a2bba3ed0e9cce6c490f92cbe59597f57e1e03fde6fbf71288",
+      "note": "Full layout settled, spark line legible"
+    },
+    {
+      "beat_id": "B06",
+      "pct": 15,
+      "timecode_s": 57.6,
+      "path": "_qc/frames/B06_15p.jpg",
+      "sha256": "dbe87ae87d29bff816c3f79c7f3b85b4854256dee781e3d686ae5fe1196f2e0e",
+      "note": "GodotDevWorkbench916 — code view opening"
+    },
+    {
+      "beat_id": "B06",
+      "pct": 50,
+      "timecode_s": 64.8,
+      "path": "_qc/frames/B06_50p.jpg",
+      "sha256": "2159bde0bbff6b3b1c04a07cdb3a9769e3753ce8e92c5ab0d9325552b61cc956",
+      "note": "Mechanism line highlighted, RIFF.md fields panel visible — all text legible within safe area"
+    },
+    {
+      "beat_id": "B06",
+      "pct": 85,
+      "timecode_s": 72.0,
+      "path": "_qc/frames/B06_85p.jpg",
+      "sha256": "2e626795a23fbc8176987f146533c33da3a5a78481284bb6590e3af627f83502",
+      "note": "Code + inspector panel settled"
+    },
+    {
+      "beat_id": "B08",
+      "pct": 15,
+      "timecode_s": 78.3,
+      "path": "_qc/frames/B08_15p.jpg",
+      "sha256": "1ccfe859765b654fdbaf460fde0739cb01e287e87ac433cb54a93b7101f0b283",
+      "note": "SkillTeardownMechanism916 — 'Don't fix the game.' heading settling"
+    },
+    {
+      "beat_id": "B08",
+      "pct": 50,
+      "timecode_s": 85.9,
+      "path": "_qc/frames/B08_50p.jpg",
+      "sha256": "5628b1929125153d1d9250061427d347c26917b6d52321bb4415f6b55725d12f",
+      "note": "Verbatim quote block visible — 'Honest contract' verdict pill — legible"
+    },
+    {
+      "beat_id": "B08",
+      "pct": 85,
+      "timecode_s": 93.4,
+      "path": "_qc/frames/B08_85p.jpg",
+      "sha256": "3d92bb01a581225e751d879ac0c92f3943c6f0f6a968e8f5a455c648ca1a4391",
+      "note": "Full layout settled with 'Observe. Don't change.' spark line"
+    },
+    {
+      "beat_id": "B10",
+      "pct": 15,
+      "timecode_s": 99.8,
+      "path": "_qc/frames/B10_15p.jpg",
+      "sha256": "523e810ba706613ecbca570abbd309bf6ead1aff3d4595190cf621e14e91f350",
+      "note": "SkillTeardownMechanism916 — 'Evidence contract from phase one.' heading"
+    },
+    {
+      "beat_id": "B10",
+      "pct": 50,
+      "timecode_s": 107.0,
+      "path": "_qc/frames/B10_50p.jpg",
+      "sha256": "ccbbc4691097df873f6eb11989a586c2e4677fd5e7ff7b94d369d64ac6281a6e",
+      "note": "Verdict body and quote block visible — 'Evidence first' pill"
+    },
+    {
+      "beat_id": "B10",
+      "pct": 85,
+      "timecode_s": 114.1,
+      "path": "_qc/frames/B10_85p.jpg",
+      "sha256": "95fb9b802bc0d7abd4443366471615e1d2cfb34fc2aaac9bd7e50f95aaa5bb51",
+      "note": "Full layout settled"
+    },
+    {
+      "beat_id": "B11",
+      "pct": 15,
+      "timecode_s": 122.3,
+      "path": "_qc/frames/B11_15p.jpg",
+      "sha256": "d0360d0777400da0bdf9b68c1134e6f68fbbafa35909ce596de51e07a1a5a823",
+      "note": "ClaudeComposerAsk916 — 'Your turn.' greeting, prompt typing"
+    },
+    {
+      "beat_id": "B11",
+      "pct": 50,
+      "timecode_s": 134.1,
+      "path": "_qc/frames/B11_50p.jpg",
+      "sha256": "6e602f4e8802675b3e882f84c632caa92f71209f3229d5c91193f02a86de6a51",
+      "note": "Full paste-ready prompt visible — 'Your Godot Project' segment, coverage.json CTA"
+    },
+    {
+      "beat_id": "B11",
+      "pct": 85,
+      "timecode_s": 145.9,
+      "path": "_qc/frames/B11_85p.jpg",
+      "sha256": "3395842e3f3d063572a7ecc976f405869a0e5ad1db28fae2f79ce526cbf8ba5d",
+      "note": "Composer card settled with result lines"
+    },
+    {
+      "beat_id": "B12",
+      "pct": 15,
+      "timecode_s": 152.1,
+      "path": "_qc/frames/B12_15p.jpg",
+      "sha256": "2e4bf59dffb0a7976e68d8ab42bda40ef96ad67532b2107447102d88e77a64cb",
+      "note": "ClaudeTitleOutro916 — dark ink background, 'The godot-waikthrough Skill.' title"
+    },
+    {
+      "beat_id": "B12",
+      "pct": 50,
+      "timecode_s": 154.5,
+      "path": "_qc/frames/B12_50p.jpg",
+      "sha256": "da2916eb9d3696131bc4aef4a5aa02a8408343c28bbfe308447fef555bf74630",
+      "note": "@NikBearBrown handle visible, mascot animation"
+    },
+    {
+      "beat_id": "B12",
+      "pct": 85,
+      "timecode_s": 156.9,
+      "path": "_qc/frames/B12_85p.jpg",
+      "sha256": "f31f92e2b3c2b6885fad5a31f36eb766837e012173e6b5c1ef8fe399be04792c",
+      "note": "Outro card settled"
+    }
+  ]
+}

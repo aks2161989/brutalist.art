@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Example Reel (fixture)",
+    "slug": "example-reel",
+    "topic": "FIXTURE · HAI DEMO",
+    "audience": "nbb",
+    "brand": "claude-liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "aspect_ratio": "16:9",
+    "channel_title": "@NikBearBrown",
+    "note": "Synthetic fixture used ONLY to demonstrate hai's scaffold step. Not a real reel."
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "This is a fixture beat. In a real reel the narration would ask a question the video answers.",
+      "shot": {"type": "GRAPHIC", "source": "remotion", "motion": "type-on"}
+    },
+    {
+      "beat_id": "B01",
+      "act": "BODY",
+      "narration_text": "Body beats explain the mechanism, land a worked example, and stress-test the claim.",
+      "shot": {"type": "GRAPHIC", "source": "remotion", "motion": "reveal"}
+    },
+    {
+      "beat_id": "B02",
+      "act": "OUTRO",
+      "narration_text": "Outro restates the title.",
+      "shot": {"type": "GRAPHIC", "source": "remotion", "motion": "hold"}
+    }
+  ]
+}

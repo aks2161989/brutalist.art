@@ -1,0 +1,44 @@
+{
+ "metadata": {
+  "title": "Demo Canonical",
+  "slug": "demo-canonical",
+  "kind": "explainer",
+  "engine": "kokoro",
+  "voice": "someone",
+  "audience": "Claude",
+  "derived_from": "beat_sheet.json",
+  "register": "Teardown",
+  "palette": "claude",
+  "outro_source": "AUTHOR.MD :: NikBearBrown",
+  "voice_kokoro": "am_onyx",
+  "_variant_todo": [
+   "rewrite every beat narration_text in the Teardown register — voice only, facts unchanged",
+   "B00 says '…this is Liam, in for Bear.' and the outro signs off the same way (IN-FOR-BEAR LAW)",
+   "then build: generate_audio_kokoro.py (voice am_onyx) → palette=claude → compile"
+  ]
+ },
+ "beats": [
+  {
+   "beat_id": "B00",
+   "narration_text": "Cold open ask.",
+   "shot": {
+    "remotion": {
+     "pattern": "ClaudeComposerAsk",
+     "rendered": {
+      "out": "media/B00.mp4",
+      "at": "old"
+     }
+    }
+   }
+  },
+  {
+   "beat_id": "B01",
+   "narration_text": "One body beat.",
+   "shot": {
+    "remotion": {
+     "pattern": "ClaudeCodeBeat"
+    }
+   }
+  }
+ ]
+}

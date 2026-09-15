@@ -1,0 +1,20 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "build_cli_d3_reels.py is a batch orchestrator that WRAPS a folder of already-built D3 sim HTMLs into Claude-skin explainer reels overnight — it does not generate the sim. One config in, N Claude-skin review cuts out, one row per sim in the log.",
+  "parent_master_sha256": "849929b4cbd476cb0782fa8359926923ba58132902db4008a883a29242aa7d17",
+  "kept_beats": ["B00", "B01", "B02", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B03", "reason": "CLI + config-schema code walkthrough is repo-internals detail; the Short lands the purpose without reading argparse aloud. Belongs in the 16:9 long."},
+    {"beat_id": "B04", "reason": "make_beat_sheet() 20+ line code cascade of the 10-beat template is a mechanism deep-dive; the Short states the template exists in B02/B09 without quoting the dict."},
+    {"beat_id": "B05", "reason": "extract_code() regex/longest-block/trim walkthrough is another mechanism deep-dive; the ACTUAL-CODE LAW is referenced from the worked example (B07) and verdict (B09) without needing the source code."},
+    {"beat_id": "B06", "reason": "build_one() 30+ line orchestrator listing is the fourth code-walkthrough beat — the pipeline (B02) and verdict (B09) already state the seven-subprocess sequence. Belongs in the long."},
+    {"beat_id": "B08", "reason": "Soft-fail / hard-fail failure-mode teardown with observed-log example is a specific edge-case beat; the verdict (B09) still names the recover line as one of the six surface lines."},
+    {"beat_id": "B10", "reason": "Extended 32s Your-Turn composer with paste-this-into-Claude prompt is the long film's detailed CTA; per shorts guidance a detailed CTA can be cut and the Short need not read the long's exercise aloud."}
+  ],
+  "cut_first_review": "Retained narration flows: (B00) Liam introduces the batch WRAP framing — folder of D3 sims already built, one HTML each, wants a Claude-skin explainer reel for every one, overnight, unattended. (B01) BLUF walks back the misconception — the tool does not BUILD the sim from one prompt; it WRAPS the sim from one HTML file. (B02) The pipeline: one config in, for each sim stamp the beat sheet, capture, Kokoro audio, Remotion, compile.py --review, append one log row. Lands the 'one config in, N review cuts out, one row each' spark line. (B07) Worked example on the disposable demo/config.json — one sim, one HTML, greeting hashes to Yo, extract_code lifts the sim's inline JS, ten beats stamped. Grounds the pipeline claim with a concrete run. (B09) Verdict artifact restates the whole surface in the order it runs — input, stamp, quote, shell out, log, recover — the six lines cover every dropped beat's territory without dangling references. (B11) Liam signs off with @HumanitariansAI. No dropped beat leaves a dangling number or unresolved reference; ACTUAL-CODE LAW is named in B07 and B09; the three-law framing is compact (COLD OPEN / ACTUAL-CODE / HANDOFF all referenced by name in retained beats).",
+  "planned_duration_s": 96.96,
+  "measured_duration_s": 96.958,
+  "rewrite_reason": null,
+  "verified_run_id": "9e7c8cd745cc42dfb5d20355e43ac2e0",
+  "verified_at": "2026-09-13"
+}

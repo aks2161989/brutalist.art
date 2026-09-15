@@ -1,0 +1,61 @@
+usage: capture_sim.py [-h] [--duration DURATION] [--change-dur CHANGE_DUR]
+                      [--fps FPS] [--width WIDTH] [--height HEIGHT]
+                      [--selector SELECTOR] [--click-through CSS]
+                      [--hold-each HOLD_EACH] [--script STEPS_JSON]
+                      [--out-name OUT_NAME] [--dpr DPR] [--smoke-test]
+                      sim_html reel_dir
+
+capture_sim.py — Playwright headless Chromium recorder for D3 HTML
+simulations. Loads a sim <slug>.html, waits for first paint, then records:
+<output_dir>/media/output.mp4 — BASELINE hold (defaults, no interaction)
+<output_dir>/media/change.mp4 — animated sweep of the card's "change" control
+<output_dir>/media/<stem>.mp4 — discrete click-through of matched elements
+(--click-through) <output_dir>/media/<stem>.mp4 — scripted step sequence
+(--script) Serves the file via a local HTTP server so CDN requests (D3 v7) are
+not blocked by Chromium's cross-origin restrictions on file:// URLs. Usage:
+python3 capture_sim.py <sim_html_path> <reel_dir> [--duration SECS] baseline
+hold in seconds (default: 6) [--change-dur SECS] change animation in seconds
+(default: 8) [--fps INT] output fps (default: 24) [--width INT] viewport width
+(default: 1280) [--height INT] viewport height (default: 720) [--selector CSS]
+CSS selector of the control to drive (default: first input[type=range])
+[--click-through CSS] click each matched element in DOM order, hold --hold-
+each s each [--hold-each SECS] hold per element for --click-through (default:
+2.5) [--script STEPS_JSON] JSON file of ordered steps to execute while
+recording [--out-name STEM] output filename stem for --click-through or
+--script [--smoke-test] write smoke-test marker file and exit 0 on success
+--script step verbs (verb is the JSON key): {"set": "#sel", "value": <num>}
+set range/input, fire input+change {"click": "#sel"} click element {"click":
+"#sel", "at": [0.25, 0.25]} click at fractional coords within element
+{"check": "#sel"} ensure checkbox is checked {"uncheck": "#sel"} ensure
+checkbox is unchecked {"sweep": "#sel"} animated sweep using element's own
+min→max {"sweep": "#sel", "from": <n>, "to": <n>, "steps": <n>, "step_delay":
+<s>} animated sweep with explicit range {"scroll": "#sel"} scroll element into
+view {"wait": <seconds>} sleep Fails loudly if any selector matches 0 elements
+— a silent miss IS the bug. --out-name defaults to the script file stem when
+--script is used. NOTE: Playwright only records from the first page-activity
+event. A script that starts with {"wait": N} will NOT capture that idle
+period. Always open with an interactive step (set/click/check) to anchor the
+recording at t=0. Exit 0 on success, 1 on failure.
+
+positional arguments:
+  sim_html              path to the sim .html file
+  reel_dir              reel directory (media/ will be created inside it)
+
+options:
+  -h, --help            show this help message and exit
+  --duration DURATION   baseline hold seconds
+  --change-dur CHANGE_DUR
+                        change animation seconds
+  --fps FPS             output fps
+  --width WIDTH
+  --height HEIGHT
+  --selector SELECTOR   CSS selector of the range control to sweep
+  --click-through CSS   click each matched element in DOM order
+  --hold-each HOLD_EACH
+                        hold seconds per element for --click-through
+  --script STEPS_JSON   JSON file of ordered steps to execute while recording
+  --out-name OUT_NAME   output stem for --click-through or --script (written
+                        to media/<stem>.mp4)
+  --dpr DPR             device pixel ratio — output resolution is width*dpr ×
+                        height*dpr (default: 1)
+  --smoke-test

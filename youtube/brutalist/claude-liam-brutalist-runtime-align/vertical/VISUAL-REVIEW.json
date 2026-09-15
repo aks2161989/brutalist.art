@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "d295e86979c344a7b9b979f8bdf6d514",
+  "source_sha256": "1a028fbdb1e705ca5005394f40ceda11267d1c2f631fb339ef46c64edc259111",
+  "beat_sheet_sha256": "7fd55a1a6933b0ff1458b523e317df7cba5b6e629873f982a022e324a8dbc162",
+  "video_sha256": "bd94b7252670e9c1ff526cd9daa0a4a6f64dca7c72ace6f491a56e1f089d6500",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames_v3/frame_4s.png",   "sha256": "d9c2f0792b9d8f0cb8ee8e01bfb85a2565ccbbcd883e7bce9845c237155ace9a"},
+    {"path": "_qc/frames_v3/frame_24s.png",  "sha256": "ad7b56310cae8c84501ce07504d5494693bc36799559180a3e71a4cc7627afa8"},
+    {"path": "_qc/frames_v3/frame_110s.png", "sha256": "3b00a534a47776237ae4fc61b54df7ea129bbbde71a15588aa28f4905c573dd3"},
+    {"path": "_qc/frames_v3/frame_223s.png", "sha256": "ceced049a075cf2a821c1be820e217a71a25bc9e386bda8933fd8dc52bf0ef68"}
+  ],
+  "notes": "Re-verified against run_id d295e86979c344a7b9b979f8bdf6d514 (source snapshot updated; video unchanged, SHA stable). Native portrait 2160x3840 master, 224.4s, 12/12 beats filled, zero slates. Gate V re-run: 24 frames sampled, BLOCKER 0, MAJOR 0. Current align.py reviewed against portrait beat content — same source accuracy finding as landscape aspect. Portrait compositions used: ClaudeComposerAsk916 (B00), BrutalistHesitantWriter916 (B01), SkillTeardownMechanism916 (B02), ClaudeCodeBeat916 (B03-B08), ClaudeVerdictArtifact916 (B09), ClaudeComposerAsk916 (B10), ClaudeTitleOutro916 (B11). Frames sampled at: 4s (ClaudeComposerAsk916 — 'Shalom, Liam', ask fills portrait card, @HumanitariansAI chip, output lines visible, no bleed), 24s (BrutalistHesitantWriter916 — 5-line settled correction 'align dot py / times / the audio then / knows the / spoken words.' fills SAFE916 in large serif, cursor visible), 110s (ClaudeCodeBeat916 — align_words() code, portrait card fits full function body within SAFE916, no bleed), 223s (ClaudeTitleOutro916 — 'Brutalist Utility: align.py.' centred with @NikBearBrown handle, decorative top/bottom rules visible, no bleed). No edge-bleed, no unresolved slates, no captions. Outro retains hardcoded @NikBearBrown handle per OUTRO-LOCK.md; @HumanitariansAI carried in folder chip — flagged for human reviewer. Human review pending."
+}

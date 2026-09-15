@@ -1,0 +1,131 @@
+{
+  "number": 23,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608",
+  "beats": 12,
+  "sheet_sha256": "291366ce3c5b7d7e597a4d855819956e69ca10ddbfc8cb40a5850a6385f4888d",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/review.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "209.166667",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B03",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "learning-artifacts/week-02/boundary_fixture.py",
+        "code": "# the boundary fixture\n# valid JSON \u00b7 real source ID \u00b7 FALSE claim\n\nfixture = (\n    '{\"answer\":\"This class requires '\n    'Python 2.\",\"sources\":[\"syllabus\"]}'\n)\n\n# allowed source IDs (from the demo)\nallowed = {\"syllabus\"}",
+        "sparkLine": "Real source. False claim.",
+        "codeSize": 0.048,
+        "sparkSize": 26
+      },
+      "intent": "Claude cream code card: the boundary fixture as a Python literal; false claim, real source."
+    },
+    {
+      "beat": "B06",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "learning-artifacts/week-02/boundary_fixture.py",
+        "code": "def check_evidence(entry, reviewer):\n    if not reviewer:\n        raise ValueError(\"human reviewer required\")\n    return {\"entry\": entry,\n            \"reviewer\": reviewer,\n            \"verdict\": \"pending\"}\n\n# test_07 \u2014 success outside demo\nassert validate(\n    '{\"answer\":\"ok\",\"sources\":[\"policy\"]}',\n    {\"policy\"})\n\n# test_08 \u2014 capstone-mattering failure\nassert not validate(\n    '{\"answer\":\"ok\",\"sources\":[\"forgery\"]}',\n    {\"policy\"})",
+        "sparkLine": "Refuse until a human looked.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Claude code card: check_evidence + the two new tests."
+    },
+    {
+      "beat": "B07",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "run.log",
+        "code": "$ python3 -m unittest -v\ntest_07 ... ok\ntest_08 ... ok\n\n$ python3 -c 'from boundary_fixture \\\n  import fixture, allowed, \\\n  validate, check_evidence; \\\n  print(validate(fixture, allowed)); \\\n  print(check_evidence(fixture, \"\"))'\nTrue\nValueError: human reviewer required\n\n# with a reviewer name:\n# {'verdict': 'pending', ...}",
+        "sparkLine": "Two lanes. Two jobs.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Claude code card: the actual run outputs \u2014 test_07 ok, test_08 ok, validate True, check_evidence verdict pending."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B00.mp4",
+      "seconds": 10.2662112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B01.mp4",
+      "seconds": 12.95,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B02.mp4",
+      "seconds": 9.613105599999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B03.mp4",
+      "seconds": 12.179999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B04.mp4",
+      "seconds": 12.81,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B05.mp4",
+      "seconds": 13.1131056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B06.mp4",
+      "seconds": 15.47,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B07.mp4",
+      "seconds": 13.299999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/B08.mp4",
+      "seconds": 13.813333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/BVDT.mp4",
+      "seconds": 10.78,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/BHTF.mp4",
+      "seconds": 18.06,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-2-assessment-2-e07e99ce-v-2e67a27a3608/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/23-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

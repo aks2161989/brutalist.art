@@ -1,0 +1,17 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "Downloading Brutalist with Claude Code = one paste, a git clone plus a free doctor script; your Claude Code subscription runs the agent, but the pipeline itself never asks for a card.",
+  "parent_master_sha256": "77e741e2b946a9efa2d659dbaa805e893c4126117bc0b7c7d3b04899a843d7a8",
+  "run_id": "4b21324d56e84a3ca0cbfee8bc4b2f61",
+  "source_sha256": "907b53fdae438bf42d2a922e674d6e7c7543f4647bed392294b8a183126efe46",
+  "kept_beats": ["B00", "B04", "B05", "B06", "B07", "B09"],
+  "dropped_beats": [
+    {"beat_id": "B01", "reason": "HesitantWriter misconception setup ('installer' vs 'git clone plus doctor') — already implicit in B00's opening ('Not a wizard, not a package. A git clone, a free doctor script, and a readiness table.'). Short does not need the second-beat BLUF ceremony."},
+    {"beat_id": "B02", "reason": "The paste-ready composer command duplicates B00's cold-open ask — B00 already types the same request into the composer and lists the same three outputs. Keeping both is redundant."},
+    {"beat_id": "B03", "reason": "File-tree anatomy (setup, art, skills/, runtime/, docs/, brands/, README) is generic repository internals — belongs in the 16:9 long. The Short teaches WHAT setup does, not WHAT is in the folder."},
+    {"beat_id": "B08", "reason": "Your Turn re-types essentially the same ask B00 already showed, with a longer command. In a Short the sign-off carries the invitation without a second composer beat."}
+  ],
+  "cut_first_review": "The cut opens on Liam's cold-open ask (B00: 'Ciao. This is Liam, in for Bear.' — establishes voice, states 'git clone, free doctor script, and a readiness table', shows the same three outputs the Short goes on to explain). It then goes straight to the concrete example: B04 runs ./setup --install once, then ./setup for the green/red readiness table — that IS the useful result. B05 is the load-bearing honesty beat: subscription vs. optional API vs. free local pipeline (Kokoro/Remotion/Manim); without it viewers assume Brutalist charges. B06 completes the honesty pair with the network footprint (no accounts, no files outside the folder, one ~340MB Kokoro download from a GitHub release) — the essential caveat the long teaches. B07 gives the three-line verdict, and B09 signs off as 'Liam, in for Bear. For Humanitarians AI.' Transitions are already coherent in the source: B00→B04 ('Here is what actually happens.' → 'Now run the doctor.'), B04→B05 ('readings on screen are real' → 'This part trips fellows up, so read it slowly'), B05→B06 ('Free by default — that is the shape of this tool.' → 'Now the honest limits.'), B06→B07 ('That is the whole network footprint.' → 'Verdict, in three lines.'), B07→B09 ('That is how you download Brutalist.' → 'That was Download Brutalist with Claude Code.'). No dangling numbered transitions, no repeated conclusions, no claims stripped of caveats. Re-verified 2026-09-11: all six retained beat media files SHA256-match the parent's current media (source change was timestamp-only metadata in the parent beat_sheet.json, not video content). Compiled and ffprobe-verified 91.79s < 180s.",
+  "planned_duration_s": 91.79,
+  "rewrite_reason": null
+}

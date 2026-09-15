@@ -1,0 +1,16 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "fill_slates.py is the safety net that stamps a FormACard on empty beats (no media, no pattern, not silent) so batch review cuts still play — never touching beats that are already good.",
+  "parent_master_sha256": "9567637ff4142abd5fa8c172cb7ce7bbb05990bd1978ad5e6f61194b8315fc4d",
+  "kept_beats": ["B00", "B01", "B02", "B07", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B03", "reason": "MECHANISM 1 — verbatim --help CLI surface + docstring usage lines (~18.25s). Deep argparse read belongs in the long teardown; B02 and B09 name the modes at a high level."},
+    {"beat_id": "B04", "reason": "MECHANISM 2 — slate_resolves() + find_slates() function bodies (~24.08s). The four skip conditions are already introduced in B02 as a rule and re-stated in B09; the code walkthrough is long-form material."},
+    {"beat_id": "B05", "reason": "MECHANISM 3 — _truncate() + stamp_slates() function bodies (~22.04s). The 11-word truncation + FormACard stamp is stated in B02 ('lines are the first eleven words of the narration'); the code deep-dive belongs in the long."},
+    {"beat_id": "B06", "reason": "MECHANISM 4 — render_reel() two-subprocess block (~24.13s). The subprocess order (remotion_scenes.py then run.sh) is already stated in B02 and re-summarized in B09; the code is long-form material."},
+    {"beat_id": "B10", "reason": "YOUR TURN — extended assignment prompt (~24.7s). The prompt explicitly permits omitting Your Turn for Shorts; the verdict (B09) → outro (B11) closes cleanly without a handoff composer."}
+  ],
+  "cut_first_review": "B00 opens with Liam introducing the ask — three empty beats across two reels need a FormACard so the review cuts still play. B01's hesitant writer walks back the misconception (fill_slates does NOT rewrite every beat; it stamps only the empty ones). B02 gives the whole pipeline at a high level — walk, find, stamp, render, recut — including the four skip conditions and the dry-run/--apply flag. B07 grounds the abstraction with the disposable-fixture worked example (5 beats: two slates, one patterned skip, one silent skip, one already-rendered skip) — a concrete demonstration of the four skip conditions that survives without the intermediate code beats. B08 gives the observed failure modes — the one honest safety limitation the prompt says must stay: missing beat_sheet is silently skipped, REMOTION FAIL bails before run.sh, ART_RUN FAIL leaves the review stale, and one bad reel never takes the batch down. B09 verdict recaps the whole surface in the exact order the tool runs. B11 outro. Transitions read cleanly: framework → concrete example → observed failure modes → verdict → outro. No numbered forward references to dropped beats (B03-B06 code beats are self-contained MECHANISM cards; no B-ID call-outs in the retained narration). The 'Find slates' function name mentioned in B08 was introduced by B02 as a pipeline step, so B08 stands alone. No dangling caveats.",
+  "planned_duration_s": 123.79,
+  "rewrite_reason": null
+}

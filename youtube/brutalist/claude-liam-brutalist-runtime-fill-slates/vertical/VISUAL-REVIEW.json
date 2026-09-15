@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "9efb625b133c4484b5aeb070b384f0ab",
+  "source_sha256": "c0754aba4350818109b6a909922f73dd26fd6b4328b459484da2a31f279bc328",
+  "beat_sheet_sha256": "c07815a8fb70ec313677bb826457ad3501cf410b878a86da7fa6451cb5210202",
+  "video_sha256": "9567637ff4142abd5fa8c172cb7ce7bbb05990bd1978ad5e6f61194b8315fc4d",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/vt_frame_first.png",
+      "sha256": "912204353d6dcd2c91cfb31a928def419ce048c367381b52cf0813c87c6fb55f"
+    },
+    {
+      "path": "_qc/vt_frame_35s.png",
+      "sha256": "aaf6fb973f3370736a80bbdadbbaa259ff571167cb5e236876a2fa4fa1e5ce35"
+    },
+    {
+      "path": "_qc/vt_frame_118s.png",
+      "sha256": "a240266c454ab0fd01f2ee1e675e1cc4e66dce9bafd63ff244eeb4f5e9d8dbe1"
+    },
+    {
+      "path": "_qc/vt_frame_201s.png",
+      "sha256": "ca01abe270f742fa8b262025be1fb838c9540b60e3fc8e0df97b38d9cf48b6cb"
+    },
+    {
+      "path": "_qc/vt_frame_last.png",
+      "sha256": "c2f3990fff99df65ff2a961d42db949f1e43d1028d52512f2351922dac0aa77c"
+    }
+  ],
+  "notes": "AI visual re-review of the native 2160x3840 24fps portrait master (237.0s, h264+aac). Re-verification invocation run_id 9efb625b; prior accepted build run_id c4164e02 (both aspects Gate-V 0/0). Source note: invocation specifies source_sha256 c0754aba (pre-annotation version); actual fill_slates.py on disk is de9efcbdc (type-annotated). Video sha and beat_sheet sha unchanged from prior passing build. Frame evidence freshly extracted this invocation. vt_frame_first.png (0.04s, B00 portrait cold open): cream 2160x3840 canvas, 'BRUTALIST · UTILITY: FILL_SLATES.PY' watermark top-left — correct portrait aspect, no bleed. vt_frame_35s.png (35.5s, ~15%, B03 portrait pipeline): 'Dry-run by default. --apply stamps + renders + recuts.' heading with inline text flow WALK→FIND→STAMP→RENDER→RECUT summary, source quote box (fill_slates.py:46-63, 98-120), 'EMPTY BEATS BECOME CARDS. FULL BEATS STAY PUT.' badge and 'One pass. Four skip conditions.' BLUF — all within SAFE916 bounds, legible reflow. vt_frame_118s.png (118.5s, ~50%, B06 portrait code): fill_slates.py:109-130, def render_reel( with type annotations, two subprocess.run() calls visible; some long lines extend slightly past right edge of code card (e.g. '-> l:' truncation at top, 'remotion_' and 'text=True' partial) — minor display-only issue, code semantics remain clear, within overall safe area. vt_frame_201s.png (201.4s, ~85%, B10 portrait verdict): 6-point verdict card reflowed cleanly to portrait column, all items visible, no overflow. vt_frame_last.png (236.0s, B11 portrait outro): title 'Brutalist Utility: fill_slates.py.' correct; channel handle '@NikBearBrown' — same stock ClaudeTitleOutro component limitation as landscape; accepted across all playlist episodes. No unresolved slates, no caption overlays, no SAFE916 bleed detected. Human review pending Bear's playback."
+}

@@ -1,0 +1,19 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art icon-build cuts a shippable canonical icon set (12 GB / 2.4M variants  ->  ~30 MB / 7,330 icons); subtractive, not additive.",
+  "parent_reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icon-build",
+  "parent_master_sha256": "3566906b923fb2b0ef211f5ed1dcb434109b2ad68144d389d43edeeecf4a86a2",
+  "run_id": "cd463d4c846f48aa8632dd051a6c5f93",
+  "kept_beats": ["B00", "B01", "B04", "B06", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Dispatcher case-branch anatomy is generic art-command internals; belongs in the long."},
+    {"beat_id": "B03", "reason": "du -sh table numerically restates B00's 12 GB / 2.4 M / 30 MB / 7,330 hook."},
+    {"beat_id": "B05", "reason": "44 pt math is deep internals; the verdict names it and the long carries the derivation."},
+    {"beat_id": "B07", "reason": "Output artifacts (svg/, icons.json, NOTICE.md) are named again in the verdict beat."},
+    {"beat_id": "B08", "reason": "Detailed exclusion catalogue; the verdict summarises the four dropped libraries in one line."},
+    {"beat_id": "B10", "reason": "Long Your-Turn CTA per Shorts prompt; a detailed exercise reads better in the 16:9 long."}
+  ],
+  "cut_first_review": "B00 opens with Liam, in for Bear, and states the 12 GB / 2.4 M -> 30 MB / 7,330 transform. B01 corrects the central misconception (cuts existing, does not download new) and gives the Short its axis: subtractive. B04 supplies the four rules that do the cutting. B06 grounds the mechanism in one concrete --dry-run demo with the per-source counts that add to 7,330. B09 restates the whole surface, names the exclusions and the 44 pt math in passing, and B11 is Liam's sign-off. No numbered transitions were retained ('rule three... four'), all references to dropped beats' contents were checked, and Liam's disclosure plus the outro are preserved.",
+  "planned_duration_s": 113.5,
+  "rewrite_reason": null
+}

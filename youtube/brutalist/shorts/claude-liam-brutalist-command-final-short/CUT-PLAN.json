@@ -1,0 +1,32 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art final compiles a reel to a verified 4K master by gating paperwork, encoding a candidate into a temp folder, re-verifying it against Gate V + fresh input hashes (now including a file-existence guard), then os.replacing it in and writing a sibling verified.json receipt whose SHA-256 keys match the file that was just written.",
+  "parent_master_sha256": "c25e50dbe6ad8063089904c96ca06562fbe0f09545af6a8ccf3e307dbb239746",
+  "parent_beat_sheet_sha256": "7d47e998339527310fa3b3be16137f5cbfe02356ca9e02e6e66ebf2075b43f26",
+  "run_id": "e8f021cee8f34c40bbdbf7ccaa783ca7",
+  "source_sha256": "1b743b9e19c74312150a0a6907c16e2ea34cf35f81621e6e2d2a6e4206fe8d4f",
+  "kept_beats": ["B00", "B01", "B06", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Bash dispatcher case at art:111-116 — plumbing detail belongs to the long-form teardown; the Short answers what the command DOES, not how the wrapper forwards."},
+    {"beat_id": "B03", "reason": "compile.py argparse surface — internal flag list is long-form reference; the Short's audience is fellows already using Claude Code."},
+    {"beat_id": "B04", "reason": "final_preflight function body — paperwork gating is asserted in B00 ('refuse if paperwork is thin') and B01 ('gates the paperwork'); the recap in B09 names it at a high level without needing the verbatim source."},
+    {"beat_id": "B05", "reason": "Happy-path worked example is a 25s walk-through of a tiny fixture; B07 already shows the receipt, which is the useful output. Cutting it removes 25s without breaking the argument."},
+    {"beat_id": "B08", "reason": "Empty-FACTCHECK failure demo is vivid but derivative — 'last good file preserved' is stated in B00 and shown as the whole point of the atomic mechanism in B06."},
+    {"beat_id": "B10", "reason": "Your Turn exercise — the Short need not read the long film's full CTA aloud (REPOLOOP-SHORTS-PROMPT: 'the Short need not read the long film's full exercise aloud')."}
+  ],
+  "cut_first_review": "B00 sets up the ask (verified 4K master, refuse on thin paperwork, keep the last good file). B01 flips 'renders once' to 'verifies twice' — the misconception that names the mechanism. B06 shows the atomic candidate-write pattern (temp encode → Gate V → recheck approvals + input hashes → os.replace); updated 2026-09-13 in the parent to add file-existence guard and shift line ref to :803-825. B07 shows the 5-key verified.json receipt. B09 recaps the whole surface in order. B11 is Liam's sign-off. Every retained beat is source-order; no numbered transitions are broken.",
+  "planned_duration_s": 106.17,
+  "planned_duration_breakdown_s": {
+    "B00": 14.875,
+    "B01": 11.667,
+    "B01_lead_silence": 0.8,
+    "B06": 26.292,
+    "B07": 24.792,
+    "B09": 22.458,
+    "B11": 5.292
+  },
+  "rewrite_reason": null,
+  "endcard": false,
+  "outro_rewrite": false,
+  "rebuild_reason": "Parent vertical B06 re-rendered 2026-09-13T00:50:54 with updated compile.py atomic block: line ref shifted to :803-825, added 'timeline = work / resolved-sheet.json' and 'atomic_json(timeline, sheet)' lines, file-existence guard added to input hash check. Short's previous B06 (SHA 33cff0c2…) was stale; cut plan and audio unchanged."
+}

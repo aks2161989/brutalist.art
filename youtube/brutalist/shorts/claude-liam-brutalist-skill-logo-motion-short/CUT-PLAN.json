@@ -1,0 +1,19 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "One parametric composition (LogoMotion.tsx) drives every logo sting — a new brand is a props block, not a new scene — and the ghost hold (44% of runtime nearly invisible) IS the whole effect.",
+  "parent_master_sha256": "604bfb62a0cfcc34606cb8defe8a042671b4eb4d58b4c951284a8dc6d6c5dff2",
+  "kept_beats": ["B00", "B01", "B04", "B05", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Skill anatomy folder-tree — generic filesystem walkthrough belongs in the 16:9 long"},
+    {"beat_id": "B03", "reason": "Four-step pipeline detail (trace, measure, phase, look) — internals, not the Short's high-level story"},
+    {"beat_id": "B06", "reason": "Length-is-a-prop (Mechanism Act 3) — the verdict recaps this line; deep durationInSeconds/calculateMetadata explanation is long-only"},
+    {"beat_id": "B07", "reason": "Audio-first exception (Mechanism Act 4) — the verdict recaps this line; the 0.88s trim example is long-only"},
+    {"beat_id": "B08", "reason": "Falsifiability three-tells — the verdict recaps this line; the full diagnostic order belongs in the 16:9 long"},
+    {"beat_id": "B10", "reason": "Your Turn paste-ready measurement prompt — long-form assignment, not a Short beat"}
+  ],
+  "cut_first_review": "B00 opens with Liam introducing the mental model — one composition drives every mark, LENGTH is a prop, a new brand is a props block. B01 delivers the misconception (a new logo needs a new scene — it does not) with the HesitantWriter correction 'scene' → 'prop'. B04 (First design decision) explains why the BUILD is a CAMERA move — extreme close-up, pull back, ease hard — grounding the visual choice in the Medhavy client's own words. B05 (Second decision) delivers the marquee mechanism: the GHOST HOLD is the whole effect — 44% of runtime nearly invisible, then one slow materialisation, measured in luma std-dev. B09 verdict recapitulates all six pillars (parametric composition, camera build, ghost hold, length-as-prop, audio-first exception, three tells) as a compressed summary — the beats we cut are referenced in single lines, faithful to what the parent film covers. B11 outro closes with Liam's signoff. Transitions: B01 → B04 is natural (misconception → 'first design decision'); B04 → B05 chains 'First'/'Second' explicitly; B05 → B09 (verdict) jumps over B06/B07/B08 but the verdict is designed as a stand-alone recap and picks up the dropped lines. No numbered references dangle in the kept narration.",
+  "planned_duration_s": 139.0,
+  "rewrite_reason": null,
+  "run_id": "9a15cd534e8541e39d125daabe5a3e2d",
+  "source_sha256": "eca4952b8cf9f4a246e2d541eb631d3a23554831f1a64ed48129ffa1654021d1"
+}

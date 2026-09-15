@@ -1,0 +1,793 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art icon-build",
+    "slug": "claude-liam-brutalist-command-icon-build-vertical",
+    "topic": "BRUTALIST · COMMAND: ART ICON-BUILD",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Merhaba, Liam",
+    "greeting_note": "hello lexicon: Merhaba (Turkish), one word — fresh for this reel. Wagwan check: sum('claude-liam-brutalist-command-icon-build') mod 10 == 0 — the Wagwan slot fires, but Liam narrates and Wagwan stays Bear's (ai-explainer SKILL.md IN-FOR-BEAR LAW line 174). Fell back to Merhaba per the world-language rotation.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "8e9287fa1b3f47ffb77eeee7489c6edd",
+    "episode_id": "command-icon-build",
+    "order": 25,
+    "note": "Command teardown of ./art icon-build (single dispatcher branch at art:64-66; NO aliases in this case). The middle body walks the problem (12 GB / 2.4 M svg files upstream), the four rules that throw work away on purpose (stroke only, one-per-thing, one geometry, B&W), the 44 pt math (24-unit viewBox with stroke 2 renders 44pt at 528px), the --dry-run preview, the --limit trial cut, and the output artifacts (icons/svg/*.svg + icons.json + NOTICE.md carrying the ISC/MIT licence). Falsifiability beat: the four EXCLUDED libraries and why — anthropics has no LICENSE (provenance), RemixIcon is 100% filled (rule 1), material-design-icons is filled AND 9.1 GB (rule 1 + rule 2), heroicons duplicates lucide (rule 2). All demo output in demo/RUN-LOG.md is verbatim from this workspace (svg/ symlinked to public brutalist.art/svg for reproducible dry runs; the shipped canonical set was NOT overwritten). Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. No paid API, no upload, no re-cut of the shipped set. episode.source_sha256 50810aad5f8e2dfbf0928ecee7a233beca952f35d6220a9706eb3847aa5c5a38.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:64-66",
+      "build_icon_set": "runtime/scripts/build_icon_set.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "icon-build",
+      "canonical icon set",
+      "stroke normalization",
+      "44pt line",
+      "license shipping",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-09T06:08:45",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "derived_from": "claude-liam-brutalist-command-icon-build",
+    "reformat": "full-length; native portrait graphics; preserve source framing"
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Merhaba, this is Liam, in for Bear. There are twelve gigabytes of raw icons in the svg folder. Two point four million files. Nobody ships that. Art icon-build cuts a set you can actually put in git. Thirty megabytes. Seven thousand three hundred icons. One geometry, one line width, one color hook.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Merhaba, Liam' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed ask appears in the composer"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'cutting the canonical set…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Merhaba, Liam",
+            "topic": "BRUTALIST · COMMAND: ART ICON-BUILD",
+            "segment": "art icon-build",
+            "command": "12 GB of raw svg upstream. How do you get to a shippable icon set?",
+            "runningText": "cutting the canonical set…",
+            "output": [
+              "12 GB / 2.4 M files  →  30 MB / 7,330 icons  (~400× smaller)",
+              "one geometry (viewBox 0 0 24 24), one stroke (2), one color (currentColor)",
+              "one dispatcher branch: ./art icon-build  →  build_icon_set.py"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T09:40:11.662196+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.64,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 16.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Corrects the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art icon-build does not download new icons. It cuts a canonical set from ones that already sit on disk. Twelve gigabytes in, thirty megabytes out. Subtractive, not additive — and that is the difference this whole reel turns on.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 15,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art icon-build downloads / new icons.'"
+          },
+          {
+            "at": "0.50",
+            "event": "'downloads' turns terracotta, hesitates, backspaces, types 'cuts'"
+          },
+          {
+            "at": "0.75",
+            "event": "'new' turns terracotta, hesitates, backspaces, types 'existing'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art icon-build cuts / existing icons.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art\nicon-build\ndownloads\nnew icons.",
+            "triggerWords": "downloads, new",
+            "replacementWords": "cuts, existing",
+            "seed": "command-icon-build-b01",
+            "face": "serif",
+            "fontSize": 150,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T09:40:56.247619+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.55,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.583333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the dispatcher. One case branch, no aliases, one exec.",
+      "narration_text": "The dispatcher is one case branch in the art file. No aliases this time — only the exact word icon-build hits it. That branch execs a single python script, build_icon_set dot py. Everything else in this film is what that script actually does.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in with 'art' in the title bar"
+          },
+          {
+            "at": "0.20",
+            "event": "'case \"$cmd\" in' types"
+          },
+          {
+            "at": "0.40",
+            "event": "icon-build branch types"
+          },
+          {
+            "at": "0.70",
+            "event": "exec line types under it"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line settles under the card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art:64-66 — one branch, no aliases",
+            "code": "# From the top-level art dispatcher:\ncase \"$cmd\" in\n  # …\n  icon-build)\n    exec python3 \\\n      \"$ART_HOME/runtime/scripts/\\\n       build_icon_set.py\" \"$@\"\n    ;;\n  # …\nesac\n\n# Contrast: the icons branch takes\n# THREE aliases; icon-build stands\n# alone. One word, one exec.",
+            "sparkLine": "One word. One branch. One script."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-09T10:02:43.115248+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.89,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 14.916666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — THE PROBLEM. 12 GB / 2.4 M files. Almost all variants. Not shippable, not searchable.",
+      "narration_text": "The problem it solves. The svg folder holds a dozen upstream icon libraries. Twelve gigabytes on disk. Two point four million files. Almost all of it is variants — every style, every density, every platform — of a much smaller number of actual ideas. None of it fits in git. None of it is searchable. That is the corpus icon-build turns into something you can ship.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 25,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'svg/ — the raw upstream libraries'"
+          },
+          {
+            "at": "0.25",
+            "event": "du -sh table types in top-down"
+          },
+          {
+            "at": "0.70",
+            "event": "total line lands"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ du -sh svg/*   (the raw upstream corpus)",
+            "code": "  48 M   svg/lucide     (ISC)\n  77 M   svg/tabler     (MIT)\n  30 M   svg/iconoir    (MIT)\n  18 M   svg/feather    (MIT)\n\n  9.1 GB material-design-icons\n                (filled, 1.79 M files)\n  59 M   RemixIcon      (filled)\n  14 M   heroicons      (mostly solid)\n  3.1 M  anthropics   (NO LICENSE)\n\n  12 GB  svg/  (total, ~2.4 M files)\n\n# None shippable. None searchable.",
+            "sparkLine": "12 GB in. Almost all variants of the same ideas."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T10:03:12.589319+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.86,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 19.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — THE FOUR RULES. Each throws work away on purpose.",
+      "narration_text": "Four rules do the cutting. Rule one: stroke only. A filled icon has no line width, so filled libraries are dropped whole. Rule two: one icon per thing. Names are normalised — the same concept in five outline styles collapses to one. Rule three: one geometry, one weight. Everything is rewritten to a twenty-four unit viewBox and stroke width two. Rule four: black and white. Every color becomes currentColor, so one icon serves ink on cream and cream on ink.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'THE FOUR RULES (each one throws work away on purpose)'"
+          },
+          {
+            "at": "0.20",
+            "event": "rule 1 types"
+          },
+          {
+            "at": "0.40",
+            "event": "rule 2 types"
+          },
+          {
+            "at": "0.60",
+            "event": "rule 3 types"
+          },
+          {
+            "at": "0.80",
+            "event": "rule 4 types"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "build_icon_set.py:14-27 — the four rules",
+            "code": "# From the module docstring:\n\n# 1. STROKE ONLY.\n#      A filled icon has no\n#      line width → drop filled\n#      libraries whole.\n\n# 2. ONE ICON PER THING.\n#      FIRST library in PRIORITY\n#      order to claim a concept\n#      keeps it.\n\n# 3. ONE GEOMETRY, ONE WEIGHT.\n#      viewBox 0 0 24 24;\n#      stroke 2, currentColor.\n\n# 4. B&W (currentColor).",
+            "sparkLine": "One weight. One geometry. One color hook."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T10:06:51.903901+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.9,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 25.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — THE 44pt MATH. Why stroke 2 in a 24 viewBox is the '44pt' set.",
+      "narration_text": "Here is why twenty-four and two is the forty-four point set. A stroke of two in a twenty-four unit viewBox scales with the render. At the canonical render size, five hundred and twenty-eight pixels, two times five twenty-eight over twenty-four is forty-four, exactly. That constant ships in icons dot json as line-forty-four-pt-px, so a beat never has to rediscover it. Render smaller and the line stays proportional. That is the point of normalising the source instead of baking a pixel width in.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'the 44 pt math — stroke 2 in a 24 viewBox'"
+          },
+          {
+            "at": "0.25",
+            "event": "constants type in"
+          },
+          {
+            "at": "0.55",
+            "event": "formula line types"
+          },
+          {
+            "at": "0.80",
+            "event": "icons.json render block types"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "build_icon_set.py:53-56 — the 44 pt math",
+            "code": "VIEWBOX             = \"0 0 24 24\"\nSTROKE_W            = 2\nRENDER_PX_FOR_44PT  = 528\n   # 2 * (528 / 24) == 44\n\n#     stroke   render     line\n#     ------ x ------  =  ----\n#     viewBox   (px)      (pt)\n#\n#     2 / 24  x  528   =   44 pt ✓\n\n# Ships in the index:\n\"render\": {\n  \"line_44pt_px\": 528,\n  \"note\": \"stroke 2 in a 24\n           viewBox = 44 pt @ 528px\"\n}",
+            "sparkLine": "24 viewBox · stroke 2 · 528 px  =  44 pt."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T10:04:12.094419+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 27.56,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 27.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — verbatim --dry-run output from this workspace.",
+      "narration_text": "Dot slash art icon-build dash dash dry-run. Every run reports the source passes in priority order. Lucide keeps seventeen forty-nine, drops seven duplicates. Tabler keeps four thousand one thirty-four, drops six hundred and two. Iconoir keeps ten forty-five, drops six hundred and twenty-six. Feather keeps only twenty-six because lucide already owns the others. Brand keeps three hundred and seventy-six. Total: seven thousand three hundred and thirty. Nothing written to disk.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art icon-build --dry-run'"
+          },
+          {
+            "at": "0.15",
+            "event": "'SOURCE PASSES' header appears"
+          },
+          {
+            "at": "0.30",
+            "event": "five per-source lines cascade in one at a time"
+          },
+          {
+            "at": "0.75",
+            "event": "CANONICAL SET summary types"
+          },
+          {
+            "at": "0.90",
+            "event": "'--dry-run: nothing written.' lands; spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art icon-build --dry-run   (verbatim from this workspace)",
+            "code": "SOURCE PASSES\n(priority — first to claim keeps it)\n\n  lucide     kept 1749\n             dropped-dup     7\n  tabler     kept 4134\n             dropped-dup   602\n  iconoir    kept 1045\n             dropped-dup   626\n  feather    kept   26\n             dropped-dup   261\n  brand      kept  376\n\nCANONICAL SET: 7330 concepts\n  (376 brand/logo, 6954 general)\n\n--dry-run: nothing written.",
+            "sparkLine": "1749 + 4134 + 1045 + 26 + 376  =  7,330."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-09T10:04:42.208138+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.07,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 26.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — the output artifacts. icons/svg + icons.json + NOTICE.md carries the licences.",
+      "narration_text": "Drop the dash dash dry-run and it writes three things. A folder of seven thousand three hundred and thirty svg files, one per concept. An index file, icons dot json, that names each one, its source pack, its tokens, and whether it is a logo. And a NOTICE dot md that carries the ISC and MIT copyright notices, in full. That last one is the licence obligation, met.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'output artifacts (~30 MB, shippable in git)'"
+          },
+          {
+            "at": "0.25",
+            "event": "'icons/' tree types"
+          },
+          {
+            "at": "0.55",
+            "event": "icons.json geometry block types"
+          },
+          {
+            "at": "0.80",
+            "event": "NOTICE.md preamble types"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ls icons/  &&  head icons/NOTICE.md",
+            "code": "icons/\n├── svg/       # 7,330 .svg files\n│              # one per concept\n│              # 29 MB total\n│   ├── database.svg\n│   ├── brand-github.svg\n│   └── …\n├── icons.json  # the index\n└── NOTICE.md   # ISC + MIT\n\n{ \"canonical\": true,\n  \"count\":     7330,\n  \"geometry\": {\n    \"viewBox\":     \"0 0 24 24\",\n    \"stroke_width\": 2,\n    \"stroke\":  \"currentColor\",\n    \"fill\":    \"none\" } }\n\n# NOTICE — licence obligation MET.",
+            "sparkLine": "svg/ · icons.json · NOTICE.md — one shippable set."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T10:07:21.371005+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.14,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 21.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — the principled exclusions. Four upstream libraries dropped, each for a reason.",
+      "narration_text": "And here is what the tool refuses to include. Material design icons: filled, and nine point one gigabytes on its own — rule one and rule two. Remix icon: one hundred percent filled — rule one. Heroicons: its outline set duplicates lucide, which lucide already serves at a cleaner single weight — rule two. Anthropics: no LICENSE file anywhere. Unknown provenance cannot be redistributed. Every drop is named in the module docstring. Nothing is silently swept in.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'EXCLUDED ON PURPOSE (build_icon_set.py:68-76)'"
+          },
+          {
+            "at": "0.20",
+            "event": "four rows type in one at a time with the reason next to each"
+          },
+          {
+            "at": "0.85",
+            "event": "doctrine line lands: 'do not re-add without resolving the reason'"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "# EXCLUDED ON PURPOSE — do not re-add without resolving the reason",
+            "code": "material-design-icons/\n   filled, 1.79 M files / 9.1 GB\n   → rule 1 + rule 2\n\nRemixIcon/\n   100% filled\n   → rule 1\n\nheroicons/\n   outline set duplicates lucide\n   → rule 2\n\nanthropics/\n   614 stroke icons,\n   NO LICENSE FILE\n   → unknown provenance;\n     resolve licence FIRST.\n\n# Every drop is named.\n# Nothing swept in silently.",
+            "sparkLine": "Every drop is named. Nothing swept in silently."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T10:05:41.579515+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.83,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 25.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface. Four moves, plus the discipline the four rules encode.",
+      "narration_text": "So the surface. Bare art icon-build re-cuts the whole set and writes it to icons slash. Dash dash dry-run reports the same passes without writing. Dash dash limit N takes a small trial. Under the hood, four rules throw work away on purpose, one dispatcher branch runs the whole thing, and one NOTICE dot md carries the ISC and MIT copyright notices out with every ship. Twelve gigabytes of raw variants become thirty megabytes of shippable line drawings.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'The whole surface'"
+          },
+          {
+            "at": "0.30",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.42",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.54",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.66",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art icon-build — the whole surface, in the order you actually use it",
+            "artifactLines": [
+              "bare invocation — re-cuts icons/ from svg/; writes ~30 MB (svg/, icons.json, NOTICE.md).",
+              "--dry-run — reports the same source passes without writing; safe to run any time.",
+              "--limit N — small trial cut; stops at the first N icons from the first source.",
+              "the four rules — stroke only · one-icon-per-thing · one geometry/weight · B&W.",
+              "the four exclusions — material-design (filled), RemixIcon (filled), heroicons (dup), anthropics (no LICENSE).",
+              "the 44 pt math — stroke 2 in a 24 viewBox at 528 px = 44 pt exactly; ships in icons.json.",
+              "NOTICE.md — the licence obligation, met: ISC + MIT travel with every shipped set."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T09:44:58.426070+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 24.42,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 24.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code from the brutalist toolkit root. It runs the safe preview, a limited trial cut, and then reads the licence file. What you want to see: seven thousand three hundred and thirty concepts in the preview, the trial cut stops in lucide only, and NOTICE dot md carries an ISC block for lucide and an MIT block for the others. If the preview count drifts from icons dot json, that is a lead — svg has changed and the shipped set is stale.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your turn.' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "expected outcome lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Audit art icon-build",
+            "command": "From the brutalist.art toolkit root: (1) ./art icon-build --dry-run and note the CANONICAL SET count. (2) ./art icon-build --limit 3 --dry-run and confirm it stops at 3 in lucide only. (3) grep -c '^## ' icons/NOTICE.md and open the file: at least an ISC block (lucide) and an MIT block (tabler/iconoir/feather) must be present.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "(1) dry-run reports 7,330 concepts (376 brand/logo)",
+              "(2) --limit 3 --dry-run stops in lucide only",
+              "(3) NOTICE.md contains an ISC block AND an MIT block"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T09:53:58.312786+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.47,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 25.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-09T06:08:45"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art icon-build. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art icon-build.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art icon-build.",
+            "slug": "claude-liam-brutalist-command-icon-build"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T09:45:57.457168+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.72,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-09T06:08:45"
+      }
+    }
+  ]
+}

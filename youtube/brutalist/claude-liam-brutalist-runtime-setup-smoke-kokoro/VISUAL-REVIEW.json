@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "580a77e919fa4d31800dd4e0122db3f1",
+  "source_sha256": "2eaefa185e41434837dfaddeda16ab53e39b2b645ccc149a18fbbd9dc8fc402f",
+  "beat_sheet_sha256": "c7d590da80d848b7de3248a9df11606496a4c3a6806341bd152f4b9a48d0b8f7",
+  "video_sha256": "1a49b8cf3f9be9fe2e6aed4fb7dc8b5d9f57fab67fa82a105cf8b37662638dc2",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "0dbd22a8523f41f9f4f52fa62ea78d284d25e3bfdc465381d53fba06285c0131"
+    },
+    {
+      "path": "_qc/b10_outro_hai_check.png",
+      "sha256": "59cef2cf84b18ed5aa808f82d6e0cc3cc00140200319ed082d4481008cb4daef"
+    }
+  ],
+  "notes": "Production run for invocation aa15571b4a4a4dd59660f813aa595f7c (2026-09-14); re-review continues prior successful export (run 030891286f944a7f9f0175823eff81cd) with frame evidence restored. Rebuilt from prior successful run (123ab360) with one blocker fix: B10 outro replaced ClaudeTitleOutro (@NikBearBrown hardcoded) with ClaudeTitleOutroHAI (@HumanitariansAI) per playlist spec. Gate V: python3 runtime/qc/final_frame_check.py <reel> --mp4 <landscape.mp4> → frames=22 BLOCKER=0 MAJOR=0. Directly viewed _qc/contact_sheet.png and extracted B10 frame at t=205s. Contact sheet: B00 cold-open ClaudeComposerAsk (50%/85%: 'Selam, Liam' greeting, @HumanitariansAI folder chip, three-line output cascade — gate / three guards / the key distinction); B01 BLUF HesitantWriter (misconception 'import/enough' corrected to 'synthesis/insufficient' with terracotta accent — safe area well covered ≥55%); B02 SkillTeardownPipeline (six-node pipeline chart, labels visible); B03–B07 ClaudeCodeBeat code cards (guard section, synthesis block, volume gate, failure messages, try/finally — all legible, no truncation); B08 ClaudeVerdictArtifact (five verdict lines staggered); B09 ClaudeComposerAsk Your Turn (paste-ready TTS backend prompt, @HumanitariansAI chip). B10 outro directly verified by frame extraction at t=205s: 'Brutalist Utility: setup_smoke_kokoro.py.' in serif with terracotta period, '@HumanitariansAI' handle, mascot — Liam sign-off law satisfied, HAI channel confirmed. No captions, no unresolved slates, no edge bleed in 22 sampled frames. Skin lint warning for ClaudeTitleOutroHAI is intentional (isolated HAI variant). Human viewing and editing before upload."
+}

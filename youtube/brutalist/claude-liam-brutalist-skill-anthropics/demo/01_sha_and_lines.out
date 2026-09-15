@@ -1,0 +1,8 @@
+==> SHA-256 of the SKILL file:
+79f196f3dc46afecd42d6a34be4bf04aef9aaafbceae812df19aab855f8cdfd5  /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/workspaces/claude-liam-brutalist-skill-anthropics/toolkit/skills/make/anthropics/SKILL.md
+
+==> wc -l of the SKILL file:
+     142 /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/workspaces/claude-liam-brutalist-skill-anthropics/toolkit/skills/make/anthropics/SKILL.md
+
+==> ls of the skill folder (should show only SKILL.md):
+SKILL.md

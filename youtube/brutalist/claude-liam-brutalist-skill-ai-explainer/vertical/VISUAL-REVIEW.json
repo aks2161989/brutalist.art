@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "a2d6bcc90e44499b906ada378401a3db",
+  "source_sha256": "793fe8c321b2c67520b95aece10173a71f7235b4ca8b8a47c644d691423711c7",
+  "beat_sheet_sha256": "2a3180835a89524f132558d6de7b83fcaf384cc5e8e1c9f9cc3cbb0030e308e5",
+  "video_sha256": "d8dca0f414440a0816284375159ce89da59284b549735f26aaa9dc7bf46e9cb5",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "3e7147a1f6db3dccf2cd162b3c54dad59f62b75e2d27091b34fc0d9b8250252a"}
+  ],
+  "notes": "Re-review for invocation a2d6bcc90e44499b906ada378401a3db. Source SKILL.md changed since previous build (5d2d09528cd0403dac54ed33498aef23): frontmatter description simplified; two new hard rules added (Executable evidence, Math typesetting). Content assessment: both additions are additive and do not affect the existing episode narrative. No re-render required. Existing native 4K portrait master re-verified: 2160x3840 h264+AAC, 186.9s. Portrait contact sheet re-read with image-capable Read tool — 11 beats confirmed across native 9:16 portrait compositions: ClaudeComposerAsk916 cold open, HesitantWriterFramed916 BLUF, SkillTeardownAnatomy916, SkillTeardownPipeline916, four SkillTeardownMechanism916 panels, ClaudeVerdictArtifact916, ClaudeComposerAsk916 'Your Turn', ClaudeTitleOutroHAI916. Content column-centered in portrait safe area (SAFE916 x:54-1026, y:96-1824). Gate V BLOCKER=0, MAJOR=0 from previous build stands — renders are unchanged. Human review by Bear is pending."
+}

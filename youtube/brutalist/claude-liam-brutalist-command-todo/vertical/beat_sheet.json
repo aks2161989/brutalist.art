@@ -1,0 +1,774 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art todo",
+    "slug": "claude-liam-brutalist-command-todo-vertical",
+    "topic": "BRUTALIST · COMMAND",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "persona": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "voice": "am_onyx",
+    "captions": false,
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect": "16:9",
+    "aspect_ratio": "9:16",
+    "greeting": "Hola, Liam",
+    "channel_handle": "@NikBearBrown",
+    "playlist": "Brutalist",
+    "folderLabel": "@NikBearBrown",
+    "genre": "command teardown",
+    "note": "IN-FOR-BEAR LAW: B00 narration introduces 'Liam, in for Bear'; B11 signs off the same way. ILLUSTRATE LAW: UI appears at B00, B10, B11; the verdict artifact page at B09 counts as UI. B02-B08 are custom illustrations. HANDOFF LAW: B10 reads the prompt aloud + three-item rubric. OUTRO-LOCK: @NikBearBrown, mascot slug-seeded, no subline. Live demos captured in demo/RUN-LOG.md; every command shown on screen was actually executed on this workstation, output verbatim.",
+    "tags": [
+      "brutalist",
+      "art todo",
+      "beat sheet",
+      "ledger",
+      "receipt",
+      "manim",
+      "remotion",
+      "claude code"
+    ],
+    "derived_from": "claude-liam-brutalist-command-todo",
+    "build": {
+      "at": "2026-09-09T14:13:04",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "kind": "vertical",
+    "reformat": "full-length; native portrait graphics; preserve source framing",
+    "dropped_beats": [],
+    "total_estimated_duration_seconds": 167.88,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN — ASK",
+      "lane": "BOOKEND",
+      "narration_text": "Hola, Liam. This is Liam, in for Bear. The ask — show me what is still open on my reel: which beats still need a clip, whether the machine renders it or a human drops it in, and what to type for each one.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B00.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Cream page, serif greeting 'Hola, Liam' above the composer"
+          },
+          {
+            "at": "0.14",
+            "event": "The ask types itself in"
+          },
+          {
+            "at": "0.60",
+            "event": "Terracotta send arms — the ONE accent"
+          },
+          {
+            "at": "0.76",
+            "event": "Three result lines stagger in — the ask lands ANSWERED"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Hola, Liam",
+            "topic": "BRUTALIST · COMMAND",
+            "segment": "art todo",
+            "command": "art todo my-reel/ --open",
+            "runningText": "reading the beat sheet…",
+            "folderLabel": "@NikBearBrown",
+            "output": [
+              "reads beat_sheet.json — no other input",
+              "writes todo.json + STATUS.md + ToDo.md",
+              "--open filter → only beats still needing a clip"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T14:49:58.789524+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 10.92,
+      "render_duration_s": 10.958333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY — BLUF",
+      "lane": "BOOKEND",
+      "narration_text": "Here is the whole idea in one breath. Art todo is not a list of shots you edit by hand. It is a receipt of shots you read from the machine. Change the beat sheet, run the command, watch the receipt update.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 15,
+      "lead_silence_s": 0.8,
+      "audio_file": "mp3/beat-B01.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "write-and-correct",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Serif text begins typing on cream"
+          },
+          {
+            "at": "0.35",
+            "event": "Writer pauses; the misconception phrase carries the terracotta accent"
+          },
+          {
+            "at": "0.55",
+            "event": "The whole phrase is corrected — the receipt framing takes over"
+          },
+          {
+            "at": "0.85",
+            "event": "Final sentence holds ≥2s, ready for the body"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art todo\nis a\nlist.",
+            "triggerWords": "list",
+            "replacementWords": "receipt",
+            "seed": "todo-4828",
+            "fontSize": 240,
+            "lineSpacing": 2.6,
+            "align": "center",
+            "charMs": 30
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T18:11:00.286799+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 11.46,
+      "render_duration_s": 11.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK — beat sheet → ledger",
+      "narration_text": "The mental model is one arrow. On the left, beat sheet dot json — one entry per beat, with a shot block. In the middle, art todo. On the right, three files it writes: todo dot json for agents, STATUS dot markdown for you, and ToDo dot markdown for whoever owes a clip. Edit the sheet, not the receipts.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B02.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "flow-in",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "Left node lands: beat_sheet.json card"
+          },
+          {
+            "at": "0.30",
+            "event": "Middle node lands: ./art todo <reel>"
+          },
+          {
+            "at": "0.55",
+            "event": "Right stack lands: three receipt cards; the ToDo.md card is lit terracotta (the human-owed one)"
+          },
+          {
+            "at": "0.88",
+            "event": "Tagline settles beneath: 'Edit the sheet, not the receipts.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "TodoPipeline916",
+          "props": {
+            "spark": "One arrow. Sheet in, three receipts out.",
+            "tagline": "Edit the sheet, not the receipts."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-09T17:58:39.729011+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.83,
+      "render_duration_s": 16.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:TodoPipeline916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK 2 — the exact syntax",
+      "narration_text": "Four surfaces, three of them optional. Point it at a reel folder. Add --open for beats still empty. Add --method to filter to one lane. Add --json when an agent is on the other end. That is the whole command.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B03.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "stagger",
+        "show": [
+          {
+            "at": "0.08",
+            "event": "Dark terminal bar lands with '$ ./art todo <reel> [flags]'"
+          },
+          {
+            "at": "0.30",
+            "event": "First flag row lands: --open · only beats still needing a clip"
+          },
+          {
+            "at": "0.55",
+            "event": "Second flag row lands: --method <name> · filter to one lane"
+          },
+          {
+            "at": "0.80",
+            "event": "Third flag row lands terracotta: --json · print todo.json to stdout"
+          }
+        ],
+        "remotion": {
+          "pattern": "TodoCommand916",
+          "props": {
+            "spark": "Four surfaces. Nothing else.",
+            "command": "./art todo <reel> [flags]",
+            "flags": [
+              {
+                "flag": "--open",
+                "effect": "only beats still needing a clip"
+              },
+              {
+                "flag": "--method <name>",
+                "effect": "filter to one lane · manim | remotion | ai-video-prompt | historical-image | user-capture"
+              },
+              {
+                "flag": "--json",
+                "effect": "print todo.json to stdout — for agents"
+              }
+            ]
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T18:00:09.517544+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 11.61,
+      "render_duration_s": 11.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:TodoCommand916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED EXAMPLE — run it",
+      "narration_text": "Here is a live run against a five-beat demo reel. Zero out of five filled. One line per beat: the id, the status, the fill method, who owes it, and the pantry slot it expects. The three human-owed rows carry the terracotta chip — they are the ones you drop clips for.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B04.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-and-stagger",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Terminal card lands with '$ ./art todo demo/example-reel'"
+          },
+          {
+            "at": "0.18",
+            "event": "Header line staggers: '0/5 filled → todo.json + STATUS.md + ToDo.md'"
+          },
+          {
+            "at": "0.32",
+            "event": "Five beat rows stagger in — B00 to B04, methods laid out left-to-right"
+          },
+          {
+            "at": "0.75",
+            "event": "The three human-owed rows (B02/B03/B04) hold the terracotta chip; the two pipeline rows stay muted"
+          }
+        ],
+        "remotion": {
+          "pattern": "TodoRun916",
+          "props": {
+            "spark": "Live receipt. Five beats, zero filled.",
+            "command": "$ ./art todo demo/example-reel",
+            "header": "[todo] example-reel: 0/5 filled → todo.json + STATUS.md + ToDo.md",
+            "rows": [
+              {
+                "id": "B00",
+                "status": "needs-fill",
+                "method": "remotion",
+                "who": "pipeline",
+                "slot": "media/B00.mp4",
+                "accent": false
+              },
+              {
+                "id": "B01",
+                "status": "needs-fill",
+                "method": "manim",
+                "who": "pipeline",
+                "slot": "manim/B01.mp4",
+                "accent": false
+              },
+              {
+                "id": "B02",
+                "status": "needs-fill",
+                "method": "historical-image",
+                "who": "human",
+                "slot": "media/B02.png (or .mp4)",
+                "accent": true
+              },
+              {
+                "id": "B03",
+                "status": "needs-fill",
+                "method": "user-capture",
+                "who": "human",
+                "slot": "media/B03.mp4",
+                "accent": true
+              },
+              {
+                "id": "B04",
+                "status": "needs-fill",
+                "method": "ai-video-prompt",
+                "who": "human",
+                "slot": "media/B04.mp4",
+                "accent": true
+              }
+            ]
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T18:01:04.293864+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.13,
+      "render_duration_s": 15.166666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:TodoRun916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "ANATOMY — one entry, six fields",
+      "narration_text": "Under the hood, each beat is one small dictionary. Status is filled or needs-fill, decided by what is on disk. Method and who come from the beat's shot block. Slot is the filename the pantry expects. Prompt and label are seeds — they teach whoever fills it what the beat is for.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B05.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "field-scan",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "White card lands on cream with a JSON-shaped entry"
+          },
+          {
+            "at": "0.15",
+            "event": "Six field rows stagger, terracotta indicator bar walks down each key as narration names it"
+          },
+          {
+            "at": "0.55",
+            "event": "The slot filename is highlighted (the pantry contract)"
+          },
+          {
+            "at": "0.80",
+            "event": "The prompt + label rows hold, marked as seeds"
+          }
+        ],
+        "remotion": {
+          "pattern": "TodoEntry916",
+          "props": {
+            "spark": "One entry. Six fields. Nothing invented."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T18:01:58.391594+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.1,
+      "render_duration_s": 15.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:TodoEntry916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM — the five fill lanes",
+      "narration_text": "Five ways a beat gets filled, and the sheet decides which. Remotion and Manim are the pipeline lanes — the machine renders them. Historical image and user capture are on you. Ai-video-prompt is the fallback when nothing is annotated — the ledger drops a search seed so you are not staring at a blank. Two lanes render themselves. Three lanes wait for the human.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B06.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "table-stagger",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Table header lands: method · owner · how the sheet says it"
+          },
+          {
+            "at": "0.15",
+            "event": "Row 1: remotion · PIPELINE · shot.remotion.pattern"
+          },
+          {
+            "at": "0.30",
+            "event": "Row 2: manim · PIPELINE · shot.manim / engine=manim"
+          },
+          {
+            "at": "0.50",
+            "event": "Row 3: historical-image · HUMAN · shot.source=archive"
+          },
+          {
+            "at": "0.68",
+            "event": "Row 4: user-capture · HUMAN · shot.source=screen"
+          },
+          {
+            "at": "0.85",
+            "event": "Row 5: ai-video-prompt · HUMAN · no annotation → suggest a clip"
+          }
+        ],
+        "remotion": {
+          "pattern": "TodoMethods916",
+          "props": {
+            "spark": "Five lanes. The sheet decides. Two are on the machine."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-09T18:02:51.961252+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.47,
+      "render_duration_s": 18.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:TodoMethods916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "THE AGENT LOOP — --method manim --open",
+      "narration_text": "This is why the ledger exists. Add --method manim --open and it prints only the manim beats that are still empty. An agent walks that list, renders each one, drops the mp4 at the named slot, and re-runs the command. When a beat is filled, it drops off the list on its own. The ledger is the queue.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B07.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "loop-step",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Command bar lands with the --method manim --open filter lit terracotta"
+          },
+          {
+            "at": "0.25",
+            "event": "QUEUE card lands: B01 · manim/B01.mp4"
+          },
+          {
+            "at": "0.45",
+            "event": "RENDER + DROP card lands: render_manim → save at slot"
+          },
+          {
+            "at": "0.68",
+            "event": "RE-RUN card lands: same command, refreshed receipt"
+          },
+          {
+            "at": "0.88",
+            "event": "QUEUE card lands empty with a terracotta 'filled — drops off' caption"
+          }
+        ],
+        "remotion": {
+          "pattern": "TodoAgentLoop916",
+          "props": {
+            "spark": "An agent walks the filter. When a beat fills, it drops off."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T18:03:48.787188+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.94,
+      "render_duration_s": 15.958333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:TodoAgentLoop916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FAILURE + RECOVERY — no beat_sheet.json",
+      "narration_text": "One failure worth knowing. Point it at a folder that has no beat sheet, and it stops on the first line — no ledger, exit code one. The recovery is not a flag. Author the sheet, or point the command at the folder that actually has one. The ledger refuses to guess. That refusal is the feature.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B08.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fail-then-fix",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Terminal card lands: '$ ./art todo demo/empty-reel'"
+          },
+          {
+            "at": "0.25",
+            "event": "Red-tinted stderr line lands: '[todo] no beat_sheet.json in .../empty-reel'"
+          },
+          {
+            "at": "0.45",
+            "event": "Terracotta 'exit 1 · refused' chip lands"
+          },
+          {
+            "at": "0.70",
+            "event": "Recovery card lands beneath: author the sheet, or point at a folder that has one"
+          }
+        ],
+        "remotion": {
+          "pattern": "TodoFailure916",
+          "props": {
+            "spark": "Refuses loud. No sheet, no ledger."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T18:04:39.738656+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.81,
+      "render_duration_s": 15.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:TodoFailure916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "lane": "BOOKEND",
+      "narration_text": "So — art todo. A derived receipt of the beat sheet. Three outputs from one read. Five fill lanes, two of them the pipeline handles for you. A method-and-open filter that turns the ledger into an agent's work queue. And it fails loud when the sheet is missing.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 18,
+      "lead_silence_s": 0.4,
+      "audio_file": "mp3/beat-B09.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-stagger",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Claude artifact page opens"
+          },
+          {
+            "at": "0.22",
+            "event": "Line one lands — the derivation, not authorship"
+          },
+          {
+            "at": "0.44",
+            "event": "Line two lands — three outputs from one read"
+          },
+          {
+            "at": "0.64",
+            "event": "Line three lands — five fill lanes; two pipeline, three human"
+          },
+          {
+            "at": "0.84",
+            "event": "Line four lands and holds — refuses loud when the sheet is missing"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Brutalist Command: art todo",
+            "artifactHeading": "The command, in five lines",
+            "artifactLines": [
+              "A derived receipt of beat_sheet.json — never a hand-edited list. Change the sheet, run the command, and the receipt refreshes on its own.",
+              "One read → three outputs. todo.json is machine-readable for an agent; STATUS.md is the same table for you; ToDo.md is a fill list for whoever owes a clip.",
+              "Five fill lanes decided by shot.type × shot.source in the beat: remotion and manim render on the pipeline; historical-image, user-capture, and ai-video-prompt wait for a human.",
+              "The --method + --open filter turns the ledger into an agent's work queue — walk the list, render each one, drop the mp4 at the named slot, re-run.",
+              "Refuses loud when the sheet is missing — exit code 1, no scaffolding, no guessing. Author the sheet or point the command at a folder that has one."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T14:56:20.227633+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 13.85,
+      "render_duration_s": 13.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "HANDOFF — YOUR TURN",
+      "lane": "BOOKEND",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at any brutalist reel you have on disk: run art todo on this reel folder, then walk the method remotion, open list and render each one, and stop and tell me which beats still need a human. Look for whether Claude names the exact slot filenames — that is how you know it read the ledger and not the sheet.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 26,
+      "audio_file": "mp3/beat-B10.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.04",
+            "event": "Serif 'Your turn.' replaces the persona greeting"
+          },
+          {
+            "at": "0.12",
+            "event": "Prompt types itself in as the narration reads it aloud, verbatim"
+          },
+          {
+            "at": "0.60",
+            "event": "Terracotta send arms"
+          },
+          {
+            "at": "0.72",
+            "event": "Three look-for rubric lines stagger in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "YOUR TURN · BRUTALIST",
+            "segment": "art todo",
+            "command": "Run ./art todo on this reel folder, then walk the --method remotion --open list and render each one via ./art run <reel>. When only human-owed beats are left, stop and tell me which slot filenames still need media dropped in.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@NikBearBrown",
+            "output": [
+              "grade it: does it name the exact slot filenames (media/<BID>.mp4)?",
+              "grade it: does it stop at the human-owed beats instead of guessing?",
+              "grade it: does it reread the receipt after each render?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T14:57:01.535352+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.88,
+      "render_duration_s": 17.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-09T14:13:04"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "lane": "BOOKEND",
+      "narration_text": "Brutalist Command: art todo. Liam, in for Bear. Thanks for watching.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 6,
+      "audio_file": "mp3/beat-B11.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "Poster-serif title restates with the terracotta period"
+          },
+          {
+            "at": "0.45",
+            "event": "@NikBearBrown handle settles beneath"
+          },
+          {
+            "at": "0.60",
+            "event": "Holds clean on cream — mascot slug-seeded"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art todo",
+            "slug": "claude-liam-brutalist-command-todo"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T14:57:17.333689+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 4.57,
+      "render_duration_s": 4.583333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-09T14:13:04"
+      }
+    }
+  ]
+}

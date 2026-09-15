@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "81d4ac79a3f54016801f0269956c2d7c",
+  "source_sha256": "cf8873d1a540147a49b11feff3dd4ab774fd4f0e0ef9941c52895bd691bb628c",
+  "beat_sheet_sha256": "37179f7f82947d8ba5538e1b008925ee74e5db5c151a71c7bd0cb705e1d7d54d",
+  "video_sha256": "e1de90e9fc72a0f415c4c5c3b6ebde6e7c7ac0f33d5b7143d5c23297d00b5f15",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-sheet.jpg", "sha256": "03bb74d5986aa4f383543424128e7789bb0ac192c6b9019dd280c4e48341d9fe"}
+  ],
+  "notes": "Read the vertical contact sheet (13-beat grid, midpoint portrait frames) of the 2160x3840 native portrait master rebuilt for run_id 81d4ac79. Source changes addressed: B04 portrait (ClaudeCodeBeat916) updated with new ./art smoke advice lines — FEATURE table shows 7 green rows, 'All core features ready. Cost: $0.00.', 'Run ./art keys to check Higgsfield login.', 'Green table = dep checks passed (NOT renders).', 'Run ./art smoke for end-to-end proof.', '[exit 0]', spark line 'Green dep checks ≠ video renders. art smoke proves it.'; B05 portrait (ClaudeCodeBeat916) updated with refactored if/! --install code, all four phases visible in portrait safe area. All 13 portrait beats verified: B00 ClaudeComposerAsk916 'Konnichiwa, Liam' @HumanitariansAI chip; B01 BrutalistHesitantWriter portrait 'setup / verifies live.'; B02-B09 ClaudeCodeBeat916; B10 ClaudeVerdictArtifact916 verdict; B11 ClaudeComposerAsk916 Your Turn handoff 'Diagnose without installing'; B12 ClaudeTitleOutro916 'Brutalist Command: setup.' + @NikBearBrown (OUTRO-LOCK) + olive ground. Two expected SKIN LINT informational warnings (B00 ClaudeComposerAsk916, B12 ClaudeTitleOutro916) — correct choices for portrait aspect. ffprobe: 2160x3840 h264 · 290.5s · aac 48kHz; volumedetect: mean -27.0 dB / max -2.9 dB. Gate V: 0 BLOCKER / 0 MAJOR — verified.json stamped. Human review pending."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "48e0905963d54723ba7b587f9d86d97e",
+  "source_sha256": "f99dc63da9c6bb5c9c229cf937a87c2557fb78b30421641af094471eb38f0286",
+  "beat_sheet_sha256": "5a97aa5fe2d279298d4f540079977f05468ae6b5c0435f703d16834d85040408",
+  "video_sha256": "b35bce6f260ee81026a027eba381258f6c0df605408b8a84cfb01f68b65e18d3",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet_new.png", "sha256": "bef45822f5e7bb661497d19bc1d5a30a2609c0115ecef21b2c9a6b6ca5d5b0f1"}
+  ],
+  "notes": "Vertical 2160x3840 native portrait master, 177.0s — re-compiled 2026-09-12 after art source update (godot-* dispatch added 2026-09-11). Beats B03/B04/B07 were re-rendered 2026-09-11T17:xx (updated line numbers: art:56, art:127-129); vertical re-compiled with --force from all current media files. Gate V ran clean on the new compile: 0 BLOCKER, 0 MAJOR across 24 sampled frames. 12/12 native portrait beats filled: ClaudeComposerAsk916 cold open (B00) with topic, greeting 'Namaste, Liam', question and output lines all visible; BrutalistHesitantWriter916 BLUF (B01) with 4-line portrait stack, single trigger skill→command corrected before 50% gate point; seven ClaudeCodeBeat916 beats including B03 showing 'art:56' correct updated title; ClaudeVerdictArtifact916 (B09) with all 4 numbered verdict lines readable; ClaudeComposerAsk916 Your Turn (B10); ClaudeTitleOutro916 (B11) with 'Brutalist Command: art help.' and @NikBearBrown handle. Contact sheet (5x3, 15 frames, B00/B01/B03/B09/B11 at 15%/50%/85%) Read directly and verified. Non-fatal SKIN LINT for 916 cold-open and 916 outro — expected for native portrait build. Motion histogram: code-cascade 7/12 (58%) over cap — accepted for command teardown. Human review pending."
+}

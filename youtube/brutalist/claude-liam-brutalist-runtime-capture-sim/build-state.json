@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/exports/landscape/claude-liam-brutalist-runtime-capture-sim.mp4",
+  "sha256": "187a66cedfa7a7db3fe85b9862124647398d89c19f1aa42e2ed7b087b4cac072",
+  "duration_s": 278.125,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B00.mp4": "a203e9cd3d981085d384b0ac18aba1436dd70b98ceeb0140f3050b446b4f0c60",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B01.mp4": "695faec6bc5a5231a2e82c3e5defbe0e2fdd329bccb8c3631698dc9d00f11aca",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B02.mp4": "825f2dad84b375d4cf4765137f5e914a6bdb780d37db35ebc933f88bef0b71a4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B03.mp4": "e930dfe3aa873026a3ef5b743c287588a3463c31c5e737422b56becd30d50c82",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B04.mp4": "dad2b66e0f09bf47e741e5159fa53b14d2ee46815b92f8822cc40dd736e42bd2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B05.mp4": "6f3ec2865642c27a7f5b32cb7f21a8a6d8343265f23624f8c8b07d221db5dd56",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B06.mp4": "82a0fc5952f39928e93b791d0ccb88064b63b276351ad72e9429453ab1882ca1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B07.mp4": "5628cdddb58a5f56161d4c9ee355128b620352b080ae13a95073aaf54f85bccd",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B08.mp4": "cc1fc2ef78767794d52357b92bc44eb61d026fb2a1c2110355513861845598ce",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B09.mp4": "1a25285a267ada5d32b1ebeaec6241aab8719c738c17bc79725fab83bcc90515",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B10.mp4": "ee17edd0c0d7b93ffe68375654fd70f41e23e942d9f8dea1c3f87bf8676537f1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/media/B11.mp4": "7ca65347ee1523d7c1fb43d83e4308d4955da2a3debee785656e5874d7fd99c2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B00.mp3": "4c8f37b44846518b55bbf0141a7af7eaa3075c01c06b698c87414c64762896eb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B01.mp3": "6d66d77d6881514ce2875441ee39656665bd7ebc8331b709c202afc87c80b034",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B02.mp3": "ef78b9df85f04ab4f0c177dfe787b2867ba5b4d71b33ded3daccc40a0cb6a441",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B03.mp3": "4b1a52f4e290d81ea5d1bef2664955d12d6432abd641fefab7bd93fcb0b96602",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B04.mp3": "ea6eea21b62d2ab52b97dd0a653d06d03fd0a44834301176cbc647d2de3ef124",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B05.mp3": "fb70be927696f86cdd9ce59dfaee75002fd04f9e5be15291bd510243ae757a3f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B06.mp3": "1e86e4a7e9236004b2f5613854979fd03493ce9d8a345e32d6069431531e1ba9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B07.mp3": "9c6b274df18abd0cc8930fe2b9f0fb3660d7dcd303ad69061d3216571fb16a24",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B08.mp3": "4073ae368d991d4ced4438d965d36b89192d36f0a3d743212a3ee1a3e378af59",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B09.mp3": "0f0fd834f8f90e5eb98300d1290e48a21220f7cb4c8cb602e36cc425997bd83a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B10.mp3": "fe29dd24f7379fbbb830cabb87223a3c6ea0ebd644db877cc1d4db131474594f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/mp3/beat-B11.mp3": "7e8d1d800dae369d1539aa4cbb6e7ed05aefe52abaead55f0f14f68472b76ed7"
+  },
+  "at": "2026-09-10T11:19:10.407018+00:00"
+}

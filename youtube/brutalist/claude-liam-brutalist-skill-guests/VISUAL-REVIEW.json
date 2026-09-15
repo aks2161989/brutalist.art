@@ -1,0 +1,65 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "e0065af65f614cd19be5cc0bb8820e54",
+  "source_sha256": "d38fbfbac01efbc0d68adff66c9bc86847f06f7aeca8e5bb564453c34874372e",
+  "beat_sheet_sha256": "b0497d20def0618a36c21479eb0b34ea58049faad48dc8a5d50bbf47e28bd5ae",
+  "video_sha256": "ce157720ee717038d99ba208519ddc37f331f27a7fb0b36fe52af2896b6b17c9",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "dc28e75b2bd5e9b7c0856d990d949c980b445d63fc98d44a69b75b1b2158c2a6"
+    },
+    {
+      "path": "_qc/heroes/B00_50.jpg",
+      "sha256": "fc7a423ab0ab37c6a39720a4c05e8561961876c38012de2ebe6e761a07124583"
+    },
+    {
+      "path": "_qc/heroes/B01_50.jpg",
+      "sha256": "62b559d93a0ea88578713682bb3325365b27a049d4fec96e1dd0b943d2481375"
+    },
+    {
+      "path": "_qc/heroes/B02_50.jpg",
+      "sha256": "552ca9de19a1213ca0018f8884cb561cc192e00d5be59e85a224c5bb6cec7883"
+    },
+    {
+      "path": "_qc/heroes/B03_50.jpg",
+      "sha256": "2125957fe3e818c0deb5c06ba88d9c3bfb3c847d4e9c04d2252ec4a6188bde49"
+    },
+    {
+      "path": "_qc/heroes/B04_50.jpg",
+      "sha256": "7eb7910f806aed7a07d2055e88e82ec7da8a2da00511a18e2884e82b18166c1d"
+    },
+    {
+      "path": "_qc/heroes/B05_50.jpg",
+      "sha256": "78f63e7128d7a6b5915d1f4a881c9b60e9154b28622d8b963b5ae7f38bb3d3e9"
+    },
+    {
+      "path": "_qc/heroes/B06_50.jpg",
+      "sha256": "7c08d5a6bbbcc610bdb0c86c54d4495dd07aab8d936a57c826ad2547ab2c4fb2"
+    },
+    {
+      "path": "_qc/heroes/B07_50.jpg",
+      "sha256": "fdbb0c0e701d5ef6ed8775c034274bf198952319091b8039b08837276cc8b856"
+    },
+    {
+      "path": "_qc/heroes/B08_50.jpg",
+      "sha256": "46761e754db2b5209ce9496fe14138dc36112cf2cebf5f7392ac2577ce4940ae"
+    },
+    {
+      "path": "_qc/heroes/B09_50.jpg",
+      "sha256": "05384880ea7c8ab2dc322d24918c8fd1a45d7dafe62411f51fabea79a3f33c92"
+    },
+    {
+      "path": "_qc/heroes/B10_50.jpg",
+      "sha256": "b5955e5a8865236ec94cb21fbb25d03a6ed076174bf4da6983ff309cc8d01665"
+    },
+    {
+      "path": "_qc/heroes/B11_50.jpg",
+      "sha256": "8ef89a7bf59c5ffc33890ffacaeb12b5a1749b385d8f3212abb72afe548764ac"
+    }
+  ],
+  "notes": "Re-verified for run_id e0065af65f614cd19be5cc0bb8820e54 (source SHA updated by supervisor; SKILL.md content confirmed identical by diff against live repo — dc9db967). Gate V run fresh: 24 frames, 0 BLOCKER, 0 MAJOR. Hero frames re-extracted at each beat's 50% midpoint and inspected directly with the image-capable Read tool. B00: ClaudeComposerAsk — 'Hallo, Liam' greeting, ask on skills/make/guests/SKILL.md, @HumanitariansAI folder chip, three result lines ('a frame around a board member's recording', 'six beats · Claude bookends · standard HAI outro', 'no feedback beat — the guest is not evaluated') all visible. B01: BrutalistHesitantWriter — corrected text 'The guests skill / prunes the fellows spine. / A board member / is not a fellow.' large serif fills safe area, 'prunes' correction landed. B09: ClaudeVerdictArtifact — 'A frame. Not a re-edit.' heading, six numbered verdict lines all legible within card bounds. B10: ClaudeComposerAsk 'Your Turn' — paste-ready dry-run prompt, @HumanitariansAI chip, 3-check rubric. B11: ClaudeTitleOutro — 'The guests Skill.' with terracotta period, @NikBearBrown handle (OUTRO-LOCK.md), pixel mascot. No captions, no unresolved slates, no paid demo. Human review pending."
+}

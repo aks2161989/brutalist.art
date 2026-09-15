@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "d5030c4cf83c4be7abdb281854682ab7",
+  "source_sha256": "66919b1f4df398c1f4f8e9e0ea6c28fe951b7f10458bba501e4214da095cd269",
+  "beat_sheet_sha256": "81339172739e6b3bedaa477647ff638580e6d0ee66e9aade08c57717887e887b",
+  "video_sha256": "fedfb0ca5e06ee130b855af4fc688bae02293fe05182660c39946f5079d686ab",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "21eb9e2c16315bb2c5f67fe568ef3798c1a170c99457bf55cfc207ce46d39d3d"
+    },
+    {
+      "path": "_qc/review/vert_t5s.png",
+      "sha256": "f44c05c17fb1cbf3170e90d43ca60d9de364a2e41246d5cee94a387c0c7d0fe5"
+    },
+    {
+      "path": "_qc/review/vert_t25s.png",
+      "sha256": "304d4d2c67afe6da737ead73a5097db2119fe36bd3ced7a26c12b03e91fa839f"
+    },
+    {
+      "path": "_qc/review/vert_t100s.png",
+      "sha256": "b89ccff0da0214b8acd95dd94e61389c400624d1695b3dad5cb543e97f9e9660"
+    },
+    {
+      "path": "_qc/review/vert_t272s.png",
+      "sha256": "f2c2e03eadec98aa00178710cc95f919f1aff7a28c4087dd45428d26edc19ad7"
+    },
+    {
+      "path": "_qc/review/vert_last.png",
+      "sha256": "8cdbcf5bf1b07a871a9afa04e3b92c518ce7429edea14c1b6a1289a106700966"
+    }
+  ],
+  "notes": "Re-verification run for invocation d5030c4cf83c4be7abdb281854682ab7 (2026-09-13). Native portrait master 2160x3840 h264+aac, duration 278.125s. Source file capture_sim.py sha256sum=ccb75479c75081bede9d63d0d4913075b3497db183a035b5e0648d5dcb5d4a34 — unchanged from original build. Gate V re-run this session: python3 runtime/qc/final_frame_check.py <vertical> --mp4 <vertical.mp4> → frames=24 BLOCKER=0 MAJOR=0. Video SHA unchanged: fedfb0...; all six portrait QC frame SHAs independently verified — all match previous review record exactly. Directly viewed vertical contact_sheet.png plus five review frames: B00 portrait ClaudeComposerAsk916 cold-open (5s: 'Tere, Liam' greeting, portrait composer card reflowed correctly, @HumanitariansAI folder chip, three output lines including http:// note on its own line); B01 BLUF HesitantWriter portrait confirms 'capture_sim / RECORDS / the browser.' across three lines with safe-area filled ≥55% (fontSize 200, lineSpacing 2.6, seed csim-b01-vertical-v4 per original build); code-cascade beats legible in portrait at 25s/100s; B10 'Your Turn' (272s: prompt text wraps correctly within portrait safe area, @HumanitariansAI chip); B11 outro (last frame: 'Brutalist Utility: capture_sim.py.' + @NikBearBrown on charcoal — OUTRO-LOCK.md handle, flagged for human reviewer). No captions, no edge bleed, no unresolved slates. The portrait outro mascot is not visible in the last-frame static extract (mascot is animated and may be mid-frame); not a blocker — same result as original build review. Motion pantry warning (code-cascade 6/12 = 50%) accepted for same reason as landscape. Human viewing/editing is next; no upload, no commit."
+}

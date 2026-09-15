@@ -1,22 +1,13 @@
 ---
 name: ai-explainer
 description: >
-  Full-fledged Brutalist explainer reels in the CLAUDE brand — the Claude
-  desktop app's own look (cream #FAF9F5 page, warm ink #3D3929, terracotta
-  #D97757 spark as the ONE accent, EB Garamond serif + UI sans). Default
-  working channel is claude-liam (Liam in for Bear, Kokoro am_onyx, free).
-  Beat-sheet driven and phase-gated; visuals mix the
-  Claude Remotion scenes, Onda code-block for code, Manim fragments for math
-  beats, and human-added media via the per-beat slot convention. ILLUSTRATE
-  LAW: middles are concept-illustrated — the Claude UI appears only where
-  the UI is the subject. Use when the user types `claude-explainer`, `claude
-  reel`, `claude style`, `claude cut`, or asks for a Claude-branded
-  explainer or "Claude, oversimplified"-style walkthrough. A SKILL.md
-  source (or `skill teardown`) arms the skill-teardown modifier: same
-  bookends, body breaks the skill down and demos it live. AUDIT MODE
-  modifier arms on: `audit`, `evaluate the tool`, `what can X do`,
-  `capability audit`, `is X useful for` — see AUDIT-MODE.md. Register:
-  Teardown. Never publishes.
+  Build Claude-branded Brutalist explainer films with Liam in for Bear,
+  free local Kokoro narration, concept-driven visuals and Claude bookends.
+  Use for ai-explainer, claude-explainer, Claude reels/cuts, or a
+  Claude-branded concept walkthrough. A SKILL.md source or skill-teardown
+  request adds a live skill demonstration; an explicit tool-evaluation
+  request activates audit mode. Beat-sheet driven, audio-first and
+  phase-gated. Teardown register. Never publishes.
 
 ---
 
@@ -543,6 +534,15 @@ pipeline meets the seatbelt rules (git-tracked, regenerable outputs, no paid cal
 prompt is unfinished.
 
 ## Hard rules
+
+**Executable evidence:** follow [EXECUTABLE-EVIDENCE.md](../../../docs/EXECUTABLE-EVIDENCE.md).
+Real code/data outranks a picture of code/data. Run safe examples, retain their
+outputs and render them clearly; do not turn them into pantry chores.
+
+**Math:** read [the shared typesetting rule](../../../docs/MATH-TYPESETTING.md)
+whenever math appears. Use structured math rendering, not formula strings in
+FormACard/WantQuote. Tool choice is free; proper fractions/indices, checked
+algebra and actual-frame legibility are mandatory, including review cuts.
 
 ### House laws — standing for ALL claude explainers (every channel)
 

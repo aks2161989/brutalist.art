@@ -1,0 +1,334 @@
+{
+  "number": 10,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11",
+  "beats": 28,
+  "sheet_sha256": "121995c36af3fe1dcdfd9edeb26c0b874ba40bf0ecca38fcc2393fc6f2d5589b",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "445.291667",
+  "audio_stream": true,
+  "declared_slates": [
+    "B06",
+    "B11",
+    "B16",
+    "B20",
+    "B24"
+  ],
+  "findings": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of three hand-lettered index cards on a wooden desk. Left card: 'notes.txt'. Middle card: '../notes.txt'. Right card: 'link.txt' with a small ink arrow leaving the card. Ken Burns pushes toward the right card on the spoken word 'reach'.",
+      "path": "pantry/B06.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B11",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with four hand-lettered numbered checks: '1. operation \u2208 {read, write}', '2. path relative_to(base)', '3. write \u21d2 approved is True', '4. return resolved path'. Ken Burns pushes toward line 3 on the spoken word 'approval'.",
+      "path": "pantry/B11.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B16",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Flat overhead photograph of two file folders side by side. Left tab lettered 'course' with a small terracotta ring drawn over it (accepted). Right tab lettered 'course-other' with a small ink cross drawn over it (rejected). Ken Burns pushes toward the cross on the spoken word 'rejected'.",
+      "path": "pantry/B16.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-drawn rectangle marked 'course'. Inside the rectangle a small card lettered 'link.txt'. From link.txt a hand-drawn arrow crosses the rectangle boundary to a small rectangle outside labelled 'elsewhere'. Ken Burns pushes toward the arrow on the spoken words 'outside destination'.",
+      "path": "pantry/B20.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-lettered six-row ledger. Columns: proposal, result, rule. Rows: 'contained read' \u00b7 'Path' \u00b7 'containment'; 'traversal' \u00b7 'raise' \u00b7 'containment'; 'link outside' \u00b7 'raise' \u00b7 'containment'; 'write, approved=False' \u00b7 'raise' \u00b7 'write cond'; 'write, approved=True' \u00b7 'Path' \u00b7 'write cond'; 'execute' \u00b7 'raise' \u00b7 'operation'. Ken Burns pushes toward the last row on the spoken word 'operation'.",
+      "path": "pantry/B24.png",
+      "exists": false,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of three hand-lettered index cards on a wooden desk. Left card: 'notes.txt'. Middle card: '../notes.txt'. Right card: 'link.txt' with a small ink arrow leaving the card. Ken Burns pushes toward the right card on the spoken word 'reach'.",
+      "path": "pantry/B06.png",
+      "exists": false
+    },
+    {
+      "beat": "B11",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with four hand-lettered numbered checks: '1. operation \u2208 {read, write}', '2. path relative_to(base)', '3. write \u21d2 approved is True', '4. return resolved path'. Ken Burns pushes toward line 3 on the spoken word 'approval'.",
+      "path": "pantry/B11.png",
+      "exists": false
+    },
+    {
+      "beat": "B16",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Flat overhead photograph of two file folders side by side. Left tab lettered 'course' with a small terracotta ring drawn over it (accepted). Right tab lettered 'course-other' with a small ink cross drawn over it (rejected). Ken Burns pushes toward the cross on the spoken word 'rejected'.",
+      "path": "pantry/B16.png",
+      "exists": false
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-drawn rectangle marked 'course'. Inside the rectangle a small card lettered 'link.txt'. From link.txt a hand-drawn arrow crosses the rectangle boundary to a small rectangle outside labelled 'elsewhere'. Ken Burns pushes toward the arrow on the spoken words 'outside destination'.",
+      "path": "pantry/B20.png",
+      "exists": false
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of a notebook page with a hand-lettered six-row ledger. Columns: proposal, result, rule. Rows: 'contained read' \u00b7 'Path' \u00b7 'containment'; 'traversal' \u00b7 'raise' \u00b7 'containment'; 'link outside' \u00b7 'raise' \u00b7 'containment'; 'write, approved=False' \u00b7 'raise' \u00b7 'write cond'; 'write, approved=True' \u00b7 'Path' \u00b7 'write cond'; 'execute' \u00b7 'raise' \u00b7 'operation'. Ken Burns pushes toward the last row on the spoken word 'operation'.",
+      "path": "pantry/B24.png",
+      "exists": false
+    }
+  ],
+  "code_displays": [
+    {
+      "beat": "B04",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/05/three_requests.py",
+        "code": "root = \"course\"\nrequests = [\n    \"notes.txt\",\n    \"../notes.txt\",\n    \"link.txt\",     # symlink to /elsewhere\n]\n# All three are strings.\n# The filesystem uses the RESOLVED target.",
+        "sparkLine": "Three requests, one resolved comparison.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: three request strings as literal Python, and the note that spelling is not destination."
+    },
+    {
+      "beat": "B08",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/05/authorize.py",
+        "code": "from pathlib import Path\n\ndef authorize(root, target, operation, approved=False):\n    if operation not in {\"read\", \"write\"}:\n        raise PermissionError(\"Operation is not allowed\")\n    base = Path(root).resolve()\n    path = (base / target).resolve()\n    if not path.is_relative_to(base):\n        raise PermissionError(\"Path escapes the data boundary\")\n    if operation == \"write\" and approved is not True:\n        raise PermissionError(\"Write requires human approval\")\n    return path",
+        "sparkLine": "Four checks. One returned path.",
+        "codeSize": 0.036,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: the verbatim authorize() function from the lesson's reference implementation."
+    },
+    {
+      "beat": "B13",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/05/sibling_prefix.py",
+        "code": "# disposable parent\n#   course/         (approved root)\n#   course-other/   (outside sibling)\n\n# WRONG:\nstr(target).startswith(str(root))\n\n# RIGHT:\npath = (base / target).resolve()\npath.is_relative_to(base)",
+        "sparkLine": "Prefix is not containment.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: the two sibling directories, and the wrong string-prefix test contrasted with the resolved comparison."
+    },
+    {
+      "beat": "B18",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/05/symlink_fixture.py",
+        "code": "# inside a disposable /tmp/course\ntmp = tempfile.mkdtemp()\nroot = Path(tmp) / \"course\"\nroot.mkdir()\nelsewhere = Path(tmp) / \"elsewhere.txt\"\nelsewhere.write_text(\"outside\")\nlink = root / \"link.txt\"\nlink.symlink_to(elsewhere)\n\nauthorize(root, \"link.txt\", \"read\")\n# -> PermissionError: Path escapes the data boundary",
+        "sparkLine": "Local name. Outside destination.",
+        "codeSize": 0.036,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: the symlink fixture as pseudo-shell + the resolve/containment call."
+    },
+    {
+      "beat": "B22",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/05/read_write_execute.py",
+        "code": "authorize(root, \"notes.txt\", \"read\")\n# -> Path(...)/notes.txt\n\nauthorize(root, \"notes.txt\", \"write\")\n# -> PermissionError: Write requires human approval\n\nauthorize(root, \"notes.txt\", \"write\", approved=True)\n# -> Path(...)/notes.txt\n\nauthorize(root, \"notes.txt\", \"execute\", approved=True)\n# -> PermissionError: Operation is not allowed",
+        "sparkLine": "Location authority. Operation authority. Both.",
+        "codeSize": 0.038,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin: four calls against the same contained target with different operation and approval values, and the outcome each one produces."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B00.mp4",
+      "seconds": 21.5131056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B01.mp4",
+      "seconds": 7.56,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B02.mp4",
+      "seconds": 2.4966668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B03.mp4",
+      "seconds": 10.9666669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B04.mp4",
+      "seconds": 14.5366669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B05.mp4",
+      "seconds": 11.829999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/clips/B06.mp4",
+      "seconds": 12.016666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B07.mp4",
+      "seconds": 2.2166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B08.mp4",
+      "seconds": 11.06,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B09.mp4",
+      "seconds": 13.6033331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B10.mp4",
+      "seconds": 11.8766669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/clips/B11.mp4",
+      "seconds": 10.237499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B12.mp4",
+      "seconds": 2.3333331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B13.mp4",
+      "seconds": 12.25,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B14.mp4",
+      "seconds": 13.183333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B15.mp4",
+      "seconds": 12.459999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/clips/B16.mp4",
+      "seconds": 12.6291669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B17.mp4",
+      "seconds": 2.1933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B18.mp4",
+      "seconds": 11.97,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B19.mp4",
+      "seconds": 11.549999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/clips/B20.mp4",
+      "seconds": 11.4041669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B21.mp4",
+      "seconds": 2.7066669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B22.mp4",
+      "seconds": 14.209999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/B23.mp4",
+      "seconds": 15.9833331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/clips/B24.mp4",
+      "seconds": 13.970833099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/BVDT.mp4",
+      "seconds": 19.226211199999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/BHTF.mp4",
+      "seconds": 21.8631056,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-05-tools-and-permissions-ec856d6b-v-f68be1a4ca11/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/10-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

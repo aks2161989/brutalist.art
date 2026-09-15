@@ -1,0 +1,17 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "The anthropics skill is a journalism-sense beat: four modes, one router, that reads the actual artifact — not the docs — and reports the gap instead of faking a demo.",
+  "parent_master_sha256": "73f730baa0e438bef99eddc9f5970b3fbd55afbd94967cd7948930fd5e818170",
+  "parent_source_sha256": "68d5048370de87f2e8ecbac251c56173c85d09d1121a720914181ceb12a5040e",
+  "run_id": "f37e6639e4514e15aeb0321e42e9f17d",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B07", "B08", "B10"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Generic skill-file anatomy (folder tree, referenced files) is the sort of internals a Short should leave to the 16:9 long."},
+    {"beat_id": "B05", "reason": "MECHANISM Act 2 — six behavioural probes and the --paper reproducibility question. Detailed catalog of internals; the higher-level 'behaviour, not docs' point survives in B01 and B04."},
+    {"beat_id": "B06", "reason": "MECHANISM Act 3 — the 'register' (independence, situated, matching-claim). Nuance that belongs in the long-form teardown; the Short keeps the core disqualifier."},
+    {"beat_id": "B09", "reason": "YOUR TURN — full paste-ready --capability prompt Liam reads aloud. Per the Shorts prompt, a detailed CTA can be cut; the endcard-less outro still names the skill and signs off."}
+  ],
+  "cut_first_review": "The retained arc opens with Liam introducing what the anthropics skill actually does (B00), corrects the 'another Claude channel' misconception into 'a beat that reads the artifact' (B01), lays out the four modes / one router with --capability lit as the cheat code (B03), delivers the whole thesis — if it can be read off the docs it isn't this series (B04), names the two honest costs (missing sibling skills; the no-generated-evidence law) in B07, recaps as a verdict card (B08), and ends on the AntOutro (B10). Every dropped beat is a nice-to-have expansion of a point already carried by a kept beat: B02 anatomy is subsumed by B00/B04's file-is-the-instruction framing, B05/B06's probes and register are gestured at by B04 and B07 without a full internals tour, and B09's paste-ready assignment belongs in the long. The verdict card's five bullets touch 'behaviour is the thesis; defaults are the tell' and 'independence stated once — situated — honest about matches' — set up in the dropped B05/B06 — but they read as capsule statements alongside the earned bullets and do not break coherence.",
+  "planned_duration_s": 121.75,
+  "rewrite_reason": null
+}

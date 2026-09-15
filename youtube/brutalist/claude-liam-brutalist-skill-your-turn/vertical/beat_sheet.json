@@ -1,0 +1,965 @@
+{
+  "metadata": {
+    "title": "The your-turn Skill",
+    "slug": "claude-liam-brutalist-skill-your-turn-vertical",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Hallo, Liam",
+    "greeting_note": "hello lexicon: German (single-word). Wagwan check: not a Wagwan reel.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "1ddecabfca38480996c56171bce09bb7",
+    "episode_id": "skill-your-turn",
+    "order": 21,
+    "note": "Vertical companion of skill-your-turn (source sha256 aecd503a11c413c2b7e123f5b3c0d80832a1e5d071ea523b243b5c130f514865; episode.source_sha256 8250e8ccd8779eb2629de62b05699c311dc1e5a4caeb70f1a1260e9a8d10f126). Re-verified 2026-09-12 under run_id 1ddecabfca38480996c56171bce09bb7 — source changed since previous build; beat content verified accurate to current SKILL.md; renders preserved (no beat changes required). Native 9:16 via <Pattern>916 compositions. B03 SkillTeardownPipeline is swapped for SkillTeardownMechanism916 in portrait per feedback (horizontal phase strip bleeds past SAFE916 left/right). Voice: Kokoro am_onyx. No pantry stills, no paid API. Outro card is the locked ClaudeTitleOutro916 with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for human reviewer before publication.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/your-turn/SKILL.md",
+      "apply_script": "skills/make/your-turn/scripts/apply_your_turn.py"
+    },
+    "tags": [
+      "Brutalist",
+      "your-turn",
+      "skill teardown",
+      "closing block",
+      "Liam sign-off",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude",
+      "vertical"
+    ],
+    "build": {
+      "at": "2026-09-09T01:24:11",
+      "cut": "master",
+      "filled": 14,
+      "of": 14,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B13: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hallo, this is Liam, in for Bear. There is a skill called your-turn that most fellows will look at and think it is a whole workflow. It is not. It is a closing-block skill that standardizes the last three beats of every claude-explainer reel, then hands off. So I asked Claude to read the SKILL dot m-d and tell me what it actually rewrites.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Hallo, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "command types the ask about your-turn"
+          },
+          {
+            "at": "0.62",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "three RESULT lines land in sequence"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Hallo, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The your-turn Skill",
+            "command": "What does the `your-turn` skill actually rewrite? Read skills/make/your-turn/SKILL.md and tell me which beats it touches, what it changes, and what it leaves alone.",
+            "runningText": "reading skills/make/your-turn/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "closing-block skill — rewrites the last three beats only",
+              "VERDICT · YOUR TURN · TITLE — Liam narrates all three",
+              "idempotent; skips reels without a your-turn or Liam outro"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T05:02:46.588406+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.24,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 17.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects 'whole-reel' → 'closing-block' in portrait. 240 / 2.5 recipe.",
+      "lead_silence_s": 0.8,
+      "narration_text": "Watch the writer walk this back. Your-turn is not a whole-reel skill. It is a closing-block skill — the last three Liam beats at the end of every claude-explainer reel, standardized.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 13,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "line 1 types: 'your-turn is'"
+          },
+          {
+            "at": "0.35",
+            "event": "line 2 types: 'a whole-reel'"
+          },
+          {
+            "at": "0.60",
+            "event": "'whole-reel' flashes terracotta"
+          },
+          {
+            "at": "0.70",
+            "event": "word deletes; 'closing-block' types in"
+          },
+          {
+            "at": "0.90",
+            "event": "final corrected sentence stands"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "your-turn is\nnot a\nwhole-reel\nskill.",
+            "triggerWords": "whole-reel",
+            "replacementWords": "closing-block",
+            "seed": "your-turn-bluf-vertical-9b8fd6c8-v3",
+            "face": "serif",
+            "fontSize": 145,
+            "lineSpacing": 2.7,
+            "align": "center",
+            "charMs": 22,
+            "jitter": 6,
+            "mistakeRate": 2,
+            "hesitateWithin": 1,
+            "hesitateBetween": 3,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T05:23:19.698263+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 10.2,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 10.208333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — the anatomy of your-turn: SKILL.md plus one apply_your_turn.py script.",
+      "narration_text": "Every skill on this toolkit is a folder Claude reads before working. Your-turn is one SKILL dot m-d plus one Python script — apply underscore your underscore turn dot p-y. The doctrine lives in the SKILL file. The script is the deterministic transformer that applies it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY lands"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'One file, one script, three beats.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row — SKILL.md accent"
+          },
+          {
+            "at": "0.85",
+            "event": "callout: 'Doctrine reads. Script rewrites.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "your-turn",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "One file, one script, three beats.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/your-turn/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "scripts/"
+              },
+              {
+                "indent": 2,
+                "icon": "🐍",
+                "name": "apply_your_turn.py",
+                "tag": "transformer"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "edits (in place, idempotent)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.json — VERDICT"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.json — YOUR TURN"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.json — OUTRO"
+              }
+            ],
+            "calloutText": "<b>Doctrine reads. Script rewrites.</b> The SKILL.md holds the rules; apply_your_turn.py mutates the closing three beats in place. Idempotent.",
+            "calloutSub": "targets sheets with a your-turn ComposerAsk OR a Liam ClaudeTitleOutro; everything else is skipped untouched",
+            "sparkLine": "One file. One script. Three beats."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-09T05:07:39.178857+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.74,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 15.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The three-beat block. Portrait uses Mechanism916 (Pipeline horizontal strip bleeds past portrait safe area).",
+      "narration_text": "Here is the block, in fixed order. Beat one — VERDICT, on the artifact card, opens with the handoff line then the full recap. Beat two — YOUR TURN, on the composer, shows a prompt relevant to this specific video and Liam reads the whole thing aloud. Beat three — the title outro, poster serif, Liam re-reads the reel's own title. Three beats, one voice, always closing.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · BLOCK lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'Three beats. In order. Always closing.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: VERDICT then YOUR TURN then OUTRO — one voice"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'THREE-BEAT BLOCK · in order' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · BLOCK",
+            "heading": "Three beats. In order.",
+            "body": "The block is: (1) VERDICT — ClaudeVerdictArtifact, opens with the handoff line, then the full recap. (2) YOUR TURN — ClaudeComposerAsk, a prompt RELEVANT to this specific video; Liam reads the whole prompt. (3) OUTRO — ClaudeTitleOutro, Liam re-reads the reel's own title. All three are Liam. The body above the block is out of scope.",
+            "quote": "Every claude-explainer reel should end the same way: Liam hands off from the body, recaps on the artifact card, gives the viewer a prompt to run, and re-reads the title.",
+            "cite": "your-turn SKILL.md · intro",
+            "verdictLabel": "THREE-BEAT BLOCK · in order",
+            "verdictPositive": true,
+            "sparkLine": "Three beats. One voice."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T05:08:35.694546+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.9,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 18.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 1 — Handoff persona-aware. 0.5s lead pause.",
+      "narration_text": "First decision. The handoff line changes based on who narrated the body. If the previous beat was Bear, the recap opens with — Thanks Bear, let's recap with Claude. If the previous beat was already Liam, it just opens — Let's recap with Claude. There is a half-second lead pause so the handoff breathes. The script reads the prior beat's engine to decide which line to write.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 · HANDOFF lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The handoff knows the persona.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: two branches — from Bear vs from Liam"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'PERSONA-AWARE · reads prior beat' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1 · HANDOFF",
+            "heading": "The handoff knows the persona.",
+            "body": "The handoff wording is decided by the persona of the beat immediately before the verdict. Prior body beat's engine reads elevenlabs (Bear) → 'Thanks Bear, let's recap with Claude.' Anything else (Liam already on the mic) → 'Let's recap with Claude.' Both open with an explicit 0.5s lead pause so the transition breathes.",
+            "quote": "The handoff wording is decided by the persona of the beat immediately before the verdict — persona bear → 'Thanks Bear, let's recap with Claude.'; anything else → 'Let's recap with Claude.'",
+            "cite": "your-turn SKILL.md · Voices (inherited)",
+            "verdictLabel": "PERSONA-AWARE · reads prior beat",
+            "verdictPositive": true,
+            "sparkLine": "Prior beat sets the line."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T05:09:33.557258+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.75,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 18.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 2 — drafts.json is the human gate.",
+      "narration_text": "Second decision, and this is the one non-deterministic step. The YOUR TURN prompt must be relevant to the specific reel — so it is drafted per slug into a drafts dot j-son file. One entry per slug — a prompt, and optionally a recap for reels that don't have a verdict card yet. The human reviews drafts dot j-son BEFORE any audio spend or render. This is the one phase gate.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 · DRAFTS GATE lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'drafts.json is the human gate.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: draft → review → apply — one prompt per slug"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'HUMAN-REVIEWED · never templated' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2 · DRAFTS GATE",
+            "heading": "drafts.json is the human gate.",
+            "body": "One JSON map, slug → { prompt, recap? }. The prompt is a real question a viewer would paste into Claude after watching — grounded in the reel's own material, ending in a concrete multi-part ask. recap is drafted ONLY for reels that lack a verdict card. Review drafts.json BEFORE any audio spend or render.",
+            "quote": "This is the one non-deterministic step and the one human gate — review drafts.json before applying.",
+            "cite": "your-turn SKILL.md · Auto-drafting the YOUR TURN prompt",
+            "verdictLabel": "HUMAN-REVIEWED · never templated",
+            "verdictPositive": true,
+            "sparkLine": "One prompt per slug."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T05:10:30.002137+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.97,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 20.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 3 — VERDICT card fixes.",
+      "narration_text": "Third decision, and it fixes two defects in one edit. The verdict card was hard-pinned to eight hundred sixty pixels on a nineteen twenty frame — small, floating, indefensible. It now fills eighty-four percent of the width with legible type. One component edit — every reel bigger on re-render. And the double-numbered recap lines — where authors typed one dot, two dot, and the card also numbered them — those are stripped from artifactLines both when writing and defensively at render.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 · VERDICT FIXES lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'Bigger card. Cleaner lines.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: two folded fixes — 84% width + strip leading numbers"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'ONE EDIT · every reel fixed' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3 · VERDICT FIXES",
+            "heading": "Bigger card. Cleaner lines.",
+            "body": "Two catalog-wide defects, folded into this skill. ClaudeVerdictArtifact.tsx was hard-pinned to 860px on a 1920 frame — now fills ~84% width with legible type. And ~160 recap lines across the catalog had authored '1.' / '2.' prefixes colliding with the card's own numbering — the transformer strips leading numbers, and the component strips them defensively too (stripLeadNum).",
+            "quote": "One component edit fixes every reel on re-render. The transformer strips leading numbers from artifactLines, and the component now strips them defensively too — so it can never happen again.",
+            "cite": "your-turn SKILL.md · Fixes folded in",
+            "verdictLabel": "ONE EDIT · every reel fixed",
+            "verdictPositive": true,
+            "sparkLine": "One edit. Every reel."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-09T05:11:27.065236+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.73,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 25.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 4 — YOUR TURN: Liam reads the whole prompt.",
+      "narration_text": "Fourth decision, and it is what makes YOUR TURN feel like a real handoff. Liam reads the prompt out loud — the full thing. The narration text and the composer's command field are the same string. Greeting slot reads — Your turn. Full stop. The composer types the prompt while Liam speaks it. No 'here is your prompt' filler. No paraphrase. The prompt IS the narration.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 · YOUR TURN lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'Liam reads the prompt in full.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: command == narration_text; greeting Your turn."
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'READ · not just typed' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4 · YOUR TURN",
+            "heading": "Liam reads the prompt in full.",
+            "body": "The composer shows a prompt relevant to THIS video, and Liam reads the WHOLE prompt — props.command equals narration_text. Greeting slot fixed to 'Your turn.' Footer chip @NikBearBrown, model chip unchanged. Never a 'here is a prompt for you' voiceover — the prompt IS the narration.",
+            "quote": "the composer shows a prompt relevant to this specific video, and Liam reads the whole prompt (props.command == narration_text).",
+            "cite": "your-turn SKILL.md · The block (in order) · YOUR TURN",
+            "verdictLabel": "READ · not just typed",
+            "verdictPositive": true,
+            "sparkLine": "The prompt IS the narration."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T05:12:21.849681+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.67,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 18.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "Mechanism 5 — OUTRO: Liam re-reads the title.",
+      "narration_text": "Fifth decision. The outro beat re-reads the title. Not a channel plug, not a subline. The narration text field on the outro is literally the reel's title, spoken in Liam's voice with the terracotta period landing under the poster serif. The transformer copies metadata dot title into both the narration and props dot title. Re-run the skill tomorrow — same output. Idempotent.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 5 · OUTRO lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The outro is the title, spoken.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: narration_text = title; idempotent"
+          },
+          {
+            "at": "0.65",
+            "event": "verbatim quote card slides in with cite"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'TITLE · re-read by Liam' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 5 · OUTRO",
+            "heading": "The outro is the title, spoken.",
+            "body": "ClaudeTitleOutro. narration_text = the reel's title; Liam re-reads it as the sign-off. props.title = title, handle = @NikBearBrown, subline preserved. The transformer copies metadata.title into both slots — re-run the skill, same output, no drift.",
+            "quote": "narration_text = the reel's title; Liam re-reads it as the sign-off.",
+            "cite": "your-turn SKILL.md · The block (in order) · TITLE re-read",
+            "verdictLabel": "TITLE · re-read by Liam",
+            "verdictPositive": true,
+            "sparkLine": "Title, spoken."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T05:13:15.755807+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.22,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 20.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "MECHANISM",
+      "role_note": "WORKED EXAMPLE — dry-run demo. Synthetic fixture in demo/.",
+      "narration_text": "Now watch it run — on a synthetic fixture in this reel's demo folder. Dry-run only, no real reel is touched. The script scans the sheet, finds the closing YOUR TURN and OUTRO, cleans the verdict, rewrites the three beats, and writes a report. Changed, skipped, needs prompt, errors. Look at the report — one fixture changed, zero errors, and the notes name every edit the transformer made.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow WORKED EXAMPLE · DRY RUN lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'One fixture. Zero errors.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: the actual report output from demo/"
+          },
+          {
+            "at": "0.70",
+            "event": "body settles"
+          },
+          {
+            "at": "0.88",
+            "event": "verdict pill 'IDEMPOTENT · re-run stacks nothing' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "WORKED EXAMPLE · DRY RUN",
+            "heading": "One fixture. Zero errors.",
+            "body": "Ran apply_your_turn.py --dry-run against a synthetic beat sheet in this reel's demo/. Report: changed=1, skipped=0, needs_prompt=0, errors=0. Notes: verdict cleaned + handoff (from Bear), your-turn set relevant prompt + narration, outro Liam re-reads title. Re-running writes nothing new — idempotent.",
+            "quote": "The transformer is idempotent — re-running never stacks handoffs or re-numbers. Sheets without a verdict card (slate cuts, other families) are skipped untouched.",
+            "cite": "your-turn SKILL.md · Rules · idempotency clause",
+            "verdictLabel": "IDEMPOTENT · re-run stacks nothing",
+            "verdictPositive": true,
+            "sparkLine": "Changed 1. Errors 0."
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T05:14:16.488229+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.05,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 20.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY / documented limitation.",
+      "narration_text": "Now what your-turn does NOT do. It never touches the body. It never publishes. Applying the block and even re-rendering the reel is safe — going public is a separate manual step in YouTube Studio. And the re-render itself is human-triggered per reel, because re-uploading replaces the video file via a NEW ID and the old URL and its views are lost. That is why the SKILL says — batch deliberately.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · LIMITATION lands"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'What your-turn does NOT do.' fades in"
+          },
+          {
+            "at": "0.35",
+            "event": "body: three limits — no body edits, no publish, human re-render"
+          },
+          {
+            "at": "0.70",
+            "event": "body settles"
+          },
+          {
+            "at": "0.90",
+            "event": "verdict pill 'DOCUMENTED LIMITATION' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · LIMITATION",
+            "heading": "What your-turn does NOT do.",
+            "body": "Three limits, all stated in the SKILL. (1) Only edits the closing three beats — the body is out of scope. (2) Never publishes — going public is a manual Studio flip. (3) Re-render + re-upload is a separate human-triggered step per reel, because a new upload replaces the file via a new video ID and the old URL and views are lost. Batch deliberately.",
+            "quote": "Only edits the closing three beats. The body is out of scope. Never publishes — applying the block and re-rendering is safe; going public is a manual Studio flip.",
+            "cite": "your-turn SKILL.md · Rules · 3-4",
+            "verdictLabel": "DOCUMENTED LIMITATION",
+            "verdictPositive": false,
+            "sparkLine": "Body out of scope."
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T05:15:14.577408+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.42,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 20.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "VERDICT",
+      "role_note": "VERDICT artifact — six-line recap.",
+      "narration_text": "So the split. Bookends up to the body — INHERITED from ai-explainer. The closing three beats — OWNED. The handoff line is persona-aware. Drafts dot j-son is the human gate before any spend. The verdict card is fixed once, every reel bigger. And reach elsewhere if the sheet has no your-turn or Liam outro — this skill skips it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales up on cream stage"
+          },
+          {
+            "at": "0.20",
+            "event": "heading 'The your-turn split.' lands"
+          },
+          {
+            "at": "0.30",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The your-turn Skill",
+            "artifactHeading": "The your-turn split.",
+            "artifactLines": [
+              "Bookends INHERITED — parent claude-explainer owns everything up to the body.",
+              "Closing three beats OWNED — VERDICT → YOUR TURN → OUTRO, always Liam.",
+              "Handoff is PERSONA-AWARE — prior Bear → 'Thanks Bear'; prior Liam → 'Let's recap.'",
+              "drafts.json is the HUMAN GATE — one prompt per slug, reviewed before any spend.",
+              "Verdict card FIXED once — 84% width, leading numbers stripped defensively.",
+              "REACH ELSEWHERE if the sheet has no your-turn or Liam outro — skill skips it."
+            ]
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T05:04:23.195557+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.43,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 17.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready planning prompt.",
+      "narration_text": "Your turn. Paste this into Claude Code. Read the your-turn SKILL and its apply script. Then pick one of your own reels — or a synthetic beat sheet fixture — and ask Claude to draft a drafts dot j-son entry for it. First surface the reel's own material — the source chapter, the body beats' narration text — and draft one prompt a curious viewer would paste after watching. Then dry-run apply your turn against that draft and read the report before touching a real reel.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your turn.' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "paste-ready planning prompt types itself in"
+          },
+          {
+            "at": "0.75",
+            "event": "three-line viewer rubric fades in as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · YOUR-TURN · YOUR TURN",
+            "segment": "Draft a drafts.json entry for one reel",
+            "command": "Read skills/make/your-turn/SKILL.md and its apply script. Then pick ONE reel of your own — or the fixture in this reel's demo/ folder. Draft ONE drafts.json entry: a prompt 3-5 sentences long, first-person, ending in a concrete multi-part ask that goes one step DEEPER than the video. Then dry-run apply_your_turn.py against your draft and read the report before touching any real reel.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: did the drafted prompt name the reel's actual claim?",
+              "check: is the prompt first-person, 3-5 sentences, multi-part ask?",
+              "check: did dry-run report changed=1, needs_prompt=0, errors=0?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-09-09T05:21:15.503413+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.57,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 22.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-09T01:24:11"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "The your dash turn Skill. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The your-turn Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The your-turn Skill",
+            "slug": "claude-liam-brutalist-skill-your-turn-vertical"
+          },
+          "rendered": {
+            "out": "media/B13.mp4",
+            "at": "2026-09-09T05:05:25.875602+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 4.78,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 4.791666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B13.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-09T01:24:11"
+      }
+    }
+  ]
+}

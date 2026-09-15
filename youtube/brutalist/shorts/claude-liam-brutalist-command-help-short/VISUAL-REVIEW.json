@@ -1,0 +1,157 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "2c495c5f99c840f6adc567ad1aa16613",
+  "source_sha256": "e9ca6bd73b9d358e3070eacbabafad0ab3bea099af5d05e46906e6b6d0f5f405",
+  "beat_sheet_sha256": "c6f6c5afdc9cce3d7680dce9558577c60f547c5525d843189852c43489e02aec",
+  "video_sha256": "47ec0037bbf09798a48f9242457ef175421a42b4f89e883d9a43e2e75b150e60",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/frames_beat/B00-15.jpg",
+      "sha256": "0f062028ee93cfe18f2c1d2d7ebad5593e98b7b9e4f2d573573418d970157031",
+      "t_s": 2.569,
+      "beat_id": "B00"
+    },
+    {
+      "path": "_qc/frames_beat/B00-50.jpg",
+      "sha256": "163a32a7350ceb29fed533e4d4ded48177d2ac800967d4a2351c4d441baa21a5",
+      "t_s": 8.562,
+      "beat_id": "B00"
+    },
+    {
+      "path": "_qc/frames_beat/B00-85.jpg",
+      "sha256": "1f5b0b199d43a423e19bd5253c03cce199260ea1d41ee10202d7df9c686f1a52",
+      "t_s": 14.556,
+      "beat_id": "B00"
+    },
+    {
+      "path": "_qc/frames_beat/B01-15.jpg",
+      "sha256": "c151d65cab96b647e7af6a925626cdab39838a67c15d755fba5d690f57fc7361",
+      "t_s": 18.587,
+      "beat_id": "B01"
+    },
+    {
+      "path": "_qc/frames_beat/B01-50.jpg",
+      "sha256": "b9e6ae3b79a1d8637fac99e7f490c2f8bc2548273d365049f70b388c0a857f74",
+      "t_s": 22.0,
+      "beat_id": "B01"
+    },
+    {
+      "path": "_qc/frames_beat/B01-85.jpg",
+      "sha256": "9c8ecb8ff299ac32670e7bc9a3d776a686b4150b6c41d390a14c8279d75672bd",
+      "t_s": 25.413,
+      "beat_id": "B01"
+    },
+    {
+      "path": "_qc/frames_beat/B03-15.jpg",
+      "sha256": "5b35d47808e44fb06ac20dae7e80cf4c9fff6bc0064f694b12674cadec1f05c5",
+      "t_s": 29.094,
+      "beat_id": "B03"
+    },
+    {
+      "path": "_qc/frames_beat/B03-50.jpg",
+      "sha256": "aada798950f8b731bd8227b4d2934b922a49c8a1fffca45184955121482df6a7",
+      "t_s": 34.271,
+      "beat_id": "B03"
+    },
+    {
+      "path": "_qc/frames_beat/B03-85.jpg",
+      "sha256": "75bde1c84a5a0867aae7f5e43c606121a57331bd815e00388e4052414411ea37",
+      "t_s": 39.448,
+      "beat_id": "B03"
+    },
+    {
+      "path": "_qc/frames_beat/B04-15.jpg",
+      "sha256": "272c77677282c77b48a468c35f969c882fb54da54f8f81e10ba2df77ba29eb11",
+      "t_s": 43.542,
+      "beat_id": "B04"
+    },
+    {
+      "path": "_qc/frames_beat/B04-50.jpg",
+      "sha256": "ad0405e305d3600810974917ad729fbffc4b72f781fee85836463707770841d3",
+      "t_s": 47.917,
+      "beat_id": "B04"
+    },
+    {
+      "path": "_qc/frames_beat/B04-85.jpg",
+      "sha256": "bce33c6e9f58438f027fdf49de695a6c7cf2c64c6c37c68d9db80c5a812c207b",
+      "t_s": 52.292,
+      "beat_id": "B04"
+    },
+    {
+      "path": "_qc/frames_beat/B05-15.jpg",
+      "sha256": "684d2c574969177dfa806f20324bcecc18f6511437fa259231e5e050822be295",
+      "t_s": 56.523,
+      "beat_id": "B05"
+    },
+    {
+      "path": "_qc/frames_beat/B05-50.jpg",
+      "sha256": "c50c736f9c467fc566a473bd544ac960cfa1a3b9b096ff0a1e284ad0f332c5ab",
+      "t_s": 62.021,
+      "beat_id": "B05"
+    },
+    {
+      "path": "_qc/frames_beat/B05-85.jpg",
+      "sha256": "c03c6c6a94b13bb5a3196ffcbb31062643682d3e2d398ee30224be3a6e6272c0",
+      "t_s": 67.519,
+      "beat_id": "B05"
+    },
+    {
+      "path": "_qc/frames_beat/B06-15.jpg",
+      "sha256": "41cfe4e82973ee2b0c848ce230f60d7c628e9776f9932ace7f24d82c1ade6c62",
+      "t_s": 72.131,
+      "beat_id": "B06"
+    },
+    {
+      "path": "_qc/frames_beat/B06-50.jpg",
+      "sha256": "e2c754fdc2442ff71d54577b4499e665896617c0b35c5cd6bf598513dbaf663d",
+      "t_s": 77.396,
+      "beat_id": "B06"
+    },
+    {
+      "path": "_qc/frames_beat/B06-85.jpg",
+      "sha256": "fa862bd20a5b2ace2353f5034ef9b2108ae970f2a1da03f0d7177178ebe660d2",
+      "t_s": 82.66,
+      "beat_id": "B06"
+    },
+    {
+      "path": "_qc/frames_beat/B09-15.jpg",
+      "sha256": "13d30b1e8d390405dc02005f94b32fb23a8a52cd1b02d9c76bbd79f46ca32ef0",
+      "t_s": 87.517,
+      "beat_id": "B09"
+    },
+    {
+      "path": "_qc/frames_beat/B09-50.jpg",
+      "sha256": "546d79aa25f084819f016c9382e1cfcdf61b4957c73dc721db59a501e4bc68c8",
+      "t_s": 93.583,
+      "beat_id": "B09"
+    },
+    {
+      "path": "_qc/frames_beat/B09-85.jpg",
+      "sha256": "5cd31a38dabce41339cb710be1d6178bfaa0ace2965a1c1a9ee5025848bfa309",
+      "t_s": 99.65,
+      "beat_id": "B09"
+    },
+    {
+      "path": "_qc/frames_beat/B11-15.jpg",
+      "sha256": "2736917b1d4363267d0fbd0bdbd36b6eec79509273c4243eb98f7c2b2246f4c8",
+      "t_s": 103.019,
+      "beat_id": "B11"
+    },
+    {
+      "path": "_qc/frames_beat/B11-50.jpg",
+      "sha256": "9582c414e2fd39c87ba24d3d399985e5475ab394eb4d837d4f0663ce2ee8d9ea",
+      "t_s": 104.812,
+      "beat_id": "B11"
+    },
+    {
+      "path": "_qc/frames_beat/B11-85.jpg",
+      "sha256": "3fcd99ad58bfffc7e99d57ca9006f7ccdffbb92f3c2a013ba05406fad4127bfb",
+      "t_s": 106.606,
+      "beat_id": "B11"
+    }
+  ],
+  "notes": "Rebuild run_id 2c495c5f99c840f6adc567ad1aa16613 (2026-09-12). Whole-beat cut of the parent vertical companion (parent_master_sha256 b35bce6f260ee81026a027eba381258f6c0df605408b8a84cfb01f68b65e18d3). 8 beats retained: B00, B01, B03, B04, B05, B06, B09, B11. B03 and B04 media updated from parent vertical rebuild of 2026-09-11 (godot-* dispatch inserted before case block; help sed now at art:56, case aliases at art:55; B04 output updated with smoke+keys note). Audio unchanged for all beats; duration remains 107.375s. B03 mid-sample confirms title bar reads 'art:56' (correct). B04 mid-sample confirms updated 17-line output with smoke+keys footnote, legible command column inside SAFE916. Code beats (B03/B04/B05/B06) inherit the parent's accepted right-edge horizontal bleed on wide monospaced lines — leading command tokens and comment stems remain inside SAFE916; narration covers the trailing detail. Non-fatal compile warnings inherited from parent: skin lint on B00/B11 (ClaudeComposerAsk916 / ClaudeTitleOutro916 are the 916 twins); motion histogram code-cascade at 4/8 (50%, same ratio as before). No new visual regression. Human review pending; no upload, no publish."
+}

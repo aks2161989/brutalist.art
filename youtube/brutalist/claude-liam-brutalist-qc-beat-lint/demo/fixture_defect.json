@@ -1,0 +1,21 @@
+{
+  "metadata": {"title": "Demo Defect", "brand": "claude-liam"},
+  "beats": [
+    {
+      "beat_id": "B00",
+      "shot": {"lane": "bookend", "type": "GRAPHIC", "remotion": {"pattern": "ClaudeComposerAsk"}}
+    },
+    {
+      "beat_id": "B01",
+      "shot": {"lane": "remotion", "type": "GRAPHIC", "remotion": {"pattern": "BrutalistHesitantWriter"}}
+    },
+    {
+      "beat_id": "B03",
+      "shot": {"lane": "remotion", "remotion": {"pattern": "SlateCard"}}
+    },
+    {
+      "beat_id": "B05",
+      "shot": {"lane": "remotion", "remotion": {"pattern": "TextCard"}}
+    }
+  ]
+}

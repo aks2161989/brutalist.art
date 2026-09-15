@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "6c0371edd995440282af8302483b99ec",
+  "source_sha256": "ea0b3e2048fa8d6979e5c10f263c7bfe7701d61a0fe41e99bf33e8487dc41b09",
+  "beat_sheet_sha256": "f1d4362bee72f72895b94e0ca96dbeac1c628001af4cddfffddafd143fb8bec1",
+  "video_sha256": "4fd6fbab9882f7657b6b0fd15ac6c6403fc87f7cd9dacfdad580bbce7d9c6bc8",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames-vertical/start.png",          "sha256": "7e1f924c5b7d9d4dd72560c5cfd95275b11ded331f00ed40114ab9666f1dfe2d"},
+    {"path": "_qc/frames-vertical/bluf.png",           "sha256": "51b0b0ee271a672ece14d1aa490b73917e9eab42fff95d3a61fdf7adb6109bd8"},
+    {"path": "_qc/frames-vertical/framework.png",      "sha256": "15caca4873243e0d9aac9aa963ee968e01dc0fdb26d33dec100202c3dd5908a3"},
+    {"path": "_qc/frames-vertical/worked-cmd.png",     "sha256": "8316fcc2eac1bbf8a4ebbbb81928b792ba2358af5a86a0a6257f01596d212576"},
+    {"path": "_qc/frames-vertical/worked-fellows.png", "sha256": "ff17f9ef5769e6fc4442844b5df5b1415cac085d8d538f9b63646f6f60977bc5"},
+    {"path": "_qc/frames-vertical/mechanism.png",      "sha256": "2fe0b84dbdd406ddc7ae623805cc7bb8a850d15e26bd3c573f847fc8bb6c6409"},
+    {"path": "_qc/frames-vertical/failure.png",        "sha256": "7311c9c4610604424a691e3de6333a4fd983d6b7d34b45fb0c1d779e66af85f5"},
+    {"path": "_qc/frames-vertical/verdict.png",        "sha256": "f3eb410b066d3e56d37d51e8be4935d2ab22ed567bfcea030227e57d3d1a1230"},
+    {"path": "_qc/frames-vertical/your-turn.png",      "sha256": "38d91fd01a29909a628a8dbb8869cf36d7e9ea0eb9cc0cb1105c14d372256e4f"},
+    {"path": "_qc/frames-vertical/end.png",            "sha256": "dee294a8a923c5f2df900afe3be94d449883168e64dddaaf10c33de220e72bf8"},
+    {"path": "_qc/contact_sheet.png",                  "sha256": "3272b12a815f4431039e26958d94fc38146e2cf9e9b39aad01283a41428430c8"}
+  ],
+  "notes": "Re-verification pass for run_id 6c0371edd995440282af8302483b99ec (previous invocation interrupted by Claude usage limit). Vertical 2160x3840 · 200.875s · H.264 + AAC 48kHz stereo · 13MB. Gate-V re-run this session: 24 frames sampled, BLOCKER 0, MAJOR 0. Four key frames inspected by image-capable Read tool: start shows portrait ClaudeComposerAsk916 with 'BRUTALIST · COMMAND: ART APPROVALS' header, 'art approvals' label, 'Selam, Liam' greeting, @HumanitariansAI folder chip — correct portrait layout well within SAFE916 margins; bluf shows portrait BrutalistHesitantWriter mid-animation ('art approvals' / 'signs|' terracotta cursor) — large text two-line stack fills portrait safe area; end frame shows portrait ClaudeTitleOutro 'Brutalist / Command: art / approvals.' with terracotta period and @NikBearBrown handle (OUTRO-LOCK, flagged in README.md). Contact sheet shows all beats in 2160x3840 portrait; content stays within portrait safe boundaries. NOTE: vertical MP4 hash differs from the earlier vertical VISUAL-REVIEW (run_id 33130f4604f444dcbba8262f865884c8) — the vertical was rebuilt between that review and this invocation; current file passes all checks at correct 2160x3840 dimensions and 200.875s duration. LIMITATION: portrait code cards truncate long lines at right edge (accepted, same as prior run; salient content visible). Human review pending."
+}

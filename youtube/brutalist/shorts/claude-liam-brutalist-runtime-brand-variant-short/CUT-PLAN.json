@@ -1,0 +1,17 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "brand_variant.py scaffolds one canonical beat sheet into three audience variants (Claude, NikBearBrown, Humanitarians AI). It stamps deterministic metadata and a rewrite to-do list; it never touches the canonical or rewrites narration.",
+  "parent_master_sha256": "030d552849d7d9f9836d7fbf048a3bdee6280b816fe675b395c8f6c7e98f5117",
+  "kept_beats": ["B00", "B01", "B02", "B04", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B03", "reason": "Full argparse --help surface belongs in the 16:9 long; the Short states the CLI interface via the pipeline framework and verdict."},
+    {"beat_id": "B05", "reason": "The 15-line AUD lookup table is a configuration detail read; the worked example already names the three audience keys and two shipping voices."},
+    {"beat_id": "B06", "reason": "get_brand_dir() reel-vs-lecture routing is an internal-mechanism detail; the Short only needs that a sibling folder is created without touching the canonical."},
+    {"beat_id": "B07", "reason": "The 25-line main() body walk-through (existence check, stamp block, strip-stale-timings loop) is code-level detail belonging in the long."},
+    {"beat_id": "B08", "reason": "The refusal cases (exit 1, --force override, missing beat_sheet.json) are secondary; the verdict already states the safety guarantee."},
+    {"beat_id": "B10", "reason": "Detailed Your Turn exercise (ADDED/CHANGED/POPPED diff prompt) is a long-form assignment; the verdict already summarises what to do next."}
+  ],
+  "cut_first_review": "Six kept beats form a coherent narrative: (B00) Liam introduces the ask — three audience variants without touching the canonical. (B01) HesitantWriter walks back the misconception that brand_variant.py rewrites narration; it stamps metadata. (B02) The pipeline framework shows reel + audience → RESOLVE → STAMP → TODO → EMIT. (B04) One concrete worked example — canonical → hai — shows the actual metadata block written to disk. (B09) Verdict lists the whole surface in the order it runs and states the safety guarantee. (B11) Outro. No numbered transitions broken; no dangling references to dropped beats; the one key caveat (canonical never modified) is present in B00, B02, and B09. B04 was re-rendered in the parent (2026-09-13T18:01:13) with corrected code formatting; the Short reuses the updated native portrait clip.",
+  "planned_duration_s": 92.3,
+  "rewrite_reason": null
+}

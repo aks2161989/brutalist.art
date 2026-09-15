@@ -1,0 +1,322 @@
+{
+  "number": 16,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26",
+  "beats": 28,
+  "sheet_sha256": "98d9fd46c78cbb9ca492538f17199521e87abc97dadd5ddcc733f8ce2bb9e83c",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "362.448000",
+  "audio_stream": true,
+  "declared_slates": [
+    "B06",
+    "B10",
+    "B16",
+    "B20",
+    "B24"
+  ],
+  "findings": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "A plain photograph of a yellow sticky note on a wooden desk, hand-lettered with the baseline prompt (return JSON, exactly two keys, answer nonblank, sources nonempty, no prose outside the object). Ken Burns pushes toward the 'exactly two keys' line.",
+      "path": "pantry/B06.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B10",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "A captured terminal session showing six tests passing on the lesson's validator module \u2014 six green dots, six PASSED lines, one summary. Ken Burns pushes toward the '6 passed' summary line.",
+      "path": "pantry/B10.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B16",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of two hand-lettered index cards. Left card: 's1 \u2014 The color is blue.' Right card: 'answer: The fixture says red \u00b7 sources: [s1] \u00b7 ACCEPTED'. Ken Burns pushes toward the ACCEPTED stamp.",
+      "path": "pantry/B16.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat photograph of a small whiteboard: two columns labelled 'format accepted' and 'evidence contradicted'; three rows labelled 'not json', 'unknown s', 'accepted-but-wrong'; the third row's cells split \u2713 / \u2717. Ken Burns pushes toward that row.",
+      "path": "pantry/B20.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B24",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Flat overhead photograph of an open lab notebook on a desk. Left page: five numbered questions (development). Right page: 'HELD-OUT \u2014 do not open until change log is closed' under masking tape. Ken Burns pushes toward the taped page.",
+      "path": "pantry/B24.png",
+      "exists": false,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "B06",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "A plain photograph of a yellow sticky note on a wooden desk, hand-lettered with the baseline prompt (return JSON, exactly two keys, answer nonblank, sources nonempty, no prose outside the object). Ken Burns pushes toward the 'exactly two keys' line.",
+      "path": "pantry/B06.png",
+      "exists": false
+    },
+    {
+      "beat": "B10",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "A captured terminal session showing six tests passing on the lesson's validator module \u2014 six green dots, six PASSED lines, one summary. Ken Burns pushes toward the '6 passed' summary line.",
+      "path": "pantry/B10.png",
+      "exists": false
+    },
+    {
+      "beat": "B16",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat overhead photograph of two hand-lettered index cards. Left card: 's1 \u2014 The color is blue.' Right card: 'answer: The fixture says red \u00b7 sources: [s1] \u00b7 ACCEPTED'. Ken Burns pushes toward the ACCEPTED stamp.",
+      "path": "pantry/B16.png",
+      "exists": false
+    },
+    {
+      "beat": "B20",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Flat photograph of a small whiteboard: two columns labelled 'format accepted' and 'evidence contradicted'; three rows labelled 'not json', 'unknown s', 'accepted-but-wrong'; the third row's cells split \u2713 / \u2717. Ken Burns pushes toward that row.",
+      "path": "pantry/B20.png",
+      "exists": false
+    },
+    {
+      "beat": "B24",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Flat overhead photograph of an open lab notebook on a desk. Left page: five numbered questions (development). Right page: 'HELD-OUT \u2014 do not open until change log is closed' under masking tape. Ken Burns pushes toward the taped page.",
+      "path": "pantry/B24.png",
+      "exists": false
+    }
+  ],
+  "code_displays": [
+    {
+      "beat": "B08",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/02/validate.py",
+        "code": "import json\n\ndef validate(text, source_ids):\n    try:\n        data = json.loads(text)\n    except (ValueError, TypeError):\n        return False\n    return (isinstance(data, dict)\n        and set(data) == {\"answer\", \"sources\"}\n        and isinstance(data[\"answer\"], str)\n        and bool(data[\"answer\"].strip())\n        and isinstance(data[\"sources\"], list)\n        and bool(data[\"sources\"])\n        and all(isinstance(s, str) and s in source_ids\n                for s in data[\"sources\"]))",
+        "sparkLine": "Parse. Shape. Keys. Types. Membership.",
+        "codeSize": 0.045,
+        "sparkSize": 26
+      },
+      "intent": "The validate() function as an Onda-style code card in the Claude cream skin. Spark line names the mechanism."
+    },
+    {
+      "beat": "B13",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/02/source_fixture.py",
+        "code": "# The passage the validator never sees.\nsource_text = {\"s1\": \"The color is blue.\"}\n\n# The registry it does see.\nsource_ids  = {\"s1\"}\n\n# validate() checks membership,\n# not the words at the address.",
+        "sparkLine": "Registry membership \u2260 passage support.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin showing the source_text dictionary and the allowed identifier set beside it; spark line names the gap."
+    },
+    {
+      "beat": "B14",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/02/accepted_response.json",
+        "code": ">>> response = (\n...   '{\"answer\":\"The fixture says red\",'\n...   ' \"sources\":[\"s1\"]}'\n... )\n>>> validate(response, {\"s1\"})\nTrue\n\n# source_text[\"s1\"] == \"The color is blue.\"",
+        "sparkLine": "Every rule succeeds. The claim contradicts the source.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin showing the accepted-but-contradicting response object; spark line names the gap."
+    },
+    {
+      "beat": "B18",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "chapters/02/pass_rate.py",
+        "code": "def pass_rate(responses, source_ids):\n    if not responses:\n        raise ValueError(\n            \"An empty experiment has no pass rate\"\n        )\n    return sum(\n        validate(r, source_ids) for r in responses\n    ) / len(responses)",
+        "sparkLine": "No denominator, no rate. Refuse the number.",
+        "codeSize": 0.052,
+        "sparkSize": 26
+      },
+      "intent": "Code card in Claude cream skin showing pass_rate() with the empty-experiment guard; spark line names the design choice."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B00.mp4",
+      "seconds": 13.4162112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B01.mp4",
+      "seconds": 8.5631056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B02.mp4",
+      "seconds": 2.2166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B03.mp4",
+      "seconds": 9.9633331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B04.mp4",
+      "seconds": 10.2433331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B05.mp4",
+      "seconds": 10.336666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/clips/B06.mp4",
+      "seconds": 11.112499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B07.mp4",
+      "seconds": 2.2399999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B08.mp4",
+      "seconds": 9.8933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B09.mp4",
+      "seconds": 10.336666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/clips/B10.mp4",
+      "seconds": 11.2291669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B11.mp4",
+      "seconds": 11.783333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B12.mp4",
+      "seconds": 2.0999999999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B13.mp4",
+      "seconds": 10.1966669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B14.mp4",
+      "seconds": 11.5733331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B15.mp4",
+      "seconds": 10.43,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/clips/B16.mp4",
+      "seconds": 9.0125,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B17.mp4",
+      "seconds": 2.73,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B18.mp4",
+      "seconds": 10.0566669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B19.mp4",
+      "seconds": 10.756666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/clips/B20.mp4",
+      "seconds": 9.975,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B21.mp4",
+      "seconds": 2.8,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B22.mp4",
+      "seconds": 10.2433331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/B23.mp4",
+      "seconds": 11.1533331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/clips/B24.mp4",
+      "seconds": 8.6333331,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/BVDT.mp4",
+      "seconds": 13.463333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/BHTF.mp4",
+      "seconds": 15.3531056,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-chapter-02-prompt-contracts-and-evaluation-45485b26-v-1282935b9a26/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/16-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

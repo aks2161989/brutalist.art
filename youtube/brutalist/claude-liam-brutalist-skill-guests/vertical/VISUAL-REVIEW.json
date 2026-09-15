@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "e0065af65f614cd19be5cc0bb8820e54",
+  "source_sha256": "d38fbfbac01efbc0d68adff66c9bc86847f06f7aeca8e5bb564453c34874372e",
+  "beat_sheet_sha256": "6a7da78176e175362fededdc7da789ace453b2b43eb0e41100b985979bc8f5cf",
+  "video_sha256": "3d99d32a70dfc8189eeae5f0e673a9a25e6f203118553ee41d4c115598868880",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "25cda837c295c0a9de0f6718ffa325812d66fd0d97f80636d38a722bedc06921"
+    },
+    {
+      "path": "_qc/heroes/B00_50.jpg",
+      "sha256": "2ce52fc16453dbf3218985f35ca0898861c35924bdd7db244558627271d2edac"
+    },
+    {
+      "path": "_qc/heroes/B01_50.jpg",
+      "sha256": "9a85f3a4e82f3d302c7486aab6d56fcc56138255c148922004a7e74f4dc03d50"
+    },
+    {
+      "path": "_qc/heroes/B09_50.jpg",
+      "sha256": "3ba22c0a773576efbb0b48634dcdaac789659dac288b4d59471daccecda99c39"
+    },
+    {
+      "path": "_qc/heroes/B10_50.jpg",
+      "sha256": "0ba041c76874781e4a60d02643042923c1af439966c46120db3866c236d223c4"
+    },
+    {
+      "path": "_qc/heroes/B11_50.jpg",
+      "sha256": "6c9d1379804dae95759d9729180481adb429cc88a76fec60a0a754445a9d077b"
+    }
+  ],
+  "notes": "Portrait companion re-verified for run_id e0065af65f614cd19be5cc0bb8820e54. Gate V run fresh on vertical export: 24 frames, 0 BLOCKER, 0 MAJOR. Hero frames re-extracted at 50% midpoints and inspected with the image-capable Read tool. B01 portrait: BrutalistHesitantWriter916 — 'The guests skill / prunes the / fellows spine. / A board member / is not a fellow.' in five portrait-reflowed lines, large serif (fontSize 130, lineSpacing 2.4), fills SAFE916 well above 55% coverage threshold. B11 portrait: ClaudeTitleOutro916 — 'The guests Skill.' with @NikBearBrown handle within portrait safe area; safe-area guide lines visible at top and bottom edges as expected. Native 2160×3840 — not a center-crop of landscape. metadata.channel_title deliberately omitted per feedback_channel_title_portrait_bleed. No captions, no unresolved slates. Human review pending."
+}

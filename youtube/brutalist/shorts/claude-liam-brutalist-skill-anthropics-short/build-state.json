@@ -1,0 +1,25 @@
+{
+  "status": "ready",
+  "run_id": "f37e6639e4514e15aeb0321e42e9f17d",
+  "source_sha256": "68d5048370de87f2e8ecbac251c56173c85d09d1121a720914181ceb12a5040e",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/exports/short/claude-liam-brutalist-skill-anthropics-short.mp4",
+  "sha256": "d26c2ffcba8d42cac113bc3fd7caa697e977b7909477313e2b05b0fd22c691cf",
+  "duration_s": 121.75,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/media/B00.mp4": "fedac7f7b9ab72f39fc6813c1934430dc841efa402059cafb24ff2f4841bb3f1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/media/B01.mp4": "a49b891d4426f13a09829b5bd8abb4bec11813e33b1474212d79091fb7950ca9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/media/B03.mp4": "581412489079d257212d2e8fdc4aab4d8cbb15741ba9b68c799a55bf6f13d8b1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/media/B04.mp4": "5bf82008254cd3e07ff8c21275527aea75a81ad8f8edf0fd21ab7370282d9c0a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/media/B07.mp4": "c12553c2ffbf76b289c6bd8f7e5c22b1fefabef143cf77c1836172c2050c547c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/media/B08.mp4": "69b9ffccf187e7f75b6ef1d1b608724cf728fa787e0a7190be357224f8c57068",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/media/B10.mp4": "29fb28cbbc87fedfd5e0a20c6e8c0fbc08f0cf5db3ad5496bf99f60f3f6152cc",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/mp3/beat-B00.mp3": "5f7234f2dc29c20c3ca9ef7782d8772dbbd17c1e0902fec6aefd394265e425a4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/mp3/beat-B01.mp3": "2b1609c69161b197b414c7e338babc91c502cc964403e19c1f9677390f9a80c7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/mp3/beat-B03.mp3": "b03bba2e3427399ce308c1869da5325b28b50774feba63b98eca5d888aace344",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/mp3/beat-B04.mp3": "871fd8962bd88a3921988e3092a9f97046c1e460678030250f3405f105db85c8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/mp3/beat-B07.mp3": "34993087b681332d22bc1f9fe1213fc9f3ffdef79e25de3dd9d187583da4dad8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/mp3/beat-B08.mp3": "de2a6ed2847768bc83a7d09466388ba6e0e362db0fe1cc6b1cd9756cf16bd44d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-anthropics-short/mp3/beat-B10.mp3": "5616a4eb60c4956bf012e6412faeb6123832385eea4d31054471d43f9a6b8d8f"
+  },
+  "at": "2026-09-11T19:57:23.825631+00:00"
+}

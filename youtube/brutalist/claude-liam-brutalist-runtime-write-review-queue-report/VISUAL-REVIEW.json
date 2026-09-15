@@ -1,0 +1,93 @@
+{
+  "schema": "visual-review/1",
+  "run_id": "aef36acf6a354924acd1af29d9d319cf",
+  "reviewed_by": "claude-sonnet-4-6",
+  "review_date": "2026-09-14",
+  "gate_v": {
+    "landscape": {"blocker": 0, "major": 0, "frames_sampled": 24, "result": "PASS"},
+    "vertical":  {"blocker": 0, "major": 0, "frames_sampled": 24, "result": "PASS"}
+  },
+  "landscape": {
+    "mp4_sha256": "e4946432a7e44d63ff3ca39082b915b29c20dc37537c605be5d280767f16e667",
+    "duration_s": 222.5,
+    "dimensions": "3840x2160",
+    "frames": [
+      {"beat": "B00", "frac": 50,  "ts_s": 8.917,   "sha256": "348a82f23fa946f5ab4939cdd767aa4402d119a853a9c08f8eb0130a062b817a"},
+      {"beat": "B00", "frac": 85,  "ts_s": 15.158,  "sha256": "fb33579162a2bcaeba1714b7fda8defd8044c946d5ab20fb6cfc288bc687b2fa"},
+      {"beat": "B01", "frac": 50,  "ts_s": 27.812,  "sha256": "ebe7e8c18e6a2a0eef13489c60681d625218f83bbfbe97c01ad925df14823678"},
+      {"beat": "B01", "frac": 85,  "ts_s": 34.798,  "sha256": "bea1461593a03bb0810cc7308cda61c9c87ed036192b2327fed5c96073746bab"},
+      {"beat": "B02", "frac": 50,  "ts_s": 47.729,  "sha256": "ab8fc9182c46225c8f195124cf2f89f88974de8ca1b5e792816a22d0814221fd"},
+      {"beat": "B02", "frac": 85,  "ts_s": 54.685,  "sha256": "8f6d43b14bdf50e301d1d815e949d9e00a96770fde9815712a76e9c20c0fab68"},
+      {"beat": "B03", "frac": 50,  "ts_s": 67.812,  "sha256": "d76f18f2a47236ae2234fc39550dcec73493d981a7c7e463bb7c3845b37aca66"},
+      {"beat": "B03", "frac": 85,  "ts_s": 74.915,  "sha256": "fbb0d84815be533a97c4d9d4259b7b60ee9747edc3ad5fc9f2bf4e14926833a3"},
+      {"beat": "B04", "frac": 50,  "ts_s": 87.333,  "sha256": "bc52f4068b5e9ef6cf688a483d4786a9919a675896e53dfe817d5ae5e3fd9f97"},
+      {"beat": "B04", "frac": 85,  "ts_s": 93.896,  "sha256": "90fea781a8f150beaf6c2465f3d4f7c0c61a4c3e1f017f54cd7804680b3f4194"},
+      {"beat": "B05", "frac": 50,  "ts_s": 106.458, "sha256": "f5f89e4f5c43e98392ccaf48fce3202e080756813b821b2d362244a8c8b00cba"},
+      {"beat": "B05", "frac": 85,  "ts_s": 113.283, "sha256": "45d56cc05b1728292da299b247aad4e03ebc4dcfbf9b635056a490e0bec66f51"},
+      {"beat": "B06", "frac": 50,  "ts_s": 126.5,   "sha256": "0799dc031501635de5019edfe0898776358f553abd6d6e8c118dfd7c41605cea"},
+      {"beat": "B06", "frac": 85,  "ts_s": 133.704, "sha256": "cfcc46e8abadca48b400a359837d5c1fc472f558fdaaac390b2b80532cc42b7e"},
+      {"beat": "B07", "frac": 50,  "ts_s": 146.833, "sha256": "84d96a787d8d564fc9f7768038e8951d6ab54a5292558d4048f4efc81d3b8cbc"},
+      {"beat": "B07", "frac": 85,  "ts_s": 153.862, "sha256": "fa5c833827d0cf41c8f4c55106a1a825a6239eebe084a992ce996bc47422479d"},
+      {"beat": "B08", "frac": 50,  "ts_s": 166.438, "sha256": "f4fe9e27f21d9a63fba732281bb0b3dca9767c62621c7277ec5cc72348cc1c66"},
+      {"beat": "B08", "frac": 85,  "ts_s": 173.131, "sha256": "e797326660cb28845a9c22e221585aa721d590a6385c4843fd93ab13d92c3c61"},
+      {"beat": "B09", "frac": 50,  "ts_s": 186.25,  "sha256": "795ec2a9e45284a74f8f0fb56f4205c4686d01f3f27e8382fc36efe10237721a"},
+      {"beat": "B09", "frac": 85,  "ts_s": 193.425, "sha256": "f9a177b11277d7e6b12a2fa50b4d5afc6a03973e4dd69dc626f7410dc9dae1b0"},
+      {"beat": "B10", "frac": 50,  "ts_s": 207.125, "sha256": "c1517981242f879bc9270ba0d59e09449a75bfde33c0f6fd8b327e513ad6373f"},
+      {"beat": "B10", "frac": 85,  "ts_s": 214.562, "sha256": "953d757a2378ea8de6d7147902ae50ccbc5e71e64c86c95b9e966d253bce6bae"},
+      {"beat": "B11", "frac": 50,  "ts_s": 220.125, "sha256": "5517cc8cd03e8f71b858672b4694db5e6d8645740462d854e575e6bb60629e2b"},
+      {"beat": "B11", "frac": 85,  "ts_s": 221.787, "sha256": "06bd1ca82280074dda59406e0b8948d06b8f530f842a0c7157e40fcdc8990b46"}
+    ]
+  },
+  "vertical": {
+    "mp4_sha256": "e4fd52e7ca0de75f9f61371aaf0f8fafd703c82e8d7905c1c1dbf2195514eb5f",
+    "duration_s": 222.5,
+    "dimensions": "2160x3840",
+    "frames": [
+      {"beat": "B00", "frac": 50,  "ts_s": 8.917,   "sha256": "d83d4c1fe9ee5c3dca5f968a9edf420222f9b2dc5dfc78dab2902bbef3cbb1f4"},
+      {"beat": "B00", "frac": 85,  "ts_s": 15.158,  "sha256": "59962b77cd6f2f5b610ba3deb3607e9d9f9fa42a2ca3659220b57f71f5998ae4"},
+      {"beat": "B01", "frac": 50,  "ts_s": 27.812,  "sha256": "6b62ddf606cf807782a2c5b84a69a117704c7ab8c44f4fdc6985459559918e22"},
+      {"beat": "B01", "frac": 85,  "ts_s": 34.798,  "sha256": "294671192b9761e00e356837075836c33b28968efa0a83dc3ce86eb389a85296"},
+      {"beat": "B02", "frac": 50,  "ts_s": 47.729,  "sha256": "fabc348835b2ec83eee774cee15ad8efef133365981611a9572877303eafe674"},
+      {"beat": "B02", "frac": 85,  "ts_s": 54.685,  "sha256": "8757cb1ac9f1756ddf0aa063bddb77933cff44809a816d3600fd3fbdbd1d92ad"},
+      {"beat": "B03", "frac": 50,  "ts_s": 67.812,  "sha256": "04d4035bee06b6c4f7535861ddb115f2f4edbe10e652ef68425ea1939f35c823"},
+      {"beat": "B03", "frac": 85,  "ts_s": 74.915,  "sha256": "605a15dd0e164657d9646d8e2d6172a6c925d5671c58616c83345aef1f483898"},
+      {"beat": "B04", "frac": 50,  "ts_s": 87.333,  "sha256": "d9cd55ecee70dfe30a88df186b85b5c04a5e9d2ea9799593aaa374cb705cae13"},
+      {"beat": "B04", "frac": 85,  "ts_s": 93.896,  "sha256": "fed99b14b6bec0bcc1e25d8bd35937b46e93de9361b5273d351b935d9bf6052e"},
+      {"beat": "B05", "frac": 50,  "ts_s": 106.458, "sha256": "1d6d45ad46e873b82f79b72cdb3b17630c41a96d360d63b60a6e7da3f3f21005"},
+      {"beat": "B05", "frac": 85,  "ts_s": 113.283, "sha256": "c9f6e3b5fa19125fbe6a87527f6939e1bd63527208caffb84af55fc61dc8b0bf"},
+      {"beat": "B06", "frac": 50,  "ts_s": 126.5,   "sha256": "6b4261a5a52d32c2ba05eb5ec81d7b005f8dc851a61eef67a548c5f7982b4ff6"},
+      {"beat": "B06", "frac": 85,  "ts_s": 133.704, "sha256": "74606f358302d41896c479e846b3d45370a26548304455d5560fccd6bb70d989"},
+      {"beat": "B07", "frac": 50,  "ts_s": 146.833, "sha256": "69b03219113caca21b92ea57c69335e50d44f736ab3182fdaefa29a180064de3"},
+      {"beat": "B07", "frac": 85,  "ts_s": 153.862, "sha256": "9978b902f9578ef692c30bd3f1980886b68ca297b148d590f2d7d7e34f2a9c33"},
+      {"beat": "B08", "frac": 50,  "ts_s": 166.438, "sha256": "ef7ce0e447539565adcaaef76d98e065262e1dc9c0d9e3a2a346bf2bb6b00cf0"},
+      {"beat": "B08", "frac": 85,  "ts_s": 173.131, "sha256": "9bff79098d772243c555cbdcbbc877d0fa3be4f7d4c2193b86cfc926f57a3baf"},
+      {"beat": "B09", "frac": 50,  "ts_s": 186.25,  "sha256": "3028f8687349269dc2d7cd81403058ba58e3bf763ab6bb9d4b1a1050aeb4d62c"},
+      {"beat": "B09", "frac": 85,  "ts_s": 193.425, "sha256": "53834e3d2e455e9b0c71ebcaf2c01e1c7ba82a30c9bebc3d7d0cdbfbf0d0fc08"},
+      {"beat": "B10", "frac": 50,  "ts_s": 207.125, "sha256": "ed0828b09a76490dfce976450f508faeff6dc68a458447a641a2416b1ee87902"},
+      {"beat": "B10", "frac": 85,  "ts_s": 214.562, "sha256": "aeb70a5f4864d3181badf630668ec58fad17503e51dd2e64cbf5bfcad0c7f622"},
+      {"beat": "B11", "frac": 50,  "ts_s": 220.125, "sha256": "f8bbf870226a548f286b7345ff5be060072e93fae591bbf8c6a452fe6739b58d"},
+      {"beat": "B11", "frac": 85,  "ts_s": 221.787, "sha256": "261241787d5ecdd2dd9a1a61097e2491010c0fdef3ec87e70dded31666cea99a"}
+    ]
+  },
+  "beats_reviewed": [
+    {"beat": "B00", "verdict": "PASS", "notes": "ClaudeComposerAsk916 — Merhaba greeting, command types, output lines. Segment wraps within portrait safe area."},
+    {"beat": "B01", "verdict": "PASS", "notes": "BrutalistHesitantWriter916 — 6-line broken filename (write_review/queue_report.py). Terracotta accent on generates→formats, inspects→reads corrections. Coverage 60-74% portrait. fontSize=120 needed for adequate coverage without edge-bleed."},
+    {"beat": "B02", "verdict": "PASS", "notes": "ClaudeCodeBeat916 — pipeline overview as Python comment block. Two inputs, one output structure."},
+    {"beat": "B03", "verdict": "PASS", "notes": "ClaudeCodeBeat916 — argument parsing and JSON schema reading code."},
+    {"beat": "B04", "verdict": "PASS", "notes": "ClaudeCodeBeat916 — main loop with str(n) key lookup, terracotta accent."},
+    {"beat": "B05", "verdict": "PASS", "notes": "ClaudeCodeBeat916 — pantry flag scanner, three legacy spellings comment."},
+    {"beat": "B06", "verdict": "PASS", "notes": "SkillTeardownMechanism916 — AUDIT.md structure sections, hardcoded verdict label."},
+    {"beat": "B07", "verdict": "PASS", "notes": "ClaudeCodeBeat916 — failure mode catalogue, no try-except policy."},
+    {"beat": "B08", "verdict": "PASS", "notes": "SkillTeardownMechanism916 — limits section: 12 frames at 70%, pantry metadata not pixels, quoted scope statement."},
+    {"beat": "B09", "verdict": "PASS", "notes": "ClaudeVerdictArtifact916 — 3-point verdict card. Ink anchors at top:5.5%/bottom:7% extend bounding box for Gate V fill check."},
+    {"beat": "B10", "verdict": "PASS", "notes": "ClaudeComposerAsk916 — Your Turn handoff. Segment wraps 2 lines within portrait safe area after right:PAD_X fix."},
+    {"beat": "B11", "verdict": "PASS", "notes": "ClaudeTitleOutroHAI916 — Liam in for Bear, @HumanitariansAI. Correctly uses HAI variant."}
+  ],
+  "fixes_applied": [
+    "BrutalistHesitantWriter.tsx: portrait scale formula patched — scale collapsed to 0.5625 on 9:16; fixed to Math.min(w/1080,h/1920)",
+    "ClaudeVerdictArtifact916.tsx: ink anchors at top:5.5%/bottom:7% added for Gate V fill check",
+    "ClaudeComposerAsk.tsx: right:PAD_X + wordBreak:break-word added to segment and topic divs — missing right constraint caused 44px right-edge bleed in portrait",
+    "B01 portrait: text split to 6 shorter lines, fontSize 150→120 for coverage without edge-bleed",
+    "Root.tsx: SkillTeardownMechanism916 portrait alias registered (1080×1920)"
+  ]
+}

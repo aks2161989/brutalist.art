@@ -1,0 +1,321 @@
+{
+  "number": 8,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does",
+  "beats": 42,
+  "sheet_sha256": "f66c5ee2557742270c742e3a7b03bbf77f119aad89565d26abfb066421675ac1",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/mp4/claude-liam-neu-info7375-part1-what-a-language-model-does-slate.mp4",
+  "stale": true,
+  "width": 3840,
+  "height": 2160,
+  "duration": "492.221333",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [
+    {
+      "beat": "B17",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Screenshot of a raw chat transcript log showing role markers as literal text.",
+      "path": "pantry/B17.png",
+      "exists": true,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Terminal showing llm_scale.py output with the reading_years_by_rate block.",
+      "path": "pantry/B24.png",
+      "exists": true,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B34",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "An AI-generated mechanical parrot -- a literal 'stochastic parrot' -- as the concept's visual. Concept illustration, not documentary evidence of the paper itself.",
+      "path": "pantry/B34.mp4",
+      "exists": true,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "B17",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Screenshot of a raw chat transcript log showing role markers as literal text.",
+      "path": "pantry/B17.png",
+      "exists": true
+    },
+    {
+      "beat": "B24",
+      "category": "replace-with-code-data-or-diagram",
+      "intent": "Terminal showing llm_scale.py output with the reading_years_by_rate block.",
+      "path": "pantry/B24.png",
+      "exists": true
+    },
+    {
+      "beat": "B34",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "An AI-generated mechanical parrot -- a literal 'stochastic parrot' -- as the concept's visual. Concept illustration, not documentary evidence of the paper itself.",
+      "path": "pantry/B34.mp4",
+      "exists": true
+    }
+  ],
+  "code_displays": [],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B00.mp4",
+      "seconds": 9.589999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B01.mp4",
+      "seconds": 11.620000000000001,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B02.mp4",
+      "seconds": 5.46,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B03.mp4",
+      "seconds": 1.7966668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B04.mp4",
+      "seconds": 8.020833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B05.mp4",
+      "seconds": 7.956666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B06.mp4",
+      "seconds": 7.56,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B07.mp4",
+      "seconds": 6.328255499999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B08.mp4",
+      "seconds": 2.2399999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B09.mp4",
+      "seconds": 8.049999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B10.mp4",
+      "seconds": 5.8041669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B11.mp4",
+      "seconds": 9.6362112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B12.mp4",
+      "seconds": 7.262499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B13.mp4",
+      "seconds": 2.1233330999999995,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B14.mp4",
+      "seconds": 10.593333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B15.mp4",
+      "seconds": 6.824999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B16.mp4",
+      "seconds": 6.824999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/clips/B17.mp4",
+      "seconds": 8.6041669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B18.mp4",
+      "seconds": 1.8433330999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B19.mp4",
+      "seconds": 8.5862112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B20.mp4",
+      "seconds": 6.7375,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B21.mp4",
+      "seconds": 5.833333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B22.mp4",
+      "seconds": 10.78,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22R",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B22R.mp4",
+      "seconds": 5.716438699999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B23.mp4",
+      "seconds": 2.1466668999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/clips/B24.mp4",
+      "seconds": 6.824999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B25",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B25.mp4",
+      "seconds": 10.6633331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B26",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B26.mp4",
+      "seconds": 7.758333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B27",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B27.mp4",
+      "seconds": 6.2416669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B28",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B28.mp4",
+      "seconds": 2.0999999999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B29",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B29.mp4",
+      "seconds": 6.6499999999999995,
+      "status": "sampled"
+    },
+    {
+      "beat": "B30",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B30.mp4",
+      "seconds": 8.7733331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B31",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B31.mp4",
+      "seconds": 10.2662112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B32",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B32.mp4",
+      "seconds": 7.554166899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B33",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B33.mp4",
+      "seconds": 1.8199999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B34",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B34.mp4",
+      "seconds": 6.3291669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B35",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B35.mp4",
+      "seconds": 7.6416669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B36",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/B36.mp4",
+      "seconds": 12.413333099999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B37",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/manim/B37.mp4",
+      "seconds": 7.35,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/BVDT.mp4",
+      "seconds": 13.929999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/BHTF.mp4",
+      "seconds": 10.78,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-info7375-part1-what-a-language-model-does/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/08-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

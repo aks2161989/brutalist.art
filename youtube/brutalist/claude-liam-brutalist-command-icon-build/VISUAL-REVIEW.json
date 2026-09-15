@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "8e9287fa1b3f47ffb77eeee7489c6edd",
+  "source_sha256": "270a197302ee6566a3699d37fd44053413a708db6706c3bc1a72387d80f19d8e",
+  "beat_sheet_sha256": "3e188c586b62aa24c2381130cd11d2c141579c8180635fa68ea9beded3a07d2f",
+  "video_sha256": "b1af8bf0641cc96b51286f158752f44f726cc4b745f2d1c40752e5c320ea9d62",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet_landscape.png", "sha256": "6a243bf5a7f5a558a3b4aaa9a5c9d73e7f6abdfff0045146f70f8e2596a00f7e"}
+  ],
+  "notes": "Re-verified for run_id 8e9287fa1b3f47ffb77eeee7489c6edd (re-triggered: changed source/feedback SHAs; renders unchanged). Landscape 4K master (3840x2160, 253.04 s) and 12-beat contact sheet inspected visually via Read tool. Every beat confirmed: B00 ClaudeComposerAsk cold open 'Merhaba, Liam' greeting with answered result lines; B01 BrutalistHesitantWriter corrects 'downloads new icons' → 'cuts existing icons' on screen; B02 real bash case block at art:64-66; B03 du -sh table (12 GB, 9.1 GB material-design-icons); B04 four rules verbatim from build_icon_set.py:14-27; B05 44 pt math constants (2×528/24=44); B06 verbatim --dry-run stdout (1749/4134/1045/26/376=7330); B07 shipped artifacts (icons/svg/, icons.json, NOTICE.md); B08 four principled exclusions with rule cited for each; B09 ClaudeVerdictArtifact 7 surface lines; B10 Your Turn composer with audit prompt; B11 ClaudeTitleOutro restating title with hardcoded @NikBearBrown handle per OUTRO-LOCK. Video SHA and contact sheet SHA unchanged from prior build (no re-render performed; source files for art and build_icon_set.py match SOURCE-SNAPSHOT.json SHAs). Gate V clean (0 BLOCKER / 0 MAJOR). Human review pending."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "3d80d6c77f6e4febae4b0621b229c773",
+  "source_sha256": "771cab1ae69c6470a94705649018576fca8523c0a3b8eef1373abba1f27d2eab",
+  "beat_sheet_sha256": "20f9a97469bfd3d7a1659b097025ed9c6de9c84becd9a323aaac3731a4fa0926",
+  "video_sha256": "73f730baa0e438bef99eddc9f5970b3fbd55afbd94967cd7948930fd5e818170",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "6c2939456f79a5036663d8e6cdd504325ac6f7da4aeb6bbf2e401bb7209c38d3"},
+    {"path": "_qc/frames/B00_85pct.png", "sha256": "173cd95c9e66748854557bef40766ed25eb69fafba4d4ef70192b7d54377c125"},
+    {"path": "_qc/frames/B01_85pct.png", "sha256": "18e99f6ffdabeabab2a312c1545d7b08c2d4f85582864515433249e89ba72c92"},
+    {"path": "_qc/frames/B10_85pct.png", "sha256": "693f44fcce9fe837ff9a300b5021f8c3096bff585208d67f28704c19dd973cf8"}
+  ],
+  "notes": "Vertical 2160x3840 native, 228.9s, 11/11 beats VIDEO, no slates. Re-reviewed under run_id 3d80d6c7 (2026-09-11): source_sha256 changed from 9189aa89 to 771cab1a because ai-explainer/SKILL.md and other framework skills were updated; the anthropics SKILL.md subject file is unchanged (SHA 79f196f3). All QC frame hashes, export SHA, and beat clip SHAs verified byte-for-byte against the prior approved build — all match. Re-opened B00_85pct.png (ClaudeComposerAsk916 portrait cold open — 'BRUTALIST · SKILL TEARDOWN' eyebrow, 'The anthropics Skill' segment title, 'Hej, Liam' greeting, composer ask with three result lines, @HumanitariansAI chip, terracotta rule bottom-left inside safe area), B01_85pct.png (BrutalistHesitantWriter916 6-line portrait reflow — 'The anthropics skill is a beat. It reads the artifact, not the docs.' in corrected state, serif, canvas fill confirmed), B10_85pct.png (AntOutro916 portrait — 'BRUTALIST · EPISODE 05' eyebrow, terracotta rule, 'The anthropics Skill.' with terracotta period filling portrait safe area, '@HumanitariansAI', 'LIAM, IN FOR BEAR.'). No new defects. Source framework changes already satisfied by existing build. Full-length native portrait (not a cropped Short). Gate V clean. Compiler atomic verified.json present and unchanged. Known limitations: same self-referential constraint as landscape (git-explainer/ai-paper sibling skills absent — B07 names it); the vertical B01 uses portrait-reflowed 6-line layout (BrutalistHesitantWriter916 with portrait-aware scale patch) deviating slightly from landscape phrasing to satisfy FILL_MIN 0.55 law on 9:16 canvas — documented in CHECKS-REPORT.md. Human review pending."
+}

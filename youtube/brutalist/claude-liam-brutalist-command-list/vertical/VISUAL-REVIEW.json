@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "c619fb86bdcd40079fc05e9378e8bbeb",
+  "source_sha256": "f99dc63da9c6bb5c9c229cf937a87c2557fb78b30421641af094471eb38f0286",
+  "beat_sheet_sha256": "d7624cfff979fef0d0da0667b8924609b5a901415d426be00b67f034d780f335",
+  "video_sha256": "77351a7c1e0b79dc268d2968dd6fbc4e2f37504651b205a189a201742d6eab25",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "f6bbd8465d266b678719295e5ca4357a360529333b8503c71e8ef06ae9441349"
+    }
+  ],
+  "notes": "Vertical 2160x3840, 196.9s, native 4K portrait (not a cropped landscape). Rebuilt for run_id c619fb86 after source art grew from 16 to 20 skills (godot-waikthrough, godot-gamedev, godot-gdd, riff added; role descriptions expanded). Gate V ran to 24 sampled frames with 0 BLOCKER and 0 MAJOR defects. I opened the compiler's contact sheet with the image-capable Read tool: B00 ClaudeComposerAsk916 shows 'Salaam, Liam' greeting with updated output '21-line skills table (1 header + 20 skills)'; B01 BrutalistHesitantWriter916 shows 'art --list prints the catalog of our Brutalist toolkit here.' in large serif filling the safe area with portrait BLUF recipe (fontSize 130, lineSpacing 2.4, 5-line stack); B03 ClaudeCodeBeat916 shows new godot-* and riff printf entries; B04 worked example shows '21 lines. Exits 0. Done.'; B09 ClaudeVerdictArtifact916 carries 7 artifact lines including '21-line table (1 header + 20 skills)'; B10 ClaudeComposerAsk916 shows 'Your turn.' with updated 21-lines/20-printf prompt; B11 ClaudeTitleOutro916 restates 'Brutalist Command: art --list.' Skin-lint WARN on B00/B11 expected for portrait build. Human review required before publication."
+}

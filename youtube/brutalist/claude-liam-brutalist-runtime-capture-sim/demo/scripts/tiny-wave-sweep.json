@@ -1,0 +1,7 @@
+[
+  {"set":   "#k", "value": 1},
+  {"wait":  0.4},
+  {"sweep": "#k", "from": 1, "to": 6, "steps": 30, "step_delay": 0.15},
+  {"set":   "#k", "value": 3.5},
+  {"wait":  0.6}
+]

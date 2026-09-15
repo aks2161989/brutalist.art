@@ -1,0 +1,19 @@
+{
+  "files": [
+    "runtime/remotion/src/scenes.json",
+    "runtime/remotion/src/TrainTeacher.tsx",
+    "runtime/remotion/src/RequireReport.tsx",
+    "runtime/remotion/src/Root.tsx",
+    "runtime/remotion/src/scenes/ClaudeTitleOutroHAI.tsx",
+    "runtime/remotion/src/scenes/SkillTeardownPipeline916.tsx",
+    "runtime/remotion/src/scenes/SkillTeardownMechanism916.tsx",
+    "runtime/remotion/src/scenes/ClaudeTitleOutroHAI916.tsx",
+    "runtime/remotion/src/scenes/HesitantWriterFramed.tsx",
+    "runtime/remotion/src/scenes/SkillTeardownAnatomy916.tsx",
+    "runtime/remotion/src/scenes/ClaudeVerdictArtifact916.tsx",
+    "runtime/remotion/src/scenes/BarChart.tsx",
+    "runtime/remotion/src/illustrations/previews.tsx"
+  ],
+  "baseline_sha256": "81ff2064d111dc104cc98f1f6722247b15069a0113112a8052c9a1fe9b5a62d8",
+  "note": "Overlay on the local toolkit snapshot recorded in SOURCE-SNAPSHOT.json, not blindly on another revision."
+}

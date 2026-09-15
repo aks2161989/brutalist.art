@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "ea4f6e123fc446489cbedd621985299b",
+  "source_sha256": "793fe8c321b2c67520b95aece10173a71f7235b4ca8b8a47c644d691423711c7",
+  "beat_sheet_sha256": "1d026874dfbcdd89fba1e7d2d656b11ce16b8c999897ecea8913678ff312a313",
+  "video_sha256": "c79e549d591baaa800c3c4f0fcf7dd7eb3529dc3bbe43a6ce55171ff56dd8169",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/CONTACT-SHEET.png", "sha256": "2e9f0c26e0e932206fee4801177dd1c223f46192148c11f103fbeb8679c345a3"},
+    {"path": "_qc/B00_50.png", "sha256": "c1f4f98d00418c68a3a1d97d29954bbd1d5e9c66e82e594775a7fa1b95c26bd0"},
+    {"path": "_qc/B01_50.png", "sha256": "817ed03b0b79c2139c51e1548b21143a49f4b18f321d1a12ffce0cf91822b1e3"},
+    {"path": "_qc/B04_50.png", "sha256": "cc70c338df639d5e7d3dc220b0ab9248148370033c436c856926169bb83fa840"},
+    {"path": "_qc/B09_50.png", "sha256": "0bf476341842087d06d27e5fa449a726c73a649b8f0ee6477e088c4de5f8bca0"},
+    {"path": "_qc/B10_50.png", "sha256": "2964d863205e0b8a05c8ae28040dc490a145c99605b3058620be1ecad98b46ff"},
+    {"path": "_qc/B11_50.png", "sha256": "af7c4ad652c4cf17be79a05e09e48490ce93b4cb664f52fbabe0e538d7bec3db"}
+  ],
+  "notes": "Re-reviewed run ea4f6e12 (2026-09-12). Source sha change was due to sibling skill files (ai-explainer/SKILL.md and peers) being modified in the working tree — nopunt/SKILL.md content is unchanged and the beat sheet accurately represents it. Landscape 3840x2160, h264, 345.79s, 12/12 beats filled, 0 slates. ffprobe-verified. Inspected: full contact sheet (12-beat tile), B00 (ClaudeComposerAsk cold open: 'Hola, Liam', @HumanitariansAI folder chip, three output lines correctly answering the ask), B01 (BrutalistHesitantWriter: 'The nopunt skill / is a catalog / for placeholders. / Check it before you fill a beat.' — linter→catalog swap confirmed; large serif fills the landscape frame), B04 (SkillTeardownMechanism 'Only photographs HOLD.' — verbatim SKILL.md quote, verdict pill 'UNFILLED ANIMATABLE = BUG', within safe area), B09 (ClaudeVerdictArtifact 6-line recap, all legible), B10 (ClaudeComposerAsk 'Your Turn' — @HumanitariansAI chip, paste-ready audit prompt with three output rubric lines), B11 (ClaudeTitleOutro: 'The nopunt Skill.' terracotta period, @NikBearBrown per OUTRO-LOCK, pixel mascot present). No edge bleed, no overflows, no unresolved slates, no captions. Human review pending; nothing published."
+}

@@ -1,0 +1,65 @@
+{
+ "metadata": {
+  "title": "Fixture — nbb Skill Demo",
+  "slug": "nbb-fixture-reel",
+  "audience": "NikBearBrown",
+  "engine": "kokoro",
+  "voice_kokoro": "am_onyx",
+  "palette": "teardown",
+  "aspect_ratio": "16:9",
+  "derived_from": "beat_sheet.json",
+  "register": "Teardown",
+  "outro_source": "AUTHOR.MD :: NikBearBrown",
+  "typography": {
+   "display": "Montserrat",
+   "serif": "EB Garamond",
+   "mono": "PT Mono"
+  },
+  "_variant_todo": [
+   "rewrite every beat narration_text/text in the Teardown register (runtime/prose/teardown/PROSE.md + brands/nbb.md) — take it apart, explain how each piece works, judge the design choices; voice only, facts unchanged",
+   "add LLM exercise as the SECOND-TO-LAST beat (paste-ready prompt for Claude/ChatGPT/Gemini + dig-deeper follow-up; see skills/make/nbb/SKILL.md §Step 3)",
+   "add/replace outro with NikBearBrown outro from AUTHOR.MD :: NikBearBrown (LAST beat)",
+   "verify ending order: body → [LLM exercise] → [outro]",
+   "build: generate_audio_kokoro.py (voice am_onyx) → palette=teardown → compile"
+  ]
+ },
+ "beats": [
+  {
+   "beat_id": "B00",
+   "act": "ASK",
+   "narration_text": "Fixture opening. In canonical claude-liam register.",
+   "estimated_duration_s": 4,
+   "shot": {
+    "type": "GRAPHIC",
+    "source": "remotion",
+    "remotion": {
+     "pattern": "ClaudeComposerAsk",
+     "rendered": {
+      "out": "media/B00.mp4",
+      "at": "2026-09-08T00:00:00Z"
+     }
+    }
+   }
+  },
+  {
+   "beat_id": "B01",
+   "act": "BODY",
+   "narration_text": "Fixture body beat one. A single sentence in the source register.",
+   "estimated_duration_s": 6,
+   "shot": {
+    "type": "GRAPHIC",
+    "source": "remotion"
+   }
+  },
+  {
+   "beat_id": "B02",
+   "act": "OUTRO",
+   "narration_text": "Fixture sign-off.",
+   "estimated_duration_s": 3,
+   "shot": {
+    "type": "GRAPHIC",
+    "source": "remotion"
+   }
+  }
+ ]
+}

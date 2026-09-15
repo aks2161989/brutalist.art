@@ -1,0 +1,21 @@
+8 candidate(s) for "documentary act divider"  —  a hit is a lead, read the props:
+
+  [ 4.0] NikBearBrownOutro   (16:9)
+       under: Ported 2026-08-30 — named by the public cut's own skills/docs.
+       NikBearBrown brand outro beat. Teardown palette: flat white ground, INK brand name, CRIMSON rule. Big name → tagline → red divider → handle · url.
+       props: brand, tagline, handle, url
+
+  [ 4.0] NikBearBrownOutro916   (9:16)
+       under: Ported 2026-08-30 — named by the public cut's own skills/docs.
+       NikBearBrown brand outro beat. Teardown palette: flat white ground, INK brand name, CRIMSON rule. Big name → tagline → red divider → handle · url.
+       props: brand, tagline, handle, url
+
+  [ 3.0] ClaudeVerdictArtifact   (16:9)
+       under: claude-musinique season 1 — "Claude, For the Indie"
+       Reusable verdict/artifact page in the Claude fidelity skin. Renders an artifact window card (cream stage, white card, staggered lines). Per ILLUSTRATE LAW this is a UI beat (verdict) — the Claude UI i
+       props: artifactTitle, artifactHeading, artifactLines
+
+  [ 3.0] ClaudeVerdictArtifact916   (9:16)
+       under: claude-musinique season 1 — "Claude, For the Indie"
+       Portrait 9:16 (1080×1920) version of ClaudeVerdictArtifact. Same schema. Card fills portrait width (~90% = 972px).
+  SkillTeardownAnatomy         RENDERABLE   16:9   props: skillName, oldName, eyebrow, title, files, calloutText

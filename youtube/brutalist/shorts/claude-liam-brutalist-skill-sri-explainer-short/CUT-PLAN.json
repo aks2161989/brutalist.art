@@ -1,0 +1,20 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "sri-explainer is a chapter-to-video pipe: one Prof Sridhar chapter in, one video out, narrated in Sridhar's own author voice — inheriting the deep-/ai-explainer chassis while owning the persona, the negate-before-affirm register, and the derivation-compression rule that keeps one beat per real decision point (never per algebra step).",
+  "parent_master_sha256": "b11d283cfb7cea11ba354adae17c6962f9e569775aca2329261ffaa7744d4b49",
+  "kept_beats": ["B00", "B01", "B03", "B05", "B06", "B07", "B10", "B11", "B13"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "SKILL.md file anatomy (folder tree of doctrine + two reference files + three parent SKILL.md paths) is repo-internals detail; the Short lands 'inherits vs. owns' through B03 lineage and B11 verdict without the file map."},
+    {"beat_id": "B04", "reason": "Full HOOK → SETUP → MECHANISM → GROUNDING → (DYNAMICS) → VERDICT → YOUR TURN → OUTRO spine walkthrough is a detailed act-structure lecture; B11 verdict names the same spine in one line for viewers who need it."},
+    {"beat_id": "B08", "reason": "GOLDEN-TEST-ON-SCREEN LAW (fourth decision) is a sharpening of the parent DOUBLE-CHECK LAW; B06 already establishes 'every number anchored to something felt' and B11 verdict recaps 'every check on screen', so the specific ratio/limit/conservation families belong in the long."},
+    {"beat_id": "B09", "reason": "HANDOFF-FROM-THE-CHAPTER LAW (fifth decision) — 'YOUR TURN from LLM Exercises, VERDICT names the open question' — is a specific closing-block contract; B11 verdict already names 'Handoff drawn from the chapter's own LLM Exercises', so a full mechanism beat is redundant in a Short."},
+    {"beat_id": "B12", "reason": "Extended YOUR TURN composer with a full paste-ready planning prompt is the long film's CTA; per shorts guidance a detailed CTA can be cut, and Liam's outro still points the viewer to reach for the skill on a real chapter."}
+  ],
+  "cut_first_review": "Retained narration flows cleanly: (B00) Liam introduces sri-explainer and previews chapter-to-video + Sridhar's own voice + seven hard rules. (B01) BLUF hesitant-writer corrects 'concept' to 'chapter' — chapter in, video out. (B03) 'It extends its parents' establishes bookends, brand, laws, ILLUSTRATE/SHOW-DON'T-TELL/VOX LAWs all INHERITED — verdict pill lands 'INHERITED · not owned'. (B05) 'First decision that makes this its own skill' — persona is Prof Sridhar himself (new channel claude-sri, am_onyx interim). (B06) 'Second decision' — the Sridhar register: negate-before-affirm, punch-after-explanation, every number anchored. (B07) 'Third decision' — DERIVATION-COMPRESSION LAW: 2-4 real decision points, one illustrated beat each, never per algebra step. (B10) 'Now the limitation of this film' — three prerequisites for a real end-to-end run: chapter file, claude-sri wired in, factcheck on chapter numbers. (B11) 'So the split' — six-line verdict artifact recaps INHERITED vs. OWNED. (B13) Liam signs off. Numbered transitions First/Second/Third stay contiguous (dropped fourth/fifth 'decisions' were pure mechanism drilldowns; verdict recap covers them). No dangling references — the spine, golden-test, and handoff points are all re-stated in the verdict card in language a viewer meets fresh.",
+  "planned_duration_s": 171.96,
+  "final_measured_duration_s": 171.958,
+  "rewrite_reason": null,
+  "re_verified_at": "2026-09-12",
+  "re_verified_run_id": "8fdcf22fafee4271bc76638c6dceb4b4",
+  "re_verified_note": "SKILL.md camera rule correction (2026-09-12) does not affect any kept beat's narration or visuals; all media SHA256 verified identical to parent vertical; export unchanged."
+}

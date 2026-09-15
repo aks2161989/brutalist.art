@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "0084792391494bda81c23c7b93a0404a",
+  "source_sha256": "8d5a62370d0c3af37fe88e2fe798846e1f3ad03fc1ed9a119ce6042b747f5220",
+  "beat_sheet_sha256": "4801280e31260dd9df65b793f1d6586dddfbb4e800155e4c673544dbc093e4ea",
+  "video_sha256": "1783e5968feca78646de4a578acd4958f0b231ecc5dd7579d02fb0a278a23a75",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "5a4341dcb5a5c36e99b8b5fbee0898a0c323c0c48bd729f0ff540d4af22a1d2f",
+      "note": "24-frame contact sheet (Gate V automated) — 0 BLOCKER, 0 MAJOR"
+    }
+  ],
+  "beat_review": [
+    { "bid": "B00", "pattern": "ClaudeComposerAsk916", "verdict": "pass", "note": "Portrait cold-open; cream stage; chrome fills 9:16 safe area" },
+    { "bid": "B01", "pattern": "BrutalistHesitantWriter916", "verdict": "pass", "note": "lineSpacing 3.4; 55.7% ink fill at 50% mark; brand label anchors safe.b" },
+    { "bid": "B02", "pattern": "WalkerGodotSetup (flow)", "verdict": "pass", "note": "Flow panels stack in portrait column; overflow:hidden prevents shell bleed" },
+    { "bid": "B03", "pattern": "GodotDesignBoard (cards)", "verdict": "pass", "note": "Footer fixed to bottom:height*0.045+(portrait?45:0); within safe.b" },
+    { "bid": "B04", "pattern": "WalkerGodotSetup (flow)", "verdict": "pass", "note": "Status label panels stacked; shell boundary respected" },
+    { "bid": "B05", "pattern": "GodotDesignBoard (flow)", "verdict": "pass", "note": "Causal chain layout; fills portrait safe area" },
+    { "bid": "B06", "pattern": "ClaudeCodeBeat916", "verdict": "pass", "note": "Portrait composition 1080x1920; adaptive font prevents left/right bleed" },
+    { "bid": "B07", "pattern": "WalkerGodotSetup (flow)", "verdict": "pass", "note": "Bookend panels in portrait column; shell clamped" },
+    { "bid": "B08", "pattern": "GodotDesignBoard (cards)", "verdict": "pass", "note": "Design-tell cards in portrait; footer in safe zone" },
+    { "bid": "B09", "pattern": "ClaudeVerdictArtifact916", "verdict": "pass", "note": "brandLabel rendered at bottom:height*0.065; ink within safe bounds" },
+    { "bid": "B10", "pattern": "ClaudeComposerAsk916", "verdict": "pass", "note": "Your-turn handoff in portrait; chrome fills 9:16 safe area" },
+    { "bid": "B11", "pattern": "ClaudeTitleOutro916", "verdict": "pass", "note": "Portrait outro with @NikBearBrown per OUTRO-LOCK; narration_text set to Liam in for Bear (audio_policy:silence, no TTS generated)" }
+  ],
+  "notes": "Re-certified run 0084792391494bda81c23c7b93a0404a (source_sha256 changed; godot-gdd SKILL.md content unchanged, source_sha256 delta from tracked REPOLOOP-PROMPT.md/CLAUDE.md). Vertical exports unchanged: SHA-256 1783e5968feca78646de4a578acd4958f0b231ecc5dd7579d02fb0a278a23a75 (214.33s, 2160x3840). Gate V re-run: 24 frames sampled, 0 BLOCKER, 0 MAJOR. Portrait contact sheet inspected: all 12 beats legible in 9:16 layout, no captions, no slates, @HumanitariansAI folderLabel on body beats, @NikBearBrown on outro per OUTRO-LOCK.md. Human review pending."
+}

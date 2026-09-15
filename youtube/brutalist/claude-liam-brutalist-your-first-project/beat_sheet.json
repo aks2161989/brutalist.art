@@ -1,0 +1,548 @@
+{
+  "metadata": {
+    "title": "Your First Brutalist Project.",
+    "slug": "claude-liam-brutalist-your-first-project",
+    "topic": "BRUTALIST · 03 · YOUR FIRST PROJECT",
+    "register": "Teardown",
+    "channel": "@HumanitariansAI",
+    "playlist": "Brutalist",
+    "audience": "Humanitarians AI fellows already using Claude Code",
+    "presenter": "Liam, in for Bear",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "aspect_ratio": "16:9",
+    "style_preset": "claude",
+    "palette": "claude",
+    "captions": false,
+    "note": "Episode 3 of the Brutalist playlist. Teaches fellows who already have Claude Code how a first Brutalist project actually flows: tiny research question, evidence, ask Claude Code for an AI Explainer, watch it, request one visible revision, rebuild, verify — then face format discipline (native 16:9 and 9:16, not a crop) and submission lanes (GitHub source, Drive video). A runtime receipt is not publication approval. Outro variant is ClaudeTitleOutroHAI so the HAI handle is honored while the visual grammar stays claude-liam. Narration voice: Kokoro am_onyx (Liam).",
+    "build": {
+      "at": "2026-09-07T23:01:59",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B11: palette=claude but the outro is 'ClaudeTitleOutroHAI' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "role_note": "COLD OPEN LAW — the Claude UI, the ask, the answer. Introduces Liam in for Bear.",
+      "narration_text": "This is Liam, in for Bear. Your first Brutalist project starts here — one ask into Claude Code, and a plan comes back. Not a demo. A claim, with a script, a storyboard, and a clock.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": "the Claude composer with the first-project ask and a four-line plan",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "claude \"make me a 60-second Brutalist AI Explainer about how ribosomes read mRNA — 12 beats, Kokoro am_onyx, stop at the review cut\"",
+            "topic": "BRUTALIST · 03 · YOUR FIRST PROJECT",
+            "segment": "Your First Brutalist Project",
+            "greeting": "Hola, Liam",
+            "runningText": "planning your first project…",
+            "output": [
+              "reads skills/make/ai-explainer/SKILL.md",
+              "drafts beat_sheet.json (12 beats, ~60s)",
+              "generates Kokoro am_onyx narration",
+              "renders scenes, compiles a review cut"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Code"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T02:15:44.354114+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 14,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 10.15,
+      "render_duration_s": 10.166666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer lands the frame. Correction: demo -> claim. lead_silence_s written on the beat.",
+      "narration_text": "So here's the frame. Your first project is not a demo of a tool. It's a claim — a small research question, with evidence — that Claude Code renders into a one minute film you can rebuild, beat by beat. That is the whole method. Everything else is scaffolding.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": "the hesitant writer typing 'Your first Brutalist project is a demo.' and correcting 'demo' -> 'claim'",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Your first Brutalist project\nis a demo\nEvidence in a one minute film\nWritten and rebuilt.",
+            "face": "serif",
+            "fontSize": 132,
+            "lineSpacing": 1.24,
+            "align": "center",
+            "triggerWords": "demo",
+            "replacementWords": "claim",
+            "mistakeRate": 1,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 12,
+            "jitter": 8,
+            "seed": "your-first-project-01"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T03:01:26.079677+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 13,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 13.99,
+      "render_duration_s": 14.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "framework beat — what a beat sheet IS. The file the whole reel conforms to.",
+      "narration_text": "The video is a file. beat_sheet dot json holds every beat, its narration line, its visual pattern, and its measured audio length. Everything downstream reads this. Change a line here — you re-render one beat, not a whole reel.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": "a beat_sheet.json fragment — one beat as it lives on disk",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "beat_sheet.json",
+            "code": "{\n  \"beat_id\": \"B03\",\n  \"act\": \"EVIDENCE\",\n  \"narration_text\": \"A ribosome walks the messenger three letters at a time...\",\n  \"engine\": \"kokoro\",\n  \"voice\": \"am_onyx\",\n  \"shot\": {\n    \"type\": \"GRAPHIC\",\n    \"source\": \"remotion\",\n    \"remotion\": {\n      \"pattern\": \"ClaudeCodeBeat\",\n      \"props\": {\"title\": \"codon_table.py\", \"code\": \"...\"}\n    }\n  },\n  \"estimated_duration_s\": 12,\n  \"audio_file\": \"mp3/beat-B03.mp3\"\n}",
+            "sparkLine": "The video IS the file. One beat, one record."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T02:16:59.984140+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 12.71,
+      "render_duration_s": 12.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "ASK",
+      "role_note": "ASK-RESULT pair 1 — the concrete ask that starts a project. SPARK-LINE greeting.",
+      "narration_text": "So here is a first ask, verbatim. A specific topic, a length, the beat count, the voice, and a hard stop at the review cut so nothing final gets built before you have watched it.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": "the Claude composer with a specific, paste-ready first-project ask",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "claude \"in this folder, use skills/make/ai-explainer to make a 60-second AI Explainer on how ribosomes read mRNA. 12 beats, Kokoro am_onyx, review cut only.\"",
+            "topic": "BRUTALIST · 03 · YOUR FIRST PROJECT",
+            "segment": "The First Ask",
+            "greeting": "The ask,",
+            "runningText": "reading the skill…",
+            "output": [
+              "60s target, 12 beats, one topic",
+              "voice locked: kokoro am_onyx",
+              "stop at review-cut.mp4 for human review"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Code"
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T02:18:13.241664+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 13,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 10.07,
+      "render_duration_s": 10.083333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT CLAUDE READS",
+      "role_note": "the seven things Claude Code actually touches on a first project — the mental model.",
+      "narration_text": "Claude Code does seven concrete things before you see a frame. It reads the skill, drafts the beat sheet, generates the audio, renders the scenes, compiles a review cut, writes the checks report, and stops. Every one leaves a file you can open.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": "an artifact card listing the seven concrete steps Claude Code performs on a first project",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "what claude code touches",
+            "artifactHeading": "Seven files. One review cut.",
+            "artifactLines": [
+              "reads skills/make/ai-explainer/SKILL.md",
+              "drafts beat_sheet.json (twelve beats)",
+              "generates mp3/beat-*.mp3 with Kokoro am_onyx",
+              "renders media/*.mp4 (one per Remotion beat)",
+              "compiles clips/ -> review-cut.mp4 at 4K",
+              "writes CHECKS-REPORT.md and _qc/ frames",
+              "stops for you to watch, before anything final"
+            ]
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T02:19:39.760931+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 13.5,
+      "render_duration_s": 13.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "PREVIEW",
+      "role_note": "the review cut is what you actually watch — a receipt from the compiler, not publication.",
+      "narration_text": "The output is a review cut. Twelve conformed clips, one narration per beat, four thousand pixels wide. That's the file you scrub. Not a Short. Not a published master. A local receipt that says: the pipeline finished — now you judge it.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": "the review cut card — what compile.py leaves on disk for the fellow to watch",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "review-cut.mp4",
+            "artifactHeading": "The pipeline finished. Now you judge it.",
+            "artifactLines": [
+              "twelve conformed per-beat clips in clips/",
+              "muxed to one review-cut.mp4 at 3840 x 2160",
+              "narration is the master clock — visuals conform",
+              "a per-beat manifest hashes each input for cache",
+              "not a Short, not a published master, a receipt",
+              "human review is a separate step — you watch it"
+            ]
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T02:43:56.732395+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 12.91,
+      "render_duration_s": 12.916666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "ONE REVISION",
+      "role_note": "ASK-RESULT pair 2 — the revision loop. One beat changes, nothing else.",
+      "narration_text": "Something is off. Beat five drags. So you don't rebuild the film. You say what's wrong, and name the beat. Claude regenerates only that beat's audio, re-renders only that beat's scene, and re-muxes. Everything else is cached.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": "the composer with the revision ask — one named beat, one instruction",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "claude \"beat five is too long. cut the narration to twenty words, regenerate its audio, re-render its scene, and rebuild only the review cut.\"",
+            "topic": "BRUTALIST · 03 · YOUR FIRST PROJECT",
+            "segment": "The Revision",
+            "greeting": "The change,",
+            "runningText": "regenerating beat 5…",
+            "output": [
+              "narration: 20 words, re-measured",
+              "media/B05.mp4 re-rendered (only)",
+              "clips/B05.mp4 re-conformed, others cached",
+              "review-cut.mp4 re-muxed"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Code"
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T02:22:10.440211+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 14,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 12.25,
+      "render_duration_s": 12.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "REBUILD",
+      "role_note": "the effect of the revision — one clip changed on disk, nothing else. audio-first is the reason.",
+      "narration_text": "The diff on disk is small: one mp3 replaced, one mp4 replaced, one line in the beat sheet. That's why audio is the clock, and every beat is a slot. You change a beat by changing its slot — not by nudging a timeline.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": "the tiny on-disk change that follows a one-beat revision",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "diff — after the one-beat revision",
+            "code": "M  beat_sheet.json          # narration_text on B05\nM  mp3/beat-B05.mp3         # Kokoro am_onyx, re-measured\nM  media/B05.mp4            # Remotion re-render\nM  clips/B05.mp4            # compile.py re-conformed\nM  review-cut.mp4           # concat+mux only\n\n# 5 files changed. 11 clips cached.\n# Audio is the clock; a beat is a slot.",
+            "sparkLine": "One beat changed. Nothing else."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T02:22:36.659252+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 15,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 13.35,
+      "render_duration_s": 13.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "TWO RATIOS",
+      "role_note": "format discipline — 9:16 is a separate sheet, not a crop; art vertical plans.",
+      "narration_text": "Now the shape of the deliverable. Fellows owe two ratios per video, sixteen by nine and nine by sixteen. The vertical is not a crop of the landscape. It is its own beat sheet, in a sibling folder, with portrait-native scenes. The art vertical skill plans that sheet — you still author it.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": "an artifact card that draws the sixteen-by-nine and nine-by-sixteen deliverables side by side",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "two ratios, one film",
+            "artifactHeading": "9:16 is a separate sheet, never a crop.",
+            "artifactLines": [
+              "landscape master: 3840 x 2160, this beat_sheet.json",
+              "portrait companion: 2160 x 3840, vertical/beat_sheet.json",
+              "art vertical PLANS a portrait sheet — you still author it",
+              "each ratio uses portrait-native scenes (Composer916, Outro916)",
+              "compile.py renders each aspect at 4K natively",
+              "no cropping, no upscaling — layouts are ratio-aware",
+              "expect a real re-author, not a magic reframe"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T02:45:22.466723+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 15.64,
+      "render_duration_s": 15.666666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "SUBMISSION LANES",
+      "role_note": "no-source-no-verdict + honest limit: a runtime receipt is not publication approval.",
+      "narration_text": "And the handoff. Source goes to GitHub — the beat sheet, prompts, checks, README, anything under twenty-five megabytes. Video files go to Drive. A compile that finishes is a runtime receipt. It is not publication approval. That's the human review step, and it comes last.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": "the two-lane handoff — source to GitHub, video to Drive; runtime receipt is not publication",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "the handoff",
+            "artifactHeading": "Source to GitHub. Video to Drive.",
+            "artifactLines": [
+              "beat_sheet.json, README, PROMPTS.md -> GitHub branch + PR",
+              "MP4s and MP3s -> shared Google Drive folder",
+              "over-25-MB files always go to Drive, not the repo",
+              "no credentials or private data in either place",
+              "'compile finished' is a runtime receipt, nothing more",
+              "human review is a separate step — Bear watches it",
+              "publishing happens later — outside this pipeline"
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T02:46:43.864614+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 19,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 14.76,
+      "render_duration_s": 14.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR TURN",
+      "role_note": "HANDOFF LAW — greeting Your Turn, paste-ready prompt Liam reads aloud, then a note on what a good answer looks like.",
+      "narration_text": "Your turn. Paste this prompt into Claude Code in a fresh folder, and swap in your topic. A good first ask names one small question, states the length in seconds, and stops at the review cut. A bad first ask says 'make me a video' and hopes.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": "the composer with the viewer's paste-ready first-project prompt",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "claude \"in this folder, use skills/make/ai-explainer to make a 60-second Brutalist AI Explainer about [my one tiny question]. 12 beats, Kokoro am_onyx, stop at the review cut so I can watch it before anything is submitted.\"",
+            "topic": "BRUTALIST · 03 · YOUR FIRST PROJECT",
+            "segment": "Your Turn",
+            "greeting": "Your Turn",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "GOOD: one question, a length, a hard stop",
+              "BAD: 'make me a video' with no shape",
+              "watch the review cut — request ONE revision"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Code"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T02:26:31.755118+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 13.27,
+      "render_duration_s": 13.291666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-07T23:01:59"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — title restate, HAI handle, Liam sign-off in narration.",
+      "narration_text": "Your first Brutalist project. Liam, in for Bear — for Humanitarians A I.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": "title restate, @HumanitariansAI handle, Brutalist episode 03 sub-mark",
+        "remotion": {
+          "pattern": "ClaudeTitleOutroHAI",
+          "props": {
+            "title": "Your First Brutalist Project.",
+            "handle": "@HumanitariansAI",
+            "slug": "claude-liam-brutalist-your-first-project"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T02:14:28.206589+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 8,
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 5.06,
+      "render_duration_s": 5.083333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutroHAI",
+        "at": "2026-09-07T23:01:59"
+      }
+    }
+  ]
+}

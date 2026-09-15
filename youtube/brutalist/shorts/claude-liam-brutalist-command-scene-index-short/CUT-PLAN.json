@@ -1,0 +1,29 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art scene-index rewrites the scene index that art scenes searches; it reads Root.tsx (registered <Composition>s are truth) and writes runtime/remotion/src/scenes.json plus SCENE-DOC-TODO.md. A .tsx file in scenes/ that Root.tsx does not register is invisible to the pipeline.",
+  "parent_master_sha256": "f7cbed1ea45539e6025af8a08d3bd2921943bae569b32158c669ad0b60aa11f6",
+  "run_id": "7fbbc6577e9d434aa02b367381fe29af",
+  "source_sha256": "38ca86b097b8c3ac89f97c04f549f5894f2ccd66ba1bbbfc115615141181f4bd",
+  "kept_beats": ["B00", "B01", "B03", "B05", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Dispatcher case (one branch, no aliases, --todo baked in) — implementation-anatomy detail; belongs in the 16:9 long."},
+    {"beat_id": "B04", "reason": "Three-pass internal walk of build_scene_index.py (import map, composition scan, header extraction) — internal walkthrough; belongs in the long."},
+    {"beat_id": "B06", "reason": "scenes.json entry documented-vs-derived side-by-side — one-liner in the retained verdict already covers it."},
+    {"beat_id": "B07", "reason": "SCENE-DOC-TODO.md ledger detail — the retained B05 verbatim run and B09 verdict both already name the 118-row ledger."},
+    {"beat_id": "B08", "reason": "Falsifiability orphan demo — a strong beat but ~29s; the LAW is asserted in B03 and restated in B09, and this Short focuses on the retained-narration through-line rather than a second demo."},
+    {"beat_id": "B10", "reason": "Detailed Your Turn exercise — the shorts prompt permits cutting a detailed CTA; keeping it would exceed the ~175s planning ceiling."}
+  ],
+  "cut_first_review": "B00 introduces Liam and the split between the two art commands (scenes searches / scene-index writes) with Root.tsx named as the source of truth. B01 is the hesitant-writer BLUF that corrects 'reads the scenes' to 'rewrites the index' — the whole distinction the reel turns on. B03 states the LAW verbatim from the tool: a scene is usable only if Root.tsx declares a <Composition> for it, registered is the only truth. B05 lands the concrete run: 619 renderable, 118 undocumented, 0 unresolved, and the two files written to disk. B09 verdict lists the whole surface — bare invocation, wraps, writes scenes.json, writes SCENE-DOC-TODO.md, no aliases, documented vs derived, the payoff, the law. B11 is the required outro. Transitions read cleanly: B01 opens 'Watch the writer walk this back' (works after B00); B03 opens 'Here is the law the tool exists to enforce' (still works after B01 since B01 named scene-index writes the index); B05 opens 'So the bare invocation' (a natural continuation from B03's mechanism); B09 opens 'So the surface' (a natural summation). B09 line 6 mentions 'documented vs derived' — a self-contained one-liner that does not require the dropped B06 to make sense.",
+  "planned_duration_s": 105.624,
+  "planned_beat_seconds": {
+    "B00": 15.708,
+    "B01": 13.833,
+    "B03": 21.75,
+    "B05": 21.958,
+    "B09": 26.75,
+    "B11": 5.625
+  },
+  "rewrite_reason": null,
+  "no_endcard": true,
+  "no_outro_rewrite": true
+}

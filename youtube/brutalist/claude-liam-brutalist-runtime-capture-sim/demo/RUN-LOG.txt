@@ -1,0 +1,182 @@
+# capture_sim.py — RUN-LOG (verbatim demonstrations on disposable fixtures)
+# Captured 2026-09-10 on this workstation, inside the Claude Code Apple App Sandbox.
+# All fixtures live under demo/ ; the reel folder itself is never fed to capture_sim.py
+# in this log — no captured mp4s end up in media/ from this session.
+#
+# HONESTY: the browser-launching paths (baseline/change, --click-through, --script)
+# require Chromium to spawn a child process outside the calling sandbox. In this
+# session Chromium hits a Mach-port bootstrap denial the moment it launches (see
+# section 5, verbatim). Every step in this log that does NOT need the browser
+# ran cleanly; every step that does is captured as an OBSERVED FAILURE, not a
+# fabricated success. The tool is fine — the sandbox is what refuses.
+
+source: /Users/bear/…/toolkit/runtime/scripts/capture_sim.py
+sha256: ccb75479c75081bede9d63d0d4913075b3497db183a035b5e0648d5dcb5d4a34
+lines:  662
+
+fixture-html: demo/sim-source/00-tiny-wave.html
+fixture-sha:  85f686f4e9814b4d48979c3796486e737954279455670a2a2ca80c23d7e85e88
+
+script-json:  demo/scripts/tiny-wave-sweep.json
+script-sha:   d58464e9e3e4565192436be411f8b883f9a356fe93e40ab4860c18b2d88ab468
+
+
+################################################################################
+# SECTION 1 — the CLI surface (verbatim from capture_sim.py -h)
+#   full text preserved in demo/help.txt (61 lines)
+################################################################################
+
+$ python3 runtime/scripts/capture_sim.py -h
+usage: capture_sim.py [-h] [--duration DURATION] [--change-dur CHANGE_DUR]
+                      [--fps FPS] [--width WIDTH] [--height HEIGHT]
+                      [--selector SELECTOR] [--click-through CSS]
+                      [--hold-each HOLD_EACH] [--script STEPS_JSON]
+                      [--out-name OUT_NAME] [--dpr DPR] [--smoke-test]
+                      sim_html reel_dir
+
+positional arguments:
+  sim_html              path to the sim .html file
+  reel_dir              reel directory (media/ will be created inside it)
+
+options:
+  --duration DURATION       baseline hold seconds (default 6)
+  --change-dur CHANGE_DUR   change animation seconds (default 8)
+  --fps FPS                 output fps (default 24)
+  --width WIDTH             viewport width (default 1280)
+  --height HEIGHT           viewport height (default 720)
+  --selector SELECTOR       CSS selector of the range control to sweep
+  --click-through CSS       click each matched element in DOM order
+  --hold-each HOLD_EACH     hold seconds per element for --click-through
+  --script STEPS_JSON       JSON file of ordered steps to execute while recording
+  --out-name OUT_NAME       output stem for --click-through or --script
+  --dpr DPR                 device pixel ratio — output = width*dpr × height*dpr
+  --smoke-test              write smoke-test marker and exit 0 on success
+
+
+################################################################################
+# SECTION 2 — the disposable synthetic fixture
+#   demo/sim-source/00-tiny-wave.html  (a one-file D3 v7 sine-wave sim)
+################################################################################
+
+$ head -14 demo/sim-source/00-tiny-wave.html
+<!doctype html>
+<meta charset="utf-8">
+<title>Tiny Wave — a disposable D3 fixture for capture_sim.py</title>
+<style>
+  body { margin: 0; background: #FAF9F5; color: #2F2A26;
+         font-family: system-ui, sans-serif; }
+  svg  { display: block; margin: 24px auto; }
+  label { display: block; text-align: center; font-size: 14px; }
+  .accent { stroke: #C8102E; }
+</style>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<svg width="640" height="240"></svg>
+<label>k: <input id="k" type="range" min="1" max="6" value="2" step="0.1"></label>
+<script>
+
+# Interactive control:  input#k   (range 1..6, step 0.1)
+# capture_sim's default sweep will find it because #k IS `input[type=range]`.
+
+
+################################################################################
+# SECTION 3 — the prepared step script (--script) for the tiny-wave sim
+#   demo/scripts/tiny-wave-sweep.json — anchors at t=0 with a set{} (not a wait)
+################################################################################
+
+$ cat demo/scripts/tiny-wave-sweep.json
+[
+  {"set":   "#k", "value": 1},
+  {"wait":  0.4},
+  {"sweep": "#k", "from": 1, "to": 6, "steps": 30, "step_delay": 0.15},
+  {"set":   "#k", "value": 3.5},
+  {"wait":  0.6}
+]
+
+# Note: the script opens with {"set": ...}, not {"wait": ...}. Playwright only
+# records from the first page-activity event — a leading {"wait": N} would silently
+# drop the first N seconds. This is called out in capture_sim.py's module docstring.
+
+
+################################################################################
+# SECTION 4 — hard-fail before the browser: sim path validation (line 592-593)
+################################################################################
+
+$ python3 runtime/scripts/capture_sim.py /tmp/nonexistent.html demo
+[capture_sim] ERROR: sim not found: /private/tmp/nonexistent.html
+# exit 1
+
+
+################################################################################
+# SECTION 5 — hard-fail before the browser: --script JSON shape (line 607-608)
+################################################################################
+
+$ echo '{"not":"an array"}' > $TMPDIR/bad-script.json
+$ python3 runtime/scripts/capture_sim.py demo/sim-source/00-tiny-wave.html demo \
+      --script $TMPDIR/bad-script.json
+[capture_sim] sim=00-tiny-wave.html  reel=/Users/.../demo
+[capture_sim] steps JSON must be a non-empty array: /private/tmp/claude-501/bad-script.json
+# exit 1
+
+
+################################################################################
+# SECTION 6 — argparse-level guard: --script AND --click-through together (line 599-600)
+################################################################################
+
+$ python3 runtime/scripts/capture_sim.py demo/sim-source/00-tiny-wave.html demo \
+      --script $TMPDIR/bad-script.json --click-through 'button'
+[capture_sim] sim=00-tiny-wave.html  reel=/Users/.../demo
+[capture_sim] --script and --click-through are mutually exclusive
+# exit 1
+
+
+################################################################################
+# SECTION 7 — the OBSERVED sandbox failure
+#   `capture_sim.py <html> <reel_dir>` — default (baseline + change) mode
+#   Same fixture, same command shape a fellow would type. Chromium is what fails.
+################################################################################
+
+$ python3 runtime/scripts/capture_sim.py \
+      demo/sim-source/00-tiny-wave.html demo --duration 1 --change-dur 1
+[capture_sim] sim=00-tiny-wave.html  reel=/Users/.../demo
+[capture_sim] FAILED: BrowserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/…/chrome-headless-shell --…flags… --no-sandbox --user-data-dir=/tmp/… --remote-debugging-pipe --no-startup-window
+<launched> pid=58727
+[pid=58727][err] [WARNING:net/dns/dns_config_service_posix.cc:197] Failed to read DnsConfig.
+[pid=58727][err] [FATAL:base/apple/mach_port_rendezvous_mac.cc:159]
+                 Check failed: kr == KERN_SUCCESS.
+                 bootstrap_check_in org.chromium.Chromium.MachPortRendezvousServer.58727:
+                 Permission denied (1100)
+[pid=58727] <process did exit: exitCode=null, signal=SIGTRAP>
+# exit 1
+
+# Diagnosis: Apple App Sandbox denies Mach-port bootstrap for the Chromium child
+# process — a Chromium requirement it cannot start without. capture_sim.py's
+# except-block prints "[capture_sim] FAILED: …" and returns exit 1; no mp4 is
+# written. This is a SANDBOX-level block; the tool itself is fine — running the
+# same command in a normal terminal (outside the sandbox) captures cleanly.
+#
+# The Brutalist workaround for OTHER pipelines that shell to a browser (Remotion)
+# is documented in feedback: chrome-headless-shell + --single-process launched
+# via an ART_CHROME wrapper. capture_sim.py uses the Playwright API directly
+# (pw.chromium.launch(...)) and does NOT honor ART_CHROME today — that would be
+# a separate change to capture_sim.py, out of scope for this episode.
+
+
+################################################################################
+# SECTION 8 — where the mp4s WOULD land (from the source, verbatim)
+################################################################################
+
+# capture_sim.py:113-260  capture()                → media/output.mp4, media/change.mp4
+# capture_sim.py:266-365  capture_click_through()  → media/<out_name>.mp4
+# capture_sim.py:368-563  capture_scripted()       → media/<out_name>.mp4  (default stem = script filename)
+# capture_sim.py:  91-108 webm_to_mp4()            → libx264 preset=slow crf=18 pix_fmt=yuv420p, no audio
+#
+# One HTTP server (SimpleHTTPRequestHandler) serves the file on a random free
+# port so the browser can request D3 v7 from the CDN — file:// blocks CORS.
+
+
+################################################################################
+# END OF RUN-LOG
+################################################################################
