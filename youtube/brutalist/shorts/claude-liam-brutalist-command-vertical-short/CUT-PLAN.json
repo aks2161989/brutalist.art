@@ -1,0 +1,17 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art vertical wraps art shorts with --vertical: full-length 9:16 twin, no cropping, no drops, no endcard — every Remotion beat rewires to its portrait sibling.",
+  "parent_master_sha256": "acf0b937fbea538602d7e37ff8aef036bd135851932b5657258aa706f5795d3c",
+  "kept_beats": ["B00", "B01", "B02", "B04", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B03", "reason": "Docstring rule 5 (verbatim) restates B00's contract; the four 'no' clauses are already spoken in B00 and shown again in B09's verdict lines."},
+    {"beat_id": "B05", "reason": "Long ONDA CHECK code walkthrough; B07's real run visibly enumerates the seven ONDA rewires and B09's verdict names the check — enough grounding without the full code walk."},
+    {"beat_id": "B06", "reason": "'One measurement skipped' expands the same guardrail flip that B04 already lands; the cap-check delta is one line and inessential to the high-level purpose."},
+    {"beat_id": "B08", "reason": "Falsifiability beat — the --vertical + --drop BuildError — is already implied by B04's guardrail code; keeping it would push past the target ceiling without adding to the Short's purpose."},
+    {"beat_id": "B10", "reason": "Your Turn composer detail belongs in the long; the Short states the surface (B09) and signs off (B11)."}
+  ],
+  "cut_first_review": "B00 introduces Liam and states the four-clause contract (full length, no cropping, no cut beats, same script as art shorts). B01's hesitant writer corrects the two real misconceptions (shrinks/crops -> preserves/rewires). B02 shows the dispatcher (two adjacent bash cases; one script; two verbs; art:102-107 verbatim from the re-rendered parent). B04 shows the three-line python guardrail (--vertical + --drop refused; endcard forced off; outro-rewrite forced off). B07 is a real fixture run: 7 beats, 214s, seven ONDA rewires, no drops, no endcard. B09 restates the whole surface in eight lines. B11 is the untouched outro card. Transitions flow: contract -> BLUF -> dispatcher -> guardrail -> demo -> verdict -> outro. B09 name-drops ONDA CHECK; the Short's viewer has seen the seven rewire lines in B07's demo so the reference is grounded.",
+  "planned_duration_s": 128.92,
+  "rewrite_reason": null,
+  "rebuild_reason": "Parent vertical re-rendered (run_id ac6edaa) — B02 code card corrected: art case line numbers updated from art:78-86 to art:102-107. Short refreshed from new parent; no editorial changes, no narration changes."
+}

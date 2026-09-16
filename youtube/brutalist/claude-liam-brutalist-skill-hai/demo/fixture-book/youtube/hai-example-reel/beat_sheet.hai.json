@@ -1,0 +1,62 @@
+{
+ "metadata": {
+  "title": "Example Reel (fixture)",
+  "slug": "example-reel",
+  "topic": "FIXTURE · HAI DEMO",
+  "audience": "HAI",
+  "brand": "claude-liam",
+  "engine": "kokoro",
+  "voice_kokoro": "af_bella",
+  "palette": "humanitarians",
+  "aspect_ratio": "16:9",
+  "channel_title": "@HumanitariansAI",
+  "note": "Synthetic fixture used ONLY to demonstrate hai's scaffold step. Not a real reel.",
+  "derived_from": "beat_sheet.json",
+  "register": "Plain",
+  "outro_source": "AUTHOR.MD :: Humanitarians AI",
+  "typography": {
+   "serif": "EB Garamond",
+   "sans": "Montserrat"
+  },
+  "_variant_todo": [
+   "rewrite every beat narration_text/text in the Plain register (runtime/prose/plain/PROSE.md + brands/hai.md) — method, when to use, when NOT to/where it fails; voice only, facts unchanged",
+   "optional: add ONE Irreducibly-Human tangent beat (0-1 per video, ONLY on a clear opportunity)",
+   "add CLI worked exercise as the SECOND-TO-LAST beat (paste-ready ASK→OUTPUT→CHANGE→OUTPUT, NEXT STEP; see skills/make/hai/SKILL.md §Step 4)",
+   "add/replace outro with Humanitarians AI outro from AUTHOR.MD :: Humanitarians AI (LAST beat)",
+   "verify ending order: body → [tangent] → [CLI exercise] → [outro]",
+   "then build: generate_audio_kokoro.py (voice af_bella) → palette=humanitarians → compile"
+  ]
+ },
+ "beats": [
+  {
+   "beat_id": "B00",
+   "act": "ASK",
+   "narration_text": "This is a fixture beat. In a real reel the narration would ask a question the video answers.",
+   "shot": {
+    "type": "GRAPHIC",
+    "source": "remotion",
+    "motion": "type-on"
+   }
+  },
+  {
+   "beat_id": "B01",
+   "act": "BODY",
+   "narration_text": "Body beats explain the mechanism, land a worked example, and stress-test the claim.",
+   "shot": {
+    "type": "GRAPHIC",
+    "source": "remotion",
+    "motion": "reveal"
+   }
+  },
+  {
+   "beat_id": "B02",
+   "act": "OUTRO",
+   "narration_text": "Outro restates the title.",
+   "shot": {
+    "type": "GRAPHIC",
+    "source": "remotion",
+    "motion": "hold"
+   }
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "dea2eb64b9844f9e916970a58f8cbdb2",
+  "source_sha256": "cd5d58c4ce5cd8fd1ce5d12760e927dc17f9b53ca259055e27b3351a62e11803",
+  "beat_sheet_sha256": "486b46d11784eb813c3695122b399088420bfb20ec22cc9f8af560d1e9c179ca",
+  "video_sha256": "1f31b5a8b870e78f0170078076356ce5eba5ab888d9424eb59627fc9f7053634",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "55536d7e76787efb16258b3e4b0f9231a68c69fad171cea74abebae0b8849330"},
+    {"path": "_qc/proof_B00_composer.png", "sha256": "6b60a23115715584c9cb7fced3477c962a7b5905eafe4f4b883629ec4c9a6b86"},
+    {"path": "_qc/proof_B01_bluf.png", "sha256": "26030f34793e17fa66571304f4d45f9dfa6a1c1688d6b154c1f449ea6d71732f"},
+    {"path": "_qc/proof_B11_outro.png", "sha256": "d268d81340d61d64c358df422e08aea30ac1164a551739cd841b2eeb8c5ba7c8"}
+  ],
+  "notes": "Re-verified 2026-09-12 under run_id dea2eb64b9844f9e916970a58f8cbdb2. Trigger: source_sha256 changed (cd5d58c4 vs prior df40ee62) due to toolkit local overrides (RequireReport.tsx, Root.tsx, TrainTeacher.tsx, BarChart.tsx); SKILL.md content unchanged at c50640bf — no scene content requires update. Video SHA matches previous verified export (1f31b5a8…). Gate V re-run on existing MP4: 24 frames sampled, 0 BLOCKER, 0 MAJOR (see _qc/REPORT.md). Landscape master 3840x2160 (native 4K, 318.17 s, h264 v + aac a). Frames re-inspected: cold-open composer (Bonjour Liam, @HumanitariansAI folder chip, three output lines), BLUF hesitant writer (final state 'flags your desktop' — correction 'auto-blurs→flags' confirmed), B11 outro ('The screen-clean Skill.' terracotta period, @NikBearBrown per OUTRO-LOCK, slug-seeded mascot). No burned-in captions, no unresolved slates. Warning-only: reveal-motion at 66% of beats (documented in CHECKS-REPORT.md, same as prior run). Human review by Bear pending."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "bb7b92e9363542d88483c88d6a9c5472",
+  "source_sha256": "17e4452d1dd418ef1260622bc52139744d1bcf4fd13edc041cfcdb73a9643e75",
+  "beat_sheet_sha256": "079a0f6428db7119cdd7f66ee830743d8ec6d6f11067ae00d4816809b6aa254f",
+  "video_sha256": "ed2ca4f709268b96450a5db5f11d9c59decc931910283bf1c43a0f0c6aa20959",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "012f6b35d6e2069020393e4b08888917bb7f608ff2e82e1b3d68cd4b186ff009"},
+    {"path": "_qc/b10_your_turn_50pct.png", "sha256": "17cb35da9b18ea96b94bfe8e4aabb1ab43f1668c4a85916bd528accc0e1757bb"}
+  ],
+  "notes": "run_id bb7b92e9363542d88483c88d6a9c5472. Gate V re-run this invocation against exports/vertical/claude-liam-brutalist-skill-riff-vertical.mp4 (2160x3840, 234.5s, H264/AAC): 24 frames sampled, BLOCKER=0, MAJOR=0. contact_sheet.png and b10_your_turn_50pct.png read via image tool — sha256s 012f6b35.../17cb35da... verified unchanged from prior passing run. Viewed contact sheet: 12 portrait beats. B00: ClaudeComposerAsk916 cold open — 'Bula, Liam' greeting, @HumanitariansAI chip, output lines cascade; text within portrait safe margins. B01: BrutalistHesitantWriter916 — 'riff generates observations.' in large serif centered in portrait. B02: SkillTeardownAnatomy portrait — 'SKILL : ANATOMY / A skill is a folder.' with file tree; fills portrait safe area. B03: SkillTeardownPipeline portrait — 'SKILL : PIPELINE / Look. Observe. Write. Record.' with phase nodes; fills portrait safe area. B04+: Mechanism beats with ClaudeCodeBeat showing real ./art scenes terminal output; legible in portrait. Mechanism cards with eyebrow, heading, body, verbatim quote, verdict pill; all within portrait safe margins. b10_your_turn_50pct.png read: ClaudeComposerAsk916 'Your Turn' beat — 'Apply the riff skill to a scene you own' heading wraps correctly to two lines in portrait; paste-ready Claude Code prompt in text box (four numbered steps); @HumanitariansAI handle at bottom; output lines including 'RIFF.md with five-column observation log'. No edge bleeding, no underfill, no caption text. Human viewing/editing by Bear is the next required step before any publication."
+}

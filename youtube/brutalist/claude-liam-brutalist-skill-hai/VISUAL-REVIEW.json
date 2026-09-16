@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "b1f47558b8af473190ac4ed1bab362dd",
+  "source_sha256": "2b7a9444954511eee681bc5c4a272ab5354644f448e0ab8b0b3f00e1141b0b79",
+  "beat_sheet_sha256": "97229448db5e4aa96cae6b6bff885d3ce50c6dfb5eec46c22321d5abec4478dc",
+  "video_sha256": "d223bbd36847cd86ca8c0b64fcfdd77d609d7240f48c48804d05455d5d016a76",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "f1597addfe22fa0a1b222a1786f506f5c9d8e8480f62201fabbd02dfee059da4"},
+    {"path": "_qc/verify-tile.png", "sha256": "f6ce6fc2243d55ff78d4e78aeb4b8ab0b1dd2dcb46400441a6f24b09c906ab2c"},
+    {"path": "_qc/b01-pair.png", "sha256": "66a7d7a5f667911e1df1679811b36aab46a3af123467001edb938afc7f6ed3cf"},
+    {"path": "_qc/proof-frame-t005.png", "sha256": "9a47224aed433f6bdc7101e4b24de92b3ff0289e8d0ed4c066b6fbcf7d7aaf40"},
+    {"path": "_qc/proof-frame-t060.png", "sha256": "eef375704d3e3b5f0ddc0469006512922e83b1eccec4f6ffa51c2f8f8d48839e"},
+    {"path": "_qc/proof-frame-t140.png", "sha256": "6adddfdaccbce8100d1e3d4285254f66cc4c50b369b8a755e0eb4f0ae2a13c1e"},
+    {"path": "_qc/proof-frame-t220.png", "sha256": "73b99fae71156dc093701f4b5840f5bec258b0bd525363986e2c2e71591a5cb9"},
+    {"path": "_qc/proof-frame-t275.png", "sha256": "5602a7b1e3efb05cda944054d5ae24e11ae44135bc887fe6c66a2a66f099e480"}
+  ],
+  "notes": "Landscape 4K master (3840x2160, 24fps, 280.125s, H264+AAC, compiler-verified ready per exports/landscape/*.verified.json). Re-reviewed under invocation run_id b1f47558 (source/feedback SHA change triggered re-invocation; hai SKILL.md on disk is ef01252f — unchanged from original build, no content delta; FEEDBACK.md contains only the placeholder, no actionable notes). Renders, beat_sheet, and QC frames are all byte-identical to the previous successful build (all frame hashes verified against prior VISUAL-REVIEW record). For THIS invocation I directly read eight QC assets: contact_sheet.png (12-beat overview — all beats legible, cream palette consistent, serif/sans typography correct); verify-tile.png (independent 12-tile at 1/24Hz — covers every beat independently); b01-pair.png (BrutalistHesitantWriter mid+late — 'reformats' → 'forks' correction lands correctly on both frames, landscape proportions fill safe area); proof-frame-t005.png (t=5s, B00 ClaudeComposerAsk — 'Hallo, Liam', correct hai-skill ask, @HumanitariansAI folder label, three result lines present); proof-frame-t060.png (t=60s, B03 SkillTeardownPipeline — 'Six steps. One fixed shape.', all six phase nodes visible); proof-frame-t140.png (t=140s, B06 SkillTeardownMechanism CLI exercise — 'The CLI exercise.' heading, five-part schema body, 'not runnable = slate in disguise' verdict pill); proof-frame-t220.png (t=220s, B09 ClaudeVerdictArtifact — 'A fork. Not a re-skin.' heading, all six verdict lines numbered and visible with correct emphasis); proof-frame-t275.png (t=275s, B10 ClaudeComposerAsk Your Turn — 'Fork one of your reels without shipping it', paste-ready claude ask visible, three rubric checks in output). Every beat legible; palette and serif consistent with Claude tokens; hesitant-writer correction 'reformats' → 'forks' confirmed; @HumanitariansAI on composer folderLabels B00 and B10; ClaudeTitleOutro restates 'The hai Skill' with @NikBearBrown per OUTRO-LOCK (hardcoded). Motion-histogram warning is a coarse-label limitation, not a defect. Skin lints: empty. Human review pending."
+}

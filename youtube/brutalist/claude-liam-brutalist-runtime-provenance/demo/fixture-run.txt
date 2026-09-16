@@ -1,0 +1,34 @@
+# Demo: provenance.py on disposable fixture
+# Command:
+python3 runtime/scripts/provenance.py /tmp/claude-501/provenance-fixture/
+
+# Fixture layout:
+#   beat_sheet.json — 6 beats (B00-B05)
+#   mp3/B00.mp3     — 24000 Hz (Kokoro)
+#   mp3/B_legacy.mp3— 44100 Hz (legacy)
+#   media/B00-B05.mp4 — dummy files
+#   clips/B00-B05.mp4 — dummy files
+#   manim/B03_diagram.mp4
+#   provenance-fixture.mp4
+#   provenance-fixture-slate.mp4
+
+# Output:
+■ provenance-fixture
+  AUDIO   engine(fingerprint): Kokoro:1 · legacy-44k:1   [beat_sheet says: kokoro]
+  VIDEO   Brutalist outputs (final/clips/manim/mp4): 9 files — all machine-made
+  SLOTS   Brutalist-rendered:      4 ['B00', 'B01', 'B02', 'B03']
+          YOU (gen-AI/archival):   1 ['B04']
+          Capture? (auto or yours):1 ['B05']  <- pipeline sim-capture OR your clip; sheet doesn't say
+
+# Fixture beat_sheet excerpt:
+# B00: shot.remotion.pattern = ClaudeComposerAsk  → Brutalist
+# B01: shot.remotion.pattern = BrutalistHesitantWriter → Brutalist
+# B02: shot.remotion.pattern = SkillTeardownPipeline → Brutalist
+# B03: build.filled_by = manim:pipeline_diagram.py → Brutalist
+# B04: shot.type = archival → YOU
+# B05: shot.type = screen (no explicit Brutalist/YOU markers) → Capture?
+
+# Note: audio reports mixed engines because the fixture has one 24kHz (Kokoro) and
+# one 44kHz (legacy) mp3. The beat_sheet metadata says kokoro — the fingerprint
+# catches the mismatch. A mismatch like this is the kind of error provenance.py
+# is designed to surface.

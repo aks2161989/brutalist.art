@@ -1,0 +1,802 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art doctor",
+    "slug": "claude-liam-brutalist-command-doctor-vertical",
+    "topic": "BRUTALIST · COMMAND: ART DOCTOR",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Jambo, Liam",
+    "greeting_note": "hello lexicon: Jambo (Swahili, one word). Fresh — does not repeat scene-index=Bonjour, scenes/help=Namaste, icons=Sawubona, list=Salaam, icon-build=Merhaba, run=Ciao, shorts=Salam, todo/vertical=Hola, approvals=Selam. Slug char-sum mod 10 == 3, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "5c2c1dda1a4548798796300fb24665e1",
+    "episode_id": "command-doctor",
+    "order": 34,
+    "note": "Command teardown of ./art doctor — the dispatcher case at art:117-121 that execs the ./setup script (a live-verification readiness checker), forwarding $@. setup is a bash 3.2-compatible script (macOS-safe) built around a check() helper that eval-writes dynamic OK_<id>/MISS_<id> vars instead of declare -A. Two verbs on the command surface: bare './art doctor' (verify + print the FEATURE table + exit 0 iff all green) and './art doctor --install' (install Python deps + Remotion node deps + fonts + Kokoro model files first, then verify). Readiness is decided ONLY by live verification — importing every Python dep, actually running ffmpeg/ffprobe, and synthesizing + decoding a real Kokoro test phrase whose mean_volume must exceed -40 dB. A successful pip install by itself never turns a row green; kokoro_synth SPEAKS to earn it. Thirteen atomic checks aggregate into 7 FEATUREs; any missing atomic hint prints under the blocked feature. All demo output in demo/RUN-LOG.txt is verbatim from this workstation, section 3 captured with the Kokoro model file temporarily moved aside to force one red row. No paid API, no upload, no network calls. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. episode.source_sha256 f659dd0dff9e9f3b05314570966e7535de3d4576a1af76487a9283d9553199f5.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:117-121",
+      "auditor_script": "setup"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "doctor",
+      "setup",
+      "readiness",
+      "live verification",
+      "Kokoro",
+      "ffmpeg",
+      "Remotion",
+      "Manim",
+      "fonts",
+      "bash 3.2",
+      "command teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T18:17:25",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "full-length; native portrait graphics; preserve source framing",
+    "derived_from": "claude-liam-brutalist-command-doctor",
+    "dropped_beats": [],
+    "total_estimated_duration_seconds": 216.83,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Jambo, this is Liam, in for Bear. The ask — before I fill a single beat sheet, tell me what's actually installed on this box. Do not install anything. Just verify.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Jambo, Liam' types above the composer"
+          },
+          {
+            "at": "0.25",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'running ./setup…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Jambo, Liam",
+            "topic": "BRUTALIST · COMMAND: ART DOCTOR",
+            "segment": "art doctor",
+            "command": "Before I fill a single beat sheet, tell me what's actually installed on this box. Do not install anything. Just verify.",
+            "runningText": "running ./setup…",
+            "output": [
+              "prints a 7-row FEATURE table — green when every atomic check passes live",
+              "for each blocked row, prints the exact fix line beneath it",
+              "exits 0 iff all rows green; exits 1 the moment one is red"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T23:08:55.838739+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 9.54,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 9.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Correction is the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art doctor does not install dependencies. It verifies them, live — it imports every Python module, runs ffmpeg, and makes Kokoro actually speak. A green row is a spoken proof, not a receipt from a package manager.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art doctor / installs deps.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'installs' turns terracotta, hesitates, backspaces, types 'verifies'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'deps' turns terracotta, hesitates, backspaces, types 'live'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art doctor / verifies live.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art doctor\ninstalls deps.",
+            "triggerWords": "installs, deps",
+            "replacementWords": "verifies, live",
+            "seed": "doctor-b01",
+            "face": "serif",
+            "fontSize": 210,
+            "lineSpacing": 4.5,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T23:22:31.822859+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.91,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.916666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the dispatcher case. Three lines, no aliases, execs ./setup with $@ forwarded.",
+      "narration_text": "The dispatcher is one case in the art file. Three lines: pattern doctor, exec the setup script if it's executable, forward every argument. There are no aliases. Every rule the command enforces lives in that one setup script.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in with 'art' in the title bar"
+          },
+          {
+            "at": "0.20",
+            "event": "'case \"$cmd\" in' types"
+          },
+          {
+            "at": "0.40",
+            "event": "the single 'doctor)' pattern types"
+          },
+          {
+            "at": "0.70",
+            "event": "the exec line types under it"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line settles under the card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art:117-121 — one branch, no aliases",
+            "code": "# From the top-level art dispatcher:\ncase \"$cmd\" in\n  # …\n  doctor)\n    if [ -x \"$ART_HOME/setup\" ]; then\n      exec \"$ART_HOME/setup\" \"$@\"\n    else\n      echo \"setup script missing\"; exit 1\n    fi\n    ;;\n  # …\nesac\n\n# The wrapper always: (1) resolves ART_HOME from art's own path,\n# (2) execs the setup script if it's marked executable,\n# (3) forwards \"$@\" untouched, so --install falls through.",
+            "sparkLine": "One case. No aliases. One script."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-12T22:14:16.957277+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 12.99,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 13.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK 2 — the two modes: bare verify vs --install-then-verify. The FEATURES table lives in setup.",
+      "narration_text": "Two modes. Bare art doctor: verify and print the readiness table. Add dash dash install, and it first installs the core Python dependencies, Remotion's node modules, the two bundled font families, and downloads the Kokoro voice model — then runs the same verification. Both modes end at the same seven-row FEATURE table. The install step's own exit code is reported, but never substitutes for a check.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'art doctor — two modes, one table'"
+          },
+          {
+            "at": "0.22",
+            "event": "the bare-invocation branch types"
+          },
+          {
+            "at": "0.48",
+            "event": "the --install branch types below it"
+          },
+          {
+            "at": "0.75",
+            "event": "the seven FEATURES rows settle"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art doctor — two modes, one table",
+            "code": "# setup surface — two modes end at the same FEATURE table:\n$ ./art doctor              # verify only\n$ ./art doctor --install    # install (pip, npm, fonts, Kokoro model), THEN verify\n\n# What the check aggregates — setup:142-150\nFEATURES=(\n  \"audio (Kokoro Bella/Onyx)|ffmpeg python py_kokoro kokoro_model kokoro_synth\"\n  \"captions + word clock|ffmpeg py_whisper\"\n  \"Manim beats|ffmpeg py_manim py_pillow\"\n  \"Manim equation beats|ffmpeg py_manim latex\"\n  \"Remotion beats + bookends|node20 remotion_deps\"\n  \"slates / previz / compile|ffmpeg py_pillow\"\n  \"fonts (EB Garamond + Oswald)|font_garamond font_oswald\"\n)\n# Any atomic check missing → the whole feature is blocked and the fix line prints.",
+            "sparkLine": "Two modes. One table. Seven features."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T23:10:43.997235+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.08,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 22.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE 1 — the ready run. Verbatim from demo/RUN-LOG.txt section 2.",
+      "narration_text": "Here is a ready toolkit. Ffmpeg on the path, Python packages importable, Node twenty for Remotion, the two font families installed, and the Kokoro model files present. Seven rows, all green. Cost line: zero dollars. Exit code: zero. That is a doctor pass.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads the verbatim command"
+          },
+          {
+            "at": "0.25",
+            "event": "the FEATURE header and rules type"
+          },
+          {
+            "at": "0.50",
+            "event": "each row types with 'ready' terracotta on the right"
+          },
+          {
+            "at": "0.85",
+            "event": "cost line + exit 0 land"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art doctor    (verbatim)",
+            "code": "brutalist — readiness (free-only toolkit: no keys, ever)\n\n  FEATURE                      STATUS\n  -------                      ------\n  audio (Kokoro Bella/Onyx)    OK  ready\n  captions + word clock        OK  ready\n  Manim beats                  OK  ready\n  Manim equation beats         OK  ready\n  Remotion beats + bookends    OK  ready\n  slates / previz / compile    OK  ready\n  fonts (EB Garamond + Oswald) OK  ready\n\nAll core features ready. Voices: Bella (af_bella) and Onyx (am_onyx). Cost: $0.00.\n[exit 0]",
+            "sparkLine": "Seven rows green. Cost $0.00. Exit 0."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T23:11:14.264364+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.74,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 15.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the bash 3.2 compat trick. dynamic OK_<id>/MISS_<id> vars via eval; the check() helper.",
+      "narration_text": "Under the hood, one small design choice makes this script portable. Macos ships bash three point two by default — no associative arrays. So instead of declaring an array, the check helper uses eval to write two dynamic variables per test: OK underscore ID and MISS underscore ID. That is why art doctor runs the same on a Mac and on Linux, without a bash five prerequisite.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'setup:117-140 — check() and dynamic OK_<id>/MISS_<id>'"
+          },
+          {
+            "at": "0.25",
+            "event": "the header comment types"
+          },
+          {
+            "at": "0.42",
+            "event": "the check() body types"
+          },
+          {
+            "at": "0.72",
+            "event": "two example checks type below it"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "setup:117-140 — check() and dynamic OK_<id>/MISS_<id>",
+            "code": "# Dynamic OK_<id>/MISS_<id> vars instead of associative arrays: macOS ships\n# bash 3.2 by default (no `declare -A`), and this script must run there too.\ncheck(){\n  local id=\"$1\"\n  eval \"OK_${id}=0\"\n  if eval \"$2\" >/dev/null 2>&1; then\n    eval \"OK_${id}=1\"\n  else\n    eval \"MISS_${id}=\\$3\"\n  fi\n}\n\n# Two examples — the first checks ffmpeg exists AND ffprobe exists;\n# the second imports the Python module 'kokoro_onnx' from Python itself.\ncheck ffmpeg    'ffmpeg -version >/dev/null 2>&1 && ffprobe -version >/dev/null 2>&1' \\\n                'install ffmpeg (brew install ffmpeg / apt install ffmpeg)'\ncheck py_kokoro 'pymod kokoro_onnx' 'pip install kokoro-onnx (the free voice engine)'",
+            "sparkLine": "Bash 3.2 safe. OK_id / MISS_id via eval."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T23:11:46.619615+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.18,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 20.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 2 — live verification, not receipts. Kokoro must actually SPEAK a phrase above -40 dB to earn green.",
+      "narration_text": "And here is the subtle part. Readiness is decided ONLY by live verification. A successful pip install is not enough. For the audio feature to turn green, setup runs setup underscore smoke underscore kokoro dot py, which synthesizes one real test phrase and checks that the decoded audio's mean volume exceeds negative forty decibels. A silent WAV is a failure. Kokoro has to actually speak to earn the green row.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'live verification, not receipts'"
+          },
+          {
+            "at": "0.22",
+            "event": "the kokoro_synth check line types"
+          },
+          {
+            "at": "0.50",
+            "event": "the setup_smoke_kokoro.py summary types under it"
+          },
+          {
+            "at": "0.85",
+            "event": "the top-of-file rationale types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "live verification, not receipts",
+            "code": "# setup:137 — the kokoro_synth check row\ncheck kokoro_synth \\\n  \"python3 \\\"$HERE/runtime/scripts/setup_smoke_kokoro.py\\\"\" \\\n  'Kokoro failed to synthesize + decode a test phrase above -40 dB —\n   check model files, kokoro_onnx install, and ffmpeg\n   (run runtime/scripts/setup_smoke_kokoro.py directly to see why)'\n\n# What setup_smoke_kokoro.py actually does:\n#   1. loads the onnx voice model from runtime/models/kokoro/\n#   2. calls kokoro.create(\"brutalist smoke\", voice=\"af_bella\")\n#   3. writes the wav, then ffmpeg -af volumedetect decodes it\n#   4. parses mean_volume, asserts it is greater than -40 dB\n\n# From the top of setup, in plain English:\n#   Readiness is decided ONLY by live verification below — importing\n#   every Python dep, actually running ffmpeg/ffprobe, and synthesizing\n#   + decoding one real Kokoro phrase (mean_volume > -40 dB). An install\n#   step's own exit code is reported (INSTALL_FAILED) but never substitutes\n#   for a check: a green table means the checks passed, not that\n#   `pip install` returned 0.",
+            "sparkLine": "Kokoro must actually speak. Silence fails."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-09T23:12:20.260200+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 23.45,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 23.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 3 — 12 atomic checks -> 7 FEATURES. Feature-level aggregation table; missing hint printed per blocked feature.",
+      "narration_text": "Thirteen atomic checks aggregate into seven features. Each feature is a pipe-separated line: the display name, then the atomic check IDs that must all pass. The main loop walks that list, and for each feature it collects the missing IDs. Zero missing prints ready. One or more missing prints blocked, then every fix hint indented below it. No red row goes to production without the fix line printing next to it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'the aggregation loop'"
+          },
+          {
+            "at": "0.22",
+            "event": "the loop body types"
+          },
+          {
+            "at": "0.60",
+            "event": "an example red row prints below it"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "the aggregation loop — setup:156-172",
+            "code": "fail=0\nfor row in \"${FEATURES[@]}\"; do\n  IFS='|' read -r name reqs <<<\"$row\"\n  missing=\"\"\n  for id in $reqs; do\n    eval \"v=\\$OK_${id}\"\n    [ \"$v\" = 1 ] || missing=\"$missing $id\"\n  done\n  if [ -z \"$missing\" ]; then\n    printf '  %-28s %b\\n' \"$name\" \"$(g '✅ ready')\"\n  else\n    printf '  %-28s %b\\n' \"$name\" \"$(r '❌ blocked')\"; fail=1\n    for id in $missing; do\n      eval \"m=\\$MISS_${id}\"\n      echo \"        · $m\"\n    done\n  fi\ndone\n# …\n[ \"$fail\" = 1 ] && { r \"Something is blocked — see above.\"; echo; exit 1; }",
+            "sparkLine": "12 atomic checks → 7 features. One red → exit 1."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T23:12:53.618042+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.1,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 21.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FAILURE_RECOVERY",
+      "role_note": "FALSIFIABILITY — hide the Kokoro model file; audio row goes red with two hint lines; exit 1. Recovery: --install re-fetches. Verbatim from demo/RUN-LOG.txt sections 3 and 4.",
+      "narration_text": "One failure worth showing. Move the Kokoro onnx file aside — the model is the one thing not in the git repo, because it's three hundred megabytes. Re-run art doctor. Audio row goes red. Two hint lines print underneath: the model files are missing, and the synth-and-decode phrase failed. Every other row stays green. Exit code: one. Recovery: put the file back, or on a fresh install, run art doctor with dash dash install. The exit code is the whole reason the command exists — a red row never ships a build.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'recovery   (verbatim; one file hidden)'"
+          },
+          {
+            "at": "0.18",
+            "event": "BEFORE: hide the Kokoro model file"
+          },
+          {
+            "at": "0.35",
+            "event": "AFTER: red audio row + two hint lines + exit 1 types"
+          },
+          {
+            "at": "0.75",
+            "event": "RECOVERY: restore the file / run --install; ready again + exit 0"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "recovery   (verbatim; one file hidden, one gate refuses)",
+            "code": "# BEFORE — hide the model file\n$ mv runtime/models/kokoro/kokoro-v1.0.onnx \\\n     runtime/models/kokoro/kokoro-v1.0.onnx.hidden\n\n# AFTER — same toolkit, one file missing\n$ ./art doctor\nbrutalist — readiness (free-only toolkit: no keys, ever)\n\n  FEATURE                      STATUS\n  -------                      ------\n  audio (Kokoro Bella/Onyx)    ❌ blocked\n        · model files ship with this toolkit — if missing:\n          curl -LO from github.com/thewh1teagle/kokoro-onnx\n          releases (model-files-v1.0)\n        · Kokoro failed to synthesize + decode a test phrase\n          above -40 dB — check model files, kokoro_onnx install,\n          and ffmpeg (run runtime/scripts/setup_smoke_kokoro.py\n          directly to see why)\n  captions + word clock        ✅ ready\n  Manim beats                  ✅ ready\n  …\nSomething is blocked — see above.\n[exit 1]\n\n# RECOVERY — the fix is printed inside the error\n$ ./art doctor --install     # (fresh box: fetch model + deps)\n$ ./art doctor               # (this box: model restored)\n[… seven rows green, exit 0]",
+            "sparkLine": "One file missing. Row red. Exit 1. Fix printed."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T23:13:27.598164+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 27.14,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 27.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, in the order you use it.",
+      "narration_text": "So — art doctor. A live-verification readiness checker. One dispatcher case, one script, two modes. It imports every Python module, runs ffmpeg, makes Kokoro speak, checks the fonts, and prints the table. It exits zero when every one of the seven features is green, one the moment one is red — with the fix line printed underneath. Run this before you fill a beat sheet, and downstream failures with cryptic messages become failures with a checklist.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'art doctor — the whole surface, in the order you use it'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art doctor — the whole surface, in the order you use it",
+            "artifactLines": [
+              "bare invocation — ./art doctor [--install]; wraps the setup script with $@ forwarded.",
+              "two modes, one table — bare verifies; --install installs pip deps + Remotion npm + fonts + Kokoro model, THEN verifies.",
+              "live verification only — imports every Python dep, runs ffmpeg, makes Kokoro speak a test phrase above -40 dB. Receipts do not count.",
+              "13 atomic checks → 7 features — any missing atomic check blocks the whole feature and prints its fix line beneath.",
+              "bash 3.2-safe — dynamic OK_<id>/MISS_<id> vars via eval, so macOS's default shell runs the same script Linux does.",
+              "exit 0 all-green; exit 1 any-red — run this before a beat sheet, so downstream failures come with a checklist, not a mystery."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T23:14:05.671849+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.63,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 22.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at your own copy of the toolkit: run art doctor, save the whole output, and then — without installing anything — explain in one line for each red row exactly which atomic check failed and which fix hint applies. Look for whether Claude is tempted to run art doctor with dash dash install to make the table green. That is the one thing I did not ask for. Verification is not remediation.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Read art doctor — diagnose without installing",
+            "command": "From my brutalist.art toolkit root: (1) run ./art doctor and save the whole stdout+stderr to /tmp/doctor.txt. (2) Do NOT install anything. (3) For every row that says '❌ blocked', write one line naming the atomic check ID that failed (the id passed to check() in setup) and quoting the exact fix hint that printed beneath it. (4) If every row is '✅ ready', tell me the exit code and quote the one sentence the script prints under the table about what green does NOT prove. (5) Tell me whether you were tempted to run ./art doctor --install, and why you did not.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — stdout+stderr saved to /tmp/doctor.txt, nothing installed",
+              "step 2 — each red row mapped to its check ID + verbatim fix hint",
+              "step 3 — exit code reported and the not-a-render-proof line quoted"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T23:14:50.636382+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.74,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 21.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T18:17:25"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Command: art doctor. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art doctor.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art doctor.",
+            "slug": "claude-liam-brutalist-command-doctor"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T23:15:07.431211+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.14,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.166666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T18:17:25"
+      }
+    }
+  ]
+}

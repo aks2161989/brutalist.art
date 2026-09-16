@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "9e7c8cd745cc42dfb5d20355e43ac2e0",
+  "source_sha256": "a28cef7d587237d70cb6fd5cdeb34eb6b0554bab24c9ad3fc71f3f2fb34fd570",
+  "beat_sheet_sha256": "16ec57dd90e2534265a133a6e9130bd09ea068df27bd10a11f2b194931c3a3ff",
+  "video_sha256": "879ddc4b8277e37aec3e82786d879f962b19ab690308df8b1d309804f5bd7f02",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/beats/B00_15.png", "sha256": "d4c0c8fac79b7a72f8c8e87fc7ff67e73f498f699ffea338d7e7054542768e14"},
+    {"path": "_qc/beats/B00_50.png", "sha256": "bf04b1778db8a6dfd8e54a1c79ec2636522eb29cbc669cc49dcd1c4bc4e58049"},
+    {"path": "_qc/beats/B00_85.png", "sha256": "37131ab5233113d94840621e27e5540444d16c12f2cb252cd29756f6d5d85152"},
+    {"path": "_qc/beats/B01_15.png", "sha256": "668e0ed731ef76c5bd4e1f741eb21b25e90a9d113b8542d44b6e6cf44b8ab585"},
+    {"path": "_qc/beats/B01_50.png", "sha256": "7bda2a9a1f5f821733901caab1c0f885ff22caadd0d9bf201928c20490a55bac"},
+    {"path": "_qc/beats/B01_85.png", "sha256": "0a5ccde4dc7742edbcfbe2b6d2517bef83a0d95902c272c53e64c63ba28b12a3"},
+    {"path": "_qc/beats/B02_15.png", "sha256": "c251e32cbc843c514ed5089dd7c20127714ec96dd73e8cc05519159191646595"},
+    {"path": "_qc/beats/B02_50.png", "sha256": "7ac969919a0b2470787c86d8fee0debeee4f7c2fa9b806b0ef02bb96fe239540"},
+    {"path": "_qc/beats/B02_85.png", "sha256": "02b849271d8597f8271c670932d80bc12977e3040f9b8ae3dcf2546dd189a8e9"},
+    {"path": "_qc/beats/B07_15.png", "sha256": "f43fe907caf1c4e92d9cf9e33661d2750423053e60fcac11362f2a43a9a05540"},
+    {"path": "_qc/beats/B07_50.png", "sha256": "b4c2484ff5d1dc53e87eea2063109827c3b09ec65c336045d2a12aa2a54e699a"},
+    {"path": "_qc/beats/B07_85.png", "sha256": "e75a2f16f45de444f0d2628bccf9f3cbf890e363d11946bc97ce0fa91a1fe1a9"},
+    {"path": "_qc/beats/B09_15.png", "sha256": "0661211ec8748f68c7193753b84b49b4542a1e97b636446b7a2db67fe4613f35"},
+    {"path": "_qc/beats/B09_50.png", "sha256": "ab42c3f70f388d6b52833869dd5e51b429cdc7c558f5db57f4c42d38320ca1ad"},
+    {"path": "_qc/beats/B09_85.png", "sha256": "236dfa3735288d8ea1585f7e5beac8e09f26d5f3358bee8ec98ccdab31416de4"},
+    {"path": "_qc/beats/B11_15.png", "sha256": "24fe9cc6ab90d0db29df1d292fff197ce574690b33ebf962d722fd7eb7a26403"},
+    {"path": "_qc/beats/B11_50.png", "sha256": "fc8ed7ae59b8ee06902a60487562905354f2ff584aefc99c5d02852a9ed99ebf"},
+    {"path": "_qc/beats/B11_85.png", "sha256": "0495d3fdaf2b8606a5530c617a734b12bb771ba81fae193a13d1ff8cacfdaa37"}
+  ],
+  "notes": "Re-verified 2026-09-13 run_id 9e7c8cd745cc42dfb5d20355e43ac2e0. 9:16 Short (2160x3840, 96.958s container / 96.917s video / 96.958s audio — strictly under 180.000s). Source change was in peripheral skills/scripts (build_safety.py, compile.py, shorts.py, SKILL.md files); parent vertical media/mp3 files and narration unchanged — SHA-256 of all 6 Short media files and 6 mp3 files match verified.json from original build. Whole-beat cut of parent claude-liam-brutalist-runtime-build-cli-d3-reels vertical (234.8s, 12 beats): kept B00 (ASK cold open, Liam intro + folder-of-D3-sims framing + three preview lines), B01 (BLUF hesitant writer walks back builds->wraps and prompt->HTML), B02 (FRAMEWORK the pipeline STAMP->CAPTURE->AUDIO->REMOTION->COMPILE + verbatim quote + idempotent chip), B07 (WORKED EXAMPLE demo/config.json dry-run showing greeting=Yo, make_title, extract_code head, ten-beat stamp), B09 (VERDICT artifact naming the whole surface in six lines: input, stamp, quote, shell out, log, recover), B11 (OUTRO with hardcoded @NikBearBrown per OUTRO-LOCK). Dropped B03 CLI+config-schema code walkthrough, B04 make_beat_sheet code cascade, B05 extract_code regex walkthrough, B06 build_one orchestrator listing, B08 soft/hard-fail failure-mode teardown, B10 extended Your-Turn composer (all belong in the 16:9 long). Native portrait renders reused unchanged (shorts.py 'native portrait reused unchanged' for all 6 beats). Kokoro am_onyx narration reused unchanged from parent (no API calls, no ElevenLabs). Frame evidence re-verified: all 18 _qc/beats/B*_*.png hashes confirmed against on-disk files — identical to previous build. B00_50 shows Bula Liam serif greeting + composer with wrap ask + three output lines cascaded + @HumanitariansAI chip; B01_50 shows 'wraps' already corrected in place of 'builds' with 'one prompt' still terracotta (mid-correction hesitant animation); B01_85 shows final settled 'the tool wraps a D3 sim from one HTML.' with caret parked; B02_50 shows UTILITY-PIPELINE eyebrow + 'One config in. N review cuts out. One row each in the log.' heading + STAMP->CAPTURE->AUDIO->REMOTION->COMPILE body + verbatim source quote card + terracotta IDEMPOTENT PER SIM verdict chip + 'The tool WRAPS. It does not invent.' spark line; B07_50 shows 'demo/config.json -> make_beat_sheet() (verbatim)' code cascade with demo config row + dry-run output + full 10-beat B00..B09 stamped list; B09_50 shows six-line verdict artifact with numbered points (input, stamp, quote, shell out, log, recover); B11_50 shows 'Brutalist Utility: build_cli_d3_reels.py.' with terracotta period + @NikBearBrown handle + mascot below. No dropped beat leaves a dangling number or unresolved reference. SKIN LINT warnings for B00 and B11 (ClaudeComposerAsk916 / ClaudeTitleOutro916 — inherited from parent, benign 916-variant labeling). No captions burned in. No publish, no upload, no git push. Human review pending — Bear's viewing is next."
+}

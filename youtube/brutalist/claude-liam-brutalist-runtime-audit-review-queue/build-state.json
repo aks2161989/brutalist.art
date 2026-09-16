@@ -1,0 +1,32 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/exports/landscape/claude-liam-brutalist-runtime-audit-review-queue.mp4",
+  "sha256": "1f52ded1f929a35bffa27e98ac290b201e5f63d83899dab5b2f60903e837cff1",
+  "duration_s": 275.375,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B00.mp4": "b85138d229f83097626e441a979c645a26c0571b2ae5632b88681c90dd6bc6bc",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B01.mp4": "ee5e8feea5324c1fade815af3a02fa3c6dcbe64d324d9968135a350a18f21349",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B02.mp4": "b32f5ff94a6f48c4962f9b07ac4b07b4bcf6a6086ea2fb2bcd2d8a30e5737c7f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B03.mp4": "722facb764bac20db604f8f35e8c7b7537e9b71ec24ad25016f4a11d3ecb8cb5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B04.mp4": "baae1d44b3399c626ca8293e2bcd1519d4098f30f417c1bd13b1669293cfd3c4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B05.mp4": "8815fe1aa60eff4ae8686be593e8bc8a43984435e33440d55e1930f41ab1d350",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B06.mp4": "ee6b2497baa250654e749739f63957e510cc1359cb0388f7c84ed00c981b2228",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B07.mp4": "579355c5ee27bb040c8c0290de899bf5aef1f80a30820c2f217aeee0c0646580",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B08.mp4": "930fd3bdd0a7444a492bac696e1e920dbae89a169167c189dcb8995be99a9f95",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B09.mp4": "a57fe4713d40cf946eecf6147e70ba4c9bdc5a6f189ef19b717e4360a8b4dda8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B10.mp4": "1b668213e803bf0111105edd78d1396a8cb58129984a85065de4e49c78e5e248",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/media/B11.mp4": "38914d6636cad5cd1afd653db4ebc460e63f599f7da07b01b6b3051a3c5a9c5c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B00.mp3": "625ab9f9221566ded38d9d70c3dd337f73cbe57db067132b8f98415d26dace8c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B01.mp3": "ca331fc16903cce36ac1b88e40082fc74bcaec5ead5053ebd0b2f531cb3050c3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B02.mp3": "d2818ef386bb56188040c5c5687e5ffefdfc2135dfe8b3c9f27be07dbf7e88d7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B03.mp3": "07cf6ea49e8f48ba14d9094a782af97c336b18e078d150ffc17f082c46a37f9f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B04.mp3": "cfd957e1e07c9307ba0b120be1140e765d8c638d653db677451f186b74352bd3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B05.mp3": "ba16e7968e3fd3d57bd3e0f20c1045c499c44e29dc2074662c898aa8d1220489",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B06.mp3": "06fb05a3c28456871a9d39428b5c284701766393dabca283f1be82b64a519e19",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B07.mp3": "b5b6ab4759eee590baa7762fe60db271290a6329c7fd82be4e37e283ef5404a5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B08.mp3": "064e76b9eb9537b96a20ca30af48f748247135b346cab281ee004fffed56516c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B09.mp3": "f09b2a11c1385f57dbe37370406937e26723224511e2362ce280e425a9de249e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-audit-review-queue/mp3/beat-B10.mp3": "2240d5ff433a45a4fab1efb6aab3193b3fc5581fb14a6f56c1c219099a75edfd"
+  },
+  "at": "2026-09-13T03:46:27.947905+00:00"
+}

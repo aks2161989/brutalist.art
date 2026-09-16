@@ -1,0 +1,179 @@
+===== $ ./repoloop.sh --help =====
+usage: repoloop.py [-h] [--repo REPO] [--fellows FELLOWS] [--dry | --prepare |
+                   --status | --stop | --once | --start] [--forever] [--n N]
+                   [--only ONLY] [--timeout TIMEOUT]
+                   [--min-free-gb MIN_FREE_GB] [--model MODEL]
+                   [--landscape-only] [--shorts-only]
+
+Resumable, serial film factory. Never publishes, signs human approval, or
+spends API credits.
+
+options:
+  -h, --help            show this help message and exit
+  --repo REPO
+  --fellows FELLOWS
+  --dry
+  --prepare
+  --status
+  --stop
+  --once
+  --start
+  --forever
+  --n N
+  --only ONLY           exact inventory ID
+  --timeout TIMEOUT
+  --min-free-gb MIN_FREE_GB
+  --model MODEL
+  --landscape-only
+  --shorts-only         independent cut-first queue from completed native
+                        portraits; never rebuilds longs
+
+===== $ ./repoloop.sh --dry =====
+01 what-is-brutalist: What Is Brutalist? [onboarding]
+02 download-and-set-up: Download Brutalist with Claude Code [onboarding]
+03 your-first-project: Your First Brutalist Project [onboarding]
+04 skill-ai-explainer: The ai-explainer Skill [skill]
+05 skill-anthropics: The anthropics Skill [skill]
+06 skill-cli-explainer: The cli-explainer Skill [skill]
+07 skill-deep-explainer: The deep-explainer Skill [skill]
+08 skill-duration-planner: The duration-planner Skill [skill]
+09 skill-explainer: The explainer Skill [skill]
+10 skill-fashionista: The fashionista Skill [skill]
+11 skill-fellows: The fellows Skill [skill]
+12 skill-finance: The finance Skill [skill]
+13 skill-guests: The guests Skill [skill]
+14 skill-hai: The hai Skill [skill]
+15 skill-logo: The logo Skill [skill]
+16 skill-logo-motion: The logo-motion Skill [skill]
+17 skill-nbb: The nbb Skill [skill]
+18 skill-nopunt: The nopunt Skill [skill]
+19 skill-screen-clean: The screen-clean Skill [skill]
+20 skill-sri-explainer: The sri-explainer Skill [skill]
+21 skill-your-turn: The your-turn Skill [skill]
+22 command-help: Brutalist Command: art help [command]
+23 command-list: Brutalist Command: art --list [command]
+24 command-icons: Brutalist Command: art icons [command]
+25 command-icon-build: Brutalist Command: art icon-build [command]
+26 command-scenes: Brutalist Command: art scenes [command]
+27 command-scene-index: Brutalist Command: art scene-index [command]
+28 command-todo: Brutalist Command: art todo [command]
+29 command-run: Brutalist Command: art run [command]
+30 command-shorts: Brutalist Command: art shorts [command]
+31 command-vertical: Brutalist Command: art vertical [command]
+32 command-approvals: Brutalist Command: art approvals [command]
+33 command-final: Brutalist Command: art final [command]
+34 command-doctor: Brutalist Command: art doctor [command]
+35 command-smoke: Brutalist Command: art smoke [command]
+36 command-keys: Brutalist Command: art keys [command]
+37 command-setup: Brutalist Command: setup [command]
+38 command-repoloop: Brutalist Command: repoloop.sh [command]
+39 runtime-align: Brutalist Utility: align.py [utility]
+40 runtime-brand-variant: Brutalist Utility: brand_variant.py [utility]
+41 runtime-build-cli-d3-reels: Brutalist Utility: build_cli_d3_reels.py [utility]
+42 runtime-capture-sim: Brutalist Utility: capture_sim.py [utility]
+43 runtime-fill-slates: Brutalist Utility: fill_slates.py [utility]
+44 runtime-generate-audio-kokoro: Brutalist Utility: generate_audio_kokoro.py [utility]
+45 runtime-image-fetch: Brutalist Utility: image_fetch.py [utility]
+46 runtime-pantry: Brutalist Utility: pantry.py [utility]
+47 runtime-provenance: Brutalist Utility: provenance.py [utility]
+48 runtime-remotion-scenes: Brutalist Utility: remotion_scenes.py [utility]
+49 runtime-setup-smoke-kokoro: Brutalist Utility: setup_smoke_kokoro.py [utility]
+50 runtime-smithsonian-fetch: Brutalist Utility: smithsonian_fetch.py [utility]
+51 qc-beat-lint: Brutalist Utility: beat_lint.py [utility]
+52 qc-final-frame-check: Brutalist Utility: final_frame_check.py [utility]
+53 qc-gate-shape: Brutalist Utility: gate_shape.py [utility]
+54 qc-manim-layout-audit: Brutalist Utility: manim_layout_audit.py [utility]
+55 qc-static-scene-check: Brutalist Utility: static_scene_check.py [utility]
+56 qc-wcag-margin-check: Brutalist Utility: wcag_margin_check.py [utility]
+56 films; fresh Claude context per film; Liam; no captions; no publication.
+
+===== $ ./repoloop.sh --status =====
+{
+  "updated_at": "2026-09-10T04:28:37.203944+00:00",
+  "counts": {
+    "review_ready": 37,
+    "building": 1,
+    "pending": 18
+  },
+  "running": true,
+  "pause_reason": "",
+  "pause_until": 0,
+  "active_log": {
+    "id": "command-repoloop",
+    "run_id": "cd46b905ecb54c35b0f71b2db5a04ab1",
+    "log": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/logs/claude-liam-brutalist-command-repoloop-1789014517.jsonl",
+    "started_at": "2026-09-10T04:28:37.212856+00:00"
+  },
+  "active": [
+    {
+      "id": "command-repoloop",
+      "slug": "claude-liam-brutalist-command-repoloop",
+      "title": "Brutalist Command: repoloop.sh",
+      "kind": "command",
+      "sources": [
+        "repoloop.sh",
+        "runtime/scripts/repoloop.py",
+        "REPOLOOP-PROMPT.md"
+      ],
+      "brief": "",
+      "aliases": [],
+      "source_sha256": "1cc0c69fd8f8be70b36fd23fa4066ea40c93875b08fa02a6daef2d2aa8982acc",
+      "order": 38,
+      "status": "building",
+      "attempts": 0,
+      "retry_at": 0,
+      "note": "New or changed source/feedback; old renders preserved",
+      "feedback_sha256": "6b7b9c7454a60f145d6970b622d74842a5f8184647f32e564038495c22ecd0f5",
+      "started_at": "2026-09-10T04:28:37.203911+00:00",
+      "run_id": "cd46b905ecb54c35b0f71b2db5a04ab1",
+      "log": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/logs/claude-liam-brutalist-command-repoloop-1788805135.jsonl"
+    }
+  ]
+}
+
+===== $ ./repoloop.sh --shorts-only --dry (tail) =====
+14 skill-hai: The hai Skill — Short [short]
+15 skill-logo: The logo Skill — Short [short]
+16 skill-logo-motion: The logo-motion Skill — Short [short]
+17 skill-nbb: The nbb Skill — Short [short]
+18 skill-nopunt: The nopunt Skill — Short [short]
+19 skill-screen-clean: The screen-clean Skill — Short [short]
+20 skill-sri-explainer: The sri-explainer Skill — Short [short]
+21 skill-your-turn: The your-turn Skill — Short [short]
+22 command-help: Brutalist Command: art help — Short [short]
+23 command-list: Brutalist Command: art --list — Short [short]
+24 command-icons: Brutalist Command: art icons — Short [short]
+25 command-icon-build: Brutalist Command: art icon-build — Short [short]
+26 command-scenes: Brutalist Command: art scenes — Short [short]
+27 command-scene-index: Brutalist Command: art scene-index — Short [short]
+28 command-todo: Brutalist Command: art todo — Short [short]
+29 command-run: Brutalist Command: art run — Short [short]
+30 command-shorts: Brutalist Command: art shorts — Short [short]
+31 command-vertical: Brutalist Command: art vertical — Short [short]
+32 command-approvals: Brutalist Command: art approvals — Short [short]
+33 command-final: Brutalist Command: art final — Short [short]
+34 command-doctor: Brutalist Command: art doctor — Short [short]
+35 command-smoke: Brutalist Command: art smoke — Short [short]
+36 command-keys: Brutalist Command: art keys — Short [short]
+37 command-setup: Brutalist Command: setup — Short [short]
+37 films; fresh Claude context per film; Liam; no captions; no publication.
+
+===== $ ./repoloop.sh --only totally-fake-id --dry =====
+[repoloop] Unknown --only ID; inspect --dry
+[exit $? — the guard fires BEFORE any work]
+
+===== $ ./repoloop.sh --shorts-only --landscape-only =====
+usage: repoloop.py [-h] [--repo REPO] [--fellows FELLOWS] [--dry | --prepare |
+                   --status | --stop | --once | --start] [--forever] [--n N]
+                   [--only ONLY] [--timeout TIMEOUT]
+                   [--min-free-gb MIN_FREE_GB] [--model MODEL]
+                   [--landscape-only] [--shorts-only]
+repoloop.py: error: --shorts-only and --landscape-only are mutually exclusive
+
+===== $ ./repoloop.sh --n -1 =====
+usage: repoloop.py [-h] [--repo REPO] [--fellows FELLOWS] [--dry | --prepare |
+                   --status | --stop | --once | --start] [--forever] [--n N]
+                   [--only ONLY] [--timeout TIMEOUT]
+                   [--min-free-gb MIN_FREE_GB] [--model MODEL]
+                   [--landscape-only] [--shorts-only]
+repoloop.py: error: n must be nonnegative; timeout and minimum free GB must be positive

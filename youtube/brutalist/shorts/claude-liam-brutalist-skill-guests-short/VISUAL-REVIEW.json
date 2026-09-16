@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "2c8cb7d4b9e7486c88488b9396afadba",
+  "source_sha256": "b414ed2479d64033f05ce67115cdd6ba366b2014b87d5fca20ac17e968c119e0",
+  "beat_sheet_sha256": "e6cce757ac6752f574f6bd39437e4cef6fa3a6f8ce01d808407132b9d2bf3336",
+  "video_sha256": "bce582b1f21ec024d7465c47564655a16854c91cd8e291d77a67b451a76d29b7",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-sheet.png", "sha256": "4b7598e18e05d1c1df492c654acee2ec8d978af1e6ab90dbe289c70b98ee5f2b"},
+    {"path": "_qc/frames/B00-p50.png", "sha256": "cfe25ebc2d5fd0ea077b338580b55543b22e8f2ac0bc28bc99a79ceffea38d24"},
+    {"path": "_qc/frames/B01-p50.png", "sha256": "76972a1149332f83f8b801ec03d3e93d3fa3c5f2b2cf58154b4f6c29e94c3769"},
+    {"path": "_qc/frames/B03-p50.png", "sha256": "61da3a9449276f6bd433f63811c1c36f46c966a2e615e7ef81641e7aee41a859"},
+    {"path": "_qc/frames/B09-p50.png", "sha256": "b93b381284706636b3ad286999c8be8cb5eff6420a5fc5e8516f806472da5333"},
+    {"path": "_qc/frames/B11-p50.png", "sha256": "93e251efc84921c1a7fb2685d0ffdb59e7a543a4a7de05f26c997c2895ae9641"}
+  ],
+  "notes": "Reviewed the compiled 2160×3840 Short (81.708 s container, 81.667 s video, 81.708 s audio — strictly under 180 s). Run ID 2c8cb7d4b9e7486c88488b9396afadba. Extracted 163 frames at 2 fps plus beat-relative 15%/50%/85% frames for each of the five kept beats (B00, B01, B03, B09, B11) and built a 3×4 contact sheet. Visually verified all five p50 frames: B00 ClaudeComposerAsk916 — cream ground, 'BRUTALIST · SKILL TEARDOWN' eyebrow, 'The guests Skill' title, 'Hallo, Liam' greeting, composer card with the ask, three result lines (frame around a board member's recording / six beats · Claude bookends · standard HAI outro / no feedback beat — the guest is not evaluated) — '@HumanitariansAI' folder chip legible, all elements inside portrait safe area. B01 BrutalistHesitantWriter916 — shows the post-correction state 'The guests skill / prunes the / fellows spine. / A board member / is not a fellow.' — five lines on cream with cursor still active, text fills the safe area cleanly (portrait-aware scale patch active, >55% fill confirmed). B03 SkillTeardownPipeline916 — full six-node spine (INPUT → COLD OPEN → SUMMARY → THE VIDEO (terracotta) → RECAP → YOUR TURN + HAI OUTRO → OUTPUT), footer sparkline 'Bookends around the guest's file.' and footerNote legible, all inside safe area. B09 ClaudeVerdictArtifact916 — white card, 'A frame. Not a re-edit.' heading, all six verdict lines with numbered terracotta bullets fully legible: guests wraps the recording untouched; SIX beats not nine; NO feedback beat absent by design; GATE G guest-signed; screen-clean never cuts; HAI outro channel-picked. B11 ClaudeTitleOutro916 — dark ink ground, 'The guests Skill.' in large serif, '@NikBearBrown' subtitle in correct position. Audio decode error-free (full AAC stream). No speech clipped or sped up. No captions burned in. Two carry-over palette lint warnings (B00, B11 on *916 compositions against palette=claude) are portrait-native trade-offs inherited from the vertical parent, not defects. Human review pending."
+}

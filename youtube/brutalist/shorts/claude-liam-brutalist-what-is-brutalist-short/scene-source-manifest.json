@@ -1,0 +1,12 @@
+{
+  "files": [
+    "runtime/remotion/src/scenes.json",
+    "runtime/remotion/src/TrainTeacher.tsx",
+    "runtime/remotion/src/RequireReport.tsx",
+    "runtime/remotion/src/Root.tsx",
+    "runtime/remotion/src/scenes/BarChart.tsx",
+    "runtime/remotion/src/illustrations/previews.tsx"
+  ],
+  "baseline_sha256": "fc2d96ddd47718d6b2373a19fcbc705986f656de31793fe7942e4c97e3a7f4f2",
+  "note": "Overlay on the local toolkit snapshot recorded in SOURCE-SNAPSHOT.json, not blindly on another revision."
+}

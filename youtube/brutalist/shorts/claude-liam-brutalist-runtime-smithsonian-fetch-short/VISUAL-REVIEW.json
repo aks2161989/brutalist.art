@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "7d5225769ced4a06a72051a66def374b",
+  "source_sha256": "f02fb74df23b025a471db5435d5ad3ce8d64f4bd1c4475bc3a5c534e3f5ef6ec",
+  "beat_sheet_sha256": "fe239109466b4b1ab0338054497a42896b8b3967eeffea160ca451c0d2221a65",
+  "video_sha256": "7bcb09584bd7bd108b2795fdfdd07404236b9b5fa87c71f14eeaf217650c3122",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "73a338bdc8a163e53066e2c97d069d040edeef6a5125fba79fd9fbcaa689b98a"
+    }
+  ],
+  "notes": "6 beats sampled (12 frames at 50%+85% of each beat). B00: ClaudeComposerAsk916 cold open — Annyeong Liam, command types in, CC0 fetch output. B01: BrutalistHesitantWriter916 — downloader struck, provenance-pipeline types in; BLUF framing. B03: FormACard916 — text search with scored UNIVAC candidates and interactive prompt. B07: FormACard916 — .source.txt sidecar content with CC0, SI_ID, title, credit, license. B09: ClaudeVerdictArtifact916 — gets-right and bites verdict card at portrait width. B11: ClaudeTitleOutroHAI916 — title + @HumanitariansAI branded outro. Gate V: 0 BLOCKERs / 0 MAJORs on 12 sampled frames. Container, video and audio durations all measured at 110.25s — strictly under 180.0s. Native 2160×3840. Human review pending."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "616bfc2fadd2479fadc72138c055fa1a",
+  "source_sha256": "76651492332afb6c378d6c70e9a3ce916046c10fedfcdde5378e4cb089561f58",
+  "beat_sheet_sha256": "d1da922dbca9ae915f9d8f40f0ad3df79f6696f6945f9605b3e0a1e20920e697",
+  "video_sha256": "4b4b6d00485ea1887ea5be624c1a7f081e16ef765ad5de060f21b014c1529ac7",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-landscape.png", "sha256": "f851621ef83581b20c01260e59b344c91802a18835908c0d5b0beafa2373276f"},
+    {"path": "_qc/contact_sheet.png", "sha256": "77da93f0d26afdf83f8d58f6ead61df1128e0e545f8af16db5e1a007c3ba8c81"}
+  ],
+  "notes": "Re-verified for run 616bfc2f. Trigger: toolkit baseline updated (supervisor episode.source_sha256 changed from 71d2303f to 76651492); skills/make/fellows/SKILL.md content is unchanged (afd14d36 hash confirmed against SOURCE-SNAPSHOT). Existing landscape export verified: SHA-256 4b4b6d00 confirmed against file on disk; ffprobe reports 3840×2160 24/1 fps 261.875s AAC stereo — correct 4K spec. Contact sheets re-read with image-capable Read tool: Gate V contact sheet (24 frames) and 12 hero frames (L_*.jpg) re-inspected — same findings as previous run. B00 composer cold-open with 'Hallo, Liam' greeting, ask answered, @HumanitariansAI folder chip, three result lines; B01 hesitant writer completes 're-cuts → frames' correction; B02 anatomy folder tree legible with 'NOTES.md is a human gate' callout; B03 horizontal pipeline INPUT → ASK → SUMMARY ×2–3 → THE REPORT (terracotta) → BEAR'S NOTES ×2 → YOUR TURN + HAI OUTRO → OUTPUT; B04–B08 mechanism/falsifiability cards each carry eyebrow, heading, body, verbatim SKILL.md quote with citation, and verdict pill inside safe; B09 verdict artifact card six lines under 'A frame. Not a re-edit.'; B10 Your Turn paste-ready dry-run prompt with 3-check rubric; B11 outro shows 'The fellows Skill.' terracotta period, @NikBearBrown handle, slug-seeded mascot per OUTRO-LOCK.md. 0 BLOCKER, 0 MAJOR. No captions, no slates, no fabricated fellow content. Human review pending."
+}

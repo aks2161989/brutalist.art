@@ -103,7 +103,44 @@ def _lum(c):
     return (0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]) / 255.0
 
 
-def analyze_frame(path):
+def contrast_regions(arr, regions):
+    """Measure declared text regions in mixed-color footage, not its dimming scrim.
+
+    Normalized boxes are explicit reviewable claims about where essential text
+    lives. They replace only the whole-frame average-ink contrast measurement;
+    empty-frame, safe-area and fill checks still run. Every region must pass.
+    """
+    if not isinstance(regions, list) or not regions:
+        raise BuildError('contrast_regions must be a nonempty list')
+    h, w = arr.shape[:2]
+    defects = []
+    for region in regions:
+        if not isinstance(region, dict) or not isinstance(region.get('label'), str) or not region['label'].strip():
+            raise BuildError('contrast region requires a label')
+        box = region.get('box')
+        if not isinstance(box, list) or len(box) != 4 or not all(
+                isinstance(v, (int, float)) and not isinstance(v, bool) and np.isfinite(v) for v in box):
+            raise BuildError('contrast region requires four finite normalized coordinates')
+        x0, y0, x1, y1 = box
+        if not (0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1):
+            raise BuildError('contrast region must lie inside the frame')
+        crop = arr[int(y0*h):int(y1*h), int(x0*w):int(x1*w)]
+        if min(crop.shape[:2]) < 16:
+            raise BuildError('contrast region is too small to inspect')
+        bg = _background(crop)
+        ink = np.abs(crop.astype(float) - bg).max(axis=2) > INK_DELTA
+        label = region['label']
+        if ink.mean() < .003:
+            defects.append(('MAJOR', 'empty-contrast-region', f'{label}: no visible text/content'))
+            continue
+        sep = abs(_lum(crop[ink].astype(float).mean(axis=0)) - _lum(bg))
+        if sep < CONTRAST_MIN:
+            defects.append(('MAJOR', 'low-contrast',
+                            f'{label}: regional luminance separation {sep:.2f} < {CONTRAST_MIN}'))
+    return defects
+
+
+def analyze_frame(path, regions=None):
     im = Image.open(path).convert("RGB")
     arr = np.asarray(im)
     h, w, _ = arr.shape
@@ -155,7 +192,9 @@ def analyze_frame(path):
     # LOW-CONTRAST: ink luminance vs bg
     ink_rgb = arr[ink].astype(float).mean(axis=0)
     sep = abs(_lum(ink_rgb) - _lum(bg))
-    if sep < CONTRAST_MIN:
+    if regions is not None:
+        defects.extend(contrast_regions(arr, regions))
+    elif sep < CONTRAST_MIN:
         defects.append(("MAJOR", "low-contrast",
                         f"ink/background luminance separation {sep:.2f} < {CONTRAST_MIN} — hard to read"))
     return defects, cover
@@ -285,9 +324,16 @@ def inspect(a, tmp):
         raise BuildError('No frames inspected; cannot report clean')
     exempt = full_bleed_beats(a.reel, a.sheet) if a.reel else set()
     reports = set()
+    regional = {}
     if a.reel:
         bs = json.load(open(a.sheet or os.path.join(a.reel, 'beat_sheet.json')))
         reports = {b['beat_id'] for b in bs.get('beats', []) if is_source_report(b, bs)}
+        for b in bs.get('beats', []):
+            qc = b.get('qc') or {}
+            if 'contrast_regions' in qc:
+                if not isinstance(qc.get('contrast_reason'), str) or not qc['contrast_reason'].strip():
+                    raise BuildError('Regional contrast needs a written contrast_reason')
+                regional[b['beat_id']] = qc['contrast_regions']
 
     worst = {}   # frame -> list of defects
     for f in frames:
@@ -298,7 +344,7 @@ def inspect(a, tmp):
             with Image.open(f) as im:
                 im.load()
             continue
-        d, _ = analyze_frame(f)
+        d, _ = analyze_frame(f, regional.get(bid))
         if d and exempt:
             # frames are named "<beat_id>_<pct>.png"
             bid = os.path.basename(f).rsplit("_", 1)[0]
@@ -317,6 +363,10 @@ def inspect(a, tmp):
     if reports:
         lines += ['Source-report samples: decoded/covered; template styling checks not applicable. '
                   'Human content/framing review remains required.', '']
+    if regional:
+        lines += ['Regional text-contrast checks (all declared regions required): ' +
+                  ', '.join(sorted(regional)) + '. Whole-frame dimming/scene color is not text contrast; '
+                  'empty-frame, fill and declared safe-area checks remain active. Visual content review remains required.', '']
     for f in sorted(worst):
         lines.append(f"### {os.path.basename(f)}")
         for sev, kind, msg in worst[f]:

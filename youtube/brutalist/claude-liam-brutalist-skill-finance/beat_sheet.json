@@ -1,0 +1,875 @@
+{
+  "metadata": {
+    "title": "The finance Skill",
+    "slug": "claude-liam-brutalist-skill-finance",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "channel_title": "@HumanitariansAI",
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "e9d0a40ece9b404f8f731f406e0504b9",
+    "episode_id": "skill-finance",
+    "order": 12,
+    "note": "Skill teardown of skills/make/finance/SKILL.md (SOURCE-SNAPSHOT SHA-256 b9827d21…; supervisor's episode.source_sha256 00d9241c…). Twelve beats: cold open, hesitant-writer BLUF, anatomy, pipeline, four MECHANISM beats (shape-lock, XBRL never-retyped, two audits, colour+geometry), one FALSIFIABILITY beat (bank trap), verdict, Your Turn, title-restate outro. No network / no live EDGAR pull — the reel teaches the mechanism from the primary source per SELF-DEMO LAW's feasibility fallback (documented in SOURCES.md and FACTCHECK.md). Kokoro am_onyx throughout — free, local. No captions. Outro is ClaudeTitleOutro (@NikBearBrown per OUTRO-LOCK).",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/finance/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "finance",
+      "skill teardown",
+      "Humanitarians AI",
+      "SEC EDGAR",
+      "XBRL",
+      "Sankey",
+      "mirrored bar",
+      "audit",
+      "Okabe-Ito",
+      "Claude",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T13:27:02",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hola, this is Liam, in for Bear. Today we tear down the finance skill. It is the first fully templatized reel in the toolkit — same eleven beats, same five charts, every company, every quarter — because the accounting standard already fixed the shape. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hola, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the finance skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hola, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The finance Skill",
+            "command": "What is the `finance` skill? Read skills/make/finance/SKILL.md and tell me what it really does with a public company's filings.",
+            "runningText": "reading skills/make/finance/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "eleven beats, five charts — every quarter, every ticker",
+              "data from SEC EDGAR — never retyped",
+              "two audits gate every render — reconcile · source"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T16:29:08.354975+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.02,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 15.041666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the verb ('picks' → 'renders') in line two. Line four ('sets the chart') stays put by design; the swap changes the skill's job, not the standard's. Trigger is single-token per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read — the one the word template invites — is that finance picks the chart. It does not. The accounting standard sets the chart. The skill only renders it. That is why a bar chart where the specification calls for a Sankey is not a near miss. It is the failure mode.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'The finance skill'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 'picks the chart.'"
+          },
+          {
+            "at": "0.45",
+            "event": "typed line 3: 'The accounting standard'"
+          },
+          {
+            "at": "0.55",
+            "event": "typed line 4: 'picks the chart.'"
+          },
+          {
+            "at": "0.62",
+            "event": "line 2 'picks the chart.' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.70",
+            "event": "line 2 deletes and 'only draws it.' types in"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "The finance skill\npicks the chart.\nThe accounting standard\nsets the chart.",
+            "triggerWords": "picks",
+            "replacementWords": "renders",
+            "seed": "finance-bluf-2026-e9d0a40e",
+            "face": "serif",
+            "fontSize": 160,
+            "lineSpacing": 1.18,
+            "align": "center",
+            "charMs": 22,
+            "jitter": 4,
+            "mistakeRate": 2,
+            "hesitateWithin": 1,
+            "hesitateBetween": 3,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T17:19:00.897881+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 14.68,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — anatomy of the finance skill folder plus the per-ticker episode folder. Traces the never-retyped facts pipeline to disk.",
+      "narration_text": "First, the anatomy. On the toolkit side, one folder — SKILL markdown, the doctrine, plus a data pull script and four chart components. Sankey, mirrored bar, stacked bar, dot plot. On the fellow's side, a per ticker episode folder — a JSON file of facts pulled from EDGAR, a source audit report, and the beat sheet. Every number on screen traces back to that facts file. No number is ever typed into a component.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Two folders. One facts file.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.85",
+            "event": "callout box lands: 'data/facts.json is the single source of truth'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "finance",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "Two folders. One facts file.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/finance/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 1,
+                "icon": "🐍",
+                "name": "pull_facts.py  (EDGAR XBRL client)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "components/FinanceSankey.tsx"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "components/FinanceMirroredBar.tsx"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "components/FinanceStackedBar.tsx"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "components/FinanceDotPlot.tsx"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "youtube/finance-[TICKER]-[YYYY-Q#]/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "data/facts.json  (every XBRL fact for this ticker)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "data/audit-source.json  (AUDIT-SOURCE report)"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.json"
+              },
+              {
+                "indent": 0,
+                "icon": "🔗",
+                "name": "channel: @HumanitariansAI"
+              }
+            ],
+            "calloutText": "<b>data/facts.json is the single source of truth.</b> Charts READ from it, never receive numbers as props. Grep for hard-coded numerics in a component and the build fails.",
+            "sparkLine": "Toolkit side. Fellow side."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T16:31:15.237298+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.55,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 21.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — the required eleven-beat spine plus the two audits as gates before render.",
+      "narration_text": "The spine is fixed. Eleven beats. Trigger, executive summary, source card — then the four charts in order. Income statement Sankey, cash flow Sankey, balance sheet mirrored bar, segments stacked bar, sector distribution dot plot. Then what to look out for, your turn, outro. No beat is ever dropped. A company with no segment disclosure still renders beat seven and says so — absence of a disclosure is itself a data point.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Eleven beats. Same order. Every ticker.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'ticker' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "phase nodes reveal — 'FOUR CHARTS' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'reel + audit reports' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Eleven beats. Same order.",
+            "inputLabel": "ticker",
+            "outputLabel": "reel + audits",
+            "phases": [
+              {
+                "label": "COLD OPEN + SUMMARY",
+                "desc": "composer · BLUF · source card (accn, form, filed)"
+              },
+              {
+                "label": "FOUR CHARTS",
+                "desc": "income Sankey · cash-flow Sankey · balance mirrored · segments stacked · vs-sector dot",
+                "accent": true
+              },
+              {
+                "label": "TWO AUDITS",
+                "desc": "RECONCILE (self) · SOURCE (EDGAR) · both FAIL the build"
+              },
+              {
+                "label": "LOOKOUT + YOUR TURN",
+                "desc": "concentration · one-offs · GAAP vs non-GAAP · handoff"
+              }
+            ],
+            "footerNote": "No beat is ever dropped. A filer with no segment disclosure still renders B07 and says so — absence of a disclosure is a data point.",
+            "sparkLine": "Eleven beats. Same order."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T16:32:16.277878+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.42,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 21.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — SHAPE LOGIC LOCKED. Flow→Sankey, snapshot→mirrored bar, composition×time→stacked bar. Picking otherwise is factual misrepresentation.",
+      "narration_text": "First design decision, and it is the sharpest. Shape logic is locked. Flow gets a Sankey — that is the income statement and the cash flow. A snapshot gets a mirrored bar — that is the balance sheet. Composition over time gets a stacked bar — that is segments. And picking otherwise is not a style choice. It is a factual misrepresentation. A balance sheet drawn as a Sankey reads as motion — assets becoming liabilities — which is false. That is why the mirrored bar is the default even though it is less flashy.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Shape logic, locked.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: Flow→Sankey · Snapshot→mirrored bar · Composition×time→stacked bar"
+          },
+          {
+            "at": "0.60",
+            "event": "verbatim quote from SKILL.md lands"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'chart choice = factual claim'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "Shape logic, locked.",
+            "body": "FLOW → Sankey (income statement, cash flow). SNAPSHOT → mirrored bar (balance sheet). COMPOSITION × TIME → stacked bar (segments). VS SECTOR → dot-plot distribution. The chart type is not a style choice — it is a factual claim about which statement you are drawing.",
+            "quote": "A balance sheet is never a Sankey, however carefully styled. Ribbons read as motion; a viewer's gut reading of a balance-sheet Sankey is 'assets become liabilities,' which is false.",
+            "cite": "finance SKILL.md · Shape logic, locked",
+            "verdictLabel": "chart choice = factual claim",
+            "verdictPositive": true,
+            "sparkLine": "Locked shapes. No choice."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T16:33:13.880002+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 26.69,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 26.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Design decision 2 — DATA NEVER RETYPED. EDGAR XBRL JSON → data/facts.json → charts. User-Agent required; 10 req/sec cap.",
+      "narration_text": "Second decision. No number is ever retyped. The data comes from the U.S. Securities and Exchange Commission's EDGAR X B R L application. Ticker to central index key, then company facts for every tagged fact, then frames for the sector comparison. Every fact carries its own accession number, form, fiscal year, and period end — on chart provenance for free. The runtime writes those facts to a data file. The chart components read only from that file. Grep the components for hard coded numbers, and the build fails if any exist. Plus two hard rules from SEC — a user agent naming your organization, and ten requests per second maximum. Without them, the servers return four oh three.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Never retyped.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: EDGAR chain + hard limits"
+          },
+          {
+            "at": "0.60",
+            "event": "quote from SKILL.md lands (data/facts.json contract)"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'on-chart provenance, for free'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "Never retyped.",
+            "body": "ticker → CIK · submissions → filing index · companyfacts → every tagged fact · frames → sector population. Every fact ships with accn / form / fy / fp / end. Runtime writes data/facts.json — charts read only from it. Two SEC hard limits: User-Agent (or 403) · ≤10 req/sec (or 429). Sleep ~0.12s between calls.",
+            "quote": "No numeric constant is ever typed into a component. Grep the components for hard-coded numerics and fail if any exist.",
+            "cite": "finance SKILL.md · EDGAR XBRL, Rung 1 · AUDIT-SOURCE",
+            "verdictLabel": "on-chart provenance, for free",
+            "verdictPositive": true,
+            "sparkLine": "Never retyped. Ever."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T16:34:13.764337+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 37.1,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 37.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — THE TWO AUDITS. RECONCILE (self-arithmetic) + SOURCE (EDGAR). Independent by construction; both FAIL the build.",
+      "narration_text": "Third decision, and it is where the skill earns its trust. Two independent, deterministic audits gate every render. Audit reconcile checks the charts against their own arithmetic — income statement columns reconcile, cash flow sources equal uses, balance sheet assets equal liabilities plus equity, computed from line items not a stored total, segments sum to the fiscal year total. Audit source checks the charts against EDGAR — every rendered number equals its X B R L fact by tag and value. They are independent by construction. One checks internal arithmetic. The other checks external truth. They cannot fail the same way. Both fail the build. Never render past a failed audit.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Two audits. Both fail.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: RECONCILE vs SOURCE — what each proves"
+          },
+          {
+            "at": "0.60",
+            "event": "quote from SKILL.md lands"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'never render past a failed audit'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "Two audits. Both fail.",
+            "body": "AUDIT-RECONCILE (self): income cols reconcile · CF sources = uses (no negative ribbon) · balance A = L + E computed from line items · segments sum to FY total · every non-terminal Sankey node inflow = outflow. AUDIT-SOURCE (EDGAR): every rendered number = its XBRL fact by tag AND value · back-solved figures dashed AND listed in B09 · grep components for hard-coded numerics.",
+            "quote": "They are independent by construction: one checks internal arithmetic, the other checks external truth. They cannot fail the same way. Both FAIL the build.",
+            "cite": "finance SKILL.md · The two audits",
+            "verdictLabel": "never render past a failed audit",
+            "verdictPositive": true,
+            "sparkLine": "Two audits. Both fail."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T16:35:15.639412+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 36.89,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 36.916666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Design decision 4 — Okabe-Ito profit/loss colours are 1.13:1 luminance vs each other. Colour REINFORCES, never carries alone. Greyscale test.",
+      "narration_text": "Fourth decision, and it is the one that most people get wrong. Profit is bluish green. Loss is vermilion. These are the Okabe Ito colours — they stay distinguishable under red green colour blindness, unlike pure red and green. But — and this is the sharp condition — they have almost the same brightness. In greyscale they become identical blobs. So colour may reinforce profit versus loss. It may never be the only thing carrying it. Every profit loss distinction is also encoded — by geometry, by the sign on the number, or by the label. Desaturate the rendered frame. If profit and loss go ambiguous, the beat fails. Regardless of how correct the colours are.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Colour is not the only channel.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: Okabe-Ito hues + 1.13:1 luminance"
+          },
+          {
+            "at": "0.60",
+            "event": "quote from SKILL.md lands"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'greyscale test enforced'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4",
+            "heading": "Colour is not the only channel.",
+            "body": "PROFIT · INFLOW → #009E73 (Okabe-Ito bluish green). LOSS · COST · OUTFLOW → #D55E00 (Okabe-Ito vermilion). CVD-safe by hue. BUT — 1.13:1 luminance vs each other → greyscale-identical. So profit/loss must ALSO be encoded by geometry (ribbon continues vs terminates), by an explicit − on the number, or by the label. Terracotta #D97757 is reserved for the SUBJECT company only.",
+            "quote": "Colour may reinforce profit-versus-loss. It may never be the only thing carrying it. Desaturate the rendered frame. If profit and loss become ambiguous, the beat FAILS — regardless of how correct the colours are.",
+            "cite": "finance SKILL.md · Palette · GREYSCALE TEST",
+            "verdictLabel": "greyscale test enforced",
+            "verdictPositive": true,
+            "sparkLine": "Two channels always."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T16:36:19.937078+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 34.52,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 34.541666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — the template does not fit banks. Nasdaq-100 excludes financials by construction; write a second template for financials, don't force them through this one.",
+      "narration_text": "Falsifiability, and this is where the template breaks. The income statement Sankey assumes revenue, then cost of goods sold, then gross profit. Banks have no cost of goods sold. They have net interest income. Insurers run on premiums and reserves. Real estate investment trusts headline funds from operations. Running this template across the S and P five hundred would render structurally meaningless charts for the financial and real estate sectors. So this skill deliberately targets the Nasdaq one hundred — which excludes financials by construction. Financial companies get a second template. If you force a bank through this one, the audit will not catch it — because arithmetically it reconciles. It is just teaching a lie. The skill knows its own limit.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow FALSIFIABILITY · ACT 5 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Knows its own limit.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: banks · insurers · REITs — different statements"
+          },
+          {
+            "at": "0.60",
+            "event": "quote from SKILL.md lands"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'forcing a bank = false chart, clean audit'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "FALSIFIABILITY · ACT 5",
+            "heading": "Knows its own limit.",
+            "body": "The income-statement Sankey assumes revenue → COGS → gross profit. Banks have NO cost of goods sold — they run on net interest income. Insurers headline premiums and reserves. REITs report funds-from-operations. Force a bank through this template and RECONCILE will PASS — the numbers still add up — but the CHART is structurally wrong. So the skill targets the Nasdaq-100, which excludes financials by construction. Financials get a SECOND template.",
+            "quote": "Running this template across the S&P 500 would render structurally meaningless charts for the financial and real-estate sectors. The Nasdaq-100 excludes financials by construction, which makes it the better batch target.",
+            "cite": "finance SKILL.md · Known trap — the template does not fit banks",
+            "verdictLabel": "wrong chart, clean audit",
+            "verdictPositive": false,
+            "sparkLine": "Knows its own limit."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T16:37:24.619568+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 39.04,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 39.041666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card recapitulates the skill in five lines.",
+      "narration_text": "The verdict. Finance is the first template in the toolkit that does not need a design decision at build time — the accounting standard already made it. Shape logic is locked, so chart choice is a factual claim about which statement you are drawing. Every number is a JSON fact pulled from EDGAR — not a retyping. Two independent audits gate the build — reconcile checks the arithmetic, source checks against the filing. Profit and loss are always encoded twice, because greyscale kills the colour alone read. And the template knows its limit — it stops at the edge of the Nasdaq one hundred, because banks were never in scope. Skip any one of these, and the reel earns the boilerplate charge it exists to refute.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The template IS the standard.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "five verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The finance Skill",
+            "artifactHeading": "The template IS the standard.",
+            "artifactLines": [
+              "Shape logic is locked: chart choice is a factual claim about which statement you are drawing.",
+              "Every rendered number is a JSON fact from SEC EDGAR — no numeric constant is ever typed into a component.",
+              "Two independent audits gate every render — RECONCILE checks arithmetic, SOURCE checks against the filing.",
+              "Profit / loss is always encoded twice — colour reinforces, geometry or sign or label carries.",
+              "The template knows its limit — Nasdaq-100 only; banks get a second template, never forced through this one."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T16:39:07.490614+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 36.01,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 36.041666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready planning prompt Liam reads aloud + discusses. Dry-run only, no network, no build.",
+      "narration_text": "Your turn. Paste this into Claude Code. Read skills slash make slash finance slash SKILL markdown. Then, without running any network calls, plan — do not build — a dry run finance episode for a hypothetical ticker. Draft the composer ask, the executive summary card, the source card with a fabricated but labelled accession number, and the four chart component prop blocks with tiny sample data. For each chart, write down which SKILL rule fixed that chart type. And answer three questions. Does every chart trace to the facts file. Is every profit loss distinction encoded twice. Would the two audits — reconcile and source — both wire up cleanly on the props you drafted. Read what Claude wrote before you build anything.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready dry-run prompt"
+          },
+          {
+            "at": "0.72",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · PLAN A FINANCE DRY-RUN",
+            "segment": "Plan a finance reel without shipping it",
+            "command": "Read skills/make/finance/SKILL.md. Then, WITHOUT running network calls, plan (DO NOT BUILD) a dry-run finance episode for a hypothetical ticker: (1) ClaudeComposerAsk cold open; (2) executive-summary card headline; (3) source card with a clearly-LABELED FIXTURE accession number; (4) prop blocks for FinanceSankey (income), FinanceSankey (cash flow), FinanceMirroredBar, FinanceStackedBar — with tiny sample data. For each chart, cite the SKILL.md rule that fixed its type. Do not call sec.gov. Do not run generate_audio_kokoro.py or compile.py.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: does every rendered number trace to a single facts file?",
+              "check: is every profit/loss distinction encoded twice (colour + geometry/sign/label)?",
+              "check: would RECONCILE + SOURCE both wire up cleanly on those props?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T16:40:39.543089+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 46,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 36.91,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 36.916666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T13:27:02"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "That was the finance Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The finance Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The finance Skill",
+            "slug": "claude-liam-brutalist-skill-finance"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T16:40:58.755685+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.37,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-08T13:27:02"
+      }
+    }
+  ]
+}

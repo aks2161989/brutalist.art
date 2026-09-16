@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "9b4d02f2e64e486f84128da57eea5d86",
+  "source_sha256": "c5b4e9954b15e76f4e7b9009997cdf0796d3321fbd3b9e8c9f6f54f0cfc08c5b",
+  "beat_sheet_sha256": "d192fbf42ea275d37a39a1b0c80fc99fcd1d30952cdba4503c6abb8d12efc5d3",
+  "video_sha256": "36730f52dbd7c1696f1ebbd15daad26db144907bcac3c07b5c9a3feae7fee803",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames-current/first.png", "sha256": "ac4e42444e974baaf72faa0bf378dcbae53809ca3aa4f4f534c91571f6899e7a"},
+    {"path": "_qc/frames-current/B00-mid.png", "sha256": "cf4689450f2a6b78da05cf810bfcc34a4a526c764d8221934052ed273039a7f3"},
+    {"path": "_qc/frames-current/B02-mid.png", "sha256": "1c2373f18d85d734d9030fca2fcafbe8289d4358d61c3df751557ee81223d1de"},
+    {"path": "_qc/frames-current/B05-mid.png", "sha256": "37a173dbe92c1123b8f0da3da218cd016d2c1af34803693470519c6f8e963cb2"},
+    {"path": "_qc/frames-current/B08-mid.png", "sha256": "9c18c4fc44c55116bf516a6825bc8d2875710b66ea6aa05485ff08c4e0e44d8a"},
+    {"path": "_qc/frames-current/B10-mid.png", "sha256": "c0ded4c197230e0c894491dc0f5daf78da72caccf0218c290e692a13f4e066e1"},
+    {"path": "_qc/frames-current/final.png", "sha256": "73f137bee15aa556104af635f0762d928fbf0bd25e54b9c096075a3e2e41c73a"}
+  ],
+  "notes": "Re-reviewed for run_id 9b4d02f2e64e486f84128da57eea5d86. Video unchanged from prior run (SHA-256 stable); per-beat QC frames were stale. Fresh frames extracted from compiled vertical MP4 at B00/B02/B05/B08/B10 midpoints plus first/final. Visual inspection confirmed: B00 cold open shows ClaudeComposerAsk916 with @HumanitariansAI handle and art smoke prompt; B02 ClaudeCodeBeat916 title bar reads 'art:121-123' (corrected from 'art:100-102' in prior build; compiled video reflects the fix); B05 shows audio gate code card; B08 shows verdict summary card; final frame shows ClaudeTitleOutro916 with 'Brutalist Command: art smoke.' and @NikBearBrown (correct per OUTRO-LOCK). 2160x3840 portrait master, 238.67s, h264+aac both streams present. Native 9:16 portrait companion; full-length, no drops. Human review pending."
+}

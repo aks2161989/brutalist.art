@@ -1,0 +1,29 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "setup is a free-by-default readiness checker whose green rows are live proofs (Kokoro must actually speak) — not receipts from a package manager",
+  "parent_master_sha256": "e1de90e9fc72a0f415c4c5c3b6ebde6e7c7ac0f33d5b7143d5c23297d00b5f15",
+  "parent_beats": 13,
+  "parent_total_s": 285.5,
+  "kept_beats": ["B00", "B01", "B04", "B09", "B10", "B12"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "FRAMEWORK — shebang/two-modes header code walkthrough belongs in the 16:9 long; B01 BLUF + B04 example convey the two-modes idea without the code cascade."},
+    {"beat_id": "B03", "reason": "FRAMEWORK 2 — requirements.txt pinning walkthrough is exactly the 'long code walkthrough' the Short prompt says to drop; the verdict names the pip contract in one line."},
+    {"beat_id": "B05", "reason": "MECHANISM 1 — the four-phase --install pipeline is dense internals; the recovery beat (B09) mentions '--install re-fetches' as recovery, which is the only user-facing implication for this cut."},
+    {"beat_id": "B06", "reason": "MECHANISM 2 — bash 3.2 check() eval trick is portability internals; not part of the high-level 'what does setup do' story."},
+    {"beat_id": "B07", "reason": "MECHANISM 3 — live-verification detail is already stated in B01 BLUF ('makes Kokoro actually speak') and restated in B10 verdict; a whole 23s repeat is padding for a Short."},
+    {"beat_id": "B08", "reason": "MECHANISM 4 — ElevenLabs guard code cascade is unique but not required for the high-level answer; B10 verdict names the guard in one line for viewers who want to know."},
+    {"beat_id": "B11", "reason": "YOUR TURN — 32s composer prompt is the long film's exercise; Shorts prompt explicitly says a detailed CTA can be cut and the Short need not read the full exercise aloud."}
+  ],
+  "cut_first_review": "B00 opens with Liam's greeting and the ask (verify, don't install). B01 corrects the natural misconception: setup does not install by default, it verifies live. B04 shows what a green pass looks like (seven rows, $0.00, exit 0) and adds the honest caveat that a green table means dep checks passed, not that a video renders — use art smoke for that. B09 shows a real failure (unlink the Kokoro model → audio row red, exit 1) and how to recover. B10 verdict summarises the whole surface (two modes, live verification, ElevenLabs guard, pip contract, exit codes) in six lines. B12 outro closes. Transitions: B01→B04 (misconception → ready toolkit), B04→B09 (pass → one failure worth showing), B09→B10 (recovery → whole-surface verdict) all read cleanly. B09's reference to 'the fourth phase of the pipeline' is self-explanatory without B05.",
+  "planned_duration_s": 106.46,
+  "budget_ceiling_s": 175.0,
+  "rewrite_reason": null,
+  "source_change_note": "B04 updated in parent vertical (2026-09-13): narration now explicitly distinguishes dep-check pass from render proof and directs to 'art smoke'; visual code block updated to match. Short picks up new B04 natively (no rewrite needed — the updated narration strengthens the cut).",
+  "run_id": "e30814c3fe16457eaf5b4d7520b1be6c",
+  "notes": [
+    "Parent vertical aspect_ratio 9:16 — shorts.py reuses each B0x.mp4 unchanged as native portrait (no crop, no re-render).",
+    "--no-endcard keeps outro B12 as the last beat; --no-outro-rewrite preserves B12 original narration.",
+    "No paid API, no upload, no publishing; audio and video files are copied independently, no symlinks/hardlinks.",
+    "B04 render_duration_s now 20.792s (was 15.792s in prior Short build); total increases from ~101.5s to ~106.5s, still well within 175s ceiling."
+  ]
+}

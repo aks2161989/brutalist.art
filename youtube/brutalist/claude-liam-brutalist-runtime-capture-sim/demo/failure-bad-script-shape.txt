@@ -1,0 +1,2 @@
+[capture_sim] sim=00-tiny-wave.html  reel=/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-capture-sim/demo
+[capture_sim] steps JSON must be a non-empty array: /private/tmp/claude-501/bad-script.json

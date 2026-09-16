@@ -1,0 +1,21 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/exports/short/claude-liam-brutalist-command-repoloop-short.mp4",
+  "sha256": "ee8da1732db647bbc60a9603d8630549e3293c4f1ee6120aea0764a180f06052",
+  "duration_s": 93.83333333333333,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/media/B00.mp4": "5f33d07bd89cdad9b1088f38968ba906c9d0df8d10c96b607972c0d7252be911",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/media/B01.mp4": "1cbf57ce023af7dd9d770d4464c6c99a1fbe5c37875e9a4738030e363189fba2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/media/B05.mp4": "02e2c4219af33822d16e4079bc6b459bff1c8c9e41335d6797c17700c124b6ea",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/media/B09.mp4": "47a9090588de635bda527fc2d3b19e506efd2f51424b82c2566872b1c4f00e41",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/media/B10.mp4": "3ef4f6466d7dbb85b8919d61e4c1f6451ed2ec7e0bfde6d1e416c785c9ed82c3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/media/B11.mp4": "8acdd40fd66b6befc5fe4617a51df6aee52499db8bb65970f2750f4ae1112eb2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/mp3/beat-B00.mp3": "9361e121dad37d766bda625343a054f5300d00eee02460bcf17e9131847ecaa2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/mp3/beat-B01.mp3": "c91a6c5dcdf5f4bbc165f795b43108e9aca46a6e0e3b70b7118d57716d42cb2e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/mp3/beat-B05.mp3": "f78f3590abf6205a3871209465891b0be7892d86d194bbc54acfa180422637bb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/mp3/beat-B09.mp3": "ce486e2f3cadf36b259802826978fe025c186868f765abaeee13dad24dca423d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/mp3/beat-B10.mp3": "421ff77eeb3d34196a9dd350334cad463e02de4a306c3158cbc9bdc3c5e45bb7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-command-repoloop-short/mp3/beat-B11.mp3": "7d3f094fd42793d55004a2e38f68e676bc720bafa5fb2d16d8b19a897df03b96"
+  },
+  "at": "2026-09-13T03:17:02.862032+00:00"
+}

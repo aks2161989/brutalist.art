@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "88f42532ea134b74829b28e966ef5552",
+  "source_sha256": "6704da9d0dd6f4517ac246db700876b03934a0410af843cbe8e3bf0eefc97c9f",
+  "beat_sheet_sha256": "7a4500222c4dab4226fae52d7a77d5df1386b143a116ca8008eb415c65d81d0b",
+  "video_sha256": "f7cbed1ea45539e6025af8a08d3bd2921943bae569b32158c669ad0b60aa11f6",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "ff6e68fbaa34834c206d32096457240c1c2f16ab3d582d42b3e268a11faafc38"}
+  ],
+  "notes": "Portrait 2160x3840 · 268.3s · h.264 + AAC — native 9:16 layouts, not a cropped master. Updated from run e6349e95 (2026-09-09) to run 88f42532 (2026-09-12) with the same source-driven corrections as the landscape: art:71-74→art:92-95 (B02 title prop in ClaudeCodeBeat916) and 619→620 throughout (B00/B05/B07/B09 narration + B05/B09 visual props). Portrait compositions unchanged: ClaudeComposerAsk916 (B00, B10), BrutalistHesitantWriter916 (B01), ClaudeCodeBeat916 (B02–B08), ClaudeVerdictArtifact916 (B09), ClaudeTitleOutro916 (B11). B01 portrait BLUF recipe intact: 3-line text, fontSize 155, lineSpacing 2.9. Contact sheet reviewed via Read tool: B00 shows portrait Bonjour cold open, B01 shows 'art scene-index rewrites the index.' correction, B02 shows art:92-95 dispatcher code, B05 shows 620 renderable count, B09 verdict visible. Gate V: 0 BLOCKER / 0 MAJOR on 2160x3840 compiled MP4. Known portrait limitations: ClaudeCodeBeat916 does not word-wrap so long code lines in B04–B08 clip horizontally (card is inside SAFE916 — Gate V passes). Skin lint warnings on B00/B11 informational (per reformat law — native portrait variants required). GATE T absent. Outro @NikBearBrown handle flagged for human review per OUTRO-LOCK.md. Human review pending."
+}

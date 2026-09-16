@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "1685612a4a7c43a99fc9b8f1ce087a15",
+  "source_sha256": "050ab02110a0984c7e606d9ae144c0912704f2b103cd9d5da72da063c2b4d46b",
+  "beat_sheet_sha256": "12f6a1dadf771d58078a7b9ab9221eba7205472df12b4a96673a162ff565ecff",
+  "video_sha256": "13cdc99770348dd77eac9ab6870d2d1cdd37cb80bbcfb04d9771cc6dcd74bfaa",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "a8aa5896a2cc0c3ee03bf58edae1b060a19db5a750dec249976bd2efd90d2b17"}
+  ],
+  "notes": "Portrait 2160x3840 @ 24fps, 194.5s. Re-signed for run_id 1685612a4a7c43a99fc9b8f1ce087a15. Source change: SKILL.md is unchanged in content (f7aab411); the source_sha256 fingerprint changed because COMMON files changed — runtime/prose/teardown/PROSE.md (voices/ → prose/ rename) and REPOLOOP-PROMPT.md (newly tracked). The beat_sheet.json was updated to record the current SKILL.md SHA; the rendered MP4 and all clips are identical to the previous pass. Native 4K portrait layout; every REMOTION beat rewired to its <Pattern>916 companion — no crop of a landscape render. Gate V sampled 26 frames (13 beats × 50%/85%), zero BLOCKER, zero MAJOR — _qc/REPORT.md reads 'Clean — no BLOCKER/MAJOR defects. ✓'. Contact sheet (sha256 a8aa5896…) read via image tool: ClaudeComposerAsk916 cold open, BrutalistHesitantWriter916 6-line correction at fontSize 175 ('The/cli-explainer/skill/commissions/your/reels.'), SkillTeardownAnatomy916 folder tree, SkillTeardownPipeline916 5-phase reduced spine (fits 1944 px portrait safe width), ClaudeCodeBeat916 SKILL.md excerpts legible, SkillTeardownMechanism916 doctrine quotes, ClaudeVerdictArtifact stacked list, Your-Turn composer, ClaudeTitleOutro916 '@HumanitariansAI' handle. Human review pending."
+}

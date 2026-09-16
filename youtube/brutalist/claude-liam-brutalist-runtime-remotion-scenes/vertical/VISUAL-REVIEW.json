@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "17e546b62d984759b811b112f45053a6",
+  "source_sha256": "0bd241b3d3b792330b10a0037c370271ed86a2600f3afe30a7a5856bc15171ff",
+  "beat_sheet_sha256": "ef98231cdd1b99fa0a910a55f2fd361c8f316fd49f11d6aeee5061b0520710a9",
+  "video_sha256": "f1cafcd4aca0580780aef0c9a349644f69cde3544582754b9ebb2f13087c54ec",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "d3ec725934aaf36027ffbd2adfa067e535cd436893a38d695a0f7f49bef0feb9"
+    },
+    {
+      "path": "_qc/review/port_t5s.png",
+      "sha256": "c9fff5956e348901678692f507def47bf271f2516734265f8ad9d5019d91196b"
+    },
+    {
+      "path": "_qc/review/port_t50s.png",
+      "sha256": "841a5554ad15a6c5fa1d4fda3846670ade9a7f3a7f06a7b6e4306eef2b0bcc5c"
+    },
+    {
+      "path": "_qc/review/port_t100s.png",
+      "sha256": "20026f3291a591fb3bacb7a3561268391b2ef2b972369df080bef98395af311e"
+    },
+    {
+      "path": "_qc/review/port_t190s.png",
+      "sha256": "fa1583b44d9e165c4151316a9bc8b41db6228d810d300f7f5ba1dec9c8f04c6f"
+    },
+    {
+      "path": "_qc/review/port_last.png",
+      "sha256": "536d574c3377566d25d62af385b5428bf4cb2559a5038f615977c14b648e98c7"
+    }
+  ],
+  "notes": "Run 17e546b62d984759b811b112f45053a6 (2026-09-14, attempt 3 — vertical re-export fix). Portrait 9:16 native at 2160x3840, duration=212.0s, 12/12 beats filled, 0 slates. Gate V passed during compile (final_frame_check.py ran as part of compile.py non-review path). Previous attempt had vertical output in wrong path (vertical/exports/ instead of exports/vertical/) and VISUAL-REVIEW frame paths incorrectly prefixed with 'vertical/'. Both fixed: slug updated to '-vertical', compile re-run to exports/vertical/, frame paths corrected to be relative to reel/vertical/. Video content unchanged from prior review: same clips, same audio — frame evidence (contact_sheet.png, port_t5s.png through port_last.png) viewed in previous run and confirmed intact. Skin lint warnings for B00 (ClaudeComposerAsk916) and B11 (ClaudeTitleOutro916) are expected 916-variant naming differences; not defects. No captions, no slates, no edge-bleed, @HumanitariansAI visible in B00/B10 beats. Human viewing/editing is next; no upload, no commit."
+}

@@ -1,0 +1,30 @@
+8 candidate(s) for "prompt typed to code"  —  a hit is a lead, read the props:
+
+  [ 5.0] CwcDecompositionTree   (16:9)
+       under: cwc-workshops — Code with Claude 2026 figures
+       C4 centerpiece for "The 402-Line Prompt" Decomposition tree: 402-line monolith splitting into 15-line core + 5 skill modules + 12 tools, with before/after cost/latency metrics.
+       props: sparkLine
+
+  [ 4.5] HaiExplainerFig4Prompt   (16:9)
+       under: claude-liam-hai — how-to-explainer-videos figures
+       Step 4: the key teaching beat. Split panel: left = greyed generic prompt; right = specific version with terracotta insertions. Sign-in callout shown separately.
+       props: sparkLine
+
+  [ 4.0] Prompt47   (16:9)  [derived text — open the file]
+       under: ruben-substack batch
+       (derived — no header in the component) Prompt47, registered under “ruben-substack batch”; keywords: prompt
+
+  [ 4.0] PrincipalsHierarchy   (16:9)
+       under: claude-liam — three-principals figures
+       "Claude's Three Principals" B02 Source: Anthropic Claude Constitution, January 2026 Three stacked horizontal bands, animating in top → bottom. TOP (widest): "Anthropic" — hardcoded limits · training-t
+       props: sparkLine
+
+  [ 4.0] AgentDevAnatomy   (16:9)
+       under: claude-liam — agent-development (claude-code) skill teardown figures
+       B01 — Frontmatter fields + system prompt structure.
+       props: sparkLine
+
+  [ 4.0] BrutalistHesitantWriter   (16:9)
+       under: Finance-Charts
+       A deterministic performance of someone writing badly: typos caught and fixed, pauses mid-word, and words typed then reconsidered and replaced.
+       props: text, face, fontSize, lineSpacing, align, ink, accent, bg

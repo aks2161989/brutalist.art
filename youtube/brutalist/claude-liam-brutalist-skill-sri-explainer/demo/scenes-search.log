@@ -1,0 +1,31 @@
+=== ClaudeComposerAsk ===
+  ClaudeComposerAsk            RENDERABLE   16:9   props: command, topic, segment, greeting, runningText, output
+=== ClaudeComposerAsk916 ===
+  ClaudeComposerAsk916         RENDERABLE   9:16   props: command, topic, segment, greeting, runningText, output
+=== BrutalistHesitantWriter ===
+  BrutalistHesitantWriter      RENDERABLE   16:9   props: text, face, fontSize, lineSpacing, align, ink
+=== BrutalistHesitantWriter916 ===
+  BrutalistHesitantWriter916   RENDERABLE   9:16   props: text, face, fontSize, lineSpacing, align, ink
+=== SkillTeardownAnatomy ===
+  SkillTeardownAnatomy         RENDERABLE   16:9   props: skillName, oldName, eyebrow, title, files, calloutText
+=== SkillTeardownMechanism ===
+  SkillTeardownMechanism       RENDERABLE   16:9   props: eyebrow, heading, body, quote, cite, verdictLabel
+=== SkillTeardownPipeline ===
+  SkillTeardownPipeline        RENDERABLE   16:9   props: eyebrow, title, inputLabel, outputLabel, phases, footerNote
+=== SkillTeardownAnatomy916 ===
+  SkillTeardownAnatomy916      NOT RENDERABLE — no <Composition> in Root.tsx. Authoring this is a punt.
+=== SkillTeardownMechanism916 ===
+  SkillTeardownMechanism916    NOT RENDERABLE — no <Composition> in Root.tsx. Authoring this is a punt.
+=== SkillTeardownPipeline916 ===
+  SkillTeardownPipeline916     NOT RENDERABLE — no <Composition> in Root.tsx. Authoring this is a punt.
+=== ClaudeVerdictArtifact ===
+  ClaudeVerdictArtifact        RENDERABLE   16:9   props: artifactTitle, artifactHeading, artifactLines
+=== ClaudeVerdictArtifact916 ===
+  ClaudeVerdictArtifact916     RENDERABLE   9:16   props: —
+=== ClaudeTitleOutro ===
+  ClaudeTitleOutro             RENDERABLE   16:9   props: title, slug, mascotAnimation
+=== ClaudeTitleOutro916 ===
+  ClaudeTitleOutro916          RENDERABLE   9:16   props: —
+  SkillTeardownAnatomy916      RENDERABLE   9:16   props: skillName, oldName, eyebrow, title, files, calloutText
+  SkillTeardownMechanism916    RENDERABLE   9:16   props: eyebrow, heading, body, quote, cite, verdictLabel
+  SkillTeardownPipeline916     RENDERABLE   9:16   props: eyebrow, title, inputLabel, outputLabel, phases, footerNote

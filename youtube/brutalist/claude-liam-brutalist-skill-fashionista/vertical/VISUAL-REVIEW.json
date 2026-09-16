@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "ca12337c8e2c43d0a0add834b390efd7",
+  "source_sha256": "aeb54e310d896f9de59d94c31aa04648f00a35e352f0518b68f17985110f37c0",
+  "beat_sheet_sha256": "a16f5df1f3cef6e0ebd9ef1b3edf14667c5ec02d4db804136995d8236980eccf",
+  "video_sha256": "efe5ebdf0ae8c8ee6cabcedfaaef1e6b6482069cdbbf2709a2f4b3155146fd1f",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-vertical.png", "sha256": "3c242cbce18fc9aea279a69d3158cd6bcf2d66c6dd562b3821be946d9622c064"}
+  ],
+  "notes": "Re-verified under run_id ca12337c8e2c43d0a0add834b390efd7 (source SHA changed due to referenced file updates; fashionista/SKILL.md content matches beat sheet — no beat modifications required). Inspected contact-vertical.png directly (12-panel portrait grid, all beats). Establishes: native 2160×3840 portrait — NOT a center-cropped landscape (three SkillTeardown*916 wrappers registered in isolated toolkit; BrutalistHesitantWriter received portrait-aware scale patch). (1) B00 ClaudeComposerAsk916 — 'Hallo, Liam', @HumanitariansAI folder chip, three result lines; (2) B01 BrutalistHesitantWriter — portrait text fills safe area, 'Fashionista is a fashion experiment.' correction visible; (3) B02 SkillTeardownAnatomy916 — stacked folder tree legible in portrait; (4) B03 — vertical pipeline top-to-bottom: INPUT → INTRO → THE VIDEO (terracotta) → OUTRO → OUTPUT; (5) B04–B08 mechanism cards — eyebrow, heading, body, SKILL.md quote with citation, verdict pill all within SAFE916; (6) B09 verdict artifact — 'An experiment. Not a series.' six lines; (7) B10 Your Turn — paste-ready prompt; (8) B11 ClaudeTitleOutro916 — 'The fashionista Skill.' terracotta period, @NikBearBrown handle, mascot. 2160×3840 · 24fps · 276s · aac stereo confirmed by ffprobe. No captions, no clipping, no slates. Skin-lint warnings about ClaudeComposerAsk916/ClaudeTitleOutro916 vs aspect-blind landscape names are expected portrait-native trade-off. Human review pending."
+}

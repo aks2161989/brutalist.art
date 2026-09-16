@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "c3a07c61cd754824ab5b03ae08c15dbb",
+  "source_sha256": "90f0672c0c11cd36398e8b4a38eee060ed76b88bbc79a6c604470ef797e2029b",
+  "beat_sheet_sha256": "bcd8aedf3d844c647b0570ec3d45f9da22579cdf31f8dc6bb14b25a7ce191cf4",
+  "video_sha256": "b11d283cfb7cea11ba354adae17c6962f9e569775aca2329261ffaa7744d4b49",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "e05bae54380b0d1590ad642f2690ee64d686281f16e5a35e1ef723bff42e11d6"},
+    {"path": "_qc/B00_mid.png", "sha256": "f344b0debd5c83720ce6bd1f5aa2aa1b65ac2e510d7d103fb24b62d03481976f"},
+    {"path": "_qc/B01_mid.png", "sha256": "9f9670a9ecb26e866afc8cd17c669fb6f34ceedac0850e7557a6b858e52e8193"},
+    {"path": "_qc/B04_mid.png", "sha256": "0016dd1d6c26def6b7d2b6c33b5c71e0af8d37dff1a1f222eafae3ed36589af0"},
+    {"path": "_qc/B05_mid.png", "sha256": "45a7451484fb29f216fd270805c44ca4b417def6ed84c33f615272a40de4240a"},
+    {"path": "_qc/B08_mid.png", "sha256": "ee8879acff600450f17bb0ae39d0996d5132926d4b28bf8d51cb04f67a70140b"},
+    {"path": "_qc/B10_mid.png", "sha256": "11c7052f6bb99066e24389a5230e5519dd3cf852901afecbc335b1a8c975003c"},
+    {"path": "_qc/B11_mid.png", "sha256": "f8468f7ba77bf70b6f9249bbb78cb4ca8c1365d633b3f5ed8eaa0847acffb439"},
+    {"path": "_qc/B12_mid.png", "sha256": "18a9ff273ada440a68bce3d3c86d6e103d7a08544cbbb3b1578a68364184c8e2"},
+    {"path": "_qc/B13_mid.png", "sha256": "9336dc51a99e71b87feef5789687856cf53476807b26a917712d2070ead0abbe"}
+  ],
+  "notes": "Portrait 2160x3840 native master, 281.75s, 14/14 beats filled, zero unresolved slates. Gate V clean (frames=28 BLOCKER=0 MAJOR=0) using SAFE916 (x=54, y=96, r=1026, b=1824). Frames inspected directly in this invocation (run_id c3a07c61cd754824ab5b03ae08c15dbb): B00 (ClaudeComposerAsk916 portrait cold open — 'BRUTALIST · SKILL TEARDOWN' supertitle, 'The sri-explainer Skill' heading stacked at top, 'Bonjour, Liam' greeting large serif, prompt card with full question text, @HumanitariansAI folder chip, three result lines: chapter-to-video pipe / narrated in Sridhar's own written voice / 7 hard rules — all within SAFE916 bounds); B13 (ClaudeTitleOutro916 — title wraps to 'The sri-explainer / Skill.' on two lines, '@NikBearBrown' handle per OUTRO-LOCK centered below, within SAFE916.bottom — no overflow). Native portrait layouts throughout — every beat uses its 916 composition variant. Remaining frames confirmed via hashes matching prior Gate-V-clean build. Video and beat_sheet hashes match the prior successful build (no regeneration required — source SKILL.md change in commit 109241e did not affect narration or visual content). Human review pending; nothing published."
+}

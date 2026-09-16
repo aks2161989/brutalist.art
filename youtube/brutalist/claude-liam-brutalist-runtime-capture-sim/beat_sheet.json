@@ -1,0 +1,844 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: capture_sim.py",
+    "slug": "claude-liam-brutalist-runtime-capture-sim",
+    "topic": "BRUTALIST · UTILITY: CAPTURE_SIM.PY",
+    "kind": "utility",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Tere, Liam",
+    "greeting_note": "hello lexicon: Tere (Estonian, one word). Fresh — not used in the claude-liam-brutalist-* series (Aloha, Bonjour, Bula, Ciao, Habari, Hallo, Hei, Hej, Hola, Jambo, Konnichiwa, Merhaba, Namaste, Salaam, Salam, Sawadee, Sawubona, Selam, Shalom, Vanakkam, Yassou). Slug char-sum mod 10 not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "d5030c4cf83c4be7abdb281854682ab7",
+    "episode_id": "runtime-capture-sim",
+    "order": 42,
+    "note": "Utility teardown of runtime/scripts/capture_sim.py — the 662-line Playwright wrapper that records D3 HTML simulations as clean mp4s (media/output.mp4 baseline + media/change.mp4 range-sweep by default; media/<stem>.mp4 for --click-through and --script). Serves the sim via SimpleHTTPRequestHandler on a random free port so D3 v7 loads over http:// (file:// blocks CORS to the CDN). Launches headless Chromium via Playwright's sync API, opens two contexts back-to-back for the default two-recording path, or one context for click-through/script. --click-through asserts count >= 2 (single-element selector raises — a static clip IS the bug). --script exposes a 7-verb DSL (set/click/check/uncheck/sweep/scroll/wait); every interactive verb calls assert_sel() so a 0-match selector raises with 'A silent miss IS the bug'. click supports fractional 'at:[fx,fy]' via elementFromPoint so per-child D3 rects with their own listeners get hit (events bubble UP, not down). The module docstring's non-obvious invariant: Playwright only records from the first page-activity event, so a --script must OPEN with an interactive step, never {wait:N}. ffmpeg remuxes each webm to libx264 preset=slow crf=18 pix_fmt=yuv420p -an in webm_to_mp4(). Observed limitation on this build (labeled in B08): Chromium fails to bootstrap its Mach-port rendezvous inside the Apple App Sandbox, so the browser paths do not run in this session; capture_sim.py's except-block prints [capture_sim] FAILED and exits 1 without writing an mp4. The fix is environmental (run outside the sandbox), not in the tool. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged in README.md for the human reviewer before publication. episode.source_sha256 e9315e5c39b5dbdb8ec8f188981f8ee89595958ff673c6071312972fa81e6a5d (from invocation); current file sha256 ccb75479c75081bede9d63d0d4913075b3497db183a035b5e0648d5dcb5d4a34.",
+    "channel_title": "@HumanitariansAI",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "source_file": "runtime/scripts/capture_sim.py",
+      "public_source_url": "https://github.com/nikbearbrown/brutalist.art/blob/main/runtime/scripts/capture_sim.py"
+    },
+    "tags": [
+      "Brutalist",
+      "capture_sim.py",
+      "Playwright",
+      "headless Chromium",
+      "D3 simulations",
+      "ffmpeg",
+      "kokoro",
+      "utility teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-10T07:19:10",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Tere, this is Liam, in for Bear. The ask — I've got a one-file D3 simulation on disk and I need two clean mp4s to drop into the reel. Baseline at rest. Then the same page while the main control moves. Headless. No cursor. No audio track. Something the compile step can concatenate without babysitting.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Tere, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'invoking capture_sim.py…' appears"
+          },
+          {
+            "at": "0.84",
+            "event": "three output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Tere, Liam",
+            "topic": "BRUTALIST · UTILITY: CAPTURE_SIM.PY",
+            "segment": "runtime/scripts/capture_sim.py",
+            "command": "I have a one-file D3 simulation on disk. Give me two clean mp4s — baseline at rest, then the same page while the main control moves. Headless. No cursor. No audio track.",
+            "runningText": "invoking capture_sim.py…",
+            "output": [
+              "serves the sim on a local free port — D3 v7 CDN needs http://",
+              "launches headless Chromium via Playwright; two contexts, back to back",
+              "ffmpeg remuxes webm → media/output.mp4 + media/change.mp4"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T09:47:05.554802+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.98,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 17.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer. The misconception this reel dismantles: the tool RENDERS the sim. It does not — it RECORDS a real browser rendering the sim.",
+      "narration_text": "Watch the writer walk this back. Capture sim does not render the simulation. The simulation is a D three HTML file. Capture sim launches a headless browser, points it at that file, and records what the browser paints. The browser draws. The tool records.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'capture_sim / renders / the sim.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'renders' turns terracotta, hesitates, backspaces, types 'RECORDS'"
+          },
+          {
+            "at": "0.80",
+            "event": "'sim' turns terracotta, hesitates, backspaces, types 'browser'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'capture_sim / RECORDS / the browser.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "capture_sim\nrenders\nthe sim.",
+            "triggerWords": "renders, sim",
+            "replacementWords": "RECORDS, browser",
+            "seed": "csim-b01-landscape-v5",
+            "face": "serif",
+            "fontSize": 260,
+            "lineSpacing": 1.2,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T11:11:01.549416+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.57,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.583333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the whole pipeline as a horizontal phase-flow.",
+      "narration_text": "The pipeline. Start a local HTTP server on a free port — file colon slash slash blocks CDN requests, and D three loads from a CDN. Launch Playwright's headless Chromium and open that URL. Optionally drive a control — sweep a range, click through a set, run a script. Playwright records a web m the whole time. When the page closes, hand the web m to ffmpeg for a well muxed mp4. Two mp4s in the default mode. One mp4 in click through and script modes.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "phase-flow",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow UTILITY · PIPELINE + title 'The Playwright wrapper' fade in"
+          },
+          {
+            "at": "0.22",
+            "event": "INPUT box 'sim.html' lands"
+          },
+          {
+            "at": "0.36",
+            "event": "SERVE phase appears with terracotta arrow"
+          },
+          {
+            "at": "0.48",
+            "event": "LAUNCH phase appears"
+          },
+          {
+            "at": "0.58",
+            "event": "DRIVE phase appears"
+          },
+          {
+            "at": "0.68",
+            "event": "RECORD phase appears"
+          },
+          {
+            "at": "0.78",
+            "event": "REMUX phase appears"
+          },
+          {
+            "at": "0.88",
+            "event": "OUTPUT box 'media/*.mp4' lands"
+          },
+          {
+            "at": "0.96",
+            "event": "spark line settles under the diagram"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "title": "Serve. Launch. Drive. Record. Remux.",
+            "inputLabel": "sim.html\n+ reel_dir",
+            "outputLabel": "media/output.mp4\n+ media/change.mp4",
+            "phases": [
+              {
+                "label": "SERVE",
+                "desc": "HTTP on free port",
+                "accent": true
+              },
+              {
+                "label": "LAUNCH",
+                "desc": "Playwright Chromium",
+                "accent": false
+              },
+              {
+                "label": "DRIVE",
+                "desc": "range / clicks / script",
+                "accent": false
+              },
+              {
+                "label": "RECORD",
+                "desc": "Playwright webm",
+                "accent": true
+              },
+              {
+                "label": "REMUX",
+                "desc": "ffmpeg → mp4",
+                "accent": false
+              }
+            ],
+            "footerNote": "Default: 2 mp4s (baseline + change). --click-through / --script: 1 mp4 each.",
+            "sparkLine": "The browser draws. The tool records."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T09:48:54.510250+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.67,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 26.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 1 — CLI surface, verbatim from --help.",
+      "narration_text": "The command surface. Two required positionals — the sim's html path, and the reel folder where media slash will be created. The default mode records two mp4s: output for the baseline hold, change for the range sweep. Dash dash click through switches to a discrete click list. Dash dash script switches to an ordered step list. Dash dash script and dash dash click through are mutually exclusive.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'capture_sim.py -h (verbatim)'"
+          },
+          {
+            "at": "0.22",
+            "event": "the usage block types"
+          },
+          {
+            "at": "0.55",
+            "event": "the positionals + capture-shaping flags type"
+          },
+          {
+            "at": "0.82",
+            "event": "the mode-selecting flags type"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "capture_sim.py -h (verbatim)",
+            "code": "$ python3 runtime/scripts/capture_sim.py -h\nusage: capture_sim.py [-h] [--duration DURATION] [--change-dur CHANGE_DUR]\n                      [--fps FPS] [--width WIDTH] [--height HEIGHT]\n                      [--selector SELECTOR] [--click-through CSS]\n                      [--hold-each HOLD_EACH] [--script STEPS_JSON]\n                      [--out-name OUT_NAME] [--dpr DPR] [--smoke-test]\n                      sim_html reel_dir\n\npositional arguments:\n  sim_html      path to the sim .html file\n  reel_dir      reel directory (media/ will be created inside it)\n\ncapture-shaping:\n  --duration N       baseline hold seconds  (default 6)\n  --change-dur N     change animation secs  (default 8)\n  --fps N            output fps             (default 24)\n  --width / --height viewport, default 1280x720; --dpr scales output\n\nmode-selecting (mutually exclusive with each other):\n  (default)          baseline + range sweep\n  --click-through CSS   discrete clicks in DOM order\n  --script STEPS_JSON   ordered step list (7-verb DSL)",
+            "sparkLine": "Two positionals. Three capture modes. One mode at a time."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T09:49:23.836857+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.29,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 21.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 2 — capture() the default two-recording path (baseline + range sweep).",
+      "narration_text": "Default mode. Two browser contexts, back to back. First — the baseline. Open the URL, wait for network idle, let D three settle a beat and a half, then hold for the requested duration. Playwright writes a web m. Second — the change. Same load, then find the first input type equals range, read its min and max off the element, and step from min to max in forty frames. Fire input and change events on every step so listeners actually run. Hold one second at max. Write the second web m. ffmpeg turns both into mp4s in media slash.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'capture_sim.py:113-260 — capture()'"
+          },
+          {
+            "at": "0.22",
+            "event": "the baseline block types"
+          },
+          {
+            "at": "0.55",
+            "event": "the min/max read + sweep block types"
+          },
+          {
+            "at": "0.80",
+            "event": "the input/change dispatch types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "capture_sim.py:113-260 — capture()",
+            "code": "# BASELINE (media/output.mp4)\nctx_out = browser.new_context(\n    viewport={'width': width, 'height': height},\n    device_scale_factor=dpr,\n    record_video_dir=str(tmp_dir/'out'),\n    record_video_size={'width': width*dpr,\n                       'height': height*dpr})\npage_out = ctx_out.new_page()\npage_out.goto(url, wait_until='networkidle', timeout=30_000)\ntime.sleep(1.5)          # D3 settle\ntime.sleep(duration)     # hold\npage_out.close(); ctx_out.close()\n\n# CHANGE (media/change.mp4) — sweep the first input[type=range]\nctrl_sel = selector or 'input[type=range]'\nattrs = page_chg.evaluate('''sel => {\n    const el = document.querySelector(sel);\n    return {min: parseFloat(el.min||0),\n            max: parseFloat(el.max||100)};\n}''', ctrl_sel)\nmn, mx = attrs['min'], attrs['max']\nsteps = 40; delay = change_dur / steps\nfor i in range(steps + 1):\n    val = mn + (mx - mn) * i / steps\n    page_chg.evaluate('''([sel, v]) => {\n        const el = document.querySelector(sel);\n        el.value = v;\n        el.dispatchEvent(new Event('input',  {bubbles:true}));\n        el.dispatchEvent(new Event('change', {bubbles:true}));\n    }''', [ctrl_sel, val])\n    time.sleep(delay)\ntime.sleep(1.0)          # hold at max",
+            "sparkLine": "Two contexts. One sweep. Both fire input AND change."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-10T09:49:54.097082+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 29.74,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 29.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 3 — capture_click_through() discrete controls, anti-silent-miss guard.",
+      "narration_text": "Click through mode. For UIs where the control is not a slider — mode buttons, tabs, radios. Give it a selector, get one clip. Query the count on the page. If the count is under two, raise. A single element selector silently records nothing new — that is the bug the guard exists to catch. Otherwise: hold a beat, then click each element in DOM order, re querying every iteration so live DOM mutations don't invalidate old handles. Wait hold each seconds between clicks so the animation settles. Write one mp4 with the stem you named.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'capture_sim.py:266-365 — capture_click_through()'"
+          },
+          {
+            "at": "0.22",
+            "event": "the count >= 2 guard types"
+          },
+          {
+            "at": "0.55",
+            "event": "the click loop with re-query types"
+          },
+          {
+            "at": "0.85",
+            "event": "the hold_each timing types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "capture_sim.py:266-365 — capture_click_through()",
+            "code": "def capture_click_through(sim_html, reel_dir, *,\n        selector, hold_each, out_name, ...):\n    ...\n    page.goto(url, wait_until='networkidle', timeout=30_000)\n    time.sleep(1.5)\n\n    # Guard: silent miss IS the bug\n    count = page.evaluate(\n        'sel => document.querySelectorAll(sel).length', selector)\n    if count < 2:\n        raise RuntimeError(\n          f\"[capture_sim] --click-through '{selector}' \"\n          f\"matched {count} element(s); need >= 2. A single-\"\n          f\"element selector silently produces a static clip.\")\n\n    time.sleep(1.0)                     # hold before first click\n    for i in range(count):\n        # Re-query — live DOM mutations invalidate old handles\n        page.evaluate('''([sel, idx]) => {\n            const el = document.querySelectorAll(sel)[idx];\n            if (!el) return;\n            el.click();\n        }''', [selector, i])\n        settle_deadline = time.monotonic() + min(0.8, hold_each*0.3)\n        while time.monotonic() < settle_deadline: time.sleep(0.05)\n        time.sleep(max(0.0, hold_each - min(0.8, hold_each*0.3)))\n    time.sleep(0.5)                     # tail hold\n    ...  # ffmpeg → media/<out_name>.mp4",
+            "sparkLine": "Assert >= 2. Re-query every iteration. Static clip = bug."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-10T10:05:28.536222+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 28.59,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 28.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 4 — capture_scripted() the 7-verb DSL and the assert_sel guard.",
+      "narration_text": "Script mode. The DSL is seven verbs. Set writes a value and fires input and change. Click clicks — optionally at fractional coordinates within the element, which lets you hit a D three rect with its own handler through elementFromPoint. Check and uncheck flip a checkbox and fire change. Sweep animates a range with explicit from, to, steps, step delay — or reads the element's own min and max. Scroll scrolls into view. Wait sleeps. Every interactive verb asserts the selector matched at least one element; a silent miss is treated as a failure.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'capture_sim.py:368-563 — capture_scripted()'"
+          },
+          {
+            "at": "0.22",
+            "event": "assert_sel() helper types"
+          },
+          {
+            "at": "0.55",
+            "event": "the verb dispatch (set/click/check) types"
+          },
+          {
+            "at": "0.82",
+            "event": "sweep + scroll + wait branches type"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "capture_sim.py:368-563 — capture_scripted()",
+            "code": "def assert_sel(sel, step_i):\n    count = page.evaluate(\n      'sel => document.querySelectorAll(sel).length', sel)\n    if count == 0:\n        raise RuntimeError(\n          f\"step {step_i}: selector '{sel}' matched 0 elements — \"\n          f\"nothing happened. A silent miss IS the bug.\")\n    return count\n\nfor i, step in enumerate(steps):\n    if 'set' in step:\n        sel, val = step['set'], step['value']\n        assert_sel(sel, i)\n        page.evaluate('([sel,v]) => {const el=...; el.value=v; '\n                      \"el.dispatchEvent(new Event('input',{bubbles:1})); \"\n                      \"el.dispatchEvent(new Event('change',{bubbles:1}));}\",\n                      [sel, val])\n    elif 'click' in step:\n        sel = step['click']; assert_sel(sel, i)\n        at = step.get('at')        # optional [fx, fy]\n        if at:                     # elementFromPoint — events bubble UP\n            page.evaluate('([sel,at]) => {const r=...; '\n                          'const t=document.elementFromPoint(x,y)||el; '\n                          \"t.dispatchEvent(new MouseEvent('click',...));}\",\n                          [sel, at])\n        else:\n            page.evaluate('sel => document.querySelector(sel).click()', sel)\n    elif 'check' in step:   ...   # el.checked = true; fire change\n    elif 'uncheck' in step: ...   # el.checked = false; fire change\n    elif 'sweep' in step:   ...   # from/to or el.min/el.max, N steps\n    elif 'scroll' in step:  ...   # scrollIntoView({behavior:'instant'})\n    elif 'wait' in step:    time.sleep(float(step['wait']))\n    else: raise RuntimeError(f'step {i}: unknown verb …')",
+            "sparkLine": "Seven verbs. One guard. Zero silent misses."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-10T10:06:15.253993+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 28.1,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 28.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — the disposable fixture + prepared script, both quoted verbatim from demo/. Docstring rule cited underneath.",
+      "narration_text": "Worked example. One HTML on disk — a tiny D three sine wave with a slider called hash k, one through six. One script JSON — set hash k to one, wait four tenths, sweep hash k from one to six over thirty steps, land at three point five, hold six tenths. The script opens with set — not with wait — because Playwright only records from the first page activity event. A leading wait would silently drop that first second. That rule is in the module docstring.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'demo/sim-source/00-tiny-wave.html + demo/scripts/tiny-wave-sweep.json'"
+          },
+          {
+            "at": "0.22",
+            "event": "the HTML head types"
+          },
+          {
+            "at": "0.55",
+            "event": "the input#k line highlights"
+          },
+          {
+            "at": "0.72",
+            "event": "the script JSON types"
+          },
+          {
+            "at": "0.90",
+            "event": "the docstring rule types as a footer"
+          },
+          {
+            "at": "0.96",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "demo/sim-source/00-tiny-wave.html + demo/scripts/tiny-wave-sweep.json",
+            "code": "$ head -14 demo/sim-source/00-tiny-wave.html\n<!doctype html>\n<meta charset=\"utf-8\">\n<title>Tiny Wave — a disposable D3 fixture for capture_sim.py</title>\n<style>\n  body { margin: 0; background: #FAF9F5; color: #2F2A26;\n         font-family: system-ui, sans-serif; }\n  svg  { display: block; margin: 24px auto; }\n  .accent { stroke: #C8102E; }\n</style>\n<script src=\"https://d3js.org/d3.v7.min.js\"></script>\n<svg width=\"640\" height=\"240\"></svg>\n<label>k: <input id=\"k\" type=\"range\" min=\"1\" max=\"6\" value=\"2\" step=\"0.1\"></label>\n\n$ cat demo/scripts/tiny-wave-sweep.json\n[\n  {\"set\":   \"#k\", \"value\": 1},\n  {\"wait\":  0.4},\n  {\"sweep\": \"#k\", \"from\": 1, \"to\": 6, \"steps\": 30, \"step_delay\": 0.15},\n  {\"set\":   \"#k\", \"value\": 3.5},\n  {\"wait\":  0.6}\n]\n\n# capture_sim.py docstring, line 43-45:\n#   Playwright only records from the first page-activity event.\n#   A script that starts with {\"wait\": N} will NOT capture that\n#   idle period. Always open with an interactive step\n#   (set/click/check) to anchor the recording at t=0.",
+            "sparkLine": "Open with set. Never with wait. The first frame is the anchor."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T10:07:01.325491+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.34,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 25.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "FAILURE / COUNTEREXAMPLE — the observed Apple App Sandbox failure, verbatim from demo/failure-sandbox.txt.",
+      "narration_text": "The observed failure — verbatim on this workstation. Same command a fellow would type. Chromium tries to bootstrap a Mach port, macOS App Sandbox refuses, the child process dies with a fatal, capture sim prints FAILED and exits one. The tool caught it — no zero byte mp4 got written. The fix is not in capture sim. The fix is to run capture sim in a normal terminal, outside Claude Code's sandbox, or in CI. A limitation is a real finding — not a reason to fake a clip.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'the observed sandbox failure (verbatim)'"
+          },
+          {
+            "at": "0.22",
+            "event": "the command a fellow would type"
+          },
+          {
+            "at": "0.42",
+            "event": "the [capture_sim] FAILED line types"
+          },
+          {
+            "at": "0.65",
+            "event": "the [FATAL:...Mach...Permission denied (1100)] line types"
+          },
+          {
+            "at": "0.85",
+            "event": "the exit code + no-mp4 note types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "observed failure — verbatim on this workstation (Apple App Sandbox)",
+            "code": "$ python3 runtime/scripts/capture_sim.py \\\n      demo/sim-source/00-tiny-wave.html demo \\\n      --duration 1 --change-dur 1\n[capture_sim] sim=00-tiny-wave.html  reel=…/demo\n[capture_sim] FAILED: BrowserType.launch: Target page,\n              context or browser has been closed\n\nBrowser logs:\n<launched> pid=58727\n[pid=58727][err] [WARNING] Failed to read DnsConfig.\n[pid=58727][err] [FATAL:base/apple/mach_port_rendezvous_mac.cc:159]\n                 Check failed: kr == KERN_SUCCESS.\n                 bootstrap_check_in org.chromium.Chromium\n                   .MachPortRendezvousServer.58727:\n                 Permission denied (1100)\n[pid=58727] <process did exit: signal=SIGTRAP>\n# exit 1\n\n# What happened:\n#   Apple App Sandbox denies Mach-port bootstrap for the Chromium\n#   child process. Chromium cannot start; Playwright's launch()\n#   times out; capture_sim.py's except-block prints FAILED and\n#   exits 1. No zero-byte mp4 gets written (finally: shutil.rmtree).\n#\n# The fix is environmental, not code:\n#   - run capture_sim.py in a normal terminal, OR\n#   - run it in CI, OR\n#   - teach capture_sim.py to honor ART_CHROME (separate change,\n#     out of scope for this episode).",
+            "sparkLine": "The tool caught the failure. It did not fake a clip."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T10:07:48.355694+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.65,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 26.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, one line per act.",
+      "narration_text": "So — capture sim dot py. A Playwright wrapper for D three sims. It serves the file on a local port, launches headless Chromium, optionally drives one control — a range sweep, a click list, or an ordered script — and screen records the browser. ffmpeg remuxes web m to mp4 in media slash. Every selector is asserted before it runs. Every silent miss is an error, not a static clip. The tool records. The browser draws.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'capture_sim.py — the whole surface, in the order it does its job'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.40",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.55",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.70",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.85",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.95",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "capture_sim.py — the whole surface, in the order it does its job",
+            "artifactLines": [
+              "serve — SimpleHTTPRequestHandler on a random free port; D3 v7 CDN needs http://, not file://",
+              "launch — Playwright's sync API spawns headless Chromium (chrome-headless-shell); one or two contexts per run.",
+              "drive — default sweeps input[type=range]; --click-through walks DOM order; --script runs a 7-verb DSL.",
+              "record — Playwright writes webm the whole time; page.close() flushes it to disk.",
+              "remux — ffmpeg → libx264 preset=slow crf=18 pix_fmt=yuv420p -an in media/<name>.mp4.",
+              "assert — every interactive selector is checked; a silent miss (0 or 1 match where >=2 needed) is a failure."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-10T10:11:02.765907+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.83,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 22.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at any of your own single file D three sims. Ask Claude to write a five step script JSON for capture sim that OPENS with a set or click verb — never with wait — and drives the sim's main interactive control from its natural minimum to its natural maximum, ending on a distinctive middle value. Then dry read the JSON back at you and tell you what the first captured frame will look like. Watch for whether Claude opens the script with wait. That is the trap the module docstring calls out — a leading wait silently records nothing.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Write a 5-step script JSON for capture_sim.py",
+            "command": "Point Claude Code at any single-file D3 simulation of your own. Ask Claude to write a five-step script JSON for capture_sim.py that OPENS with a `set` or `click` verb — never with `wait` — and drives the sim's main interactive control from its natural minimum to its natural maximum, ending on a distinctive middle value. Then have Claude dry-read the JSON back to you and describe what the first captured frame will look like. Watch for whether Claude opens with wait — that is the trap the module docstring calls out.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — 5-object JSON array; step[0] key ∈ {set, click, check, uncheck, sweep} (never wait)",
+              "step 2 — numeric bounds match the control's real min/max; last step is a short freeze-frame wait",
+              "step 3 — dry-read: Claude describes the first captured frame BEFORE you run the tool"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T10:31:20.766386+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 31.1,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 31.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-10T07:19:10"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Utility: capture sim dot py. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Utility: capture_sim.py.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Utility: capture_sim.py.",
+            "slug": "claude-liam-brutalist-runtime-capture-sim"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-10T10:31:40.654649+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 6.04,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 6.041666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-10T07:19:10"
+      }
+    }
+  ]
+}

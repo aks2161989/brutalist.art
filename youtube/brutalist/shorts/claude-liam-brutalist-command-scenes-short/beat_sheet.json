@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art scenes",
+    "slug": "claude-liam-brutalist-command-scenes-short",
+    "topic": "BRUTALIST · COMMAND: ART SCENES",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Namaste, Liam",
+    "greeting_note": "hello lexicon: Namaste (Hindi), one word — fresh for this reel, does not repeat the icons episode's Sawubona. Wagwan check: sum('claude-liam-brutalist-command-scenes') mod 10 == 3, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "1e4b7f0015784e269989cafdf94e3f41",
+    "episode_id": "command-scenes",
+    "order": 26,
+    "note": "Command teardown of ./art scenes and its aliases (scenes, scene, scene-search) — all three collapse into the same case branch in the top-level art dispatcher and exec runtime/scripts/scene_search.py. The middle body walks the 620-entry scene index built by build_scene_index.py, the four ranking rules (id > synonym > haystack, with IDF re-weighting for rare words), the --check anti-slate test, the --undocumented backfill list, and the automatic TEMPLATE-MISSES.md logging that catches a punt in flight. Falsifiability beat: the string 'yak shaving trombone' truly misses (exit 1) and the tool prints 'a miss is a PUNT, do not slate it.' All demo outputs in demo/RUN-LOG.txt are verbatim from this workspace against the isolated toolkit's scenes.json (620 renderable compositions after ClaudeCodeBeat916 was registered here for the portrait companion). Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. No paid API, no upload, no network calls. episode.source_sha256 4759b441d3d6c9faee523870e99fa26482fb28ecaa7cbf9a19b43c1680651a56.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:67-70",
+      "scene_search": "runtime/scripts/scene_search.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "scenes",
+      "scene search",
+      "library-first",
+      "IDF ranking",
+      "anti-slate",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T08:14:33",
+      "cut": "master",
+      "filled": 6,
+      "of": 6,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-command-scenes-vertical",
+    "dropped_beats": [
+      "B02",
+      "B03",
+      "B06",
+      "B07",
+      "B09",
+      "B10"
+    ],
+    "total_estimated_duration_seconds": 115.08,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Namaste, this is Liam, in for Bear. There are six hundred and twenty renderable compositions in Brutalist. Nobody remembers them. So when you need a visual for a beat, the first move is not to author one. It is to search. Art scenes is the library-first check that stops a beat from being slated while a purpose-built component sits unused two directories away.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Namaste, Liam' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed ask appears in the composer"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'searching the scene index…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Namaste, Liam",
+            "topic": "BRUTALIST · COMMAND: ART SCENES",
+            "segment": "art scenes",
+            "command": "Before authoring a beat, ask the library: is there already a scene for this?",
+            "runningText": "searching the scene index…",
+            "output": [
+              "620 renderable compositions — indexed by build_scene_index.py",
+              "ranked: id match > synonym > haystack, re-weighted by IDF",
+              "aliases: scenes, scene, scene-search — same case branch, same code path"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T10:42:02.508167+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.65,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 18.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T08:14:33"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Corrects the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art scenes does not author a new scene for you. It finds an existing one, out of six hundred and twenty compositions. Same command, different job — and it is the difference this whole reel turns on.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 13,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art scenes writes / new scenes.'"
+          },
+          {
+            "at": "0.50",
+            "event": "the word 'writes' turns terracotta, hesitates, backspaces, types 'finds'"
+          },
+          {
+            "at": "0.75",
+            "event": "the word 'new' turns terracotta, hesitates, backspaces, types 'existing'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art scenes finds / existing scenes.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art scenes\nwrites\nnew scenes.",
+            "triggerWords": "writes, new",
+            "replacementWords": "finds, existing",
+            "seed": "command-scenes-b01",
+            "face": "serif",
+            "fontSize": 165,
+            "lineSpacing": 2.7,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T11:02:20.879869+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 12.35,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 12.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T08:14:33"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the ranking. Three trust tiers, then IDF re-weighting so rare words win.",
+      "narration_text": "The ranker has one job: put the right lead at the top. Three trust tiers. An id hit is worth three points. A synonym hit is worth two. A hit anywhere else in the haystack — the description, the folder, the props — is worth one. Then it re-weights by inverse document frequency. That means a rare word like sankey outranks a common word like flow, so 'sankey flow' finds FinanceSankey and not every SourceFlow in the set. And a derived-only entry loses half a point, so a scene that actually describes itself outranks a guessed one.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'scene_search.py — score()'"
+          },
+          {
+            "at": "0.25",
+            "event": "three trust tiers type in as a bulleted block"
+          },
+          {
+            "at": "0.65",
+            "event": "IDF one-liner types underneath"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "scene_search.py — score()  (the ranker)",
+            "code": "def score(s):\n    hay = hay_of(s)                # desc + when + folder + group + props\n    n = 0\n    for t in terms:\n        if t in s['id'].lower():   n += 3 * weight(t)  # id      = high trust\n        elif t in s['synonyms']:   n += 2 * weight(t)  # synonym = medium trust\n        elif t in hay:             n += 1 * weight(t)  # haystack = low trust\n    if s.get('desc_source') == 'derived':\n        n -= 0.5                   # a described scene beats a guessed one.\n    return n\n\n# weight(t): rare word wins.\n#   df <= 12 -> 2.0     df <= 60 -> 1.5     else -> 1.0\n#\n#   'sankey flow'      -> FinanceSankey  (not every SourceFlow in the set)\n#   'bar chart'        -> BarChart       (id-hit outweighs every 'chart' entry)",
+            "sparkLine": "Id > synonym > haystack. Rare wins."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T10:44:12.381001+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 27.35,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 27.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T08:14:33"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — verbatim output of ./art scenes 'sankey flow' from this workspace.",
+      "narration_text": "Here is the shape on a real query. Dot slash art scenes quote sankey flow quote. Five candidates. Top of the list is FinanceSankey, scoring eight point five, because sankey is a rare word and it is right there in the id. The three source-flow scenes tie for second at four point five — same common word, spread across a bigger haystack. Every hit shows the id, the aspect ratio, the folder it lives under, and the props you can pass. That is enough to decide without opening a single file.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art scenes \"sankey flow\"'"
+          },
+          {
+            "at": "0.20",
+            "event": "'5 candidate(s) for \"sankey flow\"' header appears"
+          },
+          {
+            "at": "0.35",
+            "event": "top hits cascade in one at a time"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art scenes \"sankey flow\"  (verbatim from this workspace)",
+            "code": "5 candidate(s) for \"sankey flow\" - a hit is a lead, read the props:\n\n  [ 8.5] FinanceSankey                     (16:9)  [derived]\n         under: Finance-Charts\n         props: title, subtitle, nodes, links, unit, source, sparkLine\n\n  [ 4.5] Illu-SourceFlow                   (16:9)\n         under: concept-illustration library (STRUCTURAL family)\n\n  [ 4.5] ClaudeScienceSourceFlow           (16:9)\n         under: claude-liam-claude-science - structural illustrations\n         props: sparkLine, sourceLabel, feeds, destApp, destTitle\n\n  [ 4.5] ClaudeMdImproverWorkflow          (16:9)\n         under: claude-liam - claude-md-improver skill teardown figures\n         props: sparkLine\n\n  [ 4.5] CwcFanOutFlow                     (16:9)\n         under: cwc-workshops - Code with Claude 2026 figures",
+            "sparkLine": "FinanceSankey wins. Rare word, id-hit."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T10:44:42.752408+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.92,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 25.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T08:14:33"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — the miss. The tool exits 1, prints a punt instruction, and appends to TEMPLATE-MISSES.md.",
+      "narration_text": "And here is what a real miss looks like. Yak shaving trombone. No scene matches. The tool does not silently return empty. It exits with status one. It prints an instruction: that is a PUNT — do not slate it, design the component, add it to the library. And it does one more thing that nothing else in the toolkit does. It writes the miss to TEMPLATE-MISSES.md with today's date, so the punt ledger does not depend on your discipline. A miss is a design card, filed automatically the moment it happens.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art scenes \"yak shaving trombone\"'"
+          },
+          {
+            "at": "0.25",
+            "event": "'no scene matches …' line appears in terracotta"
+          },
+          {
+            "at": "0.50",
+            "event": "punt instruction cascades in, three lines"
+          },
+          {
+            "at": "0.75",
+            "event": "'echo $?  # 1' types below"
+          },
+          {
+            "at": "0.90",
+            "event": "TEMPLATE-MISSES.md log line lands; spark settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art scenes \"yak shaving trombone\"   (the miss)",
+            "code": "$ ./art scenes \"yak shaving trombone\" --reel youtube/my-reel\nno scene matches \"yak shaving trombone\".\nThat is a PUNT. Do not slate it - design the component,\nadd it to the library, and the next reel that needs this\nwill find it here.\nlogged to TEMPLATE-MISSES.md - a miss is a design card,\nnot a licence to slate.\n\n$ echo $?\n1\n\n# The ledger it wrote:\n#   | 2026-09-09 | `yak shaving trombone` | youtube/my-reel |\n#\n# From scene_search.py, the doctrine on screen:\n#   'A genuine miss is a PUNT, and a punt is a design card -\n#    stop and build the component, then it is in the library\n#    forever. It is not a licence to slate.'",
+            "sparkLine": "A miss is a design card. Filed on the spot."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T10:46:13.238710+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.34,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 25.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T08:14:33"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art scenes. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art scenes.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art scenes.",
+            "slug": "claude-liam-brutalist-command-scenes"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T10:47:48.529006+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.31,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.333333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T08:14:33"
+      }
+    }
+  ]
+}

@@ -1,0 +1,862 @@
+{
+  "metadata": {
+    "title": "The nbb Skill",
+    "slug": "claude-liam-brutalist-skill-nbb",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "channel_title": "@HumanitariansAI",
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "fdf9abc5ba3f40eba314b9262f54a0bc",
+    "episode_id": "skill-nbb",
+    "order": 17,
+    "note": "Skill teardown of skills/make/nbb/SKILL.md (episode.source_sha256 9b38c9ca…; SOURCE-SNAPSHOT SHA-256 395389a3…). The `nbb` skill takes any reel or lecture (or a whole book) and derives an NBB — @NikBearBrown-channel — cut of it: writes a NEW nbb- directory, scaffolds a beat_sheet.nbb.json with audience/palette/register/voice pre-set, and leaves a Claude-directed _variant_todo list for rewriting narration in the Teardown register, inserting an LLM exercise as the second-to-last beat, and appending the NikBearBrown outro. Standing rule: the canonical beat_sheet.json is NEVER modified. Two halves: brand_variant.py does the deterministic metadata scaffold (no spend); Claude does the creative rewrite guided by SKILL.md. Voice: Kokoro am_onyx — Liam in for Bear (IN-FOR-BEAR LAW). This teardown IS a claude-liam reel — outro is ClaudeTitleOutro (hardcoded @NikBearBrown handle per OUTRO-LOCK); inner composer folder chip is @HumanitariansAI per playlist. brand_variant.py demoed live on demo/fixture-reel/ (three runs captured in demo/nbb-run.log: fresh scaffold, refuse-without-force, source-hash-unchanged proof).",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/nbb/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "nbb",
+      "skill teardown",
+      "brand variant",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T18:56:59",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hola, this is Liam, in for Bear. Today we tear down the nbb skill. It is the one command that takes any reel or lecture and derives an NBB channel cut of it — a new nbb dash directory, a scaffolded beat sheet, and a Teardown register waiting to be written. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hola, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the nbb skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hola, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The nbb Skill",
+            "command": "What does the `nbb` skill actually do to a reel? Read skills/make/nbb/SKILL.md and tell me — the mental model, not the README summary.",
+            "runningText": "reading skills/make/nbb/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "derives an NBB cut into a NEW nbb- directory",
+              "canonical beat_sheet.json is NEVER modified",
+              "scaffold is deterministic; the rewrite is Claude's job"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T22:35:27.088489+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 16.28,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 16.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the 'nbb IS the rewrite' misread to the actual claim: nbb SCAFFOLDS the container, Claude does the rewrite. Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read — the one the name invites — is that nbb rewrites your reel. It does not. The nbb skill scaffolds an empty nbb dash container next to your source, presets the metadata for the NikBearBrown channel, and hands Claude a checklist. The narration rewrite, the LLM exercise, and the outro are Claude's work. The canonical source is never touched.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'The nbb skill'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 'rewrites your reel.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'rewrites' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'rewrites' deletes and 'scaffolds' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 3 lands: 'Source never modified.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "The nbb skill\nrewrites your reel\ninto the NBB channel.\nSource is never modified.",
+            "triggerWords": "rewrites",
+            "replacementWords": "scaffolds",
+            "seed": "nbb-bluf-2026-fdf9abc5-v2",
+            "face": "serif",
+            "fontSize": 148,
+            "lineSpacing": 1.25,
+            "align": "center",
+            "charMs": 20,
+            "jitter": 4,
+            "mistakeRate": 3,
+            "hesitateWithin": 1,
+            "hesitateBetween": 3,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T22:55:05.874015+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 19.35,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 19.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — the anatomy of the nbb skill: the doctrine, the scaffolder, the Teardown prose spec, the brand card, and the palette tokens.",
+      "narration_text": "First, the anatomy. On the toolkit side there is SKILL dot md — the doctrine, the standing rules, and the ending order. Next to it, scripts slash brand underscore variant dot py — a small deterministic scaffolder that copies your beat sheet into a new nbb dash directory. Then two style sources: prose slash teardown slash PROSE dot md, the Feynman times MKBHD register that Claude will rewrite against, and brands slash nbb dot md, the NikBearBrown brand card. And the teardown palette — white, ink, one red — exported from tokens slash vox dot ts. Small on disk. Sharp on purpose.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · ANATOMY fades in"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'The nbb folders.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "folder tree reveals row by row"
+          },
+          {
+            "at": "0.85",
+            "event": "callout box lands: 'source is NEVER modified'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "nbb",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "The nbb folders.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/nbb/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "runtime/scripts/"
+              },
+              {
+                "indent": 1,
+                "icon": "🐍",
+                "name": "brand_variant.py  (the scaffolder)"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "runtime/prose/teardown/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "PROSE.md  (Feynman × MKBHD register)",
+                "accent": true
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "brands/"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "nbb.md  (the NikBearBrown brand card)"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "runtime/remotion/src/tokens/"
+              },
+              {
+                "indent": 1,
+                "icon": "🎨",
+                "name": "vox.ts  (teardown palette: white / ink / red)"
+              }
+            ],
+            "calloutText": "<b>Source is NEVER modified.</b> Every write lands in a NEW <b>nbb-</b> directory next to the source — the canonical <b>beat_sheet.json</b> is byte-identical before and after.",
+            "sparkLine": "Two sources. One derived cut."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T22:37:14.679598+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 33.6,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 33.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — five steps from `nbb [input]` to a review-ready NBB beat sheet.",
+      "narration_text": "The flow is five steps, and only the first is code. Scaffold — brand underscore variant dot py copies the beat sheet into a new nbb dash directory and presets audience, palette, register, engine, voice. That is the whole deterministic half. Then Claude does the rest. Rewrite every beat's narration in the Teardown register — take the machinery apart, judge the design choices. Insert one LLM exercise as the second-to-last beat — a paste-ready prompt and a dig-deeper follow-up. Append the NikBearBrown outro from AUTHOR dot md. Then verify the ending order: body, LLM exercise, outro. Same shape every reel.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Five steps. One derived cut.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'reel / lecture / book' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "phase nodes reveal — 'SCAFFOLD' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'beat_sheet.nbb.json in nbb-[…]/' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Five steps. One derived cut.",
+            "inputLabel": "reel folder · lecture folder · or a whole book (batch)",
+            "outputLabel": "nbb-[slug]/beat_sheet.nbb.json · Teardown · am_onyx",
+            "phases": [
+              {
+                "label": "SCAFFOLD",
+                "desc": "brand_variant.py — new nbb- dir · presets metadata · no spend",
+                "accent": true
+              },
+              {
+                "label": "REWRITE",
+                "desc": "every narration_text → Teardown register (Feynman × MKBHD)"
+              },
+              {
+                "label": "LLM EXERCISE",
+                "desc": "second-to-last beat · paste-ready prompt + dig-deeper"
+              },
+              {
+                "label": "OUTRO",
+                "desc": "last beat · NikBearBrown outro from AUTHOR.MD"
+              },
+              {
+                "label": "VERIFY",
+                "desc": "ending order — body → [LLM] → [outro]"
+              }
+            ],
+            "footerNote": "One deterministic step. Four creative ones. The source is untouched.",
+            "sparkLine": "Scaffold first. Rewrite second. Ship last."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T22:38:06.654767+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 34.73,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 34.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — SOURCE IS NEVER MODIFIED. Every write lands in a new nbb- directory. Idempotent scaffold; refuse-without-force.",
+      "narration_text": "First design decision, and it is the whole safety story. Source is never modified. When brand underscore variant dot py runs, it writes into a brand new sibling directory called nbb dash your dash slug. Your canonical beat sheet dot json is not opened for write. It is opened for read, once. Run the command twice and the second run refuses — the nbb sheet already exists, and dash dash force is what you need to reset it from canonical. That is the isolation contract. Delete the nbb dash directory and you are back to a clean slate. Nothing you did to the derived cut can leak upstream.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Source is never modified.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: new sibling dir · read-once · refuse-without-force"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'delete nbb- → clean slate'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "Source is never modified.",
+            "body": "brand_variant.py writes into a NEW sibling directory: [book]/youtube/nbb-[slug]/. The canonical beat_sheet.json is opened read-only, once. Second run refuses — the nbb sheet already exists (use --force to reset from canonical). Delete the nbb- directory and you are back to a clean slate. Nothing about the derived cut can leak upstream.",
+            "quote": "Source files (beat_sheet.json, build scripts, media) are NEVER modified.",
+            "cite": "nbb SKILL.md · Standing rules",
+            "verdictLabel": "delete nbb- → clean slate",
+            "verdictPositive": true,
+            "sparkLine": "Read once. Write elsewhere."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T22:38:55.551131+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 31.74,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 31.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Design decision 2 — DETERMINISTIC HALF vs CREATIVE HALF. brand_variant.py does metadata (no spend); Claude does the register rewrite (guided by SKILL.md and PROSE.md).",
+      "narration_text": "Second decision, and it is the one that keeps the skill honest. Two halves. The deterministic half is the Python script — it presets audience, palette, register, engine, voice, typography, and outro source. It drops actual duration seconds on every beat so durations recompute for the new narration. No API calls. No spend. The creative half is Claude — rewriting every narration text in the Teardown register, adding the LLM exercise, appending the outro. That half is guided by SKILL dot md and by prose slash teardown slash PROSE dot md, not automated. The script never tries to be clever about voice. The register rewrite is a judgment call.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 2 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Two halves. Only one is code.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: script sets metadata · Claude rewrites narration"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'metadata deterministic · voice creative'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "Two halves. Only one is code.",
+            "body": "brand_variant.py sets metadata (audience, palette, register, engine, voice, typography, outro_source) and drops stale actual_duration_s so durations recompute — no API calls, no spend. Claude does the register rewrite, the LLM exercise, and the outro — guided by SKILL.md and prose/teardown/PROSE.md. The script never tries to be clever about voice.",
+            "quote": "This script does the DETERMINISTIC half. The creative half — rewriting each beat's narration into the register… is done by Claude, guided by skills/make/nbb/SKILL.md.",
+            "cite": "brand_variant.py header",
+            "verdictLabel": "metadata deterministic · voice creative",
+            "verdictPositive": true,
+            "sparkLine": "No spend on scaffold. Judgment on voice."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T22:39:53.956704+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 35.8,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 35.833333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — THE LLM EXERCISE IS SECOND-TO-LAST. Paste-ready prompt + dig-deeper follow-up. Renders as a card, read by Liam.",
+      "narration_text": "Third decision. Every NBB cut ends the same way, and the second-to-last beat carries a specific shape. It is not a summary. It is a paste-ready LLM prompt. Two parts. Part one is a self-contained prompt with enough context that it produces a useful output on its own, without the video — you can drop it straight into Claude, ChatGPT, or Gemini. Part two is a dig-deeper follow-up — a genuinely useful next question, not a recap. Liam reads both on screen. The card renders in the teardown palette. The prompt sends the viewer somewhere they can keep going.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 3 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Ends with a prompt, not a summary.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: two parts — paste-ready prompt + dig-deeper"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'the viewer keeps going'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "Ends with a prompt, not a summary.",
+            "body": "The second-to-last beat is an LLM exercise with two parts: (1) a paste-ready prompt with enough context to produce a useful output on its own, dropped straight into Claude / ChatGPT / Gemini; (2) a dig-deeper follow-up — a genuinely useful next question, not a recap. Both read aloud by Liam. Card renders in the teardown palette (white / ink / red).",
+            "quote": "A ready-to-paste LLM prompt derived from the whole video's subject… the prompt should produce a useful output on its own, without the video.",
+            "cite": "nbb SKILL.md · Step 3 (LLM exercise)",
+            "verdictLabel": "the viewer keeps going",
+            "verdictPositive": true,
+            "sparkLine": "Prompt out. Follow-up in."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T22:40:56.047847+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 29.23,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 29.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "Design decision 4 — IN-FOR-BEAR LAW. Voice is Kokoro am_onyx, Liam in for Bear. Liam introduces himself and signs off; never imitates Bear. ElevenLabs permanently removed 2026-09-03.",
+      "narration_text": "Fourth decision, and this one is a legal line. Voice is Kokoro am onyx. Free. Local. Liam, in for Bear. Never imitating Bear. There is no paid voice option here — ElevenLabs was permanently removed on September third, twenty twenty-six, and it is not coming back. The IN dash FOR dash BEAR law says Liam introduces himself in the cold open — hola, this is Liam, in for Bear — and signs off the same way. Every claude dash liam reel obeys this. Every NBB cut of one obeys it too. If the outro ever tries to be Bear, the outro is wrong.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 4 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Liam. In for Bear.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: Kokoro am_onyx · free · local · no paid voice"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from SKILL.md"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'ElevenLabs removed 2026-09-03'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 4",
+            "heading": "Liam. In for Bear.",
+            "body": "Voice = Kokoro am_onyx. Free. Local. Liam introduces himself in the cold open (\"Hola, this is Liam, in for Bear\") and signs off the same way. He never imitates Bear or claims to be him. There is no paid voice option — ElevenLabs was permanently removed 2026-09-03 and is not coming back.",
+            "quote": "Voice: LIAM — Kokoro am_onyx, free and local, Liam in for Bear (IN-FOR-BEAR LAW). There is no paid voice; ElevenLabs was permanently removed 2026-09-03.",
+            "cite": "nbb SKILL.md · frontmatter · Standing rules",
+            "verdictLabel": "no paid voice, no imitation",
+            "verdictPositive": true,
+            "sparkLine": "Free. Local. And honest about who's speaking."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T22:41:48.484655+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.84,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 28.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — Batch mode + the _variant_todo checklist. Boundary: nbb on a book folder scaffolds every reel + every lecture, but nothing runs the register rewrite for you. The _variant_todo IS a checklist, not code.",
+      "narration_text": "Falsifiability. Point nbb at a book folder and it batches — every reel under youtube slash and every lecture folder under lectures slash gets its own nbb dash sibling. All deterministic. All no-spend. But here is what it does not do. It does not automate the rewrite. Open the scaffolded beat sheet dot nbb dot json and you will find a field called underscore variant underscore todo — a five-item checklist for Claude to execute, in order. Rewrite in Teardown. Add the LLM exercise. Add the outro. Verify the order. Build. If you run brand underscore variant dot py on a hundred reels and stop, you have a hundred scaffolded shells and zero finished cuts. The register is a judgment call, not a loop.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow FALSIFIABILITY · ACT 5 lands"
+          },
+          {
+            "at": "0.12",
+            "event": "heading '_variant_todo is a checklist, not code.' fades in"
+          },
+          {
+            "at": "0.30",
+            "event": "body: batch scaffolds shells · Claude finishes each one"
+          },
+          {
+            "at": "0.60",
+            "event": "quote block lands verbatim from brand_variant.py"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill '100 shells ≠ 100 cuts'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "FALSIFIABILITY · ACT 5",
+            "heading": "_variant_todo is a checklist, not code.",
+            "body": "Batch mode on a book folder scaffolds every reel and every lecture — deterministic, no spend. But it stops there. Every scaffolded beat_sheet.nbb.json carries a _variant_todo list of five tasks for Claude to execute in order: rewrite in Teardown, add LLM exercise, add outro, verify order, build. Skip the checklist and you have shells, not cuts.",
+            "quote": "The creative half — rewriting each beat's narration into the register, the signature exercise beat, the audience outro — is done by Claude, guided by skills/make/nbb/SKILL.md.",
+            "cite": "brand_variant.py · module docstring",
+            "verdictLabel": "100 shells ≠ 100 cuts",
+            "verdictPositive": true,
+            "sparkLine": "The batch is the easy half."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T22:42:37.852239+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 38.36,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 38.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the skill in six lines.",
+      "narration_text": "The verdict. The nbb skill derives an NBB channel cut of any reel or lecture — new sibling directory, presets metadata, hands Claude a checklist. Source is never modified — the canonical beat sheet is byte-identical before and after. Two halves — deterministic scaffold in Python, creative rewrite in the Teardown register, guided by Claude. The second-to-last beat is always an LLM exercise — paste-ready prompt plus a dig-deeper follow-up. Voice is Kokoro am onyx, Liam in for Bear, IN dash FOR dash BEAR law. And the checklist is a checklist — brand underscore variant dot py never tries to be clever about voice.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'A scaffold. Then a rewrite.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The nbb Skill",
+            "artifactHeading": "A scaffold. Then a rewrite.",
+            "artifactLines": [
+              "Derives an NBB (@NikBearBrown-channel) cut of any reel, lecture, or whole book — new nbb- sibling directory.",
+              "Canonical source is NEVER modified — beat_sheet.json is byte-identical before and after (same SHA-256).",
+              "Two halves: brand_variant.py scaffolds metadata (deterministic, no spend); Claude rewrites narration (Teardown register).",
+              "Ending order is fixed: body → [LLM exercise, second-to-last] → [NikBearBrown outro, last].",
+              "Voice = Kokoro am_onyx — Liam in for Bear (IN-FOR-BEAR LAW). No paid voice, no imitation.",
+              "_variant_todo is a checklist, not code — brand_variant.py never tries to be clever about the register."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T22:44:08.684850+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 40,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 34.22,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 34.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready dry-run prompt. Liam reads aloud + discusses. Safe: only scaffolds, never rewrites, never builds.",
+      "narration_text": "Your turn. Paste this into Claude Code. Read the nbb skill's SKILL dot md. Pick any delivered reel of your own — one you have already shipped, so nothing is at risk. Run brand underscore variant dot py against it with the nbb audience. That is the deterministic step — no spend, no rewrite, no render. Then check three things. Does a new sibling directory named nbb dash your slug now exist. Does its beat sheet dot nbb dot json carry audience NikBearBrown, palette teardown, engine kokoro, voice am onyx. And does your canonical beat sheet dot json have the same SHA dash two fifty six as before you ran anything. If all three answer yes, the isolation contract holds. Stop there — do not rewrite, do not render, do not compile.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.20",
+            "event": "command types in — the paste-ready dry-run prompt"
+          },
+          {
+            "at": "0.72",
+            "event": "three-line viewer rubric appears as output"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · SCAFFOLD ONLY (DRY-RUN)",
+            "segment": "Prove the isolation contract",
+            "command": "Read skills/make/nbb/SKILL.md. Pick ONE delivered reel of your own at <book>/youtube/<my-slug>/. Record shasum -a 256 <that>/beat_sheet.json first. Then run: python3 runtime/scripts/brand_variant.py <book>/youtube/<my-slug> nbb. Do NOT rewrite narration, do NOT insert LLM exercise, do NOT append outro, do NOT run generate_audio_kokoro.py or compile.py — this is a SCAFFOLD-ONLY check.",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "check: <book>/youtube/nbb-<my-slug>/beat_sheet.nbb.json exists?",
+              "check: metadata = {NikBearBrown, teardown, kokoro, am_onyx}?",
+              "check: source beat_sheet.json SHA-256 unchanged?"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T22:45:33.432917+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 44,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 40.11,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 40.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T18:56:59"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff.",
+      "narration_text": "That was the nbb Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The nbb Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The nbb Skill",
+            "slug": "claude-liam-brutalist-skill-nbb"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T22:45:50.850757+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.52,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.5416666666666665,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-08T18:56:59"
+      }
+    }
+  ]
+}

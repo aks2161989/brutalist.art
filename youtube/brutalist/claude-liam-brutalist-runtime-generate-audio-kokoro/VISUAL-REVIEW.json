@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "713f16bacfaa4ed28908ef6a8db68b4c",
+  "source_sha256": "a26a0a3c80441d1ab0d99ff56784a04698edbcfaaf0a1fb6ea8f2dc06401fe13",
+  "beat_sheet_sha256": "937cff818fe0178b0a18ce8432aeaae93b0e53ea4b0c8872b015999995efd559",
+  "video_sha256": "79097f9057d7dbac7ebe8e63496d462e69bbf3d150de00184dedf6a71c40592d",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "846dfeb0965f16fbdd3eb85613c594d241005ac219d45ca41613d91ec6fc5e16"}
+  ],
+  "notes": "Re-verified 2026-09-13 against new invocation run_id 713f16bacfaa4ed28908ef6a8db68b4c (previous run_id ee4093952a4c4010a7cab3e6729cd376). Source file on disk SHA 4de916f41e66c8c29d4617f09422ab9c7da8e3e03cbdfcaf66c4751aa52e7a47 — content unchanged from the previous build; all beat-sheet code excerpts remain accurate against the live source. Renders not rebuilt (source content unchanged, FEEDBACK.md has no corrections). Landscape master 3840x2160, 319.7s, 12/12 beats filled with per-beat Remotion mp4s (no slates). Contact sheet re-inspected with the image tool on this invocation: cold open composer (B00 — cream card, 'Ahoj, Liam' greeting, @HumanitariansAI chip), hesitant-writer BLUF (B01 — large serif 'kokoro / is free / and local.', corrected sentence fills safe area), horizontal pipeline framework (B02), five code-cascade mechanism cards (B03–B08 showing CLI surface, model_paths+lang_for, five skip rules, normalize+write_mp3+measure, worked example/fixture, failure modes), verdict artifact (B09 — six lines), Your Turn composer (B10), ClaudeTitleOutro (B11 — title + @NikBearBrown). 0 BLOCKER, 0 MAJOR. Minor: motion pantry advisory 'code-cascade 6/12 (50%)' accepted as documented deviation for utility teardown episodes. Human review pending."
+}

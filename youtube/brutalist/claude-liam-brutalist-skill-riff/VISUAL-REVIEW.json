@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "bb7b92e9363542d88483c88d6a9c5472",
+  "source_sha256": "17e4452d1dd418ef1260622bc52139744d1bcf4fd13edc041cfcdb73a9643e75",
+  "beat_sheet_sha256": "6cd1e4e73c62efef75b192bafcde59b4d8960f54f63d87e06c9ad970c728ea18",
+  "video_sha256": "44a8ebe91140e31bee457d003d794fc68cb920ca8d215a2c70d13c6ac4c8a124",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "22976717b198c251ae9d4238ee622c6e32a4e2bd388f5e963f78f9f7101d0852"
+    }
+  ],
+  "notes": "run_id bb7b92e9363542d88483c88d6a9c5472. Gate V re-run this invocation against exports/landscape/claude-liam-brutalist-skill-riff.mp4 (3840x2160, 234.5s, H264/AAC): 24 frames sampled, BLOCKER=0, MAJOR=0. contact_sheet.png read via image tool — sha256 22976717... verified unchanged from prior passing run. Viewed contact sheet: 12 landscape beats. B00: ClaudeComposerAsk cold open — 'Bula, Liam' greeting, @HumanitariansAI chip, output lines cascade; text within safe margins. B01: BrutalistHesitantWriter — 'riff generates observations.' in large serif, corrected form; contextTitle and brandLabel within safe margins, BLUF coverage 65%+. B02: SkillTeardownAnatomy — 'A skill is a folder.' with file tree revealing skills/make/riff/SKILL.md; fills safe area. B03: SkillTeardownPipeline — 'Look. Observe. Write. Record.' with 4-phase nodes and terracotta arrows; fills safe area. B04–B08: SkillTeardownMechanism beats with eyebrow, heading, body, verbatim quote, verdict pill; all within safe margins; B05 ClaudeCodeBeat shows real ./art scenes terminal output in monospace. B09: ClaudeVerdictArtifact — artifact card with 4 verdict lines; fills safe area. B10: ClaudeComposerAsk 'Your Turn' — paste-ready Claude Code prompt for applying the riff skill; fills safe area. B11: ClaudeTitleOutro — 'The riff Skill.' title, @HumanitariansAI handle, Liam sign-off. No captions, no edge bleed, no underfill. Human viewing/editing by Bear is the next required step before any publication."
+}

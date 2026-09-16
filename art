@@ -34,6 +34,23 @@ skill_dir() {
 
 cmd="${1:-}"; shift || true
 
+if [ "$cmd" = "godot-gdd" ] && [ "${1:-}" = "--check" ]; then
+  shift
+  exec python3 "$SKILLS/make/godot-gdd/scripts/verify_gdd.py" "$@"
+fi
+
+if [ "$cmd" = "godot-gamedev" ] && [ "${1:-}" = "--check" ]; then
+  shift
+  exec python3 "$SKILLS/make/godot-gamedev/scripts/verify_gamedev.py" "$@"
+fi
+
+# Keep the requested spelling; also accept the conventional spelling.
+if [ "$cmd" = "godot-walkthrough" ]; then cmd="godot-waikthrough"; fi
+if [ "$cmd" = "godot-waikthrough" ] && [ "${1:-}" = "--check" ]; then
+  shift
+  exec python3 "$SKILLS/make/godot-waikthrough/scripts/verify_walkthrough.py" "$@"
+fi
+
 case "$cmd" in
   ""|-h|--help|help)
     sed -n '2,18p' "$ART_HOME/art" | sed 's/^# \{0,1\}//'
@@ -42,6 +59,10 @@ case "$cmd" in
     printf '%-22s %s\n' "SKILL" "ROLE"
     printf '%-22s %s\n' "ai-explainer"   "builder — Claude-branded explainer reel (the tight cut)"
     printf '%-22s %s\n' "cli-explainer"  "builder — prompt → code → moving output (the build reel)"
+    printf '%-22s %s\n' "godot-waikthrough" "builder — real Godot gameplay + Liam riffs; optional Walker bookends"
+    printf '%-22s %s\n' "godot-gamedev" "builder — code, scenes, assets and art deep dive; optional Walker bookends"
+    printf '%-22s %s\n' "godot-gdd" "builder — GDD intent, scope and game evidence; optional Walker bookends"
+    printf '%-22s %s\n' "riff"           "utility — render/inspect, then critique what visibly happens"
     printf '%-22s %s\n' "deep-explainer" "builder — 5-10 min documentary episode (vox pantry beats)"
     printf '%-22s %s\n' "anthropics"     "builder — reads Anthropic artifacts against their own claims; practitioner-report register"
     printf '%-22s %s\n' "fashionista"    "builder — AI fashion-call experiment; sports-announcer call + correction ask; Kokoro am_onyx"

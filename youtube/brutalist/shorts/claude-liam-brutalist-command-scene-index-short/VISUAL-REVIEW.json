@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "7fbbc6577e9d434aa02b367381fe29af",
+  "source_sha256": "38ca86b097b8c3ac89f97c04f549f5894f2ccd66ba1bbbfc115615141181f4bd",
+  "beat_sheet_sha256": "7997d37d15100bfa9f4894934e59d4ef53c4c3efd6c0706522b08bde10378c05",
+  "video_sha256": "f29cd53959a8e780af6092a25a8c4d2dfa6066b2f241e86298b7775091b50e16",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "695478426ee28f37137a3f928a59dfdc94358f3bb244a45d796ab353f69b41c7"},
+    {"path": "_qc/beats/B00-15.png", "beat_id": "B00", "pct": 0.15, "t_s": 2.356, "sha256": "5b51f1a6c9f93f1cd34b741322fc950e1b40ce7c37e6e03c45ad60affc39f3f2"},
+    {"path": "_qc/beats/B00-50.png", "beat_id": "B00", "pct": 0.50, "t_s": 7.854, "sha256": "62d4b45568af0079ec70782b4a6578cb557c30671e1a8fe58385c866abeb3603"},
+    {"path": "_qc/beats/B00-85.png", "beat_id": "B00", "pct": 0.85, "t_s": 13.352, "sha256": "71c9efe55d787dab5ffa255d9a5a3bcaa3127a0c12e9b0fd0a8f629129f2db92"},
+    {"path": "_qc/beats/B01-15.png", "beat_id": "B01", "pct": 0.15, "t_s": 17.783, "sha256": "e07a347f9a54fbfdd07017c89d2c27ba9db28dc4de2fa5b9430edfde8652a3d4"},
+    {"path": "_qc/beats/B01-50.png", "beat_id": "B01", "pct": 0.50, "t_s": 22.625, "sha256": "38ae3531466983936dc3638fadd3ac38a03d2e7e2d16165d4cbf01c422a3ec67"},
+    {"path": "_qc/beats/B01-85.png", "beat_id": "B01", "pct": 0.85, "t_s": 27.466, "sha256": "f5cc85f4f290ee0996e68dc7d11badc41d0487257a42b71cbf94a6ee63c10b67"},
+    {"path": "_qc/beats/B03-15.png", "beat_id": "B03", "pct": 0.15, "t_s": 32.805, "sha256": "1e95b54d15b8317954019993985fac3faf688ade8f36ea0b8f9662814aa0ee69"},
+    {"path": "_qc/beats/B03-50.png", "beat_id": "B03", "pct": 0.50, "t_s": 40.417, "sha256": "055b43b2fe88a8c3cbc03538aeefa1cb3089b31a12c6d1fa4c926ecee42c0d40"},
+    {"path": "_qc/beats/B03-85.png", "beat_id": "B03", "pct": 0.85, "t_s": 48.029, "sha256": "0edb0e9439aaf724f64e433a4d0a884488278dfc08133a24665ee53e5d2c5b5b"},
+    {"path": "_qc/beats/B05-15.png", "beat_id": "B05", "pct": 0.15, "t_s": 54.586, "sha256": "83b02207d0604e3dfe09154b8f8de3e9cc18e27ed703ed0144d19aba8f2c7fa9"},
+    {"path": "_qc/beats/B05-50.png", "beat_id": "B05", "pct": 0.50, "t_s": 62.271, "sha256": "11c36df0d7bea3fde277e07ca80ebbfa047fade7ca6a70a25505921ffa21d584"},
+    {"path": "_qc/beats/B05-85.png", "beat_id": "B05", "pct": 0.85, "t_s": 69.956, "sha256": "c4fdf272c19c748a040ad9c7f40981092b908c2ac22141399e4401860405c648"},
+    {"path": "_qc/beats/B09-15.png", "beat_id": "B09", "pct": 0.15, "t_s": 77.263, "sha256": "16be8c152729d38fa5ed23f943a92e0723188b529eba76bde7fd0f20e784068b"},
+    {"path": "_qc/beats/B09-50.png", "beat_id": "B09", "pct": 0.50, "t_s": 86.625, "sha256": "abb2eeeea73c3e07ba98117033776450bc85ef11c1efc52da849a8346177a159"},
+    {"path": "_qc/beats/B09-85.png", "beat_id": "B09", "pct": 0.85, "t_s": 95.987, "sha256": "ca7332c805674728b4f08d89c2ace6873040c79b542b49c2600da86c0728c39f"},
+    {"path": "_qc/beats/B11-15.png", "beat_id": "B11", "pct": 0.15, "t_s": 100.844, "sha256": "43b53aef6b35785d689ead691500c38aa7d323f0184496ccfe573525afef18ae"},
+    {"path": "_qc/beats/B11-50.png", "beat_id": "B11", "pct": 0.50, "t_s": 102.812, "sha256": "8a04a31c12375810a388c1e15461e10683005edafa24e4202c06b666b8ce573b"},
+    {"path": "_qc/beats/B11-85.png", "beat_id": "B11", "pct": 0.85, "t_s": 104.781, "sha256": "147727db510566bddd2954029352ef946929ac78ffcfd914477488f00c6c45c8"}
+  ],
+  "notes": "Portrait 2160x3840 · 105.625s · h.264 + AAC (well under the strictly-under-180s Shorts cap). Recompile of the Sep-09 Short using updated media from the Sep-12 vertical rebuild (parent_master_sha256 f7cbed1ea45539e6025af8a08d3bd2921943bae569b32158c669ad0b60aa11f6). Whole-beat cut: B00 ASK, B01 BLUF, B03 MECHANISM/THE LAW, B05 WORKED verbatim run, B09 VERDICT, B11 OUTRO. B00/B05/B09 re-rendered in the parent vertical to update the count from 619→620 compositions; B01/B03/B11 are byte-identical to the Sep-09 build. No beat was rewritten; all narration and visuals are from the native vertical companion. B00 (2.356s/7.854s/13.352s): composer card with 'Bonjour, Liam' greeting, 'BRUTALIST · COMMAND: ART SCENE-INDEX' topic bar, ask 'After adding a Remotion component, re-read Root.tsx and regenerate the scene index the library-first search uses.', runningText 'reading Root.tsx…', three output lines (wraps/writes/law), @HumanitariansAI folder chip. B01 (17.783s/22.625s/27.466s): BrutalistHesitantWriter916 portrait; corrected text 'art scene-index / rewrites / the index.' with caret parked; no terracotta visible at 85% (correction complete). B03 (32.805s/40.417s/48.029s): ClaudeCodeBeat916 with build_scene_index.py header — 'THE LAW: a scene is usable only if' and 'REGISTERED IS THE ONLY TR[UTH]' visible (portrait horizontal clip known from parent). Spark line 'Registered is the only truth.' at bottom. B05 (54.586s/62.271s/69.956s): ClaudeCodeBeat916 with '$ ./art scene-index' output — '620 renderable, 118 un[documented]' and 'echo $? → 0' and 'ls -l' on scenes.json (565983 bytes, Sep 12 08:10) and SCENE-DOC-TODO.md (12548 bytes). Spark line '620 · 118 · 0. Two files on disk.' B09 (77.263s/86.625s/95.987s): ClaudeVerdictArtifact916 — all 8 verdict rows inside SAFE916 including 'no aliases — the dispatcher case at art:92-95 matches only the exact string scene-index.' ✓. B11 (100.844s/102.812s/104.781s): ClaudeTitleOutro916 — 'Brutalist Command: art scene-index.' and '@NikBearBrown' on dark baseplate (OUTRO-LOCK compliant). Boundary joins at B00-B01, B01-B03, B03-B05, B05-B09, B09-B11 sampled; clean cuts on cream/ink baseplate. Audio: 12 silence gaps all ≤0.83s; first gap at 15.039s (0.709s) matches B01 lead_silence_s=0.8; last gap (104.959-105.643s) is normal end-of-audio tail; no dropouts. Inherited portrait limitation: ClaudeCodeBeat916 does not word-wrap — B03/B05 have horizontal clipping on long source-comment lines. Essential text ('THE LAW', 'REGISTERED IS THE ONLY TRUTH', '620/118/0', 'art:92-95') remains legible. Human review pending."
+}

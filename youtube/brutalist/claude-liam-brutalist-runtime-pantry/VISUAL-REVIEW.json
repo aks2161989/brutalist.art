@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "fe9516e11ca34baf8eca2990dd34a561",
+  "source_sha256": "fc867e67d4879765d95430ecb151efb235a53b27073acf62a341b33456e39a13",
+  "beat_sheet_sha256": "f845aea9f99cc54db6c832aa3bd48cd86740e3eccb12bdae49e1c0294f48300b",
+  "video_sha256": "56cacb0fba30574382ec28269978e4d6373e36c420839ed56409fc983cf28fb3",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "ad611d8131491bc27e6cd92059bb7df492d642fc85fb39e81e0aa43b5d0fb3f4"
+    },
+    {
+      "path": "_qc/review/land_t5s.png",
+      "sha256": "ca013e94d150678889d162586c2f901be0329c2e19557aeca8cca54fc2d048c2"
+    },
+    {
+      "path": "_qc/review/land_t30s.png",
+      "sha256": "b491f3d330ba9c162b132b3a2c31ae794d7e40ce9876bb7966d14bcc2ab0d97c"
+    },
+    {
+      "path": "_qc/review/land_t92s.png",
+      "sha256": "c4f2c6219857d6ea10f0546599d6d43d0a0042efdf9f31ee7d988bd26f352dfc"
+    },
+    {
+      "path": "_qc/review/land_t157s.png",
+      "sha256": "fbcbaf66884dbd291c0fb5901b6083f9b8ffa7899bf348a30209c0eae461efd5"
+    },
+    {
+      "path": "_qc/review/land_last.png",
+      "sha256": "38dcc7e24b11bc64410b44d92e473b748a33a9e91a0be4a0b1de96fbcd492400"
+    }
+  ],
+  "notes": "Production run for invocation fe9516e11ca34baf8eca2990dd34a561 (2026-09-14). Toolkit pantry.py sha256=5b059be171601690a436487ba1eb1d0ebefd58d4d4b0b796e971a427e201ba35; invocation source_sha256=fc867e67d4879765d95430ecb151efb235a53b27073acf62a341b33456e39a13 (supervisor-computed identifier). Landscape master 3840x2160 h264+aac, 184.708s, 12 beats. Gate V ran inside compile.py: BLOCKER=0 MAJOR=0. Output: exports/landscape/claude-liam-brutalist-runtime-pantry.mp4. Reviewed five frames directly with image-capable Read tool: t=5s ClaudeComposerAsk cold-open — 'Bula, Liam' greeting, @HumanitariansAI folder chip, command 'explain pantry.py — the Brutalist asset intake script', three output lines, Fable 5 / High, running indicator — clean layout no bleed; t=30s SkillTeardownMechanism B02 — 'Raw finds never go straight to media/.' heading with UTILITY · DESIGN LAW eyebrow, body text, THE PANTRY LAW verbatim quote card, IDEMPOTENT verdict label, sparkLine 'The pantry is the gate.' — fills safe area; t=92s ClaudeCodeBeat B06 video-path — video handling code with portrait detection, b-roll audio stripping, duration check, sparkLine 'Reports keep their sound.' — legible at 3840x2160; t=157s ClaudeVerdictArtifact B09 — 'The naming law works.' with six numbered verdict lines all readable, terracotta numbering; last frame ClaudeTitleOutro — 'Brutalist Utility: pantry.py.' + @NikBearBrown + bear mascot on charcoal (OUTRO-LOCK.md compliant). No captions, no burned-in transcript, no edge bleed, no unresolved slates. Human viewing and editing is next; no upload, no commit."
+}

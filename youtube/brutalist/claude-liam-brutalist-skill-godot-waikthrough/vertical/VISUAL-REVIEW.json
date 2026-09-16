@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "4d4269b669dd4b84a92a266e5bff804f",
+  "source_sha256": "a0cfc6ba0c3e56fd162d80c940e4fbf31594739d7c7283dcfe3c9a0ae90c39ed",
+  "beat_sheet_sha256": "c52150204e4cb46c6aa933c74928489acbee17df92d294e09655b9183cb3bb6e",
+  "video_sha256": "d29377d6e945c3c03e6c52e992b135c7b5bb675df03a14d1d284bf8421bef164",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "64c9fc2890b2123a1d7c4e2ea5b70a80a52f259f845e79d0c6e56a2288948e1a"}
+  ],
+  "notes": "Re-verification pass for SKILL.md source change (run_id 4d4269b669dd4b84a92a266e5bff804f). SKILL.md §4 gained frame-fraction duration rules and qc.contrast_regions spec; §1–§3 teaching content unchanged — no beat rebuild required. Portrait 2160x3840 vertical, 269.3s, 13/13 beats filled, 0 slates. Gate V re-run clean: frames=26, BLOCKER=0, MAJOR=0. Contact sheet read directly with image-capable Read tool: B00 ClaudeComposerAsk916 — 'The godot-waikthrough Skill' large portrait title, 'Annyeong, Liam' greeting, composer card stacked vertically, @HumanitariansAI label. B01 BrutalistHesitantWriter916 — 'godot-waikthrough riffs the game. Capture in. Film out.' portrait-stacked layout, animation text fills safe area. B02 WalkerGodotSetup916 — 'Play in. Narrated film out.' pipeline nodes stacked vertically. B03 SkillTeardownAnatomy916 — 'Two modes: standard and walker.' portrait layout. B04 GodotDesignBoard916 — Phase 1 feature inventory stacked in portrait. B05 WalkerGodotSetup916 terminal — dark capture command in portrait. B06 GodotDevWorkbench916 — 'The riff mechanic' code in portrait. B07 WalkerGodotSetup916 flow — walker bookends in portrait. B08–B09 SkillTeardownMechanism916 — design tell and falsifiability gate stacked. B10 ClaudeVerdictArtifact916 — verdict panel in portrait. B11 ClaudeComposerAsk916 — 'Your turn.' paste-ready prompt in portrait. B12 ClaudeTitleOutro916 — title + @NikBearBrown + mascot in portrait. No captions, no subtitle overlays, no edge bleed, no slates observed. MP4 hash verified: d29377d6e945c3c03e6c52e992b135c7b5bb675df03a14d1d284bf8421bef164. Human review pending; nothing published."
+}

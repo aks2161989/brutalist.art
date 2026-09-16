@@ -1,0 +1,30 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "repoloop.sh runs one fresh Claude subprocess per film, sandboxed, gated by verify_film — no publish, no parallelism, no API-key fallback.",
+  "parent_master_sha256": "5be3541b68c180caacd46db2428d6ff32916131b1d9ee4a374a398589079e66a",
+  "parent_reel_beat_sheet": "youtube/brutalist/claude-liam-brutalist-command-repoloop/vertical/beat_sheet.json",
+  "kept_beats": ["B00", "B01", "B05", "B09", "B10", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "The three-line shim walk-through is line-level anatomy of repoloop.sh; the shim is named again in the verdict."},
+    {"beat_id": "B03", "reason": "discover/merge_queue/build_one code cascade belongs in the long; the verdict enumerates the same phases in one line each."},
+    {"beat_id": "B04", "reason": "worker_settings + worker_environment code detail belongs in the long; the verdict states the sandbox contract."},
+    {"beat_id": "B06", "reason": "--status live demo overlaps with B05's inventory demo and repeats meta about this reel; one worked example is enough for a Short."},
+    {"beat_id": "B07", "reason": "verify_film code cascade is 29 seconds of guards; the verdict already carries the fail-closed refusal as the essential caveat."},
+    {"beat_id": "B08", "reason": "Failure-recovery worked example belongs in the long; the Short's Your Turn already sends viewers to run --dry themselves."}
+  ],
+  "cut_first_review": "B00 poses the question (build the whole playlist without babysitting), B01 delivers the BLUF misconception correction (it spawns workers, not fellows) — that is the honest headline. B05 grounds it with the verbatim --dry inventory so the viewer sees the loop knows 56 films derived from the toolkit itself. B09 verdict names the six moving parts in the order the viewer touches them (shim, discover, merge_queue, snapshot_toolkit, sandboxed worker, verify_film) — this preserves the essential fail-closed caveat and the no-publish/no-parallelism honest limitation. B10 Your Turn gives fellows a concrete non-destructive prompt (--dry, --status, walk merge_queue). B11 sign-off. Transitions: B01→B05 works because BLUF sets 'one Claude per film' and B05 shows the actual list of films; B05→B09 works because B09 is a summary that names the same discover() output; B09→B10 works because Your Turn asks the viewer to run --dry (already shown in B05) and --status (mentioned by name in B09). No dangling references to the dropped code-cascade beats — the verdict's one-line-per-phase description is self-contained.",
+  "planned_duration_s": 93.83,
+  "planned_kept_durations_s": {
+    "B00": 11.08,
+    "B01": 11.83,
+    "B05": 18.50,
+    "B09": 19.88,
+    "B10": 26.83,
+    "B11": 5.71
+  },
+  "rewrite_reason": null,
+  "final_measured_duration_s": 93.833,
+  "final_run_id": "2a3c292801ef4a0fba3291e5a03ab912",
+  "final_beat_sheet_sha256": "dd1d06d5ae129ed5dbae2cb3f42f800e779bf6d4c501345aa6ad17753f686a29",
+  "final_video_sha256": "ee8da1732db647bbc60a9603d8630549e3293c4f1ee6120aea0764a180f06052"
+}

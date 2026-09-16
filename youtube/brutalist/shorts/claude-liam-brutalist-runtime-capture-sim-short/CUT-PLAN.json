@@ -1,0 +1,18 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "capture_sim.py records a headless browser rendering a D3 sim to mp4 — with a real observed limitation the tool catches instead of faking",
+  "parent_master_sha256": "fedfb0ca5e06ee130b855af4fc688bae02293fe05182660c39946f5079d686ab",
+  "kept_beats": ["B00", "B01", "B02", "B07", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B03", "reason": "MECHANISM 1 — verbatim --help CLI surface. Belongs in the long teardown; the Short states the modes at a high level in B02 and B09 without re-reading argparse."},
+    {"beat_id": "B04", "reason": "MECHANISM 2 — the default two-context sweep code (~30s of Playwright plumbing). Deep-dive belongs in the long; B02 and B09 name the mode."},
+    {"beat_id": "B05", "reason": "MECHANISM 3 — capture_click_through() code + count>=2 guard (~29s). Named at the surface level in B09; deep dive is long-form material."},
+    {"beat_id": "B06", "reason": "MECHANISM 4 — 7-verb DSL dispatch code (~28s). B07's worked example teaches the DSL by concrete usage without re-reading dispatch code."},
+    {"beat_id": "B10", "reason": "YOUR TURN — extended assignment prompt (~31s). The prompt explicitly permits omitting the Your Turn for Shorts; verdict → outro closes cleanly."}
+  ],
+  "cut_first_review": "B00 opens with Liam introducing the ask (two mp4s of a D3 sim, headless). B01 dismantles the misconception (RECORDS the browser, does not RENDER the sim). B02 gives the whole pipeline at a high level, naming all three drive modes. B07 grounds the abstraction with the tiny-wave HTML + a real script JSON, teaching the DSL by example and citing the docstring rule 'open with a verb, never with wait.' B08 shows the observed Apple App Sandbox failure verbatim — this is the one safety limitation the prompt says MUST stay. B09 verdict recaps the whole surface in the order the tool runs. B11 outro. Transitions read cleanly: framework → concrete example → observed limitation → verdict; no numbered references to dropped beats and no dangling caveats.",
+  "planned_duration_s": 139.2,
+  "measured_duration_s": 139.208,
+  "run_id": "a4ebd93adf44479e83f30c032daf338a",
+  "rewrite_reason": null
+}

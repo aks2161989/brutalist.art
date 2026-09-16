@@ -1,0 +1,19 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/exports/short/claude-liam-brutalist-skill-nbb-short.mp4",
+  "sha256": "00758e069585949844d71f4be7f1d23bd48d0894f98310e8006fc0eec1c86db6",
+  "duration_s": 108.20833333333333,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/media/B00.mp4": "4bf6206a0878574f211d5722630cba5f2ef7881447c671736a333f2b160cc7e1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/media/B01.mp4": "7375e63681660f912aeffdac4f2e0d05815eeeb5b3146f81aa863d945390b924",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/media/B03.mp4": "7b318ec161b061d68551500ba8a44d262d4ac80a4e67707c420125ae9de6e17e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/media/B09.mp4": "77e32a3e9df1ddfc6d38820cdf583b2edd382ba027dd17177263c5578cd16299",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/media/B11.mp4": "2b5647653efb1cca2e9039f4f9be046e94cbebee1b5da1b1774fce3ac7843629",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/mp3/beat-B00.mp3": "44ae145d0595c3d74c6842dda127c68860a69dc4b009f7453332fadcffed7539",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/mp3/beat-B01.mp3": "88ef067bce0a18efdab3cd5b811fd3689339c9503ea4d795576c333a3f9fd3da",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/mp3/beat-B03.mp3": "d62ff97fa4327c9dfe9ece10a80446f626d287f0fede4832da18226236f9bb69",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/mp3/beat-B09.mp3": "9ba380372482854a42a27c257bbde97ec09e8e3814fd4876dff3f26400eaeb9d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/shorts/claude-liam-brutalist-skill-nbb-short/mp3/beat-B11.mp3": "1a6fbc157b7ec1b4e2cf57ce51c9d2915d08b8e67f9dc0a4dc8d110ca2e3d507"
+  },
+  "at": "2026-09-09T01:26:29.158977+00:00"
+}

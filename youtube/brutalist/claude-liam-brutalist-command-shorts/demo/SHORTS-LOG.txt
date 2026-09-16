@@ -1,0 +1,87 @@
+# Verbatim log of `./art shorts` and `./art vertical` against a fixture reel.
+# Fixture path: /tmp/claude-501/claude-shorts-demo   (synthetic, disposable)
+# Toolkit:      .repoloop/workspaces/claude-liam-brutalist-command-shorts/toolkit
+# Beat sheet:   7 beats, all REMOTION, total 214s.
+# Every call below is stdout+stderr from the isolated toolkit — no edits.
+# Fixture is synthetic; nothing was uploaded, no paid calls made.
+
+=== INVOCATION 1: bare `./art shorts <reel>` (auto-plan under cap) ================
+$ ./art shorts /tmp/claude-501/claude-shorts-demo
+[stdout]
+[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00
+[short] over the cap → auto-plan drops 1 beat(s): B02
+[short]   (re-run with --drop/--keep to override the plan)
+[short] B00  ONDA CHECK: ClaudeComposerAsk → ClaudeComposerAsk916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B01  ONDA CHECK: BrutalistHesitantWriter → BrutalistHesitantWriter916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B03  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B04  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B05  ONDA CHECK: ClaudeVerdictArtifact → ClaudeVerdictArtifact916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] B06  ONDA CHECK: ClaudeTitleOutro → ClaudeTitleOutro916 (portrait re-render on short/; match the 916 zod schema — rule #4)
+[short] 7 beats · ~163.5s (2:43.5) OK
+[short] dropped: B02 · silent endcard 4.5s
+[short] ONDA CHECK: 6 REMOTION beat(s) rewired to 916 compositions (B00, B01, B03, B04, B05, B06) — they MUST be re-rendered portrait before compiling; any old center-cut media/<bid>-916.mp4 of a Remotion render is stale garbage (delete it).
+[short] next:
+[short]   1. python3 runtime/scripts/remotion_scenes.py /private/tmp/claude-501/claude-shorts-demo/short   # FOREGROUND (rule #3) — portrait renders for the 916-rewired beats
+[short]   2. python3 runtime/scripts/compile.py /private/tmp/claude-501/claude-shorts-demo/short --review --height 1920
+[short] Render only. Submission, related-video selection and scheduling are separate human workflows.
+[exit] 0
+# Auto-plan picked B02 — the longest unprotected middle beat (55s).
+# 214.0 − 55.0 + 4.5 endcard = 163.5s.  Under 180 by 16.5s of headroom.
+
+=== INVOCATION 2: `./art shorts <reel> --keep B02` (protect + auto-plan) =========
+$ ./art shorts /tmp/claude-501/claude-shorts-demo --keep B02
+[stdout]
+[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00
+[short] over the cap → auto-plan drops 1 beat(s): B04
+[short]   (re-run with --drop/--keep to override the plan)
+[short] B00  ONDA CHECK: ClaudeComposerAsk → ClaudeComposerAsk916 ...
+[short] B01  ONDA CHECK: BrutalistHesitantWriter → BrutalistHesitantWriter916 ...
+[short] B02  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 ...
+[short] B03  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 ...
+[short] B05  ONDA CHECK: ClaudeVerdictArtifact → ClaudeVerdictArtifact916 ...
+[short] B06  ONDA CHECK: ClaudeTitleOutro → ClaudeTitleOutro916 ...
+[short] 7 beats · ~168.5s (2:48.5) OK
+[short] dropped: B04 · silent endcard 4.5s
+[exit] 0
+# --keep B02 protected the longest beat. The planner walked to the next-longest
+# unprotected middle beat (B04, 50s), dropped it, and still fit under the cap.
+
+=== INVOCATION 3: `./art vertical <reel>` (full-length companion) ================
+$ ./art vertical /tmp/claude-501/claude-shorts-demo
+[stdout]
+[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00
+[vertical] full-length companion: every source beat is retained
+[short] B00  ONDA CHECK: ClaudeComposerAsk → ClaudeComposerAsk916 ...
+[short] B01  ONDA CHECK: BrutalistHesitantWriter → BrutalistHesitantWriter916 ...
+[short] B02  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 ...
+[short] B03  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 ...
+[short] B04  ONDA CHECK: ClaudeCodeBeat → ClaudeCodeBeat916 ...
+[short] B05  ONDA CHECK: ClaudeVerdictArtifact → ClaudeVerdictArtifact916 ...
+[short] B06  ONDA CHECK: ClaudeTitleOutro → ClaudeTitleOutro916 ...
+[short] 7 beats · ~214.0s (3:34.0) full-length vertical (no Short cap)
+[short] dropped: none · ends on the last beat (no endcard)
+[exit] 0
+# `art vertical` == `art shorts --vertical`. No cap, no drops, no endcard,
+# no rewritten outro. Same ONDA CHECK rewires every REMOTION beat to its 916
+# composition — no cropping, no truncated speech.
+
+=== INVOCATION 4: `./art shorts <reel> --vertical --drop B02` (REFUSED) =========
+$ ./art shorts /tmp/claude-501/claude-shorts-demo --vertical --drop B02
+[stderr]
+[short] REFUSED: --vertical preserves the full film; --drop is not allowed
+[exit] 1
+# Editorial guardrail: a "vertical companion" is not a shorter cut — it must
+# hold every beat the landscape master holds. Trying to drop a beat while
+# also asking for --vertical is a contradiction. Recovery: pick one intent.
+
+=== INVOCATION 5: `./art shorts <reel> --drop B99` (REFUSED — unknown id) =======
+$ ./art shorts /tmp/claude-501/claude-shorts-demo --drop B99
+[stdout]
+[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00
+[short] manual plan: dropping B99
+[stderr]
+[short] REFUSED: Unknown --drop beat(s): ['B99']
+[exit] 1
+# The plan is printed first (transparency), THEN the beat set is validated
+# against the sheet. B99 is not a real beat_id; the script refuses before any
+# derivative directory is written. Recovery: fix the id and re-run.

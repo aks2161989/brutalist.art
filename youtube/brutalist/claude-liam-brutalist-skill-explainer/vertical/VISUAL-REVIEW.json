@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "251584521128464e8b35431dce545cb1",
+  "source_sha256": "c6bf131db6a3e173cd5b30de152e3188979971a87265d18fbb89c677c5245319",
+  "beat_sheet_sha256": "039c4fbea6ded2aee97b94230b8eeb821bf89a92db9c238df8835ad3bc7c0b69",
+  "video_sha256": "736045efcb64ee06d28379ca5cde2b17544766f7f6e7ddf4d79beb1ee662c23b",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "70fdb9ffff54a977b80ff9c351b6c6e2f7ade47b0bfd52191e14cece6abb20c3"
+    }
+  ],
+  "notes": "Portrait 2160×3840 (9:16), 253.7s, 11 beats, Kokoro am_onyx throughout. Rebuilt 2026-09-11 from the 2026-09-08 base: source SKILL.md changed (VOX LAW gained EXECUTABLE-EVIDENCE.md reference). Only B07 was updated (narration, props, audio copied from landscape, scene re-rendered via SkillTeardownMechanism916); all other beats unchanged. Gate V: 22 frames, 0 BLOCKERs, 0 MAJORs. B07 frame inspected at 50% — shows all content within portrait safe area, EXECUTABLE-EVIDENCE.md body text legible, quote block with updated cite ('VOX LAW + EXECUTABLE-EVIDENCE.md'), verdict pill 'EXECUTE IT — RENDER IT', spark line visible at bottom. Native full-length portrait companion — NOT a Shorts cut and NOT a center-crop of the landscape master. Three native portrait compositions (SkillTeardownAnatomy916, SkillTeardownPipeline916, SkillTeardownMechanism916) registered in isolated toolkit's Root.tsx. Two SKIN LINT warnings on B00/B10 are known portrait-lint false positives (the 916 variants ARE the portrait-native cold-open and outro). channel_title deliberately omitted from vertical metadata (feedback_channel_title_portrait_bleed). Missing GATE T recorded in TYPECHECK.md — no substitute claimed. Zero unresolved slates, zero captions, zero paid calls. Human review pending."
+}

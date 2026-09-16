@@ -20,6 +20,9 @@ make a video.
 |---|---|
 | deep-explainer | Multi-layered concept depth passes |
 | cli-explainer | Claude session + live code + output as vox beat |
+| godot-waikthrough | Real Godot feature walkthrough with Liam riffs; `walker` adds Claude/GDD bookends; regular outro |
+| godot-gamedev | Detailed Godot code/component/art teardown; source-backed editor views and optional `walker` bookends; Liam and regular outro |
+| godot-gdd | GDD design-contract walkthrough using existing game evidence; proposals versus implementation; optional `walker` bookends; Liam and regular outro |
 | nbb | NikBearBrown/Teardown register — Kokoro am_onyx voice |
 | guests | Board members, advisors, invited speakers. NO feedback beat — staff do not evaluate board members. GATE G. |
 | finance | SEC filings → 11 fixed beats, EDGAR XBRL data, two deterministic audits |
@@ -29,6 +32,7 @@ make a video.
 | Skill | Notes |
 |---|---|
 | screen-clean | Prepares any screen recording (Zoom/Teams/QuickTime) for a reel beat. Called by `fellows` and `guests`. |
+| riff | Render/inspect a visual artifact and explain its visible behavior and trade-offs. Called by `godot-waikthrough`; humans judge usefulness. |
 | logo-motion | Animates a brand mark into a 4–8s sting for a reel's open/close. Free (potrace + Remotion, no keys). Deliberately NOT a Fellow-tier builder — it makes a *component*, not a video, and the Fellow tier is capped at five builders on purpose. |
 
 ## PAID — REQUIRES EXPLICIT SPEND APPROVAL

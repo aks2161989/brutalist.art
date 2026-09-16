@@ -1,0 +1,16 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art icons is the library-first search over the 7,330-icon canonical set — you find an existing mark before drawing a new one, and a miss is a real answer, not a licence to redraw.",
+  "parent_master_sha256": "d2c828fd84cf71b278bf30fde970d208235c1a645135d02dbd6cdc1243b2b099",
+  "kept_beats": ["B00", "B01", "B04", "B05", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Dispatcher case-statement internals (art:60-63) are toolkit anatomy — the aliases fact already appears in B00's cold-open output and again in the B09 verdict; the actual case-branch code belongs in the 16:9 long."},
+    {"beat_id": "B03", "reason": "Full icons.json geometry walkthrough — the essential numbers (7,330 count, 376 brand) are already stated in B00's output block and in the B09 verdict; the raw JSON record is generic anatomy."},
+    {"beat_id": "B06", "reason": "--check/--show worked example — both flags are named and defined in the B09 verdict; showing the raw SVG is a nice-to-have that belongs in the long."},
+    {"beat_id": "B07", "reason": "--brands filter worked example — the flag and the 376/6,954 split are already restated in the B09 verdict lines; a second worked example is a catalog of internals, not a high-level Short."},
+    {"beat_id": "B10", "reason": "Extended Your Turn composer with the four-run audit prompt — the cut-first Short-prompt override explicitly rules out reading the long's full exercise aloud; B09 verdict + B11 outro carry the sign-off."}
+  ],
+  "cut_first_review": "The retained cut opens with Liam's disclosure and the library-first thesis (B00), lets the hesitant writer correct 'draws → finds' (B01), then goes straight to the one mechanism that makes 7,330 icons actually searchable — the IDF ranker (B04) — before showing one real query (B05, money → 31 hits, verbatim). B08 delivers the honest limitation ('a miss is NOT a licence to draw'). B09 verdict compresses the whole surface (bare, query, --check, --show, --brands, aliases, miss) into seven artifact lines — every flag not visually demonstrated is named and defined there, so the summary stands on its own. B11 restates title + Liam-for-Bear + @HumanitariansAI attribution. Narrative joins: B01 → B04: 'different job — and it is the difference this whole reel turns on' → 'The ranker has one job'. B04 → B05: rank theory → 'Here is the shape on a real query'. B05 → B08: worked hit → 'And here is what a miss looks like'. B08 → B09: 'exit code zero' → 'So the surface'. B09 → B11: verdict list → title outro. No dangling numbered transitions; no repeated conclusions; no removed caveat.",
+  "planned_duration_s": 107.63,
+  "rewrite_reason": null
+}

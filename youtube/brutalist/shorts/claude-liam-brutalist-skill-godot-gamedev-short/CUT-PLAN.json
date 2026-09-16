@@ -1,0 +1,41 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "godot-gamedev reads a real Godot project and produces a 4K teaching film — it is a reader, not a builder — with code-then-result pairs and the evidence contract (reconstruct, don't invent) as its core honesty rule",
+  "parent_master_sha256": "3c4c7be38b1c1534736e254ca9614040d2a434bf5edfc53e83d6cc37b7167483",
+  "kept_beats": ["B00", "B01", "B04", "B05", "B08", "B09", "B10", "B11", "B12"],
+  "dropped_beats": [
+    {
+      "beat_id": "B02",
+      "reason": "Pipeline phase walkthrough (4 phases arrow-joined) belongs in the 16:9 long; B01 already establishes 'game in, teaching film out' at a useful summary level"
+    },
+    {
+      "beat_id": "B03",
+      "reason": "File anatomy and two-mode (standard/walker) taxonomy is internal detail; a Short viewer only needs to know it runs on a real game and produces a film — not the folder structure"
+    },
+    {
+      "beat_id": "B06",
+      "reason": "Scene-tree deep-dive (world.tscn, saved-vs-runtime node distinction) is a valuable detail for the long film; the key saved-vs-runtime caveat is covered at summary level in B10 verdict"
+    },
+    {
+      "beat_id": "B07",
+      "reason": "Walker-mode flow steps are internal tooling detail; a Short viewer does not need the 6-stage walker flow — the long film covers it"
+    }
+  ],
+  "cut_first_review": "B00 intro establishes the misconception ('most fellows assume it writes Godot code'). B01 BLUF corrects it ('game reader not maker — takes a project, produces a teaching film'). B04 shows the mechanism concretely: Claude reads player.gd, traces each component, each excerpt immediately followed by visible result. B05 establishes the evidence contract: reconstruct don't invent, every property must come from a file Claude actually read; code-result pairs logged as teaching-contract-v1. B08 clarifies when to use this vs godot-walkthrough ('same project, different question'). B09 states the essential limitation: a real project.godot is required. B10 gives the verdict with four key takeaways. B11 delivers the paste-ready prompt and Liam sign-off. B12 is the silent outro card. No dangling references: B11 says 'standard mode' in the paste-ready prompt which is self-explanatory without B03. Transitions are clean and the arc is complete.",
+  "planned_duration_s": 159.625,
+  "beat_durations": {
+    "B00": 14.0,
+    "B01": 12.333,
+    "B04": 18.333,
+    "B05": 20.958,
+    "B08": 17.125,
+    "B09": 18.625,
+    "B10": 18.25,
+    "B11": 33.0,
+    "B12": 7.0
+  },
+  "rewrite_reason": null,
+  "run_id": "91d8e873ca5e413e8379a0c0c9179ed4",
+  "rendered_at": "2026-09-12",
+  "source_sha256": "483139bcf62ef08758f530f0aa0f9444d69359fb6813a6c9765b19a2912bad06"
+}

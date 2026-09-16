@@ -1,0 +1,39 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "godot-gdd reads an existing GDD and builds the explaining film — it cannot write the document or approve the design; the four status labels (proposed/implemented/observed/pending) are the skill's core enforcement mechanism",
+  "parent_master_sha256": "1783e5968feca78646de4a578acd4958f0b231ecc5dd7579d02fb0a278a23a75",
+  "kept_beats": ["B00", "B01", "B04", "B06", "B08", "B09", "B10", "B11"],
+  "dropped_beats": [
+    {
+      "beat_id": "B02",
+      "reason": "Four-stage pipeline anatomy (Read/Map/Visualize/Assemble) is toolkit-internal detail belonging in the long film, not in a Short about the skill's purpose"
+    },
+    {
+      "beat_id": "B03",
+      "reason": "Coverage contract cards repeat what B09 verdict states more concisely; removes detail without removing the key rule"
+    },
+    {
+      "beat_id": "B05",
+      "reason": "Causal chain walkthrough (experience→rule→owner→feedback→test) is methodology detail; the design-tell beat B08 delivers the essential insight more sharply"
+    },
+    {
+      "beat_id": "B07",
+      "reason": "Walker modifier bookend anatomy (composer/hesitant-writer/walkthrough/verdict) is structural detail for the long film; the Short establishes what the skill does, not how its internal template is arranged"
+    }
+  ],
+  "cut_first_review": "B00 establishes the misconception (skill writes or extracts the GDD) and dispels it immediately. B01 BLUF delivers the constraint: GDD must already exist, this is a film-builder not a generator. B04 introduces the four status labels — the mechanism that makes the skill honest about what is built vs proposed. B06 shows the checker command and its explicit scope (what it can and cannot verify), grounding the tool use. B08 delivers the design tell — 'a proposal is not a passing test' — which is the insight the whole skill exists to enforce. B09 verdict restates scope cleanly. B10 Your Turn gives a paste-ready prompt asking Claude to walk through an existing GDD and flag missing acceptance tests. B11 outro signs off. No dangling references: dropped beats were self-contained explanations; no numbered transitions cross the cuts; the verdict and your-turn both stand alone without the pipeline or coverage-contract detail.",
+  "planned_duration_s": 139.3,
+  "final_measured_duration_s": 139.291667,
+  "final_video_sha256": "21d564d1fdf0bbd75ea4bc792918281735ca2e4c40d7398cd7412420237ffa5c",
+  "beat_durations_s": {
+    "B00": 19.04,
+    "B01": 14.29,
+    "B04": 17.38,
+    "B06": 19.17,
+    "B08": 22.46,
+    "B09": 18.0,
+    "B10": 20.96,
+    "B11": 8.0
+  },
+  "rewrite_reason": null
+}

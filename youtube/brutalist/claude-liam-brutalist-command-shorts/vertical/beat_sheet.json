@@ -1,0 +1,819 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art shorts",
+    "slug": "claude-liam-brutalist-command-shorts-vertical",
+    "topic": "BRUTALIST · COMMAND: ART SHORTS",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Salam, Liam",
+    "greeting_note": "hello lexicon: Salam (Arabic/Persian, one word, warm). Slug char-sum picks it; not a Wagwan slot (Wagwan is Bear's).",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "f2da2cc936694334b92c9a741e8f66e2",
+    "episode_id": "command-shorts",
+    "order": 30,
+    "note": "Command teardown of ./art shorts — dispatcher case at art:102-104 that execs runtime/scripts/shorts.py. Aliases: `shorts` (the same word; the dispatcher matches only 'shorts'; `art vertical` at art:105-107 forwards to the same script with --vertical). One editorial law: strictly under 3:00 including tails. Auto-planner drops the longest unprotected middle beats until the total, plus a 4.5s silent endcard, fits under 180 - 5s headroom. Protected: first beat, last beat, INTRO/OUTRO acts, source_report beats, anything containing 'hero' in graphic mechanic/label, plus --keep ids. ONDA CHECK: every REMOTION beat is rewired to its <pattern>916 composition (never center-cut) — if Root.tsx doesn't register the 916 variant, the beat is BLOCKED (add composition or drop pantry/<bid>-916.mp4). Non-generated media (captured footage, Ken Burns stills, screen recordings) gets a center-cut biased by shot.focus, dropped in short/media/<bid>-916.*, replaceable by a pantry/<bid>-916.* human override that wins over everything. Endcard's Next: line defaults to the last dropped CARD beat's narration; --next overrides. --rewrite-outro regenerates the outro to say what was cut and point at the long film (the only audio the shorts pipeline ever regenerates). All demo output in demo/SHORTS-LOG.txt is verbatim from a fixture reel at /tmp/claude-501/claude-shorts-demo — 7 REMOTION beats totaling 214s. Nothing was uploaded. No paid calls. episode.source_sha256 2d0d192fefff25f6f9a44c6a5cd588dc1b958f2f19fc2abc48cc0c2d89bd1f01.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:102-104",
+      "vertical_case_lines": "art:105-107",
+      "script": "runtime/scripts/shorts.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "shorts",
+      "vertical",
+      "9:16",
+      "Shorts cap",
+      "ONDA CHECK",
+      "pantry",
+      "center-cut",
+      "auto-plan",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T14:09:21",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "derived_from": "claude-liam-brutalist-command-shorts"
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Salam, this is Liam, in for Bear. Art shorts turns a finished sixteen-nine reel into its nine-sixteen sibling. One editorial rule drives everything: the file must be strictly under three minutes, including the endcard, including encoder rounding. The script prints a plan first, then rewires the visuals — it never truncates speech and it never speeds anything up.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Salam, Liam' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'checking cap; planning drops; rewiring…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Salam, Liam",
+            "topic": "BRUTALIST · COMMAND: ART SHORTS",
+            "segment": "art shorts",
+            "command": "Turn my finished 16:9 reel into its 9:16 sibling. Check the length first, drop beats if the cap needs it, rewire every Remotion beat instead of cropping it, and print the plan first.",
+            "runningText": "checking cap; planning drops; rewiring…",
+            "output": [
+              "wraps: python3 runtime/scripts/shorts.py <reel>",
+              "editorial law: Short = strictly < 3:00"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T17:29:51.358075+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.18,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 19.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Corrects the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art shorts does not shrink your reel by speeding it up. It cuts whole beats out — first the longest unprotected ones — until the remainder plus a four-and-a-half-second endcard fits under three minutes. And when a Remotion beat has a nine-sixteen composition already registered, the script rewires the beat to that composition and re-renders it portrait. It never crops the frame.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "lead_silence_s": 0.6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first line types: 'art shorts speeds up / and crops the frame.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'speeds up' turns terracotta, hesitates, backspaces, types 'drops beats'"
+          },
+          {
+            "at": "0.80",
+            "event": "'crops the frame' turns terracotta, hesitates, backspaces, types 'rewires the render'"
+          },
+          {
+            "at": "0.94",
+            "event": "final corrected lines settle"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art shorts\nspeeds beats\nand crops\ngraphics.",
+            "triggerWords": "speeds, crops",
+            "replacementWords": "drops, rewires",
+            "seed": "command-shorts-b01-vertical",
+            "face": "serif",
+            "fontSize": 180,
+            "lineSpacing": 2.6,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T17:30:59.235957+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.16,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 21.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the dispatcher case + the sibling vertical case. One script, two entry points.",
+      "narration_text": "The dispatcher is two adjacent cases in the art file. Art shorts execs python on shorts dot py. Art vertical execs the same script with dash dash vertical appended. Same code path, opposite editorial rules: shorts caps at three minutes and can drop beats. Vertical caps at nothing and drops nothing.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in with 'art' in the title bar"
+          },
+          {
+            "at": "0.20",
+            "event": "shorts case types"
+          },
+          {
+            "at": "0.50",
+            "event": "vertical case types below it"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art:102-107 — two cases, one script",
+            "code": "# From the top-level art dispatcher:\ncase \"$cmd\" in\n  # ...\n  shorts)        # art:102-104\n    exec python3 \"$ART_HOME/runtime/scripts/shorts.py\" \"$@\"\n    ;;\n  vertical)      # art:105-107\n    exec python3 \"$ART_HOME/runtime/scripts/shorts.py\" \"$@\" --vertical\n    ;;\n  # ...\nesac\n\n# One Python script.  Two entry points.  Two editorial contracts:\n#   shorts   -> Short  = strictly < 3:00 ; can drop beats ; endcard\n#   vertical -> Full 9:16 companion ; no cap ; no drops ; no endcard",
+            "sparkLine": "One script. Two verbs. Two contracts."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-12T17:21:40.561623+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.43,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 17.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — THE SHORTS LAW from the module docstring (condensed for card).",
+      "narration_text": "The law lives at the top of shorts dot py, and it is worth reading. Every Short is strictly under three minutes, endcard and encoder rounding included — a three-minute-zero file fails and never publishes. Shorten by cutting whole beats first. Reuse the retained narration and native portrait visuals as independent copies. Never truncate speech. Never speed anything up. Publishing is a separate step. And dash dash vertical is not a Short — it is the full-length companion, exempt from the cap.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'shorts.py — THE SHORTS LAW'"
+          },
+          {
+            "at": "0.20",
+            "event": "rule 1 types (< 3:00)"
+          },
+          {
+            "at": "0.40",
+            "event": "rule 2 types (cut complete beats first)"
+          },
+          {
+            "at": "0.58",
+            "event": "rule 3 types (never truncate speech)"
+          },
+          {
+            "at": "0.75",
+            "event": "rule 4 types (publishing is separate)"
+          },
+          {
+            "at": "0.88",
+            "event": "rule 5 types (--vertical is not a Short)"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "shorts.py — the editorial law",
+            "code": "# THE SHORTS LAW (from shorts.py module docstring):\n#\n# 1. CHECK LENGTH FIRST.  Plan with headroom; final measured duration\n#    must be < 180 s.  A 3:00.000 file fails.  Never publishes.\n# 2. SHORTEN BY CUTTING COMPLETE BEATS FIRST.  Keep the hook, result\n#    and essential caveat; leave full walkthroughs to the 16:9 long.\n#    Auto-plan drops longest middle beats; --keep/--drop override.\n# 3. REUSE RETAINED NARRATION.  Keep the outro; --rewrite-outro\n#    requests a new funnel outro.  Never truncate or speed up.\n# 4. PUBLISHING IS SEPARATE.  HAI scheduling is a downstream step;\n#    this script renders only.\n# 5. --vertical is NOT a Short: no drops, no cap, no endcard.\n#    Full-length 9:16 companion.",
+            "sparkLine": "< 3:00 or it never publishes."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-12T17:22:21.208482+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.24,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 25.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the cap check + the greedy auto-planner, from shorts.py.",
+      "narration_text": "Here is how the auto-planner actually chooses. It computes the parent reel's total duration. It subtracts the endcard length. It subtracts a five-second headroom against encoder rounding. That is the budget. Then it walks the beats sorted by duration, longest first, skipping the protected ones — the first beat, the last beat, anything in an INTRO or OUTRO act, any source-report beat, anything marked hero, and everything you named with dash dash keep. It drops from the top of that list until the running total fits.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'shorts.py — plan_drops (greedy)'"
+          },
+          {
+            "at": "0.20",
+            "event": "budget calc types"
+          },
+          {
+            "at": "0.50",
+            "event": "sort key types"
+          },
+          {
+            "at": "0.75",
+            "event": "loop types"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "shorts.py — plan_drops",
+            "code": "# From shorts.py — the auto-planner is 12 lines of Python.\n\nCAP_HEADROOM_S = 5.0          # aim at <= 2:55; verify the file too\n\ndef plan_drops(beats, keep_ids, end_s):\n    budget = SHORTS_CAP_S - CAP_HEADROOM_S - end_s\n    total  = sum(beat_dur(b) for b in beats)\n    if total <= budget:\n        return []\n    droppable = sorted(\n        (b for b in beats\n         if not is_protected(b, beats, keep_ids)),\n        key=beat_dur, reverse=True)\n    drops = []\n    for b in droppable:\n        if total <= budget: break\n        drops.append(b['beat_id'])\n        total -= beat_dur(b)\n    return drops\n\n# Protected: first beat, last beat, INTRO/OUTRO acts, source_report,\n# graphic mechanic/label containing 'hero', and every --keep id.",
+            "sparkLine": "Greedy. Longest first. Protected beats never leave."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T17:14:56.682147+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.69,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 25.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — THE ONDA CHECK: REMOTION beats are never cropped.",
+      "narration_text": "The reformat rule for Remotion beats is a separate check with its own name — the ONDA check. Captured user media in the reel gets a center cut, biased by shot dot focus, written into short slash media as beat dash nine sixteen. But Remotion renders are detected by shot dot type equals REMOTION on the beat sheet — never by which folder the file sits in. For each Remotion beat, the script looks up the composition's pattern in Root dot tsx, appends nine sixteen, and if that portrait composition exists, rewires the beat and re-renders it. If the nine sixteen composition is missing, the beat is BLOCKED — you either add the composition to Root dot tsx or drop a pantry override.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'shorts.py — THE ONDA CHECK'"
+          },
+          {
+            "at": "0.20",
+            "event": "is_remotion helper types"
+          },
+          {
+            "at": "0.45",
+            "event": "portrait_pattern lookup types"
+          },
+          {
+            "at": "0.75",
+            "event": "rewire vs BLOCKED path types"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "shorts.py — the ONDA CHECK (paraphrased)",
+            "code": "# 1. detect REMOTION beats by their beat sheet, not their folder:\ndef is_remotion(b):\n    shot = b.get('shot') or {}\n    return (str(shot.get('type','')).upper() == 'REMOTION'\n            or bool(shot.get('remotion')))\n\n# 2. does Root.tsx register the 916 sibling of this pattern?\ndef portrait_pattern(pattern, tsx):\n    if pattern.endswith('916') and f'id=\"{pattern}\"' in tsx:\n        return pattern\n    cand = f'{pattern}916'\n    return cand if f'id=\"{cand}\"' in tsx else None\n\n# 3. rewire or block:\np916 = portrait_pattern(pattern, tsx)\nif p916:\n    b['shot']['remotion']['pattern'] = p916      # re-render portrait\nelse:\n    onda_blocked.append((bid, pattern))         # add 916 or pantry",
+            "sparkLine": "REMOTION beats are rewired, never cropped."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T17:15:41.766777+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 37.78,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 37.791666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — pantry override precedence; the human's escape hatch.",
+      "narration_text": "The precedence for every kept beat is fixed. First, pantry — a file named pantry slash beat dash nine sixteen dot mp4 or png always wins, even over a Remotion render. That is the human's manual replacement slot. Second, for Remotion beats, the ONDA check rewire. Third, for captured media, a hand-made beat dash nine sixteen file next to the source. And only if none of the above exist does the script produce an auto center cut. If your auto cut chops a word or misses the subject, you add the file to pantry and re-run — the auto path steps aside.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'shorts.py — precedence per beat'"
+          },
+          {
+            "at": "0.20",
+            "event": "pantry rule types"
+          },
+          {
+            "at": "0.45",
+            "event": "ONDA CHECK rule types"
+          },
+          {
+            "at": "0.65",
+            "event": "hand-made -916 rule types"
+          },
+          {
+            "at": "0.82",
+            "event": "auto center-cut fallback types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "shorts.py — precedence per kept beat",
+            "code": "# For each kept beat, the resolver walks a fixed order:\n#\n# 1. PANTRY  (human override, always wins)\n#      <reel>/pantry/<bid>-916.{mp4,png,jpg}\n#\n# 2. ONDA CHECK  (REMOTION beats only)\n#      Root.tsx has a <pattern>916 composition  ->  rewire + re-render\n#      no <pattern>916 registered              ->  BLOCKED\n#\n# 3. HAND-MADE -916  (captured media only, NOT generated)\n#      <reel>/media/<bid>-916.mp4  next to the source\n#\n# 4. AUTO CENTER-CUT  (captured media fallback)\n#      ffmpeg crop='min(iw,ih*9/16):ih:...:0'   focus x from shot.focus\n#      written into <short>/media/<bid>-916.<ext>\n#\n# For any beat, pantry/<bid>-916.* overrides every other path.",
+            "sparkLine": "Pantry wins. Cropping is the last resort."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-09T17:16:36.165277+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 29.97,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 30.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — the real cap-check log against the fixture reel.",
+      "narration_text": "Here is a real invocation. Seven beats, two hundred fourteen seconds, thirty-four seconds over cap. The script prints the plan. It picks B02, the longest unprotected middle beat, fifty-five seconds. It rewires the six remaining Remotion beats to their nine sixteen compositions. Total kept: one sixty three point five seconds, comfortably under three minutes. Two commands to run next: portrait render, then compile. This is verbatim from the log — nothing was invented for the video.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art shorts /tmp/claude-501/claude-shorts-demo'"
+          },
+          {
+            "at": "0.20",
+            "event": "cap check line types"
+          },
+          {
+            "at": "0.40",
+            "event": "auto-plan line types (B02 dropped)"
+          },
+          {
+            "at": "0.65",
+            "event": "ONDA CHECK block types"
+          },
+          {
+            "at": "0.85",
+            "event": "total 163.5s OK line types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art shorts /tmp/claude-501/claude-shorts-demo   (verbatim)",
+            "code": "$ ./art shorts /tmp/claude-501/claude-shorts-demo\n[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00\n[short] over the cap -> auto-plan drops 1 beat(s): B02\n[short]   (re-run with --drop/--keep to override the plan)\n[short] B00  ONDA CHECK: ClaudeComposerAsk -> ClaudeComposerAsk916\n[short] B01  ONDA CHECK: BrutalistHesitantWriter -> BrutalistHesitantWriter916\n[short] B03  ONDA CHECK: ClaudeCodeBeat -> ClaudeCodeBeat916\n[short] B04  ONDA CHECK: ClaudeCodeBeat -> ClaudeCodeBeat916\n[short] B05  ONDA CHECK: ClaudeVerdictArtifact -> ClaudeVerdictArtifact916\n[short] B06  ONDA CHECK: ClaudeTitleOutro -> ClaudeTitleOutro916\n[short] 7 beats · ~163.5s (2:43.5) OK\n[short] dropped: B02 · silent endcard 4.5s\n[short] next:\n[short]   1. remotion_scenes.py <short>   # portrait renders for the rewired beats\n[short]   2. compile.py <short> --review --height 1920",
+            "sparkLine": "Plan first. Then rewire. Then render."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T17:17:34.116438+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.62,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 25.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — one real failure case and its recovery.",
+      "narration_text": "And here is a real failure. The command combines dash dash vertical with dash dash drop. Vertical asks for the full film. Drop asks to shorten. The script refuses on the spot — REFUSED, dash dash vertical preserves the full film, dash dash drop is not allowed. No directory written. Exit one. Recovery is pick one intent. If you want a shorter cut with specific beats gone, that is dash dash drop, no dash dash vertical. If you want the full length nine sixteen sibling, that is dash dash vertical, no dash dash drop. Two verbs, two contracts, no overlap.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'failure — --vertical with --drop'"
+          },
+          {
+            "at": "0.22",
+            "event": "BEFORE: the offending invocation types"
+          },
+          {
+            "at": "0.45",
+            "event": "REFUSED line highlights terracotta"
+          },
+          {
+            "at": "0.65",
+            "event": "RECOVERY split: pick one intent"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "failure + recovery (verbatim)",
+            "code": "# INVOCATION\n$ ./art shorts /tmp/claude-501/claude-shorts-demo --vertical --drop B02\n[short] REFUSED: --vertical preserves the full film; --drop is not allowed\n$ echo $?\n1\n\n# The check is one line of Python inside shorts.py's main():\n#     if a.vertical:\n#         if a.drop:\n#             raise BuildError(\n#                 '--vertical preserves the full film; --drop is not allowed')\n\n# ------------------------- RECOVERY -------------------------\n# Pick one intent. Two verbs, two contracts, no overlap.\n#\n# A) shorter cut with a specific beat gone:\n$ ./art shorts /tmp/claude-501/claude-shorts-demo --drop B02\n#\n# B) full-length 9:16 companion (no cap, no drops, no endcard):\n$ ./art vertical /tmp/claude-501/claude-shorts-demo",
+            "sparkLine": "Two verbs. Two contracts. No overlap."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T17:18:20.773234+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 29.59,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 29.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, in the order you use it.",
+      "narration_text": "So the surface. Art shorts derives a short cut. It checks the cap first, plans drops greedily from the longest unprotected middle beats, and prints the plan before touching a file. It rewires every Remotion beat to its nine sixteen composition — it never crops the frame. Captured media does get a center cut, biased by focus, but a pantry override always wins. Art vertical is the same script with dash dash vertical — no cap, no drops, no endcard, no rewritten outro. Publishing is separate. Nothing here uploads.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'art shorts — the whole surface'"
+          },
+          {
+            "at": "0.28",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.48",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.58",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.68",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 6 in"
+          },
+          {
+            "at": "0.88",
+            "event": "line 7 in"
+          },
+          {
+            "at": "0.94",
+            "event": "line 8 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art shorts — the whole surface, in the order you use it",
+            "artifactLines": [
+              "bare invocation — ./art shorts <reel>; wraps python3 runtime/scripts/shorts.py.",
+              "cap first — Short = strictly < 3:00 including endcard + encoder rounding.",
+              "auto-plan drops — longest unprotected middle beats until the total fits; --keep/--drop override.",
+              "protected always — first beat, last beat, INTRO/OUTRO acts, source_reports, 'hero' beats, --keep ids.",
+              "ONDA CHECK — every REMOTION beat rewired to <pattern>916; missing composition = BLOCKED.",
+              "pantry wins — pantry/<bid>-916.* overrides the auto cut, the rewire and the hand-made -916.",
+              "art vertical — same script, --vertical; no cap, no drops, no endcard, no rewritten outro.",
+              "render only — no upload, no scheduling; publishing is a separate authorized human workflow."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T17:19:20.123825+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 28.12,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 28.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code from your reel folder. Run art shorts and read the plan before compiling. If the auto plan drops a beat you consider essential, add dash dash keep and re-run — the planner will walk to the next longest unprotected beat and drop that instead. If the ONDA check reports BLOCKED, either register the missing nine sixteen composition in Root dot tsx or drop a pantry override. Only after the plan reads as intended do you run the two printed next-steps: remotion scenes on the short folder, then compile with dash dash review.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "expected outcome lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Derive your 9:16 sibling",
+            "command": "Run ./art shorts <reel>. Read the plan first: cap check, auto-planned drops, ONDA CHECK. If a drop is essential, add --keep <BID>. If ONDA prints BLOCKED, register the 916 composition or drop pantry/<BID>-916.mp4. Then run the two next-step commands the script printed.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — read the plan; --keep protects a beat",
+              "step 2 — clear BLOCKED; then run the two next-steps"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T17:31:49.869069+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 31.02,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 31.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T14:09:21"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art shorts. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art shorts.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art shorts.",
+            "slug": "claude-liam-brutalist-command-shorts"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T17:20:35.362999+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.27,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.291666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T14:09:21"
+      }
+    }
+  ]
+}

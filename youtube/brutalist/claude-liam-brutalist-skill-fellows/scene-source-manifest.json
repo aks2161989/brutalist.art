@@ -1,0 +1,16 @@
+{
+  "files": [
+    "runtime/remotion/src/scenes.json",
+    "runtime/remotion/src/TrainTeacher.tsx",
+    "runtime/remotion/src/RequireReport.tsx",
+    "runtime/remotion/src/Root.tsx",
+    "runtime/remotion/src/scenes/BrutalistHesitantWriter.tsx",
+    "runtime/remotion/src/scenes/SkillTeardownPipeline916.tsx",
+    "runtime/remotion/src/scenes/SkillTeardownMechanism916.tsx",
+    "runtime/remotion/src/scenes/SkillTeardownAnatomy916.tsx",
+    "runtime/remotion/src/scenes/BarChart.tsx",
+    "runtime/remotion/src/illustrations/previews.tsx"
+  ],
+  "baseline_sha256": "46ec6029fb416b893e44c291f777b59416d2cd640640f8aab288939e4e79013d",
+  "note": "Overlay on the local toolkit snapshot recorded in SOURCE-SNAPSHOT.json, not blindly on another revision."
+}

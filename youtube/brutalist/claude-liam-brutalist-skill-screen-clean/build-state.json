@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/exports/landscape/claude-liam-brutalist-skill-screen-clean.mp4",
+  "sha256": "1f31b5a8b870e78f0170078076356ce5eba5ab888d9424eb59627fc9f7053634",
+  "duration_s": 318.1666666666667,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B00.mp4": "c112a10bb264d2146ce761bb9d4c9814d7b84d6fea9b4e7c925893cdf1530b36",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B01.mp4": "c9fffd5cc32b5ac4c9c04e89413c7f6fc30dafc48e8a8527955109727d3719f2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B02.mp4": "9fa11904ad17f777b0c00a056086288116bd8f27b901a34eb127b8ed2d76b2a7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B03.mp4": "36e901dff1704933ed61a1b3460a7cf99e9c8825515bd44dccd9014de4b3a570",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B04.mp4": "6437e4350667eb848a8546a29a67afdff1786ccad08338a48f554a7400ae3b93",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B05.mp4": "c5184a13c56cfab167091addaac5fdc89765116a8cc6bfce92db8ea541e2d3cb",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B06.mp4": "eb71ba53dd452c06cefdcbc48b3ef34d948359d338a014a1e2306d6d992045d6",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B07.mp4": "35eafbd06e10df71624809047c4e0f2dbaa461e7fd578a7f23081e31b6ad7082",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B08.mp4": "b19fee100dac89c8daf2a1a7486f9ba1800c8e7aa837bfc661dbd3c914cacbc2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B09.mp4": "0fc6e94b874cf58c4158ff5b27be6be40a5e3d5cd4cf6975f15bbd12ba7401ca",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B10.mp4": "91b222636be850b2afe3cd3fc99dbc0fe4ae69a82cc849b5f192fef85573c767",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/media/B11.mp4": "a9ecf008359669e1ce9428bb6d2253606ec9702344a1aef6728bf988e7695d07",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B00.mp3": "702eb96223d8b16e04a5b0375b145058695460361a65c05e84575c628558cbce",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B01.mp3": "cc2265f1308d802edc692e733457ee59ef3cddd084e523dac140cdb313600814",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B02.mp3": "798c637bf35fb1fcdb1a4fd8175eff44e8689614d934ebe80e0362495861c731",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B03.mp3": "244c860b4fb7ee464b6fd8881f8078638adbe60d689784e95ecd8d1837a5dd32",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B04.mp3": "b627519dd149cdcbcdfea2657b92f67d9fd0269e2f468e068636e3a959cf5ee9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B05.mp3": "6ad616dba34077c3bc2a0e237bae0abb99da721f546cd2cae0ed48ac19fbe05b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B06.mp3": "0266d25d450a731c43d13824135be32fe1bd7e7b2895f11dfdfe71bcb19726f7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B07.mp3": "6bda781d0cb4116cb6f81bdf7fbc2eb44ce5d8514c167811536aceb25c5ab16a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B08.mp3": "5f0f5bcb104dcd4c42f52014c8aa9a06564bfec0e4e339b2f846748016c1b1bd",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B09.mp3": "9f206c5d383b3504bfbfd3316fa2ac2587be8222e5c46a1700245bf59c4b0b9e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B10.mp3": "1b855ae12f4a22db73b590e68f00a7297755250ab4fa846b354d16f984d994e6",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-screen-clean/mp3/beat-B11.mp3": "f24ea31d0ecee48515ed37457b4657aa47592a73384e1ceea4ceab622e4fa59a"
+  },
+  "at": "2026-09-09T00:12:12.369830+00:00"
+}

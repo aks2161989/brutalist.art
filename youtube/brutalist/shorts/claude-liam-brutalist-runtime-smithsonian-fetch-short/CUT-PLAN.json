@@ -1,0 +1,36 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "smithsonian_fetch.py as a CC0 provenance pipeline: search → fetch → sidecar",
+  "parent_master_sha256": "33fe2c876bf07926b84fb0882f4b409a124aff40f32ab55e439800ef60bc9f3c",
+  "kept_beats": ["B00", "B01", "B03", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {
+      "beat_id": "B02",
+      "reason": "6-stage pipeline anatomy is generic infrastructure detail — B00 already explains the overall flow; belongs in the long"
+    },
+    {
+      "beat_id": "B04",
+      "reason": "Scoring algorithm internals (title match +4, token match +2, apparatus bonus) are deep mechanism detail; B03 shows the user-visible result without needing the formula"
+    },
+    {
+      "beat_id": "B05",
+      "reason": "CC0 URL resolution JSON path walkthrough (descriptiveNonRepeating → online_media) is API implementation detail; the Short establishes CC0-strict without the path"
+    },
+    {
+      "beat_id": "B06",
+      "reason": "Topaz optional gate (tpai found/missing branches) is a feature detail; B09 verdict covers graceful degradation concisely"
+    },
+    {
+      "beat_id": "B08",
+      "reason": "--copy flag and pantry integration workflow belongs in the long; B07 already establishes the provenance sidecar payoff"
+    },
+    {
+      "beat_id": "B10",
+      "reason": "Full Your Turn prompt with detailed verification test is long-form exercise material; the Short ends at the honest verdict (B09)"
+    }
+  ],
+  "cut_first_review": "B00 introduces Liam and establishes what smithsonian_fetch.py does (CC0 images, provenance, local index). B01 immediately reframes the misconception: not a downloader, a provenance pipeline. B03 shows the actual usage: text search, tokenized query, interactive candidate list. B07 reveals the unique value: every shelved image gets a .source.txt sidecar with CC0, SI id, credit, URL. B09 gives the honest verdict: what it gets right (CC0-strict, index-first, graceful Topaz degradation) and where it bites (index must be pre-built; --yes can accept wrong hardware on ambiguous queries). B11 signs off. No dangling references — B00 summarizes the pipeline stages so dropping B02 leaves no gap; B03 shows the ranker result without needing the scoring formula from B04; B07 establishes the sidecar without needing the --copy workflow from B08.",
+  "planned_duration_s": 110.25,
+  "rewrite_reason": null,
+  "run_id": "7d5225769ced4a06a72051a66def374b"
+}

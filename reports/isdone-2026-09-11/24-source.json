@@ -1,0 +1,131 @@
+{
+  "number": 24,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2",
+  "beats": 12,
+  "sheet_sha256": "2fdecfbd1d241635f608fe1956842ebd480e7e56d0e3e07662aea43a0a7df8dc",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/review.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "198.150667",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B03",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "learning-artifacts/week-01/wrong_label_fixture.py",
+        "code": "# Practice Lab fixture \u2014 confidently wrong top logit\nfrom main import probabilities\n\nLABELS  = ['UNICORN', 'PLANE', 'CAR']\nLOGITS  = [3, 2, 1]       # UNICORN is wrong\nTRUE_IX = 1               # PLANE is the true answer\n\nfor T in (2.0, 1.0, 0.5, 0.1):\n    p = probabilities(LOGITS, T)\n    top = p.index(max(p))\n    print(f'T={T:>4}  top={LABELS[top]:7}  p={max(p):.3f}')",
+        "sparkLine": "Labels. Logits. Truth. Sweep.",
+        "codeSize": 0.048,
+        "sparkSize": 26
+      },
+      "intent": "Claude cream code card: the Practice Lab fixture \u2014 labels, logits, true index, temperature sweep."
+    },
+    {
+      "beat": "B06",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "learning-artifacts/week-01/test_wrong_label.py",
+        "code": "import unittest\nfrom main import probabilities\n\nclass PracticeLab(unittest.TestCase):\n    def test_A_sums_outside_demo(self):\n        # success outside [1,2,3]\n        self.assertAlmostEqual(sum(probabilities([-1, 0, 1])), 1)\n\n    def test_B_low_T_amplifies_wrong_label(self):\n        # confidently wrong: UNICORN(3) is the top logit,\n        # PLANE(2) is the true label. Lowering T makes UNICORN louder.\n        hot  = probabilities([3, 2, 1], 1.0)[0]\n        cold = probabilities([3, 2, 1], 0.1)[0]\n        self.assertGreater(cold, hot)\n\nif __name__ == '__main__':\n    unittest.main()",
+        "sparkLine": "Success outside demo. Failure that costs.",
+        "codeSize": 0.04,
+        "sparkSize": 26
+      },
+      "intent": "Claude code card: test_wrong_label.py \u2014 two Practice-Lab tests, real assertions."
+    },
+    {
+      "beat": "B07",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "unittest_run.log",
+        "code": "test_A_sums_outside_demo (PracticeLab) ... ok\ntest_B_low_T_amplifies_wrong_label (PracticeLab) ... ok\n\n----------------------------------------------------\nRan 2 tests in 0.001s\n\nOK\n\n# receipts\n# cold (T=0.1) top-1 UNICORN = 0.99996\n# hot  (T=1.0) top-1 UNICORN = 0.66524\n# untested: whether probabilities() is CALIBRATED to reality\n#           (this lab measures shape, not truth)",
+        "sparkLine": "Two green. One honest gap.",
+        "codeSize": 0.038,
+        "sparkSize": 26
+      },
+      "intent": "Claude code card: unittest passing output \u2014 the two Practice-Lab tests green; the untested line preserved."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B00.mp4",
+      "seconds": 12.2962112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B01.mp4",
+      "seconds": 11.8531056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B02.mp4",
+      "seconds": 10.196211199999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B03.mp4",
+      "seconds": 12.0866669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B04.mp4",
+      "seconds": 11.339999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B05.mp4",
+      "seconds": 11.339999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B06.mp4",
+      "seconds": 15.82,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B07.mp4",
+      "seconds": 14.9331056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/B08.mp4",
+      "seconds": 10.8266669,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/BVDT.mp4",
+      "seconds": 8.9133331,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/BHTF.mp4",
+      "seconds": 15.0031056,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-2-401b2e90-v-4a595b125fd2/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/24-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

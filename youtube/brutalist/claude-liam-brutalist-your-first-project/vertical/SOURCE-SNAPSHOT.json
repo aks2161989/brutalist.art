@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-09-08T02:04:01.224852+00:00",
+  "files": {
+    "README.md": "ca2eacdb6366bca0ae09d48ea0855da46aa003691a4f08a2f06b4b83e1b86588",
+    "art": "9bb77a7c84701d23ab6e73f0a4f48592f17748ffad2c7114b62687bb7f97d0e9",
+    "setup": "75040062dfcb20d0437a5a358abc516ed6e4b1e4e9020aaac926e1b9d5b2208d",
+    "skills/make/ai-explainer/SKILL.md": "a7421d4d861b44a983a31e9fcd7451cd32312a139366e74acc2123dfdefbd3c0",
+    "skills/make/nopunt/SKILL.md": "ef38a574fe22f2fca1dfa0774bc51681252776f8ef2bd6f2b1e52d6478cab505",
+    "runtime/prose/teardown/PROSE.md": "6accc1a576ca9b52713abd31507f5deece6dc2612ca90967b25b661e59111786",
+    "docs/PIPELINE-SAFETY.md": "4619f0d4702317d654cd6498cadc8c277691e4c7565920ef851dbb628aa6298d",
+    "docs/FELLOWS-SUBMISSION.md": "7825c728f040b0f7a49bbd950a5a2bef70c8a59ff2fbe0538716c8d3381f5223",
+    "REPOLOOP-PROMPT.md": "abf55bdc729a9c30216e4375dff0c62b4bf5af4c717ad28be69709de64d5bc97"
+  },
+  "revision": {
+    "commit": "ba2d0e0f043f5b3b35a50d336e0fc66fbfecfc0c",
+    "local_overrides": [
+      "runtime/remotion/src/RequireReport.tsx",
+      "runtime/remotion/src/Root.tsx",
+      "runtime/remotion/src/TrainTeacher.tsx",
+      "runtime/remotion/src/illustrations/previews.tsx",
+      "runtime/remotion/src/scenes.json",
+      "runtime/remotion/src/scenes/BarChart.tsx"
+    ],
+    "skipped": "Symlinked render/audio assets are not toolkit source and are not copied."
+  },
+  "toolkit_baseline_sha256": "81ff2064d111dc104cc98f1f6722247b15069a0113112a8052c9a1fe9b5a62d8",
+  "runtime_note": "Isolated copy of the local working toolkit, including any existing uncommitted scenes."
+}

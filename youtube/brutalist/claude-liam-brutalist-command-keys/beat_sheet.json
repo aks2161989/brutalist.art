@@ -1,0 +1,806 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art keys",
+    "slug": "claude-liam-brutalist-command-keys",
+    "topic": "BRUTALIST · COMMAND: ART KEYS",
+    "kind": "command",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "channel_title": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Habari, Liam",
+    "greeting_note": "hello lexicon: Habari (Swahili, one word — 'news' / greeting). Fresh — does not repeat scene-index=Bonjour, scenes/help=Namaste, icons=Sawubona, list=Salaam, icon-build=Merhaba, run=Ciao, shorts=Salam, todo/vertical=Hola, approvals=Selam, doctor=Jambo, final=Hei. Slug char-sum mod 10 == 6, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "b7896f5b2d2a441186ff1451881c0a5b",
+    "episode_id": "command-keys",
+    "order": 36,
+    "note": "Command teardown of ./art keys — the dispatcher case at art:103-104 that execs runtime/scripts/check_keys.py with $@ forwarded. The Python script is 83 lines. It probes exactly one optional service (higgsfield CLI login) via `higgsfield account status` with a 25 s timeout, and writes one row into a table. Three status paths: valid (rc == 0), invalid (rc != 0, prints the failure text next to a fix line), unset (FileNotFoundError, prints 'CLI not installed'); a fourth `warn` path catches any other exception and flags the run inconclusive. Reads a repo-root .env via load_env (os.environ.setdefault, so the shell wins) but never prints a value — verified in demo/RUN-LOG.txt § 5 by grepping the output for a synthetic secret and getting zero matches. Two documentation drifts are called out honestly as the Teardown moment (B08): the docstring says 'Exit 1 if any present key is invalid' but line 40 declares any_invalid = False and never reassigns it, so exit is always 0; and the art help line at art:20 mentions 'SI key' but no SI probe exists in the script. Neither is a bug to fix in this reel — the point is that fellows should trust the live behavior, not the marketing copy. All demo output in demo/RUN-LOG.txt is verbatim from this workstation on 2026-09-09, machine higgsfield 0.2.3 installed, no active login, no .env in the toolkit tree. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. episode.source_sha256 7c3b6abf2ec61bb70122fe12ba1e2d5bad049db19db16ddb3a1026cad274e8c6. Re-verified 2026-09-12: source files (art, check_keys.py) unchanged; SKILL.md update triggered rebuild; exports verified intact, Gate V 0/0 on both aspects.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:103-104",
+      "probe_script": "runtime/scripts/check_keys.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "keys",
+      "check_keys",
+      "higgsfield",
+      "free-by-default",
+      "env",
+      "redaction",
+      "exit code",
+      "docstring",
+      "command teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-09T20:20:24",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Habari, this is Liam, in for Bear. The ask — before I fill a single beat sheet, tell me which optional keys this box has, and whether the toolkit actually needs any of them. Just probe. Do not spend anything.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 15,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Habari, Liam' types above the composer"
+          },
+          {
+            "at": "0.25",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'running check_keys.py…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Habari, Liam",
+            "topic": "BRUTALIST · COMMAND: ART KEYS",
+            "segment": "art keys",
+            "command": "Before I fill a single beat sheet, tell me which optional keys this box has, and whether the toolkit actually needs any of them. Just probe. Do not spend anything.",
+            "runningText": "running check_keys.py…",
+            "output": [
+              "probes ONE service — the higgsfield CLI login (opt-in upgrade, not required).",
+              "prints a colored row per service — valid, invalid, unset, or warn.",
+              "always exits 0 unless the probe itself throws — the toolkit needs no keys."
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T00:06:27.394779+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 11.56,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 11.583333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Trigger words appear exactly once and never in the preserved title line.",
+      "narration_text": "Watch the writer walk this back. The toolkit is free by default. Art keys does not block a render — nothing does. It audits one optional upgrade, and it audits it live. A red row here means Higgsfield is not logged in. It never means you cannot render.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art keys / blocks renders.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'blocks' turns terracotta, hesitates, backspaces, types 'audits'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'renders' turns terracotta, hesitates, backspaces, types 'upgrades'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art keys / audits upgrades.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "art keys\nblocks renders.",
+            "triggerWords": "blocks, renders",
+            "replacementWords": "audits, upgrades",
+            "seed": "keys-b01",
+            "face": "serif",
+            "fontSize": 260,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T00:07:25.316357+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.08,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.083333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the dispatcher case. Two lines, no aliases, execs python3 check_keys.py with $@ forwarded.",
+      "narration_text": "The dispatcher is one case in the art file — two lines. Pattern 'keys', then exec python three on check_keys.py, with every argument forwarded. No aliases. Whatever the script decides is the whole command's behavior.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in with 'art' in the title bar"
+          },
+          {
+            "at": "0.20",
+            "event": "'case \"$cmd\" in' types"
+          },
+          {
+            "at": "0.40",
+            "event": "the single 'keys)' pattern types"
+          },
+          {
+            "at": "0.70",
+            "event": "the exec line types under it"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line settles under the card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "art:103-104 — one branch, no aliases",
+            "code": "# From the top-level art dispatcher:\ncase \"$cmd\" in\n  # …\n  keys)\n    exec python3 \"$ART_HOME/runtime/scripts/check_keys.py\" \"$@\"\n    ;;\n  # …\nesac\n\n# The wrapper: (1) resolves ART_HOME from art's own path,\n# (2) execs the Python script, (3) forwards \"$@\" untouched.\n# No aliases in the case block. The whole command surface\n# is whatever check_keys.py decides to do.",
+            "sparkLine": "One case. No aliases. One script."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T00:07:55.810123+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 12.69,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 12.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK 2 — three status paths on the higgsfield probe, plus the fourth 'warn' fallback. The row(...) helper is the whole table primitive.",
+      "narration_text": "Four status paths, one probe. Return code zero — valid, green ready. Non-zero — invalid, red, with the exact fix line printed next to it. No such command on this box — unset, yellow, with a note that the free path runs silently. Any other exception — warn, and the whole run is flagged inconclusive. Each row is one line the human can read.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'four rows, one probe'"
+          },
+          {
+            "at": "0.22",
+            "event": "the row() helper types"
+          },
+          {
+            "at": "0.42",
+            "event": "the four MARK strings settle"
+          },
+          {
+            "at": "0.70",
+            "event": "the three-way branch types under it"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "check_keys.py — four status paths, one probe",
+            "code": "# One helper appends one row per service:\ndef row(service, var, status, detail):\n    rows.append((service, var, status, detail))\n\n# The marks the table prints, from check_keys.py:66-67:\n# valid            → \"✅ valid\"     (green)\n# invalid          → \"❌ invalid\"   (red)\n# unset            → \"· unset\"     (yellow)\n# warn             → \"⚠ check\"     (yellow)\n# set (not probed) → \"· set\"       (yellow)\n\n# The higgsfield block is the only writer — the three-way\n# branch decides which mark lands (see B06 for the body):\n#   rc == 0                    → row(..., \"valid\",   out)\n#   rc != 0                    → row(..., \"invalid\", \"run `higgsfield auth login` — ...\")\n#   FileNotFoundError          → row(..., \"unset\",   \"CLI not installed — ...\")\n#   any other Exception        → row(..., \"warn\",    f\"status check failed: {e}\")",
+            "sparkLine": "One probe. Four marks. One row."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T00:08:27.223329+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.33,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 19.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE 1 — the 'invalid' run, verbatim from demo/RUN-LOG.txt § 1. Higgsfield installed, offline, red row, exit 0. The point: the row is diagnostic, not a gate.",
+      "narration_text": "Here is this box today. Higgsfield is installed. There is no active login and the network is unreachable. The command fires the probe. Return code non-zero, so the row lands as invalid — with the literal fix line 'run higgsfield auth login.' And then, quietly, the script exits zero. Watch that gap. The red row is diagnostic, not a gate.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads the verbatim command"
+          },
+          {
+            "at": "0.22",
+            "event": "the readiness heading types"
+          },
+          {
+            "at": "0.40",
+            "event": "the header rules type"
+          },
+          {
+            "at": "0.55",
+            "event": "the red 'invalid' row types with the fix line beside it"
+          },
+          {
+            "at": "0.78",
+            "event": "footer 'All present keys validated.' + [exit 0] type — the gap"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "$ ./art keys   (verbatim — higgsfield installed, offline)",
+            "code": "$ which higgsfield\n/Users/bear/.nvm/versions/node/v24.17.0/bin/higgsfield\n\n$ ./art keys\n\n  key readiness (live, free — no generation)\n\n  SERVICE       VAR                STATUS      DETAIL\n  -------       ---                ------      ------\n  higgsfield    (CLI login)        ❌ invalid  run `higgsfield auth login` —\n                                               Error: Cannot reach\n                                               https://fnf.higgsfield.ai/agents/balance.\n\n  No keys are required. Higgsfield is an opt-in upgrade — if its CLI\n  is absent or not logged in, all beats fall back to the free path\n  silently.\n\n  All present keys validated.\n[exit 0]",
+            "sparkLine": "Red row. Green footer. Exit 0. Diagnostic, not a gate."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-10T00:08:57.404695+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.37,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 18.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE 2 — the 'unset' run, verbatim from demo/RUN-LOG.txt § 2. Higgsfield removed from PATH, yellow row, exit 0. The free path IS the default.",
+      "narration_text": "Same command, one variable changed. Take higgsfield off the path. The subprocess call raises FileNotFoundError, and the except branch writes 'CLI not installed — AI video beats use free path (Ken Burns stills).' Yellow row. Exit zero again. No error at all — the free path is the default and always has been.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'higgsfield removed from PATH'"
+          },
+          {
+            "at": "0.22",
+            "event": "the PATH-strip command types"
+          },
+          {
+            "at": "0.42",
+            "event": "the readiness table types"
+          },
+          {
+            "at": "0.62",
+            "event": "the yellow '· unset' row lands"
+          },
+          {
+            "at": "0.85",
+            "event": "footer + [exit 0] type"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "$ ./art keys   (verbatim — higgsfield unset)",
+            "code": "$ export PATH=\"$(echo $PATH | sed 's|:/.../v24.17.0/bin||')\"\n$ which higgsfield\nhiggsfield not found\n\n$ ./art keys\n\n  key readiness (live, free — no generation)\n\n  SERVICE       VAR                STATUS      DETAIL\n  -------       ---                ------      ------\n  higgsfield    (CLI login)        · unset     CLI not installed — AI video\n                                               beats use free path\n                                               (Ken Burns stills)\n\n  No keys are required. Higgsfield is an opt-in upgrade — if its\n  CLI is absent or not logged in, all beats fall back to the free\n  path silently.\n\n  All present keys validated.\n[exit 0]",
+            "sparkLine": "Yellow row. Free path is the default. Exit 0."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-10T00:09:28.635875+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.62,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 1 — the whole higgsfield probe body, verbatim (check_keys.py:38-58). Three-way branch plus the fourth exception catch.",
+      "narration_text": "This is the whole probe. Twenty lines. A subprocess call with a twenty-five-second timeout. Return code zero writes the valid row. Non-zero writes the invalid row with the failure text quoted. A FileNotFoundError writes the unset row. Anything else — a broken pipe, a kernel signal, anything — flips the inconclusive flag and writes a warn row. That is every branch. There is no other service checked.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'check_keys.py:44-58 — the whole higgsfield probe body'"
+          },
+          {
+            "at": "0.22",
+            "event": "the subprocess.run line types"
+          },
+          {
+            "at": "0.42",
+            "event": "the three-way if / elif / except branches type"
+          },
+          {
+            "at": "0.75",
+            "event": "the final generic Exception catch types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "check_keys.py:44-58 — the whole higgsfield probe body",
+            "code": "# ── higgsfield CLI (no env key; login-based) ──\ntry:\n    r = subprocess.run([\"higgsfield\", \"account\", \"status\"],\n                       capture_output=True, text=True, timeout=25)\n    out = (r.stdout + r.stderr).strip().replace(\"\\n\", \" \")[:80]\n    if r.returncode == 0:\n        row(\"higgsfield\", \"(CLI login)\", \"valid\", out or \"logged in\")\n    else:\n        row(\"higgsfield\", \"(CLI login)\", \"invalid\",\n            \"run `higgsfield auth login` — \" + (out or \"not logged in\"))\nexcept FileNotFoundError:\n    row(\"higgsfield\", \"(CLI login)\", \"unset\",\n        \"CLI not installed — AI video beats use free path (Ken Burns stills)\")\nexcept Exception as e:\n    _state[\"inconclusive\"] = True\n    row(\"higgsfield\", \"(CLI login)\", \"warn\", f\"status check failed: {e}\")",
+            "sparkLine": "One probe. 25 s timeout. Four branches. That is all."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-10T00:18:57.700483+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.06,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 21.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 2 — the .env loader and the redaction proof. load_env uses os.environ.setdefault (shell wins). Values are never printed — verified via a synthetic secret.",
+      "narration_text": "One more mechanism worth showing. The script reads a repo-root dot-env file, if one exists, via load_env — using os dot environ dot setdefault, so anything already in the shell wins. But it never prints a value. To prove it — write a fake secret into dot env, run the script, and grep the output for the secret. Zero matches. The dot env is scanned for keys the script wants; the values stay silent.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'check_keys.py:20-30 — the .env loader'"
+          },
+          {
+            "at": "0.22",
+            "event": "the load_env body types"
+          },
+          {
+            "at": "0.55",
+            "event": "the redaction proof shell block types"
+          },
+          {
+            "at": "0.85",
+            "event": "the '0' answer lands under the grep line"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "check_keys.py:20-30 + redaction proof",
+            "code": "def load_env():\n    f = REPO / \".env\"\n    if not f.exists():\n        return\n    for line in f.read_text().splitlines():\n        line = line.strip()\n        if not line or line.startswith(\"#\") or \"=\" not in line:\n            continue\n        k, v = line.split(\"=\", 1)\n        k = k.strip(); v = v.strip().strip('\"').strip(\"'\")\n        os.environ.setdefault(k, v)   # shell wins\n\n# Proof the values stay silent (demo/RUN-LOG.txt § 5, verbatim):\n$ printf 'MY_SECRET=this-should-never-print\\n' > .env\n$ ART_HOME=$PWD python3 .../check_keys.py 2>&1 \\\n     | grep -c 'this-should-never-print'\n0     # zero matches in the whole output. The .env is scanned,\n      # the values never leave the process.",
+            "sparkLine": ".env is read. Values never print. Proof: zero."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T00:10:33.116532+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.69,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 20.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FAILURE_RECOVERY",
+      "role_note": "FALSIFIABILITY / the design tell — docstring promises exit 1 on invalid, code declares any_invalid=False and never reassigns it. art:20 help mentions 'SI key' but no SI probe exists. Both are honestly named; neither is fixed in this reel.",
+      "narration_text": "One design tell worth calling out. The docstring says exit zero if every present key is valid, one if any is invalid. Read the code. The variable any underscore invalid is declared false on line forty and never reassigned. So the invalid branch does not actually flip the exit code. And the art help line advertises an 'SI key' check — grep the script for SI, and you get zero hits. So the surface promises two things the code does not enforce. Both are harmless today — nothing in the pipeline gates on this exit — but if you ever need to fail a CI job on a red row, you now know exactly which line to patch.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'the design tell — two drifts'"
+          },
+          {
+            "at": "0.18",
+            "event": "docstring promise types (check_keys.py:8-10)"
+          },
+          {
+            "at": "0.40",
+            "event": "reality: any_invalid = False, never reassigned"
+          },
+          {
+            "at": "0.65",
+            "event": "art:20 help advertises 'SI key'"
+          },
+          {
+            "at": "0.82",
+            "event": "grep proof: zero hits"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "the design tell — two drifts",
+            "code": "# DRIFT 1 — the exit-code promise\n\n# check_keys.py:8-10 (docstring):\n#   \"Exit 0 if every present key is valid; 1 if any present key\n#    is invalid.\"\n\n# check_keys.py:40 (main body):\n    any_invalid = False\n# …the variable is NEVER reassigned. The `invalid` branch just\n# appends a red row and moves on. Exit is always 0 unless the\n# probe itself throws.\n\n# DRIFT 2 — the SI-key promise\n\n# art:20 (dispatcher help block):\n#   \"./art keys   validate optional keys (Higgsfield login, SI key)\"\n\n$ grep -in 'si' runtime/scripts/check_keys.py | grep -v 'sys\\|osi\\|sit'\n(no matches — the SI probe does not exist)\n\n# Both drifts are harmless today. Nothing gates on this exit,\n# and no build asks for an SI row. But if you ever want to fail\n# CI on a red row, you now know: patch line 40 — set\n# any_invalid = True inside the else branch.",
+            "sparkLine": "Docstring promises. Code delivers one probe, exit 0."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T00:11:08.099326+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 32.02,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 32.041666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, in the order you use it.",
+      "narration_text": "So — art keys. A live probe of one optional CLI, wrapped in a two-line dispatcher case, that prints a colored table and always exits zero. The toolkit needs no keys. This command exists so a red row is visible before you go looking for it. Run it once when you clone the repo, and run it again the day you install Higgsfield. In between, ignore it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'art keys — the whole surface'"
+          },
+          {
+            "at": "0.28",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.42",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.55",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.68",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.81",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.92",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art keys — the whole surface, in the order you use it",
+            "artifactLines": [
+              "bare invocation — ./art keys; wraps runtime/scripts/check_keys.py with $@ forwarded.",
+              "one live probe — subprocess.run(['higgsfield','account','status'], timeout=25). No other service is checked.",
+              "four rows possible — valid / invalid / unset / warn. Each carries the exact message the human needs.",
+              ".env is read via setdefault (shell wins). Values are NEVER printed — verified by a redaction grep.",
+              "exit code is always 0 unless the probe itself throws. The docstring's exit-1-on-invalid contract is not enforced.",
+              "the toolkit needs no keys. Run this once at clone, and again the day you install higgsfield. In between, ignore it."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-10T00:12:38.623751+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.09,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 18.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt is INTERESTING (audit, do not fix). Narration reads it aloud and discusses why.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at your own copy of the toolkit. Do not fix the script. Just audit it. Ask Claude to quote the docstring on lines eight to ten, name the exact variable that would need to change for the promise to hold, and write one pytest test that would fail on the current code and pass if the promise were kept. Then ask whether the 'SI key' phrase in the art help still refers to anything that exists. Look for whether Claude is tempted to just patch the file. Reading is not fixing. Notice first, then decide.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Audit art keys — do NOT patch",
+            "command": "From a fresh checkout of https://github.com/nikbearbrown/brutalist.art — (1) open runtime/scripts/check_keys.py. (2) Read the docstring on lines 8-10 verbatim: what does it promise about the exit code? (3) Read the main() body. What variable's value would need to change for the promise to hold? (4) Write ONE pytest-style test that would FAIL against the current code and PASS if the promise were kept — no fix, just the test. (5) Tell me whether the ./art help line about 'SI key' refers to anything currently probed by the script.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — docstring quoted verbatim; the exit-code promise identified.",
+              "step 2 — one failing pytest asserts main() returns 1 when a row is 'invalid'.",
+              "step 3 — SI-key drift acknowledged; the script does not probe SI."
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T00:13:59.302747+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 27.5,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 27.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-09T20:20:24"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Command: art keys. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art keys.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Command: art keys.",
+            "slug": "claude-liam-brutalist-command-keys"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-10T00:14:14.530132+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.4,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.416666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-09T20:20:24"
+      }
+    }
+  ]
+}

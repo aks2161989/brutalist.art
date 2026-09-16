@@ -1,0 +1,682 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: write_review_queue_report.py",
+    "slug": "claude-liam-brutalist-runtime-write-review-queue-report",
+    "topic": "BRUTALIST · UTILITIES",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "aspect": "16:9",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "playlist": "Brutalist",
+    "channel_handle": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Merhaba, Liam",
+    "greeting_note": "Merhaba (Turkish) — world-language hello, one-word Liam budget.",
+    "color_semantics": "Fidelity claude palette. ONE terracotta #D97757 accent per beat — marks the key mechanism or highlighted element. Everything else warm ink on cream.",
+    "note": "ILLUSTRATE LAW: ClaudeComposerAsk at B00/B10 only (UI beats); body beats use SkillTeardownPipeline, SkillTeardownMechanism, ClaudeCodeBeat. OUTRO: ClaudeTitleOutroHAI for @HumanitariansAI (never ClaudeTitleOutro which hardcodes @NikBearBrown). ClaudeTitleOutroHAI and ClaudeCodeBeat916 are registered in the isolated toolkit's Root.tsx for this episode.",
+    "derived_from": "runtime/scripts/write_review_queue_report.py — SHA-256 8de57eb1bb0e4f1345c7a7e26ad99365969eda321c3a7fc81d897867e50d904d",
+    "run_id": "aef36acf6a354924acd1af29d9d319cf",
+    "build": {
+      "at": "2026-09-14T21:22:06",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B11: palette=claude but the outro is 'ClaudeTitleOutroHAI' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Merhaba. This is Liam, in for Bear. write_review_queue_report.py is the last step in the Brutalist audit chain — the moment two JSON files become a human-readable markdown report. It reads machine data from audit.json and your visual findings from review-notes.json, and writes AUDIT.md without touching a single reel.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Greeting types in: Merhaba, Liam"
+          },
+          {
+            "at": "0.20",
+            "event": "Topic label appears: BRUTALIST UTILITY · write_review_queue_report.py"
+          },
+          {
+            "at": "0.35",
+            "event": "Command types: I ran audit_review_queue.py..."
+          },
+          {
+            "at": "0.72",
+            "event": "Running text: combining audit data…"
+          },
+          {
+            "at": "0.85",
+            "event": "Output lines appear: AUDIT.md written — 26 films…"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Merhaba, Liam",
+            "topic": "BRUTALIST UTILITY · write_review_queue_report.py",
+            "segment": "The Audit Report Writer",
+            "command": "I ran audit_review_queue.py and got audit.json and review-notes.json in my output directory. How do I turn those into a readable markdown report?",
+            "runningText": "combining audit data…",
+            "output": [
+              "write_review_queue_report.py out/",
+              "AUDIT.md written — 26 films, 676 beats, 312 reviewed frames"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Desktop",
+            "animateTyping": true
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 17.81,
+      "render_duration_s": 17.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "lead_silence_s": 0.8,
+      "narration_text": "write_review_queue_report.py doesn't audit anything. It takes two JSON files — audit.json with machine-measured data and review-notes.json with your visual findings — and turns them into a readable markdown report. The actual auditing happened earlier. This script is the pen that writes the summary. Read-only by design: the docstring says it plain — never mutate reels.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "Text begins typing: write_review_queue_report.py / generates the audit..."
+          },
+          {
+            "at": "0.45",
+            "event": "Hesitation — 'generates' is reconsidered, struck, 'formats' types in"
+          },
+          {
+            "at": "0.70",
+            "event": "Second correction: 'inspects' struck, 'reads' types in"
+          },
+          {
+            "at": "0.90",
+            "event": "Corrected text settles: formats the audit. It reads every reel."
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "write_review_queue_report.py\ngenerates the audit.\nIt inspects every reel.",
+            "triggerWords": "generates,inspects",
+            "replacementWords": "formats,reads",
+            "seed": "73",
+            "fontSize": 130,
+            "lineSpacing": 2.2,
+            "align": "center",
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-15T01:18:05.661299+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 19.95,
+      "render_duration_s": 19.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "The script takes two files in, writes one file out. audit.json carries machine-measured data — reel hashes, durations, slate counts, stale status. review-notes.json carries your human visual findings — what you saw on screen, ranked by priority. write_review_queue_report.py combines them into AUDIT.md, one section per reel. The reels themselves are never touched.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "INPUT label appears: audit.json + review-notes.json"
+          },
+          {
+            "at": "0.25",
+            "event": "Arrow draws to center phase: Combine machine + human data"
+          },
+          {
+            "at": "0.50",
+            "event": "Second arrow draws: Format markdown sections"
+          },
+          {
+            "at": "0.72",
+            "event": "OUTPUT label appears: AUDIT.md"
+          },
+          {
+            "at": "0.88",
+            "event": "Footer note fades in: Never writes to any reel folder — read-only throughout"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "TWO INPUTS · ONE OUTPUT · READ-ONLY",
+            "title": "write_review_queue_report.py",
+            "inputLabel": "audit.json\n+ review-notes.json",
+            "outputLabel": "AUDIT.md",
+            "phases": [
+              "Read reels for pantry paths",
+              "Combine machine + human data",
+              "Format markdown sections"
+            ],
+            "footerNote": "Never writes to any reel folder — read-only throughout",
+            "sparkLine": "The report writer, not the auditor."
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.84,
+      "render_duration_s": 19.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "narration_text": "Line one: the output directory is the only argument. The script reads audit.json from that folder and expects an exact schema — reels as a list of rows, each row carrying reel number, reel path, probe data, and stale status. review-notes.json maps reel numbers to priority and finding strings. Miss either file or misname a key and the script crashes. There is no try-except.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Title: write_review_queue_report.py — reading inputs"
+          },
+          {
+            "at": "0.15",
+            "event": "Code lines reveal: out = Path(sys.argv[1])"
+          },
+          {
+            "at": "0.35",
+            "event": "audit.json read reveals"
+          },
+          {
+            "at": "0.55",
+            "event": "review-notes.json read reveals"
+          },
+          {
+            "at": "0.75",
+            "event": "rows = audit['reels'] highlights in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "write_review_queue_report.py — reading inputs",
+            "code": "out   = Path(sys.argv[1])\naudit = json.loads((out / 'audit.json').read_text())\nnotes = json.loads((out / 'review-notes.json').read_text())\nrows  = audit['reels']\n\n# audit.json schema: { \"reels\": [{\"number\": 1, \"reel\": \"...\",\n#   \"width\": 3840, \"height\": 2160, \"duration\": \"224.5\",\n#   \"stale\": false, \"declared_slates\": [] }] }\n\n# review-notes.json schema: { \"1\": {\"priority\": \"LOW\",\n#   \"finding\": \"your visual findings...\" } }",
+            "sparkLine": "Two reads, one crash contract.",
+            "language": "python"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 20.29,
+      "render_duration_s": 20.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "narration_text": "For each reel, the script looks up the human note by number — stored in review-notes.json as a string key. The priority and finding go into a bold markdown header. Below that: the master probe data — width, height, duration, stale flag, declared slate count. Then it reads the reel's beat_sheet.json and scans every beat for pantry references.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Title: write_review_queue_report.py — main loop"
+          },
+          {
+            "at": "0.15",
+            "event": "for row in rows: reveals"
+          },
+          {
+            "at": "0.30",
+            "event": "note = notes[str(n)] reveals — terracotta accent on str(n)"
+          },
+          {
+            "at": "0.50",
+            "event": "text += [f'### {n:02d}...'] section reveals"
+          },
+          {
+            "at": "0.70",
+            "event": "beat_sheet.json read reveals at bottom"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "write_review_queue_report.py — main loop",
+            "code": "for row in rows:\n    n    = row['number']\n    note = notes[str(n)]      # str key lookup — KeyError if missing\n    reel = Path(row['reel'])\n    text += [\n        f'### {n:02d}. {reel.name}', '',\n        f'**{note[\"priority\"]}** — {note[\"finding\"]}', '',\n        f'Master probe: {row[\"width\"]} × {row[\"height\"]}; '\n        f'{float(row[\"duration\"] or 0):.1f}s; '\n        f'stale at snapshot: {row[\"stale\"]}; ...',\n    ]\n    sheet = json.loads((reel / 'beat_sheet.json').read_text())",
+            "sparkLine": "One section per reel.",
+            "language": "python"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 18.73,
+      "render_duration_s": 18.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "narration_text": "The script flags every beat that still has a pantry reference — an image slot waiting on a human to source it. The comment in the code names it plainly: all three legacy spellings occur in this queue — pantry_path, pantry_file, and pantry. This is backward compatibility written as a comment, not hidden in a migration script. The schema evolved; the reader handles all three forms.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Title: write_review_queue_report.py — pantry flags"
+          },
+          {
+            "at": "0.15",
+            "event": "Comment reveals: # All three legacy spellings occur in this queue."
+          },
+          {
+            "at": "0.35",
+            "event": "pantry_path / pantry_file / pantry triple reveals"
+          },
+          {
+            "at": "0.60",
+            "event": "if path: text += [...] reveals"
+          },
+          {
+            "at": "0.80",
+            "event": "Output example: - **B02** — diagram.png"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "write_review_queue_report.py — pantry flags",
+            "code": "    for beat in sheet.get('beats', []):\n        shot   = beat.get('shot') or {}\n        # All three legacy spellings occur in this queue.\n        path = (shot.get('pantry_path') or\n                shot.get('pantry_file') or\n                shot.get('pantry'))\n        if path:\n            intent = (shot.get('visual_intent') or\n                      shot.get('brief') or\n                      shot.get('subject') or '')\n            text += [f'- **{beat[\"beat_id\"]}** — {intent}']",
+            "sparkLine": "Three spellings, one truth.",
+            "language": "python"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 19.48,
+      "render_duration_s": 19.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "OUTPUT",
+      "narration_text": "AUDIT.md has a fixed structure: a scope statement, main findings, rules and tooling changes, repair order, a section for every film — priority, finding, master probe, reel link, and any pantry-requesting beats. That structure is baked into Python string literals. The script author decided which sections matter. You cannot configure it — if the report shape needs to change, change the source.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Heading: AUDIT.md structure"
+          },
+          {
+            "at": "0.20",
+            "event": "Sections reveal one by one: Scope → Main findings"
+          },
+          {
+            "at": "0.45",
+            "event": "Rules/tooling and Repair order appear"
+          },
+          {
+            "at": "0.65",
+            "event": "Per-film section expands: probe + pantry flags"
+          },
+          {
+            "at": "0.85",
+            "event": "Verdict label: Hardcoded by design."
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "AUDIT.md STRUCTURE",
+            "heading": "Hardcoded report sections",
+            "body": "Scope statement · Main findings · Rules and tooling changed · Repair order · Per-film section (priority, finding, master probe, reel link, pantry flags) · Audit artifacts and limits. All section text is Python string literals in the script — not a template, not configurable. The shape of the report is a design decision baked into the source.",
+            "quote": "\"Do not change human approvals or publish in response to this audit. Changing skills does not retroactively repair an MP4.\"",
+            "cite": "write_review_queue_report.py — hardcoded final section text",
+            "verdictLabel": "Report structure is a design decision, not a parameter."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-15T00:58:31.639735+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 20.57,
+      "render_duration_s": 20.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FAILURE",
+      "narration_text": "The script has no error handling. That is intentional. If audit.json is missing you get a FileNotFoundError. If a reel number is in audit.json but not in review-notes.json you get a KeyError. If a reel folder moved since audit_review_queue.py ran, the beat_sheet.json read crashes. These failures tell you exactly what to fix. A silent pass on bad inputs would be worse.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Title: failure modes — no try-except"
+          },
+          {
+            "at": "0.20",
+            "event": "IndexError: list index out of range (no argument)"
+          },
+          {
+            "at": "0.40",
+            "event": "FileNotFoundError: audit.json (missing file)"
+          },
+          {
+            "at": "0.60",
+            "event": "KeyError: '1' (reel not in review-notes.json)"
+          },
+          {
+            "at": "0.80",
+            "event": "FileNotFoundError: beat_sheet.json (reel moved)"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "write_review_queue_report.py — failure modes",
+            "code": "# No try-except. Crash is the contract.\n\n# 1. No argument given:\n#    IndexError: list index out of range\n#    Fix: python3 write_review_queue_report.py <out-dir>\n\n# 2. Missing audit.json in out-dir:\n#    FileNotFoundError: .../audit.json\n#    Fix: run audit_review_queue.py first\n\n# 3. Reel number not in review-notes.json:\n#    KeyError: '1'\n#    Fix: add matching entry to review-notes.json\n\n# 4. Reel folder moved since audit ran:\n#    FileNotFoundError: .../beat_sheet.json",
+            "sparkLine": "Each crash names what is missing.",
+            "language": "python"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 20.07,
+      "render_duration_s": 20.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "LIMITS",
+      "narration_text": "The report is honest about its own limits. Twelve frames per film at 70% position is a heuristic — it catches settled-state defects but misses mid-animation states. Pantry flags are metadata, not a pixel check. The report explicitly says it is a queue-wide sample audit, not continuous playback, not a full fact-check, and not approval to publish.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Heading: What the report cannot certify"
+          },
+          {
+            "at": "0.25",
+            "event": "Limit 1: 12 frames at 70% — heuristic, not coverage"
+          },
+          {
+            "at": "0.50",
+            "event": "Limit 2: pantry flags are metadata, not pixel checks"
+          },
+          {
+            "at": "0.72",
+            "event": "Quoted footer: 'not continuous playback, not approval to publish'"
+          },
+          {
+            "at": "0.88",
+            "event": "Verdict label: The report knows what it is not."
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "WHAT IT CANNOT CERTIFY",
+            "heading": "The limits in the output itself",
+            "body": "Twelve frames per film at 70% position: catches settled-state defects, misses mid-animation states. Pantry flags come from metadata — shot.pantry_path et al — not from pixel inspection. The report quotes its own limits verbatim in the scope statement and the artifacts section.",
+            "quote": "\"This is a queue-wide source and sampled-visual audit, not continuous playback, a full fact-check, or approval to publish.\"",
+            "cite": "write_review_queue_report.py — hardcoded scope statement",
+            "verdictLabel": "The report knows what it is not."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-15T00:59:27.390332+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 19.11,
+      "render_duration_s": 19.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "narration_text": "write_review_queue_report.py is small and intentional. Two inputs, one output, no mutation. The three-spelling pantry check is backward compatibility named in the code. The no-try-except policy means failures are diagnostic, not silent. The report quotes its own limitations. Run it at the end of the audit pipeline and AUDIT.md is your deliverable — but it tells you exactly what it is not.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Artifact card scales in: write_review_queue_report.py"
+          },
+          {
+            "at": "0.15",
+            "event": "Heading appears: The report writer, not the auditor"
+          },
+          {
+            "at": "0.30",
+            "event": "Line 1 reveals: two inputs, no mutation"
+          },
+          {
+            "at": "0.55",
+            "event": "Line 2 reveals: three pantry spellings — backward compat named in code"
+          },
+          {
+            "at": "0.78",
+            "event": "Line 3 reveals: crash-on-bad-input = diagnostic contract"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "write_review_queue_report.py",
+            "artifactHeading": "The report writer, not the auditor",
+            "artifactLines": [
+              "Two inputs in, one output out: audit.json + review-notes.json → AUDIT.md. The docstring makes read-only the top design contract — never mutate reels.",
+              "Three pantry spellings (pantry_path / pantry_file / pantry) reflect real schema evolution; backward compatibility is named in a comment, not hidden in a migration.",
+              "No try-except: crash-on-bad-input is the contract. Every error names exactly what is missing, so the failure is the diagnosis."
+            ],
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-15T01:01:01.432891+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 20.48,
+      "render_duration_s": 20.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "HANDOFF",
+      "narration_text": "Here's the prompt. Paste this into Claude with your own reel batch in mind. Run audit_review_queue.py first to get audit.json and review-notes.json, then point write_review_queue_report.py at that output directory. Read the AUDIT.md it produces. Look at the pantry flags — are there beats waiting on human images? Check the master probe lines. Then ask: what would you change about the report structure itself? This is Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Greeting types: Your Turn"
+          },
+          {
+            "at": "0.20",
+            "event": "Topic: BRUTALIST UTILITY · write_review_queue_report.py"
+          },
+          {
+            "at": "0.35",
+            "event": "Paste-ready prompt types into composer"
+          },
+          {
+            "at": "0.80",
+            "event": "Running text: writing your audit report…"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST UTILITY · write_review_queue_report.py",
+            "segment": "Run it on your own audit output",
+            "command": "Read runtime/scripts/write_review_queue_report.py and runtime/scripts/audit_review_queue.py. Pick two delivered reels and run audit_review_queue.py to generate audit.json and review-notes.json. Then run: python3 runtime/scripts/write_review_queue_report.py <out-dir>. Read the AUDIT.md it produces. What does it flag as pantry requests? Are the master probes accurate for your reels? What would you change in the report structure?",
+            "runningText": "writing your audit report…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Desktop",
+            "animateTyping": true
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-15T01:02:24.794501+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 21.21,
+      "render_duration_s": 21.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T21:22:06"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "narration_text": "Brutalist Utility: write_review_queue_report.py. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "Title fades in: Brutalist Utility: write_review_queue_report.py"
+          },
+          {
+            "at": "0.35",
+            "event": "@HumanitariansAI handle appears below"
+          },
+          {
+            "at": "0.55",
+            "event": "Mascot animates (slug-seeded)"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutroHAI",
+          "props": {
+            "title": "Brutalist Utility: write_review_queue_report.py",
+            "slug": "claude-liam-brutalist-runtime-write-review-queue-report",
+            "mascotAnimation": "bounce"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-15T00:53:19.964784+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 4.71,
+      "render_duration_s": 4.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutroHAI",
+        "at": "2026-09-14T21:22:06"
+      }
+    }
+  ]
+}

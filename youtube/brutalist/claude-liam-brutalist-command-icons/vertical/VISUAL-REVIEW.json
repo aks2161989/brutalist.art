@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "9c6d30d53da2466ea7266f53a51cf4ef",
+  "source_sha256": "0959b926a62aa2c3d05e9c585b89d3ae710edf19a669957027f8c2b08f5c088f",
+  "beat_sheet_sha256": "49f0f3a94bf88ca20885a63d3eecbd311c78d8bd47d0228c8b7c2999e1a1fe27",
+  "video_sha256": "d2c828fd84cf71b278bf30fde970d208235c1a645135d02dbd6cdc1243b2b099",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "e41addc01683aee5c0cbd95db2a8a57b3d7d7958a5503099be9477f8c6664b7d"}
+  ],
+  "notes": "Re-verified 2026-09-12 under run_id 9c6d30d53da2466ea7266f53a51cf4ef (source_sha256 updated; source changes were to SKILL.md files and unrelated Remotion components — no beat content, scene components, audio, or clips changed). Gate V re-run: frames=24 BLOCKER=0 MAJOR=0. Portrait contact sheet re-inspected via Read tool: (1) B00 cold open in portrait — ClaudeComposerAsk916 with 'Sawubona, Liam' heading and composer stacked natively; @HumanitariansAI chip visible. (2) B01 BLUF hesitant writer fills the portrait safe area with 'art icons / finds / existing icons.' stacked in large serif — 55%+ ink coverage confirmed. (3) B02–B08 code cards reflow cleanly in portrait, all text legible. (4) B09 verdict artifact stacks 7 lines without clipping. (5) B10 handoff composer uses tightened on-screen text (audio unchanged) to fit inside SAFE916 — no edge-bleed. (6) B11 outro is ClaudeTitleOutro916 with @NikBearBrown hardcoded per OUTRO-LOCK. Video unchanged: native 4K 2160x3840, 24 fps, 199.29s video / 199.33s audio, sha256 d2c828fd84cf71b278bf30fde970d208235c1a645135d02dbd6cdc1243b2b099. Compiler SKIN-LINT warnings for B00/B11 (ClaudeComposerAsk916 / ClaudeTitleOutro916 suffix) are false positives — same as reference episode. Human review pending."
+}

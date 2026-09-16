@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "1468a15a76ca4a1a8c1300c4ca14f178",
+  "source_sha256": "d140997a831ecbce828c403fd1799796e90e07c6deabcf252420d72617ba157d",
+  "beat_sheet_sha256": "5648a2319ebd58fc0460f15bec8897d38d813dc1d6b19efb485ff1bf598f5e59",
+  "video_sha256": "604bfb62a0cfcc34606cb8defe8a042671b4eb4d58b4c951284a8dc6d6c5dff2",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/spot/inspect_8_3.png",
+      "sha256": "4cf8640f8dd36eb7b13ef0fba320420b884b4b7e699047f424d2aea86e1c0818"
+    },
+    {
+      "path": "_qc/spot/inspect_27_0.png",
+      "sha256": "e684ec0ffe565c7eb678bae4b4abc2388b8a22e4ba200017c9dc58a6121a74c4"
+    },
+    {
+      "path": "_qc/spot/inspect_120_1.png",
+      "sha256": "1b3fe5cc21ea49346a004d375a742353dd5661ac0c47420b15e43fd6bff5a0c6"
+    },
+    {
+      "path": "_qc/spot/inspect_361_0.png",
+      "sha256": "c48d3b44227f6b897400c0ce3d30246a1b55b076ff569f40d2a4852ed8d8eb10"
+    }
+  ],
+  "notes": "Portrait 2160x3840, 363.375s, h264/aac — verified this invocation (run_id 1468a15a76ca4a1a8c1300c4ca14f178). Gate V re-run: 24 frames, 0 BLOCKER, 0 MAJOR. Frame Read-tool inspection of 4 evidence images: (1) _qc/spot/inspect_8_3.png (B00 t=8.3s) — ClaudeComposerAsk916 portrait layout, 'Hola, Liam', command correctly reads logo-motion SKILL.md, @HumanitariansAI folder label, three result lines wrap correctly within portrait column, no clipping. (2) _qc/spot/inspect_27_0.png (B01 t=27.0s) — BrutalistHesitantWriter916, portrait 4-line form: 'A new logo / needs / a new prop. / Add the prop.' — trigger 'scene' replaced with 'prop', serif text fills safe area, no edge bleed, portrait-aware scale confirmed. (3) _qc/spot/inspect_120_1.png (B04 t=120.1s) — SkillTeardownMechanism916 'The build is a camera move.' — heading/body/quote/verdict pill all within portrait safe area, vertical column layout correct. (4) _qc/spot/inspect_361_0.png (B11 t=361s) — ClaudeTitleOutro916 'The logo-motion Skill.' with terracotta period, @NikBearBrown handle (OUTRO-LOCK hardcode; same as landscape, acknowledged per role_note). Source hash: episode.source_sha256 d140997a per invocation spec; on-disk SKILL.md content consistent with all filmed beats. Minor: outro shows @NikBearBrown per OUTRO-LOCK; body beats show @HumanitariansAI. Human review pending."
+}

@@ -1,0 +1,143 @@
+{
+  "number": 5,
+  "relative": "info-7375-computational-skepticism-for-ai/youtube/claude-liam-deep-test-you-did-not-design",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-computational-skepticism-for-ai/youtube/claude-liam-deep-test-you-did-not-design",
+  "beats": 40,
+  "sheet_sha256": "2a4bdccdc22c2dde853ca46f6a0f629e2d5aa3900e433f396d2557f250d46305",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-computational-skepticism-for-ai/youtube/claude-liam-deep-test-you-did-not-design/claude-liam-deep-test-you-did-not-design-slate.mp4",
+  "stale": false,
+  "width": 1920,
+  "height": 1080,
+  "duration": "591.938292",
+  "audio_stream": true,
+  "declared_slates": [
+    "A3V1",
+    "A3V2"
+  ],
+  "findings": [
+    {
+      "beat": "A1V",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A1V-hospital-ward.jpg",
+      "exists": true,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "A2V1",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A2V1-kettle.jpg",
+      "exists": true,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "A2V2",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A2V2-kettle.jpg",
+      "exists": true,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "A3V1",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A3V1.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "A3V2",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A3V2.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "A4V",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A4V-bedside-exam.jpg",
+      "exists": true,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "A5V",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A5V-apollo10-mcc.jpg",
+      "exists": true,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "A1V",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A1V-hospital-ward.jpg",
+      "exists": true
+    },
+    {
+      "beat": "A2V1",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A2V1-kettle.jpg",
+      "exists": true
+    },
+    {
+      "beat": "A2V2",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A2V2-kettle.jpg",
+      "exists": true
+    },
+    {
+      "beat": "A3V1",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A3V1.png",
+      "exists": false
+    },
+    {
+      "beat": "A3V2",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A3V2.png",
+      "exists": false
+    },
+    {
+      "beat": "A4V",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A4V-bedside-exam.jpg",
+      "exists": true
+    },
+    {
+      "beat": "A5V",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "",
+      "path": "pantry/A5V-apollo10-mcc.jpg",
+      "exists": true
+    }
+  ],
+  "code_displays": [
+    {
+      "beat": "A4R2",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "validation-report.md \u2014 \u00a77 Limits",
+        "code": "## 7. Limits (primary product \u2014 read before \u00a73 Results)\n\nANSWERED:      \"Does this case match a training category?\"\nNOT ANSWERED:  \"What is going on with this specific patient?\"\n\nStructural limits (not closable by more data or compute):\n  MEANING         referents supplied by the reader, not the model\n  INTENTIONALITY  no stable directedness across sites\n  DATA \u2260 WORLD    competence is over the sample; boundary unmonitored\n\nHuman override \u2014 REQUIRED at each bite point, and REAL:\n  time        minutes to disagree, not seconds\n  standing    disagreement is normal, not an escalation\n  legibility  the recommendation shows what it was scoped to\n\nVerdict: PROCEED | MODIFY | DEFER | REFUSE  (refusal is on the menu)",
+        "sparkLine": "Limits as a primary product.",
+        "codeSize": 0.06
+      },
+      "intent": ""
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [],
+  "contact": "reports/isdone-2026-09-11/05-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

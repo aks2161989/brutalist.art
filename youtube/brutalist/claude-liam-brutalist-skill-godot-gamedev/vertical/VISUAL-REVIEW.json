@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "d6a7b8125f8a4bc4bbd1122f104532f0",
+  "source_sha256": "dca78a66fe88354fb0608f4e03633e7c91ef7e28ac0d0ddc6e878cb2a915b697",
+  "beat_sheet_sha256": "59360711f63a38e6f0222e3bfdc4d3365737b9cc6c230e263ab1b5550004bb52",
+  "video_sha256": "3c4c7be38b1c1534736e254ca9614040d2a434bf5edfc53e83d6cc37b7167483",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/frames/start.png",
+      "sha256": "3e93ccecb91a856853f445b9e8a826e59ee0935cb74edaed6d42aecb9f41d9e4"
+    },
+    {
+      "path": "_qc/frames/b04_50pct.png",
+      "sha256": "0c49780e4c818752c38a7f67f82e7b52dbec99a37450f853690a31b6e788e7da"
+    },
+    {
+      "path": "_qc/frames/b05_50pct.png",
+      "sha256": "17bb7ac9cf490402fb0bbb3daef4e2b4c4e292ad1a908ade4546a423f715613e"
+    },
+    {
+      "path": "_qc/frames/b10_50pct.png",
+      "sha256": "96d3262772f39fc441feb694904ae12b73db271690c90a492d655f93e9167cba"
+    },
+    {
+      "path": "_qc/frames/end.png",
+      "sha256": "6000f2b7a0915df2a9ae7d344994c9647701063f24939d1e5b4c963a84d3b972"
+    }
+  ],
+  "notes": "Portrait 2160x3840 · 231.8s · H.264 + AAC. Rebuilt in run_id d6a7b8125f8a4bc4bbd1122f104532f0 for SKILL.md source change (added 'Code → visible result is the teaching unit' section). B04/B05/B10 narration, props, and vertical scenes (GodotDevWorkbench916, SkillTeardownMechanism916, ClaudeVerdictArtifact916) rebuilt. Gate-V: 26 frames, BLOCKER=0, MAJOR=0. Five QC frames inspected directly. start.png (B00, t=5s): ClaudeComposerAsk916 — portrait card with 'Bula, Liam' greeting, @HumanitariansAI folder chip, ask text wrapping correctly, result lines — no top/bottom bleed. b04_50pct.png (B04, t=70.8s): GodotDevWorkbench916 code mode — portrait stacked layout (code top, notes bottom); player.gd with _physics_process highlighted; bottom status 'player.gd · code → visible result · Godot editor reconstruction'; source annotation; @NikBearBrown; no horizontal overflow. b05_50pct.png (B05, t=90.4s): SkillTeardownMechanism916 — 'Reconstruct — don't invent.' heading; body with teaching_contract reference visible; verbatim quote; 'HONEST CONTRACT' pill; all within portrait safe area. b10_50pct.png (B10, t=182.7s): ClaudeVerdictArtifact916 — 'Verdict' header, 'The godot-gamedev skill.' heading, 4 verdict lines including updated line 1 'Code → visible result: each excerpt, then its game consequence — not deferred.' (wraps to 3 lines in portrait); all contained within card, no bleed. end.png (B12, t=228.8s): ClaudeTitleOutro916 — dark olive ground, 'The godot-gamedev Skill.' title, '@NikBearBrown', terracotta pixel mascot — per OUTRO-LOCK. No slates, no captions. SKIN LINT: B00/B12 palette=claude on 916 variants — expected and documented. Human review pending."
+}

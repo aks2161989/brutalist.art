@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "7a78e158da124455b3fd947396bd80bc",
+  "source_sha256": "5a148b4a01705632348900ea8f25d3b98d319a184caca8a192df1f6a49bb55cd",
+  "beat_sheet_sha256": "4bd6af2f231abdeca97bf1dae0421737f3cbfc21334ca77e49a906a530f14d50",
+  "video_sha256": "60e385c546f7f97c93bcd51d0d89a02b01d1ede6a61fbe7dcc3c7d8f44e20677",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/ts-2_7.png",   "sha256": "cf086d83d29e57a6dce85b2dcaf09d77701d4b16657fbb67a9c96a457bbf4fa8"},
+    {"path": "_qc/ts-9_0.png",   "sha256": "8534d0f9b34ddeda3b9a8ec286ea02ffc1fbe561e361fbde01b1da23b127275f"},
+    {"path": "_qc/ts-15_3.png",  "sha256": "17d45f3d5ba204fd1e62c8ca5ca961c1c512c215eddf2db613be1599bbf6abbd"},
+    {"path": "_qc/ts-20_7.png",  "sha256": "fa6835d19be6d9925c6883cb216c3a146b120332ed49a7001fd73711bd0a1982"},
+    {"path": "_qc/ts-27_0.png",  "sha256": "5664e71d6bb9d4ca8a6671dd750ca9b0b5772657680cd378535dea393a99572f"},
+    {"path": "_qc/ts-33_3.png",  "sha256": "ab1ee62d723f57bf7508090d4132f6b0ecdccc457e01dc41452404edd3600166"},
+    {"path": "_qc/ts-39_6.png",  "sha256": "3d4c48f54fe91481fcf61e17e922da35abe7380b11292851cef4ad33dc0edf9c"},
+    {"path": "_qc/ts-47_8.png",  "sha256": "7082692120161d4399fa4204b7f348be770dd34e90bd67f0de92e162c49fde78"},
+    {"path": "_qc/ts-56_0.png",  "sha256": "a522a6e3bc13a4e0dffc3fa628c026931094c7f4ba32deb0b10eff0902a0963d"},
+    {"path": "_qc/ts-62_6.png",  "sha256": "401e94bdcf33125113706bb21a55a64adaf47c569b72b4e37eac9d79ba2d24ca"},
+    {"path": "_qc/ts-69_7.png",  "sha256": "381b28edd428c93974e3c2b2c2de60b7f35c6b898f56e876d44c7f4124c2720e"},
+    {"path": "_qc/ts-76_9.png",  "sha256": "87ca2de06d42d7015d5c0e7d03a3c4fc4c62b5482e2809e11569b6d21445ec83"},
+    {"path": "_qc/ts-83_3.png",  "sha256": "cc2990cf02bd6758d3710593b2e11c86b2742e7d31eab6213745ceffccb173e0"},
+    {"path": "_qc/ts-90_9.png",  "sha256": "e13a015a7a89a61b90e5f305d465c7fe90c43c8574b006f2c8c40d4d069accda"},
+    {"path": "_qc/ts-98_5.png",  "sha256": "cbd2f7d7d663c0e9b2f30b48139ce038a951dec8ccb1f0a963a870efca786e8e"},
+    {"path": "_qc/ts-102_6.png", "sha256": "081a05519648a9302ba42e54eafc2ad686058813183cd3a87d6f4d72aa6661eb"},
+    {"path": "_qc/ts-104_6.png", "sha256": "f60b7534ea6fbab2e06528a1072676f39ae7197a8c6ba20b266cf2e31dad2ab8"},
+    {"path": "_qc/ts-106_6.png", "sha256": "c642723be382ce8c037fa07ad757413c121dea04310a24780633f29ea8d05f15"}
+  ],
+  "notes": "Viewed 18 beat-relative frames (15%/50%/85% per beat) plus contact sheet. B00: ClaudeComposerAsk916 — title, 'Selam, Liam' greeting, command, 3 output lines, @HumanitariansAI chip all within safe area; clean at all three timestamps. B01: BrutalistHesitantWriter916 — 'synthesis' correction visible at 50%, both corrections (synthesis/insufficient) held cleanly at 85%; large serif fills portrait safe area. B06: ClaudeCodeBeat916 — all 5 failure paths plus success path visible; long code lines truncated at right margin at scaled preview (inherited portrait render characteristic from parent; Gate V BLOCKER=0 in parent vertical). B08: ClaudeVerdictArtifact916 — 5 artifact lines and heading 'The audio gate — five checks, one standard' all readable within card bounds. B09: ClaudeComposerAsk916 — 'Your turn.' greeting, paste-ready TTS-backend adaptation prompt, 3 output lines, @HumanitariansAI chip visible. B10: ClaudeTitleOutroHAI916 — dark background, title wraps correctly with overflowWrap:anywhere, @HumanitariansAI visible. Gate V: 0 blockers, 0 majors. Export: 107.5s, 2160x3840, h264+aac. Human review of contact sheet and export required before publication."
+}

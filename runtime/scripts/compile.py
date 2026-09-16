@@ -32,7 +32,7 @@ from pathlib import Path
 from build_safety import (BuildError, ApprovalError, atomic_json, file_digest,
                           is_source_report, intentional_silence, positive_duration,
                           require_paperwork, validate_approvals, validate_project,
-                          writable_path, record_failure)
+                          writable_path, record_failure, require_short_duration)
 
 # Ensure Unicode log output works on Windows terminals/pipes.
 if hasattr(sys.stdout, "reconfigure"):
@@ -239,7 +239,10 @@ def _compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
     # Per-clip normalize: near-visually-lossless so this pass is NOT a real
     # generation of loss (medium/crf12). The one meaningful lossy encode is the
     # final concat below (slow/crf16).
-    enc = ["-c:v", "libx264", "-preset", "medium", "-crf", "12",
+    # The timeline is frame-aligned. Decimal -t rounding plus tpad can otherwise
+    # add a duplicate frame (e.g. 601/24 -> 25.042 seconds -> 602 frames).
+    enc = ["-frames:v", str(round(dur * fps)),
+           "-c:v", "libx264", "-preset", "medium", "-crf", "12",
            "-pix_fmt", "yuv420p", "-r", str(fps), "-an", str(out)]
     treat = vf_treatment(shot.get("source", "own"), shot.get("treatment"))
 
@@ -436,12 +439,17 @@ def build_master_audio(folder, beats, cli_audio, tmp):
     return out, 'per-beat timeline (source audio preserved)'
 
 
-def verify_output(path, total, fps, audible):
+def verify_output(path, total, fps, audible, short=False):
     probe = probe_streams(path)
     kinds = {s.get('codec_type') for s in probe['streams']}
     if not {'audio', 'video'} <= kinds:
         raise BuildError('Final must contain decodable video and audio streams')
     duration = positive_duration(probe.get('format', {}).get('duration'), 'Output')
+    if short:
+        require_short_duration(duration, 'Encoded Short container')
+        for stream in probe['streams']:
+            if stream.get('codec_type') in ('video', 'audio') and stream.get('duration') is not None:
+                require_short_duration(stream['duration'], 'Encoded Short ' + stream['codec_type'])
     if abs(duration - total) > max(0.15, 2 / fps):
         raise BuildError(f'Output duration {duration:.3f}s does not match timeline {total:.3f}s')
     sh([FFMPEG, '-v', 'error', '-xerror', '-i', path, '-f', 'null', '-'])
@@ -654,9 +662,8 @@ def compile_reel(a):
         if not p.is_file():
             raise BuildError(f'missing required audio or media: {p}')
     input_hashes = {str(p): file_digest(p) for p in sorted(inputs)}
-    if (sheet.get('metadata', {}).get('kind') == 'short'
-            and sum(beat_duration(b) for b in beats) > 180):
-        raise BuildError('Short exceeds 180 seconds after measurement; use a full-length vertical deliverable')
+    if sheet.get('metadata', {}).get('kind') == 'short':
+        require_short_duration(sum(beat_duration(b) for b in beats), 'Measured Short timeline')
     ar = sheet.get("metadata", {}).get("aspect_ratio", "16:9")
     num, den = (int(x) for x in ar.split(":"))
     if a.height <= 0 or a.height % 2 or a.fps <= 0 or num <= 0 or den <= 0:
@@ -704,7 +711,8 @@ def compile_reel(a):
                  f"{' '.join(slated)} — run run.sh to render/fill them "
                  f"(use --review to inspect unfinished work)")
 
-    # motion pantry lint (MOTION.md): no language carries > ~40% of beats
+    # Descriptive inventory, not a sourcing quota. A renderer is not a visual
+    # language; executed evidence may correctly use one renderer throughout.
     def _eff_motion(b):
         s = b.get("shot", {})
         return (s.get("motion")
@@ -713,12 +721,6 @@ def compile_reel(a):
     hist = Counter(_eff_motion(b) for b in beats)
     print("[art] motion histogram: "
           + "  ".join(f"{k}:{n}" for k, n in hist.most_common()))
-    if len(beats) >= 8:
-        top, n = hist.most_common(1)[0]
-        if n / len(beats) > 0.40 and top != "card":
-            print(f"[art] WARNING: '{top}' carries {n}/{len(beats)} beats "
-                  f"({n * 100 // len(beats)}%) — over the ~40% pantry cap; "
-                  f"convert the excess to another language (MOTION.md)")
 
     lst = clips / "concat.txt"
     lst.write_text(''.join(concat_line(clips / (b['beat_id'] + '.mp4')) for b in beats))
@@ -821,7 +823,8 @@ def compile_reel(a):
         candidate = Path(scratch) / 'candidate.mp4'
         cmd[-1] = str(candidate)
         sh(cmd)
-        verify_output(candidate, total, fps, bool(a.audio) or any(not intentional_silence(b) for b in beats))
+        verify_output(candidate, total, fps, bool(a.audio) or any(not intentional_silence(b) for b in beats),
+                      short=sheet.get('metadata', {}).get('kind') == 'short')
         if not a.review:
             atomic_json(writable_path(folder, 'build-state.json'), {'status': 'verifying'})
             gate = Path(__file__).resolve().parents[1] / 'qc' / 'final_frame_check.py'

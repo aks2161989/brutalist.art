@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "title": "The godot-gdd Skill",
+    "slug": "claude-liam-brutalist-skill-godot-gdd-short",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel_title": "",
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Annyeong, Liam",
+    "greeting_note": "hello lexicon: Annyeong (Korean). Portrait companion — same narration, native 9:16 scenes. channel_title empty per portrait bleed feedback.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "2d281e32b355480b8350968778f9d049",
+    "episode_id": "skill-godot-gdd",
+    "order": 14,
+    "note": "Native full-length 9:16 portrait companion for claude-liam-brutalist-skill-godot-gdd. Uses 916 scene variants where registered. BrutalistHesitantWriter916 uses fontSize:150, lineSpacing:2.6 per feedback_hesitant_writer_portrait_bluf_recipe.md. ClaudeTitleOutro916 slug-seeded @NikBearBrown per OUTRO-LOCK.md. ClaudeCodeBeat used for B06 (no 916 variant; component has portrait-adaptive font). channel_title removed per channel_title portrait bleed feedback.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/godot-gdd/SKILL.md"
+    },
+    "build": {
+      "at": "2026-09-11T06:59:42",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-skill-godot-gdd-vertical",
+    "dropped_beats": [
+      "B02",
+      "B03",
+      "B05",
+      "B07"
+    ],
+    "total_estimated_duration_seconds": 139.29,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — ClaudeComposerAsk916 portrait variant. Same narration as landscape.",
+      "narration_text": "Annyeong — this is Liam, in for Bear. There is a Brutalist skill called godot-gdd. Fellows look at that name and assume it writes the design document for them — or reads their game code and extracts one. It does neither. So I asked Claude to read the full skill and explain what actually happens when you point it at an existing Godot project with a GDD already written.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream (portrait layout)"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Annyeong, Liam' appears above composer"
+          },
+          {
+            "at": "0.28",
+            "event": "command types the ask"
+          },
+          {
+            "at": "0.60",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "two RESULT lines land below card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The godot-gdd Skill",
+            "greeting": "Annyeong, Liam",
+            "command": "/godot-gdd walker-jumpman/ GDD.md",
+            "runningText": "reading GDD.md · mapping sections · building reel folder...",
+            "output": [
+              "8 sections found — 7 covered, 1 excluded by design",
+              "output: walker-jumpman/youtube/claude-liam-walker-jumpman-gdd/"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Fable 5",
+            "effortLabel": "High",
+            "durationSeconds": 19.01
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-11T07:35:09.454747+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.01,
+      "audio_file": "mp3/beat-B00.mp3",
+      "lead_silence_s": 0,
+      "render_duration_s": 19.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T06:59:42"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — BrutalistHesitantWriter916. Portrait recipe: fontSize:150, lineSpacing:2.6, short lines per feedback_hesitant_writer_portrait_bluf_recipe.md. lead_silence_s: 0.8.",
+      "lead_silence_s": 0.8,
+      "narration_text": "godot-gdd reads an existing game design document and builds the film explaining it — section by section, status labeled, evidence grounded. Not a generator. The document must already exist. That constraint is the entire design of the skill.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on-correct",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream portrait frame; typing begins"
+          },
+          {
+            "at": "0.40",
+            "event": "'generates' types terracotta then strikes, 'explains' replaces"
+          },
+          {
+            "at": "0.60",
+            "event": "corrected text settles in portrait layout with generous line spacing"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "godot-gdd\ngenerates a GDD\nfor any game.\nActually:\nthe GDD must\nalready exist.",
+            "triggerWords": "generates",
+            "replacementWords": "explains",
+            "fontSize": 150,
+            "lineSpacing": 3.4,
+            "seed": "godot-gdd-gdd-skill-2026",
+            "align": "center",
+            "mistakeRate": 2,
+            "hesitateWithin": 0,
+            "hesitateBetween": 1,
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5",
+            "brandLabel": "@HumanitariansAI",
+            "durationSeconds": 15.07
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-11T10:22:06.862601+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.27,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.291666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-11T06:59:42"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Status labels — WalkerGodotSetup916 portrait variant, flow mode.",
+      "narration_text": "Every body beat carries one of four status labels. Proposed: a design intent not yet built. Implemented: the feature exists in source. Observed: a test or playthrough confirmed it. Pending: a human decision the film cannot make. These labels are not style choices — they are the distinction the skill exists to enforce.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "design_status": "proposed",
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "flow-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title and source line appear (portrait)"
+          },
+          {
+            "at": "0.15",
+            "event": "'Proposed' panel reveals stacked"
+          },
+          {
+            "at": "0.35",
+            "event": "'Implemented' panel reveals"
+          },
+          {
+            "at": "0.55",
+            "event": "'Observed' panel reveals"
+          },
+          {
+            "at": "0.75",
+            "event": "'Pending' panel reveals"
+          }
+        ],
+        "remotion": {
+          "pattern": "WalkerGodotSetup916",
+          "props": {
+            "mode": "flow",
+            "title": "Four Status Labels",
+            "sparkLine": "A proposal is not a passing test.",
+            "source": "Source: skills/make/godot-gdd/SKILL.md — 'Label material as proposed, implemented, observed/tested, or human decision pending.'",
+            "labels": [
+              "Proposed",
+              "Implemented",
+              "Observed",
+              "Pending"
+            ],
+            "details": [
+              "Design intent\nnot yet built\nin source code",
+              "Feature exists\nin project source\ncode files",
+              "Test or playthrough\nconfirmed the\nbehavior",
+              "Human decision\nrequired — the\nfilm cannot make it"
+            ],
+            "cueSeconds": [
+              0.5,
+              5.5,
+              10.5,
+              15.5
+            ],
+            "selected": 3,
+            "durationSeconds": 17.34
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-11T07:38:04.408406+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.34,
+      "audio_file": "mp3/beat-B04.mp3",
+      "lead_silence_s": 0,
+      "render_duration_s": 17.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:WalkerGodotSetup916",
+        "at": "2026-09-11T06:59:42"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Checker — ClaudeCodeBeat (no 916 variant; component has portrait-adaptive font sizing).",
+      "narration_text": "Before rendering and at handoff, you run the checker: art godot-gdd dash-dash-check, passing the reel path and the GDD path. It verifies source hash, section coverage, exact excerpts, evidence files, and beat status labels. What it cannot verify: whether the explanation is true, whether the game is fun, or whether the design was approved. Those stay human.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "code-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "code card appears in portrait — adaptive font fits lines"
+          },
+          {
+            "at": "0.10",
+            "event": "command line reveals"
+          },
+          {
+            "at": "0.30",
+            "event": "VERIFIES block reveals"
+          },
+          {
+            "at": "0.65",
+            "event": "CANNOT VERIFY block reveals"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "SKILL.md — godot-gdd checker",
+            "language": "bash",
+            "code": "# Run before rendering and at handoff:\n./art godot-gdd --check REEL --gdd GDD.md\n\n# Verifies:\n#   GDD source hash matches saved snapshot\n#   Every section covered or explicitly excluded\n#   Exact SKILL.md excerpts present in beats\n#   Evidence files referenced and hashed\n#   Beat status labels: proposed/implemented/observed/pending\n\n# Cannot verify:\n#   Whether the explanation is actually true\n#   Whether the design is worth playing\n#   Human approvals — those are yours",
+            "sparkLine": "Structure verified. Truth, fun, and approval stay human.",
+            "brandLabel": "@HumanitariansAI",
+            "largeText": false,
+            "durationSeconds": 19.16
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-11T10:23:08.043122+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.16,
+      "audio_file": "mp3/beat-B06.mp3",
+      "lead_silence_s": 0,
+      "render_duration_s": 19.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-11T06:59:42"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "DESIGN-TELL",
+      "role_note": "Design tell — GodotDesignBoard916 portrait variant.",
+      "narration_text": "The design tell is the phrase at the center of the skill: a proposal is not a passing test. A feature can be implemented while its player-experience hypothesis is untested. A test suite can pass while acceptance cases remain open. The skill enforces that distinction in every beat's status label — not pessimism, but precision. Collapsing design intent into implementation evidence is the failure the skill exists to prevent.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "design_status": "proposed",
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "card-reveal-with-highlight",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "GodotDesignBoard916: excerpt with key phrase, cards below"
+          },
+          {
+            "at": "0.20",
+            "event": "'The Phrase' card highlights"
+          },
+          {
+            "at": "0.45",
+            "event": "'What It Costs' highlights"
+          },
+          {
+            "at": "0.70",
+            "event": "'What It Buys' highlights"
+          }
+        ],
+        "remotion": {
+          "pattern": "GodotDesignBoard916",
+          "props": {
+            "title": "Design Tell",
+            "section": "§ A Proposal Is Not a Passing Test",
+            "excerpt": "Label material as proposed, implemented, observed/tested, or human decision pending. A feature can be implemented while its player-experience hypothesis remains untested.",
+            "source": "Verbatim: skills/make/godot-gdd/SKILL.md",
+            "status": "PROPOSED ANALYSIS · teaching illustration",
+            "visualLabel": "The phrase the skill repeats — and why",
+            "layout": "cards",
+            "cards": [
+              {
+                "label": "The Phrase",
+                "text": "'A proposal is not a passing test' — the skill's design constraint, not a style note"
+              },
+              {
+                "label": "What It Costs",
+                "text": "Every beat requires a status label; no shortcut from 'implemented' to 'accepted'"
+              },
+              {
+                "label": "What It Buys",
+                "text": "A GDD film keeping design intent separate from implementation evidence"
+              }
+            ],
+            "cues": [
+              {
+                "at": 5,
+                "card": 0
+              },
+              {
+                "at": 13,
+                "card": 1
+              },
+              {
+                "at": 21,
+                "card": 2
+              }
+            ],
+            "durationSeconds": 22.42
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-11T10:07:26.685352+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.42,
+      "audio_file": "mp3/beat-B08.mp3",
+      "lead_silence_s": 0,
+      "render_duration_s": 22.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:GodotDesignBoard916",
+        "at": "2026-09-11T06:59:42"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "Verdict — ClaudeVerdictArtifact916 portrait variant.",
+      "narration_text": "godot-gdd does one thing precisely: builds a film that walks through an existing game design document — section by section, status labeled, evidence on screen. What it does not do: write the GDD, change the game, approve the design, or certify it is worth playing. Those are yours. The film is the map. The territory stays human.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "artifact-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "verdict card slides in (portrait layout)"
+          },
+          {
+            "at": "0.15",
+            "event": "heading appears"
+          },
+          {
+            "at": "0.30",
+            "event": "five verdict lines reveal"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "godot-gdd — Verdict",
+            "artifactHeading": "The GDD explainer, precisely scoped",
+            "brandLabel": "@HumanitariansAI",
+            "artifactLines": [
+              "Builds a film walking through an existing GDD — section by section",
+              "Labels every claim: proposed, implemented, observed, or pending",
+              "Shows requirements beside real game evidence or labeled diagrams",
+              "Does not write the GDD, change the game, or approve the design",
+              "Human judgment on fun, fairness, and approval is never delegated"
+            ],
+            "durationSeconds": 17.96
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-11T10:25:59.111043+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.96,
+      "audio_file": "mp3/beat-B09.mp3",
+      "lead_silence_s": 0,
+      "render_duration_s": 18.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-11T06:59:42"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR-TURN",
+      "role_note": "HANDOFF LAW — ClaudeComposerAsk916 portrait variant, greeting: 'Your turn.'",
+      "narration_text": "Your turn. Here is a paste-ready prompt. Take a Godot game project you are working on or studying. Paste this into Claude: Walk me through the GDD for this project using the godot-gdd skill. Tell me which sections are implemented, which are still proposed, and flag any section where the acceptance test is missing or unmeasured. That last part — the missing acceptance test — is the gap most GDDs quietly hide.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "composer card (portrait); 'Your turn.' above"
+          },
+          {
+            "at": "0.15",
+            "event": "prompt types into composer"
+          },
+          {
+            "at": "0.60",
+            "event": "send button arms"
+          },
+          {
+            "at": "0.80",
+            "event": "output lines reveal"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "Your Turn",
+            "greeting": "Your turn.",
+            "command": "Walk me through the GDD for this project using the godot-gdd skill. Tell me which sections are implemented, which are still proposed, and flag any section where the acceptance test is missing or unmeasured.",
+            "runningText": "reading GDD · mapping sections · flagging gaps...",
+            "output": [
+              "mapped 8 sections · 2 acceptance tests missing",
+              "1 section pending human decision — flagged in beat sheet"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Fable 5",
+            "effortLabel": "High",
+            "durationSeconds": 20.93
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-11T07:42:46.902115+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.93,
+      "audio_file": "mp3/beat-B10.mp3",
+      "lead_silence_s": 0,
+      "render_duration_s": 20.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T06:59:42"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — ClaudeTitleOutro916 portrait variant. @NikBearBrown HARDCODED per OUTRO-LOCK.md. No narration.",
+      "narration_text": "Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 8,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "title-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "portrait title card: 'The godot-gdd Skill.' @NikBearBrown mascot below"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The godot-gdd Skill",
+            "slug": "claude-liam-brutalist-skill-godot-gdd",
+            "durationSeconds": 8.0
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-11T07:43:02.347360+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 8.0,
+      "lead_silence_s": 0,
+      "audio_policy": "silence",
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-11T06:59:42"
+      },
+      "audio_file": "mp3/beat-B11.mp3"
+    }
+  ]
+}

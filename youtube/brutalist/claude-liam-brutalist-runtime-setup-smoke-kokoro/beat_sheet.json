@@ -1,0 +1,668 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: setup_smoke_kokoro.py",
+    "slug": "claude-liam-brutalist-runtime-setup-smoke-kokoro",
+    "topic": "SETUP AUDIO GATE · BRUTALIST UTILITY",
+    "register": "Teardown (Feynman × MKBHD)",
+    "audience": "Humanitarians AI fellows using Claude Code",
+    "brand": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "aspect_ratio": "16:9",
+    "ground": "#FAF9F5",
+    "greeting": "Selam, Liam",
+    "folderLabel": "@HumanitariansAI",
+    "channel_title": "@HumanitariansAI",
+    "in_for_bear": true,
+    "captions": false,
+    "playlist": "Brutalist",
+    "typography": {
+      "serif": "EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "source": "runtime/scripts/setup_smoke_kokoro.py — SHA-256: 4e4df6611a34dcc1e001241769bc6479abf947effa58315d09cec4e8a04a0e30",
+    "build": {
+      "at": "2026-09-14T11:07:40",
+      "cut": "master",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": [
+        "B10: palette=claude but the outro is 'ClaudeTitleOutroHAI' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open / ASK",
+      "palette": "claude",
+      "narration_text": "Selam — this is Liam, in for Bear. When you run dot-slash setup, one check calls setup underscore smoke underscore kokoro dot py — the audio gate. It doesn't just ask whether Kokoro imports. It synthesizes a phrase, measures the decibels, and exits zero only if the audio is real. Here's why that distinction matters.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Selam, Liam",
+            "topic": "SETUP AUDIO GATE · BRUTALIST UTILITY",
+            "segment": "Brutalist Utility: setup_smoke_kokoro.py",
+            "command": "Why does ./setup synthesize actual audio to verify Kokoro — instead of just importing the library?",
+            "runningText": "reading setup_smoke_kokoro.py…",
+            "output": [
+              "setup_smoke_kokoro.py: setup's audio gate. Exits 0 only if the synth produces real sound.",
+              "Three guards (model files · ffmpeg · kokoro_onnx) then one synthesis, one volume check.",
+              "Importing works. Synthesizing silent audio also works. The -40 dB gate is what doesn't."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-14T12:38:26.247833+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": "greeting",
+            "event": "'Selam, Liam' serif greeting fades in above composer"
+          },
+          {
+            "at": 0.2,
+            "event": "Command types into composer; send button arms terracotta"
+          },
+          {
+            "at": 0.65,
+            "event": "Three RESULT lines appear — gate / three guards / the key distinction"
+          },
+          {
+            "at": 0.95,
+            "event": "@HumanitariansAI chip at bottom-center"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 18.01,
+      "render_duration_s": 18.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF — hesitant writer overview",
+      "palette": "claude",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy version of this check imports the library and sees if any errors fire. But setup underscore smoke underscore kokoro synthesizes and measures real audio — because a broken install can import cleanly and produce silence. That's the distinction the gate is built on: not whether the code runs, but whether it makes sound.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "setup checks Kokoro by\nverifying the import works.\nLoading the model is enough.",
+            "triggerWords": "import,enough",
+            "replacementWords": "synthesis,insufficient",
+            "seed": "54321",
+            "lineSpacing": 2.0,
+            "fontSize": 130,
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5",
+            "charMs": 1,
+            "hesitateBetween": 0,
+            "hesitateWithin": 0,
+            "jitter": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-14T13:03:02.913103+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Writer types misconception — 'import' and 'enough'"
+          },
+          {
+            "at": 0.55,
+            "event": "Hesitation; 'import' struck and replaced by 'synthesis'"
+          },
+          {
+            "at": 0.75,
+            "event": "'enough' struck and replaced by 'insufficient'"
+          },
+          {
+            "at": 0.9,
+            "event": "Corrected text holds: synthesis / insufficient"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 17.98,
+      "render_duration_s": 18.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "framework — what is this script and why",
+      "palette": "claude",
+      "narration_text": "The script is setup's audio gate. Setup calls it in its check function, discards everything it prints to stderr, and reports its own MISS message if it fails. The gate runs five checks in sequence: three prerequisites, then one synthesis, then one decibel measurement. Every step can fail independently, and each failure path exits one with a one-liner naming the exact problem.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SETUP AUDIO GATE",
+            "title": "setup_smoke_kokoro.py — the chain",
+            "inputLabel": "setup check()",
+            "outputLabel": "exit 0 / exit 1",
+            "phases": [
+              "model files exist?",
+              "ffmpeg on PATH?",
+              "kokoro_onnx importable?",
+              "synthesize phrase",
+              "volumedetect -40 dB gate"
+            ],
+            "footerNote": "setup discards all output — reports its own MISS message",
+            "sparkLine": "Five checks. One exit zero."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-14T12:39:23.183898+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Pipeline diagram: setup check() → five phases → exit 0 / exit 1"
+          },
+          {
+            "at": 0.3,
+            "event": "Phases appear left-to-right with terracotta arrows"
+          },
+          {
+            "at": 0.75,
+            "event": "Footer note: 'setup discards all output'"
+          },
+          {
+            "at": 0.9,
+            "event": "Spark line: 'Five checks. One exit zero.'"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.97,
+      "render_duration_s": 20.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "mechanism — the three prerequisites",
+      "palette": "claude",
+      "narration_text": "The first three checks are strict. The model file and voices binary must exist at their exact paths under runtime slash models. If ffmpeg isn't on the PATH, fail. If kokoro underscore onnx won't import, fail. Each fails with a specific one-line message to stderr. No ambiguity about what's missing.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 21,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "setup_smoke_kokoro.py — guards",
+            "code": "if not (MODEL.exists() and VOICES.exists()):\n    return fail(\"Kokoro model files missing\")\nffmpeg = shutil.which(\"ffmpeg\")\nif not ffmpeg:\n    return fail(\"ffmpeg not on PATH\")\ntry:\n    from kokoro_onnx import Kokoro\nexcept ImportError:\n    return fail(\"kokoro_onnx not importable\")",
+            "sparkLine": "Three guards. All must pass."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-14T12:39:48.019775+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Code card opens: guard section reveals line by line"
+          },
+          {
+            "at": 0.3,
+            "event": "MODEL.exists() + VOICES.exists() check with fail() message"
+          },
+          {
+            "at": 0.6,
+            "event": "ffmpeg PATH check appears"
+          },
+          {
+            "at": 0.8,
+            "event": "kokoro_onnx ImportError guard lands"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 17.73,
+      "render_duration_s": 17.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "mechanism — the synthesis step",
+      "palette": "claude",
+      "narration_text": "Then it actually synthesizes. One throwaway phrase via the same Kokoro class narration beats use. The float samples convert to signed sixteen-bit integers, then write into a real WAV file in the system temp directory. A module that loads but synthesizes silence gets no free pass here — this is the moment that separates a broken silent install from a working one.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 23,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "setup_smoke_kokoro.py — synthesis",
+            "code": "k = Kokoro(str(MODEL), str(VOICES))\nsamples, sr = k.create(\n    \"This is a setup smoke test.\",\n    voice=\"af_bella\", speed=1.0, lang=\"en-us\")\n# convert float → int16, write to temp WAV\nints = [max(-32768, min(32767, int(s * 32767)))\n        for s in samples]\nfd, wav_path = tempfile.mkstemp(suffix=\".wav\")\n# ... write WAV ...",
+            "sparkLine": "Synthesis, not just import."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-14T12:40:14.626120+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Kokoro instantiation lines reveal"
+          },
+          {
+            "at": 0.3,
+            "event": "k.create() call — throwaway phrase, af_bella voice"
+          },
+          {
+            "at": 0.6,
+            "event": "Float-to-int16 conversion and temp WAV write"
+          },
+          {
+            "at": 0.85,
+            "event": "Spark line: 'Synthesis, not just import.'"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 20.74,
+      "render_duration_s": 20.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "mechanism — the volume gate",
+      "palette": "claude",
+      "narration_text": "Then ffmpeg's volumedetect filter reads the WAV and prints mean underscore volume — the average decibel level. The script parses that from stderr and checks it against negative forty decibels. Real speech sits around negative twelve to negative twenty. Silence or a corrupt output comes in below negative forty. That's the gate. If the synthesized audio doesn't cross it, exit one.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "setup_smoke_kokoro.py — volume gate",
+            "code": "out = subprocess.run(\n    [ffmpeg, \"-i\", wav_path,\n     \"-af\", \"volumedetect\", \"-f\", \"null\", \"-\"],\n    capture_output=True, text=True)\n# parse mean_volume from ffmpeg stderr\nif mean_db is None:\n    return fail(\"ffmpeg volumedetect: no mean_volume\")\nif mean_db <= THRESHOLD_DB:  # -40.0 dB\n    return fail(f\"audio too quiet ({mean_db} dB)\")",
+            "sparkLine": "Mean volume must beat -40 dB."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-14T12:40:41.357013+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "ffmpeg subprocess.run call reveals"
+          },
+          {
+            "at": 0.4,
+            "event": "mean_volume parse block — stderr line scan"
+          },
+          {
+            "at": 0.65,
+            "event": "THRESHOLD_DB = -40.0 dB check lands, terracotta on the value"
+          },
+          {
+            "at": 0.85,
+            "event": "Spark line: 'Mean volume must beat -40 dB.'"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 21.03,
+      "render_duration_s": 21.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "failure modes — what breaks and what you read",
+      "palette": "claude",
+      "narration_text": "Every failure path exits one with a specific note to stderr — the script's only output. 'Kokoro model files missing' means run setup with dash dash install. synthesis raised followed by an exception means the model is corrupted or incompatible. And 'synthesized audio too quiet' with the measured dB means the synthesis ran but produced nothing useful. Setup reads exit code only — its check function discards everything the script prints.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "setup_smoke_kokoro.py — failure messages",
+            "code": "# All five failure paths — stderr only, exit 1\n[smoke] Kokoro model files missing\n[smoke] ffmpeg not on PATH\n[smoke] kokoro_onnx not importable\n[smoke] synthesis raised <RuntimeError: ...>\n[smoke] synthesized audio too quiet (-60.0 dB <= -40.0 dB)\n# success path — also stderr:\n[smoke] kokoro synth OK — mean_volume -14.3 dB",
+            "sparkLine": "Each exit 1 names its exact cause."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-14T12:41:08.314907+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Comment header reveals: 'All five failure paths'"
+          },
+          {
+            "at": 0.2,
+            "event": "First three failure messages appear (model / ffmpeg / import)"
+          },
+          {
+            "at": 0.55,
+            "event": "synthesis raised + too quiet messages appear"
+          },
+          {
+            "at": 0.78,
+            "event": "Success path appears terracotta — mean_volume OK"
+          },
+          {
+            "at": 0.9,
+            "event": "Spark line: 'Each exit 1 names its exact cause.'"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 23.49,
+      "render_duration_s": 23.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "design tell — the try/finally cleanup",
+      "palette": "claude",
+      "narration_text": "The design tell is the try-finally block. The temp WAV is created before the volume check, and the finally clause deletes it unconditionally — whether the check passed or failed, whether ffmpeg threw an error, whether mean underscore volume was None. The docstring calls it 'one throwaway phrase.' This is the script's contract with itself: no temp files left behind, no manual cleanup needed.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 25,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "setup_smoke_kokoro.py — cleanup",
+            "code": "try:\n    # write WAV, run volumedetect, parse mean_db\n    # ... check threshold ...\n    print(f\"[smoke] kokoro synth OK — mean_volume {mean_db} dB\",\n          file=sys.stderr)\n    return 0\nfinally:\n    Path(wav_path).unlink(missing_ok=True)\n    # always runs — pass OR fail",
+            "sparkLine": "The finally block always runs."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-14T12:41:34.345293+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "try: block opens with inline comment"
+          },
+          {
+            "at": 0.35,
+            "event": "return 0 on success path appears"
+          },
+          {
+            "at": 0.6,
+            "event": "finally: block reveals — unlink(missing_ok=True)"
+          },
+          {
+            "at": 0.8,
+            "event": "Comment 'always runs — pass OR fail' appears, terracotta highlight"
+          },
+          {
+            "at": 0.9,
+            "event": "Spark line: 'The finally block always runs.'"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 20.46,
+      "render_duration_s": 20.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "verdict",
+      "palette": "claude",
+      "lead_silence_s": 0.5,
+      "narration_text": "The verdict. Setup underscore smoke underscore kokoro is the gap between 'Kokoro is installed' and 'Kokoro makes sound.' Three guards catch the obvious prerequisites. One synthesis catches the subtle failure — an install that imports cleanly but synthesizes nothing. The minus forty decibel gate is generous enough to ignore a whisper and strict enough to catch silence. That's the whole gate.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "stagger",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Brutalist Utility: setup_smoke_kokoro.py",
+            "artifactHeading": "The audio gate — five checks, one standard",
+            "artifactLines": [
+              "Three prerequisites: model files · ffmpeg · kokoro_onnx — each fails independently with a named [smoke] message.",
+              "One synthesis: k.create() on a throwaway phrase — not a module load, not a file existence check.",
+              "One gate: mean volume > -40 dB — real speech passes; silence or corruption fails.",
+              "Setup calls it, discards its output, and reports its own MISS. The gate is transparent to the user.",
+              "The design choice: synthesis reveals broken installs that import cleanly and produce nothing."
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-14T12:43:03.938530+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude artifact page opens — title + heading serif"
+          },
+          {
+            "at": 0.15,
+            "event": "Five lines stagger in; terracotta on the synthesis and design-choice lines"
+          },
+          {
+            "at": 0.9,
+            "event": "Final line holds: 'synthesis reveals broken installs'"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 20.44,
+      "render_duration_s": 20.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "your turn / handoff",
+      "palette": "claude",
+      "narration_text": "Your turn. Paste this prompt into Claude: read runtime slash scripts slash setup underscore smoke underscore kokoro dot py. If I add a new TTS backend to Brutalist, what would I need to change in this script to smoke-test it? What's the minimum gate that would catch a silent install? The answer is cleaner than you'd expect. The volume gate doesn't know which synth produced the audio — that part doesn't change. Look for what's separated from what's shared.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "SETUP AUDIO GATE · BRUTALIST UTILITY",
+            "segment": "Brutalist Utility: setup_smoke_kokoro.py",
+            "command": "Read runtime/scripts/setup_smoke_kokoro.py. If I add a new TTS backend to Brutalist, what would I need to change in this script to smoke-test it? What's the minimum gate that would catch a silent install?",
+            "runningText": "adapting the audio gate…",
+            "output": [
+              "Replace the Kokoro synthesis block with your backend's create() call.",
+              "Keep the WAV-write / volumedetect / -40 dB gate — those are backend-agnostic.",
+              "Update MODEL / VOICES path constants for the new backend's required files."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-14T12:44:17.891667+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": "greeting",
+            "event": "'Your turn.' greeting fades in above composer"
+          },
+          {
+            "at": 0.15,
+            "event": "Paste-ready prompt types in — TTS backend adaptation"
+          },
+          {
+            "at": 0.65,
+            "event": "Three RESULT lines appear — what changes / what stays / paths"
+          },
+          {
+            "at": 0.85,
+            "event": "runningText 'adapting the audio gate…'; composer holds"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 21.78,
+      "render_duration_s": 21.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T11:07:40"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "outro — title restate + sign-off",
+      "palette": "claude",
+      "narration_text": "Brutalist Utility: setup underscore smoke underscore kokoro. Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 7,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "fade",
+        "remotion": {
+          "pattern": "ClaudeTitleOutroHAI",
+          "props": {
+            "title": "Brutalist Utility: setup_smoke_kokoro.py",
+            "slug": "claude-liam-brutalist-runtime-setup-smoke-kokoro",
+            "mascotAnimation": "bounce"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-14T15:06:06.502562+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Title restates poster-style serif with terracotta period"
+          },
+          {
+            "at": 0.4,
+            "event": "@HumanitariansAI handle + mascot appear"
+          },
+          {
+            "at": 0.7,
+            "event": "Liam, in for Bear sign-off — mascot animates"
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 5.7,
+      "render_duration_s": 5.708333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeTitleOutroHAI",
+        "at": "2026-09-14T11:07:40"
+      }
+    }
+  ]
+}

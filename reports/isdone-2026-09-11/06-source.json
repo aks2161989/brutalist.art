@@ -1,0 +1,359 @@
+{
+  "number": 6,
+  "relative": "friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning",
+  "beats": 35,
+  "sheet_sha256": "374df9fcfc95aef8232f4b03d548a6d3c4e3754ee457ebf3fe0f05b2d06b3120",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/claude-liam-performance-is-not-learning-slate.mp4",
+  "stale": false,
+  "width": 1920,
+  "height": 1080,
+  "duration": "324.920000",
+  "audio_stream": true,
+  "declared_slates": [
+    "B00",
+    "B01",
+    "B02",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12",
+    "B13",
+    "B14",
+    "B15",
+    "B16",
+    "B17",
+    "B18",
+    "B19",
+    "B20",
+    "B21",
+    "B22",
+    "B23",
+    "B24",
+    "B25",
+    "B26",
+    "B27",
+    "B28",
+    "B29",
+    "B30",
+    "B31",
+    "B32",
+    "B33",
+    "B34"
+  ],
+  "findings": [
+    {
+      "beat": "B04",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a bright secondary-school maths classroom, students at desks working problems, seen from the back. No recognisable faces.",
+      "path": "B04.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B05",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a single exam desk \u2014 closed booklet, pencil, empty chair. Continues R1's push-in; first frame must reproduce B04's handoff camera.",
+      "path": "B05.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B14",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a student at a laptop late at night, warm lamp, mug, notebook closed beside them. Over-shoulder, no recognisable face.",
+      "path": "B14.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B21",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a tutor and a student side by side at a table, worked page between them. Terracotta ring draws on around the page on the word 'stalls'.",
+      "path": "B21.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B24",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a hand holding a basic phone showing one bar of signal, rural schoolyard soft-focus behind.",
+      "path": "B24.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B27",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a teacher's desk after hours \u2014 stacked lesson plans, red pen, cooling tea, empty classroom behind.",
+      "path": "B27.png",
+      "exists": false,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "B04",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a bright secondary-school maths classroom, students at desks working problems, seen from the back. No recognisable faces.",
+      "path": "B04.png",
+      "exists": false
+    },
+    {
+      "beat": "B05",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a single exam desk \u2014 closed booklet, pencil, empty chair. Continues R1's push-in; first frame must reproduce B04's handoff camera.",
+      "path": "B05.png",
+      "exists": false
+    },
+    {
+      "beat": "B14",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a student at a laptop late at night, warm lamp, mug, notebook closed beside them. Over-shoulder, no recognisable face.",
+      "path": "B14.png",
+      "exists": false
+    },
+    {
+      "beat": "B21",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a tutor and a student side by side at a table, worked page between them. Terracotta ring draws on around the page on the word 'stalls'.",
+      "path": "B21.png",
+      "exists": false
+    },
+    {
+      "beat": "B24",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a hand holding a basic phone showing one bar of signal, rural schoolyard soft-focus behind.",
+      "path": "B24.png",
+      "exists": false
+    },
+    {
+      "beat": "B27",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "Tier 1 generic: a teacher's desk after hours \u2014 stacked lesson plans, red pen, cooling tea, empty classroom behind.",
+      "path": "B27.png",
+      "exists": false
+    }
+  ],
+  "code_displays": [],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B00.mp4",
+      "seconds": 11.375,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B01.mp4",
+      "seconds": 1.5458331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B02.mp4",
+      "seconds": 8.75,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/media/B03.mp4",
+      "seconds": 7.21,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B04.mp4",
+      "seconds": 4.608333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B05.mp4",
+      "seconds": 4.2875,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B06.mp4",
+      "seconds": 6.0083331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B07.mp4",
+      "seconds": 5.5416669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B08.mp4",
+      "seconds": 8.4291669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B09.mp4",
+      "seconds": 1.4583331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B10.mp4",
+      "seconds": 4.9291669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B11.mp4",
+      "seconds": 6.270833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B12.mp4",
+      "seconds": 5.395833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B13.mp4",
+      "seconds": 7.233333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B14.mp4",
+      "seconds": 4.8416669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B15.mp4",
+      "seconds": 9.0125,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B16.mp4",
+      "seconds": 6.1541669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B17.mp4",
+      "seconds": 8.1375,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B18.mp4",
+      "seconds": 2.0999999999999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B19.mp4",
+      "seconds": 5.25,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B20.mp4",
+      "seconds": 7.9624999999999995,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B21.mp4",
+      "seconds": 6.0375,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B22.mp4",
+      "seconds": 6.7375,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B23.mp4",
+      "seconds": 6.7375,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B24.mp4",
+      "seconds": 6.9416668999999995,
+      "status": "sampled"
+    },
+    {
+      "beat": "B25",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B25.mp4",
+      "seconds": 2.1875,
+      "status": "sampled"
+    },
+    {
+      "beat": "B26",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B26.mp4",
+      "seconds": 9.5375,
+      "status": "sampled"
+    },
+    {
+      "beat": "B27",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B27.mp4",
+      "seconds": 6.4458331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B28",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B28.mp4",
+      "seconds": 9.1875,
+      "status": "sampled"
+    },
+    {
+      "beat": "B29",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B29.mp4",
+      "seconds": 5.7166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B30",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B30.mp4",
+      "seconds": 8.458333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B31",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B31.mp4",
+      "seconds": 7.437499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B32",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B32.mp4",
+      "seconds": 11.958333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B33",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B33.mp4",
+      "seconds": 11.579166899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B34",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/friction-measuring-the-learning-struggle/youtube/claude-liam-performance-is-not-learning/clips/B34.mp4",
+      "seconds": 2.4499999999999997,
+      "status": "sampled"
+    }
+  ],
+  "contact": "reports/isdone-2026-09-11/06-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

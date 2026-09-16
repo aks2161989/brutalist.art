@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/exports/landscape/claude-liam-brutalist-command-todo.mp4",
+  "sha256": "cc0a885f6663f08270f5c169a707be66ab48e1055e9ea754c9a0bf1f159c4327",
+  "duration_s": 167.875,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B00.mp4": "6fc45772d15a000395296c76df26bcd95e616226195007c2081652893ad04417",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B01.mp4": "941cbcae531a77bbb3091ee2fd40c0ed4af2a35ddd96f8ce39916572d5adb6e1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B02.mp4": "0b3168caffd0508c3be4970aa358e022f67df166b9825834dd4d7f64da6ebb3c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B03.mp4": "e59e37ddb88a8c9cef68030f5e03ec9da31a2ad7efddcfad934344bed615df79",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B04.mp4": "a69e966daef6c3d7c6a833970596cfb5d74687a9b6eebdc1f784e867da12b259",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B05.mp4": "1cf1d3d6a6173c7c8bc4bc9945d45fc19899f7bd36f19eb0372bcfeffd6e4250",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B06.mp4": "88b37ce487a2fc68a91597cce7b289476280b0bc8b52235408aa4cc5e076037d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B07.mp4": "1e1a39fdf14197c0f2cee8c7163ee9f89d809dc8701da34f4957f6cc930d38b6",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B08.mp4": "036fbc6fbc6b0ce5863f3521f76172ab758bea0591c82214b82c4c1b24748a85",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B09.mp4": "7d1f6c2e737c1709c825d54321fb2d9eb3b482c2fb4ecda3a3ceba4ba3210c22",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B10.mp4": "4f13d1ef5bc97b125e7b694750f21f6cd9eb7a9f6e103499a98a8af83324e2ad",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/media/B11.mp4": "0bb03f597be0e7ca9f80aef3440db724d42270f9f10366dadffd97ea17cc8479",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B00.mp3": "ba9ff17489cc4facca6baedca91d09c15594a9b8e65b371cc5ad0491a2d3a5d2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B01.mp3": "e1f7486203290f6b98bec0ad36b7a15ea478f1317c4f72ba429e351527b373cd",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B02.mp3": "4855ff5391fa74d0f09144fa0fd7889808b9977e5b0dcf77d4560d909cd0e375",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B03.mp3": "533feb6a54d17f377994cf9007a2c9608441d2dee5064db51bcbb993c8f98440",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B04.mp3": "a52b6b3c09862f87bab174789b45c17ad4a995c583cbd98b1b16f5e130e7156b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B05.mp3": "7ee6e8b64839e7aab20827aab74e6f18a83aa52d042912f885926b15aa1a5ee8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B06.mp3": "43d9457b90b4c901d2e86f0f2e7f91d971700d7ce5482850690ffade0d04df98",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B07.mp3": "dbf3b6b5117210521b6fc4ffd47e0e9a470ee6287d9f1c87145ea2300e5a4b41",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B08.mp3": "b28c9d1151483be8f3f24e430d1e6ad15770ed8cc08cef7860e2dbebeee71c34",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B09.mp3": "1160210eeb0a8edb9bc96cfa0fe7202f9249c5cc634f002838893508a250013f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B10.mp3": "b516c2b5c76f07b5ed9ad6b8cffd5503199c2becf7ed4afecdfcf57a1cbc94a7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-todo/mp3/beat-B11.mp3": "0f7a29da2e3003e77860af2257eede81f6d3133ed566948fece6bc6029fcfab2"
+  },
+  "at": "2026-09-09T14:37:03.010885+00:00"
+}

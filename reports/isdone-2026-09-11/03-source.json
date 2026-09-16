@@ -1,0 +1,222 @@
+{
+  "number": 3,
+  "relative": "csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman",
+  "beats": 30,
+  "sheet_sha256": "8e58b011dd17f1f4bd7bbe5eaffa19b61ebaf81cd090af03843450d6dc83f7cd",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/claude-liam-csye-7270-assignment-1-walker-jumpman-slate.mp4",
+  "stale": true,
+  "width": 1920,
+  "height": 1080,
+  "duration": "560.133000",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [],
+  "evidence_file_candidates": [
+    "gamedev-evidence.json",
+    "evidence/capture-sources.json",
+    "evidence/edit-map.json",
+    "evidence/cue-timing.json",
+    "evidence/test_keyboard.log",
+    "evidence/pause-receipt.json",
+    "evidence/test_game.log",
+    "evidence/spike-receipt.json",
+    "evidence/mechanics-1789099409.21294.json",
+    "evidence/public-starter-check.json",
+    "evidence/source-build.json",
+    "evidence/finish-receipt.json",
+    "evidence/keyboard-1789099409.45009.json",
+    "evidence/coyote-receipt.json",
+    "evidence/buffer-receipt.json",
+    "evidence/jump-receipt.json",
+    "evidence/controls-receipt.json",
+    "evidence/art-preview.log",
+    "_qc/master-receipt.json"
+  ],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B00.mp4",
+      "seconds": 11.713333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B01.mp4",
+      "seconds": 12.179999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B02.mp4",
+      "seconds": 14.42,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B03.mp4",
+      "seconds": 14.839999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B04.mp4",
+      "seconds": 13.16,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B05.mp4",
+      "seconds": 11.923333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B06.mp4",
+      "seconds": 13.79,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B07.mp4",
+      "seconds": 12.739999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B08.mp4",
+      "seconds": 11.620000000000001,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B09.mp4",
+      "seconds": 12.11,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B10.mp4",
+      "seconds": 13.86,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B11.mp4",
+      "seconds": 14.42,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B12.mp4",
+      "seconds": 13.02,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B13.mp4",
+      "seconds": 13.533333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B14.mp4",
+      "seconds": 13.16,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B15.mp4",
+      "seconds": 12.04,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B16.mp4",
+      "seconds": 11.923333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B17.mp4",
+      "seconds": 13.089999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B18.mp4",
+      "seconds": 12.67,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B19.mp4",
+      "seconds": 11.9933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B20.mp4",
+      "seconds": 11.829999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B21.mp4",
+      "seconds": 12.063333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B22.mp4",
+      "seconds": 13.0666669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B23.mp4",
+      "seconds": 14.629999999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B24.mp4",
+      "seconds": 13.44,
+      "status": "sampled"
+    },
+    {
+      "beat": "B25",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B25.mp4",
+      "seconds": 15.7033331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B26",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B26.mp4",
+      "seconds": 16.31,
+      "status": "sampled"
+    },
+    {
+      "beat": "B27",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B27.mp4",
+      "seconds": 14.42,
+      "status": "sampled"
+    },
+    {
+      "beat": "B28",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B28.mp4",
+      "seconds": 14.0,
+      "status": "sampled"
+    },
+    {
+      "beat": "B29",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/youtube/claude-liam-csye-7270-assignment-1-walker-jumpman/media/B29.mp4",
+      "seconds": 8.6333331,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/03-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

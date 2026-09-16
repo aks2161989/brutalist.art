@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "b7896f5b2d2a441186ff1451881c0a5b",
+  "source_sha256": "7c3b6abf2ec61bb70122fe12ba1e2d5bad049db19db16ddb3a1026cad274e8c6",
+  "beat_sheet_sha256": "b73e34ab302b033047c14bb96756a9f8c34d2963a68ddb79ec0e9f28a5ebc875",
+  "video_sha256": "acf2b0c143be0498d0ed56f59ddc97b5b720f8b68dafac733716c37dbbc629c1",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-sheet-portrait.png", "sha256": "e0d90d266b3686c62adc98d94b25c14ae90ee63be088833c324f5c37adc052bc"},
+    {"path": "_qc/proof-portrait/B00-85.png", "sha256": "c9c48756b32280aaf67234c27defba56fe787e8d25f397f7534cb5593ddb90fa"},
+    {"path": "_qc/proof-portrait/B01-85.png", "sha256": "29e861e70b0e2097eda5f11eda767b3a1472283c51713d18b82a1464708b0b47"},
+    {"path": "_qc/proof-portrait/B04-85.png", "sha256": "8bb41c17da7f647a988bbc9a2ebcb29e1c1b2e57a006d5bd4422cb811ff18d2e"},
+    {"path": "_qc/proof-portrait/B06-85.png", "sha256": "88ad4bd9ebfddf00dea56d21bec4af8fa5d15f5e1911939b4d48876a2505df07"},
+    {"path": "_qc/proof-portrait/B08-85.png", "sha256": "f376fa1f7c719cc80e6f1aea7c163ef443533b24f002e9e06f300b59c0f8e21c"},
+    {"path": "_qc/proof-portrait/B09-85.png", "sha256": "ed6ce81d29ec0fe2240550f9a4cb3be1cd955f345f322b3eaec2b7b40eb0c132"},
+    {"path": "_qc/proof-portrait/B10-85.png", "sha256": "538ed55d3fc6b10ad08307ec53ef9e1903823cf51a0a2e93e31bb7397ff39244"},
+    {"path": "_qc/proof-portrait/B11-50.png", "sha256": "89d6101dab99846e93486ef5d78f9c2f0affaa460f082b662eebef17ee4e4482"}
+  ],
+  "notes": "Re-verification pass for run_id b7896f5b2d2a441186ff1451881c0a5b (2026-09-13). Previous run abdef8f04e1246deaf8cf7ab26ae350b was interrupted by Claude usage limit; exports and all frame hashes are stable and unchanged. Vertical master (2160x3840, 218.583 s) SHA-256 acf2b0c1 is unchanged from previous passing run. NOT a landscape crop; per-beat compositions rendered at 1080x1920 (Root.tsx 916 shims), scaled to 4K at compile. Gate V (runtime/qc/final_frame_check.py) returned frames=24 BLOCKER=0 MAJOR=0. All 8 proof frames and contact sheet Read with the image-capable Read tool; all SHA-256 values stable and match previous passing review record. B00-85: portrait cold open composer — 'Habari, Liam', @HumanitariansAI label, three output lines reflow correctly in narrow layout; B01-85: portrait BLUF 'art keys / audits upgrades.' fills the safe area with generous serif (lineSpacing 2.5); B04-85: ClaudeCodeBeat916 portrait — invalid row and exit-0 footer visible; right-side truncation of long table lines is a known limitation (full text preserved in landscape master); B06-85: probe body readable in portrait card; B08-85: design-tell two-drift beat, both drifts legible; B09-85: six-line verdict artifact wraps and reflows correctly for 9:16; B10-85: Your Turn composer with @HumanitariansAI label; B11-50: portrait outro title 'Brutalist Command: art keys.' + @NikBearBrown handle centred, mascot not visible at this frame sample (animates in later). channel_title metadata omitted from vertical sheet per feedback_channel_title_portrait_bleed. OUTRO-LOCK: @NikBearBrown handle hardcoded per OUTRO-LOCK.md — flagged for human reviewer before publication. No paid API called. Human review pending."
+}

@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "b1f47558b8af473190ac4ed1bab362dd",
+  "source_sha256": "2b7a9444954511eee681bc5c4a272ab5354644f448e0ab8b0b3f00e1141b0b79",
+  "beat_sheet_sha256": "8baabec6a4d287588507992df3460ccc6c42faa7d0726ebec886c217f508da08",
+  "video_sha256": "7a92bdb465492063ced20ba2a4091ad7ce5b0de20f144a187ab3cbc9d8527a31",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "0bd0b5782a3760b8cc9e3a065e556755aba6254651931ac9a68524cae573b8a4"},
+    {"path": "_qc/portrait-defects2.png", "sha256": "5e2bef0eb46a49f2f83b048766d4860a72ca19de0682fec55ea72be8e80d0da6"},
+    {"path": "_qc/b01_v5.png", "sha256": "e47b8e624561e6c8e9de7b37e4481c485474bf0531802b8e5e46f23cb5f29a3f"},
+    {"path": "_qc/proof-frame-t005.png", "sha256": "b5c320f6b9a044dd9e46063a9fd0c9eaf632508fa88d761f9aacc5447791fe75"},
+    {"path": "_qc/proof-frame-t060.png", "sha256": "5625da785f86bce8e49dfc55e93fdba12c6cbc473957b292e583c5868b716fab"},
+    {"path": "_qc/proof-frame-t140.png", "sha256": "a6b1a60c642a6a2cec1f64999117f55d4397d3ffb37104d7e509ab8b5d927e83"},
+    {"path": "_qc/proof-frame-t220.png", "sha256": "82f4374af17a1c6027575fce5ad351c4a701a7444c04cb88aa1048ece045f1f1"},
+    {"path": "_qc/proof-frame-t275.png", "sha256": "8086295890e7d57e6009635204ac2b7ce4d57f569182a280d8966393d9a1cd7a"}
+  ],
+  "notes": "Portrait 4K companion (2160x3840 native, 24fps, 280.125s, H264+AAC, compiler-verified ready per exports/vertical/*.verified.json). Re-reviewed under invocation run_id b1f47558 (source/feedback SHA change triggered re-invocation; hai SKILL.md on disk is ef01252f — unchanged from original build, no content delta; FEEDBACK.md contains only the placeholder, no actionable notes). Renders, beat_sheet, and QC frames are byte-identical to the prior successful build. NOT a center-crop — native 9:16 reflow through SkillTeardownAnatomy916/Pipeline916/Mechanism916, ClaudeComposerAsk916, ClaudeVerdictArtifact916, ClaudeTitleOutro916, and portrait-scale-patched BrutalistHesitantWriter (lineSpacing 2.4–2.7 recipe per [[feedback_hesitant_writer_portrait_bluf_recipe]]). For THIS invocation I directly read eight QC assets: contact_sheet.png (12-beat 9:16 overview — all beats legible, native portrait layout, correct stacking); portrait-defects2.png (pre-fix defect grid — documents resolved issues for audit trail); b01_v5.png (portrait hesitant-writer at B01 — 'The hai skill / forks a / source reel. / The source / stays intact.' fills portrait safe area correctly with tall line spacing); proof-frame-t005.png (t=5s, B00 portrait ClaudeComposerAsk916 — 'The hai Skill' header, 'Hallo, Liam' greeting); proof-frame-t060.png (t=60s, B03 SkillTeardownPipeline916 — 'Six steps. One shape.' portrait stack); proof-frame-t140.png (t=140s, B06 SkillTeardownMechanism916 — 'The CLI exercise.' portrait layout); proof-frame-t220.png (t=220s, B09 ClaudeVerdictArtifact916 — 'A fork. Not a re-skin.' portrait card); proof-frame-t275.png (t=275s, B10 ClaudeComposerAsk916 'Your Turn' portrait). Every beat legible on 9:16; type sizes portrait-native; correction and outro land on cue. metadata.channel_title omitted from vertical beat_sheet per [[feedback_channel_title_portrait_bleed]] (compile overlay bleeds past portrait safe.b); channel identity carried by composer folderLabel on B00 and B10. Skin lint reports standard 916 cold-open/outro warnings expected for portrait companions in this playlist. Human review pending."
+}

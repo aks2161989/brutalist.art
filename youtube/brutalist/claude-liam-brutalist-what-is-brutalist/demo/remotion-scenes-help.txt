@@ -1,0 +1,14 @@
+usage: remotion_scenes.py [-h] [--list] [--only ONLY] [--force] [--outro]
+                          [--now NOW]
+                          reel
+
+positional arguments:
+  reel
+
+options:
+  -h, --help   show this help message and exit
+  --list
+  --only ONLY
+  --force
+  --outro
+  --now NOW    override ISO8601 build timestamp

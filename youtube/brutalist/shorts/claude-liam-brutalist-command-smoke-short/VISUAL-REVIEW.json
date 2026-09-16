@@ -1,0 +1,89 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "c8743064e7904da6a10203c4c47185ef",
+  "source_sha256": "aad70386755ffa323add8dcf305852d45e801befeadac76d3e2abc3a7c323315",
+  "beat_sheet_sha256": "489490e411590f58ecfb0f46a5bdab0f48d24c34ec7164f1f7cf670d4b8ddb02",
+  "video_sha256": "d72a303cda74b05d4166554ce40e127c3a5ff6574d48f2c3732cd8ced8eb60c2",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "971fd9def13f47572363e3783903fd437cc71b5fbd2aba0c90206f2f6b3744be"
+    },
+    {
+      "path": "_qc/per-beat/B00_15.png",
+      "sha256": "691dab9f23605b71058cf9350bb52ed4b96636d4803eb0f95011d52058ec220d"
+    },
+    {
+      "path": "_qc/per-beat/B00_50.png",
+      "sha256": "35e6d53d151902bb153e6387d77d787012d4969b478344ceb855ebf0c6883b0f"
+    },
+    {
+      "path": "_qc/per-beat/B00_85.png",
+      "sha256": "048a5142202d96b4355302353ec26dd052ca88e3c1c57b8cec25be95e208dcc5"
+    },
+    {
+      "path": "_qc/per-beat/B01_15.png",
+      "sha256": "4b233f5808484cabf0f27feec5f0b10c1130f031f8877fc8c6bbec6a1bbd13ff"
+    },
+    {
+      "path": "_qc/per-beat/B01_50.png",
+      "sha256": "30a7d084806626de0854fce158aa2ebd1e16f7cc503f02da4fdaa89ed7dbfa9a"
+    },
+    {
+      "path": "_qc/per-beat/B01_85.png",
+      "sha256": "7830a30fcf29652ba076a00261604688ddd3c97f8d6a9485d88f07dd220af8da"
+    },
+    {
+      "path": "_qc/per-beat/B03_15.png",
+      "sha256": "4526cb8aec1cf3d714c744e9992a729c0b6dafb6eb5f402ccd4e002136cbde6c"
+    },
+    {
+      "path": "_qc/per-beat/B03_50.png",
+      "sha256": "cf9a0b94712af6c600f6243ed116af860f84b2f9a8309066ea74b3d9282216f1"
+    },
+    {
+      "path": "_qc/per-beat/B03_85.png",
+      "sha256": "bb4c124a2adc5b9775c5fe54a04de1957d488b1f976123fc9db0319cf75510bb"
+    },
+    {
+      "path": "_qc/per-beat/B07_15.png",
+      "sha256": "428dea83c675e78b48984de63a1776691a6a1f025d2613b9a34160c3da669694"
+    },
+    {
+      "path": "_qc/per-beat/B07_50.png",
+      "sha256": "2aa7e641558644fe9847fdb120ba648adfb75847063eecc4c424469cc3d31dcb"
+    },
+    {
+      "path": "_qc/per-beat/B07_85.png",
+      "sha256": "ac5316784ec9a2a3666370476ea138a8a36ab40fc3117bc23ec76a42211d4896"
+    },
+    {
+      "path": "_qc/per-beat/B08_15.png",
+      "sha256": "6eff8bc54668169d6cbc7dc080292025912b6df905a9ef349a6358a87721d162"
+    },
+    {
+      "path": "_qc/per-beat/B08_50.png",
+      "sha256": "484bf05236f730b132ad56007d0c31a6d24a8e789edf394ba21c5eb5420e50f5"
+    },
+    {
+      "path": "_qc/per-beat/B08_85.png",
+      "sha256": "ec873103e504b44f24b64894f305b400b4cda07afa220f459883ec62e557bddb"
+    },
+    {
+      "path": "_qc/per-beat/B10_15.png",
+      "sha256": "a8783abbd1e9421311157ec3c62420a43ab1c47cb3ebe69cb04e4ca10bb71937"
+    },
+    {
+      "path": "_qc/per-beat/B10_50.png",
+      "sha256": "0a0cd6653c08468ab9ba91dffd1f65ad6552bdbc57892fbde5e4107119fef7a2"
+    },
+    {
+      "path": "_qc/per-beat/B10_85.png",
+      "sha256": "71738daa52bd610a31b6cc861dfcb6dd7aad724e0ad112d907929fe130a43069"
+    }
+  ],
+  "notes": "Whole-beat cut of the parent full-length vertical: kept B00, B01, B03, B07, B08, B10; dropped B02, B04, B05, B06, B09. Compiled 2160x3840 Short measures 127.416667s across container, video and audio streams \u2014 well below the 180.0s cap. Volumedetect on the final mp4: mean_volume -27.0 dB, max_volume -4.0 dB (floor is -40 dB). Read 19 frames with the image-capable Read tool (compile contact sheet + 18 per-beat frames at 15/50/85%): B00 composer + folder chip + cascade lines inside SAFE916; B01 hesitant-writer trigger swap ('checks'->'renders', 'deps'->'video') executes cleanly; B03 code card with pipeline + three gates fits inside card and card inside safe area; B07 four-block failure/recovery card, no clipping; B08 verdict artifact heading + six numbered lines legible; B10 title 'Brutalist Command: art smoke.' with @NikBearBrown on dark ink polarity. No overflow, no clipping, no burned-in captions, no unresolved visuals. Compile Gate V independently reported 0 BLOCKER and 0 MAJOR across its 12-frame contact sheet. Human review pending \u2014 publication is a separate authorized workflow."
+}

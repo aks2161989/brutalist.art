@@ -1,0 +1,15 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "Duration is an OUTPUT, not a target — the consolidation floor is the load-bearing rule, and padding to a number is a coherence violation.",
+  "parent_master_sha256": "82e1bd11b25b1243becdf762631892904c774deb296f6b5c47db59b6aafca39c",
+  "kept_beats": ["B00", "B01", "B04", "B05", "B07", "B08", "B10"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Skill folder anatomy (SKILL.md / reference / scripts) is toolkit internals — the 16:9 long teaches it once; a Short doesn't need it to make the thesis land."},
+    {"beat_id": "B03", "reason": "Five-phase pipeline diagram (content_type → measure → floor → ceiling → runtime) is the mechanism proof; B04 and B05 carry the two design decisions the pipeline enacts, so the Short can lose the diagram beat without losing the reasoning."},
+    {"beat_id": "B06", "reason": "HOLD_FLOOR / assemble.py sync mechanism (Act 3) is an implementation detail — the Short establishes 'add a hold' in B05 and names 'assemble.py pads audio to match' in the B08 verdict recap; a dedicated act is more depth than a Short needs."},
+    {"beat_id": "B09", "reason": "Your Turn extended composer with the paste-ready duration-planner prompt is a long-form CTA; per REPOLOOP-SHORTS-PROMPT §4 a Short doesn't need to read the full exercise aloud."}
+  ],
+  "cut_first_review": "B00 hook (Liam-in-for-Bear lands the ask 'how long should this video be?' with three answer lines) → B01 BLUF hesitant-writer flips 'target' to 'output' and closes with 'Size the script. Hold to the floor.' → B04 MECHANISM Act 1 states the thesis verbatim from SKILL.md ('Duration is an OUTPUT, never a target') and explains why a uniform 30s/1min target destroys learning either by compression or padding → B05 WORKED_EXAMPLE names the consolidation floor per content_type (title 3–5s, structure 6–8s, mechanism 6–10s, equation 7–12s) and closes with 'Add a hold' → B07 FALSIFIABILITY delivers the sharp bite ('Padding is a coherence violation', the six-minute MOOC rule debunk, the schema-over-watchtime trade the skill accepts) → B08 VERDICT recaps the whole skill shape (output not target, content_type sets floor, Kokoro is master clock, below-floor→hold, over-ceiling→split, pace_check.py never edits, refuses to pad or compress) → B10 outro. Joins read clean: B01's 'Size the script. Hold to the floor.' → B04's 'First design decision, and it's the thesis.' (B04 IS the first design decision); B04's 'either way, learning fails' → B05's 'Second decision' (the 1st/2nd pair is preserved intact, no dangling 'third'); B05's 'Add a hold.' → B07's 'Here is where the skill bites' is natural; B07's 'shorter watchtime, cleaner schema' → B08's 'The verdict.' is the natural payoff; B08 → B10 outro. B08 names 'assemble.py pads audio to match the video hold' as a verdict recap without a Short-side walkthrough — accepted as a table-of-contents summary (per the explainer-Short precedent).",
+  "planned_duration_s": 120.7,
+  "rewrite_reason": null
+}

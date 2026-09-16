@@ -186,6 +186,10 @@ def validate_project(sheet):
     if not isinstance(slug, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*', slug):
         raise BuildError('metadata.slug must be a filename, not a path')
     default_voice(sheet)
+    from math_layout_check import math_layout_errors
+    math_errors = math_layout_errors(sheet)
+    if math_errors:
+        raise BuildError('Math layout preflight: ' + '; '.join(math_errors))
 
 
 def record_failure(folder, error, status='failed'):
@@ -205,6 +209,17 @@ def positive_duration(value, label):
     if not math.isfinite(value) or value <= 0:
         raise BuildError(f'{label}: duration must be positive and finite')
     return value
+
+
+SHORTS_CAP_S = 180.0  # Editorial rule: strictly LESS than 3:00, including tails.
+
+
+def require_short_duration(value, label='Short'):
+    duration = positive_duration(value, label)
+    if duration >= SHORTS_CAP_S:
+        raise BuildError(f'{label}: {duration:.6f}s must be strictly under 180 seconds; '
+                         'cut complete beats first, then rewrite only if necessary')
+    return duration
 
 
 def require_paperwork(folder):

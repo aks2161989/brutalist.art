@@ -1,0 +1,817 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: repoloop.sh",
+    "slug": "claude-liam-brutalist-command-repoloop",
+    "topic": "BRUTALIST · COMMAND: REPOLOOP.SH",
+    "kind": "command",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Vanakkam, Liam",
+    "greeting_note": "hello lexicon: Vanakkam (Tamil, one word). Fresh — does not repeat setup=Konnichiwa, approvals=Selam, doctor=Jambo, run=Ciao, shorts=Salam, todo/vertical=Hola, scene-index=Bonjour, scenes/help=Namaste, icons=Sawubona, list=Salaam, icon-build=Merhaba, smoke=Aloha. Slug char-sum mod 10 is not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "5e962a94ab5148acb858601a14ef0891",
+    "episode_id": "command-repoloop",
+    "order": 38,
+    "note": "Command teardown of ./repoloop.sh — the top-level shim (three-line bash) and the runtime/scripts/repoloop.py factory it wraps. The shim's only jobs: set errexit, resolve REPOLOOP_ROOT, exec python3 on repoloop.py with --repo and $@ forwarded. All logic lives in repoloop.py: discover() enumerates the intro trilogy, every SKILL.md, every case-branch in art (via ART_SOURCES), every executable runtime/scripts/*.py and runtime/qc/*.py, plus command-setup and command-repoloop. merge_queue() marks items whose source_sha256 or feedback_sha256 changed as pending. build_one() snapshots the parent toolkit into workspaces/<slug>/toolkit/ via snapshot_toolkit(), writes a per-episode settings.json (worker_settings() — Read/Glob/Grep/Bash + writes only in workspace+reel; deny git push, gh, curl, wget, ssh; deny .env/.ssh/.aws/.config/gcloud reads), strips ANTHROPIC_* env vars in worker_environment(), spawns 'claude -p PROMPT' foreground in a new session group, and verify_film() reads the beat sheet + probes the MP4 to enforce the shape gates (>=8 beats, Kokoro am_onyx, ClaudeComposerAsk cold open, HesitantWriter beat 2, greeting 'your turn' penultimate, ffprobe dims match aspect, audio mean_volume > -40dB, matching VISUAL-REVIEW.json with the current run_id). Modes: default single-drain; --forever watch loop with 10-minute rescan; --dry prints inventory; --prepare writes briefs/EXAMPLE-SOURCES.json without invoking Claude; --once builds one; --status reads queue.json + worker.lock; --stop writes .repoloop/STOP; --start detaches a supervisor; --shorts-only runs the derivative cut-first queue against completed native portraits; --landscape-only skips vertical; --only <id> targets a single film. All demo output in demo/RUN-LOG.txt is verbatim from this workstation, captured against the live repository — the --status block literally shows this very reel building (id=command-repoloop). Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged in README.md for the human reviewer before publication. No paid API, no upload, no network calls. episode.source_sha256 a7d5a3c3251ab4558978e081ba9f53dc400caba2cf38ad24eb1cd1905b613a24.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "shim": "repoloop.sh",
+      "factory": "runtime/scripts/repoloop.py",
+      "instruction_file": "REPOLOOP-PROMPT.md",
+      "queue_file": ".repoloop/queue.json",
+      "worker_lock": ".repoloop/worker.lock"
+    },
+    "tags": [
+      "Brutalist",
+      "repoloop",
+      "queue",
+      "supervisor",
+      "sandbox",
+      "Claude Code",
+      "serial worker",
+      "fail-closed gate",
+      "verify_film",
+      "worker_settings",
+      "snapshot_toolkit",
+      "shorts-only",
+      "landscape-only",
+      "command teardown",
+      "Teardown register"
+    ],
+    "build": {
+      "at": "2026-09-10T01:01:30",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Vanakkam, this is Liam, in for Bear. The ask — how do I build the whole Brutalist playlist without babysitting every film? Show me the loop that runs one fresh Claude worker per episode, on repeat.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 17,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Vanakkam, Liam' types above the composer"
+          },
+          {
+            "at": "0.25",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'planning the queue…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Vanakkam, Liam",
+            "topic": "BRUTALIST · COMMAND: REPOLOOP.SH",
+            "segment": "repoloop.sh",
+            "command": "How do I build the whole Brutalist playlist without babysitting every film? Show me the loop that runs one fresh Claude worker per episode, on repeat.",
+            "runningText": "planning the queue…",
+            "output": [
+              "one fresh Claude subprocess per film, serial",
+              "sandboxed writes; ANTHROPIC_* env vars stripped",
+              "resumable queue; verify_film() is the fail-closed gate"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T04:40:46.015814+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 11.07,
+      "render_duration_s": 11.083333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Correction is the reel's actual misconception. lead_silence_s: 0.8 so the typing has room. Min duration 9s.",
+      "narration_text": "Watch the writer walk this back. Repoloop dot sh does not render films. It spawns workers. One Claude subprocess per film, one queue, one lock — the loop drains the pending list and stops only when told.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'repoloop.sh / renders films.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'renders' turns terracotta, hesitates, backspaces, types 'spawns'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'films' turns terracotta, hesitates, backspaces, types 'workers'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'repoloop.sh / spawns workers.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "repoloop.sh\nrenders films.",
+            "triggerWords": "renders, films",
+            "replacementWords": "spawns, workers",
+            "seed": "repoloop-b01",
+            "face": "serif",
+            "fontSize": 240,
+            "lineSpacing": 2.6,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T05:00:04.859193+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 11.8,
+      "render_duration_s": 11.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the three-line shim. verbatim from repoloop.sh:1-10.",
+      "narration_text": "The shell entrypoint is three lines. Set errexit, resolve its own directory, and exec Python on runtime slash scripts slash repoloop dot py, forwarding every argument. There is no logic in bash. The factory lives in the Python file.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in; title reads 'repoloop.sh — three real lines'"
+          },
+          {
+            "at": "0.20",
+            "event": "shebang types"
+          },
+          {
+            "at": "0.35",
+            "event": "set -euo pipefail types"
+          },
+          {
+            "at": "0.55",
+            "event": "REPOLOOP_ROOT resolves via BASH_SOURCE"
+          },
+          {
+            "at": "0.80",
+            "event": "exec python3 …/repoloop.py types last"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "repoloop.sh — three real lines",
+            "code": "#!/usr/bin/env bash\n# repoloop.sh — build the Brutalist/Liam playlist, one fresh Claude session per film.\n# Default: drain the queue. --forever watches for new skills and feedback.\n# --dry lists coverage without writes; --prepare creates briefs without invoking Claude.\n# --once builds one film; --status reads progress; --stop requests a graceful stop.\n# --shorts-only selects the isolated cut-first queue; every Short must be < 3:00.\nset -euo pipefail\nREPOLOOP_ROOT=\"$(cd \"$(dirname \"${BASH_SOURCE[0]}\")\" && pwd)\"\nexec python3 \"$REPOLOOP_ROOT/runtime/scripts/repoloop.py\" --repo \"$REPOLOOP_ROOT\" \"$@\"\n\n# Three functional lines, six comment lines. No option parsing in bash;\n# all flag dispatch lives in runtime/scripts/repoloop.py.",
+            "sparkLine": "Three real lines. No logic in bash."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T04:42:15.618600+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 13.99,
+      "render_duration_s": 14.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the queue lifecycle. discover → merge_queue → build_one → verify_film. States: pending → building → review_ready | retrying.",
+      "narration_text": "The factory has one shape. Discover the inventory from the toolkit itself — the intro trilogy, every SKILL dot m d, every case branch in the art dispatcher, every executable runtime and Q C script. Merge that inventory into the on-disk queue, marking anything with changed source or feedback as pending. Then, for each pending item, snapshot the toolkit into an isolated workspace and spawn one Claude worker under a fail-closed sandbox.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in; title reads 'repoloop.py — the loop'"
+          },
+          {
+            "at": "0.20",
+            "event": "discover() body sketches (intro + skills + art + qc)"
+          },
+          {
+            "at": "0.50",
+            "event": "merge_queue() pending logic types under it"
+          },
+          {
+            "at": "0.75",
+            "event": "the drain loop (item → building → verify_film) types last"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "repoloop.py — the loop",
+            "code": "# discover() enumerates the film inventory from the toolkit:\ndef discover(repo):\n    items = []\n    for key, title, brief in INTRO:                # 3 onboarding\n        add(key, title, 'onboarding', ...)\n    for source in sorted(repo.glob('skills/*/**/SKILL.md')):\n        add('skill-'+name, ...)                    # every skill\n    for line in (repo/'art').read_text().splitlines():\n        # every case-branch in the art dispatcher becomes a film\n        add('command-'+name, ...)\n    add('command-setup', ...); add('command-repoloop', ...)\n    for d in ('runtime/scripts','runtime/qc'):     # executable utils\n        for source in sorted((repo/d).glob('*.py')): add(...)\n    return items\n\n# merge_queue() marks changed items pending; preserves old renders.\n# build_one() snapshots the toolkit, spawns claude, verify_film().\n# The main loop drains items whose retry_at <= now, serial, one lock.",
+            "sparkLine": "Discover. Merge. Snapshot. Verify."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T04:42:48.304597+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 22.89,
+      "render_duration_s": 22.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the sandbox. worker_settings() + worker_environment(). Verbatim from repoloop.py:268-346.",
+      "narration_text": "The worker's rights are constrained. Read anywhere it needs. Edit only inside its scratch workspace and its reel folder. Bash is allowed — but git push, g h, curl, wget, and s s h are denied outright. Dot e n v, dot s s h, dot a w s, and dot config slash gcloud are denied for reads. The worker's Anthropic environment variables are stripped so no A P I key can slip in. Kokoro is pinned to the local model. No M C P servers.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'worker_settings — the sandbox'"
+          },
+          {
+            "at": "0.22",
+            "event": "the permissions block types (allow + deny)"
+          },
+          {
+            "at": "0.55",
+            "event": "the sandbox filesystem/network block types"
+          },
+          {
+            "at": "0.80",
+            "event": "worker_environment() ANTHROPIC_* strip types below"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "worker_settings + worker_environment — the sandbox",
+            "code": "# repoloop.py — every Claude subprocess boots with THIS settings.json\ndef worker_settings(repo, workspace, folder, fellows):\n    return {'disableAllHooks': True,\n        'permissions': {'defaultMode': 'dontAsk',\n            'allow': ['Read', 'Glob', 'Grep', 'Bash',\n                      f'Edit(/{workspace}/**)', f'Edit(/{folder}/**)'],\n            'deny':  ['Read(**/.env)', 'Read(~/.ssh/**)',\n                      'Read(~/.aws/**)', 'Read(~/.config/gcloud/**)',\n                      'Bash(git push *)', 'Bash(gh *)',\n                      'Bash(curl *)', 'Bash(wget *)', 'Bash(ssh *)']},\n        'sandbox': {'enabled': True, 'failIfUnavailable': True,\n            'autoAllowBashIfSandboxed': True,\n            'allowUnsandboxedCommands': False,\n            'filesystem': {'allowWrite': [str(workspace), str(folder)],\n                'denyWrite': [str(repo/'runtime'), str(repo/'skills'),\n                               str(repo/'.git'), str(fellows)],\n                'denyRead': ['~/.ssh', '~/.aws',\n                              '~/.config/gcloud', str(repo/'.env')]},\n            'network': {'allowedDomains': ['localhost', '127.0.0.1'],\n                        'allowLocalBinding': True}}}\n\n# ANTHROPIC_* and *_API_KEY are stripped before spawn:\ndef worker_environment(repo):\n    for k in list(env):\n        if k.endswith('_API_KEY') or k in ('ANTHROPIC_AUTH_TOKEN',\n                'ANTHROPIC_BASE_URL', 'CLAUDECODE', ...): env.pop(k)",
+            "sparkLine": "Locked writes. Locked env. No MCP."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-10T04:43:22.153122+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 25.47,
+      "render_duration_s": 25.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — --dry inventory. Verbatim from demo/RUN-LOG.txt.",
+      "narration_text": "Here is dash dash dry, verbatim. Fifty-six films — three onboarding, eighteen skills, seventeen art commands, twelve utilities, six Q C helpers. Setup and repoloop are canonical commands, not skills. The list is derived from the toolkit, not a hand-maintained manifest. If you add a SKILL dot m d tomorrow, the loop finds it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./repoloop.sh --dry   (verbatim)'"
+          },
+          {
+            "at": "0.25",
+            "event": "onboarding trilogy types"
+          },
+          {
+            "at": "0.42",
+            "event": "skills block types"
+          },
+          {
+            "at": "0.65",
+            "event": "commands + repoloop.sh row types"
+          },
+          {
+            "at": "0.85",
+            "event": "utilities + qc rows type"
+          },
+          {
+            "at": "0.94",
+            "event": "final summary line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "$ ./repoloop.sh --dry   (verbatim, abridged)",
+            "code": "01 what-is-brutalist:      What Is Brutalist?           [onboarding]\n02 download-and-set-up:    Download Brutalist …         [onboarding]\n03 your-first-project:     Your First Brutalist Project [onboarding]\n04 skill-ai-explainer:     The ai-explainer Skill       [skill]\n...\n21 skill-your-turn:        The your-turn Skill          [skill]\n22 command-help:           Brutalist Command: art help  [command]\n...\n37 command-setup:          Brutalist Command: setup     [command]\n38 command-repoloop:       Brutalist Command: repoloop.sh [command]\n39 runtime-align:          Brutalist Utility: align.py  [utility]\n...\n51 qc-beat-lint:           Brutalist Utility: beat_lint.py  [utility]\n...\n56 qc-wcag-margin-check:   Brutalist Utility: wcag_margin_check.py [utility]\n\n56 films; fresh Claude context per film; Liam; no captions; no publication.",
+            "sparkLine": "56 films. Derived from the toolkit itself."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-10T04:43:56.597949+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 18.47,
+      "render_duration_s": 18.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — --status live. Verbatim from demo/RUN-LOG.txt — the 'building' item is THIS reel.",
+      "narration_text": "And here is dash dash status, live. Thirty-seven review-ready. Eighteen pending. One building — that is this reel. Its run I D and log path are printed for you. Because the loop takes an f-cntl lock on worker dot lock, running is a truth about a single supervisor, not a truth about a machine.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./repoloop.sh --status   (live)'"
+          },
+          {
+            "at": "0.22",
+            "event": "counts + running:true type"
+          },
+          {
+            "at": "0.50",
+            "event": "the active_log block types with run_id"
+          },
+          {
+            "at": "0.80",
+            "event": "the 'command-repoloop, building' block types last"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "$ ./repoloop.sh --status   (live — this reel is 'building')",
+            "code": "{\n  \"updated_at\": \"2026-09-10T04:28:37.203944+00:00\",\n  \"counts\":  { \"review_ready\": 37, \"building\": 1, \"pending\": 18 },\n  \"running\": true,\n  \"pause_reason\": \"\",\n  \"pause_until\": 0,\n  \"active_log\": {\n    \"id\":         \"command-repoloop\",\n    \"run_id\":     \"cd46b905ecb54c35b0f71b2db5a04ab1\",\n    \"log\":        \".repoloop/logs/…-repoloop-1789014517.jsonl\",\n    \"started_at\": \"2026-09-10T04:28:37.212856+00:00\"\n  },\n  \"active\": [\n    { \"id\":     \"command-repoloop\",\n      \"slug\":   \"claude-liam-brutalist-command-repoloop\",\n      \"title\":  \"Brutalist Command: repoloop.sh\",\n      \"status\": \"building\",\n      \"attempts\": 0,\n      \"note\": \"New or changed source/feedback; old renders preserved\" }\n  ]\n}",
+            "sparkLine": "One supervisor. One lock. One truth."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-10T04:44:35.076119+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 16.34,
+      "render_duration_s": 16.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — verify_film() fail-closed gate. Verbatim structure from repoloop.py:396-483.",
+      "narration_text": "This is the fail-closed gate. Verify film reads the beat sheet for both aspects. Fewer than eight beats — refuse. Non-Liam voice — refuse. First beat not Claude Composer Ask — refuse. Second beat missing Hesitant Writer — refuse. Penultimate greeting not Your Turn — refuse. Output M P 4 dimensions must match the requested aspect exactly. Audio must decode above minus forty d B. And a matching A I visual-review record with the current run I D must exist. The refusal is the whole point of the command.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'verify_film — every raise is a refusal'"
+          },
+          {
+            "at": "0.20",
+            "event": "min-beats + non-Liam voice guards type"
+          },
+          {
+            "at": "0.45",
+            "event": "cold-open + BLUF + Your Turn guards type"
+          },
+          {
+            "at": "0.70",
+            "event": "ffprobe dims + audio mean_volume guards type"
+          },
+          {
+            "at": "0.88",
+            "event": "VISUAL-REVIEW.json match guard types last"
+          },
+          {
+            "at": "0.95",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "verify_film — every raise is a refusal",
+            "code": "# repoloop.py — the fail-closed gate. Runs after 'claude' exits 0.\ndef verify_film(folder, item, dimensions):\n    for aspect, size in dimensions.items():\n        sheet = read_json(reel/'beat_sheet.json', {})\n        md, beats = sheet['metadata'], sheet['beats']\n        min_beats = 3 if aspect == 'short' else 8\n        if len(beats) < min_beats or md.get('playlist') != 'Brutalist' \\\n                or md.get('voice_kokoro', md.get('voice')) != 'am_onyx':\n            raise BuildError(f'{aspect}: missing film / voice')\n        # cold open + hesitant writer + Your Turn — three shape gates\n        if not patterns[0].startswith('ClaudeComposerAsk'):     raise ...\n        if 'HesitantWriter' not in patterns[1]:                  raise ...\n        if beats[-2]['shot']['remotion']['props']['greeting'] \\\n               .lower().strip() not in ('your turn', 'your turn.'): raise ...\n        # ffprobe dims — must match native size exactly, no upscaled crop\n        if (video['width'], video['height']) != tuple(size): raise ...\n        # audio must actually be there\n        if float(mean_volume) <= -40: raise ...\n        # matching AI visual-review, current run_id, current beat_sheet SHA\n        if review['run_id'] != item['run_id']: raise ...",
+            "sparkLine": "Every raise is a refusal. The refusal is the point."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T04:45:17.899216+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 29.06,
+      "render_duration_s": 29.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FAILURE_RECOVERY",
+      "role_note": "FALSIFIABILITY — an unknown --only id. Verbatim from demo/RUN-LOG.txt. Guard fires BEFORE the queue is touched.",
+      "narration_text": "One failure worth showing. Ask the loop for an inventory I D that does not exist. The guard fires immediately: Unknown dash dash only I D, inspect dash dash dry. Exit two, no queue mutation, no worker spawned. Recovery is one command — dash dash dry — read the real slugs and try again. The loop's contract is that unknown work is never work.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'recovery — verbatim, one bad flag'"
+          },
+          {
+            "at": "0.20",
+            "event": "the bad command types"
+          },
+          {
+            "at": "0.40",
+            "event": "the [repoloop] Unknown --only ID line lands"
+          },
+          {
+            "at": "0.55",
+            "event": "[exit 2 — no queue mutation] annotation types"
+          },
+          {
+            "at": "0.75",
+            "event": "the recovery ./repoloop.sh --dry command types"
+          },
+          {
+            "at": "0.88",
+            "event": "the real slug line highlights terracotta"
+          },
+          {
+            "at": "0.95",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "recovery   (verbatim; one bad flag, one refusal)",
+            "code": "# BAD — inventory ID that the loop does not discover\n$ ./repoloop.sh --only totally-fake-id --dry\n[repoloop] Unknown --only ID; inspect --dry\n[exit 2]\n\n# The guard fires in main() BEFORE the queue is written:\n#   inventory = scan(repo)\n#   if args.only and args.only not in {i['id'] for i in inventory}:\n#       raise BuildError('Unknown --only ID; inspect --dry')\n# No queue mutation. No workspace snapshot. No worker spawn.\n\n# RECOVERY — one command reads the real slugs:\n$ ./repoloop.sh --dry\n...\n38 command-repoloop:  Brutalist Command: repoloop.sh   [command]\n...\n\n# Then re-run with the real id:\n$ ./repoloop.sh --once --only command-repoloop",
+            "sparkLine": "Unknown work is never work."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T04:45:51.762855+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 19.39,
+      "render_duration_s": 19.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, in the order you touch it.",
+      "narration_text": "So — repoloop dot sh. A three-line shim over a serial film factory. Six moving parts, in the order you touch them: the shim, discover, merge queue, snapshot toolkit, sandboxed worker, verify film. No parallelism. No auto-publish. No A P I-key fallback. A stop file gracefully terminates. A worker lock forbids duplicates. Six things — nothing else.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'repoloop.sh — the whole surface, in the order you touch it'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.50",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.62",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.74",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.86",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "repoloop.sh — the whole surface, in the order you touch it",
+            "artifactLines": [
+              "the shim — 3 bash lines; sets errexit, resolves REPOLOOP_ROOT, execs python3 runtime/scripts/repoloop.py --repo $ROOT $@.",
+              "discover() — inventory derived from the toolkit itself: intro trilogy + skills/*/SKILL.md + case-branches in art + runtime & qc executables.",
+              "merge_queue() — reconciles inventory with .repoloop/queue.json; source_sha256 or feedback_sha256 change ⇒ status=pending, old renders preserved.",
+              "snapshot_toolkit() — copies runtime + skills + brands + docs into workspaces/<slug>/toolkit/; baseline SHA-256 map; symlinks node_modules.",
+              "worker_settings() + spawn — sandboxed 'claude -p PROMPT'; ANTHROPIC_* stripped; deny git push/gh/curl/wget/ssh; writes only workspace + reel.",
+              "verify_film() — fail-closed shape + ffprobe + audio + AI visual-review gate; refusal is the whole reason the command exists. Never publishes."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-10T04:47:25.995886+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 19.86,
+      "render_duration_s": 19.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed. Never starts the loop.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at your own copy of the Brutalist toolkit: run dot slash repoloop dot sh dash dash dry and group the films by kind. Then run dot slash repoloop dot sh dash dash status and read out the pending count, the review-ready count, and the active run I D. Then explain in one line what would happen if I edited FEEDBACK dot m d inside an already review-ready reel folder — walk the code in repoloop dot py that decides. Do not start the loop.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Read the repoloop queue — do NOT start the loop",
+            "command": "From the brutalist.art toolkit root: (1) run ./repoloop.sh --dry and give me the count grouped by kind — onboarding, skill, command, utility. (2) run ./repoloop.sh --status and read out the pending count, the review_ready count, and any active run_id. (3) Explain in one line what would happen if I edited FEEDBACK.md inside an already-review_ready reel folder — walk the code in runtime/scripts/repoloop.py that decides. DO NOT run --once, --forever, --start, or --stop.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — --dry prints a numbered inventory grouped by [kind]",
+              "step 2 — --status returns a JSON block; running:true means a supervisor holds worker.lock",
+              "step 3 — merge_queue()'s feedback_sha256 check pushes an edited FEEDBACK.md back to status='pending'"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T04:48:51.429307+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 26.82,
+      "render_duration_s": 26.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-10T01:01:30"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Command: repoloop dot s h. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 7,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: repoloop.sh.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Command: repoloop.sh.",
+            "slug": "claude-liam-brutalist-command-repoloop"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-10T04:49:13.372283+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 5.67,
+      "render_duration_s": 5.708333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-10T01:01:30"
+      }
+    }
+  ]
+}

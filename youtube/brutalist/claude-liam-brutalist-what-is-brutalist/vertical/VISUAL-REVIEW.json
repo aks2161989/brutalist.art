@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "07663aa5c9f343758157ff7530f463d7",
+  "source_sha256": "eaeb9039c38691606a165ceba147dfd3ca0334ca593fe38b9199f6823d35b863",
+  "beat_sheet_sha256": "f6863d413ceaa724757c0929cd5b280debcc6d90a07dfa3c4962802edb1ab361",
+  "video_sha256": "c339f1b5555e847096f3ea975249042c50b86714c8a29fee20d3eb58398c3f9c",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "86a719a0d8f8f3849c108a553316e0d0add6a482ac0334c107a7915da85804aa"}
+  ],
+  "notes": "Re-verified 2026-09-11 under run_id 07663aa5c9f343758157ff7530f463d7. MP4 SHA-256 c339f1b5... confirmed on disk; matches .verified.json (state: ready, 170.5s). Beat sheet SHA-256 f6863d41... confirmed unchanged. Source_sha256 changed from prior run due to toolkit commits ba2d0e0 (preserve report audio, enforce safe fellows exports) and 7ee2da6 (ElevenLabs permanently removed; Liam Kokoro everywhere) — neither commit touches EP 01 sources. FEEDBACK.md has no human notes. Portrait 2160x3840 companion; native 9:16 layouts (Wib*916 compositions) — not a cropped landscape master. Contact sheet _qc/contact_sheet.png (SHA-256 86a719a0...) read and confirmed: B00 ClaudeComposerAsk916 '@HumanitariansAI • Brutalist' header, 'What Is Brutalist?', 'Ciao, Liam' greeting and composer; B01 BrutalistHesitantWriter916 large serif correcting 'video recipe' to 'text'; B02 WibRecipe916 pipeline stages; B03 WibPipeline916 'Brief in. Four K out.'; B04 WibChange916 'One field. One change.' and 'Hola, Liam.'; B05 WibDivision916 'Your lane. Claude's lane.'; B06 WibNotClaims916 'What Brutalist isn't.' three cards; B07 WibVerdict916 'Film as code, in three lines.'; B08 ClaudeComposerAsk916 'Your Turn'; B09 WibOutro916 title restate '@HumanitariansAI' and 'Liam, in for Bear.' No captions, no slates observed. Gate V: 0 BLOCKER, 0 MAJOR. Portrait review is independent of landscape review. Human review pending; Bear watches next."
+}

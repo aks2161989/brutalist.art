@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "48e0905963d54723ba7b587f9d86d97e",
+  "source_sha256": "f99dc63da9c6bb5c9c229cf937a87c2557fb78b30421641af094471eb38f0286",
+  "beat_sheet_sha256": "5c50742f0667bb48662424a1c8504b02b6b679dbafc5e776e44ea8bb5445bb2b",
+  "video_sha256": "a5d3aa72debec332aa69e9148007aefefbd126fae1f30d3dd8050efd78cc6d65",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "67b8e21900c440d2739960bbbb5ec649b2fed31e631197f17e582b8f671d0a8e"}
+  ],
+  "notes": "Landscape 3840x2160 native master, 177.0s. 12/12 beats filled. Re-verified 2026-09-12 after art source update (godot-* dispatch added 2026-09-11; line numbers updated — B03 title now 'art:56', fallthrough at art:127-129). Landscape beats B03/B04/B05/B07/B08 were re-rendered 2026-09-11T17:xx and incorporated in the landscape compile at 2026-09-11T17:27. Landscape build-state hashes are consistent with current media files. Every beat's 50% and 85% frames Read directly: ClaudeComposerAsk916 cold open (B00) with topic/greeting/output lines in portrait, hesitant writer correcting 'skill' to 'command' (B01), ClaudeCodeBeat916 mechanism showing 'art:56' correct updated line (B03), full 17-line verbatim output (B04), four-alias case pattern (B05), skills catalog contrast (B06), failure path exit-2 (B07), recovery path (B08), ClaudeVerdictArtifact916 with 4 numbered rules (B09), Your Turn ClaudeComposerAsk916 (B10), ClaudeTitleOutro916 with 'Brutalist Command: art help.' and @NikBearBrown handle (B11). Gate V clean: 0 BLOCKER, 0 MAJOR across 24 sampled frames. Non-fatal motion histogram warning: 7/12 code-cascade beats over ~40% pantry cap — accepted for a command-source teardown. Skin lint warnings on B00/B11 for 916 portrait variants — expected per native portrait build. Human review pending."
+}

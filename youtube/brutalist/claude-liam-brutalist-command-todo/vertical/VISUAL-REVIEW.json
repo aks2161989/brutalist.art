@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "e66ff34b0ab34b038ee5d5d5b8cb13b4",
+  "source_sha256": "30d1a0602e5816a06a443392ae6edbf3ac24abec02a10d14a575c6dd6aa13f46",
+  "beat_sheet_sha256": "0ae522347c569b4e6053b60918dea70bda9d99c28064e9302c0d9347807a62b8",
+  "video_sha256": "400eb021c8011e14810b8beb1256b6bc79cb3ab79457c1189f5bd15e2eb6ed27",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "8f1a26fbd42536c8e5b7eac5d9fa41c168800ead689c942d41690b82ac5335ab"},
+    {"path": "_qc/B00_evidence.png", "sha256": "69147ff220a400cdf962bc702b344e04e518a0620a0bc2faee91e39cf7684e95"},
+    {"path": "_qc/B01_evidence.png", "sha256": "b028a8735b73b3286229407749a007bb2a37daa5cafd6bddac5a9019651bcb4f"},
+    {"path": "_qc/B02_evidence.png", "sha256": "b853a796f0d2a88c4d83240c23268810b166c1121dfdbd89d6aeeac1a4e739ac"},
+    {"path": "_qc/B06_evidence.png", "sha256": "6c03cf3d786f481644db6f086f06a3917e23ff673ee16cbfa363acd821790d52"},
+    {"path": "_qc/B09_evidence.png", "sha256": "6464494e95e84ccd033ea14a515318c55534794efa641f16946594dc9ceb2356"},
+    {"path": "_qc/B11_evidence.png", "sha256": "fceec0827e86c5b3e4a2225d26bc9382d092dc5b9d741ef5ade2bc71f62e256e"}
+  ],
+  "notes": "Re-verified on invocation e66ff34b0ab34b038ee5d5d5b8cb13b4 (resume after usage-limit pause). MP4 hash confirmed unchanged: 400eb021. Vertical 2160x3840, 167.875s, 12/12 beats filled, 0 slates. Frames re-read and inspected this session: full 12-beat contact sheet (all thumbnails filled, correct 9:16 aspect visible), B00 (ClaudeComposerAsk916 cold open — 'Hola, Liam', 'art todo my-reel/ --open', @NikBearBrown chip, four answer lines well within safe area), B01 (BrutalistHesitantWriter916 — three-line layout 'art todo / is a / receipt.|' in large serif filling 9:16 safe area; coverage >55%), B11 (ClaudeTitleOutro916 — 'Brutalist Command: art todo.' wraps correctly across three lines, @NikBearBrown handle per OUTRO-LOCK, red period, well within portrait safe area). Previously documented fixes retained: (1) CommandTodo.tsx SparkLine +60px portrait bump resolved SAFE916.y undershoot on B02–B08 Todo* illustrations; (2) BrutalistHesitantWriter916 restructured to 3-line layout with fontSize 240 to pass 55% coverage gate. No captions, no unresolved slates, all narration audible. Human review pending; nothing published."
+}

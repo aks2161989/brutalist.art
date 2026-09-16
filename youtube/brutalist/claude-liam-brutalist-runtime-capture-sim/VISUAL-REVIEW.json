@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "d5030c4cf83c4be7abdb281854682ab7",
+  "source_sha256": "66919b1f4df398c1f4f8e9e0ea6c28fe951b7f10458bba501e4214da095cd269",
+  "beat_sheet_sha256": "558592aa85ad69f4721b923e937bfdded79bf6191bc10027b9a471b8cc6d9d48",
+  "video_sha256": "187a66cedfa7a7db3fe85b9862124647398d89c19f1aa42e2ed7b087b4cac072",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "6310893a1a4595d41c9b0ffefa52c4668b522228f3fbe712d92ba72b9a5015b8"
+    },
+    {
+      "path": "_qc/review/land_t5s.png",
+      "sha256": "cf7c8ccb3128a45efeeec946d3cb088a92d7f5cc3cbd03debd7929129ae5ff9e"
+    },
+    {
+      "path": "_qc/review/land_t25s.png",
+      "sha256": "6c94dbc45510b33d277e5811ad07ac165d8cb713b93643a9e812ceb00ba8359b"
+    },
+    {
+      "path": "_qc/review/land_t100s.png",
+      "sha256": "46aa2a90100b49cfc752a65a2d937b329c104e47a5a77bda36d3e6bcd855982d"
+    },
+    {
+      "path": "_qc/review/land_t272s.png",
+      "sha256": "ebe40bd708c8710d0be00b58c9af7d39bc54766b44668b3ce0280d1010a52fc0"
+    },
+    {
+      "path": "_qc/review/land_last.png",
+      "sha256": "40859b7c613b727fd8644aa9dd416c619c0730a54d7df2965e4fea424f3c529b"
+    }
+  ],
+  "notes": "Re-verification run for invocation d5030c4cf83c4be7abdb281854682ab7 (2026-09-13). Source file capture_sim.py sha256sum=ccb75479c75081bede9d63d0d4913075b3497db183a035b5e0648d5dcb5d4a34 is byte-identical to the file used in the original build (recorded in beat_sheet.json note); the invocation's source_sha256 field (66919b...) uses a different computation method from sha256sum. Gate V re-run this session: python3 runtime/qc/final_frame_check.py <reel> --mp4 <landscape.mp4> → frames=24 BLOCKER=0 MAJOR=0. Video SHA unchanged: 187a66...; all six QC frame SHAs independently verified against previous review record — all match. Directly viewed contact_sheet.png plus five review frames: B00 cold-open composer (5s: 'Tere, Liam' greeting, @HumanitariansAI folder chip, three-line output cascade: serves on local port / launches headless Chromium / ffmpeg remuxes webm → media/output.mp4 + media/change.mp4); B10 'Your Turn' (272s: paste-ready 5-step script JSON prompt, @HumanitariansAI folder chip, three grading lines); B11 outro (last frame: 'Brutalist Utility: capture_sim.py.' + @NikBearBrown per OUTRO-LOCK.md, terracotta pixel mascot below handle on charcoal — flagged for human reviewer before publication). Contact sheet confirms B01 BLUF corrects to 'capture_sim / RECORDS / the browser.' (three short lines, safe-area filled ≥55%), B02 pipeline five-phase flow, B03–B08 code-cascade cards legible, B09 verdict artifact, B10 Your Turn. No captions, no unresolved slates, no edge bleed. Source code read and verified: line numbers and code excerpts in all ClaudeCodeBeat props (B03:B03–h capture, B04:113–260 capture(), B05:266–365 capture_click_through(), B06:368–563 capture_scripted(), B07 demo fixture, B08 sandbox failure) match the current capture_sim.py exactly. Motion pantry warning (code-cascade 6/12 = 50%) accepted — Python utility teardown where code is the correct instrument for six distinct source sites. Human viewing/editing is next; no upload, no commit."
+}

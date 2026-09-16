@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "81d4ac79a3f54016801f0269956c2d7c",
+  "source_sha256": "cf8873d1a540147a49b11feff3dd4ab774fd4f0e0ef9941c52895bd691bb628c",
+  "beat_sheet_sha256": "99e3e7a34b6647ad9d2797d31be6fa85d84a77d0b07db1f006d6f4f941ee4c57",
+  "video_sha256": "5678b1bdcd3b7ec568a4e2dace0a946e9262f60a2b71e2d084cecc227dd8378f",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/landscape/contact-sheet.jpg", "sha256": "1bb233c7af6117d9a8aa806b0b31cc9c5b1c116db0a42701e52e02deec31403e"}
+  ],
+  "notes": "Read the landscape contact sheet (13-beat grid, midpoint frames) of the 3840x2160 master rebuilt for run_id 81d4ac79. Source changes addressed: (1) setup --install pipeline refactored from || chaining to if/! blocks with explicit b/r output headers — B05 code block updated; (2) setup success output now includes ./art keys and ./art smoke advice lines — B04 code block updated and narration updated ('a green table means dep checks passed, not that a video renders — run art smoke for end-to-end proof'); B04 audio regenerated (20.78s vs prior 15.79s). Total duration 290.5s (was 285.5s). All 13 beats verified: B00 cold-open composer 'Konnichiwa, Liam' @HumanitariansAI chip; B01 hesitant writer 'setup / verifies live.'; B02 shebang header; B03 requirements.txt pip contract; B04 all-green FEATURE table + ./art keys + ./art smoke advice lines + 'Green dep checks ≠ video renders. art smoke proves it.' spark line; B05 four-phase --install with if/! pattern and explicit b/r output; B06 check() eval dynamic vars; B07 live verification; B08 ElevenLabs guard; B09 recovery (models unlinked → red audio row → --install); B10 six-line verdict artifact; B11 Your Turn handoff; B12 outro 'Brutalist Command: setup.' + hardcoded @NikBearBrown (OUTRO-LOCK) + slug-seeded mascot. ffprobe: 3840x2160 h264 · 290.5s · aac 48kHz; volumedetect: mean -27.0 dB / max -2.9 dB. Gate V (final_frame_check.py): 0 BLOCKER / 0 MAJOR — verified.json stamped. Human review pending."
+}

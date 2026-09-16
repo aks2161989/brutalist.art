@@ -1,0 +1,15 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "pantry.py normalizes raw finds into beat-named media slots — and why the naming rule is the whole contract",
+  "parent_master_sha256": "912b1076d47765d9a51d7af44cafe3a3e629957687080a212fb0d81a3a5df845",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B06", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Framework/Pantry Law definition — the mechanism beats B03 and B04 make the same point concretely; abstract statement belongs in the long film"},
+    {"beat_id": "B05", "reason": "Image-path code detail (DOCUMENT crop, RGB conversion, resolution warning) — too deep for Short; the B04 three-step overview suffices"},
+    {"beat_id": "B07", "reason": "Provenance sidecar stubs — implementation detail that belongs in the long; no dangling reference after removal"},
+    {"beat_id": "B10", "reason": "Your Turn CTA with full exercise prompt — the Short ends on the verdict; a long exercise belongs in the 16:9 film"}
+  ],
+  "cut_first_review": "B00 introduces Liam and the tool. B01 delivers the BLUF (beat-prefix naming is mandatory). B03 gives the concrete regex rule. B04 covers the three-step pipeline overview. B06 shows the video-path specifics (portrait detection, report audio preservation). B08 states the two hard-stop conditions vs. silent skips — the essential caveat. B09 delivers the verdict including the no-dry-run limitation. B11 is Liam's sign-off. Removing B02 leaves no gap: B01 establishes the naming contract and B03 immediately demonstrates it with code. Removing B05/B07 removes detail-track beats with no forward references. Removing B10 is clean — B09 (verdict) transitions directly to B11 (outro) with no dangling prompt.",
+  "planned_duration_s": 113.6,
+  "rewrite_reason": null
+}

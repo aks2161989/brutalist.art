@@ -1,0 +1,16 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "The nopunt skill is the anti-punt catalog Brutalist authors check before dropping ANY placeholder: HOLD is only a real archival photograph, everything else in the catalog animates (unfilled = bug), and SHOW / HOLD / CARD is the per-beat vocabulary.",
+  "parent_master_sha256": "0a345d44717058db9e6164b0acf6936b0031489cc422c930056018d1594d2ba9",
+  "kept_beats": ["B00", "B01", "B04", "B05", "B06", "B07", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "SKILL.md file anatomy and sibling reference tree is repo-internals detail; belongs in the 16:9 long."},
+    {"beat_id": "B03", "reason": "The five-gate pipeline walkthrough (Step Zero library search, route, classify, reject, log) is process detail; the Short lands the rule and vocabulary without it."},
+    {"beat_id": "B08", "reason": "Falsifiability beat about logging misses to TEMPLATE-MISSES.md is a specific edge-case handoff; belongs in the long."},
+    {"beat_id": "B09", "reason": "Six-line verdict recap restates points the Short did not cover (Step Zero, tool routing details, miss logging); removing it avoids dangling references."},
+    {"beat_id": "B10", "reason": "Extended Your-Turn audit prompt is the long film's CTA; per shorts guidance a detailed CTA can be cut."}
+  ],
+  "cut_first_review": "Retained narration flows: (B00) Liam introduces the nopunt skill and previews three lines — anti-punt catalog / photos-only HOLD / unfilled animatable = bug. (B01) BLUF corrects the misread: nopunt is not a linter, it is a catalog you check before filling a beat. (B04) 'First design decision' establishes the one rule: HOLD only for a real photograph, everything else in the catalog animates, so leaving animatable content unfilled is a bug. (B05) 'Second decision. The catalog.' names the six families — data, structure, math, enumerated concepts, code/app, text bookends — and shows shape picks the tool. (B06) 'Third decision. The block-list.' names the five punt costumes that map back to catalog rows, telling authors to draw the row instead. (B07) 'Fourth decision' fixes the SHOW / HOLD / CARD vocabulary and ends on the terminal claim 'anything else is a PUNT — a bug, not a style choice.' (B11) Liam signs off. Numbered transitions (First, Second, Third, Fourth) are contiguous, no dropped beat leaves a dangling number; catalog references between B05→B06 stay coherent; the outro is unchanged and still lands.",
+  "planned_duration_s": 168.21,
+  "rewrite_reason": null
+}

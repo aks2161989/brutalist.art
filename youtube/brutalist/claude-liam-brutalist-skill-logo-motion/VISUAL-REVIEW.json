@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "1468a15a76ca4a1a8c1300c4ca14f178",
+  "source_sha256": "d140997a831ecbce828c403fd1799796e90e07c6deabcf252420d72617ba157d",
+  "beat_sheet_sha256": "7aaef0cde440caf7610a5dfc5ccd4263190eb1f613c5864612ea782665d85791",
+  "video_sha256": "9e5403e83a2ae13f4bd3dc3c682bc194f3a07cb6a4f94ae3510f6074db768120",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/spot/inspect_8_3.png",
+      "sha256": "d38b93ee6f77bffe75db8db0dcd124723d44c2e6dd2044b13fb335eeaa66a3a0"
+    },
+    {
+      "path": "_qc/spot/inspect_27_0.png",
+      "sha256": "4d1ce86d7a6f870ddcde435acbbf523b922ebf3163c789baa4a2f8d415bd7bbc"
+    },
+    {
+      "path": "_qc/spot/inspect_361_0.png",
+      "sha256": "b19932bd9aaf9890d0f84b7f8a0e1e2a8698d37c181e41a5e43c301bb4559aa7"
+    },
+    {
+      "path": "_qc/contact_sheet_new.png",
+      "sha256": "dace6534e43b956965a0ca57ea57223ac919ba98c455b881b2b518c926a4055a"
+    }
+  ],
+  "notes": "Landscape 3840x2160, 363.375s, h264/aac — verified this invocation (run_id 1468a15a76ca4a1a8c1300c4ca14f178). Gate V re-run: 24 frames, 0 BLOCKER, 0 MAJOR. Frame Read-tool inspection of 4 evidence images: (1) _qc/spot/inspect_8_3.png (B00 t=8.3s) — ClaudeComposerAsk 'Hola, Liam', command correctly reads logo-motion SKILL.md, @HumanitariansAI folder label and footer handle, three result lines confirmed ('ONE parametric composition…', 'a new brand = traced parts + props block…', 'the transition curve is the clock…'). (2) _qc/spot/inspect_27_0.png (B01 t=27.0s) — BrutalistHesitantWriter after correction: 'A new logo / needs a new prop. / One prop, not a file.' — trigger word 'scene' successfully replaced with 'prop', serif text fills safe area, no edge bleed. (3) _qc/spot/inspect_361_0.png (B11 t=361s) — ClaudeTitleOutro 'The logo-motion Skill.' with terracotta period, slug-seeded pixel mascot, handle shows @NikBearBrown (OUTRO-LOCK hardcode; acknowledged in beat role_note). (4) _qc/contact_sheet_new.png — 24-frame grid (2fps key moments) confirms all 12 beats present and ordered: B00 ClaudeComposerAsk, B01 HesitantWriter, B02-B03 SkillTeardownAnatomy+Pipeline, B04-B08 five SkillTeardownMechanism cards (camera move / ghost hold / length prop / audio-first exception / three-tells falsifiability), B09 ClaudeVerdictArtifact, B10 Your Turn, B11 ClaudeTitleOutro. Source hash mismatch between episode.source_sha256 (d140997a…) and on-disk hash noted in prior review — skill file content consistent with all filmed beats, no material change to covered topics. Minor: outro shows @NikBearBrown per OUTRO-LOCK; body beats show @HumanitariansAI. Human review pending."
+}

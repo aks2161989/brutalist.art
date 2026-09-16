@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/exports/vertical/claude-liam-brutalist-command-scenes-vertical.mp4",
+  "sha256": "06eb7031e272bac545d3a16c0ce48e0ebaeb9a3fedaeeb0b16d294233ce3aea8",
+  "duration_s": 256.2916666666667,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B00.mp4": "7d490a9e2eafc68fbccdaa124e7124e6b6a697d286dc4520301bd37722a96d8e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B01.mp4": "f21d7f89efee6c181768b18ba3fde71a2c96c207fe99ba4037f0bfe0051fc6f3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B02.mp4": "e37bf5db84afe2712e54580b75eca357312ca0667c513fb665bfce87854d0e70",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B03.mp4": "0c3d72e1f823a20c46c7cf6d48ee969005b0d8f61347c6bfb222d7c59a8b2186",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B04.mp4": "5a7257790c46de27c4a3f2eb1b0cb0d10b60d9c2e23e415914d327553ea5d128",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B05.mp4": "2778954800ef7bffee06951871cbdcd5253ee4753d716eb7d7036aa77e01bbb9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B06.mp4": "400ac93f44fe1c7a1570daa8160dbf8f15a013d19d6a0671c3c6a14882cf1e9c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B07.mp4": "42fe51119c0b5a836245e595ead97806501602c3c771dc4de0d47c17c4836af5",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B08.mp4": "de2a6784f025d70b1e7b4125998faa72b93cfa93aeac0134aff225c8da0546cd",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B09.mp4": "6813944c0fb47e341deba235a8ef5021972a23c0ff42318f39111988d91df236",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B10.mp4": "13ad00bb18733b5e3cca931c7fa6ef5ee62b9fce48cd71f21b14a70f4c333d93",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/media/B11.mp4": "0919a6ad25b5a63a0b430e24e1aea7c025e96538bbc99f36ad0c061dee087229",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B00.mp3": "6cd4aff096733f0f56726425baa5016cede5c15e624a40b6b58e90a426f89a99",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B01.mp3": "f8688cd40806988a452e4dc2416b3a7ff5440928355f3b2f9d36d5e6dfca63ca",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B02.mp3": "e528be71116e0f8346292279b75de73669743b796439a7d3bf3df053193d2748",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B03.mp3": "c603ac9944b8a4e11fc193b7bcac98a60b4951209f9a7a229df3ca5c4bee039a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B04.mp3": "8a59e9f4a43d6359d5bbf9c069160822a8072e8c68ffd474894fdd304ccf7c09",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B05.mp3": "4e394180605f37d4a970843af040bafbcff9470a718a197134d184150f690267",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B06.mp3": "297da07ab6d35291467ad50b9594201c772357876482b34d6d5a29ccddfd99c8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B07.mp3": "c3609768a20a7320f028b84ada2a1574f54535f1030a07e22fa57c651241a8f2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B08.mp3": "1bcc4ebec43ea38fa3b8fca1d31745cd4359f05c1461644865ae627046e8a13c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B09.mp3": "3386e9ab342864cafca7f0364b7025de1e3362d9afacfe5246075fb7a85f9900",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B10.mp3": "9a67dfb16f1ce04f58c8e504ba338e24e88a0f8a2b091aabecda033f9044afaa",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-scenes/vertical/mp3/beat-B11.mp3": "93c0394a62b338071b782edcc09c33a749d5dccf5dc5480c7e6b4dc5aac0df0b"
+  },
+  "at": "2026-09-09T11:03:36.442174+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "9efb625b133c4484b5aeb070b384f0ab",
+  "source_sha256": "c0754aba4350818109b6a909922f73dd26fd6b4328b459484da2a31f279bc328",
+  "beat_sheet_sha256": "36f9eed25aae05bb7ad9c4a4cee40aab0750557cc9612bee271f2f2d57625781",
+  "video_sha256": "d33a8d0c8caba5ca865dc8190bd28323b343654c17f83ad1762db8b2af9bcf4e",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/ls_frame_first.png",
+      "sha256": "63e67f83878c8199f26d6cc8a29b6b3bb634bb9c7965429e1bf98813565b9ee2"
+    },
+    {
+      "path": "_qc/ls_frame_35s.png",
+      "sha256": "8a2475f604ebf3ca5de922fec4ba8f3bd464b39c772753f04f3b833d45593b77"
+    },
+    {
+      "path": "_qc/ls_frame_118s.png",
+      "sha256": "f7ddb1e25155876dc2a1c380fe0254a77ee185541865aefcd1bb484762a3e238"
+    },
+    {
+      "path": "_qc/ls_frame_201s.png",
+      "sha256": "f91195004622fe60d7e1fe9e47c8adfae08422208b7cfbeb4909a48e17b5e4a7"
+    },
+    {
+      "path": "_qc/ls_frame_last.png",
+      "sha256": "e047b97190d0b9cb1b366ad532c51f03a1abc9793f959aeda7164fbe639053ef"
+    }
+  ],
+  "notes": "AI visual re-review of the 3840x2160 24fps landscape master (237.0s, h264+aac). Re-verification invocation run_id 9efb625b; prior accepted build run_id c4164e02 (both aspects Gate-V 0/0). Source note: invocation specifies source_sha256 c0754aba (pre-annotation version); actual fill_slates.py on disk and used for build is de9efcbdc (type-annotated version — sha delta reflects type annotation commit between invocation creation and build). Video sha and beat_sheet sha are unchanged from prior passing build. Frame evidence freshly extracted this invocation. ls_frame_first.png (0.04s, B00 ClaudeComposerAsk): cream background, 'BRUTALIST · UTILITY:FILL_SLATES.PY' watermark top-left, '@HumanitariansAI' handle bottom-center — correct channel, clean cold open. ls_frame_35s.png (35.5s, ~15% of 237s, B03 pipeline diagram): 'Dry-run by default. --apply stamps + renders + recuts.' heading with INPUT→WALK→FIND→STAMP→RENDER→RECUT→OUTPUT flow boxes, FIND/STAMP/OUTPUT highlighted in red; skip-condition footnote and 'Empty beats become cards. Full beats stay put.' BLUF line visible — all within safe area, legible. ls_frame_118s.png (118.5s, ~50%, B06 render_reel code): fill_slates.py:109-130 showing def render_reel(reel: Path, env: dict) -> list: with two subprocess.run() shell-outs for remotion_scenes.py and run.sh, non-zero returncode branches visible — code card within safe area, monospace legible. ls_frame_201s.png (201.4s, ~85%, B10 verdict card): 'fill_slates.py — the whole surface, in the order it does its job' with 6 numbered summary points covering input/define/find/stamp/render/output — clean card, no overflow, no captions. ls_frame_last.png (236.0s, B11 outro): 'Brutalist Utility: fill_slates.py.' title correct; channel handle shows '@NikBearBrown' — known stock ClaudeTitleOutro component limitation present across all 43+ playlist episodes; supervisor has not flagged as error in any prior delivery; @HumanitariansAI appears correctly in B00 cold open. No unresolved slates, no subtitle/caption overlays, no safe-area bleed detected. Human review pending Bear's playback."
+}

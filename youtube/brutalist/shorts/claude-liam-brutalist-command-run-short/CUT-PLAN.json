@@ -1,0 +1,30 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art run is a review-loop wrapper: it gates paperwork/lint/layout, renders pending scenes, and compiles a REVIEW cut (slate-labelled), not the final master (which is art final).",
+  "parent_master_sha256": "086736a6fe5f316e2db3261b0a9ccddbb774e6d7b011916cda9ff4bd680a01d6",
+  "parent_reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-run",
+  "parent_beats": 12,
+  "parent_total_s": 245.6,
+  "kept_beats": ["B00", "B01", "B03", "B07", "B10", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Dispatcher case code walkthrough (three-line case branch); code-level detail that belongs in the 16:9 long."},
+    {"beat_id": "B04", "reason": "Audio-first clock + slot-skip mechanism; useful iteration detail but not needed for the high-level surface, and the loop is already established by B03."},
+    {"beat_id": "B05", "reason": "Verbatim bare-invocation demo (Gate F failure log); the run-vs-final worked example in B07 is more decisive and B08's recovery follow-up is also being cut."},
+    {"beat_id": "B06", "reason": "Four env knobs (ART_QC/ART_STRICT/ART_FACTS/--height); advanced usage detail that belongs in the long."},
+    {"beat_id": "B08", "reason": "Recovery/falsifiability demo depends on B05's setup which we cut; standalone it would need re-explanation."},
+    {"beat_id": "B09", "reason": "Verdict/eight-line surface restates the gate order (B03), the run-vs-final split (B07), the aliases (B02), and the four knobs (B06); with those mid-beats cut, the verdict is largely redundant with what the Short already said."}
+  ],
+  "cut_first_review": "The retained spine is a full narrative in the source order: B00 introduces Liam and what art run does at the highest level ('gates paperwork, renders scenes, recompiles a review cut — writes a slate, not the master'). B01's hesitant-writer BLUF corrects the misconception ('art run compiles a review, not a master'). B03 gives the ten-stage gate loop 'Any gate can stop the build.' bridges naturally into B07's essential distinction: 'run = preview, final = receipt' — two verbs, two files. B10 hands the Your Turn prompt over. B11 signs off as Liam in for Bear @HumanitariansAI. No dangling references — the dropped beats introduce no vocabulary the retained beats depend on. No numbered transitions. No repeated conclusions.",
+  "planned_duration_s": 118.6,
+  "duration_breakdown": {
+    "B00": 17.46,
+    "B01": 17.25,
+    "B03": 33.21,
+    "B07": 23.13,
+    "B10": 22.29,
+    "B11": 5.25
+  },
+  "rewrite_reason": null,
+  "endcard": false,
+  "outro_rewrite": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "3f692902b8e54a40ae696576b15481e1",
+  "source_sha256": "2867520a80894532255b63f20b281832994d7980ac135a95dfd51f2cab83011d",
+  "beat_sheet_sha256": "8d5f4be5c594dc11bb8a8ef22773be6a81382dc576507533fc271c2e1a633eb3",
+  "video_sha256": "7bc4e3ee6ecbc1757952353a6b7314357c55068231e4aac9fb46a99cda03da69",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames-beat/B00_15.jpg", "sha256": "b5adf92f9a74bb15f411013dda6f1bf5c31f072ab2b6e10762f9df43914a26b9"},
+    {"path": "_qc/frames-beat/B00_50.jpg", "sha256": "eaa171d7adbaed56e96eaa61169e4fed60bb0725def440abb72962e04feeb5e6"},
+    {"path": "_qc/frames-beat/B01_50.jpg", "sha256": "5cc50eb1c2a8d210e4577faaf226bc562fb7c71db8150c1a05954094829223dc"},
+    {"path": "_qc/frames-beat/B01_85.jpg", "sha256": "b1f2447ddc10d1d5a0cecda3478b5c448dba5a294852473c4c3fee56898293d3"},
+    {"path": "_qc/frames-beat/B04_50.jpg", "sha256": "06594c80a38c9e0fb10a21eb6b22567094902f8c866968e34c0d4ebc62505ab1"},
+    {"path": "_qc/frames-beat/B05_50.jpg", "sha256": "9c753fbb68b74c8c28e4cf1a24d980639053bfcd3eb5cc11e10c531b36e6d5f8"},
+    {"path": "_qc/frames-beat/B06_50.jpg", "sha256": "e4fa91cb9e1f51de6b28c99673afe51ebbab15d8cc42cdc2e99205d3945f30b9"},
+    {"path": "_qc/frames-beat/B07_50.jpg", "sha256": "b79afa5982f566937c12ef229bcd903d8e52413b519618c6adea0448acdf20d7"},
+    {"path": "_qc/frames-beat/B07_85.jpg", "sha256": "2e9ca9af3eaf1210be18759eb75f8aeb1f1f86a8af7362d30f55c1dbb424690f"},
+    {"path": "_qc/frames-beat/B11_50.jpg", "sha256": "93f96d64189fad9825627569713a982e998a1b280e7b784fef6c53f3a929087b"}
+  ],
+  "notes": "9:16 Short (2160x3840, 168.208s container / 168.167s video / 168.208s audio — strictly under 180.000s). Whole-beat cut of parent claude-liam-brutalist-skill-nopunt vertical: kept B00 (ASK cold open, Liam intro + 3-line preview), B01 (BLUF hesitant writer swap linter->catalog), B04 (MECHANISM ACT 1 - HOLD only for real photographs, unfilled animatable = bug), B05 (MECHANISM ACT 2 - six catalog families), B06 (MECHANISM ACT 3 - five punt costumes), B07 (MECHANISM ACT 4 - SHOW/HOLD/CARD vocabulary), B11 (OUTRO with hardcoded @NikBearBrown per OUTRO-LOCK); dropped B02 SKILL anatomy, B03 five-gate pipeline, B08 miss-logging falsifiability, B09 verdict recap, B10 Your-Turn audit prompt (all belong in the 16:9 long). Native portrait renders reused unchanged (shorts.py 'native portrait reused unchanged' for all 7 beats). Kokoro am_onyx narration reused unchanged from parent (no API calls). Compile ran with --height 3840 without --review. Frames verified: B00 shows composer card + three preview bullets landed; B01 shows completed 'catalog' swap with cursor blink; B04 shows 'Only photographs HOLD.' heading + verbatim quote from SKILL.md + UNFILLED ANIMATABLE = BUG pill; B05 shows 'Six families cover it.' + shape->tool routing quote; B06 shows 'Five costumes. One bug.' + verbatim punt-costume list + DRAW IT NEVER DRESS IT UP pill; B07 shows 'SHOW . HOLD . CARD.' + verbatim classification quote + THREE CLASSES NO FOURTH pill; B11 shows title + @NikBearBrown handle centered. Numbered narrative (First/Second/Third/Fourth design decisions) is contiguous. B07->B11 join: single-frame black fade-in intrinsic to parent B11 outro composition (verified against parent/vertical/media/B11.mp4 first-frame), content fully visible by t~164.75s. No captions burned in. No publish, no upload, no git push, no cross-workspace writes. Human review pending — Bear's viewing is next."
+}

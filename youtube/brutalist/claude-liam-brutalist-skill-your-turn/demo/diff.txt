@@ -1,0 +1,81 @@
+20c20,21
+<         "type": "GRAPHIC", "source": "remotion",
+---
+>         "type": "GRAPHIC",
+>         "source": "remotion",
+39c40,47
+<       "shot": {"type": "CARD", "source": "remotion", "remotion": {"pattern": "BrutalistHesitantWriter", "props": {}}}
+---
+>       "shot": {
+>         "type": "CARD",
+>         "source": "remotion",
+>         "remotion": {
+>           "pattern": "BrutalistHesitantWriter",
+>           "props": {}
+>         }
+>       }
+47c55,62
+<       "shot": {"type": "CARD", "source": "remotion", "remotion": {"pattern": "SkillTeardownMechanism", "props": {}}}
+---
+>       "shot": {
+>         "type": "CARD",
+>         "source": "remotion",
+>         "remotion": {
+>           "pattern": "SkillTeardownMechanism",
+>           "props": {}
+>         }
+>       }
+54c69
+<       "narration_text": "The fictional split.",
+---
+>       "narration_text": "Thanks Bear, let's recap with Claude. The fictional split.",
+56c71,72
+<         "type": "CARD", "source": "remotion",
+---
+>         "type": "CARD",
+>         "source": "remotion",
+63,65c79,81
+<               "1. Owned — the closing three beats.",
+<               "2. Inherited — everything above the body.",
+<               "3. Idempotent — re-run stacks nothing."
+---
+>               "Owned — the closing three beats.",
+>               "Inherited — everything above the body.",
+>               "Idempotent — re-run stacks nothing."
+69c85,86
+<       }
+---
+>       },
+>       "lead_silence_s": 0.5
+76c93
+<       "narration_text": "Placeholder — the transformer will rewrite this narration to the drafted prompt.",
+---
+>       "narration_text": "I just watched a fixture reel demonstrating the your-turn skill's transformer. I understand the closing block rewrites the last three beats, but I want to see the mechanism on something concrete. Can you (1) show me a diff of what the transformer changed in this fixture's VERDICT, YOUR TURN, and OUTRO beats, (2) explain why the handoff line here is 'Thanks Bear, let's recap with Claude.' and not 'Let's recap with Claude.', and (3) point out which artifactLines it stripped leading numbers from?",
+78c95,96
+<         "type": "GRAPHIC", "source": "remotion",
+---
+>         "type": "GRAPHIC",
+>         "source": "remotion",
+85c103
+<             "command": "placeholder — overwritten by apply_your_turn.py using drafts.json",
+---
+>             "command": "I just watched a fixture reel demonstrating the your-turn skill's transformer. I understand the closing block rewrites the last three beats, but I want to see the mechanism on something concrete. Can you (1) show me a diff of what the transformer changed in this fixture's VERDICT, YOUR TURN, and OUTRO beats, (2) explain why the handoff line here is 'Thanks Bear, let's recap with Claude.' and not 'Let's recap with Claude.', and (3) point out which artifactLines it stripped leading numbers from?",
+96c114
+<       "narration_text": "Placeholder — the transformer will rewrite this narration to the title.",
+---
+>       "narration_text": "The Fictional Skill",
+98c116,117
+<         "type": "CARD", "source": "remotion",
+---
+>         "type": "CARD",
+>         "source": "remotion",
+102c121,122
+<             "title": "placeholder"
+---
+>             "title": "The Fictional Skill",
+>             "handle": "@NikBearBrown"
+108c128
+< }
+---
+> }
+\ No newline at end of file

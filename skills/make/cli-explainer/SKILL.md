@@ -18,6 +18,17 @@ description: >
 
 # cli-explainer — the CLI-video style (composer in, animated output out)
 
+## Evidence and mathematical notation
+
+Read [EXECUTABLE-EVIDENCE.md](../../../docs/EXECUTABLE-EVIDENCE.md) before
+authoring code/output beats and [MATH-TYPESETTING.md](../../../docs/MATH-TYPESETTING.md)
+for equations. Run the source and preserve its actual outputs; plausible-looking
+terminal text is not an execution receipt. A teaching reconstruction must be
+labeled, and an excerpt must not change the result. Do not request pantry
+photographs of code, tests, tables or flow diagrams that can be generated locally.
+Show what the code does, not code card after code card. Typeset explanatory
+math structurally; literal source code stays literal code.
+
 > Renamed from `terminal-screencast` (which was itself the renamed `cli`
 > skill). The old names — `terminal-screencast`, "Onda video" — still resolve
 > to this skill; `cli` and `claude-cli` remain the trigger words.

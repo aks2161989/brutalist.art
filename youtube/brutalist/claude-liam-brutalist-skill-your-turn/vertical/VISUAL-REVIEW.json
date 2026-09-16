@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "7959aaa35bdb46239e266a270f0fd24c",
+  "source_sha256": "8250e8ccd8779eb2629de62b05699c311dc1e5a4caeb70f1a1260e9a8d10f126",
+  "beat_sheet_sha256": "e30931800f770c28d1532cf4c615f7e5b895ebba637af4f4d1216e8e2678d9ca",
+  "video_sha256": "bdeb47c89ce4ecf05cf70313aedee7f0e65a4c14a3f793aaaa2bf8362ee12d5a",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "28685b944c02c24074bb6aae6d42382c45f7f2d76ecf7affafe649231753d098"}
+  ],
+  "notes": "Re-verification 2026-09-12 under run_id 7959aaa35bdb46239e266a270f0fd24c. Note: invocation source_sha256 (8250e8cc…) does not match the observed skills/make/your-turn/SKILL.md hash (aecd503a…); all beat content verified accurate to current file — no changes required. Vertical 2160x3840 native 4K, 250.958s, 14 beats filled via <Pattern>916 compositions. Opened and inspected vertical/_qc/contact_sheet.png (28 portrait frames at 15/50/85% of every beat) with the image Read tool. Confirmed: B00 ClaudeComposerAsk916 portrait cold open 'The your-turn Skill' title + 'Hallo, Liam' greeting + stacked RESULT answer lines, no captions; B01 BrutalistHesitantWriter916 corrects to 'your-turn is not a closing-block skill.' in 4-line stanza, large serif typography, cursor visible, portrait-native layout (not cropped landscape), measured audio > 9s floor; B02 SkillTeardownAnatomy916 'One file, one script, three beats.' with portrait-stacked file tree; B03 SkillTeardownMechanism916 (not Pipeline916 — horizontal phase strip bleed documented in feedback memo) 'Three beats. In order.' with portrait-reflowed phase blocks; B04 'The handoff leaves the process.' mechanism card; B05 'drafts.json is the human gate.' mechanism card; B06 'Bigger card. Choose lines.' mechanism card; B07 'Liam reads the prompt in full.' mechanism card; remaining mechanism cards B08-B10 portrait-reflowed with heading+body+quote+verdict pill; B11 ClaudeVerdictArtifact916 with six legible verdict lines; B12 ClaudeComposerAsk916 YOUR TURN; B13 ClaudeTitleOutro916 reads 'The your-turn Skill.' with terracotta period, @HumanitariansAI handle, 'Liam, in for Bear.' sign-off. Gate V clean (BLOCKER=0 MAJOR=0). Skin_lint 916 warnings expected (documented native-portrait treatment). Human review pending."
+}

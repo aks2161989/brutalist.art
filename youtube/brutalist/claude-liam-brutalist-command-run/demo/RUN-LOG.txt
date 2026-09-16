@@ -1,0 +1,44 @@
+=== SESSION 1 — no paperwork ===
+$ ls /tmp/claude-501/art-run-demo/
+beat_sheet.json
+
+$ ./art run /tmp/claude-501/art-run-demo
+[run] no Manim beats in this reel's beat sheet — skipping Manim stage
+[run] nothing to render — recompiling only
+[run] GATE F FAILED: /tmp/claude-501/art-run-demo has no FACTCHECK.md — the paperwork set
+[run] (FACTCHECK.md claims · SHOTLIST.md typed work order ·
+[run] PROMPTS.md beat-prefixed prompts for open slots) is written
+[run] BEFORE rendering. ART_FACTS=0 for a previz-only exception.
+
+=== RECOVERY — write the paperwork triad ===
+$ touch FACTCHECK.md SHOTLIST.md PROMPTS.md && echo stub | tee $FACTCHECK.md ...
+
+=== SESSION 2 — same reel, paperwork present ===
+$ ls /tmp/claude-501/art-run-demo/
+FACTCHECK.md
+PROMPTS.md
+SHOTLIST.md
+beat_sheet.json
+build-state.json
+images
+manim
+media
+mp4
+pantry
+
+$ ART_QC=0 ./art run /tmp/claude-501/art-run-demo   # QC off for a clean pass-through
+[run] no Manim beats in this reel's beat sheet — skipping Manim stage
+[run] nothing to render — recompiling only
+[remotion] FAILED: B00
+[remotion] B00: FAIL: ClaudeComposerAsk
+to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+
+Troubleshooting: https://remotion.dev/docs/troubleshooting/browser-launch
+    at onClose (/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/remotion/node_modules/@remotion/renderer/dist/browser/BrowserRunner.js:269:20)
+    at ChildProcess.<anonymous> (/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/runtime/remotion/node_modules/@remotion/renderer/dist/browser/BrowserRunner.js:260:24)
+    at ChildProcess.emit (node:events:509:20)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+
+Node.js v25.9.0
+
+

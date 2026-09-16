@@ -69,6 +69,39 @@ class FixtureCase(unittest.TestCase):
         return sheet
 
 class SafetyTests(FixtureCase):
+    def test_short_duration_is_strict_and_fail_closed(self):
+        for value in (0, -1, None, 'bad', float('nan'), float('inf'), 180, 180.001):
+            with self.subTest(value=value), self.assertRaises(safety.BuildError):
+                safety.require_short_duration(value)
+        self.assertEqual(safety.require_short_duration(179.999), 179.999)
+
+    def test_encoded_short_checks_container_and_each_stream(self):
+        for container, audio, video in ((180, 179.9, 179.9), (179.9, 180, 179.9),
+                                        (179.9, 179.9, 180)):
+            probe = {'format': {'duration': container}, 'streams': [
+                {'codec_type': 'video', 'duration': video},
+                {'codec_type': 'audio', 'duration': audio}]}
+            with patch.object(compiler, 'probe_streams', return_value=probe), \
+                 self.assertRaisesRegex(safety.BuildError, 'strictly under'):
+                compiler.verify_output(self.root / 'test.mp4', 179.9, 24, True, short=True)
+
+    def test_short_checks_frame_rounded_timeline(self):
+        sheet = {'beats': [{'beat_id': bid, 'actual_duration_s': 89.999} for bid in ('B00', 'B01')]}
+        compiler.prepare_timeline(self.reel, sheet, 24)
+        with self.assertRaises(safety.BuildError):
+            safety.require_short_duration(sum(compiler.beat_duration(b) for b in sheet['beats']))
+
+    def test_cut_planner_uses_render_clock_and_keeps_outro(self):
+        beats = [{'beat_id': 'B00', 'render_duration_s': 80, 'actual_duration_s': 1},
+                 {'beat_id': 'B01', 'render_duration_s': 30, 'actual_duration_s': 1},
+                 {'beat_id': 'B02', 'render_duration_s': 70, 'actual_duration_s': 1}]
+        self.assertEqual(shorts.plan_drops(beats, set(), 0), ['B01'])
+        self.assertEqual(shorts.beat_dur(beats[-1]), 70)
+
+    def test_existing_portrait_pattern_does_not_get_double_suffix(self):
+        self.assertEqual(shorts.portrait_pattern('Demo916', '<Composition id="Demo916" />'), 'Demo916')
+        self.assertIsNone(shorts.portrait_pattern('Missing916', ''))
+
     def test_malformed_approval_is_a_controlled_failure(self):
         sheet = self.feedback()
         sheet['metadata']['approvals'] = {'voice': 'approved'}
@@ -369,7 +402,7 @@ class MediaTests(FixtureCase):
         for b in beats: self.video(self.reel/f"media/{b['beat_id']}.mp4")
         self.sheet(beats)
         before=safety.file_digest(self.reel/'audio/custom-name.wav')
-        r=execute([sys.executable,SCRIPTS/'shorts.py',self.reel,'--drop','B01','--no-endcard'])
+        r=execute([sys.executable,SCRIPTS/'shorts.py',self.reel,'--drop','B01','--no-endcard','--rewrite-outro'])
         self.assertEqual(r.returncode,0,r.stdout+r.stderr)
         self.assertIn('--only B02',r.stdout)
         copied=self.reel/'short/mp3/beat-B00.mp3'
@@ -443,6 +476,46 @@ class MediaTests(FixtureCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertFalse(link.is_symlink())
         self.assertEqual(safety.file_digest(self.reel / 'media/B00.mp4'), before)
+
+    def test_native_portrait_cut_reuses_independent_assets_without_rewrite(self):
+        self.video(self.root / 'wide.mp4')
+        (self.reel / 'media').mkdir()
+        r = execute(['ffmpeg', '-y', '-v', 'error', '-i', self.root / 'wide.mp4',
+                     '-vf', 'scale=90:160', self.reel / 'media/B00.mp4'])
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.tone(self.reel / 'mp3/beat-B00.mp3')
+        self.sheet([{'beat_id': 'B00', 'actual_duration_s': 1, 'narration_text': 'Original',
+                     'shot': {'type': 'REMOTION', 'remotion': {'pattern': 'NativeFixture916'}}}],
+                   {'slug': 'parent-vertical', 'aspect_ratio': '9:16'})
+        before = {p: safety.file_digest(p) for p in self.reel.rglob('*') if p.is_file()}
+        target = self.root / 'independent-short'
+        r = execute([sys.executable, SCRIPTS / 'shorts.py', self.reel, '--no-endcard',
+                     '--output-dir', target, '--slug', 'native-short'])
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        output = json.loads((target / 'beat_sheet.json').read_text())
+        self.assertEqual(output['metadata']['slug'], 'native-short')
+        self.assertFalse(output['beats'][0].get('short_outro_rewritten'))
+        self.assertEqual(output['beats'][0]['narration_text'], 'Original')
+        for path, digest in before.items():
+            self.assertEqual(safety.file_digest(path), digest)
+        for rel in ('media/B00.mp4', 'mp3/beat-B00.mp3'):
+            self.assertFalse((target / rel).is_symlink())
+            self.assertEqual(safety.file_digest(target / rel), safety.file_digest(self.reel / rel))
+
+    def test_exact_180_short_is_blocked_not_ready(self):
+        self.video(self.reel / 'media/B00.mp4')
+        self.sheet([{'beat_id': 'B00', 'actual_duration_s': 180, 'audio_policy': 'silence'}])
+        r = execute([sys.executable, SCRIPTS / 'shorts.py', self.reel, '--no-endcard', '--drop'])
+        self.assertNotEqual(r.returncode, 0)
+        sheet = json.loads((self.reel / 'short/beat_sheet.json').read_text())
+        self.assertEqual(sheet['metadata']['short_validation']['status'], 'blocked')
+
+    def test_derivative_cannot_target_parent(self):
+        self.sheet([{'beat_id': 'B00', 'actual_duration_s': 1}])
+        before = safety.file_digest(self.reel / 'beat_sheet.json')
+        r = execute([sys.executable, SCRIPTS / 'shorts.py', self.reel, '--output-dir', self.reel])
+        self.assertNotEqual(r.returncode, 0)
+        self.assertEqual(before, safety.file_digest(self.reel / 'beat_sheet.json'))
 
 
 if __name__ == '__main__':

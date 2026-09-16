@@ -1,0 +1,668 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: image_fetch.py",
+    "slug": "claude-liam-brutalist-runtime-image-fetch",
+    "topic": "Brutalist Utility",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude",
+    "channel": "claude-liam",
+    "voice": "am_onyx",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "captions": false,
+    "playlist": "Brutalist",
+    "aspect_ratio": "16:9",
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "folder_chip": "@HumanitariansAI",
+    "note": "Episode 45. Utility teardown: image_fetch.py — the multi-source archival image fetch, upscale, shelf, and pantry tool. Four adapters (smithsonian, nasa, wellcome, nlm_ihm). Topaz optional. Provenance sidecar automatic. Liam in for Bear. @HumanitariansAI Brutalist playlist.",
+    "build": {
+      "at": "2026-09-14T15:38:41",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": [
+        "B09: palette=claude but the outro is 'ClaudeTitleOutroHAI' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Every reel needs archival images, and Smithsonian alone stopped being enough. This is image_fetch.py — the multi-source fetch tool for the Brutalist pipeline. This is Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "greeting 'Selam, Liam' lands, spark fires"
+          },
+          {
+            "at": 0.1,
+            "event": "composer window fades in — topic 'Brutalist Utility', segment 'image_fetch.py'"
+          },
+          {
+            "at": 0.25,
+            "event": "command begins typing: 'Every reel needs archival images...'"
+          },
+          {
+            "at": 0.65,
+            "event": "running indicator lights: 'fetching from the archive…'"
+          },
+          {
+            "at": 0.8,
+            "event": "output lines stagger in: four adapters / Topaz optional / library shelf"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Selam, Liam",
+            "topic": "Brutalist Utility",
+            "segment": "image_fetch.py",
+            "command": "Every reel needs archival images, and Smithsonian alone stopped being enough. I need one tool that fetches from NASA, Wellcome, and NLM too — upscales with Topaz if it's installed, and shelves every image with a provenance record I can actually trust in the reel.",
+            "runningText": "fetching from the archive…",
+            "folderLabel": "@HumanitariansAI",
+            "output": [
+              "four adapters: smithsonian · nasa · wellcome · nlm_ihm",
+              "optional Topaz upscale — graceful when absent",
+              "library shelf + sidecar + pantry copy in one call"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T22:06:06.515070+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 12,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 10.77,
+      "render_duration_s": 10.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "narration_text": "image_fetch.py fetches, optionally upscales with Topaz Photo AI, shelves with a provenance sidecar, and copies to your reel pantry in one call. Not a download helper — a pipeline. Four archives, one interface, license tracked to the file.",
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-correct",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "typing begins: 'image_fetch.py is a download helper.'"
+          },
+          {
+            "at": 0.35,
+            "event": "hesitation pause — cursor blinks"
+          },
+          {
+            "at": 0.5,
+            "event": "'download helper' struck through, replaced by 'fetch-shelf pipeline'"
+          },
+          {
+            "at": 0.65,
+            "event": "second and third lines type in: 'It talks to four archives...' / 'One command, one image in your pantry.'"
+          },
+          {
+            "at": 0.9,
+            "event": "corrected text holds — 'fetch-shelf pipeline' in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "image_fetch.py\nis a downloader.",
+            "triggerWords": "downloader",
+            "replacementWords": "pipeline",
+            "seed": "ep45-b01",
+            "face": "serif",
+            "fontSize": 220,
+            "lineSpacing": 2.6,
+            "align": "center",
+            "charMs": 18,
+            "jitter": 15,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T22:38:21.171084+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 14,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 13.97,
+      "render_duration_s": 14.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE PIPELINE",
+      "narration_text": "The pipeline runs six phases. Resolve finds the full-res URL through the adapter. Download streams it to a temp directory. Topaz upscales it if installed. Shelve copies the file to the library. The sidecar writes the provenance record — source, license, credit, URL. An optional pantry step copies the shelved image straight into your reel. And if the record was already shelved, the tool returns the cached path and stops.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "spring-in",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "eyebrow 'THE PIPELINE' and title appear"
+          },
+          {
+            "at": 0.1,
+            "event": "INPUT node springs in: '--source --id [--url]'"
+          },
+          {
+            "at": 0.2,
+            "event": "Resolve node + terracotta arrow"
+          },
+          {
+            "at": 0.3,
+            "event": "Download node + arrow"
+          },
+          {
+            "at": 0.4,
+            "event": "Upscale node + arrow — accented (Topaz optional)"
+          },
+          {
+            "at": 0.5,
+            "event": "Shelve node + arrow"
+          },
+          {
+            "at": 0.6,
+            "event": "Sidecar node + arrow"
+          },
+          {
+            "at": 0.7,
+            "event": "Pantry node + arrow"
+          },
+          {
+            "at": 0.8,
+            "event": "OUTPUT node: 'library/.jpg + .source.json'"
+          },
+          {
+            "at": 0.9,
+            "event": "footer note: '--url skips Resolve → shelves the URL directly'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "THE PIPELINE",
+            "title": "image_fetch.py: from call to shelf.",
+            "inputLabel": "--source --id [--url]",
+            "outputLabel": "library/.jpg + .source.json",
+            "phases": [
+              {
+                "label": "Resolve",
+                "desc": "adapter → full-res URL",
+                "accent": false
+              },
+              {
+                "label": "Download",
+                "desc": "stream to temp dir",
+                "accent": false
+              },
+              {
+                "label": "Upscale",
+                "desc": "Topaz if installed",
+                "accent": true
+              },
+              {
+                "label": "Shelve",
+                "desc": "library/<adapter>/",
+                "accent": false
+              },
+              {
+                "label": "Sidecar",
+                "desc": ".source.json",
+                "accent": false
+              },
+              {
+                "label": "Pantry",
+                "desc": "reel/pantry/ if --copy",
+                "accent": false
+              }
+            ],
+            "footerNote": "--url skips Resolve → shelves the URL directly",
+            "sparkLine": "Six steps, one exit, one sidecar."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T22:07:01.491271+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 22.12,
+      "render_duration_s": 22.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "THE TWO PATHS",
+      "narration_text": "The tool forks at one flag. Without --url, the adapter walks its own index to find the record, then resolves the full-res URL. Smithsonian has that index locally. NASA, Wellcome, and NLM do not. For those three, you supply the URL you already found, and the tool shelves it. --url also lets you override any adapter when you know the URL exactly.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "branch",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "question node appears: 'Did you supply --url?'"
+          },
+          {
+            "at": 0.25,
+            "event": "left branch draws down: 'No --url — adapter lookup'"
+          },
+          {
+            "at": 0.45,
+            "event": "right branch draws down: '--url supplied — bypass resolver'"
+          },
+          {
+            "at": 0.6,
+            "event": "each branch outcome card appears"
+          },
+          {
+            "at": 0.8,
+            "event": "resolver at bottom: 'smithsonian has an index. nasa / wellcome / nlm_ihm require --url.'"
+          },
+          {
+            "at": 0.9,
+            "event": "ghost text surfaces: '--url also lets you override any adapter'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "The --url flag",
+            "code": "# No --url: adapter.resolve() finds the full-res URL\npython3 image_fetch.py \\\n  --source smithsonian \\\n  --id <record_id>\n\n# --url supplied: resolve() is skipped entirely\npython3 image_fetch.py \\\n  --source nasa \\\n  --id <id> \\\n  --url https://images-assets.nasa.gov/.../orig.jpg",
+            "sparkLine": "smithsonian: index lookup. nasa / wellcome / nlm_ihm: bring your URL."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T22:34:50.340651+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 19.61,
+      "render_duration_s": 19.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "CLI FLAGS",
+      "narration_text": "The Smithsonian adapter uses a local index — pass the record ID and it resolves the full-res URL itself. For NASA, Wellcome, or NLM, you supply the URL directly. Either way, --copy routes the shelved image into your reel's pantry folder, tagged by --beat. The slug comes from the title by default, or you set it with --slug.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "code block fades in — Smithsonian invocation (no --url)"
+          },
+          {
+            "at": 0.5,
+            "event": "NASA invocation appears below (with --url)"
+          },
+          {
+            "at": 0.85,
+            "event": "spark line: 'Smithsonian: index lookup. NASA: bring your URL.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "The full call",
+            "code": "# Smithsonian — local index, no --url needed\npython3 image_fetch.py \\\n  --source smithsonian \\\n  --id npg_NPG.78.164 \\\n  --copy cancer-biology/youtube/my-reel \\\n  --beat B04\n\n# NASA / Wellcome / NLM — supply --url directly\npython3 image_fetch.py \\\n  --source nasa \\\n  --id nasa-as11-40-5931 \\\n  --url https://images-assets.nasa.gov/.../orig.jpg \\\n  --copy my-reel --beat B06 --slug apollo-11",
+            "sparkLine": "Smithsonian: index lookup. NASA: bring your URL."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-10T22:08:26.103146+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 18.3,
+      "render_duration_s": 18.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "FOUR ADAPTERS",
+      "narration_text": "Four adapters, one interface. Smithsonian is the only one with a local search index — its resolve() implementation walks index.jsonl to find the full-res URL. NASA, Wellcome, and NLM implement the adapter interface without a local index, so they require --url. The registry is extensible: a new adapter adds one file to sources/ without touching image_fetch.py.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "stagger",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "spark line: 'Four adapters, one interface.'"
+          },
+          {
+            "at": 0.2,
+            "event": "smithsonian chip lands — terracotta"
+          },
+          {
+            "at": 0.35,
+            "event": "nasa chip lands"
+          },
+          {
+            "at": 0.5,
+            "event": "wellcome chip lands"
+          },
+          {
+            "at": 0.65,
+            "event": "nlm_ihm chip lands"
+          },
+          {
+            "at": 0.85,
+            "event": "caption appears: 'Smithsonian's index is the only one that supports adapter.resolve() without --url.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "FOUR ADAPTERS",
+            "heading": "One interface, four archives.",
+            "body": "smithsonian: CC0 images, local index.jsonl — adapter.resolve() works.\nnasa · wellcome · nlm_ihm: open-license images — no local index, require --url.\nRegistry is extensible: add sources/<name>.py to add an archive.",
+            "verdictLabel": "Gets right: extensible without touching image_fetch.py.",
+            "verdictPositive": true,
+            "sparkLine": "Four adapters, one interface."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-10T22:29:38.090309+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 21.27,
+      "render_duration_s": 21.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "DESIGN TELL",
+      "narration_text": "The Topaz step is the most interesting design decision. The upscaler is not configured, not required, and not an error path — it is simply probed by PATH. If tpai is on the system it runs; if it is not, the function returns None and the caller shelves the original. No flag, no fallback configuration, no error message that stops the pipeline. Availability is the contract.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "eyebrow 'DESIGN TELL' and heading 'Topaz is a peer, not a requirement.' land"
+          },
+          {
+            "at": 0.2,
+            "event": "body text fades in explaining the PATH probe"
+          },
+          {
+            "at": 0.5,
+            "event": "verbatim code quote from source_core.py appears"
+          },
+          {
+            "at": 0.7,
+            "event": "cite 'source_core.py, topaz_upscale()' settles beneath"
+          },
+          {
+            "at": 0.85,
+            "event": "verdict badge: 'Gets right: graceful degradation without config'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "DESIGN TELL",
+            "heading": "Topaz is a peer, not a requirement.",
+            "body": "The upscaler runs if tpai is on PATH, prints a message if it isn't, and continues either way. No flag to configure it. No error to handle. Availability is the contract — the pipeline degrades without complaint.",
+            "quote": "if not Path(TPAI).exists():\n    print(\"tpai not found — shelving original (no upscale)\")\n    return None",
+            "cite": "source_core.py · topaz_upscale()",
+            "verdictLabel": "Gets right: graceful degradation without config.",
+            "verdictPositive": true,
+            "sparkLine": "Availability is the contract."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-10T22:10:06.282272+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 19,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 20.14,
+      "render_duration_s": 20.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "The verdict. Four adapters, one registry. Topaz when present, original when not. Provenance sidecar for every image, automatic. And on every failure path, a specific message before the exit. The design gets extensibility right, and it gets graceful degradation right. The thing it relies on you to know: for three of the four adapters, you need to find the URL yourself.",
+      "lead_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "stagger",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "artifact title 'image_fetch.py' fades up"
+          },
+          {
+            "at": 0.15,
+            "event": "heading: 'The archival shelf, in one call.'"
+          },
+          {
+            "at": 0.3,
+            "event": "line 1: four adapters, one registry"
+          },
+          {
+            "at": 0.5,
+            "event": "line 2: Topaz optional, sidecar automatic"
+          },
+          {
+            "at": 0.68,
+            "event": "line 3: failure paths are specific and loud"
+          },
+          {
+            "at": 0.85,
+            "event": "line 4: the limitation — URL required for three adapters"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "image_fetch.py",
+            "artifactHeading": "The archival shelf, in one call.",
+            "artifactLines": [
+              "Four sources — smithsonian, nasa, wellcome, nlm_ihm — through one interface. The adapter registry is the extension point: a new archive adds one file to sources/ without touching image_fetch.py itself.",
+              "Topaz upscale is optional by design. The pipeline probes PATH for tpai and silently continues if absent — no config flag, no fallback logic required in the caller.",
+              "Every shelved image has a .source.json sidecar recording source, license, credit, id, and the original URL. Provenance is automatic, not remembered.",
+              "The honest limitation: for nasa, wellcome, and nlm_ihm, you must supply --url. The adapters implement the interface without a local index — you find the URL, the tool does everything else."
+            ]
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T22:11:37.511575+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 19.58,
+      "render_duration_s": 19.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Take the reel you are building and run image_fetch.py on a real Smithsonian record. The prompt asks Claude to find the record ID, show you the exact command, and explain what the provenance sidecar will contain. Run it, open the sidecar, check the license field. If it reads CC0 or public-domain, that image earned its slot.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "'Your turn.' greeting lands, spark fires"
+          },
+          {
+            "at": 0.15,
+            "event": "topic and segment appear: 'Brutalist Utility' / 'Fetch an archival image'"
+          },
+          {
+            "at": 0.25,
+            "event": "command begins typing — the full paste-ready prompt"
+          },
+          {
+            "at": 0.75,
+            "event": "running indicator: 'fetching from the archive…'"
+          },
+          {
+            "at": 0.9,
+            "event": "folder chip: '@HumanitariansAI'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "Brutalist Utility",
+            "segment": "Fetch an archival image",
+            "command": "I'm building a Brutalist reel about climate science. Find me a relevant CC0 image from the Smithsonian Open Access collection. Show me the image_fetch.py command that fetches it and places it in my reel's pantry for beat B03. Then explain what the .source.json sidecar will contain — specifically what the license and credit fields will say.",
+            "runningText": "fetching from the archive…",
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T22:12:49.310466+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 18.24,
+      "render_duration_s": 18.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-14T15:38:41"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "narration_text": "Brutalist Utility: image_fetch.py. Fetch an archival image, upscale it if you can, and shelve it with provenance. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "settle",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "cream page fades in"
+          },
+          {
+            "at": 0.2,
+            "event": "title 'Brutalist Utility: image_fetch.py.' settles in large serif with terracotta period"
+          },
+          {
+            "at": 0.55,
+            "event": "handle '@HumanitariansAI' settles beneath"
+          },
+          {
+            "at": 0.75,
+            "event": "subline 'fetch · upscale · shelf · provenance' fades in small"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutroHAI",
+          "props": {
+            "title": "Brutalist Utility: image_fetch.py.",
+            "slug": "claude-liam-brutalist-runtime-image-fetch"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-14T19:37:18.045123+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 9,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 8.0,
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeTitleOutroHAI",
+        "at": "2026-09-14T15:38:41"
+      }
+    }
+  ]
+}

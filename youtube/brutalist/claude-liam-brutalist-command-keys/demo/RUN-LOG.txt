@@ -1,0 +1,122 @@
+===============================================================================
+RUN-LOG.txt — verbatim from this workstation on 2026-09-09T23:54:24Z
+Toolkit: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art
+         /.repoloop/workspaces/claude-liam-brutalist-command-keys/toolkit
+Machine: macOS 15.5 · shell zsh · higgsfield 0.2.3 · no .env in the tree
+===============================================================================
+
+-------------------------------------------------------------------------------
+SECTION 1 — bare ./art keys, higgsfield CLI installed, network unreachable
+-------------------------------------------------------------------------------
+$ ls .env || echo 'no .env in repo root'
+no .env in repo root
+
+$ which higgsfield
+/Users/bear/.nvm/versions/node/v24.17.0/bin/higgsfield
+
+$ ./art keys ; echo "[exit $?]"
+
+  [1mkey readiness (live, free — no generation)[0m
+
+  SERVICE       VAR                             STATUS    DETAIL
+  -------       ---                             ------    ------
+  higgsfield    (CLI login)                     [31m❌ invalid [0mrun `higgsfield auth login` — Error: Cannot reach https://fnf.higgsfield.ai/agents/balance.
+
+  No keys are required. Higgsfield is an opt-in upgrade — if its CLI is
+  absent or not logged in, all beats fall back to the free path silently.
+
+  [32mAll present keys validated.[0m
+
+[exit 0]
+
+-------------------------------------------------------------------------------
+SECTION 2 — ./art keys with higgsfield CLI removed from PATH
+-------------------------------------------------------------------------------
+$ ORIGINAL_PATH="$PATH"
+$ export PATH="$(echo "$PATH" | sed 's|:/Users/bear/.nvm/versions/node/v24.17.0/bin||g')"
+$ which higgsfield
+higgsfield not found
+higgsfield: not found
+
+$ ./art keys ; echo "[exit $?]"
+
+  [1mkey readiness (live, free — no generation)[0m
+
+  SERVICE       VAR                             STATUS    DETAIL
+  -------       ---                             ------    ------
+  higgsfield    (CLI login)                     [33m· unset   [0mCLI not installed — AI video beats use free path (Ken Burns stills)
+
+  No keys are required. Higgsfield is an opt-in upgrade — if its CLI is
+  absent or not logged in, all beats fall back to the free path silently.
+
+  [32mAll present keys validated.[0m
+
+[exit 0]
+
+$ export PATH="$ORIGINAL_PATH"
+
+-------------------------------------------------------------------------------
+SECTION 3 — the exact source (runtime/scripts/check_keys.py, 83 lines total)
+-------------------------------------------------------------------------------
+$ wc -l runtime/scripts/check_keys.py
+      83 runtime/scripts/check_keys.py
+
+$ head -12 runtime/scripts/check_keys.py
+#!/usr/bin/env python3
+"""check_keys.py — validate optional keys LIVE and FREE (no generation, no spend).
+
+This toolkit is free by default (Kokoro, Manim, Remotion — no keys needed).
+This script checks the optional keys that unlock upgrade features:
+  higgsfield   `higgsfield account status` → logged in? + credits   (no gen)
+
+Reads the repo-root `.env` (shell env wins). Prints a table; never prints a
+secret value. Exit 0 if every present key is valid; 1 if any present key is
+invalid.
+
+Usage:  ./art keys        (or)  python3 runtime/scripts/check_keys.py
+
+$ sed -n '38,58p' runtime/scripts/check_keys.py    # the higgsfield probe body
+def main():
+    load_env()
+    any_invalid = False
+
+    # ── higgsfield CLI (no env key; login-based) ─────────────────────────────
+    try:
+        r = subprocess.run(["higgsfield", "account", "status"],
+                           capture_output=True, text=True, timeout=25)
+        out = (r.stdout + r.stderr).strip().replace("\n", " ")[:80]
+        if r.returncode == 0:
+            row("higgsfield", "(CLI login)", "valid", out or "logged in")
+        else:
+            row("higgsfield", "(CLI login)", "invalid",
+                "run `higgsfield auth login` — " + (out or "not logged in"))
+    except FileNotFoundError:
+        row("higgsfield", "(CLI login)", "unset",
+            "CLI not installed — AI video beats use free path (Ken Burns stills)")
+    except Exception as e:
+        _state["inconclusive"] = True
+        row("higgsfield", "(CLI login)", "warn", f"status check failed: {e}")
+
+
+-------------------------------------------------------------------------------
+SECTION 4 — the dispatcher case for 'keys' (from the top-level art file)
+-------------------------------------------------------------------------------
+$ grep -n -A1 '^  keys)' art
+103:  keys)
+104-    exec python3 "$ART_HOME/runtime/scripts/check_keys.py" "$@"
+
+-------------------------------------------------------------------------------
+SECTION 5 — repo-root .env is read but never printed (redaction proof)
+-------------------------------------------------------------------------------
+$ mkdir -p /tmp/claude/keys-demo && cd /tmp/claude/keys-demo
+$ printf 'MY_SECRET=this-should-never-print
+' > .env
+$ ls -la .env
+-rw-r--r--@ 1 bear  wheel  34 Sep  9 19:54 .env
+$ ART_HOME=$PWD python3 /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/workspaces/claude-liam-brutalist-command-keys/toolkit/runtime/scripts/check_keys.py 2>&1 | grep -c 'this-should-never-print'
+0
+(0 = zero occurrences of the secret in output — never printed)
+
+-------------------------------------------------------------------------------
+END RUN-LOG
+-------------------------------------------------------------------------------

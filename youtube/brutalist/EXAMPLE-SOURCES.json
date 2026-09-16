@@ -1,0 +1,2459 @@
+{
+  "root": "/Users/bear/Documents/CoWork/bear-textbooks/books/humanitarians-youtube/fellows",
+  "examples": [
+    {
+      "path": "adwait-changan/2026-07-27-building-the-mycroft-finance-investigator/beat_sheet.json",
+      "sha256": "bdd949ff865e61c59b030eed0bb91edf32d2ce6c5658e674ab8f3b50214cea4c",
+      "title": "Weekly Research Report: Building the Mycroft Finance Investigator",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow",
+        "CwcConceptCard",
+        "MedhavyConceptCard"
+      ]
+    },
+    {
+      "path": "adwait-changan/2026-07-31-the-finance-agent-that-cannot-approve-itself/beat_sheet.json",
+      "sha256": "6cae3f1d1eadb66992966d3959e5ee54e8d63d56b4f7db985926deff9952da7e",
+      "title": "The Finance Agent That Cannot Approve Itself",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceLayerStack",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow",
+        "CwcConceptCard",
+        "MedhavyConceptCard"
+      ]
+    },
+    {
+      "path": "adwait-changan/2026-08-07-how-do-you-test-a-finance-agent/beat_sheet.json",
+      "sha256": "07bd853c2c6cc602853913286914524290f0100074897251c8c363f1bb3f563e",
+      "title": "How Do You Test a Finance Agent? Break the Books on Purpose",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow",
+        "CwcConceptCard",
+        "MedhavyConceptCard"
+      ]
+    },
+    {
+      "path": "adwait-changan/2026-08-07-what-makes-ai-agentic/beat_sheet.json",
+      "sha256": "abda095155a3dce5dfa78cbc96619256a6c71929d31c1072d122fc74f8b8668e",
+      "title": "What Makes an AI “Agentic”",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow",
+        "CwcConceptCard"
+      ]
+    },
+    {
+      "path": "adwait-changan/2026-08-14-the-agent-loop/beat_sheet.json",
+      "sha256": "1b5d2f177bb5bbb5011e682e185f314d7bc7cf0cb165e7136e67d424caba4980",
+      "title": "The Agent Loop",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow",
+        "CwcConceptCard"
+      ]
+    },
+    {
+      "path": "adwait-changan/2026-08-14-what-if-analysis-without-ai-guessing/beat_sheet.json",
+      "sha256": "82af4258466634c84cf99d50e527a063acb1fc42ccdc50d32c3afbf11a0c1056",
+      "title": "What-If Analysis Without AI Guessing",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceLayerStack",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow",
+        "CwcConceptCard",
+        "MedhavyConceptCard"
+      ]
+    },
+    {
+      "path": "adwait-changan/2026-08-21-can-you-prove-what-your-finance-agent-actually-did/beat_sheet.json",
+      "sha256": "6b21dee1dca1b2d6539ad448a562cb55d38aacc3d52f7a442bff3407888e6856",
+      "title": "Can You Prove What Your Finance Agent Actually Did?",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow",
+        "CwcConceptCard",
+        "MedhavyConceptCard"
+      ]
+    },
+    {
+      "path": "adwait-changan/2026-08-21-tools-and-function-calling/beat_sheet.json",
+      "sha256": "beba789d6386040243e822e0c5b3e4ea8885001ceea15c6b9b7ea42916735a34",
+      "title": "Tools: Giving a Model Hands",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow",
+        "CwcConceptCard"
+      ]
+    },
+    {
+      "path": "agrima-p/2026-08-26-ai-support-shift/beat_sheet.json",
+      "sha256": "3bf07ff01f7eca4d09a60e5eb20b345f3394cc89f04f8822d0079b08978312cb",
+      "title": "From Phone Trees to Chatbots: What Actually Changed",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "agrima-p/2026-08-26-two-threads-one-week/beat_sheet.json",
+      "sha256": "3717da5868de39ca8ceb9c0eeee1754c1526fc20212f6fadb85dfc34d702ca10",
+      "title": "Two Threads, One Week: The Work Log",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "agrima-p/2026-08-29-death-of-the-generic-resume/beat_sheet.json",
+      "sha256": "42e34b6e115db0b4111ce52f1db12a18df64f73b561da2d26339a191dc066fa3",
+      "title": "AI and the Death of the 'Generic' Resume",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "agrima-p/2026-08-29-weekly-recap/beat_sheet.json",
+      "sha256": "179271d537ccd55f3cd466f40806fa0bea12e714b006ba0fffe180db22725251",
+      "title": "This Week: What Shipped, What's Next",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "agrima-p/2026-09-03-ai-nonprofit-marketing/beat_sheet.json",
+      "sha256": "e11c0a309c84713726e41d61418fbe53489d878274638c3087b275effc400430",
+      "title": "The Nonprofit Marketing Problem AI Is Quietly Solving",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-08-03-fluency-trap-in-a-variance-note/beat_sheet.json",
+      "sha256": "bdefb829b1ef2ae82eda5d9d4a994b3eacb9e089dec9db7bc25b0c3be6515aeb",
+      "title": "The Fluency Trap in a Variance Note",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-08-03-patent-claims-lineage-agents/beat_sheet.json",
+      "sha256": "468330b6506babe4287064987b05a5f1c62c178a65a90984b802d159ed94385f",
+      "title": "Two Agents Read a Patent — Claims and Lineage with Claude",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-08-28-correlation-vs-causation-signals/beat_sheet.json",
+      "sha256": "fa074d857f6c41b54817d670c6d83d4dfeba22f38b1bde0aa724c628700e94e6",
+      "title": "Correlation vs. Causation in Signal-Finding",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-08-28-patent-agent-video2-splitting-claims/beat_sheet.json",
+      "sha256": "5ac455d653332c5aea8b16168a3d42cbbb01f73c1d7d7f2cb17727c7c96ed981",
+      "title": "Splitting the Claims",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-08-28-pointintime-vs-restated-data/beat_sheet.json",
+      "sha256": "8616d314a816f269fdae2e019f86f0d2eb13f9d19a958b4c2ba60b959ad3f36a",
+      "title": "Point-in-Time vs. Restated Data",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-08-28-survivorship-bias-datasets/beat_sheet.json",
+      "sha256": "dcdaa2389f3af848aa4ce4836b8fa89ffc823559b3b225da7c66aeafe4b16624",
+      "title": "Survivorship Bias in Financial Datasets",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-08-31-patent-agent-video3-real-cost-of-a-query/beat_sheet.json",
+      "sha256": "746e6259f106f65c14acc538da50c09977d41bc892c738d83980bbbfbc889b5c",
+      "title": "The Real Cost of a Query",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-08-31-patent-agent-video4-reading-the-claims/beat_sheet.json",
+      "sha256": "6a0080dcc47e46dda7cb90162c7f7771c040f6ceefd3c1af927553358df5cffa",
+      "title": "Reading the Claims",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-09-11-patent-agent-video5-broadening-the-test/beat_sheet.json",
+      "sha256": "d8761679f9bd2b045282087ecf43ca321ea3199eceb65f6c233a8e4f2057052d",
+      "title": "Broadening the Test",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "aishwarya-p/2026-09-11-patent-agent-video6-starting-lineage-agent/beat_sheet.json",
+      "sha256": "97f66df3da8e83969aa05b053fe3fd66a6ede2b11f8e2ed1dc21ada95269f215",
+      "title": "Starting the Lineage Agent",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "amruta-naik/2026-08-14-runway-risk-scorer/beat_sheet.json",
+      "sha256": "9ff0cc7979c49438b0551967ae11ca9e7d2487eef86e1bd241fbdeee2bce556f",
+      "title": "The Scorer That Won't Score You",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "amruta-naik/2026-08-21-rag-silent-failure/beat_sheet.json",
+      "sha256": "e4476f8ddb9c17b90ab3794c7bc935d522e33020f7ea1424547762f6258ea18a",
+      "title": "Why Your RAG Confidently Retrieves the Wrong Thing",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "amruta-naik/2026-08-21-runway-risk-scorer/beat_sheet.json",
+      "sha256": "d41c76c007f4deee3aa4d511fa21544c32975efeacb32b05c5e523e73de0ef79",
+      "title": "One Run, Two Readers",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "amruta-naik/2026-08-28-embeddings-lie/beat_sheet.json",
+      "sha256": "d079857e54ce5679d60923d6fe8d679fc8939fff429f23f8853f82db034d7861",
+      "title": "Why Your Embeddings Lie About Similarity",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "amruta-naik/2026-08-28-runway-risk-scorer/beat_sheet.json",
+      "sha256": "ca2e61bb9f2e7ce42a4d095fe07d313d71dc49f89d6cf97dae94afe9d2c1dddc",
+      "title": "Check Before You Build",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-08-07-ecis-explained/beat_sheet.json",
+      "sha256": "7f4992e41a94affa18a5cf9accb3242862eff17e41ab79f084f06b1966bf4be3",
+      "title": "ECIS — The Honest Scorecard",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "EcisHookReveal",
+        "EcisLoops",
+        "EcisProblemScroll",
+        "EcisScorecard"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-08-07-why-ai-dominates-the-crypto-market/beat_sheet.json",
+      "sha256": "757285a3a66417d6aa4512f5743f9a39e2f5fcca4666924bc1dbce6ce8fcc61d",
+      "title": "AI Doesn't Sleep, Markets Don't Wait",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "MarketsClockBreak",
+        "MarketsDataStreams",
+        "MarketsGlobeClose",
+        "MarketsGlobeHook",
+        "MarketsSplitScreen"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-08-14-ecis-explained/beat_sheet.json",
+      "sha256": "da31e63c78daa6e97f55cedb451e4ce44a64cb82ee3e46ff623cc31e9b21dff9",
+      "title": "ECIS — Episode 2: Two Brains, 25 Companies, One Scorecard",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "Ecis2Boundary",
+        "Ecis2Close",
+        "Ecis2Dashboard",
+        "Ecis2Recap",
+        "Ecis2Scale",
+        "Ecis2TwoModels"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-08-14-finbert-explainer/beat_sheet.json",
+      "sha256": "df38bca9049a737f7bbc60f28665dff9f0aa63c4a7c68e1d89dc643eb95f589d",
+      "title": "FinBERT — BERT, Fine-Tuned for Finance",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "FinbertClose",
+        "FinbertFineTuning",
+        "FinbertHook",
+        "FinbertInside",
+        "FinbertWrong"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-08-21-attention-finance-explained/beat_sheet.json",
+      "sha256": "71e009a6f7c64c185efed5de30dd13ce97153b43817081412ef58592477138ad",
+      "title": "Attention Is All You Need (To Read an Earnings Call)",
+      "patterns": [
+        "AttentionClose",
+        "AttentionFinance",
+        "AttentionHook",
+        "AttentionOldWay",
+        "AttentionSelf",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-08-21-ecis-explained/beat_sheet.json",
+      "sha256": "1deb9bfc4fd4acf81ae98fccbc1fb3c1c400e370299db7bbc34d3ba527a57516",
+      "title": "ECIS — Episode 3: Three Models, Zero Shortcuts",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "Ecis3Close",
+        "Ecis3Dashboard",
+        "Ecis3Provenance",
+        "Ecis3QualityGates",
+        "Ecis3Recap",
+        "Ecis3ThirdModel"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-08-28-ecis-explained/beat_sheet.json",
+      "sha256": "b5b8710f2e07dbf748ed7817f1f4d31e31e234d1deafd2d1aa879224d5a6961b",
+      "title": "ECIS — Episode 4: Not Just What. Who, How Clean, and What Came Before.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "Ecis4Close",
+        "Ecis4Quality",
+        "Ecis4Recap",
+        "Ecis4Speaker",
+        "Ecis4Temporal",
+        "Ecis4Together"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-08-28-temperature-llm-finance/beat_sheet.json",
+      "sha256": "74644b9156fff0d79e84176f898aa974bffbe7e405a7a76f8aac723d6693b8e3",
+      "title": "Temperature: The Dial Between Prediction and Hallucination",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "TemperatureClose",
+        "TemperatureDial",
+        "TemperatureFinance",
+        "TemperatureHook"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-09-04-ecis-explained/beat_sheet.json",
+      "sha256": "b7d89163ade7056ea79da6f86ff5b6449f611721db951c47a4103f5f36972c85",
+      "title": "ECIS — Episode 5: The System That Learned From Its Own Mistakes",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "Ecis5Close",
+        "Ecis5Decay",
+        "Ecis5Detectors",
+        "Ecis5Finetune",
+        "Ecis5Penalties",
+        "Ecis5Recap"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-09-04-financial-chatbot/beat_sheet.json",
+      "sha256": "d974e75345c049dca9c5e3cb5cd3de50637b684c3c4a4dacabc6da3a4fe3a042",
+      "title": "What Happens Inside a Financial Chatbot",
+      "patterns": [
+        "ChatbotClose",
+        "ChatbotEmbed",
+        "ChatbotGenerate",
+        "ChatbotHook",
+        "ChatbotRetrieve",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-09-11-ecis-explained/beat_sheet.json",
+      "sha256": "6520c6a5ecaf00a6bc80e6c425cf587e27a6fe15236ff1dd11f3dc83b51e9d1d",
+      "title": "ECIS — Episode 6: From Reading to Predicting",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "Ecis6Close",
+        "Ecis6Features",
+        "Ecis6Forecast",
+        "Ecis6Intro",
+        "Ecis6Preregistered",
+        "Ecis6TwoLevels"
+      ]
+    },
+    {
+      "path": "anjana-s/2026-09-11-transformer-layer/beat_sheet.json",
+      "sha256": "6d8d6fb2ab9e026131b6dc3db6f81cb5474e425f464793109a547d69b97f4a03",
+      "title": "What Happens Inside a Transformer Layer",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "TransformerAttention",
+        "TransformerClose",
+        "TransformerFeedForward",
+        "TransformerGlue",
+        "TransformerHook"
+      ]
+    },
+    {
+      "path": "asavari-s/2026-08-14-how-do-you-know-ai-is-right/beat_sheet.json",
+      "sha256": "03fdc70fb902ac45ad20ba58c78d86262577a61e1f248e722df182a1c62089a1",
+      "title": "How Do You Know an AI Is Right?",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "asavari-s/2026-08-14-one-number-many-names/beat_sheet.json",
+      "sha256": "476cb3b9dd96a6dbae829ff820acc1cbcc9b831008d2bde36d6fa02606a7c88a",
+      "title": "One Number, Many Names",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "asavari-s/2026-08-14-pass-fail-unknown/beat_sheet.json",
+      "sha256": "dfbe90f3071ac29e987297687e6244495927743724f8d7a4b031fd28874a9e9c",
+      "title": "PASS / FAIL / UNKNOWN",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "asavari-s/2026-08-14-rag-explained/beat_sheet.json",
+      "sha256": "e642c5dbc2041603e282a7bac2149c801a9a9ee4442825930f0623df491cd99f",
+      "title": "RAG, Explained",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "asavari-s/2026-08-14-same-number-two-ways/beat_sheet.json",
+      "sha256": "a879f200b743f6aa5bca516a515affd88e997f870af7c850a65950993e1ee1e7",
+      "title": "Same Number, Two Ways",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "asavari-s/2026-08-14-the-512-token-blind-spot/beat_sheet.json",
+      "sha256": "da4aa42a4ae5d8ec433398e815d1fd934b43a0544c294cf63e83a419e3765d13",
+      "title": "The 512-Token Blind Spot",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "bhakti-s/build-from-zero/beat_sheet.json",
+      "sha256": "e8fbb93864182178bd63a9dd2a081efe343977b3530a59829bd736a341456d29",
+      "title": "Built From Zero",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DamExecSummary",
+        "DamLifecycleReveal",
+        "DamSopsChips",
+        "DamStatCard"
+      ]
+    },
+    {
+      "path": "bhakti-s/compliance-management/beat_sheet.json",
+      "sha256": "1acd2862cec428c27c3abab5e25bcc37fee4a5bcec5a5d01a748e5270f627e76",
+      "title": "Marketing Is More Than Marketing",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DamExecSummary",
+        "DamLifecycleReveal",
+        "DamSopsChips",
+        "DamStatCard"
+      ]
+    },
+    {
+      "path": "bhakti-s/digital-asset-management/beat_sheet.json",
+      "sha256": "0887f0af570be7530db63ad65802efba31a5e027be83eb30cce7a7baf8f8a299",
+      "title": "Digital Asset Management, Oversimplified",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DamComparisonGrid",
+        "DamExecSummary",
+        "DamLifecycleReveal",
+        "DamSopsChips",
+        "DamStatCard"
+      ]
+    },
+    {
+      "path": "chaitanya-m/2026-08-28-what-is-a-concept-map/beat_sheet.json",
+      "sha256": "ad3912397fc9617cf21424ab24f037a5b5938c50eaf448858e4f1af8fc6a6c3d",
+      "title": "What Is a Concept Map",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "charitha-v/2026-08-31-why-a-green-build-still-ships-a-broken-physics-demo/beat_sheet.json",
+      "sha256": "4d4897a1657e6ff1a639960589a7a9b234b024e90c008e86a39f754a18db2cc0",
+      "title": "Why a green build still ships a broken physics demo",
+      "patterns": [
+        "",
+        "HumanitariansResearchReport"
+      ]
+    },
+    {
+      "path": "charitha-v/2026-08-31-why-putting-the-simulation-at-the-bottom-breaks-the-lesson/beat_sheet.json",
+      "sha256": "6e2f06dad14c799eaa5a85fa74d4d432b0e14877a611025eb73404f0faad3330",
+      "title": "Why putting the simulation at the bottom breaks the lesson",
+      "patterns": [
+        "",
+        "HumanitariansResearchReport"
+      ]
+    },
+    {
+      "path": "charitha-v/2026-09-07-what-shipped-when-chapter-4s-sim-contract-went-book-wide/beat_sheet.json",
+      "sha256": "da4bc997d96e37651267ec96eafd3616eeb7db3eff654f973057a1f5237752b3",
+      "title": "What shipped when Chapter 4's sim contract went book-wide",
+      "patterns": [
+        "",
+        "HumanitariansResearchReport"
+      ]
+    },
+    {
+      "path": "charitha-v/2026-09-07-why-one-agent-cant-polish-seventeen-physics-chapters/beat_sheet.json",
+      "sha256": "0925cb109e8fff2c45675ca5be29966d08b0b9d845ef6fde45f093a8bcee6cc8",
+      "title": "Why one agent can't polish seventeen physics chapters",
+      "patterns": [
+        "",
+        "HumanitariansResearchReport"
+      ]
+    },
+    {
+      "path": "darshil-s/2026-08-25-medas-frontend-cicd/beat_sheet.json",
+      "sha256": "efd507a2fa1f04922303f0d537b4cab68b2acc79bd62c1519e8d99cfe4ff5d0c",
+      "title": "Push. Tag. Live.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "GitHubCallChain",
+        "GitHubCodeViewer",
+        "GitHubRepoHero",
+        "SkillTeardownAnatomy"
+      ]
+    },
+    {
+      "path": "darshil-s/2026-09-03-medas-frontend-cicd-rollback-worflow/beat_sheet.json",
+      "sha256": "071721559be1b4693c6f1de77ebf9fc286cb51b7b37e39d5661ba5492c9ccea7",
+      "title": "Continuous Integration and Rollback",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "GitHubCallChain",
+        "GitHubCodeViewer",
+        "GitHubRepoHero"
+      ]
+    },
+    {
+      "path": "dhrumil-shah/dhrumil-mycroft-thesis-guard-1/beat_sheet.json",
+      "sha256": "17fc6f8e6b6752af7676e64aa8222501cdd95de0a516ba4cf2b46005b311b272",
+      "title": "Mycroft ThesisGuard: Evidence Over Emotion",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "MycroftBrief"
+      ]
+    },
+    {
+      "path": "dhrumil-shah/dhrumil-shah-can-ai-discover-new-quantam-materials-16x9/beat_sheet.json",
+      "sha256": "c7a96f6116455684d53711e7149e7277111933004945cd47be74217907a08f65",
+      "title": "Can AI Discover New Quantum Materials?",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "dhrumil-shah/dhrumil-shah-can-ai-discover-new-quantum-materials-9x16-31st-august-2026/beat_sheet.json",
+      "sha256": "0950433226e43e8b12b9d11eec4e544718245969c822514d81923e53163f7b17",
+      "title": "Can AI Discover New Quantum Materials?",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "dhruvi-s/2026-08-30-stale-ecg/beat_sheet.json",
+      "sha256": "73706a035a1f7a6f7ac46c8b81c82848d5dc2a69197fa98d96b0ea60e26c85a2",
+      "title": "A Stale ECG Is Worse Than No ECG",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "EcgAverageTrap",
+        "EcgStalenessBars",
+        "EcgVerdictPanel",
+        "EcgWithinPatientDecay",
+        "OutroSeries"
+      ]
+    },
+    {
+      "path": "divij-pawar/mycroft1-divij-pawar-07-28-2026-accountability-mesh/beat_sheet.json",
+      "sha256": "2254d5017e33dc7bf18009650339d77a634e4d707396c6f9bb7a8e95b932ef92",
+      "title": "The Accountability Mesh",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "divij-pawar/mycroft2-divij-pawar-08-07-2026-chain-of-trust/beat_sheet.json",
+      "sha256": "d2d8459e5986ed3751be9b9958cf6a83eb4964eca3a16d4131f02c343972b9f3",
+      "title": "The Chain of Trust",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "divij-pawar/mycroft3-divij-pawar-08-14-2026-when-two-agents-disagree/beat_sheet.json",
+      "sha256": "3f74b88957248692ccc2146ac794a53f9224817859c374d51e8d2a9709684790",
+      "title": "When Two Agents Disagree",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "divij-pawar/mycroft4-divij-pawar-08-21-2026-three-files-twenty-one-tests/beat_sheet.json",
+      "sha256": "dc0ea2fb42c4adf523b778646e609f1e2176119157558230a2afa3396287ce13",
+      "title": "Three Files, Twenty-One Tests",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "divij-pawar/mycroft5-divij-pawar-08-28-2026-the-number-that-wasnt-there/beat_sheet.json",
+      "sha256": "61933b0e98d4f210d56cad40983bd720015c66b48f183b030a9b0597a24b0649",
+      "title": "The Number That Wasn't There",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "divij-pawar/stem1-divij-pawar-7-28-2026-what-makes-ai-agentic/beat_sheet.json",
+      "sha256": "b21c3b9df031a1e932947ad6b106e1950b683b531fcd3ab2fcf842ef92814e81",
+      "title": "What Makes an AI Agentic?",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "divij-pawar/stem2-divij-pawar-08-07-2026-why-agents-fail/beat_sheet.json",
+      "sha256": "0fc671b5a05c2a1f66ed912361b40feb89f5973dad0cbc06ab43a95ec705ee45",
+      "title": "Why Agents Fail",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "divij-pawar/stem3-divij-pawar-08-14-2026-autonomy-vs-control/beat_sheet.json",
+      "sha256": "55bb6c6b905c12c8a6c133d640a15afce616cffacc22c3687bd704fd9a85b1fd",
+      "title": "The Agent's Dilemma",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "divij-pawar/stem4-divij-pawar-08-21-2026-engineering-the-ai-agent/beat_sheet.json",
+      "sha256": "9419c01c30a65a08f99dadd820f6d778f6ef21c6e41fb9dabd185c4f8f86a7e8",
+      "title": "Engineering the AI Agent",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "divij-pawar/stem5-divij-pawar-08-28-2026-how-do-you-know-it-worked/beat_sheet.json",
+      "sha256": "1e275b74abdbbb8e1e0ed8c31fb0ee35f89f4175c3ec882c05a81f42b4dfa174",
+      "title": "How Do You Actually Know It Worked?",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "divyank-s/2026-07-26-ai-explainer-demo/beat_sheet.json",
+      "sha256": "d4b670762b00083ff0b59ad89730baff9f90f13db4f96ef6f94a0783a9a9fbac",
+      "title": "Claude, Gated.",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DivergentFates"
+      ]
+    },
+    {
+      "path": "divyank-s/2026-07-26-cli-explainer-demo/beat_sheet.json",
+      "sha256": "85f72b7a80bcb1cba40328f305ec4ca459ba2b13e54fc7cd3326de43d594f068",
+      "title": "Claude, Patched.",
+      "patterns": [
+        "BinaryBranch",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DivergentFates"
+      ]
+    },
+    {
+      "path": "divyank-s/2026-07-26-deep-explainer-demo/beat_sheet.json",
+      "sha256": "8323ffd0ff479ab66677f49261363b2520c93ec0abfe666314c34ed4de2fdbaa",
+      "title": "Claude, Constitutional.",
+      "patterns": [
+        "",
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DivergentFates",
+        "FluencySegmentCard"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-07-24-loon-conservatory-week-1/beat_sheet.json",
+      "sha256": "30f2396d6253f488f0bf502fa99c416eaa87b9f1a060d1b93ea11e22bbea3022",
+      "title": "What's Komal Building? — Loon Conservatory, Week 1",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-08-07-sustainable-prove-it/beat_sheet.json",
+      "sha256": "d7a85501d33ae7581fb221986adb67c41baf5c6b5d44c7e94e772dc9ff90164c",
+      "title": "Sustainable, Prove It.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "EmpCoBanList",
+        "EmpCoDeadline",
+        "EmpCoLuxuryStack",
+        "EmpCoNameTrap",
+        "EmpCoOffsetKill",
+        "EmpCoScope"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-08-14-luxury-quiet-tech/beat_sheet.json",
+      "sha256": "0a4aeab1a52e2db097d7a2896fdf72c0690bad6a730c63b365a16ec3e5f3c7a2",
+      "title": "Quiet Tech.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LuxuryDesire",
+        "LuxuryLoudVsQuiet",
+        "LuxuryQuietScale",
+        "LuxuryQuietTechDef",
+        "LuxuryThreeFutures",
+        "LuxuryTiffanyAdvisor"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-08-21-luxury-dead-stock/beat_sheet.json",
+      "sha256": "a502e26d25b16889540a0ce96847e8cd1bc94748dc919e5994bb43383aa85def",
+      "title": "Dead Stock.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DeadStockAllocate",
+        "DeadStockBan",
+        "DeadStockBet",
+        "DeadStockForecast",
+        "DeadStockName",
+        "DeadStockTell"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-08-21-madison-weekly-scope-cvat/beat_sheet.json",
+      "sha256": "5f4c1f40f5c6d17a8f331c175a5184ccb5e33e3df729fea443a1e7b222d7276b",
+      "title": "Madison Weekly — Scope Locked.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "MwBrand",
+        "MwDecision",
+        "MwFork",
+        "MwImages",
+        "MwScope",
+        "MwWeeks"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-08-28-jungian-archetypes/beat_sheet.json",
+      "sha256": "15453a823d2a4412aabdab1aa0ce78b8d854b5d1e74df4f81914d81e835b6614",
+      "title": "Archetype Engine.",
+      "patterns": [
+        "BrandArchetypeWheel",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "JungAiTool",
+        "JungBluf",
+        "JungMarketing",
+        "JungOrigin",
+        "JungTell"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-08-28-madison-weekly-aug-28/beat_sheet.json",
+      "sha256": "bbc6bb8e6f1e73f01ca6768127897b6ba58db065f756186e91fca93812eabc4c",
+      "title": "Madison Weekly — Aug 28.",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "MwWeeklyBluf",
+        "MwWeeklyBridge"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-09-04-luxury-the-loop/beat_sheet.json",
+      "sha256": "6646433eee5ac23acb2875c636bf70d886796eac2731f541ea1ac1bad7f57664",
+      "title": "The Loop.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LoopBluf",
+        "LoopIdentity",
+        "LoopLinear",
+        "LoopPassport",
+        "LoopTell",
+        "LoopVestiaire"
+      ]
+    },
+    {
+      "path": "komal-bg/2026-09-04-madison-weekly-sep-4/beat_sheet.json",
+      "sha256": "3696da772545f7b828cab847888f76a8ba86f766d4b29325592a38493617a795",
+      "title": "Madison Weekly — Sep 4.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "MwSepKarishma",
+        "MwSepKomal",
+        "MwSepPlumbing",
+        "MwSepSaiSet",
+        "MwSepScale",
+        "MwWeeklyBluf"
+      ]
+    },
+    {
+      "path": "maya-r/2026-07-10-building-the-verified-data-gate/beat_sheet.json",
+      "sha256": "69119a570b4fff19407af497aff043b64fd22b42296b6401e8d933095d5211bc",
+      "title": "Weekly Research Report: Building the Verified Data Gate",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "HumanitariansResearchReport",
+        "SegmentCard"
+      ]
+    },
+    {
+      "path": "maya-r/2026-07-17-testing-the-two-audience-brief/beat_sheet.json",
+      "sha256": "5d0e452d6890225841a934f62eb6a7c752de06b722949a3d287df6ae6572564d",
+      "title": "Weekly Research Report: Testing the Two-Audience Brief",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "HumanitariansResearchReport",
+        "SegmentCard"
+      ]
+    },
+    {
+      "path": "maya-r/2026-07-24-designing-an-accessibility-signal-monitor/beat_sheet.json",
+      "sha256": "873f7ab2c3d30ada15b39bb0e282bf3250462e3490ff1c15d6514aaf51440794",
+      "title": "Weekly Research Report: Designing an Accessibility Signal Monitor",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "HumanitariansResearchReport",
+        "SegmentCard"
+      ]
+    },
+    {
+      "path": "mohammed-h/2026-07-26-risk-management-explanation/beat_sheet.json",
+      "sha256": "3487a4c5174a6773e34f1e8e9552439fa90901ce94950dc86d66bae51a1d8c0e",
+      "title": "AAA to D: Rating Mycroft's Risk Score",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "mohammed-h/ai-data-engineering-etl/beat_sheet.json",
+      "sha256": "cff8cb04882905936b4621f93db37f0ecc38b0b842e9d5a0a07f60e4f033ed2b",
+      "title": "ETL, Simplified",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "EtlGlueTax",
+        "EtlSchemaMapping",
+        "EtlSilentFailure",
+        "EtlWhereAiHelps"
+      ]
+    },
+    {
+      "path": "mohammed-h/ai-data-quality/beat_sheet.json",
+      "sha256": "bf6be091c82d40e5a8d396ca3e783453a800c381e572396f186f400186cbb26e",
+      "title": "The Rule, Not The Report.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DqPipelineGate",
+        "DqProposal",
+        "DqRatifyGate",
+        "DqRuleCard",
+        "DqRuleScale",
+        "DqScoreVsField",
+        "DqWhereItBites"
+      ]
+    },
+    {
+      "path": "mohammed-h/bond-pricing/beat_sheet.json",
+      "sha256": "3c08c99358d62dfb105ecf6cd87d203773606865760550d88573c4f7354c7952",
+      "title": "Bond Pricing and Duration — Price-Yield Curve with Claude",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "mohammed-h/claude-hai-verification-log-demo/beat_sheet.json",
+      "sha256": "3d2cc23911c48aaae56b68eb6951ecd8591319ccd86fcc9d9e2486205de053a0",
+      "title": "Build Maya's Three-Beat Verification Log with Claude Code",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "mohammed-h/data-contract-simulation/beat_sheet.json",
+      "sha256": "07816151d14af29f9f71fc0c224dd3aa1ff77c4c25b880b7d99ed8e9b99a82ef",
+      "title": "Prove The Number Changed.",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "SimLoudHalf",
+        "SimMoneyShot",
+        "SimSilentBreak",
+        "SimThreeLayers"
+      ]
+    },
+    {
+      "path": "mohammed-h/onprem-rag-bot/beat_sheet.json",
+      "sha256": "3dc3ce0fd97c52c905161a947e14b043eb524b32cc7442f3e9103044f58ce4b2",
+      "title": "Chat With Your Own Data, Zero API Calls",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "mubin-m/beat_sheet.json",
+      "sha256": "f6fafcd8799d7e0419acf5910f4b0e51b948e8707d36c24afec502bb326ee96a",
+      "title": "Wrong, Safely.",
+      "patterns": [
+        "BrutalistHesitantWriter",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "TraceStepGrade"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-07-30-ai-vendor-intelligence/beat_sheet.json",
+      "sha256": "e8bfff78450ba00207652f277517cc0bf7acf777efd9edf8cd61804b88d1d4a2",
+      "title": "Fifty Vendors, One Brief.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LayerStack",
+        "SourceFlow"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-08-09-loop-engineering/beat_sheet.json",
+      "sha256": "2eb223320593f2281a28c607b334e3e03bf82b6042bc1dc1a53e6b438562822f",
+      "title": "Loops That Know When to Stop.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LayerStack"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-08-09-vendor-intel-identity-fix/beat_sheet.json",
+      "sha256": "63eb3b7af577e2f6233ca3ddff91f2e6a980f39138c57f765fb6d44c1e0af6e4",
+      "title": "The Wrong Cohere.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LayerStack"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-08-13-rag-evaluation/beat_sheet.json",
+      "sha256": "86b8fbdf58c37bc151f36a560428aaca30831433f2dd0bea12af9c20cb980ac3",
+      "title": "Where RAG Breaks.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "LayerStack",
+        "SourceFlow"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-08-13-vendor-intel-verify/beat_sheet.json",
+      "sha256": "3d0bf130118dce14275f166fa3dbdfce26c12140f656254d80044a4e7b05e589",
+      "title": "Confidently Wrong.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LayerStack"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-08-22-brief-eval-harness/beat_sheet.json",
+      "sha256": "7d6cb77fd705c351adc04b4401f372fd04b644315139bf72b733893e072279b9",
+      "title": "Caught by Code.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LayerStack",
+        "SourceFlow"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-08-22-debug-hallucination/beat_sheet.json",
+      "sha256": "428dac63bcdf650fa74f49afcdc97199e18931e1ac803f188a0b7f9cc912a51c",
+      "title": "Don't Blame the Prompt.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "LayerStack"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-08-28-open-vs-closed/beat_sheet.json",
+      "sha256": "2e6d86f2e6c4e9d17bb7e760016e1ea1ed0aa6757f6944ca7db36647fd1dc460",
+      "title": "Open vs Closed AI.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LayerStack"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-08-28-vendor-intel-guardrails/beat_sheet.json",
+      "sha256": "899fcb1a8c017b85759c14c3c93663a512dd715bd5fed7f9f3a1fce660ec9d80",
+      "title": "A Request, Not a Guarantee.",
+      "patterns": [
+        "ChipGrid",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LayerStack"
+      ]
+    },
+    {
+      "path": "muskan-k/2026-09-04-multimodal-ai/beat_sheet.json",
+      "sha256": "a8bfa96aea65de0c253359961e6acb5dcf0dbe08f8ede0ae68b5f155a440746d",
+      "title": "Multimodal AI.",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "novia-d/2026-08-25-chapter14-fact-check-generation/beat_sheet.json",
+      "sha256": "7b8a11cd4c4385160a412aa651a0e2883e4442b83eba84397e9077bb050402a1",
+      "title": "Fact-Check Generation",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceLayerStack",
+        "ClaudeTitleOutro",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "novia-d/2026-08-26-chapter28-fact-check-generation/beat_sheet.json",
+      "sha256": "3385ef94385d15a3881a8a871b034bf2e999a0497657c4ea6a055bac51eacf8a",
+      "title": "Fact-Check Generation",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceLayerStack",
+        "ClaudeTitleOutro",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "novia-d/2026-09-06-chapter14-json-fix/beat_sheet.json",
+      "sha256": "fc6291ff95a18f0d4c485e4c3161811f6e380856f20f933a40fb003e477cb5a9",
+      "title": "One Sentence, Many Sources.",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeScienceLayerStack",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "ClaudeWindow"
+      ]
+    },
+    {
+      "path": "om-mali/2026-07-27-building-buzz-tracker-dashboard/beat_sheet.json",
+      "sha256": "b0a932f0e3ddaffbdf72456aec00b206d66efaca7d4007187289b0b9978025f5",
+      "title": "Turning Hacker News Talk Into an AI Attention Signal",
+      "patterns": [
+        "",
+        "SlateCard"
+      ]
+    },
+    {
+      "path": "om-mali/2026-08-01-creating-signal-endpoint/beat_sheet.json",
+      "sha256": "d51e1a90c3dcb718b65c2af29321ee2eead46f2fdf95ee6719a69e10f6ce34f5",
+      "title": "Creating the Signal Endpoint",
+      "patterns": [
+        "",
+        "SlateCard"
+      ]
+    },
+    {
+      "path": "om-mali/2026-08-08-verifying-private-ai-valuations/beat_sheet.json",
+      "sha256": "e113a299eaa92f165728b8ce588857f182d6ae568224c152916e996800db89d4",
+      "title": "Verifying Private AI Valuations",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "PavConvergence",
+        "PavDivision",
+        "PavFilterDrop",
+        "PavNoPrice",
+        "PavScale",
+        "PavUniverse"
+      ]
+    },
+    {
+      "path": "om-mali/2026-08-15-bulk-ingestion-at-scale/beat_sheet.json",
+      "sha256": "db145434db9c12da5d986eaa3e0555192c50dd847ac7bb0350b073a5bf43275d",
+      "title": "Bulk Ingestion at Scale",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "W2Bluf",
+        "W2BulkLag",
+        "W2Convergence",
+        "W2FidelityTrap",
+        "W2Funnel",
+        "W2SpacexTrap",
+        "W2Staircase"
+      ]
+    },
+    {
+      "path": "om-mali/2026-08-22-entity-resolution-and-the-golden-set/beat_sheet.json",
+      "sha256": "a456439941f439b226128af2d60380f258fcfe22bf2f968d3a312b92a1929a79",
+      "title": "Entity Resolution and the Golden Set",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "W4Bluf",
+        "W4Dot",
+        "W4GoldenSet",
+        "W4Retraction",
+        "W4Reversal",
+        "W4Scoreboard",
+        "W4Spellings",
+        "W4Tie"
+      ]
+    },
+    {
+      "path": "prarthana-shetty/what-is-medhavy/beat_sheet.json",
+      "sha256": "5ae99101a3fec45e71dd990563617f0f95605f4253b15749f41ea371651c8778",
+      "title": "What Is Medhavy?",
+      "patterns": [
+        "",
+        "CoInstructorPipeline",
+        "CourseCreationProblem",
+        "CourseImportPipeline",
+        "GenericChatbotRisk",
+        "GroundedTutor",
+        "InstructorIntro",
+        "LearnerMemory",
+        "LearningPaths",
+        "MedhavyBookTutor",
+        "MedhavyClose",
+        "MedhavyHook",
+        "MedhavyHub",
+        "MedhavyOutro"
+      ]
+    },
+    {
+      "path": "ritik-b/2026-08-05-gemma4-unified/beat_sheet.json",
+      "sha256": "824e33893f02753ab8aa79f3117539bd57588452e8f97ad8c05e8cd8cf48bd47",
+      "title": "Gemma 4, Unified?",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "GemmaConvergenceThread",
+        "GemmaEncoderStack",
+        "GemmaExecSummary",
+        "GemmaScoreboard",
+        "PredictCard"
+      ]
+    },
+    {
+      "path": "rohan-v/2026-08-21-sample-rate-and-the-nyquist-limit/beat_sheet.json",
+      "sha256": "8a4af1ac29c7820c46cdb18b4a399a266201dfcfc697bf3cb0a304e134a6e12b",
+      "title": "Sample Rate and the Nyquist Limit",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "rohan-v/2026-08-21-what-a-spectrogram-shows/beat_sheet.json",
+      "sha256": "ccfcbef8f4b88dfd6439856907b31ba77a389f27d55b93bc0a6da996edb15d1b",
+      "title": "What a Spectrogram Shows",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "rohan-v/2026-08-28-agent-first-brutalist/beat_sheet.json",
+      "sha256": "746409a8715e70aab6186145e963c08d088469b809b28fe39d44f5d8d06b1a22",
+      "title": "Your Weekly Video, Handled.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "HaiSubmitAudioClock",
+        "HaiSubmitBeatSheet",
+        "HaiSubmitClaudeSetup",
+        "HaiSubmitDriveUpload",
+        "HaiSubmitForkBranch",
+        "HaiSubmitFormats",
+        "HaiSubmitGitHubDocs",
+        "HaiSubmitRecap",
+        "HaiSubmitRequirementGrid",
+        "HaiSubmitReviewLoop"
+      ]
+    },
+    {
+      "path": "rohan-v/2026-08-28-stem-separation/beat_sheet.json",
+      "sha256": "0cd24e63206ed83f168a3f4395abddd0d795faf3ccbdcc8f706cc28b3b2fd842",
+      "title": "Stem Separation: Estimation, Not Extraction",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeWindow",
+        "StemSepBleedViz",
+        "StemSepMixCollapse",
+        "StemSepStemOutput"
+      ]
+    },
+    {
+      "path": "rohan-v/2026-09-04-unblocking-the-team/beat_sheet.json",
+      "sha256": "92966eaaffbde8b3297df1bfd6f10ad31c1d852b208f22e2d9c03baa3265d5bd",
+      "title": "Unblocking the Team.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "HaiProgressBlocker",
+        "HaiProgressRoadmap",
+        "HaiProgressSeriesCards",
+        "HaiProgressSignupChain"
+      ]
+    },
+    {
+      "path": "rohan-v/2026-09-04-what-mp3-throws-away/beat_sheet.json",
+      "sha256": "c3c2cfe21d2ea4884b8fb9e55ad23081e67f6a9a53a2ee285691304fd3eee010",
+      "title": "What MP3 Throws Away",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeWindow",
+        "LossyBitrateCompare",
+        "LossyGenerationLoss",
+        "LossyMaskingCurve",
+        "LossySpectrumCut"
+      ]
+    },
+    {
+      "path": "sachin-vishaul-b/2026-08-07-finance-event-signals-week1-ingest/beat_sheet.json",
+      "sha256": "ab92cb8efbbc44336b622dd5fa667340acbee7daebf6c73130c043acd4ce0679",
+      "title": "Claude, Ingested.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "GitHubCallChain",
+        "GitHubCodeDiff",
+        "GitHubCodeViewer"
+      ]
+    },
+    {
+      "path": "sachin-vishaul-b/2026-08-07-kv-cache/beat_sheet.json",
+      "sha256": "9aa0d29f955ba1b0ee3309692e6aad37e24cc136b1175cddb5193d0114fa4d7c",
+      "title": "Claude, Cached.",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "sachin-vishaul-b/2026-08-14-finance-event-signals-week2-gated/beat_sheet.json",
+      "sha256": "7dbf107b703d5008e8600eb1623c8c6f2d33aa41cc5c30fe13a412117ed461f6",
+      "title": "Claude, Gated.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "GitHubCallChain",
+        "GitHubCodeViewer"
+      ]
+    },
+    {
+      "path": "sachin-vishaul-b/2026-08-14-vector-embeddings-ann-search/beat_sheet.json",
+      "sha256": "1cdf45df2e9fea761a15c3b3f0a7a2dafe76e77eaae5056c750b7aa7b11d8bea",
+      "title": "Claude, Nearest.",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "sachin-vishaul-b/2026-08-21-consistent-hashing/beat_sheet.json",
+      "sha256": "71afdbb169d688cc68d6ae8b7248dc0fef96d4e6d01a66a3012200a090a91093",
+      "title": "Claude, Ringed.",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "sachin-vishaul-b/2026-08-21-finance-event-signals-week3-traced/beat_sheet.json",
+      "sha256": "108dde330a328f92f0ad3dae1078b5fcf49dbfd43bc5f229ebd396935e82be47",
+      "title": "Claude, Traced.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "GitHubCallChain",
+        "GitHubCodeViewer"
+      ]
+    },
+    {
+      "path": "sachin-vishaul-b/2026-08-28-binary-search-on-the-answer/beat_sheet.json",
+      "sha256": "1ca9e0a1fbd9c5aa50b2b38b68e6fcf5a924649a056e6821cd97f53b1620250d",
+      "title": "Claude, Halved.",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "sachin-vishaul-b/2026-08-28-finance-event-signals-week4-graded/beat_sheet.json",
+      "sha256": "4c35b91fb8961c9db3e40b9ba108434d27a96724ea79b1b4d24f3dba6f7d94a6",
+      "title": "Claude, Graded.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "GitHubCallChain",
+        "GitHubCodeViewer"
+      ]
+    },
+    {
+      "path": "sai-pranavi-j/2026-07-26-recovering-the-silently-dropped-filings/beat_sheet.json",
+      "sha256": "d6e64da1def50e46ad63219a3d338dfbca85f4332895cdd9aedae1915d3f08e0",
+      "title": "The Pipeline That Was Lying to Me",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "sai-pranavi-j/2026-07-27-how-facial-recognition-actually-works/beat_sheet.json",
+      "sha256": "fe490e75612b180fd55e111edb4635503802d4d5366c8a2d909850d8336ea1cf",
+      "title": "How Facial Recognition Actually Works (And When It Shouldn't)",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "sai-pranavi-j/2026-08-17-why-ai-generated-code-still-needs-a-human/beat_sheet.json",
+      "sha256": "ec6d67cbd291c803d5b1b91bf8392511e7da83b6154fe381046863567ff07734",
+      "title": "Why AI-Generated Code Still Needs a Human Who Understands the System",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "sai-pranavi-j/2026-08-30-the-check-that-never-once-fired/beat_sheet.json",
+      "sha256": "a57a4b3a5ba6317ca4bbfc6b8ed964ed8df1ee987b9ae7a17721cc434badb125",
+      "title": "The Check That Never Once Fired",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "sai-pranavi-j/2026-08-30-the-update-that-almost-lied-about-what-it-sent/beat_sheet.json",
+      "sha256": "b4fb9c9720762e587a3f283756404be119a8fb06cb581b5fa49eb0b2cabf01d7",
+      "title": "The Update That Almost Lied About What It Sent",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "sai-pranavi-j/2026-08-30-what-prompt-injection-actually-looks-like/beat_sheet.json",
+      "sha256": "8ffecec7ef6e01477f473fece06253873a9f18780cf562f3e4e8ffb2e4104086",
+      "title": "Prompt Injection: The Vulnerability Hiding in Plain Text",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "sai-pranavi-j/2026-09-07-embeddings-how-ai-tells-similar-from-different/beat_sheet.json",
+      "sha256": "e2c5058a06d2b9bf63704ce4f8e79c6d87d17c287b22fac122f2a77a9accb30f",
+      "title": "Embeddings: How AI Tells Similar From Different (When Keyword Matching Can't)",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "sainikhil-madison/2026-08-21-every-image-earns-its-place/beat_sheet.json",
+      "sha256": "bff640df8199a7f697706c8bb124cdd129f362fb0fdd0644cc9c8dace8a37d22",
+      "title": "Every Image Earns Its Place",
+      "patterns": [
+        "",
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DivergentFates"
+      ]
+    },
+    {
+      "path": "sainikhil-madison/2026-08-21-model-to-the-bill/beat_sheet.json",
+      "sha256": "13f06e9f0aba0769a3db113064f195e9c9fa0b6fd64400fff87497474f02cad9",
+      "title": "From The Model To The Bill",
+      "patterns": [
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DivergentFates",
+        "LlmInferenceKnobs",
+        "LlmLoraFactorization",
+        "ScaleComparison"
+      ]
+    },
+    {
+      "path": "sainikhil-madison/2026-08-28-ground-truth-first/beat_sheet.json",
+      "sha256": "be86de03337d39b4d11188837cf13d53ddabacf0fd90a4478be679b05d6997ee",
+      "title": "Ground Truth First",
+      "patterns": [
+        "",
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DivergentFates"
+      ]
+    },
+    {
+      "path": "sainikhil-madison/2026-08-28-what-else-did-you-run/beat_sheet.json",
+      "sha256": "1d871a3753aa83f1bc2819c92962fffbd0b13a2504ae547722a2d01d354535ea",
+      "title": "What Else Did You Run?",
+      "patterns": [
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DivergentFates",
+        "ScaleComparison"
+      ]
+    },
+    {
+      "path": "sainikhil-madison/2026-09-04-every-box-checked/beat_sheet.json",
+      "sha256": "2831c500775231dc610af13b0c02aeb02183ed4151a06473cd18c0821c9a606b",
+      "title": "Every Box, Checked",
+      "patterns": [
+        "",
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeVerdictArtifact",
+        "DivergentFates",
+        "LogoOutro"
+      ]
+    },
+    {
+      "path": "sainikhil-madison/2026-09-04-the-cast-that-hid-the-bug/beat_sheet.json",
+      "sha256": "15674c254cc0a11282c17826ac0db1db6adfe22e895a7e2fc8a21701c7b5b783",
+      "title": "The Cast That Hid the Bug",
+      "patterns": [
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeVerdictArtifact",
+        "DivergentFates",
+        "LogoOutro"
+      ]
+    },
+    {
+      "path": "sainikhil-madison/2026-09-11-what-it-sees-and-what-it-misses/beat_sheet.json",
+      "sha256": "4bd8a2ba77ed55a31a49cbd19c37e31c9ac5e788de6138dee85e20c18f934eeb",
+      "title": "What It Sees, And What It Misses",
+      "patterns": [
+        "",
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeVerdictArtifact",
+        "DivergentFates",
+        "LogoOutro"
+      ]
+    },
+    {
+      "path": "sainikhil-madison/2026-09-11-what-it-stopped-needing/beat_sheet.json",
+      "sha256": "d363d5230fc49f185093f7939546a97b1d1b487600ed2ed120f2be5e32296aab",
+      "title": "What It Stopped Needing",
+      "patterns": [
+        "",
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeVerdictArtifact",
+        "DivergentFates",
+        "LogoOutro"
+      ]
+    },
+    {
+      "path": "sanjana-rao/08-24-2026-playlist-architecture-as-product-strategy/playlist-architecture/beat_sheet.json",
+      "sha256": "29a08443e66660ead10cf5d7e661f1f531bda5d2c5441c287c5929adc4952026",
+      "title": "Playlist Architecture as Product Strategy",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "PlaylistAIHeader",
+        "PlaylistClosing",
+        "PlaylistClustering",
+        "PlaylistExecSummary",
+        "PlaylistGapAnalysis",
+        "PlaylistHook",
+        "PlaylistJourneyMap",
+        "PlaylistReframe",
+        "PlaylistThreeQuestions",
+        "PlaylistTwoProducts"
+      ]
+    },
+    {
+      "path": "sanjana-rao/08-24-2026-playlist-architecture-as-product-strategy/playlist-architecture-short/beat_sheet.json",
+      "sha256": "787621776bcd8810d8719a61f577f3589707bbf59151655fcbbdd10555b318a0",
+      "title": "Playlist Architecture — Short",
+      "patterns": [
+        "ClaudeComposerAsk916",
+        "ClaudeTitleOutro916",
+        "PlaylistClosing916",
+        "PlaylistClustering916",
+        "PlaylistHook916",
+        "PlaylistThreeQuestions916",
+        "PlaylistTwoProducts916"
+      ]
+    },
+    {
+      "path": "sanjana-rao/08-24-2026-youtube-process/beat_sheet.json",
+      "sha256": "5ecececb90209db59e7ff66638f46ec7d6b164e7acc2dfa36ce89c184ada1cbd",
+      "title": "How the Humanitarians AI Video Review Process Works",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "sanjana-rao/09-02-2026-monte-carlo-schedule-risk-explainer/beat_sheet.json",
+      "sha256": "86452e39919248a4bec3bb521fab376697aa4b61e1ca2b9a5e86155075b49c63",
+      "title": "Monte Carlo Schedule Risk: When Will This Project Really Finish?",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "satwik-s/2026-07-28-personalized-reading-roadmap-introduction/beat_sheet.json",
+      "sha256": "6307c3e5874704690324e53c2735bc944b9f0a9b1d351c5b0747feba754d60f3",
+      "title": "Personalized, Project-Driven Reading Roadmaps for CaNCURE Trainees",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DependencyGraphReview",
+        "LimitsAndFuture",
+        "RetrieveVsReorder",
+        "RoadmapPipeline",
+        "RoadmapProblemFanout",
+        "WeeklyRoadmap"
+      ]
+    },
+    {
+      "path": "satwik-s/2026-08-09-personalized-roadmap-ablationstudy1/beat_sheet.json",
+      "sha256": "6fd77608884b32c97bdd225a1df9dec12e973f3be8e9956cbc5c3bfc96799e92",
+      "title": "Does the Fancy Part Earn It? — A Tagging Ablation",
+      "patterns": [
+        "AblationFramework",
+        "AblationSetup",
+        "AgreementBars",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DenominatorCaveat",
+        "StabilityCompare",
+        "WeightMaterials"
+      ]
+    },
+    {
+      "path": "satwik-s/2026-08-17-reading-roadmap-ablation-aug17/beat_sheet.json",
+      "sha256": "30c45b46167bf0afe2bf2785bd5d7a445595c325451485736664ba8ab3139f6a",
+      "title": "What an Ablation Can (and Can't) Decide — Full-Book Tagging",
+      "patterns": [
+        "AblationFourQuestions",
+        "AgreementFullBook",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DownstreamImpact",
+        "GoldSetPending",
+        "ReproSpeedCost",
+        "TheCeiling"
+      ]
+    },
+    {
+      "path": "satwik-s/2026-08-23-personalized-roadmap-goldenset/beat_sheet.json",
+      "sha256": "61c8f561aa48cfabe8b947b2b2d3046ebf5398d6c2810abc6698dcdc95bce4e5",
+      "title": "Which One Is Right? Scoring Taggers Against a Gold Set",
+      "patterns": [
+        "BlindGoldSet",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "F1Verdict",
+        "GoldScoringFramework",
+        "ProvisionalCatch",
+        "ReadTheSplit",
+        "TagProvenance"
+      ]
+    },
+    {
+      "path": "satwik-s/2026-08-29-reading-roadmap-reason-or-retreive/beat_sheet.json",
+      "sha256": "dbc4a4477f568e752c29c853af32c61e950cae087a2a54961db39d99339e021b",
+      "title": "Does It Reason, or Just Retrieve?",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "DraftEdges",
+        "InsertNotReshuffle",
+        "ReasonOrRetrieveFramework",
+        "TaggingHardened",
+        "WhatRetrievalMisses",
+        "WithWithoutGraph"
+      ]
+    },
+    {
+      "path": "satwik-s/2026-09-05-reading-roadmap-ober-is-it-any-good/beat_sheet.json",
+      "sha256": "a0d5b44c5495913a7176c05aa7cb540fb63f60bfdbd13e4060d1ebcaa7c68d28",
+      "title": "How Would We Know It's Any Good?",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "EngagementVsLearning",
+        "FourJobsFramework",
+        "NotProof",
+        "OberSetup",
+        "OutcomeInstrument",
+        "StructureBlueprint"
+      ]
+    },
+    {
+      "path": "satwik-s/2026-09-11-reading-roadmap-test-before-building/beat_sheet.json",
+      "sha256": "ad7d6f8bd3559d412e000bae16674e450c868a4d1d2618600baa6b432edbe3d5",
+      "title": "Test Before You Advance",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "HonestBoundary",
+        "PruneDescend",
+        "SixFileModel",
+        "TestTheEdge",
+        "ThreeMoves",
+        "TwoLearners"
+      ]
+    },
+    {
+      "path": "shivpriya-mane/2026-08-11-ecommerce-assistant-security-layer/beat_sheet.json",
+      "sha256": "880c12be88f858ba626e481daefa3ddce5d7e911331442e32be2949ef451ca62",
+      "title": "The Security Layer Behind My Smart E-Commerce Assistant",
+      "patterns": [
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "N/A - real demo footage, see note",
+        "RealChipGrid",
+        "RealLayerStack",
+        "RealSourceFlow",
+        "SlateCard"
+      ]
+    },
+    {
+      "path": "shivpriya-mane/2026-08-11-marley-tools/beat_sheet.json",
+      "sha256": "4213b45a19fff41e89b892941de181be03d1056ae9bb00d8f8e1e51d2f4420bc",
+      "title": "The Tools I Built for Marley: Three Small Business AI Utilities",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "N/A - real screenshot, see note",
+        "RealChipGrid",
+        "RealLayerStack",
+        "RealSourceFlow",
+        "SlateCard"
+      ]
+    },
+    {
+      "path": "shivpriya-mane/2026-08-12-eval-rot-part1/beat_sheet.json",
+      "sha256": "4477ab64554564b85e077b3f13c558732f134b1e827352010a67591c2c33b49e",
+      "title": "Why AI Evaluation Benchmarks Stop Working (Part 1)",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "RealChipGrid",
+        "RealLayerStack",
+        "SlateCard"
+      ]
+    },
+    {
+      "path": "shivpriya-mane/2026-08-12-eval-rot-part2/beat_sheet.json",
+      "sha256": "5c514db0a5d7bca3d5a5c511b397abadc42ede7cda276a77664f1f59f35143ef",
+      "title": "Why AI Evaluation Benchmarks Stop Working (Part 2)",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "N/A - original diagram, see note",
+        "RealChipGrid",
+        "RealLayerStack",
+        "RealSourceFlow",
+        "SlateCard"
+      ]
+    },
+    {
+      "path": "supriya-k/banking-domain-interview-end-to-end/beat_sheet.json",
+      "sha256": "b5961b262562c64de0b2b600042d9ac409a82f625b79b2c09f96f3c8792e7905",
+      "title": "Banking Domain Data Analyst Interview Prep — Trailer",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "swara-madison/08-22-video-update/loon-annotation-tool/beat_sheet.json",
+      "sha256": "cbb744f58bc90a9aebf1a56879512c5c0ad4b8a4ba3915828ce44f4f91a02a1c",
+      "title": "Building the Loon Annotation Tool",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "swara-madison/08-22-video-update/loon-annotation-tool-vertical/beat_sheet.json",
+      "sha256": "2cc568c14bba429f4cc7973c474e9079af0cbea6c0f409cb06d7494a3d7856ea",
+      "title": "Building the Loon Annotation Tool",
+      "patterns": [
+        "ClaudeComposerAsk916",
+        "ClaudeScienceChipGrid916",
+        "ClaudeScienceLayerStack916",
+        "ClaudeScienceSourceFlow916",
+        "ClaudeTitleOutro916",
+        "ClaudeVerdictArtifact916"
+      ]
+    },
+    {
+      "path": "swara-madison/08-22-weekly-update/beat_sheet.json",
+      "sha256": "101251ce8ff733fab293e422b0ec4a1550282c5c7b86f752b0a481a752e0b131",
+      "title": "National Loon Center Weekly Update",
+      "patterns": [
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "swara-madison/08-28-video-update/loon-metadata-pipeline/beat_sheet.json",
+      "sha256": "d226fc653d28e7a4dde2e7c18bc66378c717b35c25c6767b3183ae66f770534d",
+      "title": "From Footage to Field Context",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "swara-madison/08-28-video-update/loon-metadata-pipeline-vertical/beat_sheet.json",
+      "sha256": "a34f0854671962d4bf8030ff4b53e4d69686866dc80acd0e4246105e8db95e66",
+      "title": "From Footage to Field Context",
+      "patterns": [
+        "ClaudeComposerAsk916",
+        "ClaudeScienceChipGrid916",
+        "ClaudeScienceLayerStack916",
+        "ClaudeScienceSourceFlow916",
+        "ClaudeTitleOutro916",
+        "ClaudeVerdictArtifact916"
+      ]
+    },
+    {
+      "path": "swara-madison/08-28-weekly-update/beat_sheet.json",
+      "sha256": "f7641c24b50b65ee27b64940fbac600a4190e5300ae30f81bef2f582bde143ce",
+      "title": "National Loon Center Weekly Update",
+      "patterns": [
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "swara-madison/09-04-video-update/beat_sheet.json",
+      "sha256": "da1074df46f63fe028db88bcc85f3c2beeb20d57c41dc40b338977eef0c7cc73",
+      "title": "From Annotated Data to Training a Computer Vision Model",
+      "patterns": [
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "swara-madison/09-04-weekly-update/beat_sheet.json",
+      "sha256": "50fe5efd0a4daa711a028ee8bd08dda06b94ffb3daa5b0dd6734462f92f7dab0",
+      "title": "National Loon Center Weekly Update",
+      "patterns": [
+        "BinaryBranch",
+        "ClaudeComposerAsk",
+        "ClaudeScienceChipGrid",
+        "ClaudeScienceLayerStack",
+        "ClaudeScienceSourceFlow",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-07-28-case-study-video/beat_sheet.json",
+      "sha256": "9e4bdd0c5f0f002ac46a546ff39973899091d988c9afa854a2a0e0d25fff1447",
+      "title": "Claude, Untangled?",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "CommbankDisputesGrade",
+        "CommbankMythMerge",
+        "CommbankNoReconnect",
+        "CommbankPredictCard",
+        "CommbankRecordFork",
+        "CommbankVoiceBotTimeline"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-07-29-ai-crossroads-build-or-buy-video-klarna/beat_sheet.json",
+      "sha256": "f243f0e03cdded89a344590a66c322062dc97f5b6d0f4f0fcc4a49e7c5167a4c",
+      "title": "The Artificial Intelligence Crossroads: Build or Buy?",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "KlarnaAnswerCard",
+        "KlarnaJCurve",
+        "KlarnaSplitCard",
+        "KlarnaStatBlock"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-08-05-lemonade-claims-bot-mycroft/beat_sheet.json",
+      "sha256": "af7fab0f3824887444dd96ade8363a97e28e9011a2dcddffc1ae7b095d15cab6",
+      "title": "I Built Lemonade's Claims Bot — Here's What Production Would Actually Need",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "LemonadeCodeArtifact",
+        "LemonadePipelineMap",
+        "LemonadeProduction",
+        "LemonadeRubric",
+        "LemonadeStage",
+        "LemonadeStatGap"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-08-06-can-ai-catch-its-own-mistakes/beat_sheet.json",
+      "sha256": "b7e15b21e14ea27f5ccc1b4ececaa205242b3740c35e39c9af6748e0795997b8",
+      "title": "Can AI Catch Its Own Mistakes? I Ran the Experiment",
+      "patterns": [
+        "SkepticList",
+        "SkepticNumber",
+        "SkepticSplit",
+        "SkepticStatement"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-08-12-bs-01-pick-and-scope/beat_sheet.json",
+      "sha256": "9d9b8d625efe99c46166dabdb05b6706fba83c3e91d81ca5ec44df088d26a299",
+      "title": "Your Job Description Is Too Generic for AI — Four Questions That Fix It",
+      "patterns": [
+        "ClaudeArtifactCardFull",
+        "ClaudeComposerAsk",
+        "ClaudeFourQuestionBoard",
+        "ClaudeSplitComparator",
+        "ClaudeTitleOutroFull"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-08-13-hsbc-agentic-adjacent-ai-mycroft/beat_sheet.json",
+      "sha256": "0da08e42ff0d2d1d3c1921701c5da71cd6d8662cf30bdd71c93be633abdf4d4d",
+      "title": "Their Numbers, My Arrows - Reading an AI Announcement Without Adding to It",
+      "patterns": [
+        "",
+        "ClaudeArtifactCardFull",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutroFull"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-08-23-the-ai-was-right/beat_sheet.json",
+      "sha256": "0d7cc2ac5cc1c9d71757a6bff935e7666e730559479e2cb0b63ea978bba4a52d",
+      "title": "The AI Was Right. That Was the Problem.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "SyncCheckResult",
+        "SyncClaimLayers",
+        "SyncRecordStrata",
+        "SyncSendChecklist",
+        "WantQuote"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-08-23-where-the-record-stops/beat_sheet.json",
+      "sha256": "fc19c0a2f9373b8212dfce57589363ab192b84a9453e8edab5571c010b0a2511",
+      "title": "Where the Record Stops",
+      "patterns": [
+        "BuildLedger",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "StageRefinement",
+        "SyncSendChecklist",
+        "WantQuote"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-08-30-a-quantum-sphere-stem-video/beat_sheet.json",
+      "sha256": "014b5427a73d553cae32b9295b75a02a16d98020099c46a1e79b732b7c187a8c",
+      "title": "Four, Then Two, Never One",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ContrastCurves",
+        "CrossSectionCurve",
+        "EvidenceTable",
+        "InstrumentPanel",
+        "PromptPanels",
+        "ScatterOpening"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-08-30-drafts-one-thing-files-another-mycroft/beat_sheet.json",
+      "sha256": "0d98010c5491225f822bdae5c1a6d7a17c8f5163537557c1b0f5fd5417a53c7d",
+      "title": "Morgan Stanley's AI Drafts One Thing and Files Another",
+      "patterns": [
+        "",
+        "BeforeAfter",
+        "CheckCard",
+        "FiguresPlate",
+        "QuotePair",
+        "RepoPlate",
+        "TensionPlate",
+        "TerminalPlate",
+        "TitlePlate"
+      ]
+    },
+    {
+      "path": "tanmay-kulkarni/2026-09-03-the-stages-that-stayed-dark-mycroft/beat_sheet.json",
+      "sha256": "6ba88c081b07c1bdec5e79cf3517b4f11a3a2c0fe7c75516a0f535dcb0941574",
+      "title": "The Stages That Stayed Dark",
+      "patterns": [
+        ""
+      ]
+    },
+    {
+      "path": "uday-s/2026-08-27-state-space-models-and-mamba/beat_sheet.json",
+      "sha256": "92231fc046aeb7101168be1862b6980b8d574e3befb95c4146b5657e346c868d",
+      "title": "State Space Models and Mamba Architecture",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "uday-s/2026-08-27-weekly-fixtures-before-validators/beat_sheet.json",
+      "sha256": "9e97abd5857ab5ab6e01230bf201f53e66ec455ef86c72208e67bce6416fd4f1",
+      "title": "Build the Defects First",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "uday-s/2026-09-03-generative-engine-optimization/beat_sheet.json",
+      "sha256": "5d307bf2b551ebfacb0802e084a7b6688d87363c7d63f4a98949dd3443ffbe1b",
+      "title": "The Brand That Didn't Exist",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "uday-s/2026-09-03-mycroft-weekly-transport-do-not-repair/beat_sheet.json",
+      "sha256": "9bcae6628535db965144eb90a864070f1629a9c680dfc85c3868b55d3aa8a19b",
+      "title": "Transport, Do Not Repair",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "uday-s/2026-09-10-mycroft-weekly-both-sets-scored-64/beat_sheet.json",
+      "sha256": "da8ccd0ad3865eb6125ad6f9126ff3120af6850b4557c8e313f12a465064cb5e",
+      "title": "Both Sets Scored 64",
+      "patterns": [
+        "",
+        "ClaudeCodeBeat",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "uday-s/2026-09-10-zero-day-vulnerability/beat_sheet.json",
+      "sha256": "efdc33feb0b9f888c19d70cc105a15a7724cd1850aa4101de268f8e34339aa94",
+      "title": "The Gap You Can Actually Close",
+      "patterns": [
+        "",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro"
+      ]
+    },
+    {
+      "path": "vighnesh-s/2026-08-04-nine-months-at-the-data-ceiling/beat_sheet.json",
+      "sha256": "9aace41886e46f4fe8f2962edca88c219013917cbc846751eab0ccb5d244651a",
+      "title": "Nine Months at the Data Ceiling",
+      "patterns": [
+        "BarChart",
+        "ClaudeComposerAsk",
+        "OutroSeries",
+        "SlateCard"
+      ]
+    },
+    {
+      "path": "yatra-r/2026-08-20-the-bottleneck-moved/beat_sheet.json",
+      "sha256": "a657adb89459f42584e0dacd4209e872fd1ac31a8097af4fad7b95c3f3387564",
+      "title": "The Bottleneck Moved.",
+      "patterns": [
+        "BnkBranch",
+        "BnkCosts",
+        "BnkCutoff",
+        "BnkFunnel",
+        "BnkSplit",
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact"
+      ]
+    },
+    {
+      "path": "yatra-r/2026-08-21-assisted-not-automated/beat_sheet.json",
+      "sha256": "dba0bb423ae4c411abf7dc5ec405fa9677d3226eb9ec3e8159fb5bc71e18cad4",
+      "title": "Assisted, Not Automated.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "SeoAct",
+        "SeoCompare",
+        "SeoDrop",
+        "SeoLead",
+        "SeoReasons",
+        "SeoShare",
+        "SeoSources",
+        "SeoSplit",
+        "SeoStakes",
+        "SeoStat",
+        "SeoWatch"
+      ]
+    },
+    {
+      "path": "yatra-r/2026-08-21-every-tool-every-week/beat_sheet.json",
+      "sha256": "e7a1de179ca7d92027ddba76e4da4e5f0c753f5321c0b0402b905c9cc99aeeae",
+      "title": "Every Tool, Every Week.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "YtwChecks",
+        "YtwLoop",
+        "YtwSplit",
+        "YtwStatus",
+        "YtwWeeks"
+      ]
+    },
+    {
+      "path": "yatra-r/2026-08-21-the-judgment-is-the-job/beat_sheet.json",
+      "sha256": "2c1386a538304875e4361848cd5d0798e7bc9f578d020bb9cf644bc4f9334fb5",
+      "title": "The Judgment Is the Job.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "JdgBranch",
+        "JdgDiverge",
+        "JdgOptions",
+        "JdgSplit",
+        "JdgStakes"
+      ]
+    },
+    {
+      "path": "yatra-r/2026-08-30-one-tool-a-week-brandy/beat_sheet.json",
+      "sha256": "e219593a27eaf6d68b43d3c9c89243cb90fd1e9dab7fd1199abc000d757af38e",
+      "title": "One Tool a Week.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "RcpCard",
+        "RcpSplit",
+        "RcpStatus",
+        "RcpTeam",
+        "RcpWeeks"
+      ]
+    },
+    {
+      "path": "yatra-r/2026-09-01-nobody-wrote-this/beat_sheet.json",
+      "sha256": "9b54e9ad73a070ddb1f3a0d96094c996cf0d058f7c3c60c06998a0494768d454",
+      "title": "Nobody Wrote This.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "LnkAllOrNothing",
+        "LnkBluf",
+        "LnkContradiction",
+        "LnkDisproportion",
+        "LnkFalsify",
+        "LnkFrame",
+        "LnkLadder",
+        "LnkPressure",
+        "LnkStat"
+      ]
+    },
+    {
+      "path": "yatra-r/2026-09-03-this-week-gordy/beat_sheet.json",
+      "sha256": "7e3ea1f61c421e605e583be9b2a7b5f554aa8cadfb6e14dabaee66f471856083",
+      "title": "This Week, Gordy.",
+      "patterns": [
+        "ClaudeComposerAsk",
+        "ClaudeTitleOutro",
+        "ClaudeVerdictArtifact",
+        "WkBluf",
+        "WkNotClaiming",
+        "WkPipeline",
+        "WkReview",
+        "WkShip",
+        "WkStatus",
+        "WkTool"
+      ]
+    }
+  ]
+}

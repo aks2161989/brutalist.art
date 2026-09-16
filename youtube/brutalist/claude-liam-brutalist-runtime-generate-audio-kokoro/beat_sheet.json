@@ -1,0 +1,824 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: generate_audio_kokoro.py",
+    "slug": "claude-liam-brutalist-runtime-generate-audio-kokoro",
+    "topic": "BRUTALIST · UTILITY: GENERATE_AUDIO_KOKORO.PY",
+    "kind": "utility",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Ahoj, Liam",
+    "greeting_note": "hello lexicon: Ahoj (Czech, one word). Fresh — not previously used in the claude-liam-brutalist-* runtime series.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "ee4093952a4c4010a7cab3e6729cd376",
+    "episode_id": "runtime-generate-audio-kokoro",
+    "order": 44,
+    "note": "Utility teardown of runtime/scripts/generate_audio_kokoro.py — the FREE voice engine (Kokoro-82M via kokoro-onnx). ~54 named preset voices, local ONNX Runtime on CPU, Apache-2.0. Same interface as the paid generate_audio.py: writes mp3/beat-<BID>.mp3, mp3/timings.json, and stamps actual_duration_s + audio_file back into beat_sheet.json — durations are ground truth for downstream. Voice resolution: beat.voice > metadata.voice_kokoro > metadata.voice > DEFAULT_VOICE 'am_onyx'. Voice-code first letter picks G2P language (a=en-us, b=en-gb, j=ja, z=cmn, e=es, f=fr-fr, h=hi, i=it, p=pt-br). Skip conditions (verified 2026-09-10 against demo fixture): is_source_report OR intentional_silence, empty narration_text, narration_text starts with ⚠ / [LOST] / [PLACEHOLDER] (sentinel is a note to humans not a script), engine != 'kokoro'. Failure modes: model files missing prints the ~330MB one-time curl block and exits; kokoro-onnx not installed prints pip install line; unknown voice code prints 'unknown voice(s): X — see --list-voices'. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged in README.md for the human reviewer before publication. episode.source_sha256 80fb439ccc56a7e53f1f738932695601aede11c74aa9e292c91fe976dd9f8136 (from invocation); current file sha 256 4de916f41e66c8c29d4617f09422ab9c7da8e3e03cbdfcaf66c4751aa52e7a47.",
+    "channel_title": "@HumanitariansAI",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "source_file": "runtime/scripts/generate_audio_kokoro.py",
+      "public_source_url": "https://github.com/nikbearbrown/brutalist.art/blob/main/runtime/scripts/generate_audio_kokoro.py"
+    },
+    "tags": [
+      "Brutalist",
+      "generate_audio_kokoro.py",
+      "kokoro-onnx",
+      "Kokoro-82M",
+      "am_onyx",
+      "local TTS",
+      "free voice",
+      "utility teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-10T11:43:49",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Ahoj, this is Liam, in for Bear. The ask — a new beat sheet needs narration for two beats. No API key. No metered service. Just generate the audio locally, on this laptop, with the free engine. And skip the fellows report beat and the intentional silence beat while you're at it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Ahoj, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'invoking generate_audio_kokoro.py…' appears"
+          },
+          {
+            "at": "0.84",
+            "event": "three output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Ahoj, Liam",
+            "topic": "BRUTALIST · UTILITY: GENERATE_AUDIO_KOKORO.PY",
+            "segment": "runtime/scripts/generate_audio_kokoro.py",
+            "command": "A new beat sheet needs narration for two beats. No API key. No metered service. Generate the audio locally with the free Kokoro engine — and skip the fellows report beat and the intentional silence beat.",
+            "runningText": "invoking generate_audio_kokoro.py…",
+            "output": [
+              "load Kokoro-82M ONNX model (~330MB, local, one-time)",
+              "for each speaking beat — synth mp3 with voice am_onyx, measure with ffprobe",
+              "stamp actual_duration_s + audio_file back into beat_sheet.json (atomic)"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T15:03:55.786231+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.53,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 15.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer. Misconception the reel dismantles: Kokoro is paid and remote. It is not — it runs LOCAL and FREE on your machine.",
+      "narration_text": "Watch the writer walk this back. Kokoro is not paid and remote. It is a free, local ONNX model that runs on this laptop's CPU. No key. No meter. No account. Just voices.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'kokoro is / paid and remote.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'paid' turns terracotta, hesitates, backspaces, types 'free'"
+          },
+          {
+            "at": "0.80",
+            "event": "'remote' turns terracotta, hesitates, backspaces, types 'local'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'kokoro is / free and local.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "kokoro\nis paid\nand remote.",
+            "triggerWords": "paid, remote",
+            "replacementWords": "free, local",
+            "seed": "gak-b01-landscape-v4",
+            "face": "serif",
+            "fontSize": 290,
+            "lineSpacing": 1.1,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T15:28:41.599398+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 10.58,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 10.583333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the whole pipeline in one horizontal phase-flow. PARSE args → LOAD engine → FILTER beats → NORMALIZE + SYNTH → MP3 + MEASURE → STAMP sheet.",
+      "narration_text": "The pipeline. One invocation. Parse the arguments — a reel folder and some optional flags. Load the Kokoro engine from the on-disk model files. Walk the beats and filter — source reports and silent beats out, sentinels out, non kokoro engines out, empty narration out. For every survivor: normalize symbols to spoken form, synth samples with Kokoro dot create, write a wave file, transcode to MP3 with ffmpeg, measure duration with ffprobe. Then atomically write the actual duration and audio file path back into the beat sheet.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "phase-flow",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow UTILITY · PIPELINE + title 'From beat sheet to spoken mp3s' fade in"
+          },
+          {
+            "at": "0.22",
+            "event": "INPUT box 'beat_sheet.json  am_onyx' lands"
+          },
+          {
+            "at": "0.36",
+            "event": "LOAD phase appears with terracotta arrow"
+          },
+          {
+            "at": "0.48",
+            "event": "FILTER phase appears"
+          },
+          {
+            "at": "0.58",
+            "event": "SYNTH phase appears"
+          },
+          {
+            "at": "0.68",
+            "event": "ENCODE phase appears"
+          },
+          {
+            "at": "0.78",
+            "event": "STAMP phase appears"
+          },
+          {
+            "at": "0.88",
+            "event": "OUTPUT box 'mp3/beat-<BID>.mp3 + timings.json' lands"
+          },
+          {
+            "at": "0.96",
+            "event": "spark line settles under the diagram"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "title": "Local, free, atomic — durations ground-truth back into the sheet.",
+            "inputLabel": "beat_sheet.json\nam_onyx",
+            "outputLabel": "mp3/beat-<BID>.mp3\ntimings.json",
+            "phases": [
+              {
+                "label": "LOAD",
+                "desc": "Kokoro ONNX",
+                "accent": false
+              },
+              {
+                "label": "FILTER",
+                "desc": "skip 5 kinds",
+                "accent": true
+              },
+              {
+                "label": "SYNTH",
+                "desc": "k.create()",
+                "accent": true
+              },
+              {
+                "label": "ENCODE",
+                "desc": "wav → mp3 -q:a 2",
+                "accent": false
+              },
+              {
+                "label": "STAMP",
+                "desc": "atomic_json",
+                "accent": false
+              }
+            ],
+            "footerNote": "Silent beats + sentinel narrations + engine!=kokoro beats — all skipped. --dry-run prints the plan and exits.",
+            "sparkLine": "One walk. Five skips. Two files per beat. $0.00."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T15:05:54.030678+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 29.82,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 29.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 1 — CLI surface, verbatim from the shipped --help + observed --list-voices.",
+      "narration_text": "The command surface. One optional positional — the reel folder. Five flags. Dash dash only takes a list of beat IDs to regenerate. Dash dash speed adjusts playback rate. Dash dash dry run prints the plan and exits without touching the disk. Dash dash list voices prints all fifty four Kokoro preset voice codes and exits. Dash dash sheet lets you point at a different filename than beat sheet dot json. Dash dash no gate is deprecated — it cannot bypass human approvals.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'generate_audio_kokoro.py — CLI surface (verbatim)'"
+          },
+          {
+            "at": "0.22",
+            "event": "the --help block types"
+          },
+          {
+            "at": "0.72",
+            "event": "sample --list-voices output types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "generate_audio_kokoro.py — CLI surface (verbatim)",
+            "code": "$ python3 runtime/scripts/generate_audio_kokoro.py -h\nusage: generate_audio_kokoro.py [-h] [--only [ONLY ...]] [--speed SPEED]\n                                [--dry-run] [--no-gate] [--list-voices]\n                                [--sheet SHEET]\n                                [folder]\n\npositional arguments:\n  folder\n\noptions:\n  -h, --help         show this help message and exit\n  --only [ONLY ...]  beat ids to (re)generate\n  --speed SPEED\n  --dry-run\n  --no-gate          deprecated; cannot bypass human approvals\n  --list-voices\n  --sheet SHEET      beat sheet filename to read/write (default:\n                     beat_sheet.json)\n\n$ python3 runtime/scripts/generate_audio_kokoro.py --list-voices | head -6\naf_alloy   af_aoede   af_bella   af_heart   af_jessica   af_kore\n# ... 54 total: af_*, am_* (en-us) · bf_*, bm_* (en-gb) · jf_*, jm_*\n# (ja) · zf_*, zm_* (cmn) · ef_*, em_* (es) · ff_*, hf_*, hm_*, if_*,\n# im_*, pf_*, pm_* — one G2P per prefix letter.",
+            "sparkLine": "One positional. Five flags. $0.00 to plan."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T15:06:31.920975+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.92,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 25.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 2 — model_paths() + load_engine() + LANG_BY_PREFIX. Where the model lives, how the language is derived from voice code.",
+      "narration_text": "Where Kokoro lives. Model paths returns two paths — the ONNX model and the voices bundle — resolving in order from the Kokoro model and Kokoro voices environment variables, then from ART home slash runtime slash models slash kokoro. Load engine checks both files exist. If they don't, it prints the exact curl commands to fetch them — three hundred and thirty megabytes, one time, no account — and exits. If the kokoro dash onnx package is missing, it prints pip install kokoro dash onnx and exits. Then lang for maps the voice code's first letter to a G2P language. A is American English. B is British. J is Japanese. Z is Mandarin. And narration for a non English voice must actually be written in that language.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 38,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'generate_audio_kokoro.py:80-120 — model_paths + load_engine + lang_for'"
+          },
+          {
+            "at": "0.20",
+            "event": "model_paths + load_engine bodies type"
+          },
+          {
+            "at": "0.60",
+            "event": "LANG_BY_PREFIX table types"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "generate_audio_kokoro.py:80-120 — model_paths() + load_engine() + lang_for()",
+            "code": "def model_paths():\n    home = Path(os.environ.get('ART_HOME')\n                or Path(__file__).resolve().parents[2])\n    base = home / 'runtime' / 'models' / 'kokoro'\n    model  = Path(os.environ.get('KOKORO_MODEL')  or base/'kokoro-v1.0.onnx')\n    voices = Path(os.environ.get('KOKORO_VOICES') or base/'voices-v1.0.bin')\n    return model, voices\n\ndef load_engine():\n    model, voices = model_paths()\n    if not (model.exists() and voices.exists()):\n        sys.exit(f'[kokoro] model files missing. One-time download (~330MB, free):\\n'\n                 f'  mkdir -p {model.parent}\\n  cd {model.parent}\\n'\n                 f'  curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/'\n                 f'download/model-files-v1.0/kokoro-v1.0.onnx\\n  curl -LO ... voices-v1.0.bin')\n    try:\n        from kokoro_onnx import Kokoro\n    except ImportError:\n        sys.exit('[kokoro] pip install kokoro-onnx   (free, local — no key)')\n    return Kokoro(str(model), str(voices))\n\nLANG_BY_PREFIX = {'a':'en-us','b':'en-gb','j':'ja','z':'cmn','e':'es',\n                  'f':'fr-fr','h':'hi','i':'it','p':'pt-br'}\ndef lang_for(voice): return LANG_BY_PREFIX.get(voice[:1], 'en-us')",
+            "sparkLine": "One env override. Nine G2P languages. No account."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-10T15:07:14.737152+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 39.64,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 39.666666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 3 — the FIVE skip rules in main(). What counts as a beat this engine will voice.",
+      "narration_text": "The filter. Five skip rules. One — is source report or intentional silence: the beat has an existing source audio or a silent flag. Two — empty narration text. Three — narration text starts with a warning glyph, or the string LOST in square brackets, or PLACEHOLDER in square brackets. Sentinels are notes to humans, not scripts. Voicing one ships narration lost as narration. Real incident, twenty twenty six, August. Four — dash dash only was passed and this beat ID isn't on the list. Five — engine is not kokoro. That beat needs its own generator.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'generate_audio_kokoro.py:186-208 — the five skip rules'"
+          },
+          {
+            "at": "0.25",
+            "event": "the filter body types line-by-line"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "generate_audio_kokoro.py:186-208 — the five skip rules",
+            "code": "for b in sheet['beats']:\n    bid = b['beat_id']\n    # 1. source report OR intentional silence — leave the source audio alone\n    if is_source_report(b, sheet) or intentional_silence(b):\n        print(f'[kokoro] {bid} SKIPPED — source audio / intentional silence')\n        continue\n    text = (b.get('narration_text') or '').strip()\n    # 2. empty narration — nothing to say\n    if not text:\n        continue\n    # 3. sentinel — a note to humans, not a script\n    if text.startswith(('\\u26a0', '[LOST]', '[PLACEHOLDER]')):\n        print(f'[kokoro] {bid}  SKIPPED — narration_text is a sentinel, not narration')\n        continue\n    # 4. --only filter\n    if a.only is not None and bid not in a.only:\n        continue\n    # 5. engine != kokoro — belongs to another generator\n    engine = str(b.get('engine', 'kokoro')).lower()\n    if engine != 'kokoro':\n        print(f'[kokoro] {bid}  engine={engine} — skipped (run its own generator)')\n        continue\n    voice = b.get('voice') or selected_voice\n    todo.append((b, voice, text))",
+            "sparkLine": "Five skips. One survives → one mp3."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-10T15:07:48.999784+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 29.87,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 29.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 4 — normalize_for_tts + write_mp3 + measure. From text symbol to bytes to ground-truth duration.",
+      "narration_text": "The synth loop. For each survivor: normalize for TTS runs a small symbol table — psi, integral, delta x, times, squared, all the physics glyphs — and turns them into spoken English. Kokoro dot create returns raw samples at a sample rate. Write MP3 wraps the samples in a temporary wave file inside a copy on write scratch directory — never following a Short's legacy symlink — then calls ffmpeg with libmp3lame quality two to encode the final MP3. Measure calls ffprobe with format equals duration and returns the number in seconds. That number becomes the beat's actual duration s. Every downstream step reads that field. The engine name is never checked again.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 40,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'generate_audio_kokoro.py:60-143 — normalize + write_mp3 + measure'"
+          },
+          {
+            "at": "0.20",
+            "event": "SYMBOLS + normalize_for_tts body types"
+          },
+          {
+            "at": "0.55",
+            "event": "write_mp3 body types"
+          },
+          {
+            "at": "0.85",
+            "event": "measure body types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "generate_audio_kokoro.py:60-143 — normalize_for_tts + write_mp3 + measure",
+            "code": "SYMBOLS = {'\\u03c8':'psi', '\\u222b':'integral of', '\\u2192':'goes to',\n           '\\u2265':'greater than or equal to', '\\u0394x':'delta x',\n           '\\u00b7':' times ', '\\u00b2':' squared', '\\u2014':', ', ...}\ndef normalize_for_tts(text):\n    for sym, spoken in SYMBOLS.items():\n        text = text.replace(sym, spoken)\n    return text\n\ndef write_mp3(samples, sr, out_mp3):\n    ints = [max(-32768, min(32767, int(s*32767))) for s in samples]\n    with tempfile.TemporaryDirectory(prefix='.tts-', dir=out_mp3.parent) as scratch:\n        tmp = Path(scratch) / 'audio.wav'\n        encoded = Path(scratch) / 'audio.mp3'\n        with wave.open(str(tmp), 'wb') as w:\n            w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr)\n            w.writeframes(struct.pack(f'<{len(ints)}h', *ints))\n        subprocess.run([FFMPEG, '-y', '-v', 'error', '-i', str(tmp),\n                        '-c:a', 'libmp3lame', '-q:a', '2', str(encoded)],\n                       check=True)\n        os.replace(encoded, out_mp3)   # atomic; never follows a symlink\n\ndef measure(path):\n    out = subprocess.run([FFPROBE, '-v', 'error', '-show_entries',\n                          'format=duration', '-of', 'csv=p=0', str(path)],\n                         capture_output=True, text=True, check=True)\n    return float(out.stdout.strip())",
+            "sparkLine": "One symbol table. One atomic write. One ffprobe."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-10T15:08:28.803919+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 38.95,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 38.958333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — disposable fixture at demo/fixture-reel/. Six beats — two speak, four skip. Dry-run output observed 2026-09-10.",
+      "narration_text": "Worked example. Disposable fixture — one beat sheet with six beats. B zero and B one have plain narration. B two is marked as a source report — preserve the fellow's audio. B three has silent equals true. B four's narration starts with LOST in square brackets. B five's engine field is set to nbb. Run dash dash dry run against the fixture. Two beats would generate. Two source or silent skips. One sentinel skip. One engine skip. Cost: zero dollars. No mp3 written. No sheet mutated.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'demo/fixture-reel → generate_audio_kokoro.py --dry-run'"
+          },
+          {
+            "at": "0.22",
+            "event": "the fixture beat list types"
+          },
+          {
+            "at": "0.55",
+            "event": "the dry-run invocation types"
+          },
+          {
+            "at": "0.70",
+            "event": "the observed output types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "demo/fixture-reel  →  --dry-run  (observed 2026-09-10)",
+            "code": "# demo/fixture-reel/beat_sheet.json — 6 beats:\n#  B00  \"First beat. Voice defaults to am_onyx.\"          → SPEAKS\n#  B01  \"Second beat. Same voice.\"                        → SPEAKS\n#  B02  kind: source_report                                → SKIP (source audio)\n#  B03  silent: true                                       → SKIP (silence)\n#  B04  \"[LOST] narration missing — sentinel, not script.\" → SKIP (sentinel)\n#  B05  engine: 'nbb'                                      → SKIP (non-kokoro)\n\n$ python3 generate_audio_kokoro.py demo/fixture-reel --dry-run\n[kokoro] B02 SKIPPED — source audio / intentional silence\n[kokoro] B03 SKIPPED — source audio / intentional silence\n[kokoro] B04  SKIPPED — narration_text is a sentinel, not narration\n[kokoro] B05  engine=nbb — skipped (run its own generator)\n[kokoro] (dry-run) B00  voice=am_onyx  49 chars\n[kokoro] (dry-run) B01  voice=am_onyx  24 chars\n[kokoro] 2 beat(s) would generate — cost: $0.00",
+            "sparkLine": "Two speak. Four skip. $0.00 to plan."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T15:09:07.003597+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 27.41,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 27.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 5 — failure modes. Model missing / kokoro-onnx not installed / unknown voice — all HARD exits with a fix printed. No sentinel gets voiced.",
+      "narration_text": "Failure modes. Three loud, one quiet. Loud one — the model files aren't on disk. Load engine prints the exact three commands to curl them from the kokoro dash onnx release, then sys exits. No stack trace. Loud two — the kokoro dash onnx pip package isn't installed. It prints pip install kokoro dash onnx and sys exits. Loud three — a beat asks for a voice code Kokoro doesn't ship. The tool sys exits with unknown voice colon that code, see dash dash list voices. Observed on the badvoice fixture with am underscore nonexistent. Quiet one — a sentinel narration. It prints SKIPPED and moves on. The sheet is never mutated for a sentinel. Ever.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 38,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'generate_audio_kokoro.py — failure modes'"
+          },
+          {
+            "at": "0.20",
+            "event": "the model-missing branch types"
+          },
+          {
+            "at": "0.42",
+            "event": "the pip-missing branch types"
+          },
+          {
+            "at": "0.60",
+            "event": "the unknown-voice branch types + observed output"
+          },
+          {
+            "at": "0.82",
+            "event": "the sentinel-skip branch types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "generate_audio_kokoro.py — failure modes (three loud, one quiet)",
+            "code": "# 1. model files missing — load_engine() sys.exits with the exact fix\nif not (model.exists() and voices.exists()):\n    sys.exit(f'[kokoro] model files missing. One-time download (~330MB, free):'\n             f'\\n  mkdir -p {model.parent}\\n  cd {model.parent}'\n             f'\\n  curl -LO https://github.com/thewh1teagle/kokoro-onnx/'\n             f'releases/download/model-files-v1.0/kokoro-v1.0.onnx'\n             f'\\n  curl -LO ... voices-v1.0.bin')\n\n# 2. package not installed — sys.exits with the pip line\ntry:    from kokoro_onnx import Kokoro\nexcept ImportError:\n    sys.exit('[kokoro] pip install kokoro-onnx   (free, local — no key)')\n\n# 3. unknown voice — sys.exits BEFORE synth\nbad = sorted({v for _, v, _ in todo} - known)\nif bad:\n    sys.exit(f'[kokoro] unknown voice(s): {\", \".join(bad)} — see --list-voices')\n\n#   $ ... generate_audio_kokoro.py demo/fixture-reel-badvoice   (observed)\n#   [kokoro] unknown voice(s): am_nonexistent — see --list-voices\n\n# 4. sentinel narration — print SKIPPED, never mutate the sheet\nif text.startswith(('\\u26a0', '[LOST]', '[PLACEHOLDER]')):\n    print(f'[kokoro] {bid}  SKIPPED — narration_text is a sentinel, not narration')\n    continue",
+            "sparkLine": "Every failure prints the fix. No sentinel is ever voiced."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T15:09:42.680860+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 35.14,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 35.166666666666664,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface as an artifact card, six lines.",
+      "narration_text": "So — generate audio kokoro dot py. The free voice engine. One optional positional and five flags. One Kokoro ONNX model on disk — three hundred and thirty megabytes, one time, no account. One symbol table normalizes physics glyphs before synth. Five skip rules keep source reports, silences, sentinels, filtered beats and non kokoro beats out of the loop. Every survivor becomes one MP3 whose measured duration is written back into the beat sheet. Ground truth. Same interface as the paid engine — downstream never knows which engine spoke.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'generate_audio_kokoro.py — the whole surface, in the order it does its job'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "generate_audio_kokoro.py — the whole surface, in the order it does its job",
+            "artifactLines": [
+              "input — beat_sheet.json in a reel folder; voice from beat.voice or metadata.voice_kokoro.",
+              "engine — local Kokoro-82M ONNX (~330MB, Apache-2.0, ~54 preset voices, no account).",
+              "filter — skip source reports, silent beats, sentinels, --only misses, engine!=kokoro.",
+              "synth — normalize symbols, k.create(), write wav→mp3 (libmp3lame -q:a 2) atomically.",
+              "measure — ffprobe format=duration → beat.actual_duration_s = ground truth.",
+              "output — mp3/beat-<BID>.mp3 · mp3/timings.json · sheet stamped · cost: $0.00."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-10T15:11:16.022304+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 31.04,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 31.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at a reel folder of your own that has a beat sheet with at least two speaking beats and one silent beat. Ask Claude to run generate audio kokoro against that folder in dash dash dry run first, and paste back the printed plan. Then have Claude run it for real on just the two speaking beats with dash dash only. Verify the sheet was updated — audio file and actual duration s stamped on both beats — and that no MP3 was written for the silent beat. Local, free, ground truth durations. That's the deal.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Dry-run kokoro, then generate two beats",
+            "command": "Point Claude Code at a reel folder of your own whose beat_sheet.json has at least two speaking beats and one silent beat. (1) Run `python3 runtime/scripts/generate_audio_kokoro.py <reel> --dry-run` and paste back the plan it prints. (2) Run it for real with `--only B0X B0Y` on the two speaking beat IDs. (3) Show me the diff on the beat sheet — the two beats should now have audio_file + actual_duration_s stamped, and the silent beat should be untouched. Do NOT re-generate the silent beat.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — the printed --dry-run plan, verbatim",
+              "step 2 — the observed [kokoro] beat-<ID>.mp3  Ns  voice=am_onyx lines",
+              "step 3 — the beat_sheet.json diff (only two beats touched)"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T15:12:39.510674+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 28.8,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 28.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-10T11:43:49"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Utility: generate audio kokoro dot py. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Utility: generate_audio_kokoro.py.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Utility: generate_audio_kokoro.py.",
+            "slug": "claude-liam-brutalist-runtime-generate-audio-kokoro"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-10T15:12:56.781129+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 6.83,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 6.833333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-10T11:43:49"
+      }
+    }
+  ]
+}

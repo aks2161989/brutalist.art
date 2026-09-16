@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "cd463d4c846f48aa8632dd051a6c5f93",
+  "source_sha256": "b914803b8bcd807c8572ab22babf442cdbdc1aee218975a2f327fc6e5226179a",
+  "beat_sheet_sha256": "d843ba1d6138d7f83adb33a43738080520bdba78fe8485180a646b7b7a938ddc",
+  "video_sha256": "1c30dfd739a6094f39eaceb5567d4cbff9089e290b4d25d2f62e2f0c5bd78c13",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames/t2.500.png",   "sha256": "ea20a1b5da31e267d13031bd00d1d082b17d9f0f6a47fe267eb23c96674a785a", "beat": "B00", "point": "15%"},
+    {"path": "_qc/frames/t8.333.png",   "sha256": "9f6982e4250310b690bcba6e8325a4b40ee7882cf97d27bd9774542659da9256", "beat": "B00", "point": "50%"},
+    {"path": "_qc/frames/t14.167.png",  "sha256": "9346279bad0fa781973d69da49a75f582c439b20aeed689b82bb11de786d0f10", "beat": "B00", "point": "85%"},
+    {"path": "_qc/frames/t18.854.png",  "sha256": "79f616d75aab9bbcae2a49a48e708cd141682e3aa8dab7230962d38c48e03690", "beat": "B01", "point": "15%"},
+    {"path": "_qc/frames/t23.958.png",  "sha256": "2d010b3fd4c5e87e7f556fff53a98cb4112fbd16c9716fa4c2bdee1506f437f6", "beat": "B01", "point": "50%"},
+    {"path": "_qc/frames/t29.062.png",  "sha256": "36416e2853f23cfa561deeecfc9b9e93891b7691767ff820b77af6b0c2b2f30f", "beat": "B01", "point": "85%"},
+    {"path": "_qc/frames/t35.137.png",  "sha256": "fec8a86cb4684143aa44966d87dbfed983b19781949e1b2d2247f9c7afaba962", "beat": "B04", "point": "15%"},
+    {"path": "_qc/frames/t44.208.png",  "sha256": "bfbb0cc1ed8a6ebe3dab25de6aa8309e6475730575fb4abaa3c433f39e74079f", "beat": "B04", "point": "50%"},
+    {"path": "_qc/frames/t53.279.png",  "sha256": "5bf5f99a17995f0ad9745e626eb97d85d7ce3b6888ae103c92d68bb0c7b91fd0", "beat": "B04", "point": "85%"},
+    {"path": "_qc/frames/t61.079.png",  "sha256": "dac61d3240457ac55c5f038fdbd86a75dc44a369cf01ff51909c15b7db19c590", "beat": "B06", "point": "15%"},
+    {"path": "_qc/frames/t70.208.png",  "sha256": "cc8a18e62fd72bbfde962015139cbae51037e29fd3d97ba9f4b3e1c621a71e65", "beat": "B06", "point": "50%"},
+    {"path": "_qc/frames/t79.337.png",  "sha256": "dd79d55fdeb0a2e85fe23d38ee184e7422109acbd3eba107d428ff16fef83d85", "beat": "B06", "point": "85%"},
+    {"path": "_qc/frames/t86.919.png",  "sha256": "3ddbfce77162d541daa1a290bcdd631e2fdaef7a76a3bf37a3cff18a7a4dd302", "beat": "B09", "point": "15%"},
+    {"path": "_qc/frames/t95.479.png",  "sha256": "41f4dc7b9ef0b99e89cd5620b94baf256eddd16b2dddbe51071b0fcef179cc02", "beat": "B09", "point": "50%"},
+    {"path": "_qc/frames/t104.038.png", "sha256": "50dfc67ae7c5891084e65b10c2c8efd1ae0d314612466479fefa1e2d7367abeb", "beat": "B09", "point": "85%"},
+    {"path": "_qc/frames/t108.570.png", "sha256": "db2d9f947f7d4ca33b2cdb31cbecb60a83555c2945a7a76094c107602a89ebd0", "beat": "B11", "point": "15%"},
+    {"path": "_qc/frames/t110.583.png", "sha256": "0975e92c3124de66bb35638b642d248946fb01f3aeba07e9fddcd00faeb3a435", "beat": "B11", "point": "50%"},
+    {"path": "_qc/frames/t112.595.png", "sha256": "9b2a082c4209eb467cd6c34a590dfeb5ee8d70aad57d9813363e6957d809e5ce", "beat": "B11", "point": "85%"}
+  ],
+  "notes": "Re-verified 2026-09-12 (run_id cd463d4c846f48aa8632dd051a6c5f93). Trigger: source/feedback change flagged by repoloop. Verification confirmed all six retained beat media files (B00, B01, B04, B06, B09, B11) are byte-identical to the current parent vertical (SHA checked per file). Re-ran runtime/scripts/compile.py --height 3840; output MP4 is byte-identical to prior build (SHA 1c30dfd739a6094f39eaceb5567d4cbff9089e290b4d25d2f62e2f0c5bd78c13). Container 113.458s, video 113.417s, audio 113.458s — all strictly below 180s hard cap; 66.5s headroom. Dimensions 2160×3840 native 4K portrait. All 18 QC frames re-hashed and confirmed byte-identical to prior review (media unchanged). Whole-beat cut: 6/12 beats kept (B00, B01, B04, B06, B09, B11), 6 dropped (B02, B03, B05, B07, B08, B10). B00 opens with Liam's Merhaba disclosure; B01 states subtractive-not-additive; B04 names the four rules; B06 shows the verbatim --dry-run summing to 7,330; B09 recaps the whole surface; B11 is Liam's outro with @NikBearBrown. Two SKIN LINT lines (B00/B11) are expected false positives for Claude *916 wrappers on command-* episodes. One minor parent-inherited observation: B06 header clips trailing ')' at right edge — identical in parent 9:16 clip, not a regression. 0 blockers, 0 majors. Human review by Bear pending; nothing published, uploaded, or pushed."
+}

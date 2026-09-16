@@ -18,6 +18,7 @@ import { CLAUDE, CLAUDE_FONT } from '../tokens/claude';
 export const claudeVerdictArtifactSchema = z.object({
   artifactTitle: z.string().default('Verdict'),
   artifactHeading: z.string().default('The split'),
+  brandLabel: z.string().optional(),
   artifactLines: z.array(z.string()).default([
     'Chat: synchronous judgment — you, in the loop.',
     'Cowork: asynchronous recipes — runs while you rehearse.',
@@ -37,7 +38,7 @@ const stripLeadNum = (s: string) => s.replace(/^\s*\d+\s*[.)\-–—:]\s*/, '');
 
 
 export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
-  artifactTitle, artifactHeading, artifactLines,
+  artifactTitle, artifactHeading, artifactLines, brandLabel,
 }) => {
   const frame = useCurrentFrame();
   const { fps, width } = useVideoConfig();
@@ -51,6 +52,7 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
 
   return (
     <AbsoluteFill style={{ background: '#F2F0E9', alignItems: 'center', justifyContent: 'center' }}>
+      {brandLabel && <div style={{position:'absolute',right:width*.07,bottom:'6.5%',fontFamily:SERIF,fontSize:28,color:CLAUDE.INK}}>{brandLabel}</div>}
       {/* Artifact card */}
       <div style={{
         width: cardW,

@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/exports/vertical/claude-liam-brutalist-command-icons-vertical.mp4",
+  "sha256": "d2c828fd84cf71b278bf30fde970d208235c1a645135d02dbd6cdc1243b2b099",
+  "duration_s": 199.33333333333334,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B00.mp4": "3f5fceab590de1efa17dd76ccc1aebb4e1cf5cf09d531719ffff1caaebb87a09",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B01.mp4": "a33edca4b5fd4fdc962ee70d57bd6915e6c35fce0c15af3b1124adb68d9d94ce",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B02.mp4": "fd4342003669a0e1bb077720023a76e548abebcef188c27652c7695613801d6f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B03.mp4": "faebf6ae46c0662e762164191675d6b2c4614a51e03c43914c9facb12d06c544",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B04.mp4": "6985506b88a13fb7bebbd9c0f15468fee70bbef0ffa365f8b19db32475cd85c1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B05.mp4": "242755eb28c2911edc159c8afd512d111ecec34301d88ec6d460d13b5e96ade6",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B06.mp4": "6fb23e19f09a49b6a58ad1ae2544e811d120283995e33107977332591a4b1539",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B07.mp4": "51bdcf5fec81c664bb7635de0ae112c545bdbd7afcaa7f2a2bfd80e88ac1bac3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B08.mp4": "046005f554f8f12fb9697b2508f812ef94287233d90e3c62e8be7bbd9a12cff9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B09.mp4": "8cdd69fa7ddc3b81311cb95c45a77c97d20c8eae13ba7c8f30a2b2d71c619f3a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B10.mp4": "340a15968ce8ea545ea719f080b65525d1c29aac3ddab38d5fa25c3486431ae2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/media/B11.mp4": "8d0b0a7b1290b7d2446479b879aec28630f36e4af177be4f3cb7aa2e8252aa20",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B00.mp3": "dee22f81674533bc77f413cf72e6711d528b28b4586c165e9c6ba555ae203c11",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B01.mp3": "67d8e36214064ab325a2874f6cbe0d0734af0f2d313c9644d2f9d0ae7d05d282",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B02.mp3": "910ccf0672c9155fdb45719914e45a60e3ac8d4eaba6cc60b03c71c2babd626e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B03.mp3": "7c91d31ffb8a96aa7d82dacc6fd2440d65dde74225d13639497571a186aebd46",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B04.mp3": "6042f61778a8f42bb5130452ea2118e714e413a8110ad3f577ca6157cb276e5b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B05.mp3": "67c8d0bb0d22a92395a5b8b41ee363364a5b8b60f79ac3ea174a716fecd9bfc7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B06.mp3": "4fe3ebb11f04e74ffc616acc6cc5c87eb31bab41f37a8bed76c3d66ca205ad85",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B07.mp3": "ff4854c4cff3b1e2255bd790b4feeb7d15c90833d4e51b71115685d778fa90aa",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B08.mp3": "96ce6a641638e31926a0da4bb578f82029979ccc12fde75bfd731dc14a88a2e3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B09.mp3": "2dad4514ae9703dd344123a0756256127f17bcb7aa63f3e6a4aed82f103052f2",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B10.mp3": "19866e045de5af2b16e671847ce864aeafda66164981e225d662bd52a6815ff8",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-icons/vertical/mp3/beat-B11.mp3": "9905c9848c75ffe24121ef885390e7e6394a2c2995447259572136a7080be704"
+  },
+  "at": "2026-09-09T09:04:11.979224+00:00"
+}

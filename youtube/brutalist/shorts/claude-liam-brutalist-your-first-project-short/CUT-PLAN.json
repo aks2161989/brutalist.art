@@ -1,0 +1,18 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "What Claude Code does when you ask for your first Brutalist project: reads the ai-explainer skill, drafts a beat sheet, generates Kokoro am_onyx narration, renders scenes, compiles a review cut, stops for you to judge.",
+  "parent_master_sha256": "1d01e65c3c45d6b0864bbf9145aacc4d681ad72fbc12d37527b6f06cbbd68ee4",
+  "parent_beat_sheet_sha256": "d8d08b74e70c53040f1f45e050baf928e004b11f90884fff2ea7b949eb047235",
+  "run_id": "20860bda8f2846a7b16ea4b0c872bacc",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B05", "B10", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Generic beat_sheet.json anatomy belongs in the 16:9 long; a Short does not need the schema fields on screen."},
+    {"beat_id": "B06", "reason": "One-beat revision ask is a second worked example; the first ask in B03 is enough for a Short."},
+    {"beat_id": "B07", "reason": "Diff-on-disk detail is a long-form code walkthrough; the review-cut + first-ask message stands without it."},
+    {"beat_id": "B08", "reason": "16:9 vs 9:16 format discipline is important for the fellows long, but not the high-level answer to 'what does the skill do'."},
+    {"beat_id": "B09", "reason": "GitHub/Drive submission lanes are handoff plumbing; the Short's honest limitation is already carried by B05 (review-cut is a receipt, not publication)."}
+  ],
+  "cut_first_review": "Story arc: B00 (Liam introduces one-ask-one-plan) -> B01 (BLUF: your first project is a claim, not a demo) -> B03 (a concrete first ask, verbatim, with the hard stop at the review cut) -> B04 (seven concrete things Claude Code does before you see a frame) -> B05 (review-cut.mp4 is a local receipt, not a published master; human review is a separate step) -> B10 (your turn: paste-ready prompt, good vs bad ask) -> B11 (Liam sign-off). Every transition already exists in the source narration (B00 'clock'->B01 'frame'; B01 'method'->B03 'first ask, verbatim'; B03 'hard stop at review cut'->B04 'seven concrete things before you see a frame'; B04 'stops'->B05 'output is a review cut'; B05 'you judge it'->B10 'your turn'; B10 'good vs bad ask'->B11 title restate). No dangling references to dropped beats; B10 mentions 'the review cut' which B04/B05 established.",
+  "planned_duration_s": 75.74,
+  "rewrite_reason": null
+}

@@ -1,0 +1,179 @@
+{
+  "number": 18,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5",
+  "beats": 22,
+  "sheet_sha256": "bdc4ebd76349eed2fedeade1598f158243e324b24f2b9f2d7ded0fbd645e2275",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/review.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "341.206333",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B08",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/05/main.py",
+        "code": "def authorize(root, target, operation, approved=False):\n    if operation not in {\"read\", \"write\"}:\n        raise PermissionError(\"Operation is not allowed\")\n    base = Path(root).resolve()\n    path = (base / target).resolve()\n    if not path.is_relative_to(base):\n        raise PermissionError(\"Path escapes the data boundary\")\n    if operation == \"write\" and approved is not True:\n        raise PermissionError(\"Write requires human approval\")\n    return path",
+        "sparkLine": "Resolve. Contain. Then require approval.",
+        "codeSize": 0.045,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in Claude cream skin: authorize() from lesson 5."
+    },
+    {
+      "beat": "B12",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/06/main.py",
+        "code": "def review(changed, allowed, checks_passed, approved):\n    reasons = []\n    if not changed:\n        reasons.append(\"no changes\")\n    if set(changed) - set(allowed):\n        reasons.append(\"out of scope\")\n    if checks_passed is not True:\n        reasons.append(\"checks failed or absent\")\n    if approved is not True:\n        reasons.append(\"human review required\")\n    return {\"merge_ready\": not reasons, \"reasons\": reasons}",
+        "sparkLine": "A decision. And its receipts.",
+        "codeSize": 0.038,
+        "sparkSize": 26
+      },
+      "intent": "Onda code card: review() from lesson 6 \u2014 the merge conjunction."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B00.mp4",
+      "seconds": 10.8731056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B01.mp4",
+      "seconds": 12.11,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B02.mp4",
+      "seconds": 2.2866668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B03.mp4",
+      "seconds": 12.04,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B04.mp4",
+      "seconds": 10.1733331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B05.mp4",
+      "seconds": 2.2399999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B06.mp4",
+      "seconds": 16.4266669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B07.mp4",
+      "seconds": 2.1933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B08.mp4",
+      "seconds": 12.856666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B09.mp4",
+      "seconds": 16.1466669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B10.mp4",
+      "seconds": 13.206666899999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B11.mp4",
+      "seconds": 2.2633330999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B12.mp4",
+      "seconds": 12.2266669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B13.mp4",
+      "seconds": 13.649999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B14.mp4",
+      "seconds": 13.3933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B15.mp4",
+      "seconds": 2.2166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B16.mp4",
+      "seconds": 13.649999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B17.mp4",
+      "seconds": 15.399999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/B18.mp4",
+      "seconds": 15.1666669,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/BVDT.mp4",
+      "seconds": 13.02,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/BHTF.mp4",
+      "seconds": 23.3562112,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-03-permissions-and-diff-review-8ffcbeb3-v-b787c958cbe5/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/18-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

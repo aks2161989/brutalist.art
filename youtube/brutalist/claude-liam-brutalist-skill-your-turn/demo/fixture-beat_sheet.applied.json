@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "title": "The Fictional Skill",
+    "slug": "claude-liam-fixture-your-turn-demo",
+    "kind": "skill",
+    "engine": "elevenlabs",
+    "voice": "bear",
+    "palette": "claude",
+    "playlist": "Brutalist",
+    "note": "SYNTHETIC FIXTURE — not a real reel. Body is elevenlabs (Bear) so the your-turn transformer must pick the 'Thanks Bear' handoff. Existing verdict card has authored '1.' / '2.' prefixes so the strip-leading-numbers fix has something to remove. Existing YOUR TURN and OUTRO are minimal on purpose — the transformer rewrites them."
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Hallo, Liam. This fixture opens on the composer, as every claude-explainer does.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hallo, Liam",
+            "topic": "FIXTURE",
+            "segment": "The Fictional Skill",
+            "command": "Explain the fictional skill.",
+            "folderLabel": "@NikBearBrown"
+          }
+        }
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "engine": "elevenlabs",
+      "voice": "bear",
+      "narration_text": "Bear body beat — the fictional skill teaches nothing real, it exists so the transformer has something to close.",
+      "shot": {
+        "type": "CARD",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {}
+        }
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "MECHANISM",
+      "engine": "elevenlabs",
+      "voice": "bear",
+      "narration_text": "Bear body beat two — closer to the end, sets up the handoff.",
+      "shot": {
+        "type": "CARD",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {}
+        }
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "VERDICT",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Thanks Bear, let's recap with Claude. The fictional split.",
+      "shot": {
+        "type": "CARD",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The Fictional Skill",
+            "artifactHeading": "The fictional split.",
+            "artifactLines": [
+              "Owned — the closing three beats.",
+              "Inherited — everything above the body.",
+              "Idempotent — re-run stacks nothing."
+            ]
+          }
+        }
+      },
+      "lead_silence_s": 0.5
+    },
+    {
+      "beat_id": "B04",
+      "act": "YOUR_TURN",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "I just watched a fixture reel demonstrating the your-turn skill's transformer. I understand the closing block rewrites the last three beats, but I want to see the mechanism on something concrete. Can you (1) show me a diff of what the transformer changed in this fixture's VERDICT, YOUR TURN, and OUTRO beats, (2) explain why the handoff line here is 'Thanks Bear, let's recap with Claude.' and not 'Let's recap with Claude.', and (3) point out which artifactLines it stripped leading numbers from?",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "FIXTURE",
+            "segment": "placeholder",
+            "command": "I just watched a fixture reel demonstrating the your-turn skill's transformer. I understand the closing block rewrites the last three beats, but I want to see the mechanism on something concrete. Can you (1) show me a diff of what the transformer changed in this fixture's VERDICT, YOUR TURN, and OUTRO beats, (2) explain why the handoff line here is 'Thanks Bear, let's recap with Claude.' and not 'Let's recap with Claude.', and (3) point out which artifactLines it stripped leading numbers from?",
+            "folderLabel": "@NikBearBrown"
+          }
+        }
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "OUTRO",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "The Fictional Skill",
+      "shot": {
+        "type": "CARD",
+        "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The Fictional Skill",
+            "handle": "@NikBearBrown"
+          }
+        }
+      }
+    }
+  ]
+}

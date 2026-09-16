@@ -1,0 +1,9 @@
+[build_cli_d3_reels] 1 sims  log=/tmp/claude-501/bcdr-fail/log.md
+
+[build_cli_d3_reels] [1/1] bad
+
+============================================================
+[build] START  claude-liam-cli-bad
+[build] FAIL  claude-liam-cli-bad: HTML not found: /tmp/missing.html
+
+[build_cli_d3_reels] FINISHED: {'FAILED': 1}

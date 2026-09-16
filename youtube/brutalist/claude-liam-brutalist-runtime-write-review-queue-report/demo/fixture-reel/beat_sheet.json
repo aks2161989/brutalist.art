@@ -1,0 +1,20 @@
+{
+  "metadata": {"title": "Fixture Reel", "slug": "fixture-reel"},
+  "beats": [
+    {
+      "beat_id": "B00",
+      "narration_text": "Hello world.",
+      "shot": {"type": "GRAPHIC", "pantry_path": "assets/hero.png"}
+    },
+    {
+      "beat_id": "B01",
+      "narration_text": "This is beat one.",
+      "shot": {"type": "GRAPHIC", "pantry_file": "assets/diagram.png"}
+    },
+    {
+      "beat_id": "B02",
+      "narration_text": "No pantry here.",
+      "shot": {"type": "GRAPHIC", "source": "remotion"}
+    }
+  ]
+}

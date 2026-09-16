@@ -1,0 +1,152 @@
+# align.py — RUN-LOG (verbatim demonstrations on disposable fixtures)
+# Captured 2026-09-10 on this workstation.
+# All fixtures live under demo/ ; the reel folder itself is never fed to align.py in this log.
+# HF_HUB_OFFLINE=1 forces the CTranslate2 whisper loader to use the local ~/.cache/huggingface
+# copy; without it the sandbox proxy blocks huggingface.co (a real, reproducible failure a fellow
+# would hit on a fresh box — align.py itself is fine, faster-whisper's model fetch needs network).
+
+################################################################################
+# SECTION 1 — the CLI surface (what align.py -h prints)
+################################################################################
+
+$ python3 runtime/scripts/align.py -h
+usage: align.py [-h] [--model MODEL] [--language LANGUAGE] [--only [ONLY ...]]
+                folder
+
+align.py — the word clock (REMOTION.md, build-order step 1).
+
+positional arguments:
+  folder               reel folder (has beat_sheet.json + mp3/)
+
+options:
+  -h, --help           show this help message and exit
+  --model MODEL        faster-whisper model size
+  --language LANGUAGE
+  --only [ONLY ...]    only these beat_ids
+
+
+################################################################################
+# SECTION 2 — happy path: one beat, real narration, real audio
+#   fixture: demo/single-beat/  (beat_sheet.json + mp3/beat-B00.mp3)
+#   narration_text: "Whisper hears the words. The known text tells the writer."
+################################################################################
+
+$ python3 runtime/scripts/generate_audio_kokoro.py /tmp/claude/align-demo
+[kokoro] beat-B00.mp3  3.48s  voice=am_onyx
+[kokoro] 1 beat(s) generated · cost $0.00 · durations are GROUND TRUTH
+
+$ HF_HUB_OFFLINE=1 python3 runtime/scripts/align.py /tmp/claude/align-demo
+[ok] B00: 10 words @ 24fps
+[ok] wrote /tmp/claude/align-demo/mp3/words.json  (aligned 1, fallback 0)
+
+$ cat /tmp/claude/align-demo/mp3/words.json
+{
+  "fps": 24,
+  "beats": {
+    "B00": [
+      {"text": "Whisper", "startFrame": 0,  "endFrame":  8},
+      {"text": "hears",   "startFrame": 12, "endFrame": 16},
+      {"text": "the",     "startFrame": 16, "endFrame": 19},
+      {"text": "words.",  "startFrame": 19, "endFrame": 26},
+      {"text": "The",     "startFrame": 32, "endFrame": 34},
+      {"text": "known",   "startFrame": 34, "endFrame": 38},
+      {"text": "text",    "startFrame": 38, "endFrame": 47},
+      {"text": "tells",   "startFrame": 47, "endFrame": 53},
+      {"text": "the",     "startFrame": 53, "endFrame": 58},
+      {"text": "writer.", "startFrame": 58, "endFrame": 65}
+    ]
+  }
+}
+
+# Read the text field: it is the KNOWN narration verbatim ("words." keeps its period).
+# Whisper only supplied the (start,end) seconds; align_words() rounded them to frames at
+# fps=24. Beat-local: startFrame 0 is the first frame of THIS beat's clip, not the reel.
+
+
+################################################################################
+# SECTION 3 — the drift case: a number in the narration
+#   fixture: demo/number-drift/
+#   narration_text: "In 1926, the pipeline first shipped."
+#   Kokoro speaks "nineteen twenty six" — 3 tokens on the audio, 1 in the text.
+################################################################################
+
+$ HF_HUB_OFFLINE=1 python3 runtime/scripts/align.py /tmp/claude/align-demo2
+[ok] B01: 6 words @ 24fps
+
+$ cat /tmp/claude/align-demo2/mp3/words.json
+{
+  "fps": 24,
+  "beats": {
+    "B01": [
+      {"text": "In",        "startFrame":  0, "endFrame":  3},
+      {"text": "1926,",     "startFrame":  3, "endFrame": 29},
+      {"text": "the",       "startFrame": 36, "endFrame": 38},
+      {"text": "pipeline",  "startFrame": 38, "endFrame": 47},
+      {"text": "first",     "startFrame": 47, "endFrame": 59},
+      {"text": "shipped.",  "startFrame": 59, "endFrame": 70}
+    ]
+  }
+}
+
+# "1926," stays as 1926 in the words.json — the DRIFT is invisible downstream.
+# SequenceMatcher only anchored "In" and neighbours; "1926" fell in a gap and
+# interpolated over the audio window Whisper actually assigned to
+# "nineteen twenty six". A karaoke overlay reads the correct token; the composer
+# never has to render "nineteen twenty-six".
+
+
+################################################################################
+# SECTION 4 — the --only flag: re-run one beat only
+#   fixture: demo/only-flag/ (three beats)
+################################################################################
+
+$ HF_HUB_OFFLINE=1 python3 runtime/scripts/align.py /tmp/claude/align-demo3
+[ok] B00: 4 words @ 24fps
+[ok] B01: 9 words @ 24fps
+[ok] B02: 5 words @ 24fps
+[ok] wrote /tmp/claude/align-demo3/mp3/words.json  (aligned 3, fallback 0)
+
+$ HF_HUB_OFFLINE=1 python3 runtime/scripts/align.py /tmp/claude/align-demo3 --only B02
+[ok] B02: 5 words @ 24fps
+[ok] wrote /tmp/claude/align-demo3/mp3/words.json  (aligned 1, fallback 0)
+
+# The --only re-run merged into the existing words.json (see main(), lines 129-133:
+# doc is READ first, then overwritten per-beat). B00 and B01 timings survived.
+
+
+################################################################################
+# SECTION 5 — the skip paths: what align.py refuses to guess
+#   fixture: demo/skip-cases/
+#     B00: audio present, no actual_duration_s and no timings.json entry
+#          → still runs (audio path); but with mismatched narration would fall
+#            through to even_spread which needs duration → this variant SKIPs
+#     B01: no audio_file, no narration_text-linked audio
+#     B02: audio_file points at a file that does not exist
+################################################################################
+
+$ HF_HUB_OFFLINE=1 python3 runtime/scripts/align.py /tmp/claude/align-demo4
+[skip] B00: no alignment and no duration to spread over
+[skip] B01: no narration_text/audio yet
+[skip] B02: missing mp3/missing.mp3
+[ok] wrote /tmp/claude/align-demo4/mp3/words.json  (aligned 0, fallback 0)
+
+# Three separate skip reasons print to stdout. Return code is still 0 — align.py
+# is a "align what you can, leave the rest" tool. words.json still writes (with
+# whatever was previously in it plus nothing new). Word-keyed tracks on skipped
+# beats fall back to the beat's own duration downstream.
+
+
+################################################################################
+# SECTION 6 — the failure surface (the real fresh-box failure)
+#   Run with the sandbox proxy in place and NO HF cache: the CTranslate2 model
+#   fetch inside faster-whisper cannot reach huggingface.co, so WhisperModel()
+#   raises before a single word gets timed. align.py itself does NOT catch this
+#   — the fellow sees the raw traceback ending in either
+#     ImportError: Using SOCKS proxy, but the 'socksio' package is not installed
+#   or (on an ordinary box)
+#     ConnectionError / URLError to huggingface.co
+#   The lesson: the pip line in align.py's docstring
+#     "pip install faster-whisper (CPU is fine; downloads a small model on first run)"
+#   is a two-step guarantee — the pip install itself, AND the first run's
+#   network fetch. Run one warm-up locally before the pipeline needs it.
+################################################################################

@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "1685612a4a7c43a99fc9b8f1ce087a15",
+  "source_sha256": "050ab02110a0984c7e606d9ae144c0912704f2b103cd9d5da72da063c2b4d46b",
+  "beat_sheet_sha256": "5fe42ec47d48de04a6651e1b54201b6448b39f490ab38c20591f401ba9ae80af",
+  "video_sha256": "ddbb8dcb3e0473d508a91ac63c9bd39e4c7208625750a21b72b96d590280a41a",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "6736bc662366a96555641859addd1f32a7309ee93df1e37491ee487bb86e2d5c"}
+  ],
+  "notes": "Landscape 3840x2160 @ 24fps, 194.5s. Re-signed for run_id 1685612a4a7c43a99fc9b8f1ce087a15. Source change: SKILL.md is unchanged in content (f7aab411); the source_sha256 fingerprint changed because COMMON files changed — runtime/prose/teardown/PROSE.md (voices/ → prose/ rename) and REPOLOOP-PROMPT.md (newly tracked). The beat_sheet.json was updated to record the current SKILL.md SHA; the rendered MP4 and all clips are identical to the previous pass. Gate V sampled 26 frames (13 beats × 50%/85% steady-state), zero BLOCKER, zero MAJOR — _qc/REPORT.md reads 'Clean — no BLOCKER/MAJOR defects. ✓'. Contact sheet (sha256 6736bc66…) read via image tool: cold open composer types the ask and lands three RESULT lines; BrutalistHesitantWriter B01 corrects 'records' → 'commissions' and 'terminals' → 'reels'; SkillTeardownAnatomy folder tree; SkillTeardownPipeline 7-phase spine; ClaudeCodeBeat SKILL.md excerpts; SkillTeardownMechanism doctrine quotes; ClaudeVerdictArtifact 4 artifact lines; Your-Turn composer; ClaudeTitleOutro '@HumanitariansAI' handle. Human review pending."
+}

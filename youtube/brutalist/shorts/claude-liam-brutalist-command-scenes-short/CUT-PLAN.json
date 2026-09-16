@@ -1,0 +1,18 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art scenes is library-first search over 620 renderable compositions — a hit is a lead, a miss is a design card (PUNT), never a slate.",
+  "parent_master_sha256": "06eb7031e272bac545d3a16c0ce48e0ebaeb9a3fedaeeb0b16d294233ce3aea8",
+  "kept_beats": ["B00", "B01", "B04", "B05", "B08", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "FRAMEWORK — one-case-branch/three-aliases dispatcher walk is code-anatomy the long film exists for."},
+    {"beat_id": "B03", "reason": "MECHANISM — scenes.json schema tour is index anatomy; the Short only needs that a ranker exists, not the JSON."},
+    {"beat_id": "B06", "reason": "WORKED_EXAMPLE — --check anti-slate + --undocumented backfill catalog; adjacent surfaces belong in the long."},
+    {"beat_id": "B07", "reason": "WORKED_EXAMPLE — alias byte-identical output + 47-word stop-word guard is second-order detail after B04+B05 land the ranker."},
+    {"beat_id": "B09", "reason": "VERDICT — seven-line whole-surface catalog is the very 'catalog of internals' the Short brief warns against."},
+    {"beat_id": "B10", "reason": "YOUR_TURN — extended paste-prompt walk-through belongs in the 16:9 long; Short need not read the full exercise aloud."}
+  ],
+  "cut_first_review": "The retained cut lands the high-level answer: B00 sets the ask (620 comps, search before authoring, aliases collapse to one path); B01 corrects the misconception via the hesitant writer (art scenes FINDS, not writes); B04 states the ranking rule (id>synonym>haystack, IDF re-weight, derived penalty); B05 shows that rule working on the verbatim ./art scenes \"sankey flow\" output (FinanceSankey at 8.5, three source-flow ties at 4.5); B08 delivers the falsifiability caveat — yak shaving trombone, exit 1, TEMPLATE-MISSES.md auto-log, 'a miss is a PUNT, do not slate it'; B11 restates title and Liam sign-off. B04→B05 forms one continuous mechanism→example pair. B08 is self-contained (needs no B06/B07 to make sense). No dangling references: no numbered transition ('One more receipt') is retained, no repeated conclusion, no reference to --check/--undocumented survives without setup.",
+  "planned_duration_s": 115.9,
+  "final_duration_s": 115.083,
+  "rewrite_reason": null
+}

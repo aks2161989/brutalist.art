@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "b45f3295976f4985a62f4384e986f627",
+  "source_sha256": "f9c007cae04ca87ddb005388bf8c0835e220369e6f2d2377dd54f02e1f6c65c2",
+  "beat_sheet_sha256": "bee6e99f400a5dbb101adf0c537a704c2ba315b75bf86b850c7cdf6cc0b3ab28",
+  "video_sha256": "086736a6fe5f316e2db3261b0a9ccddbb774e6d7b011916cda9ff4bd680a01d6",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames_b45f3295/V_first.png", "sha256": "a5e51018e263ad974d1938773bf319a566953f50a3578787f04706347ea3b1c7"},
+    {"path": "_qc/frames_b45f3295/V_B00_mid.png", "sha256": "f5335ee0a32f1b8809037d0b61790072bd7960e703d71c573369f7e98b8068c9"},
+    {"path": "_qc/frames_b45f3295/V_B01_mid.png", "sha256": "1f5634b455a5680d432e308b788a41bf17d4b3277ca32a69d954c7f5f653ff01"},
+    {"path": "_qc/frames_b45f3295/V_B02_mid.png", "sha256": "90f06e8b365d5ebed00f33dd0506b172af843410f25859c09de00b4ef09db1af"},
+    {"path": "_qc/frames_b45f3295/V_B09_mid.png", "sha256": "dd8cf35d15a83c0de8c1fd3c9a98e5c2f2944eb22c38853417f69e6e39204fae"},
+    {"path": "_qc/frames_b45f3295/V_B10_mid.png", "sha256": "2f8c6718e30ed2428892b280d9265b295c419402a29a2a1409a6e12100fcf41a"},
+    {"path": "_qc/frames_b45f3295/V_B11_mid.png", "sha256": "cadba2f075d52b708f6981ae8709ca5167f0cc0c6ee2d8dd1fe9775795e703b4"},
+    {"path": "_qc/frames_b45f3295/V_last.png", "sha256": "6fc05115aa13409fd83bf3c355962ba196ac0a8113bf3b61890cab5ee2400007"}
+  ],
+  "notes": "Vertical 2160x3840 · 245.583s · h264 + AAC. AI frame review for run_id b45f3295976f4985a62f4384e986f627. Eight frames extracted from the verified vertical MP4 (SHA-256 086736a6…, unchanged from run_id c1279719 which re-rendered B09 to correct the stale art:78-80 reference) and individually inspected via Read tool. V_first (t=0.04s) — portrait cream canvas fade-in, 'BRUTALIST · COMMAND: ART RUN' nav legible at top. V_B00_mid (t=8.729s) — ClaudeComposerAsk916 cold open fully resolved: 'Ciao, Liam' greeting, topic 'BRUTALIST · COMMAND: ART RUN', full ask text, @HumanitariansAI folder chip, terracotta running text ('gating paperwork; rendering; conforming…'), output lines all legible within safe area. V_B01_mid (t=26.083s) — BrutalistHesitantWriter916 corrected BLUF reads 'art run / compiles / the review / video file.' in four large-serif lines, caret visible, fills portrait safe area well. V_B02_mid (t=42.646s) — ClaudeCodeBeat916, title bar 'art:99-101' (correct), dispatcher case code body visible, sparkLine 'One case. No aliases. $@ falls through.' at bottom; minor right-edge clip on long code lines (known portrait limitation, key content legible). V_B09_mid (t=203.688s) — ClaudeVerdictArtifact916 verdict card 'art run — the whole surface, in the order you use it', all 8 numbered lines visible and legible within safe area; line 6 correctly reads 'no aliases — the dispatcher case at art:99-101 matches only the exact string run' (stale art:78-80 reference resolved in c1279719). V_B10_mid (t=229.188s) — ClaudeComposerAsk916 'Your turn.' greeting, topic 'BRUTALIST · YOUR TURN', title 'Iterate a reel through art run', 4-step paste-ready prompt fully visible, @HumanitariansAI folder chip. V_B11_mid (t=242.958s) — ClaudeTitleOutro916 dark olive card, title 'Brutalist Command: art run.' wraps cleanly across three lines in portrait, '@NikBearBrown' handle (OUTRO-LOCK.md hardcodes this; channel is @HumanitariansAI — flagged for human reviewer before publication). V_last (t=245.3s) — outro card held, clean exit. No captions, no slates. COLD OPEN LAW satisfied (ClaudeComposerAsk916 B00). OUTRO LAW satisfied (ClaudeTitleOutro916 B11, Liam sign-off in narration). Gate V: 0 BLOCKER / 0 MAJOR. Human review pending."
+}

@@ -1,0 +1,8 @@
+{
+  "metadata": {"title": "align.py missing fixture", "slug": "align-demo4", "fps": 24},
+  "beats": [
+    {"beat_id": "B00", "narration_text": "Real narration here.", "audio_file": "mp3/beat-B00.mp3"},
+    {"beat_id": "B01", "narration_text": "This beat has no audio yet."},
+    {"beat_id": "B02", "narration_text": "This one points at a file that vanished.", "audio_file": "mp3/missing.mp3"}
+  ]
+}

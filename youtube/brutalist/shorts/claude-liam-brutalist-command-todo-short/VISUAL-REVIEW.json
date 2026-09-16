@@ -1,0 +1,61 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "da9910aa30784a5ca3041e101c7b037f",
+  "source_sha256": "4c52fd96434fe90eb9b825a6575ebec2af674f877471bcc08965cf97dbda0598",
+  "beat_sheet_sha256": "5d266dd1c056ab66a4fa4bc8da6fe9cb33921e0122a5d021843d97efb6de8b23",
+  "video_sha256": "f7bf9d515121ec21cf5d6b056f08d9591c0800689dd24a65efbc0d35a1690d69",
+  "parent_master_sha256": "400eb021c8011e14810b8beb1256b6bc79cb3ab79457c1189f5bd15e2eb6ed27",
+  "blockers": 0,
+  "majors": 0,
+  "measured": {
+    "container_duration_s": 116.333,
+    "video_duration_s": 116.292,
+    "audio_duration_s": 116.333,
+    "width": 2160,
+    "height": 3840,
+    "fps": 24,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate_hz": 48000,
+    "audio_channels": 2,
+    "bytes": 8171730
+  },
+  "kept_beats": ["B00", "B01", "B02", "B03", "B04", "B07", "B08", "B09", "B11"],
+  "dropped_beats": ["B05", "B06", "B10"],
+  "frames": [
+    {"path": "_qc/contact_sheet.png",   "sha256": "23568b34d3d6b5bef8eddca24b1c23308c203002054da06d672b15f1f2f3db32"},
+    {"path": "_qc/B00_evidence.png",    "sha256": "23adba1c6ab913a34b38b6124aaba66c6fe514601cdcd63773304ce405b386c7"},
+    {"path": "_qc/B01_evidence.png",    "sha256": "c038599cc07a3dd9044bc5b4ea667277471dbf9ccf105629e457239c88e1c3a6"},
+    {"path": "_qc/B02_evidence.png",    "sha256": "eeb566bba4c31e368eb9669cb0bd8291b4ad9747bc573e138f63c994b5d9c066"},
+    {"path": "_qc/B03_evidence.png",    "sha256": "244d3a11fc69fee2e40ba2b975e3ec67004ac8476212c6f246b05e896f1bf5f6"},
+    {"path": "_qc/B04_evidence.png",    "sha256": "2b107217b05ae538cfbaabb6730b1b8030c7226d47b46f6ff24f29e187f42a94"},
+    {"path": "_qc/B07_evidence.png",    "sha256": "f81377178a431b19c08aea76d34a26c03ffb9e261dd96302e46163996816a115"},
+    {"path": "_qc/B08_evidence.png",    "sha256": "4b950ea015ede8b6e4d65f68f422b25fd4a2b2f446490cb88aaedb9aa8121049"},
+    {"path": "_qc/B09_evidence.png",    "sha256": "683aa0ebd2ceccdf3b59d4241c6111084e4de9b478b4274e5121e5be80ce3baa"},
+    {"path": "_qc/B11_evidence.png",    "sha256": "b7aa381936527b074070c4cdb9efbd3eee667a40727d49e138664a6bc512bcbf"}
+  ],
+  "per_beat_media_sha256": {
+    "media/B00.mp4": "cf0f408c434e1341fec7ffce85d9a4cb2dd525bcdd41f599aed8b24805263d69",
+    "media/B01.mp4": "7b5f02dbe0cd77211cc0003a0d0008c64eeb9133f3116be5d19d9f7e134f8a76",
+    "media/B02.mp4": "a42647beb3d4dd668fac0f4bd5164f183801c163863f1cfe9a6eaeeea83ef9d4",
+    "media/B03.mp4": "3eaa59ebe5915d06241c16d9f97f3f1ab7afe16024ecb7d8b44724c4d87b06a4",
+    "media/B04.mp4": "422f3c7c2a3ba907b312decd20b27fadbd6dc1ab997c7695f50749fa37586208",
+    "media/B07.mp4": "7c9b5934be0be947eaa6f76af897d3273c8d3a493e18971168ec310ec73ae9d0",
+    "media/B08.mp4": "902d2935da2a4ee61eb7cdbf24fe81e27b285c8252e5aa11ead3be75f8c36a91",
+    "media/B09.mp4": "805a496714b3e2f6e1f4ecb1c4e81b8c6182efaab1698c10895de22e630198cd",
+    "media/B11.mp4": "3ef47f55d35e9ee25a288bbb03fa59cd133d24a8b71d948ce6481b146eb72ae3"
+  },
+  "per_beat_audio_sha256": {
+    "mp3/beat-B00.mp3": "ba9ff17489cc4facca6baedca91d09c15594a9b8e65b371cc5ad0491a2d3a5d2",
+    "mp3/beat-B01.mp3": "e1f7486203290f6b98bec0ad36b7a15ea478f1317c4f72ba429e351527b373cd",
+    "mp3/beat-B02.mp3": "4855ff5391fa74d0f09144fa0fd7889808b9977e5b0dcf77d4560d909cd0e375",
+    "mp3/beat-B03.mp3": "533feb6a54d17f377994cf9007a2c9608441d2dee5064db51bcbb993c8f98440",
+    "mp3/beat-B04.mp3": "a52b6b3c09862f87bab174789b45c17ad4a995c583cbd98b1b16f5e130e7156b",
+    "mp3/beat-B07.mp3": "dbf3b6b5117210521b6fc4ffd47e0e9a470ee6287d9f1c87145ea2300e5a4b41",
+    "mp3/beat-B08.mp3": "b28c9d1151483be8f3f24e430d1e6ad15770ed8cc08cef7860e2dbebeee71c34",
+    "mp3/beat-B09.mp3": "1160210eeb0a8edb9bc96cfa0fe7202f9249c5cc634f002838893508a250013f",
+    "mp3/beat-B11.mp3": "0f7a29da2e3003e77860af2257eede81f6d3133ed566948fece6bc6029fcfab2"
+  },
+  "notes": "Native 2160x3840 Short, 116.333s (strictly under 180s), 9/9 kept beats compiled from parent's already-Gate-V-clean vertical media. Whole-beat cut (strategy: whole-beat-cut); no narration rewrite, no audio regenerated, no captions burned in, no publish/upload action. Dropped B05 (entry anatomy), B06 (methods table — the five lanes are already named in B03's --method effect chip and shown in B04's five rows), B10 (extended Your Turn — a detailed CTA can be cut per the Shorts prompt). Read the 50% evidence PNG for every retained beat plus the compiled contact sheet: B00 ClaudeComposerAsk916 shows Hola Liam greeting + composer bar 'art todo my-reel/ --open' + @NikBearBrown folder chip + three answer lines; B01 BrutalistHesitantWriter916 shows the post-swap three-line 'art todo / is a / receipt.' with strong ink coverage; B02 TodoPipeline916 shows the sheet→command→three-receipt arrow with ToDo.md lit terracotta; B03 TodoCommand916 shows the terminal bar + three flag rows with --json terracotta; B04 TodoRun916 shows the 0/5 live receipt with five method rows and terracotta HUMAN chips on B02/B03/B04; B07 TodoAgentLoop916 shows the --method manim --open queue → render → re-run loop; B08 TodoFailure916 shows the 'no beat_sheet.json' stderr + EXIT 1 chip + recovery card; B09 ClaudeVerdictArtifact916 shows the five-line recap; B11 ClaudeTitleOutro916 shows the poster-serif title with terracotta period + @NikBearBrown handle (OUTRO-LOCK). Compiler Gate V wrote _qc/REPORT.md with Frames sampled: 18 · BLOCKER: 0 · MAJOR: 0 · Clean. Compiler SKIN LINT warned on B00/B11 916-suffixed patterns on a claude palette; this is the intended native portrait ONDA-CHECK rewire and not a defect. Audio-timeline joins between B04→B07 ('they are the ones you drop clips for' → 'This is why the ledger exists') and B08→B09 ('That refusal is the feature' → 'So — art todo') decode cleanly with no clipped speech or over-slam. HANDOFF LAW waived because parent B10 (Your Turn) was intentionally dropped per Shorts prompt. No human review yet; nothing published."
+}

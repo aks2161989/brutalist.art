@@ -1,0 +1,17 @@
+usage: generate_audio_kokoro.py [-h] [--only [ONLY ...]] [--speed SPEED]
+                                [--dry-run] [--no-gate] [--list-voices]
+                                [--sheet SHEET]
+                                [folder]
+
+positional arguments:
+  folder
+
+options:
+  -h, --help         show this help message and exit
+  --only [ONLY ...]  beat ids to (re)generate
+  --speed SPEED
+  --dry-run
+  --no-gate          deprecated; cannot bypass human approvals
+  --list-voices
+  --sheet SHEET      beat sheet filename to read/write (default:
+                     beat_sheet.json)

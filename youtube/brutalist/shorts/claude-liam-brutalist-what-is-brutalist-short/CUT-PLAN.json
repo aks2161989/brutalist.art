@@ -1,0 +1,38 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "What Brutalist actually is: a plain-text recipe (beat_sheet.json) that renders into a film; the tool executes, the judgment stays human.",
+  "parent_reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-what-is-brutalist",
+  "parent_master": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-what-is-brutalist/exports/vertical/claude-liam-brutalist-what-is-brutalist-vertical.mp4",
+  "parent_master_sha256": "c339f1b5555e847096f3ea975249042c50b86714c8a29fee20d3eb58398c3f9c",
+  "parent_beat_sheet_sha256": "f6863d413ceaa724757c0929cd5b280debcc6d90a07dfa3c4962802edb1ab361",
+  "parent_beat_count": 10,
+  "parent_duration_s": 170.29,
+  "run_id": "ff2d6d603c3e46d79c7e06edab66781e",
+  "kept_beats": ["B00", "B01", "B04", "B06", "B07", "B09"],
+  "dropped_beats": [
+    {"beat_id": "B02", "act": "FRAMEWORK", "duration_s": 16.49, "reason": "General beat_sheet.json anatomy overlaps with B01's 'plain-text recipe' definition and B04's live demonstration; belongs in the 16:9 long."},
+    {"beat_id": "B03", "act": "WORKED EXAMPLE · PIPELINE", "duration_s": 19.52, "reason": "Six-stage pipeline walkthrough (brief → beat sheet → audio → scenes → compile → 4K) is internal anatomy; the Short answers 'what is it', not 'how do the stages fit'."},
+    {"beat_id": "B05", "act": "DIVISION OF LABOR", "duration_s": 21.61, "reason": "Four-vs-five human/agent lane catalog restates what B06's not-list already lands: judgment stays with the viewer. Longest middle beat; removing it also gives the strongest airtime savings."},
+    {"beat_id": "B08", "act": "YOUR TURN", "duration_s": 17.98, "reason": "Reads the paste-this-into-Claude prompt aloud; the long-form CTA is exactly the detailed exercise the Shorts prompt says to omit."}
+  ],
+  "kept_beat_details": [
+    {"beat_id": "B00", "act": "ASK", "duration_s": 16.79, "role": "Opening — Liam disclosure, sets the question 'What is Brutalist?' inside the Claude composer, plants 'Ciao, Liam' for B04's callback."},
+    {"beat_id": "B01", "act": "BLUF", "duration_s": 20.03, "role": "The answer — corrects the 'video editor' misconception on screen and lands 'plain-text recipe your film is built from'."},
+    {"beat_id": "B04", "act": "WORKED EXAMPLE · PURE FUNCTION", "duration_s": 18.11, "role": "The concrete demonstration — edit beat zero's greeting from Ciao to Hola, re-render only that beat, only that pixel changes. One useful example over a catalog of internals."},
+    {"beat_id": "B06", "act": "FALSIFIABILITY", "duration_s": 20.46, "role": "The honesty — not a publisher, not a paid API, not a judge of taste. This is the safety limitation the Shorts prompt explicitly says never to cut."},
+    {"beat_id": "B07", "act": "VERDICT", "duration_s": 14.44, "role": "Three-line recap: recipe is text, film is a pure function, judgment stays yours."},
+    {"beat_id": "B09", "act": "OUTRO", "duration_s": 4.86, "role": "Liam sign-off for @HumanitariansAI (WibOutro916, no ClaudeTitleOutro handle rewrite)."}
+  ],
+  "planned_duration_s": 94.69,
+  "cut_first_review": "The retained narration answers 'what is Brutalist?' in six beats: Liam frames the question in the Claude composer (B00); the 'video editor' misconception is struck through and corrected to 'plain-text recipe' (B01); a single greeting-field edit demonstrates the pure-function claim by swapping Ciao for Hola (B04); the not-list names the three limits every honest tool needs (B06); the verdict restates recipe → pure function → human judgment (B07); Liam signs off for Humanitarians AI (B09). Transitions read cleanly: B00 already introduces 'the recipe lives on GitHub' so B01's 'plain-text recipe' lands; B01's 'change the recipe, run the pipeline' hands directly to B04's 'watch what change actually costs'; B04's 'one thing on screen changes' hands to B06's 'now the honest part'; B06's 'shape of the tool' hands to B07's 'verdict in three lines'; B07's 'that is what Brutalist actually is' hands to B09's 'that was What Is Brutalist?'. No dangling numbered references remain — B05's 'four things stay with you, five with the agent' is fully removed rather than half-cited, and B03's stage numbers never appear. B04's 'beat zero's greeting field — Ciao, Liam' references the composer the viewer just watched in B00, so 'beat zero' resolves against on-screen evidence without B02's separate beat-sheet anatomy scene.",
+  "rewrite_reason": null,
+  "outro_policy": "no-outro-rewrite (B09 kept intact); --no-endcard (Liam sign-off is the tail).",
+  "protections_preserved": [
+    "Liam-in-for-Bear disclosure (B00, B09)",
+    "Kokoro am_onyx voice (unchanged; no audio regeneration)",
+    "Claude palette (unchanged)",
+    "no burned-in captions",
+    "native 2160×3840 reused unchanged",
+    "one essential limitation retained (B06 not-list)"
+  ]
+}

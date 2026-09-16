@@ -1,0 +1,4 @@
+  ClaudeComposerAsk            RENDERABLE   16:9   props: command, topic, segment, greeting, runningText, output
+  BrutalistHesitantWriter      RENDERABLE   16:9   props: text, face, fontSize, lineSpacing, align, ink
+  ClaudeCodeBeat               RENDERABLE   16:9   props: title, code, sparkLine
+  ClaudeTitleOutro             RENDERABLE   16:9   props: title, slug, mascotAnimation

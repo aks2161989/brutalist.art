@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "3d80d6c77f6e4febae4b0621b229c773",
+  "source_sha256": "771cab1ae69c6470a94705649018576fca8523c0a3b8eef1373abba1f27d2eab",
+  "beat_sheet_sha256": "36c6181c8845287fb32f31af3c42c0258cc3e2d4194ce9ab073f6dcf655cf545",
+  "video_sha256": "0a7cf8e4535532f32fdd04089490cc9244928b7b2314fd687ad2e56d721ebc00",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "c9f80b3d40d1508f5405d76920f76f19371aa2ba7ac9c0cc66aedf66ee148355"},
+    {"path": "_qc/frames/B00_85pct.png", "sha256": "d70535b8b2a25730460d2ea495a2d09bbf91cdea4f5ad9a406471e2773d2d367"},
+    {"path": "_qc/frames/B01_85pct.png", "sha256": "0c7b235908b43bc0b11ee8a7b0270b8d8ac95b7d14d5656f902a50f032abe929"},
+    {"path": "_qc/frames/B10_85pct.png", "sha256": "76041fa3c98d786ac2ff8527c72af02fd0704d5770c7ea000be75951ea624a05"}
+  ],
+  "notes": "Landscape 3840x2160 native, 228.9s, 11/11 beats VIDEO, no slates. Re-reviewed under run_id 3d80d6c7 (2026-09-11): source_sha256 changed from 9189aa89 to 771cab1a because ai-explainer/SKILL.md and other framework skills were updated; the anthropics SKILL.md subject file is unchanged (SHA 79f196f3). All QC frame hashes, export SHA, and beat clip SHAs verified byte-for-byte against the prior approved build. Re-opened B00_85pct.png (ClaudeComposerAsk cold open — 'Hej, Liam' greeting, 'Tear down the anthropics skill…' ask, three result lines, @HumanitariansAI chip, terracotta send button), B01_85pct.png (BrutalistHesitantWriter corrected state — 'The anthropics skill is a beat. It reads the artifact, not the docs.' filling canvas, serif, no edge bleed), B04_85pct.png (SkillTeardownMechanism — 'MECHANISM · ACT 1', disqualifier heading, verbatim SKILL.md quote cited 'Source: anthropics SKILL.md', verdict pill 'KILLS THE DOWNSTREAM-OF-DOCS 90%', spark line 'Not the docs.'), B09_85pct.png (ClaudeComposerAsk Your Turn — paste-ready --capability prompt, @HumanitariansAI chip, three expected output lines), B10_85pct.png (AntOutro — 'BRUTALIST · EPISODE 05', terracotta rule, 'The anthropics Skill.' with terracotta period, '@HumanitariansAI', 'LIAM, IN FOR BEAR.'). No new defects. Source framework changes (ai-explainer SKILL.md SELF-DEMO LAW, VERBATIM QUOTE LAW) already satisfied by the existing build: B07 names the feasibility fallback (absent sibling skills git-explainer/ai-paper) plainly; all on-screen quotes are verbatim with 'Source: anthropics SKILL.md' citations. @HumanitariansAI adaptation is correct per BUILD-PROMPT override of default claude-liam @NikBearBrown. Gate V clean. Compiler atomic verified.json present and unchanged. Human review pending."
+}

@@ -1,0 +1,179 @@
+{
+  "number": 17,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f",
+  "beats": 22,
+  "sheet_sha256": "a7567b4d10005609a07bad0ae8e964c9f8abefd62ede9022b40814dcdaadcd7d",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/review.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "378.450333",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B08",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/09/main.py",
+        "code": "def sigmoid(x):\n    if x >= 0:\n        return 1 / (1 + math.exp(-x))\n    e = math.exp(x)\n    return e / (1 + e)\n\ndef loss(data, w, b):\n    return sum(max(w*x+b, 0) - y*(w*x+b)\n               + math.log1p(math.exp(-abs(w*x+b)))\n               for x, y in data) / len(data)",
+        "sparkLine": "Overflow-safe sigmoid. Overflow-safe loss.",
+        "codeSize": 0.048,
+        "sparkSize": 28
+      },
+      "intent": "Onda-style code card in Claude cream skin: sigmoid + loss from lesson 9."
+    },
+    {
+      "beat": "B09",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/09/main.py",
+        "code": "def train(data, steps=200, rate=.2):\n    if not data or any(not math.isfinite(x) or y not in (0,1) for x,y in data):\n        raise ValueError(\"Need finite features and binary labels\")\n    if type(steps) is not int or steps < 1 or not math.isfinite(rate) or rate <= 0:\n        raise ValueError(\"Positive training budget and rate required\")\n    w = b = 0.0\n    history = [loss(data, w, b)]\n    for _ in range(steps):\n        errors = [(sigmoid(w*x+b)-y, x) for x, y in data]\n        w -= rate * sum(e*x for e, x in errors) / len(data)\n        b -= rate * sum(e for e, _ in errors) / len(data)\n    history.append(loss(data, w, b))\n    return {\"w\": w, \"b\": b, \"loss\": history}",
+        "sparkLine": "Validate. Predict. Update. Record.",
+        "codeSize": 0.033,
+        "sparkSize": 26
+      },
+      "intent": "Onda code card: train() from lesson 9 \u2014 the bounded training loop."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B00.mp4",
+      "seconds": 11.06,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B01.mp4",
+      "seconds": 13.4162112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B02.mp4",
+      "seconds": 2.2866668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B03.mp4",
+      "seconds": 12.04,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B04.mp4",
+      "seconds": 14.023333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B05.mp4",
+      "seconds": 2.2399999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B06.mp4",
+      "seconds": 18.83,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B07.mp4",
+      "seconds": 2.4499999999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B08.mp4",
+      "seconds": 13.86,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B09.mp4",
+      "seconds": 12.7866669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B10.mp4",
+      "seconds": 19.74,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B11.mp4",
+      "seconds": 15.563333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B12.mp4",
+      "seconds": 2.9633331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B13.mp4",
+      "seconds": 18.293333099999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B14.mp4",
+      "seconds": 12.739999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B15.mp4",
+      "seconds": 2.1233330999999995,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B16.mp4",
+      "seconds": 15.6566669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B17.mp4",
+      "seconds": 15.516666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/B18.mp4",
+      "seconds": 15.843333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/BVDT.mp4",
+      "seconds": 15.3533331,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/BHTF.mp4",
+      "seconds": 24.1262112,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-05-training-and-configuration-64926182-v-34414631b03f/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/17-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

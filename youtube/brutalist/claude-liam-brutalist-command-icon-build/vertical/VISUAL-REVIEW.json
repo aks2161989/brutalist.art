@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "8e9287fa1b3f47ffb77eeee7489c6edd",
+  "source_sha256": "270a197302ee6566a3699d37fd44053413a708db6706c3bc1a72387d80f19d8e",
+  "beat_sheet_sha256": "c9c0ff137b43ef62e3e321c7af37440735741b2d25caf2efa1660c14bb9920d9",
+  "video_sha256": "3566906b923fb2b0ef211f5ed1dcb434109b2ad68144d389d43edeeecf4a86a2",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet_vertical.png", "sha256": "3f84bda6978ee1ee09b3808df48287852817440df18bbfb3ce62454f845bf9e5"}
+  ],
+  "notes": "Re-verified for run_id 8e9287fa1b3f47ffb77eeee7489c6edd (re-triggered: changed source/feedback SHAs; renders unchanged). Vertical 4K master (2160x3840, 248.33 s) and 12-beat contact sheet inspected visually via Read tool. Same script and 12-beat spine as landscape, rendered natively at 1080x1920 per scene and upsampled to 4K. Portrait-specific elements confirmed: B00 ClaudeComposerAsk916 stacked layout; B01 BrutalistHesitantWriter filling portrait safe area with 'art / icon-build / cuts / existing icons.'; B02-B08 portrait-narrow code cards with adapted narrows; B09 ClaudeVerdictArtifact916; B10 Your Turn composer in portrait; B11 ClaudeTitleOutro916 restating title with hardcoded @NikBearBrown. Video SHA and contact sheet SHA unchanged from prior build (no re-render performed; source files for art and build_icon_set.py match SOURCE-SNAPSHOT.json SHAs). Gate V clean (0 BLOCKER / 0 MAJOR). Human review pending."
+}

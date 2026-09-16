@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: fill_slates.py",
+    "slug": "claude-liam-brutalist-runtime-fill-slates-vertical",
+    "topic": "BRUTALIST · UTILITY: FILL_SLATES.PY",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Hej, Liam",
+    "greeting_note": "hello lexicon: Hej (Swedish, one word). Matches landscape.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "d1d6075f0a3e4ff1b4276441a757cc03",
+    "episode_id": "runtime-fill-slates",
+    "order": 43,
+    "note": "Native 9:16 companion of the landscape teardown of runtime/scripts/fill_slates.py. Same narration and same 12-beat spine; portrait-native patterns (ClaudeComposerAsk916, BrutalistHesitantWriter916, SkillTeardownMechanism916 in place of the landscape phase-strip, ClaudeCodeBeat916, ClaudeVerdictArtifact916, ClaudeTitleOutro916). episode.source_sha256 b6afa2184bdbfa41e1d6be36caf8d4d70179fda94dd031f7368fe966d121f8d8 (from invocation); current file sha 256 de9efcbdc25a385a5678bde0d8093d0ede06e81da8c5c7af1efdcab2e4d7863a.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "source_file": "runtime/scripts/fill_slates.py",
+      "public_source_url": "https://github.com/nikbearbrown/brutalist.art/blob/main/runtime/scripts/fill_slates.py"
+    },
+    "tags": [
+      "Brutalist",
+      "fill_slates.py",
+      "FormACard",
+      "SlateCard",
+      "slate beat",
+      "safety net",
+      "remotion",
+      "kokoro",
+      "utility teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "reformat": "full-length; native portrait graphics; preserve source framing",
+    "derived_from": "claude-liam-brutalist-runtime-fill-slates",
+    "dropped_beats": [],
+    "total_estimated_duration_seconds": 260,
+    "build": {
+      "at": "2026-09-13T14:58:02",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hej, this is Liam, in for Bear. The ask — a batch job finished, but three beats across two reels have no media on disk and no remotion pattern yet. Fill them all with a Form A card so the review cuts still play through. One command. No rebuild of the ones that are already good.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 19,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Hej, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'invoking fill_slates.py…' appears"
+          },
+          {
+            "at": "0.84",
+            "event": "three output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Hej, Liam",
+            "topic": "BRUTALIST · UTILITY: FILL_SLATES.PY",
+            "segment": "fill_slates.py",
+            "command": "Three beats across two reels have no video and no remotion pattern. Fill them all with a Form A card so the review cuts play through. Do NOT touch the beats that are already good.",
+            "runningText": "invoking fill_slates.py…",
+            "output": [
+              "walk books/ — find every reel with a beat_sheet.json",
+              "for each SLATE beat (no media, no pattern, not silent) — stamp FormACard",
+              "then shell out to remotion_scenes.py + run.sh to recut the review reel"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T13:12:14.598239+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.68,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 14.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer, portrait. lineSpacing 2.5 lifts 9:16 BLUF coverage.",
+      "narration_text": "Watch the writer walk this back. Fill slates does not rewrite every beat in a reel. It stamps only the empty ones — no media on disk, no pattern in the sheet. The good beats are untouched.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type"
+          },
+          {
+            "at": "0.55",
+            "event": "'rewrites' turns terracotta, hesitates, backspaces, types 'stamps'"
+          },
+          {
+            "at": "0.80",
+            "event": "'all' turns terracotta, hesitates, backspaces, types 'empty'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "fill_slates\nrewrites\nall beats\nin a reel.",
+            "triggerWords": "rewrites, all",
+            "replacementWords": "stamps, empty",
+            "seed": "fs-b01-vertical-v1",
+            "face": "serif",
+            "fontSize": 175,
+            "lineSpacing": 2.2,
+            "align": "center",
+            "charMs": 8,
+            "jitter": 2,
+            "mistakeRate": 1,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T14:38:49.837180+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 10.43,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 10.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — portrait: swap the horizontal pipeline strip for SkillTeardownMechanism916 (feedback_skillteardown_pipeline_portrait).",
+      "narration_text": "The pipeline. One invocation. Walk books slash for every reel that has a beat sheet. Find the slate beats — no media, no manim, no silent flag, no pattern. Stamp each one with a Form A card whose lines are the first eleven words of the narration. Then shell out to remotion scenes dot py — the slate renders to media slash B whatever dot mp4. Then shell out to run dot sh — the review cut recompiles. Dry run is the default. Apply is the flag.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "phase-flow",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow UTILITY · PIPELINE + heading fade in"
+          },
+          {
+            "at": "0.30",
+            "event": "body lists the five phases in order"
+          },
+          {
+            "at": "0.60",
+            "event": "quote card reveals the exact subprocess order"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict + spark line settle"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "heading": "Dry-run by default. --apply stamps + renders + recuts.",
+            "body": "WALK books/*/youtube/*  →  FIND slate_resolves() beats  →  STAMP shot.remotion=FormACard  →  RENDER remotion_scenes.py  →  RECUT run.sh.",
+            "quote": "Silent beats + beats with an existing shot.remotion.pattern + beats with any of media/<bid>.mp4, manim/<bid>.mp4, manim/<bid>.mov — all skipped.",
+            "cite": "fill_slates.py:51-74, 109-130",
+            "verdictLabel": "Empty beats become cards. Full beats stay put.",
+            "verdictPositive": true,
+            "sparkLine": "One pass. Four skip conditions."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T13:15:28.186378+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 23.06,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 23.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 1 — CLI surface + module docstring usage lines, verbatim (portrait code beat).",
+      "narration_text": "The command surface. One optional positional — a reel folder. Two flags. Dash dash apply flips it out of dry run. Dash dash books points at a different books directory — useful when you want to test on a disposable fixture and not touch the real ones. With no positional, fill slates walks every book. With a positional, it works on one reel only.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'fill_slates.py — CLI surface (verbatim)'"
+          },
+          {
+            "at": "0.22",
+            "event": "--help block types"
+          },
+          {
+            "at": "0.60",
+            "event": "docstring usage lines type"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "fill_slates.py — CLI surface (verbatim)",
+            "code": "$ python3 runtime/scripts/fill_slates.py -h\nusage: fill_slates.py\n  [-h] [--apply] [--books BOOKS] [reel]\n\npositional arguments:\n  reel\n\noptions:\n  -h, --help     show help\n  --apply\n  --books BOOKS\n\n# --- from the module docstring ---\n# scripts/fill_slates.py\n#   dry-run: list all slates\n# scripts/fill_slates.py --apply\n#   stamp + render + recut all\n# scripts/fill_slates.py <REEL> --apply\n#   one reel only",
+            "sparkLine": "One positional. Two flags."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T13:16:33.485595+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.24,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 18.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 2 — slate_resolves() + find_slates() bodies. Portrait code card.",
+      "narration_text": "What counts as a slate. Slate resolves returns true only if the beat has no media slash B whatever dot mp4, no manim slash B whatever dot mp4, and no manim slash B whatever dot mov. Find slates walks the beats in the sheet. It also skips two more cases — a beat marked silent, and a beat whose shot dot remotion dot pattern is already set. So a slate is: no rendered video, no explicit pattern, not silent. Four conditions.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'fill_slates.py:51-74 — slate_resolves() + find_slates()'"
+          },
+          {
+            "at": "0.20",
+            "event": "slate_resolves() body types"
+          },
+          {
+            "at": "0.55",
+            "event": "find_slates() body types"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "fill_slates.py:51-74",
+            "code": "def slate_resolves(\n        reel: Path, bid: str) -> bool:\n    for rel in (\n      f'media/{bid}.mp4',\n      f'manim/{bid}.mp4',\n      f'manim/{bid}.mov',\n    ):\n        if (reel/rel).exists():\n            return False\n    return True\n\ndef find_slates(reel: Path):\n    \"\"\"Beats needing FormACard fill.\"\"\"\n    sheet_path = reel / 'beat_sheet.json'\n    if not sheet_path.exists():\n        return [], None\n    sheet = json.loads(sheet_path.read_text())\n    slates = []\n    for b in sheet.get('beats', []):\n        bid = b.get('beat_id','')\n        if not slate_resolves(reel, bid):\n            continue  # already rendered\n        if b.get('silent'):\n            continue  # intentional silence\n        if (b.get('shot',{}).get('remotion',{})\n              .get('pattern')):\n            continue  # already patterned\n        slates.append(b)\n    return slates, sheet",
+            "sparkLine": "Four skips. No pattern, not silent."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-13T18:53:39.810421+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 24.06,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 24.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 3 — stamp_slates() + _truncate(). Portrait code card.",
+      "narration_text": "The stamp. For every slate beat, take the narration, truncate to eleven words with an ellipsis if it's longer, fall back to the beat's name and then to its ID if the narration is empty. Write that string into shot dot remotion dot pattern equals Form A Card, props equals lines colon headline, dark colon false. Provenance and version get stamped alongside. Then the whole sheet is written back — atomically, one dot json write.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'fill_slates.py:34-106 — helpers + stamp_slates()'"
+          },
+          {
+            "at": "0.22",
+            "event": "_truncate() body types"
+          },
+          {
+            "at": "0.55",
+            "event": "stamp_slates() body types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "fill_slates.py:34-106",
+            "code": "def _truncate(\n        text: str, words: int = 12) -> str:\n    parts = text.split()\n    if len(parts) <= words:\n        return text\n    return ' '.join(parts[:words])+'…'\n\ndef _topic(sheet: dict) -> str:\n    # defined; not yet called in v1\n    meta = sheet.get('metadata', {})\n    return (meta.get('topic') or\n            meta.get('series') or\n            meta.get('book') or '').upper()\n\ndef stamp_slates(\n        reel: Path,\n        slates: list,\n        sheet: dict):\n    changed = False\n    for b in slates:\n        bid = b['beat_id']\n        headline = _truncate(\n            b.get('narration_text',''),\n            words=11)\n        if not headline:\n            headline = b.get('name', bid)\n        shot = b.setdefault('shot', {})\n        shot['remotion'] = {\n            'pattern': 'FormACard',\n            'provenance':\n              'proven-core/FormACard',\n            'version': '1',\n            'props': {\n              'lines': [headline],\n              'dark': False,\n            },\n        }\n        changed = True\n    if changed:\n        (reel/'beat_sheet.json').write_text(\n          json.dumps(sheet, indent=1,\n                     ensure_ascii=False))\n    return changed",
+            "sparkLine": "One pattern only: FormACard."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-13T18:54:21.305671+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.02,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 22.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 4 — render_reel() two-subprocess call. Portrait code card.",
+      "narration_text": "Render reel. Two subprocess calls. First — python remotion scenes dot py, pointed at the reel. It reads the beats, finds the ones with a pattern set, renders each to media slash B whatever dot mp4. Second — bash run dot sh, same reel. It rebuilds the slate review cut. Every non zero exit code becomes a FAIL string with the last three hundred characters of stderr. The main loop treats any FAIL as a reel failure and prints it — but keeps going.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'fill_slates.py:109-130 — render_reel()'"
+          },
+          {
+            "at": "0.22",
+            "event": "remotion subprocess block types"
+          },
+          {
+            "at": "0.55",
+            "event": "run.sh subprocess block types"
+          },
+          {
+            "at": "0.82",
+            "event": "the recut size-report line types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "fill_slates.py:109-130",
+            "code": "def render_reel(\n        reel: Path, env: dict) -> list:\n    acts = []\n    r = subprocess.run(\n      [sys.executable,\n       str(HERE/'scripts'/'remotion_scenes.py'),\n       str(reel)],\n      env=env,\n      capture_output=True, text=True)\n    if r.returncode != 0:\n        acts.append(\n          f'REMOTION FAIL: '\n          f'{(r.stderr or r.stdout)[-300:]}')\n        return acts\n    acts.append('remotion: ok')\n\n    r = subprocess.run(\n      ['bash',\n       str(HERE/'scripts'/'run.sh'),\n       str(reel)],\n      env=env,\n      capture_output=True, text=True)\n    if r.returncode != 0:\n        acts.append(\n          f'ART_RUN FAIL: '\n          f'{(r.stderr or r.stdout)[-300:]}')\n        return acts\n    review = reel / f'{reel.name}-slate.mp4'\n    sz = (f'{review.stat().st_size//1024}K'\n          if review.exists() else 'missing')\n    acts.append(\n      f'recut: {review.name} ({sz})')\n    return acts",
+            "sparkLine": "Two shell outs. One order."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-13T18:55:00.107944+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 24.1,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 24.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — disposable fixture, portrait code card. Observed dry-run + post-stamp shape.",
+      "narration_text": "Worked example. Disposable fixture — one beat sheet with five beats. B zero and B one have no media and no pattern. B two already has a composer pattern. B three is silent. B four has a stub media file on disk. Point dash dash books at the fixture and dry run. Fill slates prints one reel, two slates: B zero, B one. Silent gets skipped. Patterned gets skipped. Rendered gets skipped. Exactly what the four skip conditions promise.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'demo/fixture-book → fill_slates.py --books DEMO'"
+          },
+          {
+            "at": "0.22",
+            "event": "the fixture beat list types"
+          },
+          {
+            "at": "0.60",
+            "event": "dry-run invocation + output types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "demo/fixture-book  →  --books DEMO",
+            "code": "# demo beat_sheet.json — 5 beats:\n#  B00  slate      (no media, no pattern)\n#  B01  slate      (no media, no pattern)\n#  B02  patterned  (ClaudeComposerAsk)\n#  B03  silent     (silent: true)\n#  B04  rendered   (media/B04.mp4 exists)\n\n$ python3 fill_slates.py \\\n    --books demo/\n[fill-slates] DRY-RUN:\n  1 reels, 2 slate beats to fill\n  fixture-book/demo-reel:\n    ['B00', 'B01']\n\nRe-run with --apply to stamp +\nrender + recut.\n\n# after stamp_slates() directly:\n#  B00.shot.remotion = {\n#    pattern:'FormACard',\n#    props:{\n#      lines:['This first beat\n#              has no media…'],\n#      dark:false } }\n#  B01.shot.remotion = same shape,\n#  headline from B01's narration.",
+            "sparkLine": "Two slates. Three skips."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T13:20:57.833855+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.42,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 22.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 5 — falsifiability. Portrait code card.",
+      "narration_text": "Failure modes. Four. One — the beat sheet doesn't exist. Find slates returns an empty list and None. The reel is quietly skipped. Two — remotion scenes exits non zero. Render reel appends REMOTION FAIL with the last three hundred characters of stderr, and never even calls run dot sh. Three — run dot sh exits non zero. ART underscore RUN FAIL, same shape. Four — no slates at all. The loop reports zero affected reels and does nothing. One bad reel never takes the batch down.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'fill_slates.py — the four failure modes'"
+          },
+          {
+            "at": "0.22",
+            "event": "missing-beat_sheet branch types"
+          },
+          {
+            "at": "0.44",
+            "event": "REMOTION FAIL branch types"
+          },
+          {
+            "at": "0.66",
+            "event": "ART_RUN FAIL branch types"
+          },
+          {
+            "at": "0.85",
+            "event": "zero-slates report types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "fill_slates.py — 4 failure modes",
+            "code": "# 1. no beat sheet\n#    find_slates returns ([], None)\n#    → reel silently skipped\ndef find_slates(reel):\n    if not (reel/'beat_sheet.json'\n            ).exists():\n        return [], None\n    ...\n\n# 2. remotion_scenes non-zero\n#    → bails BEFORE run.sh\nif r.returncode != 0:\n    acts.append(\n      f'REMOTION FAIL: '\n      f'{(r.stderr or r.stdout)[-300:]}')\n    return acts\n\n# 3. run.sh non-zero\n#    → recut fails; review mp4 stale\nif r.returncode != 0:\n    acts.append(\n      f'ART_RUN FAIL: '\n      f'{(r.stderr or r.stdout)[-300:]}')\n    return acts\n\n# 4. main loop — nothing to fill\n# [fill-slates] DRY-RUN:\n#   0 reels, 0 slate beats to fill\n\n# main-loop status test:\nstatus = ('ok'\n  if not any('FAIL' in a for a in acts)\n  else 'FAIL')",
+            "sparkLine": "Dry-run is safe. --apply is loud."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T13:22:03.010747+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 27.39,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 27.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, six lines. Portrait verdict artifact.",
+      "narration_text": "So — fill slates dot py. The safety net. One walk of books slash. One rule for what counts as a slate — no media, no manim, no silent flag, no pattern. One stamp — Form A card with a truncated headline. Two shell outs — remotion scenes, then run dot sh. Dry run is the default. Apply is the flag. Silent beats and pre patterned beats are never touched. That's the whole tool.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 25,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "fill_slates.py — the whole surface, in order",
+            "artifactLines": [
+              "input — books/ or one reel; --apply flips out of dry-run.",
+              "define — SLATE = no media/manim mp4, not silent, no pattern.",
+              "find — walk every book/youtube/*/beat_sheet.json.",
+              "stamp — shot.remotion = FormACard, lines=[truncate(narration,11)].",
+              "render — shell out to remotion_scenes.py then run.sh.",
+              "output — one line per reel; recut refreshes on success."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-10T14:29:25.303581+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.54,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 19.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer, portrait.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at a books directory of your own that has at least one reel in mid build. Ask Claude to run fill slates in dry run against that folder. Then have Claude READ the printed reel-slash-beat list and pick one slate to author properly — a real Remotion pattern, not a Form A card fallback. Fill slates is the SAFETY NET for what didn't get authored. Every time you accept its stamp you lose a bit of teaching. So use it, then replace it beat by beat.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 33,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Dry-run + upgrade a card",
+            "command": "Point Claude Code at a books/ tree with one mid-build reel. Run `fill_slates.py --books <path>` — dry-run — and paste back the reel/beat list. Pick ONE slate, open its beat_sheet.json, and propose a REAL Remotion pattern (not FormACard) for that narration. Show the exact `shot.remotion` diff. Do NOT run --apply.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — the reel/beat list, verbatim",
+              "step 2 — the chosen beat + why it deserves better",
+              "step 3 — the proposed pattern + diff"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T14:30:44.691397+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 24.7,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 24.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-13T14:58:02"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, portrait outro. Hardcoded @NikBearBrown handle.",
+      "narration_text": "Brutalist Utility: fill slates dot py. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 7,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Utility: fill_slates.py.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Utility: fill_slates.py.",
+            "slug": "claude-liam-brutalist-runtime-fill-slates"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-10T13:25:12.970293+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 6.1,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 6.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-13T14:58:02"
+      }
+    }
+  ]
+}

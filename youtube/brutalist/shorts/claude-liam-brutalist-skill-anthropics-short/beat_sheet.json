@@ -1,0 +1,513 @@
+{
+  "metadata": {
+    "title": "The anthropics Skill",
+    "slug": "claude-liam-brutalist-skill-anthropics-short",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "9:16",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "485d27366b4f49a9b54a62d76e99a56b",
+    "episode_id": "skill-anthropics",
+    "order": 5,
+    "note": "Skill teardown of skills/make/anthropics/SKILL.md (SOURCE-SNAPSHOT SHA-256 79f196f3…; supervisor's episode.source_sha256 9189aa89…). The reel is self-referential — it explains the anthropics skill by reading its SKILL file (verbatim quotes cited), NOT by running the sibling git-explainer / ai-paper skills, which are absent from this toolkit snapshot. B07 names that gap plainly instead of faking a demo. Handle @HumanitariansAI, hardcoded in the custom AntOutro so the shipped ClaudeTitleOutro's @NikBearBrown lock is respected. Kokoro am_onyx throughout — free, local. No captions.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/anthropics/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "anthropics",
+      "skill teardown",
+      "Claude",
+      "Humanitarians AI",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T19:07:34",
+      "cut": "master",
+      "filled": 7,
+      "of": 7,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B10: palette=claude but the outro is 'AntOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-skill-anthropics-vertical",
+    "dropped_beats": [
+      "B02",
+      "B05",
+      "B06",
+      "B09"
+    ],
+    "total_estimated_duration_seconds": 121.75,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open; ask lands answered; introduces Liam in for Bear",
+      "narration_text": "Hej, this is Liam, in for Bear. Today we tear down a skill that isn't about making a Brutalist reel. It's about reading a whole company's output — code, papers, content, capabilities — and reporting from your own bench, not from the press release. It's called anthropics. Here's how it actually works.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hej, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types: 'Tear down the anthropics skill…'"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Hej, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The anthropics Skill",
+            "command": "Tear down the anthropics skill. What does it actually do, not just what it says?",
+            "runningText": "reading skills/make/anthropics/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "reads the artifact, not the docs",
+              "four modes: --repo, --paper, --content, --capability",
+              "publishes never."
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T05:46:12.400962+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 24,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.23,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 15.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-08T19:07:34"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the reel's actual misconception ('channel') into its claim ('beat'). Trigger uses SINGLE TOKENS per BrutalistHesitantWriter contract; multi-word phrases silently never match.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read of a skill named for a company is that it's another Claude tutorial channel. It isn't. It's a beat — journalism sense — that reads the artifact, not the docs. Everything the skill does exists to keep it honest when the docs would rather do the explaining for it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "first line types: 'The anthropics skill is a channel.'"
+          },
+          {
+            "at": "0.35",
+            "event": "'channel' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.45",
+            "event": "'channel' deletes and 'beat' types in"
+          },
+          {
+            "at": "0.65",
+            "event": "second line types in: 'It reads the artifact, not the docs.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "The\nanthropics\nis a\nchannel\nreads the\nartifact",
+            "triggerWords": "channel",
+            "replacementWords": "beat",
+            "seed": "anthropics-bluf-2026-vB",
+            "face": "serif",
+            "fontSize": 195,
+            "lineSpacing": 1.2,
+            "align": "center",
+            "banner": "",
+            "charMs": 55,
+            "jitter": 4,
+            "hesitateBetween": 0,
+            "hesitateWithin": 0,
+            "mistakeRate": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T08:01:10.069692+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 14.42,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-08T19:07:34"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The mode router — the four honest questions the skill can ask",
+      "narration_text": "One router, four modes. Dash-repo dispatches to git-explainer's analysis engine. Dash-paper dispatches to ai-paper. Dash-content asks what has changed since the material was published. Dash-capability runs the thing and shows the real output — often side by side against a competitor. That last mode is the whole reason this skill exists. No vendor channel will ever ship it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Four modes, one router.' fades in"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'any Anthropic artifact' appears"
+          },
+          {
+            "at": "0.30",
+            "event": "four mode nodes reveal left-to-right, --capability lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'episode · or NOT READY' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline916",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Four modes, one router.",
+            "inputLabel": "any Anthropic artifact",
+            "outputLabel": "episode · or NOT READY",
+            "phases": [
+              {
+                "label": "--repo",
+                "desc": "→ git-explainer"
+              },
+              {
+                "label": "--paper",
+                "desc": "→ ai-paper"
+              },
+              {
+                "label": "--content",
+                "desc": "what has changed"
+              },
+              {
+                "label": "--capability",
+                "desc": "run it, side by side",
+                "accent": true
+              }
+            ],
+            "footerNote": "Read the artifact. Not the paragraph about it.",
+            "sparkLine": "One router. Four honest questions."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T05:48:38.271496+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 20.18,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 20.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline916",
+        "at": "2026-09-08T19:07:34"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — the disqualifier (the whole thesis)",
+      "narration_text": "First design decision, and it's the whole thesis. Quote from the SKILL file: If the episode could be made by reading the docs, it is not this series. Every episode needs at least one spine beat only visible by opening the artifact and running it. Point at that beat, or the episode is not ready. The skill will report the gap rather than build around it. That single rule kills the ninety per cent of AI content that is downstream of the same three landing pages.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow MECHANISM · ACT 1"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'If it could be read off the docs — it isn't this.' lands"
+          },
+          {
+            "at": "0.30",
+            "event": "body: 'Every episode needs at least one spine beat visible only by opening the artifact and running it.'"
+          },
+          {
+            "at": "0.55",
+            "event": "quote block fades in (verbatim from SKILL.md)"
+          },
+          {
+            "at": "0.80",
+            "event": "verdict pill 'kills the downstream-of-docs 90%' lands terracotta-outlined"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "If it could be read off the docs — it isn't this.",
+            "body": "Every episode needs at least one spine beat visible only by opening the artifact and running it. Point at that beat, or the episode is NOT READY — and the skill will REPORT the gap rather than build around it.",
+            "quote": "If the episode could be made by reading the docs, it is not this series.",
+            "cite": "anthropics SKILL.md",
+            "verdictLabel": "kills the downstream-of-docs 90%",
+            "verdictPositive": true,
+            "sparkLine": "Not the docs."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T05:49:29.728580+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 22.55,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 22.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T19:07:34"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FALSIFIABILITY",
+      "role_note": "Design tell / falsifiability — where it bites. Sibling dependencies + generation-honesty law",
+      "narration_text": "Here is where the skill bites. It leans on two sibling engines — git dash-explainer and ai dash-paper — that aren't shipped inside this toolkit snapshot. Point dash-repo or dash-paper at a target and the router has nowhere to dispatch. The fix is to install those skills, not to fake the analysis. Second bite: the generation honesty law. Never generate an image that poses as evidence of a fact. That's a hard ceiling — it rules out most of what makes a video pop, and the skill accepts the trade because the credibility is the whole product.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow DESIGN · TELL"
+          },
+          {
+            "at": "0.12",
+            "event": "heading 'Where it bites.' lands"
+          },
+          {
+            "at": "0.30",
+            "event": "body describes the two bites (siblings + generation-honesty)"
+          },
+          {
+            "at": "0.60",
+            "event": "quote 'Never generate an image that poses as evidence of a fact.' lands verbatim"
+          },
+          {
+            "at": "0.85",
+            "event": "verdict pill 'hard ceiling · high cost' lands (negative — the real cost)"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "DESIGN · TELL",
+            "heading": "Where it bites.",
+            "body": "Depends on two siblings (git-explainer, ai-paper) — absent from this toolkit snapshot; the router has nowhere to dispatch. And it forbids the generation of images that pose as evidence of a fact.",
+            "quote": "Never generate an image that poses as evidence of a fact.",
+            "cite": "anthropics SKILL.md · generation-honesty law",
+            "verdictLabel": "hard ceiling · high cost",
+            "verdictPositive": false,
+            "sparkLine": "Trades pop for credibility."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T05:52:08.173920+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 34,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 27.73,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 27.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-08T19:07:34"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the beat.",
+      "narration_text": "The verdict. The anthropics skill is a beat, not a topic. Four modes, one router, one disqualifier, one register. It reads the artifact rather than the artifact's press release, and it says so out loud. Its cost is depending on siblings that have to be present, and its cheat code is a comparison shot no vendor channel can ever ship.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'The anthropics beat.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "five verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The anthropics Skill",
+            "artifactHeading": "The anthropics beat.",
+            "artifactLines": [
+              "A beat, not a topic — four modes under one router.",
+              "Reads the artifact. Not the docs.",
+              "Behaviour is the thesis; defaults are the tell.",
+              "Independence stated once. Situated. Honest about matches.",
+              "Never generates evidence. Never publishes."
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T06:06:20.669741+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 17.9,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 17.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-08T19:07:34"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — title restate + handle beneath. Liam in for Bear signoff. Custom AntOutro uses @HumanitariansAI (ClaudeTitleOutro hardcodes @NikBearBrown per OUTRO-LOCK.md).",
+      "narration_text": "That was the anthropics skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow BRUTALIST · EPISODE 05 fades in"
+          },
+          {
+            "at": "0.15",
+            "event": "terracotta rule draws across"
+          },
+          {
+            "at": "0.25",
+            "event": "title 'The anthropics Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@HumanitariansAI' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "subline 'LIAM, IN FOR BEAR.' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "AntOutro916",
+          "props": {
+            "title": "The anthropics Skill",
+            "subline": "Liam, in for Bear."
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T05:54:01.384629+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.56,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 3.5833333333333335,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:AntOutro916",
+        "at": "2026-09-08T19:07:34"
+      }
+    }
+  ]
+}

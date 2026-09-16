@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "35a283c44f7e4830a26c6a84abf10319",
+  "source_sha256": "eaeb9039c38691606a165ceba147dfd3ca0334ca593fe38b9199f6823d35b863",
+  "beat_sheet_sha256": "d8d08b74e70c53040f1f45e050baf928e004b11f90884fff2ea7b949eb047235",
+  "video_sha256": "1d01e65c3c45d6b0864bbf9145aacc4d681ad72fbc12d37527b6f06cbbd68ee4",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames-run-bed96fa6/contact_sheet_run.png", "sha256": "e46e6cc35143ada4b22d43aabe0eb9e8fdb4fc05c87b14fa17b25a19c65e36af"},
+    {"path": "_qc/frames-run-bed96fa6/B00_b.jpg", "sha256": "cd059710586828116e5b456f2038f5ba8e152fb11892989e4423ea2600bb0883"},
+    {"path": "_qc/frames-run-bed96fa6/B01_c.jpg", "sha256": "2390180f1de6e66211003ce28f27c989335db8e20e9423fdaf88a3d72f079f82"},
+    {"path": "_qc/frames-run-bed96fa6/B10_b.jpg", "sha256": "9451a4cc69c8c1e6d077362f6200925aa7088d5a09446113606f960218cd17b9"},
+    {"path": "_qc/frames-run-bed96fa6/B11_b.jpg", "sha256": "cc0a147e2f12625fd1f8eb5b6f339969150f166142411110af8ec5e310c13d19"}
+  ],
+  "notes": "Portrait companion re-verified in run 35a283c44f7e4830a26c6a84abf10319. Native 2160x3840, 142.667s, h264+aac 48k stereo, Kokoro am_onyx. Source_sha256 changed because REPOLOOP-PROMPT.md was added to the episode source list for this invocation; no film content changed — video_sha256 and beat_sheet_sha256 are bitwise identical to the previous passing runs (bed96fa6, e1330e48). Gate V re-run fresh: frames=24 BLOCKER=0 MAJOR=0 (beat-aware steady-state sampling at 50%/85% of each beat). Per-beat JPG frame hashes in _qc/frames-run-bed96fa6/ match the previous passing run exactly, confirming bitwise video identity. Frames read via image-capable Read tool: B00_b shows ClaudeComposerAsk916 in native portrait 2160x3840 — 'BRUTALIST · 03' topic, 'Your First Project' segment, 'Hola, Liam' greeting, ribosome/mRNA command wrapped for portrait width, '@HumanitariansAI' folder chip, four output lines (reads ai-explainer, drafts beat_sheet.json 12 beats, generates Kokoro am_onyx narration, renders scenes compiles review cut), terracotta rule at base, no captions, no overflow; B01_c shows BrutalistHesitantWriter916 — demo→claim correction complete, large serif fills portrait safe area; B10_b shows ClaudeComposerAsk916 'Your Turn' — paste-ready command wraps within portrait safe area, GOOD/BAD contrast in output lines, '@HumanitariansAI' folder chip, no captions; B11_b shows ClaudeTitleOutroHAI916 — dark olive background, 'Your First Brutalist Project.' wrapping two lines in white bold serif with terminal period, '@HumanitariansAI' centred beneath in white, 'BRUTALIST — 03' sub-mark in small caps, horizontal rules top and bottom, dark polarity. Every beat uses a portrait-registered composition (Composer916, HesitantWriter916, CodeBeat916, VerdictArtifact916, TitleOutroHAI916). No black frames, no slates, no subtitle burns. Known gaps: scripts/type_check.py and reference/type-spec.md absent (see TYPECHECK.md); typography reviewed visually. Portrait review is independent of landscape. Human review pending — Bear watches next; runtime receipt is NOT publication approval."
+}

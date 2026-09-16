@@ -1,0 +1,770 @@
+{
+  "title": "Brutalist",
+  "persona": "Liam, in for Bear",
+  "voice": "am_onyx",
+  "skill": "ai-explainer",
+  "captions": false,
+  "channel": "@HumanitariansAI",
+  "items": [
+    {
+      "id": "what-is-brutalist",
+      "order": 1,
+      "slug": "claude-liam-brutalist-what-is-brutalist",
+      "title": "What Is Brutalist?",
+      "kind": "onboarding",
+      "sources": [
+        "README.md",
+        "art",
+        "setup",
+        "skills/make/ai-explainer/SKILL.md",
+        "skills/make/nopunt/SKILL.md",
+        "runtime/prose/teardown/PROSE.md",
+        "docs/PIPELINE-SAFETY.md",
+        "docs/FELLOWS-SUBMISSION.md",
+        "REPOLOOP-PROMPT.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "download-and-set-up",
+      "order": 2,
+      "slug": "claude-liam-brutalist-download-and-set-up",
+      "title": "Download Brutalist with Claude Code",
+      "kind": "onboarding",
+      "sources": [
+        "README.md",
+        "art",
+        "setup",
+        "skills/make/ai-explainer/SKILL.md",
+        "skills/make/nopunt/SKILL.md",
+        "runtime/prose/teardown/PROSE.md",
+        "docs/PIPELINE-SAFETY.md",
+        "docs/FELLOWS-SUBMISSION.md",
+        "REPOLOOP-PROMPT.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "your-first-project",
+      "order": 3,
+      "slug": "claude-liam-brutalist-your-first-project",
+      "title": "Your First Brutalist Project",
+      "kind": "onboarding",
+      "sources": [
+        "README.md",
+        "art",
+        "setup",
+        "skills/make/ai-explainer/SKILL.md",
+        "skills/make/nopunt/SKILL.md",
+        "runtime/prose/teardown/PROSE.md",
+        "docs/PIPELINE-SAFETY.md",
+        "docs/FELLOWS-SUBMISSION.md",
+        "REPOLOOP-PROMPT.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-ai-explainer",
+      "order": 4,
+      "slug": "claude-liam-brutalist-skill-ai-explainer",
+      "title": "The ai-explainer Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/ai-explainer/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-anthropics",
+      "order": 5,
+      "slug": "claude-liam-brutalist-skill-anthropics",
+      "title": "The anthropics Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/anthropics/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-cli-explainer",
+      "order": 6,
+      "slug": "claude-liam-brutalist-skill-cli-explainer",
+      "title": "The cli-explainer Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/cli-explainer/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-deep-explainer",
+      "order": 7,
+      "slug": "claude-liam-brutalist-skill-deep-explainer",
+      "title": "The deep-explainer Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/deep-explainer/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-duration-planner",
+      "order": 8,
+      "slug": "claude-liam-brutalist-skill-duration-planner",
+      "title": "The duration-planner Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/duration-planner/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-explainer",
+      "order": 9,
+      "slug": "claude-liam-brutalist-skill-explainer",
+      "title": "The explainer Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/explainer/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-fashionista",
+      "order": 10,
+      "slug": "claude-liam-brutalist-skill-fashionista",
+      "title": "The fashionista Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/fashionista/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-fellows",
+      "order": 11,
+      "slug": "claude-liam-brutalist-skill-fellows",
+      "title": "The fellows Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/fellows/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-finance",
+      "order": 12,
+      "slug": "claude-liam-brutalist-skill-finance",
+      "title": "The finance Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/finance/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-godot-gamedev",
+      "order": 13,
+      "slug": "claude-liam-brutalist-skill-godot-gamedev",
+      "title": "The godot-gamedev Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/godot-gamedev/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-godot-gdd",
+      "order": 14,
+      "slug": "claude-liam-brutalist-skill-godot-gdd",
+      "title": "The godot-gdd Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/godot-gdd/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-godot-waikthrough",
+      "order": 15,
+      "slug": "claude-liam-brutalist-skill-godot-waikthrough",
+      "title": "The godot-waikthrough Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/godot-waikthrough/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-guests",
+      "order": 16,
+      "slug": "claude-liam-brutalist-skill-guests",
+      "title": "The guests Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/guests/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-hai",
+      "order": 17,
+      "slug": "claude-liam-brutalist-skill-hai",
+      "title": "The hai Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/hai/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-logo",
+      "order": 18,
+      "slug": "claude-liam-brutalist-skill-logo",
+      "title": "The logo Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/logo/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-logo-motion",
+      "order": 19,
+      "slug": "claude-liam-brutalist-skill-logo-motion",
+      "title": "The logo-motion Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/logo-motion/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-nbb",
+      "order": 20,
+      "slug": "claude-liam-brutalist-skill-nbb",
+      "title": "The nbb Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/nbb/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-nopunt",
+      "order": 21,
+      "slug": "claude-liam-brutalist-skill-nopunt",
+      "title": "The nopunt Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/nopunt/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-riff",
+      "order": 22,
+      "slug": "claude-liam-brutalist-skill-riff",
+      "title": "The riff Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/riff/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-screen-clean",
+      "order": 23,
+      "slug": "claude-liam-brutalist-skill-screen-clean",
+      "title": "The screen-clean Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/screen-clean/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-sri-explainer",
+      "order": 24,
+      "slug": "claude-liam-brutalist-skill-sri-explainer",
+      "title": "The sri-explainer Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/sri-explainer/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "skill-your-turn",
+      "order": 25,
+      "slug": "claude-liam-brutalist-skill-your-turn",
+      "title": "The your-turn Skill",
+      "kind": "skill",
+      "sources": [
+        "skills/make/your-turn/SKILL.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "command-help",
+      "order": 26,
+      "slug": "claude-liam-brutalist-command-help",
+      "title": "Brutalist Command: art help",
+      "kind": "command",
+      "sources": [
+        "art"
+      ],
+      "aliases": [
+        "",
+        "-h",
+        "--help",
+        "help"
+      ]
+    },
+    {
+      "id": "command-list",
+      "order": 27,
+      "slug": "claude-liam-brutalist-command-list",
+      "title": "Brutalist Command: art --list",
+      "kind": "command",
+      "sources": [
+        "art"
+      ],
+      "aliases": [
+        "--list",
+        "list"
+      ]
+    },
+    {
+      "id": "command-icons",
+      "order": 28,
+      "slug": "claude-liam-brutalist-command-icons",
+      "title": "Brutalist Command: art icons",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/icon_search.py"
+      ],
+      "aliases": [
+        "icons",
+        "icon",
+        "icon-search"
+      ]
+    },
+    {
+      "id": "command-icon-build",
+      "order": 29,
+      "slug": "claude-liam-brutalist-command-icon-build",
+      "title": "Brutalist Command: art icon-build",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/build_icon_set.py"
+      ],
+      "aliases": [
+        "icon-build"
+      ]
+    },
+    {
+      "id": "command-scenes",
+      "order": 30,
+      "slug": "claude-liam-brutalist-command-scenes",
+      "title": "Brutalist Command: art scenes",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/scene_search.py"
+      ],
+      "aliases": [
+        "scenes",
+        "scene",
+        "scene-search"
+      ]
+    },
+    {
+      "id": "command-scene-index",
+      "order": 31,
+      "slug": "claude-liam-brutalist-command-scene-index",
+      "title": "Brutalist Command: art scene-index",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/build_scene_index.py"
+      ],
+      "aliases": [
+        "scene-index"
+      ]
+    },
+    {
+      "id": "command-todo",
+      "order": 32,
+      "slug": "claude-liam-brutalist-command-todo",
+      "title": "Brutalist Command: art todo",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/todo.py"
+      ],
+      "aliases": [
+        "todo"
+      ]
+    },
+    {
+      "id": "command-run",
+      "order": 33,
+      "slug": "claude-liam-brutalist-command-run",
+      "title": "Brutalist Command: art run",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/run.sh"
+      ],
+      "aliases": [
+        "run"
+      ]
+    },
+    {
+      "id": "command-shorts",
+      "order": 34,
+      "slug": "claude-liam-brutalist-command-shorts",
+      "title": "Brutalist Command: art shorts",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/shorts.py"
+      ],
+      "aliases": [
+        "shorts"
+      ]
+    },
+    {
+      "id": "command-vertical",
+      "order": 35,
+      "slug": "claude-liam-brutalist-command-vertical",
+      "title": "Brutalist Command: art vertical",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/shorts.py"
+      ],
+      "aliases": [
+        "vertical"
+      ]
+    },
+    {
+      "id": "command-approvals",
+      "order": 36,
+      "slug": "claude-liam-brutalist-command-approvals",
+      "title": "Brutalist Command: art approvals",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/build_safety.py"
+      ],
+      "aliases": [
+        "approvals"
+      ]
+    },
+    {
+      "id": "command-final",
+      "order": 37,
+      "slug": "claude-liam-brutalist-command-final",
+      "title": "Brutalist Command: art final",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/compile.py"
+      ],
+      "aliases": [
+        "final"
+      ]
+    },
+    {
+      "id": "command-doctor",
+      "order": 38,
+      "slug": "claude-liam-brutalist-command-doctor",
+      "title": "Brutalist Command: art doctor",
+      "kind": "command",
+      "sources": [
+        "art",
+        "setup"
+      ],
+      "aliases": [
+        "doctor"
+      ]
+    },
+    {
+      "id": "command-smoke",
+      "order": 39,
+      "slug": "claude-liam-brutalist-command-smoke",
+      "title": "Brutalist Command: art smoke",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/smoke_test.sh"
+      ],
+      "aliases": [
+        "smoke"
+      ]
+    },
+    {
+      "id": "command-keys",
+      "order": 40,
+      "slug": "claude-liam-brutalist-command-keys",
+      "title": "Brutalist Command: art keys",
+      "kind": "command",
+      "sources": [
+        "art",
+        "runtime/scripts/check_keys.py"
+      ],
+      "aliases": [
+        "keys"
+      ]
+    },
+    {
+      "id": "command-setup",
+      "order": 41,
+      "slug": "claude-liam-brutalist-command-setup",
+      "title": "Brutalist Command: setup",
+      "kind": "command",
+      "sources": [
+        "setup",
+        "requirements.txt"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "command-repoloop",
+      "order": 42,
+      "slug": "claude-liam-brutalist-command-repoloop",
+      "title": "Brutalist Command: repoloop.sh",
+      "kind": "command",
+      "sources": [
+        "repoloop.sh",
+        "runtime/scripts/repoloop.py",
+        "REPOLOOP-PROMPT.md"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-align",
+      "order": 43,
+      "slug": "claude-liam-brutalist-runtime-align",
+      "title": "Brutalist Utility: align.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/align.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-audit-review-queue",
+      "order": 44,
+      "slug": "claude-liam-brutalist-runtime-audit-review-queue",
+      "title": "Brutalist Utility: audit_review_queue.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/audit_review_queue.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-brand-variant",
+      "order": 45,
+      "slug": "claude-liam-brutalist-runtime-brand-variant",
+      "title": "Brutalist Utility: brand_variant.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/brand_variant.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-build-cli-d3-reels",
+      "order": 46,
+      "slug": "claude-liam-brutalist-runtime-build-cli-d3-reels",
+      "title": "Brutalist Utility: build_cli_d3_reels.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/build_cli_d3_reels.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-capture-sim",
+      "order": 47,
+      "slug": "claude-liam-brutalist-runtime-capture-sim",
+      "title": "Brutalist Utility: capture_sim.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/capture_sim.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-fill-slates",
+      "order": 48,
+      "slug": "claude-liam-brutalist-runtime-fill-slates",
+      "title": "Brutalist Utility: fill_slates.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/fill_slates.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-generate-audio-kokoro",
+      "order": 49,
+      "slug": "claude-liam-brutalist-runtime-generate-audio-kokoro",
+      "title": "Brutalist Utility: generate_audio_kokoro.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/generate_audio_kokoro.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-image-fetch",
+      "order": 50,
+      "slug": "claude-liam-brutalist-runtime-image-fetch",
+      "title": "Brutalist Utility: image_fetch.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/image_fetch.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-pantry",
+      "order": 51,
+      "slug": "claude-liam-brutalist-runtime-pantry",
+      "title": "Brutalist Utility: pantry.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/pantry.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-provenance",
+      "order": 52,
+      "slug": "claude-liam-brutalist-runtime-provenance",
+      "title": "Brutalist Utility: provenance.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/provenance.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-remotion-scenes",
+      "order": 53,
+      "slug": "claude-liam-brutalist-runtime-remotion-scenes",
+      "title": "Brutalist Utility: remotion_scenes.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/remotion_scenes.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-setup-smoke-kokoro",
+      "order": 54,
+      "slug": "claude-liam-brutalist-runtime-setup-smoke-kokoro",
+      "title": "Brutalist Utility: setup_smoke_kokoro.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/setup_smoke_kokoro.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-smithsonian-fetch",
+      "order": 55,
+      "slug": "claude-liam-brutalist-runtime-smithsonian-fetch",
+      "title": "Brutalist Utility: smithsonian_fetch.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/smithsonian_fetch.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "runtime-write-review-queue-report",
+      "order": 56,
+      "slug": "claude-liam-brutalist-runtime-write-review-queue-report",
+      "title": "Brutalist Utility: write_review_queue_report.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/scripts/write_review_queue_report.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "qc-beat-lint",
+      "order": 57,
+      "slug": "claude-liam-brutalist-qc-beat-lint",
+      "title": "Brutalist Utility: beat_lint.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/qc/beat_lint.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "qc-final-frame-check",
+      "order": 58,
+      "slug": "claude-liam-brutalist-qc-final-frame-check",
+      "title": "Brutalist Utility: final_frame_check.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/qc/final_frame_check.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "qc-gate-shape",
+      "order": 59,
+      "slug": "claude-liam-brutalist-qc-gate-shape",
+      "title": "Brutalist Utility: gate_shape.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/qc/gate_shape.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "qc-manim-layout-audit",
+      "order": 60,
+      "slug": "claude-liam-brutalist-qc-manim-layout-audit",
+      "title": "Brutalist Utility: manim_layout_audit.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/qc/manim_layout_audit.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "qc-static-scene-check",
+      "order": 61,
+      "slug": "claude-liam-brutalist-qc-static-scene-check",
+      "title": "Brutalist Utility: static_scene_check.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/qc/static_scene_check.py"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "qc-wcag-margin-check",
+      "order": 62,
+      "slug": "claude-liam-brutalist-qc-wcag-margin-check",
+      "title": "Brutalist Utility: wcag_margin_check.py",
+      "kind": "utility",
+      "sources": [
+        "runtime/qc/wcag_margin_check.py"
+      ],
+      "aliases": []
+    }
+  ]
+}

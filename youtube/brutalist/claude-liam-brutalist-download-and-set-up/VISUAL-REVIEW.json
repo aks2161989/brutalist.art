@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "db8a5a5b2c0f4d74a8c148cc6c2b2e9e",
+  "source_sha256": "eaeb9039c38691606a165ceba147dfd3ca0334ca593fe38b9199f6823d35b863",
+  "beat_sheet_sha256": "c69b74c9b6661f09b741a8b3a6d9f38a5e9da2a1946b09c820defac408b14a10",
+  "video_sha256": "85c16a2c5dee6a30b506b8d56b4cd1079921d8f6d92811b07f9a56e9c43c556b",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/landscape-contact-sheet.png", "sha256": "4769668b68b46e7bb84e53792fa773bda79eb1bea601ca8ede625a478958f487"}
+  ],
+  "notes": "Re-verification pass for invocation db8a5a5b2c0f4d74a8c148cc6c2b2e9e. Source change from prior run ce92be0c: docs/PIPELINE-SAFETY.md and docs/FELLOWS-SUBMISSION.md newly added to the repo; art script updated with 'vertical' and 'approvals' commands and updated help text. These additions are covered by dedicated later episodes (Ep 31 'art vertical', Ep 32 'art approvals') and do not affect the download/setup teaching in this episode. All 10 beats (B00-B09) carry forward unchanged. Landscape MP4 hash matches run ce92be0c (85c16a2c…). ffprobe: h264 3840×2160 24fps 165.04s video + 165.08s audio. Landscape contact sheet read in this session: B00 ClaudeComposerAsk — cream composer with 'Download Brutalist' segment and HAI folder chip visible; B01 BrutalistHesitantWriter — 'Downloading Brutalist is a git-clone.' corrected serif text fully visible; B02 DbcPasteReady — 'One paste. Two commands.' composer card with three output chips; B03 DbcCloneTree — 'A folder. Nothing outside it.' tree entries with terracotta chips; B04 DbcDoctor — 'Green means ready.' dark terminal readiness table; B05 DbcLanes — 'Subscription. Optional key. Free pipeline.' three lanes with $0 banner; B06 DbcNotClaims — 'What setup won't do.' three limitation rows; B07 DbcVerdict — 'Download Brutalist, in three lines.' numbered verdict card; B08 ClaudeComposerAsk 'Your Turn' portrait with paste-ready prompt; B09 DbcOutro confirmed. Gate V: 0 BLOCKER, 0 MAJOR (carried from run 92aed5ea REPORT.md; re-verified content unchanged). Skin-lint warning on B09 expected (DbcOutro hardcodes @HumanitariansAI per OUTRO-LOCK). Human review pending."
+}

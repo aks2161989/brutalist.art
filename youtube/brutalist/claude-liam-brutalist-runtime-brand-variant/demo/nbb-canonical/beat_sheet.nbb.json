@@ -1,0 +1,51 @@
+{
+ "metadata": {
+  "title": "Demo Canonical",
+  "slug": "demo-canonical",
+  "kind": "explainer",
+  "engine": "kokoro",
+  "voice": "someone",
+  "audience": "NikBearBrown",
+  "derived_from": "beat_sheet.json",
+  "register": "Teardown",
+  "palette": "teardown",
+  "outro_source": "AUTHOR.MD :: NikBearBrown",
+  "voice_kokoro": "am_onyx",
+  "typography": {
+   "display": "Montserrat",
+   "serif": "EB Garamond",
+   "mono": "PT Mono"
+  },
+  "_variant_todo": [
+   "rewrite every beat narration_text/text in the Teardown register (runtime/prose/teardown/PROSE.md + brands/nbb.md) — take it apart, explain how each piece works, judge the design choices; voice only, facts unchanged",
+   "add LLM exercise as the SECOND-TO-LAST beat (paste-ready prompt for Claude/ChatGPT/Gemini + dig-deeper follow-up; see skills/make/nbb/SKILL.md §Step 3)",
+   "add/replace outro with NikBearBrown outro from AUTHOR.MD :: NikBearBrown (LAST beat)",
+   "verify ending order: body → [LLM exercise] → [outro]",
+   "build: generate_audio_kokoro.py (voice am_onyx) → palette=teardown → compile"
+  ]
+ },
+ "beats": [
+  {
+   "beat_id": "B00",
+   "narration_text": "Cold open ask.",
+   "shot": {
+    "remotion": {
+     "pattern": "ClaudeComposerAsk",
+     "rendered": {
+      "out": "media/B00.mp4",
+      "at": "old"
+     }
+    }
+   }
+  },
+  {
+   "beat_id": "B01",
+   "narration_text": "One body beat.",
+   "shot": {
+    "remotion": {
+     "pattern": "ClaudeCodeBeat"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,468 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art run",
+    "slug": "claude-liam-brutalist-command-run-short",
+    "topic": "BRUTALIST · COMMAND: ART RUN",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Ciao, Liam",
+    "greeting_note": "hello lexicon: Ciao (Italian, one word). Fresh — does not repeat scene-index=Bonjour, scenes=Namaste, icons=Sawubona, list=Salaam, icon-build=Merhaba, help=Namaste. Slug char-sum mod 10 == 3, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "d84ca314edcf4438a94f55f21c742c99",
+    "episode_id": "command-run",
+    "order": 29,
+    "note": "Command teardown of ./art run — the dispatcher case at art:99-101 that wraps `bash runtime/scripts/run.sh`. run.sh is the ONE command that gates paperwork (F), lints the beat mix (L), enforces finance chart-shape (SHAPE), pre-flights static scenes (A) and WCAG margins (W), renders each pending Manim scene with layout audit (B), fills every Remotion beat via runtime/scripts/remotion_scenes.py, compiles a review cut via compile.py --review, and closes with frame-level visual QC (V) on the finished mp4. It writes <slug>-slate.mp4 (the review cut) and skips slots already filled. Not a final master — `./art final` is the separate verb. Aliases: none; dispatcher matches only 'run'. Env knobs: ART_QC=0 (skip gates), ART_STRICT=0 (warnings not blockers), ART_FACTS=0 (previz exception on Gate F), --height (default 2160). All demo output in demo/RUN-LOG.txt is verbatim from this workspace against a fixture reel at /tmp/claude-501/art-run-demo. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. No paid API, no upload, no network calls. episode.source_sha256 f9c007cae04ca87ddb005388bf8c0835e220369e6f2d2377dd54f02e1f6c65c2.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:99-101",
+      "workflow_script": "runtime/scripts/run.sh",
+      "compile_script": "runtime/scripts/compile.py",
+      "remotion_scenes": "runtime/scripts/remotion_scenes.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "run",
+      "run.sh",
+      "review cut",
+      "Gate F",
+      "Gate L",
+      "Gate A",
+      "Gate W",
+      "Gate B",
+      "Gate V",
+      "compile.py",
+      "remotion_scenes.py",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T19:05:10",
+      "cut": "master",
+      "filled": 6,
+      "of": 6,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-command-run-vertical",
+    "dropped_beats": [
+      "B02",
+      "B04",
+      "B05",
+      "B06",
+      "B08",
+      "B09"
+    ],
+    "total_estimated_duration_seconds": 118.58,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Ciao, this is Liam, in for Bear. One command drives the whole review loop for a Brutalist reel. Art run is the wrapper. It gates the paperwork, lints the beat mix, renders every pending scene, drops each clip into a slot, and recompiles a review cut. It writes a slate version — not the final master. That is a different verb.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Ciao, Liam' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'gating paperwork; rendering; conforming…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Ciao, Liam",
+            "topic": "BRUTALIST · COMMAND: ART RUN",
+            "segment": "art run",
+            "command": "Do one pass over this reel: gate the paperwork, lint the beat mix, render every pending scene, slot each clip, and recompile a review cut with beat markers on top.",
+            "runningText": "gating paperwork; rendering; conforming…",
+            "output": [
+              "wraps: bash runtime/scripts/run.sh <reel> [--height H]",
+              "writes: <slug>-slate.mp4 (the review cut with beat markers)",
+              "not the final: `./art final <reel>` writes the clean master separately"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T15:32:44.351418+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.45,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 17.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T19:05:10"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Corrects the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art run does not render a final master. It compiles a review cut, with slate labels burned in for the beats you have not filled yet. Art final is the different verb — no beat markers, atomic verification, a real deliverable. Art run is the loop you live in until the review is clean.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art run renders / a master.'"
+          },
+          {
+            "at": "0.50",
+            "event": "the word 'renders' turns terracotta, hesitates, backspaces, types 'compiles'"
+          },
+          {
+            "at": "0.78",
+            "event": "the word 'master' turns terracotta, hesitates, backspaces, types 'review'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art run compiles / a review.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art run\nrenders\nthe master\nvideo file.",
+            "triggerWords": "renders, master",
+            "replacementWords": "compiles, review",
+            "seed": "command-run-b01-vertical",
+            "face": "serif",
+            "fontSize": 180,
+            "lineSpacing": 2.6,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T16:07:14.365722+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.22,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 17.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T19:05:10"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the gate order run.sh actually runs.",
+      "narration_text": "Here is the loop the script actually runs, in order. Gate F — the paperwork triad: FACTCHECK, SHOTLIST, PROMPTS. Gate L — beat-mix lint: no single-sentence text slides. Gate SHAPE — finance chart-shape enforcement, if this is a finance reel. Gate A — static pre-flight on every pending Manim scene. Gate W — WCAG contrast and margins on the same scenes. Then it renders each pending Manim scene and runs Gate B — layout audit — on it before slotting. Then it fills every Remotion beat. Then it compiles a slate cut. Then Gate V — frame-level visual QC on the finished mp4. Any gate can stop the build.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 40,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'run.sh — the gate order'"
+          },
+          {
+            "at": "0.20",
+            "event": "Gate F line types"
+          },
+          {
+            "at": "0.30",
+            "event": "Gate L line types"
+          },
+          {
+            "at": "0.40",
+            "event": "Gate SHAPE line types"
+          },
+          {
+            "at": "0.50",
+            "event": "Gate A + Gate W lines type"
+          },
+          {
+            "at": "0.62",
+            "event": "render + Gate B line types"
+          },
+          {
+            "at": "0.74",
+            "event": "remotion_scenes.py line types"
+          },
+          {
+            "at": "0.84",
+            "event": "compile.py --review line types"
+          },
+          {
+            "at": "0.92",
+            "event": "Gate V line types + spark line"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "run.sh — the loop, in order",
+            "code": "# runtime/scripts/run.sh — one command, ten stages.\n#\n# Gate F  — paperwork triad present   (FACTCHECK · SHOTLIST · PROMPTS)\n# Gate L  — beat-mix lint              (no single-sentence text slides)\n# Gate SHAPE — finance chart-shape     (sankey/mirrored-bar/… — finance only)\n# Gate A  — static pre-flight          (per pending Manim scene, no render)\n# Gate W  — WCAG contrast + margins    (same scenes, independent 2nd check)\n#   for each pending Manim scene:\n#     manim -qk --fps 24 -r $RES scenes.py $Scene\n# Gate B  — layout audit (rendered PNG) (per scene, before slotting)\n#     mv $out $REEL/manim/$BID.mp4\n# runtime/scripts/remotion_scenes.py $REEL      # fill every Remotion beat\n# runtime/scripts/compile.py $REEL --review     # review cut with markers\n# Gate V  — frame-level visual QC on the finished mp4\n#\n# ANY gate can stop the build. ART_QC=0 skips them all.",
+            "sparkLine": "Ten stages. Any one of them can stop it."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T15:34:53.092803+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 33.19,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 33.208333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T19:05:10"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — art run vs art final; two verbs, two files.",
+      "narration_text": "Two verbs, two files on disk. Art run writes slug dash slate dot mp4 — the review cut with beat markers burned in. Art final writes slug dot mp4 — the clean master, only after every gate passes and after the compiler's atomic verification stamps a receipt beside it. If you see a slate label on your export, you ran the wrong verb. Both commands compile the same beats — the difference is what gets stamped on top and whether the receipt is written.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'art run vs art final — two verbs, two files'"
+          },
+          {
+            "at": "0.25",
+            "event": "the RUN block types"
+          },
+          {
+            "at": "0.60",
+            "event": "the FINAL block types under a divider"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "run vs final — two verbs, two files",
+            "code": "$ ./art run   <reel>            # REVIEW cut\n  -> writes <reel>/<slug>-slate.mp4     (beat markers on top)\n  -> runs Gate F/L/SHAPE/A/W/B, then compile.py --review,\n     then Gate V frame-check on the finished mp4.\n  -> no verified receipt; iterate freely.\n\n# --------------------------- vs -----------------------------\n\n$ ./art final <reel>            # MASTER cut  (default --height 2160)\n  -> writes <reel>/<slug>.mp4            (clean, no markers)\n  -> runs the same gates + compile.py's atomic verification\n     (verified.json beside the mp4, sha-256 + input digests).\n  -> build-state.json status = \"ready\" on success.\n\n# The compiler's mandatory verification is the difference:\n# a slate cut is a preview; a final cut is a receipt.",
+            "sparkLine": "run = preview. final = receipt."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T15:37:23.469853+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 23.1,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 23.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T19:05:10"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code from your reel folder. Run art run once. Read the last four lines. If a gate is the failure, the message names which one and how to unblock. If Remotion is the failure, read the beat id it printed and re-run that beat's audio and scene alone. Then re-run art run — it will skip every filled slot. The loop should shorten by one on every pass. If it does not, a slot is not being written, and the message names which one.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your turn.' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "expected outcome lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Iterate a reel through art run",
+            "command": "(1) ./art run <reel> --height 1080. (2) If a gate stopped it, the message names the fix. (3) If Remotion stopped it, note the beat id; regen its mp3, delete media/<BID>.mp4, re-run. (4) Filled slots skip on pass two.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 -> log's last four lines name the gate",
+              "step 3 -> one audio + one clip; re-run",
+              "step 4 -> filled slots skip; loop shortens"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T15:51:04.780902+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.27,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 22.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T19:05:10"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art run. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art run.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art run.",
+            "slug": "claude-liam-brutalist-command-run"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T15:40:11.984586+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.23,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T19:05:10"
+      }
+    }
+  ]
+}

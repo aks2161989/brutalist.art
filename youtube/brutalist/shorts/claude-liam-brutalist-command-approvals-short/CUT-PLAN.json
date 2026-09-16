@@ -1,0 +1,30 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art approvals is a fail-closed auditor: two verbs (fingerprints prints, default validates), neither one signs; the pen never leaves the human.",
+  "parent_master_sha256": "4fd6fbab9882f7657b6b0fd15ac6c6403fc87f7cd9dacfdad580bbce7d9c6bc8",
+  "parent_source_sha256_declared": "f1373f3e429ff27508017905b47a19d16b3d8bd5499ee415e31bfe03101591ea",
+  "parent_vertical_beat_sheet_sha256": "f1d4362bee72f72895b94e0ca96dbeac1c628001af4cddfffddafd143fb8bec1",
+  "run_id": "9183b88ae09845c39f780928e0b7b10a",
+  "kept_beats": ["B00", "B01", "B03", "B05", "B06", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Dispatcher case-lines in art:87-89 — mechanic of a shell wrapper. Short still stands because B03 introduces the two verbs directly; the wrapper detail belongs in the long."},
+    {"beat_id": "B04", "reason": "No-gate silent-pass example. The armed-gates fellows path in B05 is the useful concrete case; the null case dilutes the Short."},
+    {"beat_id": "B07", "reason": "approval_subjects internal digest mechanics. B06 already establishes 'every subject SHA verbatim from --fingerprints' and B08 shows the stale-refusal consequence. The digest() implementation belongs in the long."},
+    {"beat_id": "B10", "reason": "Your Turn composer with a full paste-into-Claude-Code exercise. A Short need not read the long film's full exercise aloud; the verdict already lands the whole surface."}
+  ],
+  "cut_first_review": "Kept sequence: cold-open ask (Liam intro + motivation) → BLUF misconception ('signs' becomes 'inspects', 'files' becomes 'subjects') → the two verbs (--fingerprints prints, default validates, changes zero files) → fellows fingerprints example (two SHAs, one per armed gate) → five-field human review record (now includes NOTES.md non-empty check) → one-word-changed stale refusal + recovery → verdict summary (B09 updated to note B05/B06 auto-arm in fellows reels) → outro. Every transition is preserved intact; nothing references B02/B04/B07/B10. Parent vertical B06 and B09 re-rendered 2026-09-12; Short media updated accordingly.",
+  "planned_duration_s": 126.75,
+  "beat_durations_s": {
+    "B00": 9.833,
+    "B01": 11.917,
+    "B03": 18.958,
+    "B05": 17.625,
+    "B06": 20.458,
+    "B08": 23.083,
+    "B09": 19.417,
+    "B11": 5.458
+  },
+  "rewrite_reason": null,
+  "endcard": false,
+  "outro_rewritten": false
+}

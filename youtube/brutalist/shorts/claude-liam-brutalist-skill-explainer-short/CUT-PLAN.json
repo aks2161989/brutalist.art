@@ -1,0 +1,17 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "Vox is a compositing pipeline, not a style — and the still is evidence, never texture (including new EXECUTABLE-EVIDENCE sharpening).",
+  "parent_master_sha256": "736045efcb64ee06d28379ca5cde2b17544766f7f6e7ddf4d79beb1ee662c23b",
+  "kept_beats": ["B00", "B01", "B03", "B07", "B08", "B10"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Folder anatomy (SKILL.md / MOTION.md / REMOTION.md / EQUATIONS.md / scripts) is toolkit internals — belongs in the 16:9 long, not a Short."},
+    {"beat_id": "B04", "reason": "MECHANISM Act 1 restates the laundering-function thesis already established in B01's BLUF; the pipeline diagram (B03) provides the mechanism proof."},
+    {"beat_id": "B05", "reason": "MECHANISM Act 2 two-axis system (shot.type vs shot.source) is an internal API detail; the Short summarises it in the verdict without a dedicated beat."},
+    {"beat_id": "B06", "reason": "MECHANISM Act 3 slot-contract precedence (media > manim > png > SLATE) is an internal compile rule; verdict names it, no dedicated walkthrough needed."},
+    {"beat_id": "B09", "reason": "Your Turn extended composer with the paste-ready `slate cut` prompt is a long-form CTA; a Short doesn't need to read the full exercise aloud (per REPOLOOP-SHORTS-PROMPT §4)."}
+  ],
+  "cut_first_review": "B00 hook (Liam-in-for-Bear composer landing the ask) → B01 BLUF corrects the 'Vox is a style' misconception into 'Vox is a pipeline' with the laundering explanation → B03 visualises the pipeline (script → audio-clock → four sources → compile) so the pipeline claim is concrete → B07 introduces VOX LAW as the one honest limitation, now sharpened with EXECUTABLE-EVIDENCE.md content (if your evidence is locally reproducible, execute it and render it; the running output is the evidence, not a terminal photograph) → B08 verdict recaps the full-skill shape (chassis, master clock, two-axis, slot contract, VOX LAW) → B10 outro. Joins: 'That is why the film reads as one film.' (B01) → 'Here is the pipeline.' (B03) reads clean; 'Anything else is a modifier on top of it.' (B03) → 'Here is where the skill bites. VOX LAW…' (B07) reads clean; B07 → B08 verdict is the natural payoff. B08 verdict names two-axis and slot-contract by title without prior showing — acceptable as a summary of the whole skill (viewer receives a table-of-contents-style recap, not a re-explanation).",
+  "planned_duration_s": 116.92,
+  "rewrite_reason": null,
+  "rebuild_note": "2026-09-11: parent vertical B07 rebuilt with EXECUTABLE-EVIDENCE.md content; short re-derived and recompiled; cut plan unchanged (same 6 beats)."
+}

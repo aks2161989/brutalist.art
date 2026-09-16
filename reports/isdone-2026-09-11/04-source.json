@@ -1,0 +1,91 @@
+{
+  "number": 4,
+  "relative": "skepticism-ai/youtube/claude-liam-edtech-which-not-whether",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/skepticism-ai/youtube/claude-liam-edtech-which-not-whether",
+  "beats": 47,
+  "sheet_sha256": "bf15001b8fa3115703c6efb03b77b6422626bf6c620eb3046cec948b0948c377",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/skepticism-ai/youtube/claude-liam-edtech-which-not-whether/claude-liam-edtech-which-not-whether-slate.mp4",
+  "stale": true,
+  "width": 1920,
+  "height": 1080,
+  "duration": "597.706000",
+  "audio_stream": true,
+  "declared_slates": [
+    "B04",
+    "B05",
+    "B14"
+  ],
+  "findings": [
+    {
+      "beat": "B04",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "The Economist article page, tight on the headline 'Ed tech is profitable. It is also mostly useless.' \u2014 the document under dispute; the headline IS the claim. Terracotta underline draws under 'mostly useless' on the word.",
+      "path": "pantry/B04-economist-headline.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B05",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "A genuine photograph of McPherson Middle School (Kansas) or the district's own published photo of its laptop rollout \u2014 the real place where the story happened. Slow push toward the doors. If no photograph can be sourced, FALLBACK: stay on the B04 plate and ease out to the whole page (R1 continuity).",
+      "path": "pantry/B05-mcpherson-school.png",
+      "exists": false,
+      "confidence": "routing-review"
+    },
+    {
+      "beat": "B14",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "The Economist article page, cropped to the paragraph about the Stanford meta-analysis \u2014 the misquote in the wild. Terracotta ring draws around 'the majority had little effect, no effect or harmful ones' on the spoken words.",
+      "path": "pantry/B14-economist-stanford-paragraph.png",
+      "exists": false,
+      "confidence": "routing-review"
+    }
+  ],
+  "pantry": [
+    {
+      "beat": "B04",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "The Economist article page, tight on the headline 'Ed tech is profitable. It is also mostly useless.' \u2014 the document under dispute; the headline IS the claim. Terracotta underline draws under 'mostly useless' on the word.",
+      "path": "pantry/B04-economist-headline.png",
+      "exists": false
+    },
+    {
+      "beat": "B05",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "A genuine photograph of McPherson Middle School (Kansas) or the district's own published photo of its laptop rollout \u2014 the real place where the story happened. Slow push toward the doors. If no photograph can be sourced, FALLBACK: stay on the B04 plate and ease out to the whole page (R1 continuity).",
+      "path": "pantry/B05-mcpherson-school.png",
+      "exists": false
+    },
+    {
+      "beat": "B14",
+      "category": "source-artifact-or-illustration-review",
+      "intent": "The Economist article page, cropped to the paragraph about the Stanford meta-analysis \u2014 the misquote in the wild. Terracotta ring draws around 'the majority had little effect, no effect or harmful ones' on the spoken words.",
+      "path": "pantry/B14-economist-stanford-paragraph.png",
+      "exists": false
+    }
+  ],
+  "code_displays": [],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/skepticism-ai/youtube/claude-liam-edtech-which-not-whether/manim/B02.mp4",
+      "seconds": 4.2583331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B30",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/skepticism-ai/youtube/claude-liam-edtech-which-not-whether/manim/B30.mp4",
+      "seconds": 3.5,
+      "status": "sampled"
+    },
+    {
+      "beat": "B31",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/skepticism-ai/youtube/claude-liam-edtech-which-not-whether/media/B31.mp4",
+      "seconds": 10.8966669,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/04-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

@@ -1,0 +1,113 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "a4ebd93adf44479e83f30c032daf338a",
+  "source_sha256": "b5db05e266bb6645717f324a04548c779522f0d770245c45679a57dbecab7d75",
+  "beat_sheet_sha256": "bb98d1958ef324ba486cbdbc332f450a73b179dcc220245e911e43942597ad5e",
+  "video_sha256": "7813f8e5ccfbf17dcbaa34f214ba61c9843420b28746e0f7783a2e07241fc3cb",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/frames/B00-15.png",
+      "sha256": "73bb3ca3134125ffbe8c23f0fb9545786044cbd882713162f4bba63fee923f3a"
+    },
+    {
+      "path": "_qc/frames/B00-50.png",
+      "sha256": "0c181e4d9c9b90b808d92b93bf0a84f5db99a28267793492284901ba50bb5fd4"
+    },
+    {
+      "path": "_qc/frames/B00-85.png",
+      "sha256": "64fd1b0e571b7f5fa794d9ac8117c7d170b25d151dfbbb2de277113d0e07eebb"
+    },
+    {
+      "path": "_qc/frames/B01-15.png",
+      "sha256": "364e75df993080f6ae2897911260102d1f5837533901aef218426f07f81d49fc"
+    },
+    {
+      "path": "_qc/frames/B01-50.png",
+      "sha256": "2574bdb514ff475d8e38ad41b846185501f49879e07afb9815889336fddd3fbb"
+    },
+    {
+      "path": "_qc/frames/B01-85.png",
+      "sha256": "1722fb38e9b13982a0735af485c33014e9c876ad6165fe34bc7ab006955d5edd"
+    },
+    {
+      "path": "_qc/frames/B02-15.png",
+      "sha256": "c491c41ca4e40d15ebed022f5a813bcf0cd6276a6f23dbf6012a99e08c83df6b"
+    },
+    {
+      "path": "_qc/frames/B02-50.png",
+      "sha256": "69c23730b055abd2b3e53558c6b730b9de186f5e539e5eebc54d1761926c93a5"
+    },
+    {
+      "path": "_qc/frames/B02-85.png",
+      "sha256": "420679b452eaae92eafdd15534b9609f214adc69ef65ef598efbb15f865761f3"
+    },
+    {
+      "path": "_qc/frames/B07-15.png",
+      "sha256": "40ccdcc0df7f3bf89840e1043a989fa05879b32058298785733c71fb932ee845"
+    },
+    {
+      "path": "_qc/frames/B07-50.png",
+      "sha256": "05ad06e3b46181956a392d09cf168af56b4a5c6147e5ffc40dad6e228ee91617"
+    },
+    {
+      "path": "_qc/frames/B07-85.png",
+      "sha256": "7bdb58ac7e824ec70a9b09a9b183819cec29fc7205d92a6f43c67aa099c60f5d"
+    },
+    {
+      "path": "_qc/frames/B08-15.png",
+      "sha256": "14b0757af2f8e4ea657d1f3f7d48b29eaba94c9fe20bea51ecedee5ab3cc0d37"
+    },
+    {
+      "path": "_qc/frames/B08-50.png",
+      "sha256": "83958b755ff29b0e3841d82f8794164aa52859895836663f38df0a0f27d80de1"
+    },
+    {
+      "path": "_qc/frames/B08-85.png",
+      "sha256": "37a7bc733aa36a38390dfb42dc520f653d24e1e0b66bb9aeb2efe3b379ae1815"
+    },
+    {
+      "path": "_qc/frames/B09-15.png",
+      "sha256": "835f530f6aa300fdadfb3bca6cd1518277389ad9f8a57c174db4b1805fa4bf46"
+    },
+    {
+      "path": "_qc/frames/B09-50.png",
+      "sha256": "1c658d21fc667b4f853a210f85b1afa467fee085579a894d671990a2963ca26d"
+    },
+    {
+      "path": "_qc/frames/B09-85.png",
+      "sha256": "cd9be275fa7a7f019bc3942f70e68170b72dcba5717335a21912de2c6a2d8980"
+    },
+    {
+      "path": "_qc/frames/B11-15.png",
+      "sha256": "b5d31046158b77f3f8637e00585507a905ff27edd915bc421ea1870f57642a3a"
+    },
+    {
+      "path": "_qc/frames/B11-50.png",
+      "sha256": "110e705e8d7ad23688dbd88255aa7cf14f9dc18c8cffd4e8b020d64e009d2eda"
+    },
+    {
+      "path": "_qc/frames/B11-85.png",
+      "sha256": "1b5c6fb8d746d589fe5a67f5b549eca3c7466d87738924c6609435437a3dae21"
+    },
+    {
+      "path": "_qc/frames/final.png",
+      "sha256": "511d29383fd063973be6105ee1abb63d881f92a6b5feed596a1ec50dbd71880a"
+    },
+    {
+      "path": "_qc/frames/first.png",
+      "sha256": "b5965318eec41b059a2a1796624cd7acc4c85b7627699c9e5b213933c52a59a5"
+    },
+    {
+      "path": "_qc/contact-sheet-2fps.png",
+      "sha256": "22d6c16b68611543315e809d140d32dff9f75c8183db9632b6e52139c0142e2f"
+    },
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "197e30732ee816e3a3c20896c94f3928bbca2eea6746c0b47093fa6883187b95"
+    }
+  ],
+  "notes": "Native portrait 2160x3840 h264, 139.208s (container = video 139.167s = audio 139.208s), all three durations strictly < 180.0s. Whole-beat cut retains B00,B01,B02,B07,B08,B09,B11 from the vertical parent (SHA-256 fedfb0ca5e06ee130b855af4fc688bae02293fe05182660c39946f5079d686ab). Re-verified run_id a4ebd93adf44479e83f30c032daf338a: source_sha256 changed (REPOLOOP-SHORTS-PROMPT.md updated); recompiled with compile.py — output SHA-256 bit-identical (7813f8e5ccfbf17dcbaa34f214ba61c9843420b28746e0f7783a2e07241fc3cb) confirming source clips unchanged. Frame hashes re-verified against on-disk files: all match. Read frames: B00 opens with @HumanitariansAI folder chip, Tere/Liam greeting, BRUTALIST · UTILITY: CAPTURE_SIM.PY topic; B00-85 shows ask + three cascade output lines within SAFE916. B01-85 hesitant writer settled cleanly on 'capture_sim / RECORDS / the browser.' with full BLUF coverage. B02-50 pipeline heading 'Serve. Launch. Drive. Record. Remux.' + body paragraph naming all three drive modes + spark line 'The browser draws. The tool records.' all fit portrait safe area. B07-50 shows tiny-wave HTML head + tiny-wave-sweep.json + docstring rule footer legibly. B08-50 shows the observed Apple App Sandbox failure verbatim (Mach-port bootstrap denied, Permission denied 1100) with the honest 'The tool caught the failure. It did not fake a clip.' spark. B09-50 verdict artifact lists all 6 phases with numbered lines. Final frame is the OUTRO-LOCK ClaudeTitleOutro916 with 'Brutalist Utility: capture_sim.py.' + @NikBearBrown handle (flagged in README.md for @HumanitariansAI human review before publication, same as the parent). Compile Gate V (see _qc/REPORT.md) reported 0 BLOCKER / 0 MAJOR across 14 sampled frames. Audio decoded to PCM; only silences >0.6s are natural narration pauses at beat joins (16.4-17.0s ASK→BLUF handoff; 122.0-122.7s inside verdict; 138.7-139.2s outro tail). No clipped speech, no dead joins, no burned-in captions. Human review pending."
+}

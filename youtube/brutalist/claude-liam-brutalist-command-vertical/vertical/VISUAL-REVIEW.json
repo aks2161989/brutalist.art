@@ -1,0 +1,89 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "19a16e82a31c49af966402996eed5e63",
+  "source_sha256": "2d0d192fefff25f6f9a44c6a5cd588dc1b958f2f19fc2abc48cc0c2d89bd1f01",
+  "beat_sheet_sha256": "3a3d180d46b48a18910e337597f6960a3a1d39f9352871841fab8a949b332035",
+  "video_sha256": "acf0b937fbea538602d7e37ff8aef036bd135851932b5657258aa706f5795d3c",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/vertical/contact-sheet.png",
+      "sha256": "4dd0a1899821f28c1420f81f6fed4d82c92c45c59efa24ae6427465414a26b73"
+    },
+    {
+      "path": "_qc/vertical/frames/B02_15.png",
+      "sha256": "1e9facff1f9785a4a1233c5fc4fdffd08b2a2556ed6a746a040ec2d893e08d72"
+    },
+    {
+      "path": "_qc/vertical/frames/first.png",
+      "sha256": "83eabf5d28750a263197864ba465224e70345d09b2af5ca931bd0d546208b41c"
+    },
+    {
+      "path": "_qc/vertical/frames/final.png",
+      "sha256": "cd355bab9dbc8bfd2e9005b01f12304545a0dacb1f2b9321abd51415655a6d50"
+    },
+    {
+      "path": "_qc/vertical/frames/B00_50.png",
+      "sha256": "c73c0621779b12f2487767b68586e81b49e0cf3c5f9d1133d5d690bd6179cf86"
+    },
+    {
+      "path": "_qc/vertical/frames/B01_50.png",
+      "sha256": "538f907ee55b40ecc2b676a2575ae6a4db5c1a7261c38f2f3aab300bf34e7d2d"
+    },
+    {
+      "path": "_qc/vertical/frames/B02_50.png",
+      "sha256": "fdef5b80d4e689e5f73c546e309c065fcc74209e8d4f5890aebfec1956796773"
+    },
+    {
+      "path": "_qc/vertical/frames/B02_85.png",
+      "sha256": "d3df51616917ce8065ce9117a0ffd4b16344e5e4bfc42266a76efb60b7d62a8b"
+    },
+    {
+      "path": "_qc/vertical/frames/B03_50.png",
+      "sha256": "9a54019be640a9dd1fcf0152b1895ff2ecc49f42438600ccbd5351add2803969"
+    },
+    {
+      "path": "_qc/vertical/frames/B04_50.png",
+      "sha256": "e43bd292fce70a653a53d38d7a41d0f055578ae99f332e565d3446075e4e48d7"
+    },
+    {
+      "path": "_qc/vertical/frames/B05_50.png",
+      "sha256": "f59ece42773394f51de7e57a8d72b9c1f570ee59f946b273dac0d7e4c2363899"
+    },
+    {
+      "path": "_qc/vertical/frames/B06_50.png",
+      "sha256": "eefe7de7016e63b1b09a4974889a7aff17804b26ae854eefbcecde394d49c2bc"
+    },
+    {
+      "path": "_qc/vertical/frames/B07_50.png",
+      "sha256": "9c13a1ea0ea1f895f8ff1e2c2060fb6b42ef689b0e9a3ee47825c62605514bb5"
+    },
+    {
+      "path": "_qc/vertical/frames/B08_50.png",
+      "sha256": "c7f46e1e8e53179eca1e296fe86585cdcbde68b45b836a2c5c5f58007c92587f"
+    },
+    {
+      "path": "_qc/vertical/frames/B09_50.png",
+      "sha256": "2ac7aeb793ab7e407018cf0216ce8de37c040c131a4b6a55d5553abc475ad4a0"
+    },
+    {
+      "path": "_qc/vertical/frames/B10_50.png",
+      "sha256": "0bf9374ce9c9c8aeb67ca90bd7cbf2df2b9012d3079b9e7fa2ec12af36ab1ddb"
+    },
+    {
+      "path": "_qc/vertical/frames/B11_50.png",
+      "sha256": "dee704d40bd233b28dd0512c2f13982bb4e04e286e8777ec4b2e0ecbbb686468"
+    },
+    {
+      "path": "_qc/vertical/frames/B01_15.png",
+      "sha256": "3be270b30e9ce0074b96b8275a16d7e96c01a3c1cd06f1ede29ef59508e3afd3"
+    },
+    {
+      "path": "_qc/vertical/frames/B01_85.png",
+      "sha256": "56c7f54b5f8c33fb90bd8581de7421892c3d508b0cd9b3d1c195d74f57a6ecd9"
+    }
+  ],
+  "notes": "Re-verified this invocation (run_id 19a16e82a31c49af966402996eed5e63). Video SHA-256 and beat_sheet SHA-256 unchanged from ac6edaa build — no re-render needed. Frame files re-extracted from same video; contact-sheet and B02 frames (15/50/85) have updated hashes due to re-extraction at different animation timestamps within animated beats — video content is identical (SHA confirmed). B02_50 directly inspected this invocation: ClaudeCodeBeat916 portrait code card showing shorts/vertical dispatcher case statement; right-edge truncation is accepted MINOR from prior build. B11_50 directly inspected: portrait outro 'Brutalist Command: art vertical.' with @NikBearBrown handle — title correct, hardcoded handle accepted per prior build. B00_50/B01_50/B03–B11 frame hashes match ac6edaa build exactly. Audio 247.5s. Zero BLOCKER, zero MAJOR. One accepted WARN: code-cascade 58%. One accepted MINOR: right-edge clip on long code lines in portrait. Human review pending."
+}

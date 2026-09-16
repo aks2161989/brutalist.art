@@ -1,0 +1,38 @@
+# nopunt demo — real, live invocations captured 2026-09-08T23:19:08Z
+
+## Step zero — ask the library
+
+### $ ./art scenes "a funnel narrowing through three stages"
+
+8 candidate(s) for "a funnel narrowing through three stages"  —  a hit is a lead, read the props:
+
+  [ 8.0] ValuesCompressionFunnel916   (9:16)
+       under: claude-liam — claude-values-axes figures 916 (portrait)
+       Portrait 9:16 (1080×1920) alias of ValuesCompressionFunnel. The source component reads useVideoConfig() for all dimensions and uses proportional width/height fractions throughout. The chip swirl anima
+
+  [ 6.0] SycCurriculumStages   (16:9)
+       under: claude-liam — sycophancy-to-subterfuge figures
+       B02 for "From People-Pleaser to Reward Hacker" Source: Denison et al. 2024, Anthropic — Sycophancy to Subterfuge Eight numbered stage cards in a 4×2 grid, springing in with stagger. Each card: stage n
+       props: sparkLine
+
+  [ 6.0] ValuesCompressionFunnel   (16:9)
+       under: claude-liam — claude-values-axes figures
+       Figure 1 for "Claude's Values Across Models and Languages" Source: Anthropic (Jul 13, 2026) Animation: 1. Cloud of ~30 value-word chips swirl in (random offset positions) 2. Chips compress/collapse to
+       props: sparkLine
+
+  [ 5.0] DtlScale   (16:9)
+       under: DashboardThatLied
+       DashboardThatLied.tsx — reel-local Remotion components for claude-liam-dashboard-that-lied (deep-explainer episode 3). Palette: cream #F2F0E9, ink #3D3929, terracotta #D97757 (ONE accent). Three compo
+       props: left_label, right_label, note
+
+### $ ./art scenes --check ClaudeVerdictArtifact
+
+  ClaudeVerdictArtifact        RENDERABLE   16:9   props: artifactTitle, artifactHeading, artifactLines
+
+### $ ./art scenes --check DoodleScene   (catalog-banned costume — see B06)
+
+  DoodleScene                  RENDERABLE   16:9   props: items, title, caption, eyebrow, underlineCaption, grain
+
+### $ ./art scenes --check ThisSceneDoesNotExist   (a MISS → design card, never a slate)
+
+  ThisSceneDoesNotExist        NOT RENDERABLE — no <Composition> in Root.tsx. Authoring this is a punt.

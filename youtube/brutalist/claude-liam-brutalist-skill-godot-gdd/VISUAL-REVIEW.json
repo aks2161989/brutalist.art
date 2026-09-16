@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "0084792391494bda81c23c7b93a0404a",
+  "source_sha256": "8d5a62370d0c3af37fe88e2fe798846e1f3ad03fc1ed9a119ce6042b747f5220",
+  "beat_sheet_sha256": "5217cdd36b52d1da1178e4a5f56b94b72080eabe6da945b81a790331cc8644a4",
+  "video_sha256": "a847318b49f4743bb53cb15205359a907641446377f63c4219243111afcff68c",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "6c0b0785ca426d2de68000ea33a59d816756ee1f6485197035cce4d28cc25ebe",
+      "note": "24-frame contact sheet (Gate V automated) — 0 BLOCKER, 0 MAJOR"
+    }
+  ],
+  "beat_review": [
+    { "bid": "B00", "pattern": "ClaudeComposerAsk", "verdict": "pass", "note": "Greeting types on cream stage; claude chrome visible; safe area clean" },
+    { "bid": "B01", "pattern": "BrutalistHesitantWriter", "verdict": "pass", "note": "lineSpacing 2.7; fills frame at mid-type; brand label at safe.b anchor" },
+    { "bid": "B02", "pattern": "WalkerGodotSetup (flow)", "verdict": "pass", "note": "Four flow panels; overflow:hidden prevents shell overflow" },
+    { "bid": "B03", "pattern": "GodotDesignBoard (cards)", "verdict": "pass", "note": "Cards layout; footer @NikBearBrown within safe area" },
+    { "bid": "B04", "pattern": "WalkerGodotSetup (flow)", "verdict": "pass", "note": "Status label panels; shell overflow clamped" },
+    { "bid": "B05", "pattern": "GodotDesignBoard (flow)", "verdict": "pass", "note": "Causal chain cards; layout fills safe area" },
+    { "bid": "B06", "pattern": "ClaudeCodeBeat", "verdict": "pass", "note": "Code block fits card at landscape dims; no edge-bleed" },
+    { "bid": "B07", "pattern": "WalkerGodotSetup (flow)", "verdict": "pass", "note": "Bookend panels; shell overflow clamped" },
+    { "bid": "B08", "pattern": "GodotDesignBoard (cards)", "verdict": "pass", "note": "Design-tell cards; proposal/test contrast visible" },
+    { "bid": "B09", "pattern": "ClaudeVerdictArtifact", "verdict": "pass", "note": "Verdict card five lines; card fills 84% width; artifact chrome present" },
+    { "bid": "B10", "pattern": "ClaudeComposerAsk", "verdict": "pass", "note": "Your-turn handoff; prompt types on cream stage" },
+    { "bid": "B11", "pattern": "ClaudeTitleOutro", "verdict": "pass", "note": "Title outro with @NikBearBrown per OUTRO-LOCK; narration_text set to Liam in for Bear (audio_policy:silence, no TTS generated)" }
+  ],
+  "notes": "Re-certified run 0084792391494bda81c23c7b93a0404a (source_sha256 changed; godot-gdd SKILL.md content unchanged, source_sha256 delta from tracked REPOLOOP-PROMPT.md/CLAUDE.md). Landscape exports unchanged: SHA-256 a847318b49f4743bb53cb15205359a907641446377f63c4219243111afcff68c (214.33s, 3840x2160). Gate V re-run: 24 frames sampled, 0 BLOCKER, 0 MAJOR. Contact sheet inspected: all 12 beats legible on cream stage, no captions, no slates, @HumanitariansAI folderLabel on body beats, @NikBearBrown on outro per OUTRO-LOCK.md. Human review pending."
+}

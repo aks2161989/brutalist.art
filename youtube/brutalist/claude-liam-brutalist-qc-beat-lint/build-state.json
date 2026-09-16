@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "[art] command failed:\n/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/workspaces/claude-liam-brutalist-qc-beat-lint/toolkit/runtime/qc/final_frame_check.py /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-qc-beat-lint --mp4 /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-qc-beat-lint/exports/landscape/.claude-liam-brutalist-qc-beat-lint-candidate-v4_gk9ea/candidate.mp4 --sheet /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-qc-beat-lint/clips/_work/resolved-sheet.json\n",
+  "at": "2026-09-14T23:21:20.766470-04:00"
+}

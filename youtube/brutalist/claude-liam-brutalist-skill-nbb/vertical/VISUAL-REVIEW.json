@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "15399db63828493f9926fb6d112b0488",
+  "source_sha256": "587d1b6fa24c89c077ae62083025ab4052b4ca542d135535377f176652541f3d",
+  "beat_sheet_sha256": "3faefa0e4dea5ddd393f93c0d9eea9b663c465acab478ece99b87b9d6d73f24c",
+  "video_sha256": "f25109b859ced3b9c08ff0ea9179af7caf11d32d06c4d289a4756af74addaef9",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/review-15399db6/frame_B00_cold_open.png", "sha256": "f1cd9ee0337a6a6b812aebb68750c1c6ffc2c7038148e151a12d1d98bde6e906"},
+    {"path": "_qc/review-15399db6/frame_B01_bluf.png", "sha256": "e244a460f267ccf75b2b84e98476551e7aabf7f3215e6185896f63c6e4446a54"},
+    {"path": "_qc/review-15399db6/frame_B02_anatomy.png", "sha256": "860c895965d9fc4e482fbb9da7573c33f97f4a475e163a095e824decb2a0d808"},
+    {"path": "_qc/review-15399db6/frame_B03_pipeline.png", "sha256": "ba6143a00127fcabe8794e57d11831450011e7e4f6b1e7cf33e22c0ff6488645"},
+    {"path": "_qc/review-15399db6/frame_B09_verdict.png", "sha256": "bfac0e5e67872e1538e4acb9b8374df34ab390fc1a1bc00ca689ad749db78cd6"},
+    {"path": "_qc/review-15399db6/frame_B11_outro.png", "sha256": "e62f8efd920e260d4547e19172ab49dc2cb20659d5d3f4eae3057ced9dafc94e"}
+  ],
+  "notes": "Vertical master 2160x3840 (native 4K portrait, 346.04s, h264+aac). Re-reviewed under run_id 15399db63828493f9926fb6d112b0488 (retry pass to supply current frame evidence; exports unchanged — video_sha256 and beat_sheet_sha256 match prior verified build). source_sha256 is the current invocation's episode.source_sha256 (skills/make/nbb/SKILL.md). Frames extracted with ffmpeg at t=2s/26s/52s/86s/285s/344s and inspected with Read tool. B01 portrait: BrutalistHesitantWriter portrait — 5 lines ('The nbb skill / scaffolds / your reel. / Source is / never modified.') filling portrait safe area in large serif, centered, post-correction state, no edge bleed. B11 portrait: ClaudeTitleOutro916 — 'The nbb Skill.' with terracotta period, '@NikBearBrown' centered; no pixel mascot visible in portrait variant (known skin-lint warning per prior build notes, not a blocker). Safe area boundary lines visible. No burned-in captions, no unresolved slates, no channel_title bleed. 12/12 beats filled. Human review by Bear pending."
+}

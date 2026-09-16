@@ -1,0 +1,9 @@
+$ python3 runtime/scripts/remotion_scenes.py demo_reel/ --list
+
+  B00   SLATE  scene_type=?              pattern=ClaudeComposerAsk  (reel-local)
+  B01   SLATE  scene_type=?              pattern=FormACard  (reel-local)
+  B02   filled scene_type=?              pattern=ClaudeTitleOutro  (reel-local)
+
+# B02 is filled because media/B02.mp4 exists on disk.
+# B03 has no shot.remotion.pattern — not listed at all.
+# B04 (not shown) has no pattern — also skipped silently.

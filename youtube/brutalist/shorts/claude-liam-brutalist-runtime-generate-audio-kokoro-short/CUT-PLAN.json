@@ -1,0 +1,25 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "generate_audio_kokoro.py generates free local TTS audio — no API key, no meter, atomic beat-sheet stamping",
+  "parent_master_sha256": "3c225d4dcd97bd689277605c8f557afcc1720d37a9f12478baba570e5492de1d",
+  "kept_beats": ["B00", "B01", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Pipeline walkthrough (parse → load → filter → synth → stamp) belongs in the long; overview already implicit in B00 and B09"},
+    {"beat_id": "B03", "reason": "CLI flag catalog (5 flags detail) belongs in the long; a Short needs the tool purpose, not the --help block"},
+    {"beat_id": "B04", "reason": "model_paths + load_engine + lang_for code walk is 40s of internals; not needed to understand the tool"},
+    {"beat_id": "B05", "reason": "Five skip rules code listing belongs in the long; B07 shows the filter in action concretely"},
+    {"beat_id": "B06", "reason": "normalize_for_tts + write_mp3 + measure implementation detail; 39s of internals"},
+    {"beat_id": "B08", "reason": "Failure modes code listing belongs in the long film; 35s of error-path details"},
+    {"beat_id": "B10", "reason": "Long 'Your Turn' exercise with 3-step grading checklist belongs in the long; 29s"}
+  ],
+  "cut_first_review": "B00 opens with the concrete ask: two beats, no API key, no meter, free local engine. B01 corrects the misconception: not paid-and-remote, but free-and-local. B07 shows the tool in action via a disposable dry-run fixture — 2 speak, 4 skip, $0.00, no sheet mutated. B09 restates the full surface (filter, synth, measure, stamp) as a verdict. B11 signs off. No dangling references: B09 mentions 'five skip rules' which B00 previews ('skip the fellows report beat and the intentional silence beat') and B07 demonstrates visually. Transition word 'So —' in B09 connects naturally from the dry-run result.",
+  "planned_duration_s": 91.39,
+  "rewrite_reason": null,
+  "beat_durations_s": {
+    "B00": 15.53,
+    "B01": 10.58,
+    "B07": 27.41,
+    "B09": 31.04,
+    "B11": 6.83
+  }
+}

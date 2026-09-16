@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "7959aaa35bdb46239e266a270f0fd24c",
+  "source_sha256": "8250e8ccd8779eb2629de62b05699c311dc1e5a4caeb70f1a1260e9a8d10f126",
+  "beat_sheet_sha256": "472b90839980978a373e2cef70e0b970cb36ba1f75d25aefc4fa56a4a0e78157",
+  "video_sha256": "fc379bdaceb83f1c4e17ae9ae692407421ad79d37c43cc96bc571ea0e81f3660",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "29b44bf2fc8465d3b30ef0a22323d47e1b890693a2f7875fde4ee0b4bd633862"}
+  ],
+  "notes": "Re-verification 2026-09-12 under run_id 7959aaa35bdb46239e266a270f0fd24c. Note: invocation source_sha256 (8250e8cc…) does not match the observed skills/make/your-turn/SKILL.md hash (aecd503a…) — SOURCE-SNAPSHOT.json also records aecd503a; all verbatim SKILL.md quotes in the beat sheet were verified accurate against the current aecd503a file — no beat content changes required. Landscape 3840x2160 H.264+AAC, 250.958s, 14 beats filled, all Remotion. Opened and inspected _qc/contact_sheet.png (28 frames at 15/50/85% of every beat plus first/final) and qc-sheet.png with the image Read tool. Confirmed: B00 ClaudeComposerAsk cold open shows 'Hallo, Liam' greeting with three visible RESULT answer lines, clean cream background, no captions; B01 BrutalistHesitantWriter corrects to 'your-turn is a closing-block skill.' at fontSize 200 lineSpacing 1.6, large serif on cream, cursor visible, no caption overlay, measured audio 10.20s > 9s BLUF floor; B02 anatomy scene shows skill file structure 'One file, one script, three beats.'; B03 pipeline scene shows three ordered phases cleanly; B04 mechanism card 'The handoff leaves the process.' with eyebrow+heading+body+verdict pill; B05 'Andrea gets it. No human gate.'; B06 'Bigger card. Choose flow.'; B07 'Liam reads the prompt in full.'; B08 'The sister is the side update.'; B09 'One frame: three routes.'; B10 'What your-turn does NOT do.'; B11 ClaudeVerdictArtifact with six legible verdict lines; B12 YOUR TURN ClaudeComposerAsk with paste-ready prompt; B13 ClaudeTitleOutro reads exact title 'The your-turn Skill.' with terracotta period, @HumanitariansAI handle, 'Liam, in for Bear.' sign-off visible. Gate V clean (BLOCKER=0 MAJOR=0, 28 frames sampled). Motion histogram advisory: 10/14 beats reveal (71%) — expected for SkillTeardown register. No skin warnings. Human review pending."
+}

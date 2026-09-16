@@ -1,0 +1,16 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "Why setup synthesizes audio instead of just importing Kokoro — the -40 dB gate that catches silent broken installs",
+  "parent_master_sha256": "8a0c5e37845a496a5fb4387aefd84eb46b325c69d76e96824f96792d08711b8b",
+  "kept_beats": ["B00", "B01", "B06", "B08", "B09", "B10"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Framework/pipeline anatomy overview — the concept is already established in B00's narration ('three prerequisites, then one synthesis, then one volume check')"},
+    {"beat_id": "B03", "reason": "Guard code detail — the three prerequisites are described clearly enough in B00; code walkthrough belongs in the long"},
+    {"beat_id": "B04", "reason": "Synthesis code detail — informative but not needed for high-level understanding; B06 shows the failure messages which is more actionable"},
+    {"beat_id": "B05", "reason": "Volume gate code detail — the gate threshold (-40 dB) is restated in B06 and B08 with the context that matters"},
+    {"beat_id": "B07", "reason": "Design tell (try/finally cleanup) — interesting craft detail but not essential to the Short's purpose of explaining what the gate is and what it catches"}
+  ],
+  "cut_first_review": "B00 introduces Liam and sets up the key question (why synthesize vs just import). B01 BLUF corrects the misconception with the hesitant-writer ('synthesis / insufficient' replaces 'import / enough'). B06 shows the five concrete failure messages with actual dB numbers — directly answering 'what does the gate catch.' B08 delivers the verdict summarising the three-guard + one-synthesis + one-gate structure. B09 hands off a paste-ready Claude prompt. B10 closes with title + 'Liam, in for Bear.' No dangling references: B01's closing line ('not whether the code runs, but whether it makes sound') leads naturally into B06 without requiring the pipeline diagram or code walkthrough. B06 closes noting setup reads exit code only, which B08's verdict naturally follows.",
+  "planned_duration_s": 107.5,
+  "rewrite_reason": null
+}

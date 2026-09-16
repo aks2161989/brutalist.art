@@ -1,0 +1,764 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: audit_review_queue.py",
+    "slug": "claude-liam-brutalist-runtime-audit-review-queue",
+    "topic": "BRUTALIST UTILITY · audit_review_queue.py",
+    "register": "Teardown",
+    "audience": "Humanitarians AI fellows with Claude Code",
+    "brand": "claude-liam",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "aspect_ratio": "16:9",
+    "playlist": "Brutalist",
+    "channel": "@HumanitariansAI",
+    "captions": false,
+    "run_id": "edb2d009ee804ed2a476f5bc953eb4cb",
+    "source_sha256": "04314f7891be0a37d3d64b9a0dcc94e4735a23458d6251588ea2cb21b708b5cc",
+    "note": "Teardown of audit_review_queue.py — read-only batch inspector for Brutalist reels. Liam in for Bear. @HumanitariansAI playlist.",
+    "build": {
+      "at": "2026-09-12T23:46:27",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Bula. This is Liam, in for Bear. audit_review_queue.py is a read-only batch inspector for Brutalist reels. Give it a numbered list of reel paths and it walks every folder: hashing beat sheets, probing master MP4s, sampling per-beat source clips at the 70-percent mark for contact sheets, and flagging anything worth a human look — stale masters, pantry paths that should be code, math layout mismatches. It never approves. It never publishes. It writes evidence and stops.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Topic label fades in: BRUTALIST UTILITY · audit_review_queue.py"
+          },
+          {
+            "at": "0.15",
+            "event": "Segment title appears: Source Audit, Not Approval"
+          },
+          {
+            "at": "0.25",
+            "event": "Composer card slides in, command types itself"
+          },
+          {
+            "at": "0.65",
+            "event": "Send button arms, running indicator appears"
+          },
+          {
+            "at": "0.78",
+            "event": "Three output lines appear one by one"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Bula, Liam",
+            "topic": "BRUTALIST UTILITY · audit_review_queue.py",
+            "segment": "Source Audit, Not Approval",
+            "command": "I need to inspect a batch of Brutalist reels before review. What does audit_review_queue.py check, and what can it tell me that probing the rendered video cannot?",
+            "runningText": "auditing reels…",
+            "output": [
+              "reads every reel's beat_sheet.json and probes its master MP4",
+              "samples source-beat clips at 70% position for contact sheets",
+              "flags review leads — never approves, never publishes"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Desktop"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-13T03:35:46.250441+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 25.17,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 25.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the 'audit approves reels' misread to the actual claim: it documents source structure for human review. Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "Before the script reads a single file, fix the first misconception. audit_review_queue.py does not decide if a reel ships. The script's own docstring says it plainly: never approves, never publishes. It reads source structure, samples frames, and writes review leads — flags that point a human where to look, not proof of fabrication. This is Liam. Let's take it apart.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Line 1 types: 'audit_review_queue.py'"
+          },
+          {
+            "at": "0.20",
+            "event": "Line 2 types: 'approves reels'"
+          },
+          {
+            "at": "0.42",
+            "event": "Line 3 types: 'for human review.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'approves' flashes terracotta — the moment of hesitation"
+          },
+          {
+            "at": "0.62",
+            "event": "'approves' deletes; 'documents' types in its place"
+          },
+          {
+            "at": "0.78",
+            "event": "Final text settled: 'audit_review_queue.py documents reels for human review.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "audit_review_queue.py\napproves reels\nfor human review.",
+            "triggerWords": "approves",
+            "replacementWords": "documents",
+            "seed": "audit-queue-bluf-2026-edb2d009-v1",
+            "face": "serif",
+            "fontSize": 120,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 22,
+            "jitter": 4,
+            "mistakeRate": 3,
+            "hesitateWithin": 1,
+            "hesitateBetween": 4,
+            "banner": "",
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-13T03:36:40.984190+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 19.2,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 19.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "Three required flags, all mandatory. --list points at a text file of numbered reel entries. --root is the books directory the script resolves relative paths against. --out is where the evidence lands: numbered source JSON files, contact sheets, and a rolled-up audit.json. The batch file format is human-readable: a number, a dot, a description label, then the path. The parser extracts the last slash-containing token from each line.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Code card slides in, title: audit_review_queue.py — invocation"
+          },
+          {
+            "at": "0.15",
+            "event": "Three flag lines reveal: --list, --root, --out"
+          },
+          {
+            "at": "0.55",
+            "event": "Batch file format example appears below the flags"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "audit_review_queue.py — invocation",
+            "code": "# Three required flags\npython3 runtime/scripts/audit_review_queue.py \\\n  --list  batch.txt   \\  # numbered reel list\n  --root  /books      \\  # resolves relative paths\n  --out   /audit-out     # evidence directory\n\n# batch.txt format: number · label · path\n  1. The nopunt Skill   youtube/brutalist/claude-liam-brutalist-skill-nopunt\n  2. Art help command   youtube/brutalist/claude-liam-brutalist-command-art-help\n\n# Parser: extracts last slash-containing token per line\n# Duplicates → ValueError before any reel is opened",
+            "sparkLine": "Three flags. No defaults.",
+            "language": "python",
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-13T03:37:13.507348+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 22.46,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 22.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "PIPELINE",
+      "narration_text": "Per reel, four phases. Parse the list with a strict regex — empty or duplicate entries throw before any reel is touched. Audit opens the beat sheet, probes the master MP4 if one exists, and runs the math layout check. Sample takes source-beat clips — the individual per-beat MP4s — and grabs one frame at 70 percent of each clip's duration. Report writes a numbered JSON per reel plus a rolled-up audit.json with the batch scope and limitations clause.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Title appears: Per-reel audit pipeline"
+          },
+          {
+            "at": "0.15",
+            "event": "Parse card reveals: inventory regex, duplicate check"
+          },
+          {
+            "at": "0.35",
+            "event": "Audit card reveals: beat sheet, master probe, math check"
+          },
+          {
+            "at": "0.60",
+            "event": "Sample card reveals: 70% frame per source clip"
+          },
+          {
+            "at": "0.80",
+            "event": "Report card reveals: per-reel JSON + audit.json"
+          }
+        ],
+        "remotion": {
+          "pattern": "FormBCard",
+          "props": {
+            "title": "Per-reel audit pipeline",
+            "items": [
+              {
+                "label": "Parse",
+                "sub": "Strict regex · duplicates throw before any reel opens",
+                "icon": "BOX"
+              },
+              {
+                "label": "Audit",
+                "sub": "Beat sheet hash · master probe · math layout check",
+                "icon": "BOX"
+              },
+              {
+                "label": "Sample",
+                "sub": "70% frame per source-beat clip · contact sheet",
+                "icon": "BOX"
+              },
+              {
+                "label": "Report",
+                "sub": "Numbered JSON per reel · rolled-up audit.json",
+                "icon": "BOX"
+              }
+            ]
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-13T03:38:46.663959+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 25.66,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 25.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:FormBCard",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "narration_text": "Four finding categories. Math layout errors come from the math_layout_check import — it flags flat notation in FormACard props where structured rendering is required. Pantry paths split two ways: if the visual intent suggests terminal output or notebook rows, it's a replace-with-code lead; otherwise it's a source-artifact-review. Overflow-to-infinity patterns in narration text get their own flag. Every finding carries a confidence field: source-confirmed, routing-review, or review.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Code card slides in, title: audit_review_queue.py — findings"
+          },
+          {
+            "at": "0.15",
+            "event": "math-layout finding category appears"
+          },
+          {
+            "at": "0.35",
+            "event": "pantry finding categories appear (two branches)"
+          },
+          {
+            "at": "0.60",
+            "event": "overflow-claim-review category appears"
+          },
+          {
+            "at": "0.78",
+            "event": "confidence field values highlighted in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "audit_review_queue.py — findings",
+            "code": "# Four finding categories (all are review leads, not verdicts)\n\n# 1. Math layout — from math_layout_check import\nfor error in math_layout_errors(sheet):\n    findings.append({'category': 'math-layout',\n                     'confidence': 'source-confirmed', 'detail': error})\n\n# 2a. Pantry — reproducible (terminal/pytest/notebook)\ncategory = 'replace-with-code-data-or-diagram'\n\n# 2b. Pantry — non-reproducible\ncategory = 'source-artifact-or-illustration-review'\n\n# 3. Overflow-to-infinity narration claim\nif re.search(r'overflows? to infinity', narration, re.I):\n    findings.append({'category': 'overflow-claim-review',\n                     'confidence': 'review'})",
+            "sparkLine": "Four categories. All review leads.",
+            "language": "python",
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-13T03:39:18.179923+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 25.32,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 25.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "DESIGN_TELL",
+      "narration_text": "One design decision worth the Teardown lens: stale master detection. The script compares the master MP4's modification time against the beat sheet's. If the beat sheet is newer than the master, the contact sheet frames you're reviewing may not match what the current sheet describes — the render is stale. The flag is informational. It does not block the audit and does not touch either file. It just names the gap.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Code card slides in, title: audit_review_queue.py — stale master"
+          },
+          {
+            "at": "0.20",
+            "event": "Stale detection line appears, mtime comparison highlighted"
+          },
+          {
+            "at": "0.55",
+            "event": "Downstream: stale written to JSON output only — no raise"
+          },
+          {
+            "at": "0.78",
+            "event": "Spark line settles: Timestamp delta. The design tell."
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "audit_review_queue.py — stale master",
+            "code": "# Stale master: beat sheet newer than the rendered master MP4\n# Written to per-reel JSON; does NOT block the audit\n\n'stale': (\n    master.stat().st_mtime < sheet_path.stat().st_mtime\n    if master else None\n),\n\n# stale = True  → master rendered before the last sheet edit\n# stale = False → master is current\n# stale = None  → no master MP4 found at all\n\n# The flag names the gap; it never raises and never modifies files.",
+            "sparkLine": "Timestamp delta. The design tell.",
+            "language": "python",
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-13T03:39:48.417638+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 20.54,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 20.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "PREREQUISITES",
+      "narration_text": "Three hard dependencies at import time. PIL — the script calls Image.new and ImageDraw.Draw to build contact sheets; no Pillow, no contact sheets, no run. math_layout_check — a local module in runtime/scripts; if it's missing, the import fails before argument parsing. ffmpeg and ffprobe — called via subprocess for probing and frame extraction; absent binaries produce empty contact tiles and zero-byte probes with no warning unless ffmpeg is absent from PATH.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Code card slides in, title: audit_review_queue.py — dependencies"
+          },
+          {
+            "at": "0.15",
+            "event": "PIL import line highlighted in terracotta"
+          },
+          {
+            "at": "0.38",
+            "event": "math_layout_check import highlighted"
+          },
+          {
+            "at": "0.60",
+            "event": "subprocess ffprobe/ffmpeg calls shown"
+          },
+          {
+            "at": "0.80",
+            "event": "Spark line settles: Three hard deps. No fallback."
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "audit_review_queue.py — dependencies",
+            "code": "# Hard dependencies — all at top-level import\n# Missing any of these = crash before main() runs\n\nfrom PIL import Image, ImageDraw     # contact sheet builder\nfrom math_layout_check import math_layout_errors  # local module\nimport subprocess                    # ffprobe + ffmpeg calls\n\n# ffprobe: json probe of master + per-beat clips\n# ffmpeg:  frame extraction to image pipe\n#\n# Absent ffmpeg → empty contact tiles (no stderr, no raise)\n# Absent PIL    → ImportError at startup\n# Absent math_layout_check → ImportError at startup\n#\n# install: pip install pillow\n# verify:  ffprobe -version && ffmpeg -version",
+            "sparkLine": "Three hard deps. No fallback.",
+            "language": "python",
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-13T03:40:19.880518+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 17,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 27.67,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 27.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "EVIDENCE",
+      "narration_text": "Here's the real output from a live audit run against the nopunt skill episode — a completed reel with all twelve source clips present. Twelve beats found. Twelve frame samples taken at the 70-percent mark of each per-beat clip. Zero review leads. No pantry paths, no math layout errors, no overflow claims in narration. The output line is the contract: beat count, lead count, sample count — nothing else is printed to stdout.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Title appears: Live audit — claude-liam-brutalist-skill-nopunt"
+          },
+          {
+            "at": "0.20",
+            "event": "Beats row reveals: 12"
+          },
+          {
+            "at": "0.45",
+            "event": "Frame samples row reveals: 12"
+          },
+          {
+            "at": "0.65",
+            "event": "Review leads row reveals: 0"
+          },
+          {
+            "at": "0.85",
+            "event": "Note settles below: all source clips present"
+          }
+        ],
+        "remotion": {
+          "pattern": "ExecutedData",
+          "props": {
+            "title": "Live audit — claude-liam-brutalist-skill-nopunt",
+            "mode": "table",
+            "columnLabels": [
+              "Metric",
+              "Count"
+            ],
+            "rows": [
+              {
+                "label": "Beats found",
+                "value": 12,
+                "at": 1.2
+              },
+              {
+                "label": "Frame samples",
+                "value": 12,
+                "at": 2.4
+              },
+              {
+                "label": "Review leads",
+                "value": 0,
+                "at": 3.6
+              }
+            ],
+            "note": "All source clips present · stdout: 01: 12 beats; 0 leads; 12 frame samples"
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-13T03:41:01.613014+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 22.31,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 22.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ExecutedData",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FAILURE",
+      "narration_text": "Three failure modes. The first two are hard stops before any reel is touched: an empty list and a list with duplicate paths both raise ValueError immediately. The third is silent: if ffmpeg cannot extract a frame — wrong path format, corrupt clip, codec gap — the contact sheet tile stays blank and the sample record carries status error. The audit continues for all other beats. You find out by looking at the contact sheet image, not by reading stderr.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Code card slides in, title: audit_review_queue.py — failure modes"
+          },
+          {
+            "at": "0.15",
+            "event": "ValueError line for empty/duplicate list highlighted in terracotta"
+          },
+          {
+            "at": "0.45",
+            "event": "Silent ffmpeg failure block appears — except clause with status: error"
+          },
+          {
+            "at": "0.75",
+            "event": "Spark line settles: Two hard stops. One silent tile."
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "audit_review_queue.py — failure modes",
+            "code": "# HARD STOP 1 + 2 — before any reel is opened\nif not reels or len(set(p for _, p in reels)) != len(reels):\n    raise ValueError('Empty or duplicate reel list')\n\n# SILENT FAILURE — ffmpeg frame extraction\ntry:\n    result = subprocess.run(['ffmpeg', ..., str(local)],\n                           capture_output=True, timeout=30)\n    frame = Image.open(io.BytesIO(result.stdout)).convert('RGB')\n    contact.paste(frame, (x, y+24))\nexcept Exception as exc:\n    # Tile stays blank. Audit continues for remaining beats.\n    sample_records.append({\n        'beat': bid, 'status': 'error', 'error': str(exc)\n    })",
+            "sparkLine": "Two hard stops. One silent tile.",
+            "language": "python",
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-13T03:41:32.599007+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 23.27,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 23.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "narration_text": "The verdict. The stale-master check is the one signal the rest of the pipeline cannot give you — it names when source and render are out of sync. The 70-percent frame position is a deliberate design choice: it skips the slate frame at clip start and freeze artifacts near the end, capturing a settled mid-play state. What it bites on: silent ffmpeg tile failures look identical to healthy tiles unless you count them. And math_layout_check has no fallback — a missing local module crashes the entire batch before the first reel opens.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Artifact card scales in with title: audit_review_queue.py"
+          },
+          {
+            "at": "0.15",
+            "event": "Heading appears: Source evidence, not approval"
+          },
+          {
+            "at": "0.25",
+            "event": "Line 1 reveals: stale-master check"
+          },
+          {
+            "at": "0.50",
+            "event": "Line 2 reveals: 70% frame position design choice"
+          },
+          {
+            "at": "0.72",
+            "event": "Line 3 reveals: silent tile failure + hard dependency bite"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "audit_review_queue.py",
+            "artifactHeading": "Source evidence, not approval",
+            "artifactLines": [
+              "Stale-master detection is unique to this tool — it names when render and source are out of sync, which no other pipeline check surfaces.",
+              "70%-position sampling is a deliberate design choice: it skips slate frames at clip start and freeze artifacts near the tail, capturing a settled mid-play state.",
+              "Silent bites: blank contact tiles look identical to healthy ones (count them); math_layout_check has no fallback and crashes the whole batch if the local module is missing."
+            ],
+            "brandLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-13T03:43:04.785446+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.63,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 28.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "narration_text": "Your turn. Paste this into Claude Code. Pick two reels you have already delivered — completed episodes with beat_sheet.json present. Write a two-entry batch file: number, a description label, and the reel's relative path from your books root. Run the script with all three flags. Open the audit.json it writes. For each reel, check whether stale is true or null, how many findings landed, and whether all sample statuses are sampled rather than error. If stale is true, your master predates your current sheet. If a sample status is error, find that per-beat clip and check its path.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "Greeting types: Your Turn"
+          },
+          {
+            "at": "0.20",
+            "event": "Topic label: BRUTALIST UTILITY · audit_review_queue.py"
+          },
+          {
+            "at": "0.35",
+            "event": "Composer types the paste-ready prompt"
+          },
+          {
+            "at": "0.78",
+            "event": "Running text: auditing your reels…"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST UTILITY · audit_review_queue.py",
+            "segment": "Run it on your own reel batch",
+            "command": "Pick two delivered reels at <book>/youtube/brutalist/<slug>/. Write batch.txt:\n  1. Reel one label   youtube/brutalist/<slug-one>\n  2. Reel two label   youtube/brutalist/<slug-two>\nRun: python3 runtime/scripts/audit_review_queue.py --list batch.txt --root /books --out /audit-out\nFor each reel in audit.json: is stale true or null? How many findings? Are all samples status: sampled?",
+            "runningText": "auditing your reels…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Desktop",
+            "animateTyping": true
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-13T03:44:25.961367+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 24,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 28.89,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 28.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-12T23:46:27"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "narration_text": "That was Brutalist Utility: audit_review_queue.py. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "Title fades in: Brutalist Utility: audit_review_queue.py"
+          },
+          {
+            "at": "0.35",
+            "event": "@NikBearBrown handle appears below"
+          },
+          {
+            "at": "0.55",
+            "event": "Mascot animates (slug-seeded)"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Utility: audit_review_queue.py",
+            "slug": "claude-liam-brutalist-runtime-audit-review-queue"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-13T03:44:43.715519+00:00"
+          }
+        }
+      },
+      "audio_policy": "silence",
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 6.0,
+      "render_duration_s": 6.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-12T23:46:27"
+      }
+    }
+  ]
+}

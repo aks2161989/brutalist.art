@@ -1,0 +1,167 @@
+{
+  "number": 22,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4",
+  "beats": 20,
+  "sheet_sha256": "66c0048ec7d6a5bdc9c7580a47793b2870cc5ce3e844cf69360c5f4374480972",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "259.475625",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B07",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/01/main.py",
+        "code": "def probabilities(logits, temperature=1.0):\n    if not logits or temperature <= 0:\n        raise ValueError(\"positive T required\")\n    peak = max(logits)\n    weights = [math.exp((x - peak) / temperature)\n               for x in logits]\n    total = sum(weights)\n    return [w / total for w in weights]",
+        "sparkLine": "Guard. Exponentiate. Normalize. Return.",
+        "codeSize": 0.05,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card in the Claude cream skin: probabilities() with its guard clauses."
+    },
+    {
+      "beat": "B08",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "lessons/02/main.py",
+        "code": "def validate(text, source_ids):\n    try:\n        data = json.loads(text)\n    except (ValueError, TypeError):\n        return False\n    return (isinstance(data, dict)\n        and set(data) == {\"answer\", \"sources\"}\n        and isinstance(data[\"answer\"], str)\n        and bool(data[\"answer\"].strip())\n        and all(s in source_ids\n                for s in data[\"sources\"]))",
+        "sparkLine": "Parse. Shape. Type. Ground.",
+        "codeSize": 0.045,
+        "sparkSize": 26
+      },
+      "intent": "Onda-style code card: validate() from lesson 2 \u2014 the machine-side of the prompt contract."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B00.mp4",
+      "seconds": 9.0762112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B01.mp4",
+      "seconds": 10.3362112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B02.mp4",
+      "seconds": 2.2866668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B03.mp4",
+      "seconds": 9.94,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B04.mp4",
+      "seconds": 8.6333331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B05.mp4",
+      "seconds": 2.1933331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B06.mp4",
+      "seconds": 12.0866669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B07.mp4",
+      "seconds": 10.149999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B08.mp4",
+      "seconds": 12.0862112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B09.mp4",
+      "seconds": 9.8466669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B10.mp4",
+      "seconds": 9.17,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B11.mp4",
+      "seconds": 10.4766669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B12.mp4",
+      "seconds": 2.17,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B13.mp4",
+      "seconds": 9.2866669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B14.mp4",
+      "seconds": 12.296666899999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B15.mp4",
+      "seconds": 10.756666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/B16.mp4",
+      "seconds": 12.833333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/BVDT.mp4",
+      "seconds": 10.126211199999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/BHTF.mp4",
+      "seconds": 13.883105599999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-assignment-assignment-01-randomness-and-prompt-contracts-02448770-v-4e6767d5f9a4/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/22-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

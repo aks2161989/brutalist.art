@@ -1,0 +1,40 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "What the ai-explainer skill actually does: reads a whole SKILL.md before drawing, drives a single audio-first pipeline that renders a Brutalist Claude reel — cream page, warm ink, one terracotta accent, real narrator — with fixed bookends, an illustrated middle (no composer wallpaper), and never publishes.",
+  "parent_reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-ai-explainer",
+  "parent_master": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-ai-explainer/exports/vertical/claude-liam-brutalist-skill-ai-explainer-vertical.mp4",
+  "parent_master_sha256": "d8dca0f414440a0816284375159ce89da59284b549735f26aaa9dc7bf46e9cb5",
+  "parent_beat_sheet_sha256": "2a3180835a89524f132558d6de7b83fcaf384cc5e8e1c9f9cc3cbb0030e308e5",
+  "parent_beat_count": 11,
+  "parent_duration_s": 186.65,
+  "run_id": "45f186bf1fca4b968ee2e25954316048",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B05", "B06", "B07", "B08", "B10"],
+  "dropped_beats": [
+    {"beat_id": "B02", "act": "FRAMEWORK", "duration_s": 17.54, "reason": "Generic skill-folder anatomy (SKILL.md doctrine + referenced files listing). Belongs in the 16:9 long; a Short about THIS skill answers 'what does it do', not 'what does a skill directory look like in general'."},
+    {"beat_id": "B09", "act": "YOUR TURN", "duration_s": 21.46, "reason": "Extended Your Turn — reads a paste-ready prompt aloud with success-test checklist. REPOLOOP-SHORTS-PROMPT.md explicitly overrides the long's Your Turn requirement; the outro's brand card already implies the invitation and the verdict already restates the essential behaviours."}
+  ],
+  "kept_beat_details": [
+    {"beat_id": "B00", "act": "ASK", "duration_s": 18.17, "role": "Cold open — Liam-in-for-Bear disclosure, self-referential frame ('the skill that made this video'), sets the Brutalist Claude cut (cream page, warm ink, terracotta accent) inside the Claude composer."},
+    {"beat_id": "B01", "act": "BLUF", "duration_s": 13.83, "role": "Hesitant-writer correction of 'template pack' → 'workflow that reads a whole SKILL file first'. The reel's actual claim in one sentence."},
+    {"beat_id": "B03", "act": "FRAMEWORK", "duration_s": 19.83, "role": "The one pipeline — scaffold, narrate, Kokoro clock, visuals, compile. Establishes the mechanism the three design-decision beats then justify."},
+    {"beat_id": "B04", "act": "MECHANISM · ACT 1", "duration_s": 18.21, "role": "First design decision — fixed bookends, free interior. Named as 'the first design decision', so it must precede B05's 'Second decision'."},
+    {"beat_id": "B05", "act": "MECHANISM · ACT 2", "duration_s": 20.67, "role": "Second design decision — ILLUSTRATE LAW. The anti-wallpaper rule that makes this brand look like the tool it teaches, not a slideshow about it."},
+    {"beat_id": "B06", "act": "MECHANISM · ACT 3", "duration_s": 16.88, "role": "Third design decision — ASK → RESULT LAW. Prompts as receipts; grounds the verdict card's 'Prompts as receipts' bullet."},
+    {"beat_id": "B07", "act": "FALSIFIABILITY", "duration_s": 21.42, "role": "The honest limitation: doctrine is only enforced if the operator READS it; Liam is a named substitute, never a Bear clone. The safety beat the Shorts prompt says never to cut."},
+    {"beat_id": "B08", "act": "VERDICT", "duration_s": 15.00, "role": "Artifact card recap — six lines that each map to a retained beat (workflow, bookends, ILLUSTRATE, ASK→RESULT, Kokoro/compile, renders-only)."},
+    {"beat_id": "B10", "act": "OUTRO", "duration_s": 3.92, "role": "'That was the ai-explainer skill. Liam, in for Bear.' — title restate, HAI outro card unchanged."}
+  ],
+  "planned_duration_s": 147.93,
+  "cut_first_review": "The retained nine-beat cut answers 'what does the ai-explainer skill do' in one honest arc. B00 opens self-referentially — this Short's parent film WAS built by the skill we're tearing down — and names the Brutalist Claude cut. B01 fixes the easy misconception ('template pack') into the true claim ('workflow that reads a whole SKILL file first'). B03 shows the one pipeline (scaffold → narrate → Kokoro clock → visuals → compile) so the three design-decision beats have a machine to attach to. B04→B05→B06 walk the three laws that make the middle of every Claude-branded reel look the way it does: fixed bookends (spine), ILLUSTRATE LAW (anti-wallpaper), and ASK→RESULT (prompts as receipts). B07 lands the honest bite — an unread rule ships as a bug; Liam is a named substitute, never a clone. B08 recaps in six lines and B10 signs off. Every internal reference in the retained narration resolves against a retained beat: B05's 'Second decision' points back to B04's 'first design decision' (both kept); B07's 'a missing Beat two' points at B01's BLUF (kept); B07's 'wallpaper reel' points at B05's ILLUSTRATE LAW (kept); B07's 'stale outro handle' points at B10's outro (kept); B08's verdict bullets each map onto a beat the viewer just watched. Dropped B02 (generic skill-folder anatomy) is not referenced by any retained narration; dropped B09 (extended Your Turn) is explicitly optional per REPOLOOP-SHORTS-PROMPT.md's cut-first override. Planned duration 147.93s sits well under the 175s working ceiling and the strict 180s Shorts cap.",
+  "rewrite_reason": null,
+  "outro_policy": "no-outro-rewrite (B10 preserved; the parent's 'Liam, in for Bear' signoff still fits the shorter cut); --no-endcard (B10 is the branded tail).",
+  "protections_preserved": [
+    "Liam-in-for-Bear disclosure (B00) and signoff (B10)",
+    "Kokoro am_onyx voice, no audio regeneration",
+    "Claude palette + cream/warm-ink/terracotta accent unchanged",
+    "no burned-in captions",
+    "native 2160×3840 portrait media reused unchanged",
+    "essential limitation retained (B07 falsifiability)",
+    "self-demo integrity — this Short is itself a product of the skill it tears down"
+  ]
+}

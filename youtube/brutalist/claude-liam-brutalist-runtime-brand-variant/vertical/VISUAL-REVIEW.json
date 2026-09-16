@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "2105289f3f3846c2870c68ad6e4c57dc",
+  "source_sha256": "1ab627266e10e1ed8a0e4e704f38180f261b647013dd27eeac51767b61381560",
+  "beat_sheet_sha256": "7dde19bc103196daf5864804dc2b194fbd6d2d5b9b9576933bf5551f70479edb",
+  "video_sha256": "030d552849d7d9f9836d7fbf048a3bdee6280b816fe675b395c8f6c7e98f5117",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "8d7ccc1980f7d37cdefeee93bb5f1c167430640b17bafaa813c4eafb7f4a7534"}
+  ],
+  "notes": "Vertical 2160x3840 native portrait master (223.1s, 12 beats) reviewed via runtime/qc/final_frame_check.py (24 frames, 0 BLOCKER, 0 MAJOR) and by opening the extracted contact sheet with the image-capable Read tool. This is a re-render of the vertical companion to correct B04, B07, B08 code props and B07 narration (same changes as landscape, described in landscape VISUAL-REVIEW.json). Native portrait compositions used throughout: ClaudeComposerAsk916 (B00, B10), BrutalistHesitantWriter916 (B01 — portrait scale patch applied, 5-line text with both triggers on lines 4-5 so ink bbox stays past 55% at 50%), SkillTeardownMechanism916 (B02 — replacing SkillTeardownPipeline that bleeds in portrait, per memory feedback_skillteardown_pipeline_portrait), ClaudeCodeBeat916 (B03-B08), ClaudeVerdictArtifact916 (B09), ClaudeTitleOutro916 (B11). B01 shows 'the brand.py variant just sits and stamps the narration' with 'narration' highlighted in terracotta before correction to 'metadata'. Compile-time skin lint for B00/B11 using 916 pattern names is expected for native portrait — noted in CHECKS-REPORT.md. No burned-in captions, no subtitle track, no unresolved slates. Outro still shows @NikBearBrown per OUTRO-LOCK.md — flagged for human reviewer. Human review pending."
+}

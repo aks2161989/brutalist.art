@@ -1,0 +1,85 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "51f5933e39e74631bacd3698e3be0613",
+  "source_sha256": "072f2a833d22e4f964a7a4283b1c4bd1a4bdeffddc8ec00f8711514585504f92",
+  "beat_sheet_sha256": "43ebb3f28f30c4d23470db40e85373722195b8f526c330dfe2fa33d8c2a4e48d",
+  "video_sha256": "cb0dcf1aba7f8b5416c860f4b1f4e1d35dd5406bf98e8a6f79c0c468caa97ea8",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/B00-15pct.png",
+      "sha256": "e54d80acbf1d029beaabde62783cf33c7879efa9ae766c46da62cd165bc211fd"
+    },
+    {
+      "path": "_qc/B00-50pct.png",
+      "sha256": "db5630293a0fc19bfb08ff9459decf3dc92317ef68cfce6db494ac4878fead74"
+    },
+    {
+      "path": "_qc/B00-85pct.png",
+      "sha256": "4f4fee8bf04d7934b8b39cebfad7694b7794970c72a2580b8d0386d6aa16e315"
+    },
+    {
+      "path": "_qc/B01-15pct.png",
+      "sha256": "69ea5e3674b69acd6dea38d0ddd3ff532c5912426a9590be7ddc3b5ca2d6eea8"
+    },
+    {
+      "path": "_qc/B01-50pct.png",
+      "sha256": "abb2ce52e38313c85d92a73f875b1a616aa827521ee8f5ecef95291a6fd46980"
+    },
+    {
+      "path": "_qc/B01-85pct.png",
+      "sha256": "d5ad5729aba4deacaaf630e89465eaa5081710bb71c6913c932fceba0a663c3f"
+    },
+    {
+      "path": "_qc/B05-15pct.png",
+      "sha256": "f45ed1d3165904e12136b6dade1580332a62545367da1cbe30522a0d0859171d"
+    },
+    {
+      "path": "_qc/B05-50pct.png",
+      "sha256": "db5c5008eae513deaa56650c3cb1f5abaacbbe48768c8389bc8e873a4dd6ef74"
+    },
+    {
+      "path": "_qc/B05-85pct.png",
+      "sha256": "a3858e862f975105348848a1aa9de72267a9e5292e5a5a5435963778b88a1db5"
+    },
+    {
+      "path": "_qc/B07-15pct.png",
+      "sha256": "94faf3007765a4a3277119295e66e147a7c70f350e0c35ac036fdf83c3339e07"
+    },
+    {
+      "path": "_qc/B07-50pct.png",
+      "sha256": "4268bdf7cc158c9a2f631ede9e776307a6489b1b20921d648f189a3f38fd72ef"
+    },
+    {
+      "path": "_qc/B07-85pct.png",
+      "sha256": "f0947244863975d64f100cd1645f454b3828f4108a18e32560251e004652bcd8"
+    },
+    {
+      "path": "_qc/B09-15pct.png",
+      "sha256": "cefc2e09e080f5c222f2793fedd5c4ddb03bd46c22c0b38b652e9437d8bb4fd0"
+    },
+    {
+      "path": "_qc/B09-50pct.png",
+      "sha256": "de9385ddc39a542ff0f5594d79deeb15fc83de5db73b5ed25e49a00fc9684cf5"
+    },
+    {
+      "path": "_qc/B09-85pct.png",
+      "sha256": "6ff45e27f89fde23d25bd0929eb50a3cd47efce9da709204d5d6b1a892855428"
+    },
+    {
+      "path": "_qc/B11-15pct.png",
+      "sha256": "44ad80dc72289522a2dcba464c39b134d1e729bff4ef4c944ca5527f4324cfe1"
+    },
+    {
+      "path": "_qc/B11-50pct.png",
+      "sha256": "d0faef24569de4f0d31b21ab33b1ca9458877fe06b4404334e2379fb5cc510a8"
+    },
+    {
+      "path": "_qc/B11-85pct.png",
+      "sha256": "0d135715af4600cb0d969d7f4f9652171dc4dadd94237b54ac39706f708e9788"
+    }
+  ],
+  "notes": "Short cut: 6/12 beats (B00, B01, B05, B07, B09, B11). 121.958s container, 2160x3840, h264+aac. All 6 beats viewed at 15/50/85% per beat (18 frames). B00 ClaudeComposerAsk916: topic label BRUTALIST UTILITY · AUDIT_REVIEW_QUEUE.PY, segment Source Audit Not Approval, Bula Liam greeting, composer card with command, three output lines in monospace — clean and legible. B01 BrutalistHesitantWriter916: large centered serif text settled to documents reels for human review. with @HumanitariansAI — good portrait fill, no bleed. B05 ClaudeCodeBeat916: stale master mtime code visible, Timestamp delta sparkline at foot — legible code, no bleed. B07 ExecutedData916: table title Live audit — claude-liam-brutalist-skill-nopunt, three-row table 12/12/0, note at foot — legible. B09 ClaudeVerdictArtifact916: Source evidence not approval heading, three numbered verdict lines fully visible — clean portrait card. B11 ClaudeTitleOutro916: dark olive background, Brutalist Utility: audit_review_que ue.py. wrapping (inherited from parent, readable), @NikBearBrown handle — no truncation. No joins artifacts observed at beat boundaries. No caption burn-in. No landscape crops. Human review pending."
+}

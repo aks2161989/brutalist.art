@@ -1,0 +1,13 @@
+{
+  "files": [
+    "runtime/remotion/src/scenes.json",
+    "runtime/remotion/src/WhatIsBrutalist.tsx",
+    "runtime/remotion/src/TrainTeacher.tsx",
+    "runtime/remotion/src/RequireReport.tsx",
+    "runtime/remotion/src/Root.tsx",
+    "runtime/remotion/src/scenes/BarChart.tsx",
+    "runtime/remotion/src/illustrations/previews.tsx"
+  ],
+  "baseline_sha256": "b2b6f77c14d0226e02466d64135d1d0a47f0c82cdc6902983e6efbaf049f2b53",
+  "note": "Overlay on the local toolkit snapshot recorded in SOURCE-SNAPSHOT.json, not blindly on another revision."
+}

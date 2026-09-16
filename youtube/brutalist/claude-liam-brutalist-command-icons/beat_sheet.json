@@ -1,0 +1,766 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art icons",
+    "slug": "claude-liam-brutalist-command-icons",
+    "topic": "BRUTALIST · COMMAND: ART ICONS",
+    "kind": "command",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Sawubona, Liam",
+    "greeting_note": "hello lexicon: Sawubona (Zulu), one word — fresh for this reel. Wagwan check: sum('claude-liam-brutalist-command-icons') mod 10 == 2, not a Wagwan reel.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "0a10fb54495f4890b9564beef6ac84c5",
+    "episode_id": "command-icons",
+    "order": 24,
+    "note": "Command teardown of ./art icons and its aliases (icons, icon, icon-search — all hit the same case branch at art:60-63, exec-ing runtime/scripts/icon_search.py). The middle body walks the 7,330-icon canonical set (376 brand/logo), the four ranked search moves (exact > every-word > name-prefix > token-hit, with IDF re-weighting), the --check anti-redraw test, --show for the raw SVG, and the --brands filter. Falsifiability beat: 'quantum entanglement' returns no match and the tool explicitly says a miss is NOT a licence to draw. All demo outputs in demo/RUN-LOG.md are verbatim from this workspace (icons/ symlinked to the public brutalist.art/icons index for reproducible demos). Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. No paid API, no upload, no re-render of catalog reels. episode.source_sha256 a83e2aa2ed932ee146ec804a320d16aed15ad824b9c4591ce26f147830109cb5.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:60-63",
+      "icon_search": "runtime/scripts/icon_search.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "icons",
+      "icon search",
+      "canonical set",
+      "IDF ranking",
+      "anti-redraw",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-09T04:38:15",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Sawubona, this is Liam, in for Bear. There are over seven thousand icons in Brutalist. Nobody remembers them. So when you need a mark for a beat, the first move is not to draw. It is to search. Art icons is the library-first check that stops one-off scribbles from piling up in svg.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Sawubona, Liam' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed ask appears in the composer"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'searching the canonical set…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Sawubona, Liam",
+            "topic": "BRUTALIST · COMMAND: ART ICONS",
+            "segment": "art icons",
+            "command": "Before drawing a mark for a beat, ask the library: is there already an icon for this?",
+            "runningText": "searching the canonical set…",
+            "output": [
+              "7,330 icons — 376 brand/logo, viewBox 0 0 24 24, stroke 2",
+              "ranked: exact name > every word > prefix > token hit (IDF)",
+              "aliases: icons, icon, icon-search — same case branch, same output"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T08:18:33.389431+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.15,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 16.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Corrects the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art icons does not draw a new icon for you. It finds an existing one, from the seven-thousand icon set. Same command, different job — and it is the difference this whole reel turns on.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 13,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art icons draws / new icons.'"
+          },
+          {
+            "at": "0.50",
+            "event": "the word 'draws' turns terracotta, hesitates, backspaces, types 'finds'"
+          },
+          {
+            "at": "0.75",
+            "event": "the word 'new' turns terracotta, hesitates, backspaces, types 'existing'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art icons finds / existing icons.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "art icons draws\nnew icons.",
+            "triggerWords": "draws, new",
+            "replacementWords": "finds, existing",
+            "seed": "command-icons-b01",
+            "face": "serif",
+            "fontSize": 280,
+            "lineSpacing": 1.35,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T08:35:38.999150+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 12.14,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 12.166666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the shape of the dispatcher. One case branch, three aliases, one exec.",
+      "narration_text": "The dispatcher is a single case statement in the art file. One branch matches three aliases: the word icons, the singular icon, and the long form icon-search. All three exec the same python script. Different words on your terminal, one code path underneath.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in with 'art' in the title bar"
+          },
+          {
+            "at": "0.20",
+            "event": "'case \"$cmd\" in' types"
+          },
+          {
+            "at": "0.40",
+            "event": "three alias patterns type on the same line"
+          },
+          {
+            "at": "0.70",
+            "event": "exec line types under it"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line settles under the card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "art:60-63 — one branch, three aliases",
+            "code": "# From the top-level art dispatcher:\ncase \"$cmd\" in\n  # …\n  icons|icon|icon-search)\n    # LIBRARY-FIRST, one level down from scenes:\n    # find the mark before drawing one.\n    exec python3 \"$ART_HOME/runtime/scripts/icon_search.py\" \"$@\"\n    ;;\n  # …\nesac",
+            "sparkLine": "Three words. One script. One index."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-09T08:19:47.834005+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 15.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the canonical set. Numbers, geometry, stroke, invariants.",
+      "narration_text": "The library the script searches is a single JSON file at icons dot json. Seven thousand three hundred and thirty icons. Three hundred and seventy-six of them are brand or logo marks. Every icon is a twenty-four unit viewBox, stroke width two, currentColor. That means one component style, one accent hook. They compose.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'icons/icons.json — the canonical set'"
+          },
+          {
+            "at": "0.30",
+            "event": "count/geometry/render lines type in"
+          },
+          {
+            "at": "0.65",
+            "event": "sample icon record types under it"
+          },
+          {
+            "at": "0.88",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "icons/icons.json — the canonical set",
+            "code": "{\n  \"count\": 7330,\n  \"geometry\": { \"viewBox\": \"0 0 24 24\",\n                \"stroke_width\": 2,\n                \"stroke\": \"currentColor\",\n                \"fill\": \"none\" },\n  \"render\":   { \"line_44pt_px\": 528,\n                \"note\": \"stroke 2 in a 24 viewBox = 44pt at 528px;\n                         scales proportionally\" },\n\n  \"icons\": [\n    { \"name\": \"database\", \"source\": \"lucide\",  \"brand\": false,\n      \"tokens\": [\"data\", \"database\"],\n      \"file\":   \"svg/database.svg\" },\n    { \"name\": \"brand-github\", \"source\": \"tabler\", \"brand\": true,\n      \"tokens\": [\"brand\", \"github\"],\n      \"file\":   \"svg/brand-github.svg\" }\n  ]\n}\n# 7,330 icons · 376 brand/logo · one viewBox, one stroke, one color hook.",
+            "sparkLine": "One viewBox. One stroke. One color hook."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T08:20:13.521430+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.3,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 18.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the ranking. Four moves, then IDF re-weighting so rare words win.",
+      "narration_text": "The ranker has one job: put the right hit at the top. Four rules, in order of trust. Exact name beats every-word-present, beats name-prefix, beats token-hit. Then it re-weights by inverse document frequency. That means a rare word like sankey outranks a common word like flow, so 'sankey flow' finds chart-sankey and not every flower in the set.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'icon_search.py — rank()'"
+          },
+          {
+            "at": "0.25",
+            "event": "four ranking rules type as a bulleted block"
+          },
+          {
+            "at": "0.65",
+            "event": "IDF one-liner types underneath"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "icon_search.py — rank()  (art icons ranking)",
+            "code": "# Most trusted first — the four moves:\n#\n#     exact name  >  every query word present\n#                  >  name prefix\n#                  >  token hit\n#\n# Then RE-WEIGHT by inverse document frequency (IDF):\nidf = { w: math.log((n + 1) / (df.get(w, 0) + 1)) + 1\n        for w in words }\n\n# Effect: a rare word beats a common one.\n#   'sankey flow'  ->  chart-sankey  (not every 'flower' in the set)\n#   'data database' -> database      ('database' is rarer than 'data')",
+            "sparkLine": "Exact > all-words > prefix > token. Rare wins."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T08:20:38.412092+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.62,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 18.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — verbatim output of ./art icons \"money\" from this workspace.",
+      "narration_text": "Here is the shape on a real query. Dot slash art icons quote money quote. Thirty-one hits. Top ten shown. First hit is money-square from Iconoir. Then banknote, coins, wallet from Lucide. Each line shows the name, the source pack, and the svg path. The tokens underneath tell you which words the ranker matched.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art icons \"money\"'"
+          },
+          {
+            "at": "0.20",
+            "event": "'31 match \"money\" — top 10:' header appears"
+          },
+          {
+            "at": "0.35",
+            "event": "top hits cascade in one at a time"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line: '31 hits. Top of the ranking, in order.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "$ ./art icons \"money\"  (verbatim from this workspace)",
+            "code": "31 match \"money\" - top 10:\n\n  money-square       iconoir  svg/money-square.svg\n     money square\n  banknote           lucide   svg/banknote.svg\n     money\n  coins              lucide   svg/coins.svg\n     money\n  wallet             lucide   svg/wallet.svg\n     money\n  banknote-check     lucide   svg/banknote-check.svg\n     banknote check money\n  banknote-x         lucide   svg/banknote-x.svg\n     banknote money x\n  coins-swap         iconoir  svg/coins-swap.svg\n     coins money swap\n  credit-card        lucide   svg/credit-card.svg\n     card credit money\n  credit-cards       iconoir  svg/credit-cards.svg\n     cards credit money\n  dollar-sign        lucide   svg/dollar-sign.svg\n     dollar money sign",
+            "sparkLine": "31 hits. Top of the ranking, in order."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T08:21:05.109674+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.07,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — --check and --show. The anti-redraw test and the raw SVG.",
+      "narration_text": "Two more moves. Dash dash check is the anti-redraw question — is this name in the set. It answers three things per name: in set, concept or brand, and the file path. If you missed, it shows you the nearest neighbors. Dash dash show prints the raw SVG, so you can paste it into a component or a mood board without opening the file.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '--check and --show'"
+          },
+          {
+            "at": "0.25",
+            "event": "--check three-name run types in"
+          },
+          {
+            "at": "0.60",
+            "event": "--show SVG one-liner types under a divider"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "--check (anti-redraw)  and  --show (raw SVG)",
+            "code": "$ ./art icons --check brain-circuit database bogus-icon-name\n  brain-circuit       IN SET   concept    svg/brain-circuit.svg\n  database            IN SET   concept    svg/database.svg\n  bogus-icon-name     not in the set.\n\n# ------------------------------------------------------------\n\n$ ./art icons --show database\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"\n     viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"\n     stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n  <path d=\"M3 5V19A9 3 0 0 0 21 19V5\" />\n  <path d=\"M3 12A9 3 0 0 0 21 12\" />\n</svg>",
+            "sparkLine": "--check answers. --show hands you the SVG."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-09T08:21:32.924639+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.98,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 17.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — --brands filter. Two logos for 'github' in the whole set.",
+      "narration_text": "One filter changes the whole answer. Dash dash brands narrows the search to the three hundred and seventy-six brand and logo icons only. Search github with the filter and you get two hits, both logos. Drop the filter and the ranker starts pulling in concept icons that happen to share tokens. The filter is a scope switch, not a preference.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '--brands  (scope switch, not preference)'"
+          },
+          {
+            "at": "0.25",
+            "event": "filtered run types in and returns two hits"
+          },
+          {
+            "at": "0.65",
+            "event": "annotation types: 'also --no-brands to exclude logos'"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "$ ./art icons \"github\" --brands   (filter to brand/logo)",
+            "code": "$ ./art icons \"github\" --brands\n2 match \"github\" - top 2:\n\n  brand-github            brand   svg/brand-github.svg\n     brand github\n  brand-github-copilot    brand   svg/brand-github-copilot.svg\n     brand copilot github\n\n# The mirror flag:\n$ ./art icons \"github\" --no-brands       # exclude every logo\n\n# --brands narrows the corpus to 376 brand/logo icons.\n# --no-brands narrows it to the 6,954 concept icons.\n# Neither reranks — they just decide which shelf to search.",
+            "sparkLine": "--brands: 376 logos. --no-brands: 6,954 concepts."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T08:21:58.579055+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.67,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 18.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — the miss. The tool prints an explicit anti-redraw instruction; exit 0.",
+      "narration_text": "And here is what a miss looks like. Quantum entanglement. No match. The tool does not silently return empty. It prints an instruction: a miss is not a licence to draw. Try a nearby concept. Compose two icons. Or accept that the idea is not iconographic. Exit code zero, because the answer 'nothing fits' is the real answer.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art icons \"quantum entanglement\"'"
+          },
+          {
+            "at": "0.25",
+            "event": "'no icon matches …' line appears in terracotta"
+          },
+          {
+            "at": "0.50",
+            "event": "three-line anti-redraw instruction cascades in"
+          },
+          {
+            "at": "0.85",
+            "event": "'echo $?  # 0' types below; spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "$ ./art icons \"quantum entanglement\"   (the miss)",
+            "code": "$ ./art icons \"quantum entanglement\"\nno icon matches \"quantum entanglement\".\n  A miss is NOT a licence to draw a one-off. Try a nearby concept,\n  compose two icons, or accept the idea is not iconographic.\n\n$ echo $?\n0\n\n# The doctrine, spelled out. From icon_search.py:\n#\n#   'if nothing fits, the honest answers are\n#    (a) a nearby concept, (b) compose two icons, or\n#    (c) the concept genuinely is not iconographic.'",
+            "sparkLine": "A miss is the answer. Not a licence to draw."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T08:22:24.067819+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.54,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 17.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the four moves. One line each, in the order you actually use them.",
+      "narration_text": "So the surface. Bare art icons prints the info banner and exits. A query searches the whole set with IDF ranking. Dash dash check answers is-it-in-the-set. Dash dash show hands you the raw SVG. Dash dash brands narrows the corpus to the three hundred and seventy-six logos. Three aliases all point at the same script. And a miss is a real answer, not a licence to draw.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'The four moves'"
+          },
+          {
+            "at": "0.30",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.45",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.60",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.75",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.88",
+            "event": "line 5 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art icons — the whole surface, in the order you actually use it",
+            "artifactLines": [
+              "bare invocation — prints the info banner (7,330 count, viewBox, examples) and exits 0.",
+              "\"query\" — searches all 7,330 icons; exact name > all-words present > prefix > token hit, IDF re-weighted.",
+              "--check <name...> — asks 'is this name in the set?' — the anti-redraw test that stops one-off scribbles.",
+              "--show <name> — prints the raw SVG straight to stdout for pasting into a component or mood board.",
+              "--brands / --no-brands — scope switch: search only 376 logos, or only the 6,954 concept icons.",
+              "aliases icons / icon / icon-search — same case branch, identical output; one dispatcher, one code path.",
+              "a miss — no match found; 'not a licence to draw' — try a nearby concept or compose two icons."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T08:37:07.279301+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.44,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 20.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code from the brutalist toolkit root. It walks the whole surface: banner, three search runs of different rarity, a check pair, a show, a brands filter, and one deliberate miss. What you want to see is fair ranking on common words, the rare word winning where it should, three passing checks, one honest miss, and identical output across the three aliases. If any run surprises you, that is a lead — file it against icon_search.py rank.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your turn.' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "expected outcome lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Audit art icons on your own idea",
+            "command": "From the brutalist.art toolkit root, run: ./art icons; ./art icons \"money\"; ./art icons \"risk warning\" --top 12; ./art icons \"sankey flow\"; ./art icons --check brain-circuit database bogus-icon-name; ./art icons --show database | head -3; ./art icons \"github\" --brands; ./art icons \"quantum entanglement\". Then diff ./art icons \"wallet\" against ./art icon \"wallet\" and ./art icon-search \"wallet\" — all three must be identical. Finally, run the search on ONE concept from a beat you are authoring right now and record the top hit or the miss.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "top hits are relevant on common queries (money, wallet, risk)",
+              "rare word beats common word: 'sankey flow' finds chart-sankey first",
+              "checks: brain-circuit + database IN SET, bogus not; --show is a raw <svg>",
+              "aliases icons/icon/icon-search return byte-identical output",
+              "one honest miss on 'quantum entanglement' — nearby concept or compose"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T08:24:57.416701+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.66,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 22.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-09T04:38:15"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art icons. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art icons.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Command: art icons.",
+            "slug": "claude-liam-brutalist-command-icons"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T08:25:12.431830+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.57,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.583333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-09T04:38:15"
+      }
+    }
+  ]
+}

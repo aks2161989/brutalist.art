@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "251584521128464e8b35431dce545cb1",
+  "source_sha256": "c6bf131db6a3e173cd5b30de152e3188979971a87265d18fbb89c677c5245319",
+  "beat_sheet_sha256": "e090d04d548c1bbe363f1e1070c28d2fda57242f5a2d507ab2a09c5d56c8f1d7",
+  "video_sha256": "46872a85ceaf3e140d0d4d2e7a46fa782f8bca77c83e2f2fd87ca4f4f17d273a",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "f862c364754e708124e51a13b250bf83c0c5fdf2779f2a3e78561ab7bdd44361"
+    }
+  ],
+  "notes": "Landscape 3840×2160 (16:9), 253.7s, 11 beats, Kokoro am_onyx throughout. Rebuilt 2026-09-11 from the 2026-09-08 base: source SKILL.md changed (VOX LAW gained a reference to EXECUTABLE-EVIDENCE.md). Only B07 was updated (narration, props, audio, scene re-render); all other beats unchanged. Gate V: 22 frames, 0 BLOCKERs, 0 MAJORs. B07 frame inspected at 50% via image-capable Read — shows eyebrow DESIGN·TELL, heading 'A still is evidence.', body paragraph explicitly calling out EXECUTABLE-EVIDENCE.md (locally reproducible code/tables/charts must be executed and rendered, not photographed), verbatim VOX LAW quote, cite 'explainer SKILL.md · VOX LAW + EXECUTABLE-EVIDENCE.md', verdict pill 'EXECUTE IT — RENDER IT', spark line 'Evidence, never texture.' — all within safe area, no edge bleed. Contact sheet reviewed for all 11 beats: B00 ClaudeComposerAsk (Aloha Liam) clean; B01 hesitant writer pipeline correction clean; B02-B06 anatomy/pipeline/mechanism cards clean; B08 verdict artifact card clean; B09 Your Turn composer clean; B10 ClaudeTitleOutro with slug-seeded mascot clean. Motion histogram: reveal 7/11 (63%) advisory warning — inherent to skill-teardown body beats, not a gate failure. Zero unresolved slates, zero captions, zero paid calls. Human review pending."
+}

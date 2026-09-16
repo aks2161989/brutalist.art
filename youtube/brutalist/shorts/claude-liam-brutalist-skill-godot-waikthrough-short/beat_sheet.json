@@ -1,0 +1,624 @@
+{
+  "metadata": {
+    "title": "The godot-waikthrough Skill",
+    "slug": "claude-liam-brutalist-skill-godot-waikthrough-short",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel_title": "",
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Annyeong, Liam",
+    "greeting_note": "hello lexicon: Annyeong (Korean). Portrait companion — same narration, native 9:16 scenes.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "ba2520ca602d4f778cd158dd8646d0c3",
+    "episode_id": "skill-godot-waikthrough",
+    "order": 15,
+    "note": "Native full-length 9:16 portrait companion for claude-liam-brutalist-skill-godot-waikthrough. Uses 916 scene variants where registered. SkillTeardownPipeline → SkillTeardownMechanism916 swap per feedback_skillteardown_pipeline_portrait.md (Pipeline916 edge-bleed BLOCKER). BrutalistHesitantWriter916 uses lineSpacing:2.6 and fontSize:130 per feedback_hesitant_writer_portrait_bluf_recipe.md. ClaudeTitleOutro916 slug-seeded @NikBearBrown per OUTRO-LOCK.md.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/godot-waikthrough/SKILL.md"
+    },
+    "build": {
+      "at": "2026-09-11T13:21:34",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B12: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-skill-godot-waikthrough-vertical",
+    "dropped_beats": [
+      "B03",
+      "B04",
+      "B05",
+      "B07",
+      "B09"
+    ],
+    "total_estimated_duration_seconds": 158.04,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — ClaudeComposerAsk916 portrait variant. Same props, native 9:16 layout.",
+      "narration_text": "Annyeong — this is Liam, in for Bear. There is a Brutalist skill called godot-waikthrough. Most fellows read that name and assume it is a screen recorder — drop a Godot project in, get a gameplay video out. It is not. So I asked Claude to read the full skill and explain what actually happens when you point it at a game.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 23,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream (portrait layout)"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Annyeong, Liam' appears above composer"
+          },
+          {
+            "at": "0.28",
+            "event": "command types the ask"
+          },
+          {
+            "at": "0.62",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "three RESULT lines land below card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Annyeong, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The godot-waikthrough Skill",
+            "command": "What does `godot-waikthrough` actually do? Read skills/make/godot-waikthrough/SKILL.md — is this a screen recorder, a game builder, or something else entirely?",
+            "runningText": "reading skills/make/godot-waikthrough/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "High",
+            "output": [
+              "It plays the game.",
+              "Riff captures the why.",
+              "It makes a narrated walkthrough film."
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-11T11:26:16.210477+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.15,
+      "render_duration_s": 16.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T13:21:34"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — BrutalistHesitantWriter916. Portrait recipe: fontSize:130, lineSpacing:2.6, short lines per feedback_hesitant_writer_portrait_bluf_recipe.md. lead_silence_s required.",
+      "narration_text": "The name reads like a screen recorder. But godot-waikthrough is the riff skill applied to gameplay: it plays the game through its actual input path, captures what the engine renders, and invokes riff to narrate what happened on screen, the mechanism behind it, and the trade-offs the design made.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on-correct",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "cream portrait frame; typing begins"
+          },
+          {
+            "at": "0.15",
+            "event": "'records' types then strikes terracotta, 'riffs' replaces"
+          },
+          {
+            "at": "0.55",
+            "event": "corrected text settles in portrait layout with generous line spacing"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "godot-waikthrough\nrecords\nthe game.\nCapture in.\nFilm out.",
+            "triggerWords": "records",
+            "replacementWords": "riffs",
+            "fontSize": 110,
+            "lineSpacing": 2.6,
+            "align": "center",
+            "seed": "4533",
+            "charMs": 8,
+            "mistakeRate": 2,
+            "hesitateWithin": 0,
+            "hesitateBetween": 1,
+            "ink": "#3D3929",
+            "accent": "#D97757",
+            "bg": "#FAF9F5"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-11T15:35:19.975787+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 15.55,
+      "render_duration_s": 15.583333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-11T13:21:34"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "PIPELINE",
+      "role_note": "PORTRAIT SWAP per feedback_skillteardown_pipeline_portrait.md — SkillTeardownPipeline → SkillTeardownMechanism916. Phase list in body as arrow string to avoid horizontal BLOCKER edge-bleed.",
+      "narration_text": "Here is the flow. You supply a path to a running Godot project. Claude identifies implemented features from source and a real run, distinguishing built from planned and broken. It drives the game through its normal input path, captures the rendered viewport, and invokes riff — which inspects captured frames and writes narration around what changed, why it matters, and the trade-off. The pipeline then assembles and renders a four-K walkthrough film.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "spring-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heading 'Play in. Narrated film out.' settles on portrait frame"
+          },
+          {
+            "at": "0.2",
+            "event": "body text with phase chain reveals"
+          },
+          {
+            "at": "0.45",
+            "event": "quote block: pipeline phases as arrow string"
+          },
+          {
+            "at": "0.72",
+            "event": "verdict pill 'Five phases' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "GODOT-WAIKTHROUGH · PIPELINE",
+            "heading": "Play in. Narrated film out.",
+            "body": "Game path → Identify features (built/planned/broken) → Capture real viewport → Riff (narrate mechanism + trade-off) → Assemble → 4K film.",
+            "quote": "Identify → Capture → Riff → Assemble → Render (Kokoro am_onyx + Remotion)",
+            "cite": "skills/make/godot-waikthrough/SKILL.md · pipeline phases",
+            "verdictLabel": "Five phases",
+            "verdictPositive": true,
+            "sparkLine": "Identify → capture → riff → render."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-11T11:27:57.502680+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 22.68,
+      "render_duration_s": 22.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T13:21:34"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "GodotDevWorkbench916 code mode — native portrait. Riff mechanic. Same content as landscape B06.",
+      "narration_text": "The riff mechanic is the heart of the skill. After capturing, riff inspects each feature's captured frames and writes narration around three things: what changed on screen, why that mechanism works that way, and the useful trade-off the design made. Source-code facts and untested judgments are identified as such. The human judges feel and fun. Riff plays, records, explains, and checks.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 23,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "line-highlight",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "GodotDevWorkbench916 portrait — code top, notes bottom"
+          },
+          {
+            "at": "0.15",
+            "event": "artifact + time range line highlights"
+          },
+          {
+            "at": "0.30",
+            "event": "observation line highlights"
+          },
+          {
+            "at": "0.50",
+            "event": "mechanism line highlights"
+          },
+          {
+            "at": "0.70",
+            "event": "trade-off line highlights"
+          },
+          {
+            "at": "0.82",
+            "event": "bottom notes panel: RIFF.md structure"
+          }
+        ],
+        "remotion": {
+          "pattern": "GodotDevWorkbench916",
+          "props": {
+            "mode": "code",
+            "title": "The riff mechanic.",
+            "project": "walker-jumpman",
+            "path": "RIFF.md (structure — teaching illustration)",
+            "source": "skills/make/riff/SKILL.md + skills/make/godot-waikthrough/SKILL.md · teaching illustration",
+            "code": "## jump · run-01.mp4 · 3.0s – 5.0s\n\n**Observation:** Player arcs over gap,\n  lands on next step.\n\n**Mechanism:** jump_force=-400 launches\n  CharacterBody2D; GRAVITY=980 returns it.\n  is_on_floor() gates re-jump.\n\n**Trade-off:** Uniform apex — same height.\n  Predictable; spike and platform gaps\n  must match clearance.\n\n**Narration:** \"Cheap retry — good for\n  testing another jump. Doesn't show\n  whether a new player saw the danger.\"",
+            "startLine": 1,
+            "cues": [
+              {
+                "at": 0,
+                "line": 1,
+                "label": "artifact + time range"
+              },
+              {
+                "at": 3,
+                "line": 3,
+                "label": "observation (what changed)"
+              },
+              {
+                "at": 7,
+                "line": 6,
+                "label": "mechanism (source-code fact)"
+              },
+              {
+                "at": 12,
+                "line": 10,
+                "label": "trade-off (design judgment)"
+              },
+              {
+                "at": 16,
+                "line": 13,
+                "label": "narration (riff voice)"
+              }
+            ],
+            "inspectorLabel": "RIFF.md fields",
+            "notes": [
+              {
+                "label": "Observation",
+                "value": "What CHANGED on screen — visible evidence"
+              },
+              {
+                "label": "Mechanism",
+                "value": "Source-code explanation — labeled as such"
+              },
+              {
+                "label": "Trade-off",
+                "value": "What is gained and lost by this design"
+              },
+              {
+                "label": "Narration",
+                "value": "Concise, honest — no invented fun/accessibility claims"
+              }
+            ],
+            "output": [
+              "RIFF.md · riff structure",
+              "teaching illustration"
+            ],
+            "durationSeconds": 23
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-11T15:26:50.360845+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 20.5,
+      "render_duration_s": 20.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:GodotDevWorkbench916",
+        "at": "2026-09-11T13:21:34"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "SkillTeardownMechanism916 — portrait. Design tell: verbatim SKILL.md quote on honesty contract. Same content as landscape B08.",
+      "narration_text": "The design tell is explicit in the skill file — and worth reading verbatim. The skill cannot secretly fix the game. No teleporting the player past a blocker, no disabling collisions to claim a passed level, no calling test-only shortcuts to manufacture a completion receipt. A driver may observe position and state to choose inputs. It may not change the game. The honest path: if it cannot run, report the exact blocker.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 25,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "spring-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heading settles on portrait frame"
+          },
+          {
+            "at": "0.2",
+            "event": "body text appears"
+          },
+          {
+            "at": "0.48",
+            "event": "verbatim quote block reveals"
+          },
+          {
+            "at": "0.72",
+            "event": "verdict pill 'Honest contract' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "GODOT-WAIKTHROUGH · DESIGN TELL",
+            "heading": "Don't fix the game.",
+            "body": "A driver may observe position and state to choose inputs. It may not teleport, set completion, disable collisions, or call test-only shortcuts. No fake gameplay in place of an engine run.",
+            "quote": "Do not secretly fix the game to make a demonstration succeed. If it cannot run, report the exact blocker; no fake gameplay in place of an engine run.",
+            "cite": "skills/make/godot-waikthrough/SKILL.md §2",
+            "verdictLabel": "Honest contract",
+            "verdictPositive": true,
+            "sparkLine": "Observe. Don't change."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-11T11:33:38.660157+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 21.67,
+      "render_duration_s": 21.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T13:21:34"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "VERDICT",
+      "role_note": "PORTRAIT SWAP: ClaudeVerdictArtifact916 ink bbox spans only 40% of safe_h (compact card, cream-on-cream card bg not detected as ink) — swap to SkillTeardownMechanism916 which distributes content top-to-bottom.",
+      "narration_text": "Verdict. What the skill gets right: it makes the evidence contract explicit from the first phase. Identify from source plus a real run, not the GDD. Capture the real viewport, not a substitute fixture. Riff on what is visible, not what the code says should happen. The limitation is structural: this skill requires a real running game as input. Give it a shallow game and the walkthrough film will be shallow too.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "spring-reveal",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heading 'Evidence contract from phase one.' settles portrait"
+          },
+          {
+            "at": "0.2",
+            "event": "body text: identify → capture → riff chain"
+          },
+          {
+            "at": "0.48",
+            "event": "quote block: game depth matches film depth"
+          },
+          {
+            "at": "0.72",
+            "event": "verdict pill 'Evidence first' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "GODOT-WAIKTHROUGH · VERDICT",
+            "heading": "Evidence contract from phase one.",
+            "body": "Identify from source + real run — not the GDD wishlist. Capture the real viewport. Riff on what is visible. The depth of the walkthrough film matches the depth of the game.",
+            "quote": "Give it a shallow game and the walkthrough film will be shallow too.",
+            "cite": "skills/make/godot-waikthrough/SKILL.md · verdict",
+            "verdictLabel": "Evidence first",
+            "verdictPositive": true,
+            "sparkLine": "Source + run = honest record.",
+            "durationSeconds": 20.5
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-11T15:28:38.890666+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 20.54,
+      "render_duration_s": 20.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T13:21:34"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "HANDOFF",
+      "role_note": "ClaudeComposerAsk916 portrait — Your turn. Same content as landscape B11.",
+      "narration_text": "Your turn. Here is the paste-ready prompt. 'Read skills-slash-make-slash-godot-waikthrough-slash-SKILL-dot-M-D in full. I have a Godot 4 project at [path]. Produce a Phase 1 feature inventory: list every implemented feature from source and mark each as built, planned, or broken. Then write coverage-dot-json for my game.' Replace [path] with any Godot 4 project folder you have. When Claude comes back, verify the inventory against what you know the game actually does. If a feature is missing, ask it to read that specific script and trace the input path. The inventory quality is the quality of the walkthrough film. Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 50,
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card portrait"
+          },
+          {
+            "at": "0.06",
+            "event": "greeting 'Your turn.' appears"
+          },
+          {
+            "at": "0.12",
+            "event": "prompt types"
+          },
+          {
+            "at": "0.62",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "running text appears"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · GODOT-WAIKTHROUGH",
+            "segment": "Your Godot Project",
+            "command": "Read skills/make/godot-waikthrough/SKILL.md in full. I have a Godot 4 project at [path]. Produce a Phase 1 feature inventory: list every implemented feature from source and mark each as built, planned, or broken. Then write coverage.json for my game.",
+            "runningText": "reading your Godot project…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "High",
+            "output": [
+              "Feature inventory built.",
+              "coverage.json ready.",
+              "Check: does the inventory match the game?"
+            ],
+            "animateTyping": true
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-11T11:35:39.533089+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 33.83,
+      "render_duration_s": 33.833333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T13:21:34"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — ClaudeTitleOutro916. @NikBearBrown HARDCODED per OUTRO-LOCK.md. Slug-seeded. Silent under jingle.",
+      "narration_text": "Liam, in for Bear.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 7,
+      "audio_policy": "silence",
+      "shot": {
+        "type": "GRAPHIC",
+        "class": "SHOW",
+        "source": "remotion",
+        "motion": "mascot-title",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title 'The godot-waikthrough Skill.' portrait — EB Garamond"
+          },
+          {
+            "at": "0.25",
+            "event": "@NikBearBrown handle beneath"
+          },
+          {
+            "at": "0.45",
+            "event": "mascot animation (slug-seeded)"
+          },
+          {
+            "at": "0.7",
+            "event": "jingle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The godot-waikthrough Skill",
+            "slug": "claude-liam-brutalist-skill-godot-waikthrough"
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-09-11T11:35:54.844190+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 7.0,
+      "render_duration_s": 7.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-11T13:21:34"
+      }
+    }
+  ]
+}

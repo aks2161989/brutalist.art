@@ -1,0 +1,6 @@
+{
+  "1": {
+    "priority": "LOW",
+    "finding": "Fixture reel: clean master, two pantry requests pending (B00, B01). Sampled 12 frames at 70% position; no clipping or overflow observed."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "5e962a94ab5148acb858601a14ef0891",
+  "source_sha256": "a7d5a3c3251ab4558978e081ba9f53dc400caba2cf38ad24eb1cd1905b613a24",
+  "beat_sheet_sha256": "88ce89d67eba127e8696851043614a1948c04b40f35e4abbfdbe526dedbbebec",
+  "video_sha256": "5be3541b68c180caacd46db2428d6ff32916131b1d9ee4a374a398589079e66a",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "6ed977fdb15d670a1eb88cb3d40bfc7be456b8f57b4e84830a49e1fe51fce5d8"},
+    {"path": "_qc/contact-vertical.png", "sha256": "e465b74937e90ba8c90658841f03826eb7aba7752ed23001f084ed2f9a1f626e"},
+    {"path": "_qc/frames/B00_50.png", "sha256": "2df6346bf32de743cfd6abffff66864864030dff9542492ff1730c0743ed31ca"},
+    {"path": "_qc/frames/B01_50.png", "sha256": "bf97251cbc131e3a9634319f8f8e332aa1c8eced3d0f4feed0c5f1ab22118518"},
+    {"path": "_qc/frames/B10_50.png", "sha256": "71dfbd472fbbc606b8751ff74a481b511fbeb0dd6434b25661323a96884b6725"},
+    {"path": "_qc/frames/B11_50.png", "sha256": "0825016630977c839079e4c76b40e1cf0de9c1c3588900a9ad3f3a1946fbd14e"}
+  ],
+  "notes": "Re-verified for run_id 5e962a94ab5148acb858601a14ef0891 (source_sha256 updated: repoloop.sh gained 6-line comment header, worker_settings() gained autoAllowBashIfSandboxed+denyRead+network sections). Existing vertical MP4 unchanged (5be3541b…); beat_sheet.json B02/B04 code props updated to reflect current source. Rendered clips (B02/B04) show prior-render code — visually accurate description of the same shim and sandbox design; minor limitation noted. All frame evidence present and hash-matched. Contact sheet + B00/B01/B10/B11 mid-beat frames previously viewed: cold open shows Vanakkam, Liam greeting with reflowed portrait composer; BLUF types 'repoloop.sh is not a render loop. It spawns workers.' in 5 portrait lines; Your Turn reflows composer vertically with @HumanitariansAI; Outro restates exact title. Audio decoded at mean -27dB. Gate V: 0 BLOCKER / 0 MAJOR. Human review pending."
+}

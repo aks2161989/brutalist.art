@@ -1,0 +1,32 @@
+{
+ "metadata": {
+  "title": "Demo Canonical",
+  "slug": "demo-canonical",
+  "kind": "explainer",
+  "voice_id": "legacy-eleven-id-should-be-dropped",
+  "engine": "elevenlabs",
+  "voice": "someone"
+ },
+ "beats": [
+  {
+   "beat_id": "B00",
+   "narration_text": "Cold open ask.",
+   "actual_duration_s": 5.0,
+   "shot": {
+    "remotion": {
+     "pattern": "ClaudeComposerAsk",
+     "rendered": {
+      "out": "media/B00.mp4",
+      "at": "old"
+     }
+    }
+   }
+  },
+  {
+   "beat_id": "B01",
+   "narration_text": "One body beat.",
+   "actual_duration_s": 7.5,
+   "shot": {"remotion": {"pattern": "ClaudeCodeBeat"}}
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+  ClaudeComposerAsk            RENDERABLE   16:9   props: command, topic, segment, greeting, runningText, output
+  ClaudeCodeBeat               RENDERABLE   16:9   props: title, code, sparkLine

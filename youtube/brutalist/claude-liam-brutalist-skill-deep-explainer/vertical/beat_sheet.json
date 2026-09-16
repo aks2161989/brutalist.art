@@ -1,0 +1,955 @@
+{
+  "metadata": {
+    "title": "The deep-explainer Skill",
+    "slug": "claude-liam-brutalist-skill-deep-explainer-vertical",
+    "topic": "BRUTALIST · SKILLS · DEEP-EXPLAINER",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Namaste, Liam",
+    "greeting_note": "hello lexicon: Hindi. Wagwan check: sum('claude-liam-brutalist-skill-deep-explainer') mod 10 != 0, not a Wagwan reel.",
+    "folderLabel": "@HumanitariansAI",
+    "in_for_bear": true,
+    "playlist": "Brutalist",
+    "captions": false,
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "note": "Deep-explainer skill teardown. Source: skills/make/deep-explainer/SKILL.md (SHA-256 7e3ab3a9…, invocation source_sha256 6dfb7aee…). SKILL.md updated 2026-09-11: body framing shifted to 'executed examples, data and diagrams first'; B07 updated accordingly. @HumanitariansAI playlist. Outro locked @NikBearBrown per OUTRO-LOCK.md. No pantry stills — VOX LAW returns zero for a SKILL.md evidence film. No paid API, no upload. VERTICAL companion: portrait beats via native <Pattern>916 compositions; no beats cut.",
+    "kind": "vertical",
+    "build": {
+      "at": "2026-09-11T16:16:45",
+      "cut": "master",
+      "filled": 15,
+      "of": 15,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B16: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open",
+      "narration_text": "Namaste — this is Liam, in for Bear. There is a skill called deep-explainer that most fellows will skip past thinking it is just a longer version of ai-explainer. It is not. So I asked Claude to read the whole SKILL.md and tell me what makes it its own thing.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0%",
+            "event": "composer cold-opens; spark + 'Namaste, Liam' greeting settles"
+          },
+          {
+            "at": "18%",
+            "event": "command types itself in: the deep-explainer question"
+          },
+          {
+            "at": "55%",
+            "event": "send arms; runningText plays"
+          },
+          {
+            "at": "75%",
+            "event": "RESULT lines land in sequence"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Namaste, Liam",
+            "topic": "BRUTALIST · SKILLS · DEEP-EXPLAINER",
+            "segment": "The deep-explainer Skill",
+            "command": "what does the deep-explainer skill actually do differently from ai-explainer?",
+            "runningText": "reading SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "output": [
+              "extends ai-explainer; adds an act structure",
+              "vox is evidence, not texture — no quota",
+              "two hard gates the parent chassis lacks"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T12:48:46.950693+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 13.95,
+      "render_duration_s": 13.958333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "hesitant writer BLUF",
+      "narration_text": "Watch the writer walk this back. Deep-explainer is not ai-explainer stretched to five minutes. It is act-structured, with two hard gates its parent chassis does not have.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 12,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0%",
+            "event": "first breath: writer types the misconception in serif"
+          },
+          {
+            "at": "45%",
+            "event": "'just ai-explainer, made longer' turns terracotta (about to be deleted)"
+          },
+          {
+            "at": "60%",
+            "event": "replacement types in: 'act-structured, with two extra gates'"
+          },
+          {
+            "at": "90%",
+            "event": "final corrected sentence stands"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "deep-explainer\nis\na longer\nai-explainer.",
+            "triggerWords": "longer",
+            "replacementWords": "deeper",
+            "seed": "deep-explainer-2026-09-08",
+            "fontSize": 140,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 40,
+            "jitter": 20,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T13:02:14.675739+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 9.73,
+      "render_duration_s": 9.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "Act I — What the skill IS",
+      "narration_text": "Every skill on this toolkit is a folder Claude reads before working. Deep-explainer is a SKILL dot m-d plus three reference files — continuity, shopping list, and vox beats. The doctrine is small. What it inherits is not.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0-25%",
+            "event": "eyebrow + title settle: 'A skill is a folder Claude reads.'"
+          },
+          {
+            "at": "25-80%",
+            "event": "folder tree reveals file by file — SKILL.md accent"
+          },
+          {
+            "at": "80-100%",
+            "event": "callout lands: 'small doctrine, big inheritance'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "deep-explainer",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "A skill is a folder Claude reads.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/deep-explainer/",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "size": "23 KB",
+                "accent": true,
+                "tag": "DOCTRINE"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "reference/",
+                "accent": false
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "continuity.md",
+                "size": "3 KB",
+                "accent": false
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "shopping-list.md",
+                "size": "5 KB",
+                "accent": false
+              },
+              {
+                "indent": 2,
+                "icon": "📄",
+                "name": "vox-beats.md",
+                "size": "4 KB",
+                "accent": false
+              }
+            ],
+            "calloutText": "The doctrine is small. What it <b>inherits</b> is not.",
+            "calloutSub": "extends ai-explainer → extends explainer",
+            "sparkLine": "The file is the instruction."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T12:50:16.708334+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 12.97,
+      "render_duration_s": 13.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "Act I — What the skill IS",
+      "narration_text": "Read the second line of the SKILL and it says the quiet part out loud. Deep-explainer extends ai-explainer, which extends explainer. Nothing below repeals a parent law. So the four bookends, the show-don't-tell law, the illustrate law — those all come in for free.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0-30%",
+            "event": "heading types on: 'It extends its parents.'"
+          },
+          {
+            "at": "30-70%",
+            "event": "verbatim quote card slides in from the left"
+          },
+          {
+            "at": "70-100%",
+            "event": "verdict pill lands: 'INHERITED · not owned'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · LINEAGE",
+            "heading": "It extends its parents.",
+            "body": "Bookends, brand, laws, illustrate law, show-don't-tell law — all inherited from ai-explainer and explainer. Deep-explainer only adds the genre's own contracts.",
+            "quote": "This skill EXTENDS ai-explainer, which extends explainer. Nothing below repeals a parent law; this file only adds the genre's own contracts.",
+            "cite": "Anthropic user (Brutalist), deep-explainer SKILL.md",
+            "verdictLabel": "INHERITED · not owned",
+            "verdictPositive": true,
+            "sparkLine": "The parents govern."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T12:51:05.467003+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 14.53,
+      "render_duration_s": 14.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "Act I — What the skill IS",
+      "narration_text": "Here is the spine, fixed. Cold open. Hesitant-writer overview. Then acts one through N — the documentary body. Then the verdict recap, the YOUR TURN prompt, and the title outro. The middle is what deep-explainer owns.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 16,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0-15%",
+            "event": "title settles: 'The fixed spine.'"
+          },
+          {
+            "at": "15-95%",
+            "event": "six nodes light up left-to-right on the spoken cue"
+          },
+          {
+            "at": "95-100%",
+            "event": "footer note: 'acts are 4–8 beats each'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline916",
+          "props": {
+            "eyebrow": "SKILL · SPINE",
+            "title": "The fixed spine.",
+            "inputLabel": "Cold open",
+            "outputLabel": "Title outro",
+            "phases": [
+              {
+                "label": "Hesitant writer",
+                "desc": "the BLUF",
+                "accent": false
+              },
+              {
+                "label": "Acts I–N",
+                "desc": "the documentary body",
+                "accent": true
+              },
+              {
+                "label": "Verdict recap",
+                "desc": "the split",
+                "accent": false
+              },
+              {
+                "label": "YOUR TURN",
+                "desc": "read and discuss",
+                "accent": false
+              }
+            ],
+            "footerNote": "Acts are 4–8 beats each. The middle is what this skill owns.",
+            "sparkLine": "One spine, every deep reel."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T12:51:50.502552+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 12.59,
+      "render_duration_s": 12.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "Act II — What makes it deep",
+      "narration_text": "The first rule is a rule about restraint. The five-to-ten minute band is a natural landing zone for a multi-act concept — never a target to pad toward. Deep-explainer is not make it longer. It is: this idea needs several linked mechanisms, each with its own evidence.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0-30%",
+            "event": "heading: 'Multi-act, not padded.'"
+          },
+          {
+            "at": "30-70%",
+            "event": "quote card slides in with the arc-lands line"
+          },
+          {
+            "at": "70-100%",
+            "event": "verdict pill: 'PACING · duration is an OUTPUT'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "ACT II · SKILL PACING",
+            "heading": "Multi-act, not padded.",
+            "body": "The 5–10 min band is the natural landing zone for a MULTI-ACT concept — several mechanisms, each with its own evidence. Never a target to pad toward.",
+            "quote": "If the arc lands at 4:40, ship 4:40.",
+            "cite": "deep-explainer SKILL.md · Lineage — Pacing",
+            "verdictLabel": "PACING · duration is an OUTPUT",
+            "verdictPositive": true,
+            "sparkLine": "Duration is an output."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T12:52:35.838336+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 15.23,
+      "render_duration_s": 15.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "Act II — What makes it deep",
+      "narration_text": "The old skill had a vox quota — twenty to twenty-five percent of body beats had to be pantry stills. That quota is dead. The updated doctrine names the preferred mode: executed examples, data, and diagrams. A still earns its beat only when the still IS the evidence. And zero vox beats can be a correct outcome.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0-25%",
+            "event": "heading: 'Executed examples first.'"
+          },
+          {
+            "at": "25-70%",
+            "event": "quote card lands with the zero-vox line"
+          },
+          {
+            "at": "70-100%",
+            "event": "verdict pill: 'EXECUTED EXAMPLES FIRST'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · VOX LAW",
+            "heading": "Executed examples first.",
+            "body": "The preferred mode: executed examples, data, and diagrams. A still earns its beat only when the still IS the evidence — not texture, not atmosphere. The old 20–25% quota is superseded.",
+            "quote": "A film whose evidence is text, code, or data correctly has zero vox beats.",
+            "cite": "deep-explainer SKILL.md · THE BEAT MIX (VOX LAW governs)",
+            "verdictLabel": "EXECUTED EXAMPLES FIRST",
+            "verdictPositive": true,
+            "sparkLine": "Executed examples first."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-11T20:13:46.122846+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 17.13,
+      "render_duration_s": 17.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "Act II — What makes it deep",
+      "narration_text": "Documentary continuity is expensive. Deep-explainer scopes it hard: continuity chains only inside a vox run — two or three consecutive vox beats authored as one camera move. A run never crosses an act boundary, and the max length is three beats. Everywhere else, a hard cut.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0-25%",
+            "event": "heading: 'Continuity is scoped.'"
+          },
+          {
+            "at": "25-70%",
+            "event": "quote card lands: 'Never attempt frame-continuity …'"
+          },
+          {
+            "at": "70-100%",
+            "event": "verdict pill: 'MAX RUN = 3 BEATS'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · CONTINUITY",
+            "heading": "Continuity is scoped.",
+            "body": "One-continuous-shot continuity is scoped to vox runs — 2–3 consecutive vox beats as one camera move. Never across acts. Max run length: 3. Everywhere else, a hard cut.",
+            "quote": "Never attempt frame-continuity across the whole episode.",
+            "cite": "deep-explainer SKILL.md · CONTINUITY",
+            "verdictLabel": "MAX RUN · 3 BEATS",
+            "verdictPositive": true,
+            "sparkLine": "Continuity costs; scope it."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T12:54:08.021624+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 15.47,
+      "render_duration_s": 15.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "Act III — The two hard gates",
+      "narration_text": "Gate D-one: the first compile is always a full-length watchable previz. Vox beats render as slates — beat id plus narration line. Manim and Remotion render for real. Audio is real. This is honest by design. At this length, the pantry is the bottleneck, and the previz is what a human reviews for pacing.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0-25%",
+            "event": "heading: 'Gate D1 — the slate previz.'"
+          },
+          {
+            "at": "25-70%",
+            "event": "quote card lands: 'Never present a previz as a finished cut.'"
+          },
+          {
+            "at": "70-100%",
+            "event": "verdict pill: 'FIRST DELIVERABLE'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "ACT III · SKILL GATE D1",
+            "heading": "Gate D1 — the slate previz.",
+            "body": "First compile is always a full-length watchable previz. Vox beats render as slates. Manim and Remotion render for real. Audio is real. The previz is what a human reviews for pacing.",
+            "quote": "Never present a previz as a finished cut.",
+            "cite": "deep-explainer SKILL.md · Gate D1",
+            "verdictLabel": "FIRST DELIVERABLE",
+            "verdictPositive": true,
+            "sparkLine": "Slates first, honestly."
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T12:54:54.210124+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 17.6,
+      "render_duration_s": 17.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "Act III — The two hard gates",
+      "narration_text": "Gate D-two: the shopping list. Written AFTER audio lock, never before. A card written before the beat's real length is known can only ask for a clip of X. After lock, it asks for at least seven point two seconds of X. Then trimming — lossless — becomes the default. Stretching — lossy — never has to happen.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0-25%",
+            "event": "heading: 'Gate D2 — the shopping list.'"
+          },
+          {
+            "at": "25-70%",
+            "event": "quote card lands: 'SHOPPING.md is written after audio lock (never before).'"
+          },
+          {
+            "at": "70-100%",
+            "event": "verdict pill: 'TRIM > STRETCH'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · GATE D2",
+            "heading": "Gate D2 — the shopping list.",
+            "body": "Written AFTER audio lock. A card written before the beat's real length is known can only ask for 'a clip of X.' After lock, it asks for '≥ 7.2s of X.' Trim (lossless) wins over stretch (lossy).",
+            "quote": "SHOPPING.md is written after audio lock (never before).",
+            "cite": "deep-explainer SKILL.md · Gate D2",
+            "verdictLabel": "TRIM > STRETCH",
+            "verdictPositive": true,
+            "sparkLine": "Trim wins over stretch."
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T12:55:41.338286+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 16.23,
+      "render_duration_s": 16.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "Act IV — Running it (and the limitation)",
+      "narration_text": "Here is what a finished deep-explainer folder actually contains. The beat sheet is the heart. The build prompt, the build log, the factcheck, the sources, the shopping list. Then the working slots — pantry, media, manim, clips, and m-p-three. Every reel builds into its owning book, never into the toolkit.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0-15%",
+            "event": "eyebrow + title settle: 'The output contract.'"
+          },
+          {
+            "at": "15-85%",
+            "event": "folder tree reveals: beat_sheet accent, then paperwork, then slots"
+          },
+          {
+            "at": "85-100%",
+            "event": "callout: 'built into the owning book, never the toolkit'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy916",
+          "props": {
+            "skillName": "deep-explainer",
+            "eyebrow": "SKILL · OUTPUT CONTRACT",
+            "title": "The output contract.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "[book]/youtube/[slug]/",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "beat_sheet.json",
+                "accent": true,
+                "tag": "HEART"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "BUILD-PROMPT.md",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "BUILD-LOG.md",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "FACTCHECK.md",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SHOPPING.md",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SOURCES.md",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "pantry/  media/  manim/  clips/  mp3/",
+                "accent": false
+              }
+            ],
+            "calloutText": "Built into the <b>owning book</b> — never into the toolkit.",
+            "calloutSub": "slug convention: [channel]-[concept] (default claude-liam-…)",
+            "sparkLine": "Every reel, this shape."
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-09-08T12:56:28.553522+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 15.91,
+      "render_duration_s": 15.916666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "Act IV — Running it (and the limitation)",
+      "narration_text": "Now the limitation of this film. Actually running deep-explainer end to end would take pantry sourcing, a human review pass, and five to ten minutes of narration. What you have watched is the skill's mechanism read from its own SKILL.md — quotes verbatim, cites shown. When you run it yourself, this is the doctrine your Claude is following.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": "0-30%",
+            "event": "heading: 'The honest limitation.'"
+          },
+          {
+            "at": "30-100%",
+            "event": "body settles; verdict pill: 'DOCUMENTED LIMITATION'"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "SKILL · LIMITATION",
+            "heading": "The honest limitation.",
+            "body": "A full end-to-end run needs pantry stills, human review of the shopping list, and 5–10 minutes of narration. This film shows the skill's mechanism read from its own SKILL.md — verbatim quotes, cites on card. When you run it yourself, this is the doctrine your Claude is following.",
+            "verdictLabel": "DOCUMENTED LIMITATION",
+            "verdictPositive": false,
+            "sparkLine": "The limitation is the finding."
+          },
+          "rendered": {
+            "out": "media/B13.mp4",
+            "at": "2026-09-08T12:57:14.041021+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 17.88,
+      "render_duration_s": 17.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B13.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "verdict",
+      "narration_text": "So the split. Bookends inherited. Middle owned. Two gates on top. Reach for deep-explainer when the source is multi-act — several mechanisms, each needing its own evidence. Reach for ai-explainer when it is one insight.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 15,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0-15%",
+            "event": "artifact card scales up on the cream stage"
+          },
+          {
+            "at": "15-30%",
+            "event": "heading types on: 'The deep-explainer split.'"
+          },
+          {
+            "at": "30-100%",
+            "event": "three numbered verdict lines reveal on the spoken cue"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict — the deep-explainer split",
+            "artifactHeading": "The deep-explainer split.",
+            "artifactLines": [
+              "Bookends INHERITED from ai-explainer — cold open, hesitant writer, verdict, YOUR TURN, outro.",
+              "Middle OWNED by this skill — multi-act body, VOX LAW, pantry, shopping list.",
+              "Gate D1 — first compile is a full-length watchable previz. Slates are honest.",
+              "Gate D2 — shopping list is written AFTER audio lock, so trim (lossless) beats stretch (lossy).",
+              "REACH FOR IT when the source is multi-act — several linked mechanisms, each with evidence.",
+              "REACH ELSEWHERE — ai-explainer for one insight; math-explainer for math; cli-explainer for a build."
+            ]
+          },
+          "rendered": {
+            "out": "media/B14.mp4",
+            "at": "2026-09-08T12:57:48.518603+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B14.mp3",
+      "actual_duration_s": 12.59,
+      "render_duration_s": 12.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B14.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. Paste this into Claude. It asks the skill to plan an episode of a chapter you care about — and to show you the act map and the lane histogram BEFORE it authors a single beat. Look for two things in the reply. First, does it name several linked mechanisms? Second, does it push back and send you to ai-explainer when your source is really one insight? Both answers matter.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0-10%",
+            "event": "composer opens; 'Your turn.' greeting"
+          },
+          {
+            "at": "10-60%",
+            "event": "the paste-ready prompt types itself in"
+          },
+          {
+            "at": "60-75%",
+            "event": "runningText plays: 'paste this into Claude…'"
+          },
+          {
+            "at": "75-100%",
+            "event": "narration discusses what to look for in Claude's reply"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "BRUTALIST · DEEP-EXPLAINER · YOUR TURN",
+            "segment": "Run the Skill",
+            "command": "claude \"read skills/make/deep-explainer/SKILL.md, then plan a 5-10 minute deep-explainer of a chapter I care about. Show me the act map and the lane histogram before you author a single beat. If the source is one insight, tell me to use ai-explainer instead.\"",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@HumanitariansAI",
+            "output": []
+          },
+          "rendered": {
+            "out": "media/B15.mp4",
+            "at": "2026-09-08T12:58:28.011809+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B15.mp3",
+      "actual_duration_s": 19.22,
+      "render_duration_s": 19.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B15.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T16:16:45"
+      }
+    },
+    {
+      "beat_id": "B16",
+      "act": "title outro",
+      "narration_text": "The deep-explainer Skill. Liam, in for Bear, for at Humanitarians A-I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 7,
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0-30%",
+            "event": "title 'The deep-explainer Skill.' rises with terracotta period"
+          },
+          {
+            "at": "30-70%",
+            "event": "handle @NikBearBrown settles beneath"
+          },
+          {
+            "at": "70-100%",
+            "event": "slug-seeded mascot lands under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The deep-explainer Skill.",
+            "slug": "claude-liam-brutalist-skill-deep-explainer"
+          },
+          "rendered": {
+            "out": "media/B16.mp4",
+            "at": "2026-09-08T12:58:43.016680+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B16.mp3",
+      "actual_duration_s": 4.84,
+      "render_duration_s": 4.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B16.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-11T16:16:45"
+      }
+    }
+  ]
+}

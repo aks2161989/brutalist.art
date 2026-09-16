@@ -1,0 +1,30 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "What ./art --list actually prints: a hand-typed 21-line skills table (1 header + 20 skills, updated to include godot-waikthrough, godot-gamedev, godot-gdd and riff), from a single case branch shared by two aliases (--list and bare list). It is a printer, not a runner — extras are silently ignored, and the near-miss ./art -list exits 2 with a hint on stdout.",
+  "parent_reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-command-list",
+  "parent_master_sha256": "77351a7c1e0b79dc268d2968dd6fbc4e2f37504651b205a189a201742d6eab25",
+  "parent_source_sha256": "d0f66c7a93173203ef76f94e5395625f55cbfdfa2386abfef9a786d2b1c9c8e4",
+  "run_id": "4b6e445b538846a4aa2b96c4dc361331",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B07", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {
+      "beat_id": "B02",
+      "reason": "FRAMEWORK — the whole dispatcher case statement with the --list|list) pattern. B03 already shows the actual body (the 21 printfs) that this framework beat only points at, and B09 verdict explicitly restates 'two aliases, one branch'. Keeping B02 duplicates the two-aliases-one-branch idea in a wider tour that a Short can shed."
+    },
+    {
+      "beat_id": "B05",
+      "reason": "MECHANISM — a deep read of the printf format string '%-22s %s\\n' (22-char gutter, decomposed slot-by-slot). Useful in the long film, but the Short already shows the aligned output verbatim in B04; the alignment story is legible from the output itself. Dropping this saves ~17.9s of code-cascade detail that belongs in the long."
+    },
+    {
+      "beat_id": "B06",
+      "reason": "MECHANISM — extras-are-ignored side proof (./art list foo bar prints the same 21 lines; diff both invocations; contrast with a runner branch like scenes). The Short's B01 BLUF already establishes printer-vs-runner, and B09 verdict restates 'extra positional arguments — silently ignored'. Removing this saves ~17.5s without losing the printer-not-runner claim."
+    },
+    {
+      "beat_id": "B10",
+      "reason": "YOUR TURN composer with the extended paste-into-Claude-Code exercise (run both aliases, save stdouts, diff, wc -l, count printfs, then check -list and list foo bar). Cut-first override permits dropping the extended exercise from a Short; the long film retains it in full. Saves 20.0s so the outro lands immediately after the verdict."
+    }
+  ],
+  "cut_first_review": "Retained arc: (B00) Liam introduces --list as smaller and more literal than fellows assume — twenty hand-typed rows, no scan; (B01) hesitant BLUF corrects 'runs the skills' → 'prints the catalog', twenty rows, one dispatcher; (B03) shows the actual body (21 printf calls in art:58-80) — no lookup, no scan, no config; (B04) shows the verbatim 21-line terminal output (one header + 20 skills, table now includes four godot skills and riff, exit 0); (B07) FALSIFIABILITY — the near-miss ./art -list (single dash) falls to the catch-all, exits 2, and its hint lands on stdout via bare echo (redirect-loss caveat); (B08) recovery arc — ./art --list to see the names, then ./art <skill> --help to open that skill's SKILL.md in $PAGER; (B09) verdict summarises the split (printer, two aliases, one branch, twenty skills, extras ignored, unknown-token behavior, recovery, scope vs ./art help); (B11) outro sign-off. Transitions work because B00 seeds the two claims (aliases share a branch; the branch is a printer of a hand-typed table); B03/B04 pay them off directly; B07/B08 handle failure→recovery in the fellow-relevant order; B09 restates the split cleanly. Nothing in B09 depends on a dropped beat: 'extras ignored' is stated as a summary line for an audience of Brutalist fellows already using Claude Code and Unix conventions. Source rebuilt 2026-09-12: 20 skills (was 16), narration updated throughout.",
+  "planned_duration_s": 127.79,
+  "rewrite_reason": null
+}

@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "07663aa5c9f343758157ff7530f463d7",
+  "source_sha256": "eaeb9039c38691606a165ceba147dfd3ca0334ca593fe38b9199f6823d35b863",
+  "beat_sheet_sha256": "a87760d268858d6890e7763d29d4ddbe897aedd2876da734355e01bcc86da205",
+  "video_sha256": "24c49950c0aa8583f57c285cd67250a28ae1673c2367baf37de89fe02bf7d56e",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png", "sha256": "217f7aad25c29d42d09064db4611efae432f5323100ca618eff4273a10aa7fc2"}
+  ],
+  "notes": "Re-verified 2026-09-11 under run_id 07663aa5c9f343758157ff7530f463d7. MP4 SHA-256 24c49950... confirmed on disk; matches .verified.json (state: ready, 170.46s). Beat sheet SHA-256 a87760d2... confirmed unchanged. Source_sha256 changed from prior run due to toolkit commits ba2d0e0 (preserve report audio, enforce safe fellows exports) and 7ee2da6 (ElevenLabs permanently removed; Liam Kokoro everywhere) — neither commit touches EP 01 sources (ai-explainer SKILL.md, beat content, audio, or scene source). FEEDBACK.md has no human notes. Contact sheet _qc/contact_sheet.png (SHA-256 217f7aad...) read and confirmed: B00 ClaudeComposerAsk cold-open with 'Ciao, Liam' and three concrete result lines; B01 BrutalistHesitantWriter correcting 'plain-text-recipe / your-film' to 'plain-text-recipe / for-film'; B02 WibRecipe beat_sheet.json snippet paired with rendered composer; B03 WibPipeline BRIEF→BEAT SHEET→AUDIO→SCENES→COMPILE→4K MASTER; B04 WibChange one-field edit producing 'Hola, Liam.' on screen; B05 WibDivision HUMAN/AGENT two-lane split; B06 WibNotClaims three limit cards; B07 WibVerdict 'Film as code, in three lines.' artifact card; B08 ClaudeComposerAsk 'Your Turn' paste-ready prompt; B09 WibOutro title restate '@HumanitariansAI' and 'Liam, in for Bear.' No captions, no slates, no clipping observed. Gate V: 0 BLOCKER, 0 MAJOR. Human review pending; Bear watches next."
+}

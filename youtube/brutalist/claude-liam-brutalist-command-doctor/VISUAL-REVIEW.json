@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "5c2c1dda1a4548798796300fb24665e1",
+  "source_sha256": "83bf8a6815768028aee4bff000d45efd17fe3fd3878c7a0cac7fef9cb6fbd932",
+  "beat_sheet_sha256": "b304634a64ac8c7bf853c451888ebc62e0761efa77c15fa9fc06bf0108a66849",
+  "video_sha256": "52ddf47be2693edcece88d2c8f2b5e9cffba0edc20ed6ce668a8b44c527a3336",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png",               "sha256": "0fc4432ec2e87d4e2d3cc0015c3876bb37093552eb72c03e2ff37e0fbc75e40a"},
+    {"path": "_qc/frames-landscape/B02_50.png",      "sha256": "5a212545d888b091ef9f5f2257a54f705a8e7877fa9a050cb81ce90253ba57e6"},
+    {"path": "_qc/frames-landscape/B02_85.png",      "sha256": "2f19147f3a1c8278f852eb9b95241dfaafab35c91f0c4301614938b9b1526ac5"}
+  ],
+  "notes": "Rebuild triggered by source change: art dispatcher case moved from art:96-99 to art:117-121 (two new commands 'vertical' and 'approvals' added above doctor in the dispatch table). Only B02 changed — title card updated from 'art:96-99' to 'art:117-121'. B02 re-rendered via ClaudeCodeBeat, both aspects recompiled. Inspected B02_50 and B02_85 frames: title bar reads 'art:117-121 — one branch, no aliases'; code block legible; spark line 'One case. No aliases. One script.' present. 3840x2160 h264 master, 216.8s, aac audio 216.8s. Gate V: 24 frames, BLOCKER 0, MAJOR 0. Audio decode verified (aac stream present). All other beats unchanged from previous build (run_id 22ff8413d025455cba847ff321663dff). Motion histogram code-cascade:7 warning carried over — expected for command teardown. Minor limitation carried across playlist: outro card (B11) reads @NikBearBrown per OUTRO-LOCK.md rather than @HumanitariansAI — flagged in README.md. Human review pending."
+}

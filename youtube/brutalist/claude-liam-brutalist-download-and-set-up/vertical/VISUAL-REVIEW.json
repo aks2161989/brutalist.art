@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "db8a5a5b2c0f4d74a8c148cc6c2b2e9e",
+  "source_sha256": "eaeb9039c38691606a165ceba147dfd3ca0334ca593fe38b9199f6823d35b863",
+  "beat_sheet_sha256": "e93600c0ef221acaf92478779e709b19e8c06f0963f844b9f0fe7ce0379e36b1",
+  "video_sha256": "77e741e2b946a9efa2d659dbaa805e893c4126117bc0b7c7d3b04899a843d7a8",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/vertical-contact-sheet.png", "sha256": "8f99794584a6c674d65a23ebd5034751ff404b6f5f78d137470c0d57f50e3d8f"}
+  ],
+  "notes": "Re-verification pass for invocation db8a5a5b2c0f4d74a8c148cc6c2b2e9e. Source change from prior run ce92be0c: docs/PIPELINE-SAFETY.md and docs/FELLOWS-SUBMISSION.md newly added; art script updated with 'vertical' and 'approvals' commands. Episode content unaffected — narration teaches clone/setup/doctor/subscription-vs-API with no reference to the new art commands or submission docs. All 10 portrait beats carry forward unchanged. Vertical MP4 hash matches run ce92be0c (77e741e2…). ffprobe: h264 2160×3840 24fps 165.04s video + 165.08s audio. Vertical contact sheet read in this session: B00 portrait ClaudeComposerAsk916 — 'Download Brutalist / Ciao, Liam' stacked layout, composer card fills portrait safe area, HAI chip present; B01 BrutalistHesitantWriter916 — portrait 6-line layout, 'installer' showing in terracotta (mid-correction), then final 'Downloading Brutalist is just a git-clone.' fully visible and covering safe area; B02 DbcPasteReady916 — 'One paste. Two commands.' stacked portrait card legible; B03 DbcCloneTree916 — 'A folder. Nothing outside it.' tree rows in portrait fully readable; B04 DbcDoctor916 — 'Green means ready.' dark terminal rows visible in portrait; B05 DbcLanes916 — 'Subscription. Optional key. Free pipeline.' three lanes stack vertically with $0 banner inside safe area; B06 DbcNotClaims916 — 'What setup won't do.' three rows legible; B07 DbcVerdict916 — 'Download Brutalist, in three lines.' numbered verdict card; B08 Your Turn portrait composer; B09 DbcOutro916 confirmed with @HumanitariansAI. Gate V: 0 BLOCKER, 0 MAJOR. Skin-lint on B00/B09 expected. Human review pending."
+}

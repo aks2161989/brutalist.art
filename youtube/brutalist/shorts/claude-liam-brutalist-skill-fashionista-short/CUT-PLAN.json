@@ -1,0 +1,19 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "fashionista is a confidence experiment, not a fashion tutorial — the ask never names the garment, video is the master clock, hedging is content, and two error lanes (generator vs describer) get logged in a CALLS.json ledger the audience corrects.",
+  "parent_master_sha256": "efe5ebdf0ae8c8ee6cabcedfaaef1e6b6482069cdbbf2709a2f4b3155146fd1f",
+  "kept_beats": ["B00", "B01", "B04", "B05", "B06", "B07", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Skill-folder anatomy (SKILL.md + books/<date>/CALLS.json tree) is generic skill-teardown scaffolding; belongs in the 16:9 long, not the Short."},
+    {"beat_id": "B03", "reason": "INTRO/THE VIDEO/OUTRO three-beat pipeline is structural setup; the retained mechanism beats already show what matters (Gate Ask, master clock, stated confidence)."},
+    {"beat_id": "B08", "reason": "CALLS.json ledger schema walk-through is a deeper dive; the retained verdict beat B09 still names the ledger and its null verdict slot."},
+    {"beat_id": "B10", "reason": "Your-Turn extended paste-in prompt (34s) is the longest single beat and per SHORTS-PROMPT the detailed Your Turn is a permissible cut for a Short."}
+  ],
+  "cut_first_review": "Opening cold-open (B00) plants the mental model — this is not a fashion series, it is an experiment and the viewer is the scoring function. BLUF (B01) hard-corrects 'tutorial' to 'experiment' and names the viewer as judge. The three design-decision beats B04/B05/B06 preserve the source's ordinal 'First / Second / Third' rhythm exactly, so the transitions still make grammatical sense with B02/B03 removed. B07 (falsifiability, two error lanes) follows naturally as the 'Nobody else does this' hero. B09 verdict recaps everything the Short established — GATE ASK, master clock, stated confidence, two error lanes, and the CALLS.json ledger with null verdict — so dropping B08 does not leave the ledger unexplained. B11 outro is Liam's sign-off, unchanged.",
+  "planned_duration_s": 160.84,
+  "rewrite_reason": null,
+  "run_id": "5112069ad63347e9ab02657ed099ad9d",
+  "source_sha256": "0f3c1370180aa7829a7cf993c808cf40b66f38aec44689fae3d19b9dc0e42609",
+  "measured_duration_s": 160.833,
+  "final_export_sha256": "9e55bb80195c6365f2e808538b291764921eb5795baf703adaa8bb4ce3a0edcd"
+}

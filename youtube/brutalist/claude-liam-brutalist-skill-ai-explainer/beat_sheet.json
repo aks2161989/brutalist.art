@@ -1,0 +1,574 @@
+{
+  "metadata": {
+    "title": "The ai-explainer Skill",
+    "slug": "claude-liam-brutalist-skill-ai-explainer",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "skill",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "16:9",
+    "captions": false,
+    "channel_title": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "note": "Self-referential teardown of the ai-explainer skill (skills/make/ai-explainer/SKILL.md, SHA-256 db5dbdc4…). SELF-DEMO LAW: this reel WAS built by ai-explainer, so every non-UI middle beat is a concept illustration, not composer wallpaper. Handle @HumanitariansAI, not @NikBearBrown. Kokoro am_onyx throughout — free, local. No captions.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/ai-explainer/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "ai-explainer",
+      "skill teardown",
+      "Claude",
+      "Humanitarians AI",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-08T00:39:28",
+      "cut": "master",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": [
+        "B10: palette=claude but the outro is 'ClaudeTitleOutroHAI' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI, ask lands answered; introduces Liam in for Bear",
+      "narration_text": "Hej, this is Liam, in for Bear. Today we tear down the skill that made this video — ai-explainer. It's the one you point Claude at when you want the Brutalist Claude cut: cream page, warm ink, one terracotta accent, a real narrator, and a whole workflow that reads a SKILL file end to end before it draws a single frame. Here's how it actually works.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hej, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The ai-explainer Skill",
+            "command": "Tear down the ai-explainer skill. Read the whole SKILL.md, explain the mechanism, and show what happens when I run it.",
+            "runningText": "reading skills/make/ai-explainer/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "a skill is a folder of instructions Claude reads first",
+              "the ai-explainer skill governs the CLAUDE-brand explainer reel",
+              "audio is the clock, visuals conform, no publishing"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T03:52:50.439937+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 18.13,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 18.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the reel's actual misconception into its claim",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy mistake is to call this skill a template pack. It isn't. It's a workflow that reads a whole SKILL file, sets the brand and voice, drives every phase, and refuses to publish. When you ask for the Claude cut, this is the file Claude opens first.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "HesitantWriterFramed",
+          "props": {
+            "eyebrow": "SKILL · BLUF",
+            "sparkLine": "A workflow, not a template.",
+            "text": "The ai-explainer skill\nis a template.\nIt reads a whole SKILL file first.",
+            "triggerWords": "template",
+            "replacementWords": "workflow",
+            "seed": "ai-explainer-bluf-2026",
+            "face": "serif",
+            "fontSize": 96,
+            "align": "center",
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T04:26:19.822067+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 13.8,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 13.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:HesitantWriterFramed",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK-FIRST — what a skill IS, before the pipeline. Anatomy of the ai-explainer folder.",
+      "narration_text": "A skill is a folder. A SKILL file at the top — the doctrine Claude reads before doing anything — and the files it references. For ai-explainer, that means the register prose, the brand file, the outro lock, the pipeline safety notes, and the parent explainer chassis it extends. The instructions govern; the code just executes them.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "remotion": {
+          "pattern": "SkillTeardownAnatomy",
+          "props": {
+            "skillName": "ai-explainer",
+            "oldName": "claude-explainer",
+            "eyebrow": "SKILL · ANATOMY",
+            "title": "A skill is a folder Claude reads first.",
+            "files": [
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "skills/make/ai-explainer/",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "SKILL.md",
+                "size": "31 KB",
+                "accent": true,
+                "tag": "doctrine"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "AUDIT-MODE.md",
+                "size": "modifier"
+              },
+              {
+                "indent": 0,
+                "icon": "📁",
+                "name": "referenced files (read too):",
+                "accent": false
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "CLAUDE-BRAND.md",
+                "size": "palette + type"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "OUTRO-LOCK.md",
+                "size": "outro card spec"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "runtime/prose/teardown/PROSE.md",
+                "size": "register"
+              },
+              {
+                "indent": 1,
+                "icon": "📄",
+                "name": "docs/PIPELINE-SAFETY.md",
+                "size": "gates"
+              },
+              {
+                "indent": 1,
+                "icon": "📁",
+                "name": "skills/make/explainer/",
+                "size": "parent chassis"
+              }
+            ],
+            "calloutText": "The <b>SKILL.md is the instruction</b>. Claude opens it, reads every referenced file, then works.",
+            "sparkLine": "Doctrine first. Then the machinery."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-08T03:54:33.314043+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 17.54,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 17.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownAnatomy",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — phases and contracts, source: SKILL.md §Flow",
+      "narration_text": "The skill runs one pipeline, always in the same order. Scaffold the folder and brand metadata. Write narration in the Teardown register. Generate the voice locally with Kokoro — that's the clock. Fill each beat's visual slot from Remotion scenes, Manim fragments, or Onda code blocks. Then compile to a four K master beside the reel. Never uploads. Never publishes.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "One pipeline, five phases, one master.",
+            "inputLabel": "SKILL.md + topic",
+            "outputLabel": "<slug>.mp4",
+            "phases": [
+              {
+                "label": "Scaffold",
+                "desc": "brand_variant.py — folder + metadata"
+              },
+              {
+                "label": "Narrate",
+                "desc": "Teardown register per PROSE.md"
+              },
+              {
+                "label": "Audio",
+                "desc": "Kokoro am_onyx — the clock",
+                "accent": true
+              },
+              {
+                "label": "Visuals",
+                "desc": "Remotion + Manim + Onda"
+              },
+              {
+                "label": "Compile",
+                "desc": "compile.py → conform + mux"
+              }
+            ],
+            "footerNote": "Audio-first. Every visual conforms to the measured voice.",
+            "sparkLine": "The voice measures. Everything else conforms."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T03:55:20.904681+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 19.82,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 19.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "Design decision 1 — the fixed bookend spine. Cold open, BLUF, body, verdict, handoff, outro.",
+      "narration_text": "The first design decision is the shape of every reel. Cold open on the Claude composer. Beat two is a hesitant writer, correcting a real misconception into the reel's actual claim. The body illustrates. The verdict is an artifact card. The handoff types a paste-ready prompt. The outro restates the title. Same six moves, every episode.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 1",
+            "heading": "Fixed bookends. Free interior.",
+            "body": "Cold open · BLUF · body · verdict · handoff · outro. Six moves in the same order every time — so the middle can be anything the concept needs.",
+            "quote": "The bookends do not change… The modifier governs the MIDDLE.",
+            "cite": "ai-explainer SKILL.md",
+            "verdictLabel": "predictable spine, teachable frame",
+            "verdictPositive": true,
+            "sparkLine": "The shape is a contract."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-08T03:56:12.937483+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 18.18,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 18.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "Design decision 2 — ILLUSTRATE LAW. Anti-wallpaper: the UI earns its beats.",
+      "narration_text": "Second decision. The Claude interface only appears where the interface is the subject — cold open, ask beats, verdict, handoff, outro. Every other beat has to ILLUSTRATE its concept: a diagram, a Manim fragment, an Onda code block, a Remotion illustration. Two composer beats in a row is the smell. Seven videos of composer wallpaper is the failure this law exists to prevent.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 2",
+            "heading": "The UI earns its beats.",
+            "body": "Composer only where the composer IS the subject. Every other beat illustrates the concept — diagram, Manim, code block, custom illustration.",
+            "quote": "Two consecutive beats sharing the same visual scheme is the smell; seven videos of composer wallpaper is the failure this law exists to prevent.",
+            "cite": "ai-explainer SKILL.md — ILLUSTRATE LAW",
+            "verdictLabel": "kills wallpaper reels",
+            "verdictPositive": true,
+            "sparkLine": "Anti-wallpaper."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-08T03:57:02.695377+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 20.65,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 20.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "Design decision 3 — ASK→RESULT LAW. The signature receipt move.",
+      "narration_text": "Third decision. Whenever the reel is about to show a generated visual, it first shows the Claude prompt that made it. Composer beat with the ACTUAL prompt typed in, then the graphic. Never a rendered chart alone — always the ask, then the receipt. That habit is why this brand feels like the tool it's teaching, not a slideshow about it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "MECHANISM · ACT 3",
+            "heading": "Ask, then the receipt.",
+            "body": "Every generated graphic is preceded by the composer showing the actual prompt that made it. The Claude UI is the receipt — never decoration.",
+            "quote": "The Claude interface is never shown alone as decoration — it is always followed by what it produced. Ask beats stay in the fixed Claude skin; RESULT graphics render in the episode's CHANNEL palette.",
+            "cite": "ai-explainer SKILL.md — ASK → RESULT LAW",
+            "verdictLabel": "prompts as receipts",
+            "verdictPositive": true,
+            "sparkLine": "The prompt is the receipt."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-08T03:57:52.735276+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 16.85,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 16.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FALSIFIABILITY",
+      "role_note": "The design tell — where it bites. The Teardown honest judgment. Falsifiability beat.",
+      "narration_text": "Here's where the skill bites. The instructions govern everything, which means an unread paragraph is a silent bug — a stale outro handle, a missing Beat two, a wallpaper reel. The lint helps, but the discipline is human. And Liam is a named substitute, never a Bear clone. If a reel needs Bear's voice, you rebuild it on the Bear channel. That's a one-variable change, not a re-authoring — but it IS a change, and the skill will not fake it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "remotion": {
+          "pattern": "SkillTeardownMechanism",
+          "props": {
+            "eyebrow": "DESIGN · TELL",
+            "heading": "Where it bites.",
+            "body": "The doctrine is only enforced if the operator READS it. An unread rule ships as a bug. And Liam is a named substitute — never a Bear clone.",
+            "quote": "A named voice, never a clone. Liam does not imitate Bear's delivery or claim to be him.",
+            "cite": "ai-explainer SKILL.md — IN-FOR-BEAR LAW",
+            "verdictLabel": "requires a reader",
+            "verdictPositive": false,
+            "sparkLine": "The instructions still need a reader."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-08T03:58:43.749485+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.38,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 21.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates what the skill IS.",
+      "narration_text": "The verdict. ai-explainer is the SKILL that turns a topic into a Brutalist Claude reel — cream page, warm ink, one terracotta accent, real narration, and a spine you can teach. It reads the whole doctrine before it draws. It illustrates the middle. It never publishes.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The ai-explainer Skill",
+            "artifactHeading": "The verdict.",
+            "artifactLines": [
+              "A workflow, not a template pack.",
+              "Fixed bookends. Free interior.",
+              "The UI earns every beat (ILLUSTRATE LAW).",
+              "Prompts as receipts (ASK → RESULT).",
+              "Kokoro is the clock. compile.py conforms.",
+              "Renders only. Never publishes."
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-08T04:00:11.027458+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.0,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 15.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "YOUR TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer with a paste-ready prompt Liam reads aloud.",
+      "narration_text": "Your turn. Paste this into Claude Code inside a cloned Brutalist toolkit: use the ai-explainer skill to build a two-hundred-second reel about a concept in your field, with the Liam voice — Kokoro am_onyx — the Humanitarians AI handle, no captions, and no publish step. Then check: does the middle illustrate, not wallpaper? Does every generated visual land after its ask? If both hold, the skill did its job.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR OWN CONCEPT",
+            "segment": "Run the skill on your own topic",
+            "command": "Use the ai-explainer skill to build a 200-second reel about a concept in my field, Liam voice (Kokoro am_onyx), @HumanitariansAI handle, no captions, no publish. Then check: does the middle ILLUSTRATE (not wallpaper)? Does every generated visual land after its ASK?",
+            "runningText": "paste this into Claude Code…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Your Turn",
+            "output": [
+              "expected: a native <slug>.mp4 beside the reel folder",
+              "success test 1: no two composer beats in a row",
+              "success test 2: every generated visual has a preceding ask"
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T04:01:30.486315+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 30,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 21.42,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 21.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-08T00:39:28"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — title restate + handle beneath. Liam in for Bear signoff.",
+      "narration_text": "That was the ai-explainer skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "remotion": {
+          "pattern": "ClaudeTitleOutroHAI",
+          "props": {
+            "title": "The ai-explainer Skill",
+            "slug": "claude-liam-brutalist-skill-ai-explainer"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-08T04:05:09.155175+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.88,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 3.9166666666666665,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeTitleOutroHAI",
+        "at": "2026-09-08T00:39:28"
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "title": "The Fictional Skill",
+    "slug": "claude-liam-fixture-your-turn-demo",
+    "kind": "skill",
+    "engine": "elevenlabs",
+    "voice": "bear",
+    "palette": "claude",
+    "playlist": "Brutalist",
+    "note": "SYNTHETIC FIXTURE — not a real reel. Body is elevenlabs (Bear) so the your-turn transformer must pick the 'Thanks Bear' handoff. Existing verdict card has authored '1.' / '2.' prefixes so the strip-leading-numbers fix has something to remove. Existing YOUR TURN and OUTRO are minimal on purpose — the transformer rewrites them."
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Hallo, Liam. This fixture opens on the composer, as every claude-explainer does.",
+      "shot": {
+        "type": "GRAPHIC", "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hallo, Liam",
+            "topic": "FIXTURE",
+            "segment": "The Fictional Skill",
+            "command": "Explain the fictional skill.",
+            "folderLabel": "@NikBearBrown"
+          }
+        }
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "engine": "elevenlabs",
+      "voice": "bear",
+      "narration_text": "Bear body beat — the fictional skill teaches nothing real, it exists so the transformer has something to close.",
+      "shot": {"type": "CARD", "source": "remotion", "remotion": {"pattern": "BrutalistHesitantWriter", "props": {}}}
+    },
+    {
+      "beat_id": "B02",
+      "act": "MECHANISM",
+      "engine": "elevenlabs",
+      "voice": "bear",
+      "narration_text": "Bear body beat two — closer to the end, sets up the handoff.",
+      "shot": {"type": "CARD", "source": "remotion", "remotion": {"pattern": "SkillTeardownMechanism", "props": {}}}
+    },
+    {
+      "beat_id": "B03",
+      "act": "VERDICT",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "The fictional split.",
+      "shot": {
+        "type": "CARD", "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "The Fictional Skill",
+            "artifactHeading": "The fictional split.",
+            "artifactLines": [
+              "1. Owned — the closing three beats.",
+              "2. Inherited — everything above the body.",
+              "3. Idempotent — re-run stacks nothing."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "YOUR_TURN",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Placeholder — the transformer will rewrite this narration to the drafted prompt.",
+      "shot": {
+        "type": "GRAPHIC", "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "FIXTURE",
+            "segment": "placeholder",
+            "command": "placeholder — overwritten by apply_your_turn.py using drafts.json",
+            "folderLabel": "@NikBearBrown"
+          }
+        }
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "OUTRO",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "narration_text": "Placeholder — the transformer will rewrite this narration to the title.",
+      "shot": {
+        "type": "CARD", "source": "remotion",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "placeholder"
+          }
+        }
+      }
+    }
+  ]
+}

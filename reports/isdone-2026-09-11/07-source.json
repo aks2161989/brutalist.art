@@ -1,0 +1,70 @@
+{
+  "number": 7,
+  "relative": "anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard",
+  "beats": 8,
+  "sheet_sha256": "013b01058489bea32282827b927d62332affcc9e9cb45e3c14de39fe6cdbfffd",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/claude-liam-build-dashboard-slate.mp4",
+  "stale": false,
+  "width": 1280,
+  "height": 720,
+  "duration": "164.291667",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/media/B00.mp4",
+      "seconds": 25.013105599999996,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/media/B01.mp4",
+      "seconds": 17.849999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/media/B02.mp4",
+      "seconds": 14.023105599999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/media/B03.mp4",
+      "seconds": 12.32,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/media/B04.mp4",
+      "seconds": 22.0966669,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/media/BVDT.mp4",
+      "seconds": 10.103333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/media/BHTF.mp4",
+      "seconds": 10.709999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/anthropics/knowledge-work-plugins/youtube/claude-liam-build-dashboard/media/BOUT.mp4",
+      "seconds": 2.2633330999999997,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/07-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

@@ -1,0 +1,33 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/exports/landscape/claude-liam-brutalist-skill-guests.mp4",
+  "sha256": "ce157720ee717038d99ba208519ddc37f331f27a7fb0b36fe52af2896b6b17c9",
+  "duration_s": 292.9166666666667,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B00.mp4": "d8964be7d84285d95897633011f28baef29f0640220c8f9d0064cbc4c2374f65",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B01.mp4": "d024a08c623d8fba8842fd9fe2fba290ff35444322ce4f014820484205699a05",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B02.mp4": "caa368127cbb799c803762f6a89f375aeb9a34b12bc1d4a9fb7e794b70f0aa5f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B03.mp4": "cba6465a44d40a03ff3b17b84d132a27f601a61164141c65fb12f0f7777fdbf0",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B04.mp4": "14ff8cf817e4aa43ec0b71c1839f54b99202dea2d17f32fe19122fa4ada5d275",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B05.mp4": "87662ec73c7e615165955d726e2128e7314fe7061009b4c27b87c3ba23112ec7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B06.mp4": "f22455fdd015161e3100418888f413e0bacda2a5863f9eb19d33e0599992014d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B07.mp4": "29652c3d8c08c9b4fb73e41861bde8c87f32d011a2f32d57780b885166a4ccf3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B08.mp4": "603262bc3313c8d64ff046de1d5a8193e5cd20b5c090142eb5f9b2b51e96274e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B09.mp4": "b19a3bf4c2381d983ce26151ad066f4a75e79d8b00f20f19aa47594583136f00",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B10.mp4": "cc7131d1e4f3de280f673635b0ff2be82c5435181eecaea2d7297ac2255c02ce",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/media/B11.mp4": "4f9aebd4f73af1f0941b097d7215d867daf151932152f0f5437ab49a0847ffe7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B00.mp3": "8706c5a2644edd52105eeff5cb4f1c096b1f3489577aeaa5e676eecb680a6078",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B01.mp3": "983b34bcb8a2c9191d43acc041f12e2a1c0277104a40f1bbc260afdfd06f139e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B02.mp3": "a1b8233328a41f79ec2c68cc68588f149c4b831939f760e38b15571e4204529d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B03.mp3": "144b616a3e2359562b5f9a5890e3c32bc7edb271d10ecae4845cd341cf6e2411",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B04.mp3": "d38fcc4ba47a89dd1c2f5f819998727150c321596a0eadedfa3fe8d37e2e8629",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B05.mp3": "5930e288fee9c0c1d64d06e454a798cb709f66f7691f6f963dd08ae22a163f14",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B06.mp3": "b2ccfc97b1590f51d8b41235f47bdecbb507d6d1bc77d664991ac7d202fc2e7f",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B07.mp3": "3dd700b379303f7c7512bb73d4ded92a9fd3eb63770d9347b3ca02c9f629603d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B08.mp3": "dcb4ae8720ffe6d99af178e0151e3d23ee1f59c53922e122663ae600001dc5a9",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B09.mp3": "b9a9fbd4b9612970d009d48c34cdd3227d222cd9bcc5bd2223583e32a5c4c801",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B10.mp3": "f823d568d6bb8ea80b36558a20adcd535e1cf29bd968efd842c49882b6246d2d",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-guests/mp3/beat-B11.mp3": "19c630758ccef816c92227fd1301338f2253aee4592d26037d7ff75729ae46e0"
+  },
+  "at": "2026-09-08T18:06:40.219201+00:00"
+}

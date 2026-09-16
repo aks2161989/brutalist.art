@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "fc1776840f424323a7cd87f07c26ff53",
+  "source_sha256": "6e7e2267d5398c8724d5e9126bfa0efef3f4a594f5c998956275ccda39b7457e",
+  "beat_sheet_sha256": "28c2bbabcbddb9c4f7ed39bd3e7d905f73a4c0a0af4aeb5c77d2b7939f35eb97",
+  "video_sha256": "ead85c74fc5f810039e4b620a82fb58de5451eb9c2070a9837c27982d1aec6b3",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "1446190bbc85b8abc6faf0551b8aefae9a12e7ae20e12a4f73340f709d8383bd"
+    },
+    {
+      "path": "_qc/review/port_t5s.png",
+      "sha256": "6323c4ba70828a6a3a01196f56305a8eddeabc9fadd2d6cc0ec804200391543e"
+    },
+    {
+      "path": "_qc/review/port_t31s.png",
+      "sha256": "4488c9a095d0b59ded88084df68f7b69948a3e7f3684df603ca9a10d40190e03"
+    },
+    {
+      "path": "_qc/review/port_t62s.png",
+      "sha256": "eca5a2f34ea63382ac0f8677b78da8884fa06949c1580a7fdf4d80cb63badd60"
+    },
+    {
+      "path": "_qc/review/port_t100s.png",
+      "sha256": "eaff76800766889b4257f7c22ebf4fa633581c7953d3f4c687bbe8b917ce69f5"
+    },
+    {
+      "path": "_qc/review/port_t120s.png",
+      "sha256": "cb625383d4c52fc8ba2a29bdcc0992f62599e2cc1dafe38145aadff3225814c0"
+    },
+    {
+      "path": "_qc/review/port_last.png",
+      "sha256": "f72734c249f63c265ac4540cb6bc1b24aadc3d4f9a319881c89bbc1139b8afca"
+    }
+  ],
+  "notes": "Run fc1776840f424323a7cd87f07c26ff53 (2026-09-14, Short cut of Ep 53). 8/8 beats retained from parent vertical, 4 dropped (B04/B05/B07/B10 — code walkthroughs and your-turn handoff). Native 2160×3840 portrait clips reused from parent vertical unchanged. Duration: container=128.958s, video=128.917s, audio=128.958s — all strictly under 180s. Gate V: 0 blockers, 0 majors (16 frames). Frames reviewed: t5s=B00 cold open cream ClaudeComposerAsk portrait @HumanitariansAI visible; t31s=B02 mechanism card four steps text legible; t62s=B03 code card JSON legible; t100s=B08 failure mode card heading+body+quote+recovery pill all visible; t120s=B09 verdict 6-line artifact all visible; port_last=B11 outro title+@NikBearBrown (inherited from parent vertical — same skin lint as parent, not a new defect). No edge bleed, no captions, no slates. Skin lint for B00/B11 are expected 916-variant naming differences from COLD OPEN LAW / OUTRO LAW, same as parent vertical. Human viewing and editing is next; no upload, no commit."
+}

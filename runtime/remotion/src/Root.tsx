@@ -1,5 +1,8 @@
 import React from 'react';
 import {Composition, Folder} from 'remotion';
+import {WalkerGodotSetup, walkerGodotSetupSchema} from './scenes/WalkerGodotSetup';
+import {GodotDevWorkbench, godotDevWorkbenchSchema} from './scenes/GodotDevWorkbench';
+import {GodotDesignBoard, godotDesignBoardSchema} from './scenes/GodotDesignBoard';
 import {BarChart, barChartSchema} from './scenes/BarChart';
 import {OutroSeries, outroSeriesSchema} from './scenes/OutroSeries';
 import {OutroCTA, outroCtaSchema} from './scenes/OutroCTA';
@@ -18,6 +21,8 @@ import {ClaudeComposerAsk, claudeComposerAskSchema} from './scenes/ClaudeCompose
 // SlateCard DELETED 2026-08-30 — DESIGN-PRINCIPLES §1 banned card (eyebrow/kicker +
 // bold sans headline + rule + decorative circle). Replaced by the two accepted forms.
 import {FormACard, formACardSchema} from './scenes/FormACard';
+import {TypesetMath, typesetMathSchema} from './scenes/TypesetMath';
+import {ExecutedData, executedDataSchema} from './scenes/ExecutedData';
 import {FormBCard, formBCardSchema} from './scenes/FormBCard';
 import {FormACard916, formACard916Schema} from './scenes/FormACard916';
 import {FormBCard916, formBCard916Schema} from './scenes/FormBCard916';
@@ -678,6 +683,18 @@ import {
   ReqLevers,         reqLeversSchema,
   ReqRingWord,       reqRingWordSchema,
 } from './RequireReport';
+// ── claude-liam-train-the-teacher ── reel-local components ──
+import {
+  TtTwoAnswers,   ttTwoAnswersSchema,
+  TtFrontLoaded,  ttFrontLoadedSchema,
+  TtCorrection,   ttCorrectionSchema,
+  TtNullResult,   ttNullResultSchema,
+  TtScaleDecay,   ttScaleDecaySchema,
+  TtDenominator,  ttDenominatorSchema,
+  TtAbsence,      ttAbsenceSchema,
+  TtVerdictGrid,  ttVerdictGridSchema,
+  TtEffectBars,   ttEffectBarsSchema,
+} from './TrainTeacher';
 // ── claude-liam-riff-the-outros — reel-local components ──
 import { RiffSplit, riffSplitSchema, RiffLottery, riffLotterySchema } from './OutroRiff';
 // ── claude-liam-dashboard-that-lied — reel-local components ──
@@ -823,6 +840,20 @@ export const RemotionRoot: React.FC = () => {
         schema={formACardSchema}
         defaultProps={formACardSchema.parse({})}
       />
+      <Composition id="TypesetMath" component={TypesetMath}
+        width={1920} height={1080} fps={30} durationInFrames={450}
+        schema={typesetMathSchema} defaultProps={typesetMathSchema.parse({})} />
+      <Composition id="TypesetMath916" component={TypesetMath}
+        width={1080} height={1920} fps={30} durationInFrames={450}
+        schema={typesetMathSchema} defaultProps={typesetMathSchema.parse({})} />
+      <Composition id="ExecutedData" component={ExecutedData}
+        width={1920} height={1080} fps={30} durationInFrames={450}
+        schema={executedDataSchema} defaultProps={{title: 'Executed data', mode: 'table',
+          rows: [{label: '0', value: 1, at: 0}], note: 'Supply actual evidence.', columnLabels: ['Index', 'Value']}} />
+      <Composition id="ExecutedData916" component={ExecutedData}
+        width={1080} height={1920} fps={30} durationInFrames={450}
+        schema={executedDataSchema} defaultProps={{title: 'Executed data', mode: 'table',
+          rows: [{label: '0', value: 1, at: 0}], note: 'Supply actual evidence.', columnLabels: ['Index', 'Value']}} />
       <Composition
         id="FormBCard"
         component={FormBCard}
@@ -1210,6 +1241,7 @@ export const RemotionRoot: React.FC = () => {
         id="ClaudeComposerAsk"
         component={ClaudeComposerAsk}
         durationInFrames={900}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 30) * 30)})}
         fps={30}
         width={1920}
         height={1080}
@@ -1415,6 +1447,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{ sparkLine: 'This season is an arsenal.' }} />
       <Composition id="ClaudeVerdictArtifact" component={ClaudeVerdictArtifact}
         durationInFrames={1020} fps={30} width={1920} height={1080}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 34) * 30)})}
         schema={claudeVerdictArtifactSchema}
         defaultProps={{
           artifactTitle: 'Verdict',
@@ -1439,11 +1472,13 @@ export const RemotionRoot: React.FC = () => {
         }} />
       <Composition id="ClaudeTitleOutro" component={ClaudeTitleOutro}
         durationInFrames={180} fps={30} width={1920} height={1080}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 6) * 30)})}
         schema={claudeTitleOutroSchema}
         defaultProps={claudeTitleOutroSchema.parse({})} />
       {/* claude-liam — adaptive-therapy-revolution */}
       <Composition id="ClaudeCodeBeat" component={ClaudeCodeBeat}
         durationInFrames={300} fps={30} width={1920} height={1080}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 10) * 30)})}
         schema={claudeCodeBeatSchema}
         defaultProps={{
           title: 'script.py',
@@ -3736,6 +3771,44 @@ export const RemotionRoot: React.FC = () => {
           schema={reqRingWordSchema}
           defaultProps={reqRingWordSchema.parse({})} />
       </Folder>
+      <Folder name="TrainTeacher">
+        <Composition id="TtTwoAnswers" component={TtTwoAnswers}
+          durationInFrames={420} fps={30} width={1920} height={1080}
+          schema={ttTwoAnswersSchema}
+          defaultProps={ttTwoAnswersSchema.parse({ left: { name: 'Ban the phone' }, right: { name: 'Buy the platform' } })} />
+        <Composition id="TtFrontLoaded" component={TtFrontLoaded}
+          durationInFrames={450} fps={30} width={1920} height={1080}
+          schema={ttFrontLoadedSchema}
+          defaultProps={ttFrontLoadedSchema.parse({})} />
+        <Composition id="TtCorrection" component={TtCorrection}
+          durationInFrames={450} fps={30} width={1920} height={1080}
+          schema={ttCorrectionSchema}
+          defaultProps={ttCorrectionSchema.parse({ before: 'Suspensions increased 30 percent for ', wrong: 'Black boys', after: '.', corrected: 'In-school suspensions rose about 30% for Black students. No significant effect on out-of-school suspensions.' })} />
+        <Composition id="TtNullResult" component={TtNullResult}
+          durationInFrames={450} fps={30} width={1920} height={1080}
+          schema={ttNullResultSchema}
+          defaultProps={ttNullResultSchema.parse({ left: { label: 'Teacher knowledge', value: 62 }, right: { label: 'Student achievement', value: 0 } })} />
+        <Composition id="TtScaleDecay" component={TtScaleDecay}
+          durationInFrames={450} fps={30} width={1920} height={1080}
+          schema={ttScaleDecaySchema}
+          defaultProps={ttScaleDecaySchema.parse({ stops: [{ scaleLabel: 'Small efficacy trials', effect: 0.31 }, { scaleLabel: 'Large effectiveness trials', effect: 0.11 }] })} />
+        <Composition id="TtDenominator" component={TtDenominator}
+          durationInFrames={480} fps={30} width={1920} height={1080}
+          schema={ttDenominatorSchema}
+          defaultProps={ttDenominatorSchema.parse({})} />
+        <Composition id="TtAbsence" component={TtAbsence}
+          durationInFrames={480} fps={30} width={1920} height={1080}
+          schema={ttAbsenceSchema}
+          defaultProps={ttAbsenceSchema.parse({})} />
+        <Composition id="TtVerdictGrid" component={TtVerdictGrid}
+          durationInFrames={540} fps={30} width={1920} height={1080}
+          schema={ttVerdictGridSchema}
+          defaultProps={ttVerdictGridSchema.parse({ rows: [{ claim: 'Teacher training moderates EdTech effectiveness', verdict: 'SUPPORTED' }, { claim: 'Sustained AI-specific PD improves student outcomes', verdict: 'NO EVIDENCE' }] })} />
+        <Composition id="TtEffectBars" component={TtEffectBars}
+          durationInFrames={450} fps={30} width={1920} height={1080}
+          schema={ttEffectBarsSchema}
+          defaultProps={ttEffectBarsSchema.parse({ data: [{ label: 'Instructional practice', value: 49, display: '0.49 SD' }, { label: 'Student achievement', value: 18, display: '0.18 SD', accent: true }] })} />
+      </Folder>
       <Folder name="FluencyTrap">
         <Composition id="FluencySegmentCard" component={FluencySegmentCard}
           durationInFrames={240} fps={30} width={1920} height={1080}
@@ -3799,11 +3872,40 @@ export const RemotionRoot: React.FC = () => {
 
       {/* ── finance skill — four chart shapes (SKILL.md §Shape logic, locked) ── */}
       <Folder name="Finance-Charts">
+        <Composition id="GodotDesignBoard" component={GodotDesignBoard}
+          schema={godotDesignBoardSchema} width={1920} height={1080} fps={30} durationInFrames={600}
+          defaultProps={godotDesignBoardSchema.parse({title:'Design to evidence',section:'GDD',excerpt:'Supply an exact document excerpt.',source:'Source required',status:'PROPOSED',visualLabel:'Design explanation',cards:[{label:'Intent',text:'Supply the actual design requirement.'}]})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*30)})}/>
+        <Composition id="GodotDesignBoard916" component={GodotDesignBoard}
+          schema={godotDesignBoardSchema} width={1080} height={1920} fps={30} durationInFrames={600}
+          defaultProps={godotDesignBoardSchema.parse({title:'Design to evidence',section:'GDD',excerpt:'Supply an exact document excerpt.',source:'Source required',status:'PROPOSED',visualLabel:'Design explanation',cards:[{label:'Intent',text:'Supply the actual design requirement.'}]})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*30)})}/>
+        <Composition id="GodotDevWorkbench" component={GodotDevWorkbench}
+          durationInFrames={450} fps={30} width={1920} height={1080}
+          schema={godotDevWorkbenchSchema}
+          defaultProps={godotDevWorkbenchSchema.parse({mode:'code',title:'Inspect the Game',project:'Godot project',source:'Supply verified source excerpts'})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*30)})}/>
+        <Composition id="GodotDevWorkbench916" component={GodotDevWorkbench}
+          durationInFrames={450} fps={30} width={1080} height={1920}
+          schema={godotDevWorkbenchSchema}
+          defaultProps={godotDevWorkbenchSchema.parse({mode:'code',title:'Inspect the Game',project:'Godot project',source:'Supply verified source excerpts'})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*30)})}/>
+        <Composition id="WalkerGodotSetup" component={WalkerGodotSetup}
+          durationInFrames={360} fps={24} width={1920} height={1080}
+          schema={walkerGodotSetupSchema}
+          defaultProps={walkerGodotSetupSchema.parse({mode:'download',title:'Download Godot',version:'4.7.2'})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*24)})}/>
+        <Composition id="WalkerGodotSetup916" component={WalkerGodotSetup}
+          durationInFrames={360} fps={24} width={1080} height={1920}
+          schema={walkerGodotSetupSchema}
+          defaultProps={walkerGodotSetupSchema.parse({mode:'download',title:'Download Godot',version:'4.7.2'})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*24)})}/>
         {/* claude-liam-hesitant — the Beat 2 hesitant-writer overview (EXECUTIVE-SUMMARY LAW) */}
         <Composition
           id="BrutalistHesitantWriter"
           component={BrutalistHesitantWriter}
           durationInFrames={606}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 20.2) * 30)})}
           fps={30}
           width={1920}
           height={1080}

@@ -1,0 +1,131 @@
+{
+  "number": 25,
+  "relative": "info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7",
+  "beats": 12,
+  "sheet_sha256": "0574bd2caf81bc3332e2fe930b9c79e39a318f9902cc5039f9b16e75013fc29f",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7-slate.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "173.150333",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [
+    {
+      "beat": "B03",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "learning-artifacts/week-01/my_prob.py",
+        "code": "# my reimplementation \u2014 first attempt\nimport math\n\ndef probabilities(logits, temperature=1.0):\n    if not logits or temperature <= 0:\n        raise ValueError(\"positive T required\")\n    weights = [math.exp(x / temperature)\n               for x in logits]\n    total = sum(weights)\n    return [w / total for w in weights]",
+        "sparkLine": "Guard. Warp. Sum. Normalize.",
+        "codeSize": 0.048,
+        "sparkSize": 26
+      },
+      "intent": "Claude cream code card: my_prob.py \u2014 the student's first-attempt reimplementation."
+    },
+    {
+      "beat": "B06",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "unittest_run.log",
+        "code": "test_01 (LessonTests) ... ok\ntest_02 (LessonTests) ... ERROR\n\nERROR: test_02 (LessonTests.test_02)\n---------------------------------\nTraceback:\n  File \"my_prob.py\", line 7\n    weights = [math.exp(x/T)\n               for x in logits]\nOverflowError: math range\n\n# probabilities([1000, 1000])\n# expected [0.5, 0.5]",
+        "sparkLine": "Same demo. Bigger logits. Overflow.",
+        "codeSize": 0.044,
+        "sparkSize": 26
+      },
+      "intent": "Claude code card: the actual unittest FAIL output \u2014 OverflowError on test_02."
+    },
+    {
+      "beat": "B07",
+      "pattern": "ClaudeCodeBeat",
+      "props": {
+        "title": "learning-artifacts/week-01/my_prob.py",
+        "code": "def probabilities(logits, temperature=1.0):\n    if not logits or temperature <= 0:\n        raise ValueError(\"positive T required\")\n    peak = max(logits)                # <- the fix\n    weights = [math.exp((x - peak) / temperature)\n               for x in logits]\n    total = sum(weights)\n    return [w / total for w in weights]\n\n# unittest: 6 tests \u00b7 all pass",
+        "sparkLine": "Subtract the max. Overflow gone.",
+        "codeSize": 0.045,
+        "sparkSize": 26
+      },
+      "intent": "Claude code card: the fixed function \u2014 the subtracted max is the only diff."
+    }
+  ],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B00.mp4",
+      "seconds": 11.41,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B01.mp4",
+      "seconds": 11.6662112,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B02.mp4",
+      "seconds": 8.75,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B03.mp4",
+      "seconds": 11.013333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B04.mp4",
+      "seconds": 9.263333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B05.mp4",
+      "seconds": 7.653105599999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B06.mp4",
+      "seconds": 11.5031056,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B07.mp4",
+      "seconds": 11.829999999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/B08.mp4",
+      "seconds": 11.2466669,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/BVDT.mp4",
+      "seconds": 8.3062112,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/BHTF.mp4",
+      "seconds": 14.42,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/youtube/claude-liam-neu-exercise-en-lesson-1-assessment-1-a8637665-v-75c6c8e13cd7/media/BOUT.mp4",
+      "seconds": 4.199999999999999,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/25-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

@@ -1,0 +1,129 @@
+===== SECTION 1: brand_variant.py -h =====
+usage: brand_variant.py [-h] [--force] reel {claude-liam,nbb,hai}
+
+positional arguments:
+  reel
+  {claude-liam,nbb,hai}
+
+options:
+  -h, --help            show this help message and exit
+  --force
+
+===== SECTION 2: run on canonical → hai (Humanitarians AI, Plain register) =====
+[variant] wrote /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/hai-canonical/beat_sheet.hai.json  audience=HAI  register=Plain  palette=humanitarians  engine=kokoro  voice=af_bella
+[variant] 2 beats to rewrite in Plain — next: follow skills/make/hai/SKILL.md
+
+===== SECTION 3: variant folder contents (hai) =====
+total 8
+drwxr-xr-x@ 3 bear  staff    96 Sep 10 03:07 .
+drwxr-xr-x@ 5 bear  staff   160 Sep 10 03:07 ..
+-rw-r--r--@ 1 bear  staff  1576 Sep 10 03:07 beat_sheet.hai.json
+
+===== SECTION 4: canonical is unchanged =====
+7da66eeff7b59c7af7304d555ba2529caca28b932155ffec69fea508b640dd16  /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/canonical/beat_sheet.json
+
+===== SECTION 5: hai variant beat_sheet.hai.json (metadata) =====
+{
+ "title": "Demo Canonical",
+ "slug": "demo-canonical",
+ "kind": "explainer",
+ "engine": "kokoro",
+ "voice": "someone",
+ "audience": "HAI",
+ "derived_from": "beat_sheet.json",
+ "register": "Plain",
+ "palette": "humanitarians",
+ "outro_source": "AUTHOR.MD :: Humanitarians AI",
+ "voice_kokoro": "af_bella",
+ "typography": {
+  "serif": "EB Garamond",
+  "sans": "Montserrat"
+ },
+ "channel_title": "@HumanitariansAI",
+ "_variant_todo": [
+  "rewrite every beat narration_text/text in the Plain register (runtime/prose/plain/PROSE.md + brands/hai.md) — method, when to use, when NOT to/where it fails; voice only, facts unchanged",
+  "optional: add ONE Irreducibly-Human tangent beat (0-1 per video, ONLY on a clear opportunity)",
+  "add CLI worked exercise as the SECOND-TO-LAST beat (paste-ready ASK→OUTPUT→CHANGE→OUTPUT, NEXT STEP; see skills/make/hai/SKILL.md §Step 4)",
+  "add/replace outro with Humanitarians AI outro from AUTHOR.MD :: Humanitarians AI (LAST beat)",
+  "verify ending order: body → [tangent] → [CLI exercise] → [outro]",
+  "then build: generate_audio_kokoro.py (voice af_bella) → palette=humanitarians → compile"
+ ]
+}
+
+===== SECTION 6: run same canonical → nbb =====
+[variant] wrote /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/nbb-canonical/beat_sheet.nbb.json  audience=NikBearBrown  register=Teardown  palette=teardown  engine=kokoro  voice=am_onyx
+[variant] 2 beats to rewrite in Teardown — next: follow skills/make/nbb/SKILL.md
+
+===== SECTION 7: nbb variant metadata =====
+{
+ "title": "Demo Canonical",
+ "slug": "demo-canonical",
+ "kind": "explainer",
+ "engine": "kokoro",
+ "voice": "someone",
+ "audience": "NikBearBrown",
+ "derived_from": "beat_sheet.json",
+ "register": "Teardown",
+ "palette": "teardown",
+ "outro_source": "AUTHOR.MD :: NikBearBrown",
+ "voice_kokoro": "am_onyx",
+ "typography": {
+  "display": "Montserrat",
+  "serif": "EB Garamond",
+  "mono": "PT Mono"
+ },
+ "_variant_todo": [
+  "rewrite every beat narration_text/text in the Teardown register (runtime/prose/teardown/PROSE.md + brands/nbb.md) — take it apart, explain how each piece works, judge the design choices; voice only, facts unchanged",
+  "add LLM exercise as the SECOND-TO-LAST beat (paste-ready prompt for Claude/ChatGPT/Gemini + dig-deeper follow-up; see skills/make/nbb/SKILL.md §Step 3)",
+  "add/replace outro with NikBearBrown outro from AUTHOR.MD :: NikBearBrown (LAST beat)",
+  "verify ending order: body → [LLM exercise] → [outro]",
+  "build: generate_audio_kokoro.py (voice am_onyx) → palette=teardown → compile"
+ ]
+}
+
+===== SECTION 8: run same canonical → claude-liam =====
+[variant] wrote /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/claude-liam-canonical/beat_sheet.claude-liam.json  audience=Claude  register=Teardown  palette=claude  engine=kokoro  voice=am_onyx
+[variant] 2 beats to rewrite in Teardown — next: follow skills/make/ai-explainer/SKILL.md
+
+===== SECTION 9: claude-liam variant metadata =====
+{
+ "title": "Demo Canonical",
+ "slug": "demo-canonical",
+ "kind": "explainer",
+ "engine": "kokoro",
+ "voice": "someone",
+ "audience": "Claude",
+ "derived_from": "beat_sheet.json",
+ "register": "Teardown",
+ "palette": "claude",
+ "outro_source": "AUTHOR.MD :: NikBearBrown",
+ "voice_kokoro": "am_onyx",
+ "_variant_todo": [
+  "rewrite every beat narration_text in the Teardown register — voice only, facts unchanged",
+  "B00 says '…this is Liam, in for Bear.' and the outro signs off the same way (IN-FOR-BEAR LAW)",
+  "then build: generate_audio_kokoro.py (voice am_onyx) → palette=claude → compile"
+ ]
+}
+
+===== SECTION 10: re-run hai without --force → refuses =====
+[variant] /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/hai-canonical/beat_sheet.hai.json already exists (use --force to reset it from canonical)
+exit=1
+
+===== SECTION 11: --force overwrites cleanly =====
+[variant] wrote /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/hai-canonical/beat_sheet.hai.json  audience=HAI  register=Plain  palette=humanitarians  engine=kokoro  voice=af_bella
+[variant] 2 beats to rewrite in Plain — next: follow skills/make/hai/SKILL.md
+
+===== SECTION 12: missing beat_sheet.json → exits =====
+[variant] no beat_sheet.json in /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/empty-reel
+exit=1
+
+===== SECTION 13: derived-directory rule for lectures/<chapter>-lecture/ =====
+[variant] wrote /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/book-example/hai-lectures/chap01-lecture/beat_sheet.hai.json  audience=HAI  register=Plain  palette=humanitarians  engine=kokoro  voice=af_bella
+[variant] 2 beats to rewrite in Plain — next: follow skills/make/hai/SKILL.md
+-- output tree:
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/book-example/hai-lectures/chap01-lecture/beat_sheet.hai.json
+/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/book-example/lectures/chap01-lecture/beat_sheet.json
+
+===== SECTION 14: canonical still on disk, still untouched =====
+7da66eeff7b59c7af7304d555ba2529caca28b932155ffec69fea508b640dd16  /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/canonical/beat_sheet.json
+7da66eeff7b59c7af7304d555ba2529caca28b932155ffec69fea508b640dd16  /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/book-example/lectures/chap01-lecture/beat_sheet.json

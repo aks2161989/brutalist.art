@@ -1,0 +1,48 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "hai is a non-destructive fork of a reel into a HAI cut — six steps, source untouched, Plain register (with a mandatory failure-mode line), and one contested design choice the viewer must decide.",
+  "parent_master_sha256": "7a92bdb465492063ced20ba2a4091ad7ce5b0de20f144a187ab3cbc9d8527a31",
+  "run_id": "6b0a5edfa1ee4bd882707ab0e486cdb5",
+  "kept_beats": ["B00", "B01", "B03", "B04", "B05", "B08", "B09", "B11"],
+  "kept_beat_durations_s": {
+    "B00": 15.25,
+    "B01": 16.041666666666668,
+    "B03": 23.541666666666668,
+    "B04": 27.166666666666668,
+    "B05": 21.041666666666668,
+    "B08": 34.458333333333336,
+    "B09": 25.666666666666668,
+    "B11": 3.2083333333333335
+  },
+  "dropped_beats": [
+    {
+      "beat_id": "B02",
+      "reason": "Generic SKILL folder anatomy (SKILL.md + brand_variant.py + hai- sibling files) is a repository walkthrough — belongs in the 16:9 long, not every Short.",
+      "duration_s": 28.541666666666668
+    },
+    {
+      "beat_id": "B06",
+      "reason": "The five-part CLI-exercise schema is a detailed contract walkthrough. B03 already introduces the CLI-exercise step at the flow level, and B09's verdict restates the 'must genuinely run' rule.",
+      "duration_s": 30.0
+    },
+    {
+      "beat_id": "B07",
+      "reason": "Batch-mode scope is a secondary posture detail. B09's verdict retains the one-line summary ('scaffolds every reel + lecture; Steps 2–6 stay per-video').",
+      "duration_s": 22.25
+    },
+    {
+      "beat_id": "B10",
+      "reason": "Full Your-Turn dry-run prompt is a detailed exercise best delivered in the 16:9 long; B11 (Liam sign-off) still lands the outro.",
+      "duration_s": 32.958333333333336
+    }
+  ],
+  "cut_first_review": "Order and coherence hold: B00 introduces Liam and states the mental-model goal; B01's hesitant-writer BLUF fixes 'reformats' to 'forks' — the single-line thesis; B03 lays out the six-step pipeline. B04 lands the 'First design decision' (non-destructive fork) and quotes SKILL.md, which cleanly sets up B05's 'Second decision' (Plain register with the required failure-mode line). B08 is the essential limitation the Short must keep — the three-source disagreement over the HAI Kokoro voice — because it's the honest editorial ask (trust brands/hai.md; override; log). B09's verdict recaps in six lines; the Batch-mode and CLI-exercise mentions in the verdict are one-sentence facts, not callbacks that require the dropped detailed beats. B11 is the ClaudeTitleOutro916 with Liam's sign-off. No 'First…Second…Third…' numbering is broken because we keep B04 (First) and B05 (Second) as a pair.",
+  "planned_duration_s": 166.375,
+  "planned_headroom_below_cap_s": 13.625,
+  "rewrite_reason": null,
+  "notes": [
+    "Native portrait media (2160×3840) is reused unchanged for every kept beat — no re-render, no crop.",
+    "No endcard: --no-endcard preserves B11 (Liam's ClaudeTitleOutro916) as the final beat.",
+    "No outro rewrite: --no-outro-rewrite retains the parent's 3.2s Liam sign-off narration."
+  ]
+}

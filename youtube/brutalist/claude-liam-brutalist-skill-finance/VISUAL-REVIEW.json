@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "f061799250704b5c8d66275c60755330",
+  "source_sha256": "352ad5312faac07b51e0fadb291d704850b35c94edec67d2b95b68411109e102",
+  "beat_sheet_sha256": "3862ecea8c8901bd185e202b4663a30e0a07714f719b043321965ff47fdf4c96",
+  "video_sha256": "ca9125553ecd3a4e89246893e1e166e46e52dcd8f1f19c78da20ad85cb8d5d14",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact-sheet-50pct.png",
+      "sha256": "da4832f4bcd3969c2e25a1dcf2a657935ba66187729b6128601a2f9f293b26c5"
+    }
+  ],
+  "notes": "Re-verification pass for run_id f061799250704b5c8d66275c60755330 (previous run e9d0a40ece9b404f8f731f406e0504b9 completed 2026-09-08; this invocation retried after Claude usage-limit reset). finance SKILL.md content unchanged (SOURCE-SNAPSHOT SHA b9827d21 matches previous build). Both exports confirmed intact with matching SHA-256. Twelve-beat AI Explainer teardown of skills/make/finance/SKILL.md. Landscape 4K (3840x2160), 323.4s, h264+AAC. Contact sheet re-inspected via image-capable Read tool: B00 ClaudeComposerAsk cold open with three EDGAR/audit receipts; B01 BrutalistHesitantWriter serif at correct scale, 'picks'→'renders' swap visible; B02-B03 anatomy + pipeline cards legible; B04-B07 four MECHANISM beats (shape-lock, never-retyped, two audits, colour+geometry) all text fits within safe area; B08 FALSIFIABILITY (bank trap) verdict pill negative; B09 ClaudeVerdictArtifact five-line summary; B10 Your Turn dry-run planning prompt; B11 ClaudeTitleOutro '@NikBearBrown' per OUTRO-LOCK, Liam sign-off visible. Gate V clean: 0 BLOCKER, 0 MAJOR at 24 sampled frames. No captions, no slates, no overflow. Human review pending."
+}

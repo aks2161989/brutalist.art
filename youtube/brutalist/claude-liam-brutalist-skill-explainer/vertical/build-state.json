@@ -1,0 +1,31 @@
+{
+  "status": "ready",
+  "output": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/exports/vertical/claude-liam-brutalist-skill-explainer-vertical.mp4",
+  "sha256": "736045efcb64ee06d28379ca5cde2b17544766f7f6e7ddf4d79beb1ee662c23b",
+  "duration_s": 253.66666666666666,
+  "input_sha256": {
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B00.mp4": "48870a5f2167e416603f241073f54d289d4688a9374cdcfc984d1be54b8df73c",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B01.mp4": "b072ac277d574adc4377cd3b17e4f8902262d62968e3a069dec2638625935419",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B02.mp4": "6061c8d617c99dde39fb358f6ab49375e99316db89655e93ab3e787209493ba3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B03.mp4": "ce6c9a541ffd8286f14f8ca228fcbf41756ff633ecf2f335aad675386390187b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B04.mp4": "b800acd4ef999a33b2e92a48bb5a0073e437f88686fc04d477b388ad0d6201f3",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B05.mp4": "e07356cdce18cce9b27c0ef2248825d6d71ac3fc07158c963adb26bce4021e12",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B06.mp4": "8cc7e3dd9acd0b792aed7463856980b0496f200ac9fdf99230e9dd9f254c2e1b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B07.mp4": "c615fd899152b6aa69bbd617df35cbc6bd2f07d1acbaa3deb0d371e4ced581ad",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B08.mp4": "84773eaa1923346548c6ade337ff2db6cc5ca35d2173ca927fcbe8bea9af5d10",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B09.mp4": "c2178ffecc1a9a6e4a327d663ed59eea63eebeb79f7ef5b22ff987cc2bae758a",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/media/B10.mp4": "ebda9598cccae93521e07b6b5d639f6e6c434d97ab3b85cad32787a2e149706e",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B00.mp3": "57fae8b62ce6a93528583008172b40ab0a1a688b7380952f686c307ceb568ef1",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B01.mp3": "0f4f7889b022b5e066ec885ddb9175b69e41bde8253d3ab8560fadbb2aa1e8ec",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B02.mp3": "ee47e6173d5c39f9b9bec72f469987ff3f3997b20874fea02fd8e92cb4146f3b",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B03.mp3": "becbe75244a2169506b714bbde313ed4d8d3f8153b197166add97901d4dc08c7",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B04.mp3": "f65e83252028c2c1b529bad893427003a616c9822df83e1c5d30097c47197071",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B05.mp3": "6b9afd28b6bda6bc967f6e8f474234c09b4b379afeb20eec70ff2770e93849b4",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B06.mp3": "5bbc45304307814080b6585d76374dd4cb586bb29d34c2f738a3f9ff34a41d84",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B07.mp3": "c60ed6eca71ce2f48869ab007f9e3d9ea1949fd10836a4efbfa9f02566ad2742",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B08.mp3": "6da1dd7ec6a48859bf47f8100968ce6c019484e0e31c0cc0041f01563f9eaabd",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B09.mp3": "902c9cdd164775eb6f46f01b3823115824e283926d3184de5670db07a3edd425",
+    "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/youtube/brutalist/claude-liam-brutalist-skill-explainer/vertical/mp3/beat-B10.mp3": "2287949c29101ccd207f6f6e17802bf8cb4569c459d3a63bec92e7b608d4d04b"
+  },
+  "at": "2026-09-11T20:44:22.901182+00:00"
+}

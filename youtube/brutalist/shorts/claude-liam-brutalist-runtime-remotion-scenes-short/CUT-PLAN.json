@@ -1,0 +1,27 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "remotion_scenes.py as the gated, provenance-stamping Remotion runner — why it exists and what it protects",
+  "parent_master_sha256": "f1cafcd4aca0580780aef0c9a349644f69cde3544582754b9ebb2f13087c54ec",
+  "kept_beats": ["B00", "B01", "B02", "B03", "B06", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {
+      "beat_id": "B04",
+      "reason": "render_beat() command assembly code — detailed implementation walkthrough; the four-step framework (B02) covers the render step at a useful level of abstraction for a Short"
+    },
+    {
+      "beat_id": "B05",
+      "reason": "extend_clip_to_duration tpad code — freeze-hold mechanism is named in the framework (B02) and verdict (B09); the code listing belongs in the 16:9 long"
+    },
+    {
+      "beat_id": "B07",
+      "reason": "--list demo terminal output — useful detail for practitioners but not needed to understand what the script does; verdict (B09) names --list without requiring prior demo"
+    },
+    {
+      "beat_id": "B10",
+      "reason": "Your-turn exercise with full paste-into-Claude prompt — detailed handoff belongs in the long film; the Short ends with the verdict as its call to action"
+    }
+  ],
+  "cut_first_review": "Kept narration establishes: what the script is and why it isn't just a thin shell (B00); one-sentence BLUF — gated provenance-stamper (B01); the four pipeline steps detect/render/extend/stamp (B02); the pattern field as the entry ticket (B03); three safety gates and idempotency (B06); atomic failure isolation and recovery flag (B08); and the full verdict with all key properties (B09). Transitions: BLUF → framework is natural; framework → entry ticket names the pattern field already introduced; entry ticket → three gates stays in pre-render safety territory; three gates → failure mode extends the safety story to post-render outcomes; failure mode → verdict closes. No dangling numbered transitions; B09's mention of '--list' and '--only BXX' is self-explanatory without the dropped B07 demo.",
+  "planned_duration_s": 128.96,
+  "rewrite_reason": null
+}

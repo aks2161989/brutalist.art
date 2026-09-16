@@ -1,0 +1,188 @@
+############################################################
+# 1. Discover art final in the dispatcher help
+############################################################
+$ ./art --help | grep -A1 -i final
+  ./art final <reel>           verified master — no review label (→ <slug>.mp4)
+
+$ ./art final     # no args
+usage: compile.py [-h] [--review] [--fps FPS] [--height HEIGHT]
+                  [--audio AUDIO] [--force] [--allow-slates] [--out DIR]
+                  [--sheet SHEET]
+                  folder
+compile.py: error: the following arguments are required: folder
+[exit 2]
+
+############################################################
+# 2. Success run — a valid tiny reel (kind=command, no gates)
+############################################################
+$ ls /tmp/claude-501/art-final-demo/
+FACTCHECK.md
+PROMPTS.md
+SHOTLIST.md
+_qc
+beat_sheet.json
+clips
+media
+mp3
+
+$ ./art final /tmp/claude-501/art-final-demo --out /tmp/claude-501/art-final-demo/exports --height 1080
+[art] compiled B00  STILL     3.0s  ← B00.png
+[art] REFUSED: [art] command failed:
+/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/workspaces/claude-liam-brutalist-command-final/toolkit/runtime/qc/final_frame_check.py /private/tmp/claude-501/art-final-demo --mp4 /tmp/claude-501/art-final-demo/exports/.art-final-demo-candidate-kzhsuldw/candidate.mp4 --sheet /private/tmp/claude-501/art-final-demo/clips/_work/resolved-sheet.json
+
+[art] motion histogram: hold:1
+[exit ]
+
+
+############################################################
+# 2. Success run — tiny valid reel (kind=command)
+############################################################
+$ ls /tmp/claude-501/art-final-demo/
+FACTCHECK.md
+PROMPTS.md
+SHOTLIST.md
+_qc
+beat_sheet.json
+build-state.json
+clips
+exports
+media
+mp3
+
+$ cat /tmp/claude-501/art-final-demo/beat_sheet.json
+{
+  "metadata": {
+    "title": "art final demo",
+    "slug": "art-final-demo",
+    "kind": "command",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "aspect_ratio": "16:9",
+    "approvals": {},
+    "build": {
+      "at": "2026-09-09T17:34:09",
+      "cut": "master",
+      "filled": 1,
+      "of": 1,
+      "slates": [],
+      "skin_warnings": [
+        "NO RENDERABLE BEATS: no beat carries a shot.remotion.pattern or Manim annotation — the pipeline will render NOTHING and every slot becomes a YOU-slate. The sheet was authored without the scene contract."
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "narration_text": "One test beat.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 3,
+      "actual_duration_s": 3.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "shot": {
+        "type": "STILL",
+        "source": "own",
+        "motion": "hold"
+      },
+      "render_duration_s": 3.0,
+      "build": {
+        "status": "STILL",
+        "src": "media/B00.png",
+        "filled_by": "still",
+        "at": "2026-09-09T17:34:09"
+      }
+    }
+  ]
+}
+
+$ ./art final /tmp/claude-501/art-final-demo --out /tmp/claude-501/art-final-demo/exports --height 1080
+[art] motion histogram: hold:1
+[art] SKIN LINT: NO RENDERABLE BEATS: no beat carries a shot.remotion.pattern or Manim annotation — the pipeline will render NOTHING and every slot becomes a YOU-slate. The sheet was authored without the scene contract.
+[art] build stamp → beat_sheet.json (1/1 filled)
+[art] wrote /tmp/claude-501/art-final-demo/exports/art-final-demo.mp4  (3.0s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 1/1 filled — B00:STILL
+[exit 0]
+
+$ ls /tmp/claude-501/art-final-demo/exports
+art-final-demo.mp4
+art-final-demo.verified.json
+
+$ cat /tmp/claude-501/art-final-demo/exports/art-final-demo.verified.json
+{
+  "status": "ready",
+  "output": "/private/tmp/claude-501/art-final-demo/exports/art-final-demo.mp4",
+  "sha256": "5910ade9793c943b2791fe516ef0a68c4fc7e684b465f533403eb5eecfae93e3",
+  "duration_s": 3.0,
+  "input_sha256": {
+    "/private/tmp/claude-501/art-final-demo/media/B00.png": "1ef1f64877df491d929afa641482ad17fd95ccbc9bd79238daf325a9dd07bbea",
+    "/private/tmp/claude-501/art-final-demo/mp3/beat-B00.mp3": "e90000344ef36e9423cb71594de58a4cb86364db0976efb7312213e3ee182ebc"
+  },
+  "at": "2026-09-09T21:34:24.723874+00:00"
+}
+
+$ cat /tmp/claude-501/art-final-demo/build-state.json
+{
+  "status": "ready",
+  "output": "/private/tmp/claude-501/art-final-demo/exports/art-final-demo.mp4",
+  "sha256": "5910ade9793c943b2791fe516ef0a68c4fc7e684b465f533403eb5eecfae93e3",
+  "duration_s": 3.0,
+  "input_sha256": {
+    "/private/tmp/claude-501/art-final-demo/media/B00.png": "1ef1f64877df491d929afa641482ad17fd95ccbc9bd79238daf325a9dd07bbea",
+    "/private/tmp/claude-501/art-final-demo/mp3/beat-B00.mp3": "e90000344ef36e9423cb71594de58a4cb86364db0976efb7312213e3ee182ebc"
+  },
+  "at": "2026-09-09T21:34:24.723874+00:00"
+}
+
+############################################################
+# 3. Failure — final requires nonempty FACTCHECK/SHOTLIST/PROMPTS.
+#    Blank FACTCHECK.md → refused. Previous verified export preserved.
+############################################################
+$ echo -n '' > /tmp/claude-501/art-final-demo/FACTCHECK.md
+
+$ ./art final /tmp/claude-501/art-final-demo --out /tmp/claude-501/art-final-demo/exports --height 1080
+[art] REFUSED: GATE F: missing or empty FACTCHECK.md; review is allowed, final is blocked
+[exit 2]
+
+$ ls /tmp/claude-501/art-final-demo/exports  # previous mp4 + verified.json still present
+art-final-demo.mp4
+art-final-demo.verified.json
+
+# SHA-256 unchanged: previous verified export is untouched
+$ shasum -a 256 /tmp/claude-501/art-final-demo/exports/art-final-demo.mp4
+5910ade9793c943b2791fe516ef0a68c4fc7e684b465f533403eb5eecfae93e3  /tmp/claude-501/art-final-demo/exports/art-final-demo.mp4
+
+$ cat /tmp/claude-501/art-final-demo/build-state.json  # marker of last attempt
+{
+  "status": "failed",
+  "error": "GATE F: missing or empty FACTCHECK.md; review is allowed, final is blocked",
+  "at": "2026-09-09T17:34:43.060710-04:00"
+}
+
+# --- recovery ---
+$ echo 'One demonstration beat.' > /tmp/claude-501/art-final-demo/FACTCHECK.md
+
+$ ./art final /tmp/claude-501/art-final-demo --out /tmp/claude-501/art-final-demo/exports --height 1080
+[art] motion histogram: hold:1
+[art] SKIN LINT: NO RENDERABLE BEATS: no beat carries a shot.remotion.pattern or Manim annotation — the pipeline will render NOTHING and every slot becomes a YOU-slate. The sheet was authored without the scene contract.
+[art] build stamp → beat_sheet.json (1/1 filled)
+[art] wrote /tmp/claude-501/art-final-demo/exports/art-final-demo.mp4  (3.0s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 1/1 filled — B00:STILL
+[exit 0]
+
+
+############################################################
+# 4. Slate refusal — final rejects any un-filled slot
+############################################################
+$ ls /tmp/claude-501/art-final-slate-demo/media/    # B00 only, B01 missing
+B00.png
+
+$ ./art final /tmp/claude-501/art-final-slate-demo --out /tmp/claude-501/art-final-slate-demo/exports --height 720
+[art] REFUSED: [art] REFUSED: clean master would carry 1 slate(s): B01 — run run.sh to render/fill them (use --review to inspect unfinished work)
+[exit 2]
+
+$ ls /tmp/claude-501/art-final-slate-demo/exports/    # nothing shipped
+ls: /tmp/claude-501/art-final-slate-demo/exports: No such file or directory
+
+# The workflow: use ./art run first to inspect a review cut with the slate,
+# then fill B01 (add media/B01.png or wire a Remotion pattern) and re-run.
+

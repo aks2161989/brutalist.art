@@ -1,0 +1,18 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "Finance is a locked-shape template: the accounting standard picks the chart, EDGAR/XBRL supplies every number, and two audits gate the render.",
+  "parent_master_sha256": "15c8209ca63fc8c820fc4f78112955dec5f81c12b1d9eab02f0887d1754b353b",
+  "run_id": "13d2d44505974808943797b6a8c480ca",
+  "source_sha256": "0eee85f3f27b9cd70551e72ed18783981da21d0b4a6562d87f5014676fe4c102",
+  "kept_beats": ["B00", "B01", "B04", "B05", "B06", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B02", "reason": "Generic toolkit anatomy (folder layout, doctrine markdown, pipeline directory) — repository plumbing belongs in the 16:9 long."},
+    {"beat_id": "B03", "reason": "Detailed 11-beat spine of the finance reel — template mechanics; the Short teaches what the skill does, not how the reel is authored."},
+    {"beat_id": "B07", "reason": "Fourth decision (Okabe-Ito colour + double-encoding geometry) — the verdict compactly restates 'profit and loss encoded twice, greyscale kills colour-alone', so the standalone beat is dropped for time."},
+    {"beat_id": "B08", "reason": "Bank/insurer/REIT falsifiability edge case — the verdict already carries 'the template knows its limit — it stops at the edge of the Nasdaq one hundred, because banks were never in scope', so the extended edge-case beat is dropped for time."},
+    {"beat_id": "B10", "reason": "Extended Your Turn / paste-this exercise — CTA belongs in the long per the cut-first prompt."}
+  ],
+  "cut_first_review": "The retained thread is: Liam intro (B00) → BLUF that the accounting standard, not the skill, picks the chart (B01) → shape-lock first decision with Sankey/mirrored-bar/stacked-bar rules (B04) → second decision, XBRL sourcing so no number is ever retyped, on-chart provenance and SEC rate limits (B05) → third decision, two independent audits (RECONCILE + SOURCE) that gate the build (B06) → verdict compressing shape-lock, XBRL-only numbers, dual audits, colour-double-encoding and the Nasdaq-100 scope limit (B09) → Liam sign-off (B11). Numbering is coherent: First → Second → Third → Verdict (Fourth is folded into the verdict). The verdict beat carries the colour rule and the Nasdaq-100 scope limitation, so the dropped B07/B08 material still lands as one honest safety claim rather than being lost.",
+  "planned_duration_s": 169.87,
+  "rewrite_reason": null
+}

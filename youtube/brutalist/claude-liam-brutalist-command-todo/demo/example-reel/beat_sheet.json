@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Demo reel for the todo ledger",
+    "slug": "todo-demo-reel",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro"
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "narration_text": "Cold open — the composer with the ask.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "remotion": { "pattern": "ClaudeComposerAsk" }
+      }
+    },
+    {
+      "beat_id": "B01",
+      "narration_text": "A worked example of a diffusion equation, in one breath.",
+      "shot": {
+        "type": "MANIM",
+        "source": "manim",
+        "manim": "scenes/diffusion.py::Solve"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "narration_text": "The 1963 chart of energy demand, then and now.",
+      "shot": { "type": "ARCHIVAL", "source": "archive" }
+    },
+    {
+      "beat_id": "B03",
+      "narration_text": "The desk-shot of the notebook — a five-second insert.",
+      "shot": { "type": "CAPTURE", "source": "screen" }
+    },
+    {
+      "beat_id": "B04",
+      "narration_text": "A short generated clip: a slow zoom on a paper diagram.",
+      "shot": { "type": "AI-VIDEO", "source": "gen" }
+    }
+  ]
+}

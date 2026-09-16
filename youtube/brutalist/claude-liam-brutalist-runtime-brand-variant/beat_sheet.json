@@ -1,0 +1,825 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: brand_variant.py",
+    "slug": "claude-liam-brutalist-runtime-brand-variant",
+    "topic": "BRUTALIST · UTILITY: BRAND_VARIANT.PY",
+    "kind": "utility",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Yassou, Liam",
+    "greeting_note": "hello lexicon: Yassou (Greek, one word). Fresh in the claude-liam-brutalist-* series — the used set includes Aloha, Bonjour, Ciao, Habari, Hallo, Hei, Hej, Hola, Jambo, Konnichiwa, Merhaba, Namaste, Salaam, Salam, Sawadee, Sawubona, Selam, Shalom, Vanakkam. Wagwan reserved for Bear.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "2105289f3f3846c2870c68ad6e4c57dc",
+    "episode_id": "runtime-brand-variant",
+    "order": 40,
+    "note": "Utility teardown of runtime/scripts/brand_variant.py — the 151-line audience-variant scaffolder. Takes a reel/lecture folder with a canonical beat_sheet.json and one of three audiences {claude-liam, nbb, hai}; writes a sibling <suffix>-<slug>/beat_sheet.<suffix>.json (or, for lectures, <suffix>-lectures/<chapter>-lecture/beat_sheet.<suffix>.json) with the deterministic metadata for that audience (engine=kokoro, kokoro voice, palette, register, outro source, typography for hai/nbb) and an audience-specific _variant_todo list telling Claude what to rewrite. The canonical beat_sheet.json is NEVER modified. Two voices ship: am_onyx (claude-liam + nbb), af_bella (hai). Kokoro is the ONLY engine — the legacy voice_id key is popped, elevenlabs is gone. Refuses to overwrite an existing variant unless --force. Also strips actual_duration_s and shot.rendered stamps so the new variant recomputes its own durations after Claude finishes the creative rewrite. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. episode.source_sha256 bbdce06cb6b9f833342550139061afd29969efcbab74bbd0db6b46b10a835427. working-toolkit source SHA-256 ced0d3f79d98e5d9b18e005679474b64f8fe3b897f5f6fef6b5b3ee2ed02756e (per SOURCE-SNAPSHOT.json).",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "source_file": "runtime/scripts/brand_variant.py",
+      "public_source_url": "https://github.com/nikbearbrown/brutalist.art/blob/main/runtime/scripts/brand_variant.py"
+    },
+    "tags": [
+      "Brutalist",
+      "brand_variant.py",
+      "audience variant",
+      "beat sheet",
+      "claude-liam",
+      "nbb",
+      "hai",
+      "kokoro",
+      "am_onyx",
+      "af_bella",
+      "utility teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-13T13:58:24",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Yassou, this is Liam, in for Bear. The ask — I have one canonical beat sheet, and I need three audience variants — Claude, NikBearBrown, Humanitarians AI — without touching the original. Stamp the metadata deterministically. Leave the creative rewrite to me.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 17,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Yassou, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'invoking brand_variant.py…' appears"
+          },
+          {
+            "at": "0.84",
+            "event": "three output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Yassou, Liam",
+            "topic": "BRUTALIST · UTILITY: BRAND_VARIANT.PY",
+            "segment": "runtime/scripts/brand_variant.py",
+            "command": "One canonical beat_sheet.json, three audience variants — Claude, NikBearBrown, Humanitarians AI. Stamp the metadata deterministically. Never touch the canonical. Leave the creative rewrite to me.",
+            "runningText": "invoking brand_variant.py…",
+            "output": [
+              "reads reel/beat_sheet.json — writes a sibling <suffix>-<slug>/beat_sheet.<suffix>.json",
+              "stamps audience metadata: engine=kokoro, kokoro voice, palette, register, outro source",
+              "writes _variant_todo — the instructions Claude follows to rewrite each beat"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T07:17:38.648916+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.81,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 14.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer. Correction is the reel's actual misconception: brand_variant.py does NOT rewrite the narration.",
+      "narration_text": "Watch the writer walk this back. Brand variant dot py does not rewrite the narration. It stamps the metadata, drops a to-do list, and steps back — Claude does the rewrite in whichever register the audience wants.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'brand_variant.py / rewrites narration.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'rewrites' turns terracotta, hesitates, backspaces, types 'stamps'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'narration' turns terracotta, hesitates, backspaces, types 'metadata'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'brand_variant.py / stamps metadata.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "brand_variant.py\nrewrites narration.",
+            "triggerWords": "rewrites, narration",
+            "replacementWords": "stamps, metadata",
+            "seed": "brand-variant-b01",
+            "face": "serif",
+            "fontSize": 240,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T07:18:37.518082+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 11.86,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 11.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the deterministic pipeline as a horizontal phase-flow.",
+      "narration_text": "Here is the pipeline. Take the canonical beat sheet in the reel folder. Pick an audience — Claude, N B B, or H A I. Resolve the destination folder. Stamp the audience metadata. Write the audience specific to-do list. Emit beat sheet dot audience dot json — creative rewrite deferred to Claude.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "phase-flow",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow UTILITY · PIPELINE + title fade in"
+          },
+          {
+            "at": "0.22",
+            "event": "INPUT box 'reel/beat_sheet.json + {claude-liam|nbb|hai}' lands"
+          },
+          {
+            "at": "0.40",
+            "event": "RESOLVE phase appears with terracotta arrow"
+          },
+          {
+            "at": "0.55",
+            "event": "STAMP phase appears"
+          },
+          {
+            "at": "0.68",
+            "event": "TODO phase appears"
+          },
+          {
+            "at": "0.80",
+            "event": "EMIT phase appears"
+          },
+          {
+            "at": "0.90",
+            "event": "OUTPUT box '<suffix>-<slug>/beat_sheet.<suffix>.json' lands"
+          },
+          {
+            "at": "0.96",
+            "event": "spark line settles under the diagram"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "title": "The audience-variant scaffold — deterministic half only.",
+            "inputLabel": "reel/beat_sheet.json\n+ {claude-liam|nbb|hai}",
+            "outputLabel": "<suffix>-<slug>/\nbeat_sheet.<suffix>.json",
+            "phases": [
+              {
+                "label": "RESOLVE",
+                "desc": "get_brand_dir()",
+                "accent": true
+              },
+              {
+                "label": "STAMP",
+                "desc": "audience metadata",
+                "accent": false
+              },
+              {
+                "label": "TODO",
+                "desc": "_variant_todo list",
+                "accent": false
+              },
+              {
+                "label": "EMIT",
+                "desc": "sibling beat sheet",
+                "accent": true
+              }
+            ],
+            "footerNote": "Canonical never modified. Creative rewrite is Claude's job.",
+            "sparkLine": "One canonical · three audiences · one variant at a time."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T07:19:26.241882+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.87,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 16.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 1 — CLI surface verbatim from --help.",
+      "narration_text": "The command surface is small. Two required positionals: the reel or lecture folder, and one of three audience keys — claude dash liam, n b b, or h a i. One optional flag: dash dash force resets an existing variant from the canonical. Everything else — voice, palette, register — is stamped from a lookup table.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'brand_variant.py — CLI surface (verbatim from --help)'"
+          },
+          {
+            "at": "0.22",
+            "event": "the usage block types"
+          },
+          {
+            "at": "0.55",
+            "event": "the positional + options list types"
+          },
+          {
+            "at": "0.82",
+            "event": "the audience-key legend types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "brand_variant.py — CLI surface (verbatim from --help)",
+            "code": "$ python3 runtime/scripts/brand_variant.py -h\nusage: brand_variant.py [-h] [--force] reel {claude-liam,nbb,hai}\n\npositional arguments:\n  reel\n  {claude-liam,nbb,hai}\n\noptions:\n  -h, --help            show this help message and exit\n  --force\n\n# audience keys — kokoro voice · palette · register:\n#   claude-liam  am_onyx  · claude         · Teardown  (Liam in for Bear)\n#   nbb          am_onyx  · teardown       · Teardown  (NikBearBrown)\n#   hai          af_bella · humanitarians  · Plain     (Humanitarians AI)",
+            "sparkLine": "Two args in. One variant folder out."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T07:19:54.521485+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.77,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 17.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE 1 — canonical → hai. Verbatim from demo/RUN-LOG.txt section 2 + 5.",
+      "narration_text": "One canonical beat sheet, one audience, one variant. Run brand variant on demo slash canonical with h a i. It writes a sibling folder — h a i dash canonical — and inside it, beat sheet dot h a i dot json. The metadata gets audience H A I, register Plain, palette humanitarians, voice a f bella, and a five step to-do list telling Claude what to rewrite next.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads the demo command"
+          },
+          {
+            "at": "0.20",
+            "event": "the [variant] status lines type"
+          },
+          {
+            "at": "0.42",
+            "event": "the beat_sheet.hai.json metadata block types row by row"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "demo/hai-canonical/beat_sheet.hai.json   (verbatim from demo/RUN-LOG.txt §2+5)",
+            "code": "$ python3 runtime/scripts/brand_variant.py demo/canonical hai\n[variant] wrote demo/hai-canonical/beat_sheet.hai.json  audience=HAI  register=Plain  palette=humanitarians  engine=kokoro  voice=af_bella\n[variant] 2 beats to rewrite in Plain — next: follow skills/make/hai/SKILL.md\n\n$ cat demo/hai-canonical/beat_sheet.hai.json | jq .metadata\n{\n  \"audience\": \"HAI\",\n  \"derived_from\": \"beat_sheet.json\",\n  \"register\": \"Plain\",\n  \"palette\": \"humanitarians\",\n  \"outro_source\": \"AUTHOR.MD :: Humanitarians AI\",\n  \"engine\": \"kokoro\",\n  \"voice_kokoro\": \"af_bella\",\n  \"typography\": {\"serif\": \"EB Garamond\", \"sans\": \"Montserrat\"},\n  \"channel_title\": \"@HumanitariansAI\",\n  \"_variant_todo\": [ \"... five instructions ...\" ]\n}",
+            "sparkLine": "Deterministic metadata. Creative rewrite deferred."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-13T17:55:46.453267+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.95,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 20.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 2 — the AUD lookup table. Three brands, four properties each. The whole configuration is here.",
+      "narration_text": "The audience lookup table is where the whole shape lives. Three keys. Each maps to a suffix, an audience label, a palette, a register, a charter file, an outro author section, an engine — always kokoro — and a kokoro voice. Two voices ship: a m onyx for claude dash liam and n b b, a f bella for h a i. Anything else is not scaffoldable — the choices arg parser rejects it.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'brand_variant.py:28-41 — AUD lookup'"
+          },
+          {
+            "at": "0.22",
+            "event": "the claude-liam row types"
+          },
+          {
+            "at": "0.50",
+            "event": "the nbb row types"
+          },
+          {
+            "at": "0.78",
+            "event": "the hai row types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "brand_variant.py:28-41 — AUD lookup",
+            "code": "AUD = {\n    \"claude-liam\": {\"suffix\": \"claude-liam\", \"audience\": \"Claude\",\n                    \"palette\": \"claude\", \"register\": \"Teardown\",\n                    \"charter\": \"CLAUDE-BRAND.md\", \"author_section\": \"NikBearBrown\",\n                    \"engine\": \"kokoro\", \"voice_kokoro\": \"am_onyx\", \"use_dir\": True},\n    \"nbb\":         {\"suffix\": \"nbb\", \"audience\": \"NikBearBrown\",\n                    \"palette\": \"teardown\", \"register\": \"Teardown\",\n                    \"charter\": \"brands/nbb.md\", \"author_section\": \"NikBearBrown\",\n                    \"engine\": \"kokoro\", \"voice_kokoro\": \"am_onyx\", \"use_dir\": True},\n    \"hai\":         {\"suffix\": \"hai\", \"audience\": \"HAI\",\n                    \"palette\": \"humanitarians\", \"register\": \"Plain\",\n                    \"charter\": \"brands/hai.md\", \"author_section\": \"Humanitarians AI\",\n                    \"engine\": \"kokoro\", \"voice_kokoro\": \"af_bella\", \"use_dir\": True},\n}",
+            "sparkLine": "Three brands. Two voices. One engine."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-10T07:20:52.380536+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.54,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 20.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 3 — get_brand_dir(): directory routing. Different for lectures vs reels.",
+      "narration_text": "The destination folder is routed by a tiny function. If the reel path contains a directory named lectures, the sibling lands in book slash suffix dash lectures slash chapter dash lecture. Otherwise it lands in the reel's parent, as suffix dash reel name. Either way, the canonical folder is left alone and the variant is a real sibling on disk — not an overwrite.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'brand_variant.py:44-50 — get_brand_dir()'"
+          },
+          {
+            "at": "0.22",
+            "event": "the function body types"
+          },
+          {
+            "at": "0.60",
+            "event": "the reel example types"
+          },
+          {
+            "at": "0.82",
+            "event": "the lecture example types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "brand_variant.py:44-50 — get_brand_dir()",
+            "code": "def get_brand_dir(reel: Path, suffix: str) -> Path:\n    parts = list(reel.parts)\n    if 'lectures' in parts:\n        idx = parts.index('lectures')\n        book_dir = Path(*parts[:idx])\n        return book_dir / f'{suffix}-lectures' / reel.name\n    return reel.parent / f'{suffix}-{reel.name}'\n\n# reel example:\n#   youtube/<slug>/                → youtube/<suffix>-<slug>/\n#\n# lecture example:\n#   <book>/lectures/ch01-lecture/  → <book>/<suffix>-lectures/ch01-lecture/\n\n# canonical folder is never written to; sibling directory is created (mkdir parents=True).",
+            "sparkLine": "Two shapes. One rule. Canonical untouched."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-10T07:21:19.915613+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.69,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 19.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 4 — main() body: existence check + stamp block + strip stale renders (beats + lecture segments) + copy_build_scripts.",
+      "narration_text": "The main function does four things. One — refuse to overwrite an existing variant unless dash dash force is set, and refuse to run at all if the canonical is missing. Two — stamp the audience metadata: audience, register, palette, outro source, engine, voice. Pop the legacy voice id key — there are no paid engines in this toolkit. Three — walk every beat and every lecture segment, strip actual duration and shot dot rendered stamps so the new variant recomputes its own timings. Four — copy any build scripts from the canonical folder into the variant.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'brand_variant.py:62-135 — main() body'"
+          },
+          {
+            "at": "0.20",
+            "event": "the existence-check block types"
+          },
+          {
+            "at": "0.45",
+            "event": "the metadata stamp block types"
+          },
+          {
+            "at": "0.72",
+            "event": "the strip-stale-timings loop types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "brand_variant.py:62-151 — main() body",
+            "code": "src = reel / \"beat_sheet.json\"\nif not src.exists():\n    sys.exit(f\"[variant] no beat_sheet.json in {reel}\")\n\nout_dir = get_brand_dir(reel, cfg[\"suffix\"])\nout     = out_dir / f\"beat_sheet.{cfg['suffix']}.json\"\nif out.exists() and not a.force:\n    sys.exit(f\"[variant] {out} already exists\")\nout_dir.mkdir(parents=True, exist_ok=True)\n\nsheet = json.loads(src.read_text())\nmeta  = sheet.setdefault(\"metadata\", {})\nmeta[\"audience\"]     = cfg[\"audience\"]      # stamp...\nmeta[\"register\"]     = cfg[\"register\"]\nmeta[\"palette\"]      = cfg[\"palette\"]\nmeta[\"engine\"]       = \"kokoro\"\nmeta[\"voice_kokoro\"] = cfg[\"voice_kokoro\"]\nmeta.pop(\"voice_id\", None)    # no paid engines\n\nfor b in sheet.get(\"beats\", []):            # strip stale timings\n    b.pop(\"actual_duration_s\", None)\n    b.get(\"shot\", {}).pop(\"rendered\", None)\nfor seg in sheet.get(\"segments\", []):       # lecture segments too\n    for b in seg.get(\"beats\", []):\n        b.pop(\"actual_duration_s\", None)\n\nout.write_text(json.dumps(sheet, indent=1))\ncopied = copy_build_scripts(reel, out_dir)  # carry build scripts\nif copied: print(f\"[variant] copied: {','.join(sorted(copied))}\")",
+            "sparkLine": "Refuse. Stamp. Strip beats + segments. Copy scripts. Emit."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-13T17:56:29.135303+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 30.51,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 30.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE 2 — the refusal case + --force. Verbatim from demo/RUN-LOG.txt sections 10 + 11 + 12.",
+      "narration_text": "The safety cases. Re-run brand variant on the same reel with the same audience — no dash dash force — and it refuses with exit code one. The message names the existing file. Add dash dash force and it rewrites. Point it at a folder with no beat sheet dot json and it also refuses, with exit code one and the reason printed. In both refusals, nothing on disk changes.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'demo — the refusal cases (exit 1, no side effects)'"
+          },
+          {
+            "at": "0.20",
+            "event": "the second-run refusal types"
+          },
+          {
+            "at": "0.55",
+            "event": "the --force success types"
+          },
+          {
+            "at": "0.82",
+            "event": "the missing-canonical refusal types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "demo — the refusal cases (exit 1, no side effects)",
+            "code": "$ python3 runtime/scripts/brand_variant.py demo/canonical hai\n[variant] demo/hai-canonical/beat_sheet.hai.json already exists (use --force to reset it from canonical)\n$ echo $?\n1\n\n$ python3 runtime/scripts/brand_variant.py demo/canonical hai --force\n[variant] wrote demo/hai-canonical/beat_sheet.hai.json  audience=HAI  register=Plain  palette=humanitarians  engine=kokoro  voice=af_bella\n[variant] 2 beats to rewrite in Plain — next: follow skills/make/hai/SKILL.md\n\n$ python3 runtime/scripts/brand_variant.py demo/empty-reel hai\n[variant] no beat_sheet.json in demo/empty-reel\n$ echo $?\n1",
+            "sparkLine": "Refuse loudly. Preserve the canonical."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-13T17:57:04.096399+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.39,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 20.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole file, in the order it does its job.",
+      "narration_text": "So — brand variant dot py. The scaffold. It reads one canonical beat sheet, picks an audience from the lookup table, resolves the sibling folder, stamps the metadata, writes the audience specific to-do list, strips stale timings, and emits one variant beat sheet. It refuses to overwrite without dash dash force. It never modifies the canonical. Everything after — the rewrite, the audio, the render — is a separate step.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'brand_variant.py — the whole surface, in the order it does its job'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "brand_variant.py — the whole surface, in the order it does its job",
+            "artifactLines": [
+              "input — reel/beat_sheet.json + audience in {claude-liam, nbb, hai}.",
+              "lookup — AUD dict maps audience → suffix · palette · register · outro author · kokoro voice.",
+              "resolve — get_brand_dir() routes to <suffix>-<slug>/ (reel) or <suffix>-lectures/<chap>/ (book).",
+              "stamp — audience metadata + typography for hai/nbb; legacy voice_id popped.",
+              "todo  — _variant_todo per audience: the instructions Claude follows to rewrite.",
+              "emit  — beat_sheet.<suffix>.json + strip stale actual_duration_s / shot.rendered stamps."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-10T07:23:53.126303+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.27,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 21.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at any reel that already has a canonical beat sheet: run brand variant with the h a i audience, then diff the two metadata blocks and tell me — which keys were added, which were changed, which were popped. Watch for whether Claude is tempted to also edit narration text on this pass. That is not this script's job. Brand variant dot py stamps metadata and hands the microphone to the rewrite skill.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Scaffold a Humanitarians AI variant — read the diff, not the story.",
+            "command": "Point Claude Code at any reel folder that already has a canonical beat_sheet.json: (1) run `python3 runtime/scripts/brand_variant.py <that folder> hai`; (2) load the canonical .metadata and the new <hai>-<slug>/beat_sheet.hai.json .metadata into your context; (3) tell me — which keys were ADDED (present in variant, absent in canonical), which were CHANGED (present in both, different values), which were POPPED (present in canonical, absent in variant). (4) Do NOT edit any narration_text on this pass. Explain in one line why brand_variant.py leaves that job to the audience-specific skill (skills/make/hai/SKILL.md) rather than doing it itself.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — new sibling folder <hai>-<slug>/ with beat_sheet.hai.json inside",
+              "step 2 — three lists: ADDED · CHANGED · POPPED (voice_id is the pop)",
+              "step 3 — one-line note that the register rewrite is a separate, creative step"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T07:25:14.085841+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.8,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 21.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-13T13:58:24"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Utility: brand variant dot py. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Utility: brand_variant.py.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Utility: brand_variant.py.",
+            "slug": "claude-liam-brutalist-runtime-brand-variant"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-10T07:25:29.826252+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 6.14,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 6.166666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-13T13:58:24"
+      }
+    }
+  ]
+}

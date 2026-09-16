@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "ceee469d2f3449e6b11a0b74027039df",
+  "source_sha256": "8328fa28423a5e15fca115dbae264a2031801c1cea8b45a2fd557943a4ec8691",
+  "parent_beat_sheet_sha256": "3faefa0e4dea5ddd393f93c0d9eea9b663c465acab478ece99b87b9d6d73f24c",
+  "parent_master_sha256": "f25109b859ced3b9c08ff0ea9179af7caf11d32d06c4d289a4756af74addaef9",
+  "beat_sheet_sha256": "0a67f3967c0ec50f2143470e0bfaafca61bf14307aa3f73e8c986f4976539402",
+  "video_sha256": "00758e069585949844d71f4be7f1d23bd48d0894f98310e8006fc0eec1c86db6",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-sheet.png", "sha256": "547f9135c0db64faed7987802a27a54f699f36bf9f3d967c27910aceaa1ed527"},
+    {"path": "_qc/beats/B00-p15.png", "sha256": "d284844b3ecb464cc2cbcaef5b283d39c7152c1bbc960eb950cce1f8488f8ce1"},
+    {"path": "_qc/beats/B00-p50.png", "sha256": "027e6aad21a986e7f0b48b2e9a5052a035c909e4368f69c923f683ce4d9a1f6c"},
+    {"path": "_qc/beats/B00-p85.png", "sha256": "d70b21f4f235e23e1a67c1d55ba868ec38c053a54482c4fce90017ee436f8be2"},
+    {"path": "_qc/beats/B01-p15.png", "sha256": "e0066cc06182e8fe669267969994e4dab759c93ca071bcc2ea07963c3af45b40"},
+    {"path": "_qc/beats/B01-p50.png", "sha256": "80364eef431a507f0582dab2a8a669103a70d3f8afbb905142ad668a2429ad45"},
+    {"path": "_qc/beats/B01-p85.png", "sha256": "c772d5cb94a624147719fa8e4f6d858bbd6bb139855c56f1af1c6d272fa9a334"},
+    {"path": "_qc/beats/B03-p15.png", "sha256": "2e40a934ca4a7523405b1b56d999538ed8526fa4abe88e8e43a12be07641829f"},
+    {"path": "_qc/beats/B03-p50.png", "sha256": "c5e5059116e59e65e63a061e47664e2186387f3d4049db8154139659555baa53"},
+    {"path": "_qc/beats/B03-p85.png", "sha256": "eb5a047f4cda6b951071e3f3e25dfe5abe246762170da336e047257374cc79c6"},
+    {"path": "_qc/beats/B09-p15.png", "sha256": "eb0b2ffc3fb0c3ac56b38b18892d788f1e2e11cddd0837d9250514a4ffcc27e2"},
+    {"path": "_qc/beats/B09-p50.png", "sha256": "355a601448329f097f564fb939f88124cf40af9d655e1d3fc5ee9263b24ec58b"},
+    {"path": "_qc/beats/B09-p85.png", "sha256": "355a601448329f097f564fb939f88124cf40af9d655e1d3fc5ee9263b24ec58b"},
+    {"path": "_qc/beats/B11-p15.png", "sha256": "af1b20587af297a1cd392e09e4aa5a65024d5686119cc1488bbc60ec49dc3ed9"},
+    {"path": "_qc/beats/B11-p50.png", "sha256": "6ff1ef011dfafb144b7ccbeaddfadbe71e43615013bbd3843d9313be2d6e9a22"},
+    {"path": "_qc/beats/B11-p85.png", "sha256": "9e115d09de13cfe35f87befa738fc56558625929d6dbbc6dcc9a7836117c5358"}
+  ],
+  "notes": "Reviewed the compiled 2160×3840 Short (108.208 s container, 108.167 s video, 108.208 s audio — strictly under 180 s, ~72 s of headroom). Extracted 216 sample frames at 2 fps plus beat-relative 15%/50%/85% frames for each of the five kept beats (B00, B01, B03, B09, B11) and built a 3×5 contact sheet. Visually verified each kept beat: (B00) ClaudeComposerAsk916 renders 'Hola, Liam' + the mental-model ask about skills/make/nbb/SKILL.md and lands three answer lines ('derives an NBB cut into a NEW nbb- directory', 'canonical beat_sheet.json is NEVER modified', 'scaffold is deterministic; the rewrite is Claude\\'s job') inside portrait safe area; folder chip '@HumanitariansAI' legible. (B01) BrutalistHesitantWriter916 lands the misread correction — the trigger fires cleanly ('rewrites' → 'scaffolds') and the final serif frame reads 'The nbb skill / scaffolds / your reel. / Source is / never modified.' All five lines fit the portrait safe area; portrait-aware scale patch active. (B03) SkillTeardownPipeline916 renders eyebrow 'SKILL · PIPELINE', title 'Five steps. One derived cut.', INPUT node, five phases (SCAFFOLD in terracotta, then REWRITE / LLM EXERCISE / OUTRO / VERIFY), OUTPUT node, and the footer 'Scaffold first. Rewrite second. Ship last.' All labels legible inside safe area. (B09) ClaudeVerdictArtifact916 shows the six numbered verdict lines with terracotta bullets — new sibling dir; canonical source byte-identical (same SHA-256); two halves; fixed ending order body→[LLM]→[outro]; Kokoro am_onyx / IN-FOR-BEAR LAW; _variant_todo is a checklist. B09-p50 and B09-p85 hash identically because the card is fully static after the 25%-mark reveals; expected behaviour for a verdict artifact. (B11) ClaudeTitleOutro916 restates 'The nbb Skill.' with terracotta period, '@NikBearBrown' handle (hardcoded per OUTRO-LOCK), cream ground. Audio joins between beats are clean per-beat mp3 concat; no truncation, no speed-up, no burned-in captions. Two carry-over palette lint warnings (B00, B11 on *916 compositions on a claude palette) are known portrait-native trade-offs inherited from the vertical parent, not defects. Human review pending."
+}

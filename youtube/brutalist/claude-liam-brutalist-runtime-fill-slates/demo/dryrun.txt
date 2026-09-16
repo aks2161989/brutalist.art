@@ -1,0 +1,4 @@
+[fill-slates] DRY-RUN: 1 reels, 2 slate beats to fill
+  fixture-book/demo-reel: ['B00', 'B01']
+
+Re-run with --apply to stamp + render + recut.

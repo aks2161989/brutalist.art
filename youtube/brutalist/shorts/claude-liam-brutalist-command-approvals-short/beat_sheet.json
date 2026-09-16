@@ -1,0 +1,565 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art approvals",
+    "slug": "claude-liam-brutalist-command-approvals-short",
+    "topic": "BRUTALIST · COMMAND: ART APPROVALS",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Selam, Liam",
+    "greeting_note": "hello lexicon: Selam (Amharic, one word). Fresh — does not repeat scene-index=Bonjour, scenes/help=Namaste, icons=Sawubona, list=Salaam, icon-build=Merhaba, run=Ciao, shorts=Salam, todo/vertical=Hola. Slug char-sum mod 10 == 6, not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "9183b88ae09845c39f780928e0b7b10a",
+    "episode_id": "command-approvals",
+    "order": 32,
+    "note": "Command teardown of ./art approvals — the dispatcher case at art:87-89 that wraps `python3 runtime/scripts/build_safety.py`. build_safety.py is a fail-closed auditor for two gates: `voice` (armed when metadata.profile/kind/skill == fellows OR voice_policy == persistent-fellow-selected) and `professor_notes` (armed by beats with requires_approval == professor_notes OR act in FEEDBACK/PROFESSOR_BEAR_NOTES, plus fellows B05/B06). Two verbs: --fingerprints prints the subjects with recomputed SHA-256s and exits 0 without touching the file; the default validates the pasted metadata.approvals block against those SHAs and refuses on missing/wrong/stale. Five fields per record: status=approved, reviewer_type=human, reviewed_by non-empty, reviewed_at ISO-8601 with utcoffset, and every subject key equal to the recomputed value. NEVER signs — the pen never leaves the human's hand. All demo output in demo/RUN-LOG.txt is verbatim from this workstation against three fixture reels at /tmp/claude-501/approvals-demo-*/. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. No paid API, no upload, no network calls. episode.source_sha256 5aa2c4cd9ca4f2862a4e01ba1929d29938f61965b07d462c7e43e6dc6a4c3270.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:87-89",
+      "auditor_script": "runtime/scripts/build_safety.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "approvals",
+      "build_safety.py",
+      "fingerprints",
+      "voice gate",
+      "professor_notes gate",
+      "fail-closed",
+      "human review",
+      "SHA-256",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T17:43:25",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-command-approvals-vertical",
+    "dropped_beats": [
+      "B02",
+      "B04",
+      "B07",
+      "B10"
+    ],
+    "total_estimated_duration_seconds": 126.75,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Selam, this is Liam, in for Bear. The ask — before I sign anything on a fellows reel, show me exactly what I would be signing. Do not sign it for me. Just print the fingerprints.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Selam, Liam' types above the composer"
+          },
+          {
+            "at": "0.25",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'reading beat_sheet.json…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Selam, Liam",
+            "topic": "BRUTALIST · COMMAND: ART APPROVALS",
+            "segment": "art approvals",
+            "command": "Before I sign anything on a fellows reel, show me exactly what I would be signing. Do not sign it for me. Just print the fingerprints.",
+            "runningText": "reading beat_sheet.json…",
+            "output": [
+              "prints two subjects (voice + professor_notes) with a SHA-256 each",
+              "validates a pasted metadata.approvals block against those SHAs",
+              "writes zero files — audit only, the pen never leaves the human"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T20:00:28.600006+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 9.83,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 9.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T17:43:25"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Correction is the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art approvals does not sign approvals. It inspects the subjects a human is about to sign. Two verbs. Fingerprints prints. Default validates. The pen never leaves the human's hand.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'art approvals / signs files.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'signs' turns terracotta, hesitates, backspaces, types 'inspects'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'files' turns terracotta, hesitates, backspaces, types 'subjects'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art approvals / inspects subjects.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art approvals\nsigns\nfiles.",
+            "triggerWords": "signs, files",
+            "replacementWords": "inspects, subjects",
+            "seed": "approvals-b01",
+            "face": "serif",
+            "fontSize": 300,
+            "lineSpacing": 3.4,
+            "align": "center",
+            "charMs": 30
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T20:10:41.882994+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 11.9,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 11.916666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T17:43:25"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the two verbs. argparse surface + metadata.approvals shape.",
+      "narration_text": "Two surfaces. Point it at a reel folder. Add dash dash fingerprints, and it prints the subjects a human would need to sign — nothing else. Leave the flag off, and it validates the pasted approvals against those subjects. Either way, the file changes zero. Approvals live in metadata dot approvals in the beat sheet, written by a human editor. The command is the auditor.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'art approvals — the two verbs'"
+          },
+          {
+            "at": "0.22",
+            "event": "argparse surface types (reel, --fingerprints)"
+          },
+          {
+            "at": "0.50",
+            "event": "the two-branch main() types under it"
+          },
+          {
+            "at": "0.78",
+            "event": "the metadata.approvals shape lands"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art approvals — the two verbs",
+            "code": "# runtime/scripts/build_safety.py — argparse surface\nap = argparse.ArgumentParser(description=__doc__)\nap.add_argument('reel', type=Path)\nap.add_argument('--fingerprints', action='store_true',\n                help='print subjects for human review; never signs')\n\n# ...and the two-verb main body:\nif a.fingerprints:\n    print(json.dumps(approval_subjects(a.reel, sheet), indent=2))\nelse:\n    validate_approvals(a.reel, sheet)\n\n# Approvals themselves live in the beat sheet, in one place:\n# beat_sheet.json:\n#   metadata:\n#     approvals:\n#       voice:            { ... a human review record ... }\n#       professor_notes:  { ... a human review record ... }",
+            "sparkLine": "Two verbs. Neither one signs."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T20:02:14.409987+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.92,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 18.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T17:43:25"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — fellows reel; both gates armed; --fingerprints prints two SHAs. Verbatim from demo/RUN-LOG.txt section 3.",
+      "narration_text": "Now a fellows reel. Profile fellows, voice policy persistent, and a feedback beat marked professor notes. Two gates arm: voice, and professor notes. Dash dash fingerprints prints two subject blocks, each with a SHA-256. Those are the exact strings a human review record has to match. That is the paperwork.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads the verbatim --fingerprints run"
+          },
+          {
+            "at": "0.25",
+            "event": "the fellows fixture metadata + feedback beat types"
+          },
+          {
+            "at": "0.60",
+            "event": "the JSON output types with the two SHAs terracotta"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art approvals /tmp/…-fellows --fingerprints   (verbatim)",
+            "code": "# fixture metadata — profile=fellows arms the voice gate\n{\n  \"metadata\": {\n    \"kind\": \"fellows\",\n    \"profile\": \"fellows\",\n    \"voice_kokoro\": \"af_bella\",\n    \"voice_policy\": \"persistent-fellow-selected\",\n    \"approvals\": {}\n  },\n  \"beats\": [\n    /* B05 requires_approval: professor_notes — arms that gate */\n  ]\n}\n\n$ ./art approvals /tmp/claude-501/approvals-demo-fellows --fingerprints\n{\n  \"voice\": {\n    \"subject_sha256\": \"d3486a7ac5d09…04dbd98e04bf4\"\n  },\n  \"professor_notes\": {\n    \"notes_sha256\":     \"09686350c0147…59f0b29fc398f2d77b\",\n    \"narration_sha256\": \"c3ad137b26ebf…082bda5bbbf0ba154ed\"\n  }\n}\n[exit 0]",
+            "sparkLine": "Two gates armed. Two subjects. Two SHAs."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T20:03:17.057931+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.6,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T17:43:25"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the five-field human review record.",
+      "narration_text": "Under the hood, an approval record is five fields. Status equals approved. Reviewer type equals human — never AI. Reviewed by, a non-empty string. Reviewed at, a full ISO timestamp with a timezone. And every subject SHA reprinted verbatim from dash dash fingerprints. Miss one, mistype one, forget the timezone — the gate refuses. The refusal is the feature.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'validate_approvals — the five-field record'"
+          },
+          {
+            "at": "0.25",
+            "event": "the legal record example types"
+          },
+          {
+            "at": "0.55",
+            "event": "the conjunct from build_safety.py:155-164 types below it"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "validate_approvals — the five-field record",
+            "code": "# A legal human review record — five fields, all required.\n\"voice\": {\n  \"status\":        \"approved\",\n  \"reviewer_type\": \"human\",       # NEVER 'ai' — this is the signature\n  \"reviewed_by\":   \"Bear\",\n  \"reviewed_at\":   \"2026-09-09T20:00:00+00:00\",   # ISO-8601 + tz\n  \"subject_sha256\": \"d3486a7ac5d09…04dbd98e04bf4\"  # verbatim from --fingerprints\n}\n\n# From build_safety.py — the exact fail-close conjunct:\nif (record.get('status') != 'approved'\n        or record.get('reviewer_type') != 'human'\n        or not str(record.get('reviewed_by', '')).strip()\n        or not dated                                   # utcoffset must be set\n        or any(v is None or record.get(k) != v        # every subject key\n               for k, v in expected.items())):\n    raise ApprovalError(...)\n# Extra gate: NOTES.md must be non-empty when professor_notes is signed:\nif name == 'professor_notes' and \\\n        not (Path(folder) / 'NOTES.md').read_text().strip():\n    raise ApprovalError('GATE professor_notes: NOTES.md is empty')",
+            "sparkLine": "Five fields. Human, dated, verbatim — and NOTES.md non-empty."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-12T18:35:47.530166+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.42,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 20.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T17:43:25"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FAILURE_RECOVERY",
+      "role_note": "FALSIFIABILITY — same reel, one word added to B05 narration. Gate refuses; recovery is a fresh fingerprint + fresh human record. Verbatim from demo/RUN-LOG.txt sections 4-5.",
+      "narration_text": "One failure worth showing. A fellows reel, both approvals pasted, both gates green. Then B05 narration gets one extra sentence added — after the human signed. Re-run. The command refuses: gate professor notes, missing pending or stale. Dash dash fingerprints prints the new SHA. The recovery is the same short loop: hand the new subjects to the human, get a fresh dated record, paste it in. The pen still does not leave their hand.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'recovery   (verbatim; one word changed)'"
+          },
+          {
+            "at": "0.18",
+            "event": "BEFORE: both approvals green, exit 0 types"
+          },
+          {
+            "at": "0.42",
+            "event": "EDIT: one line added to B05 narration_text"
+          },
+          {
+            "at": "0.60",
+            "event": "AFTER: refused — GATE professor_notes: stale"
+          },
+          {
+            "at": "0.82",
+            "event": "RECOVERY: --fingerprints prints the new narration_sha256"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "recovery   (verbatim; one word changed, one gate refuses)",
+            "code": "# BEFORE — both approvals pasted, both gates green\n$ ./art approvals /tmp/claude-501/approvals-demo-fellows\n[exit 0]\n\n# ---------------- EDIT (after the human signed) ----------------\n# B05.narration_text:\n#   \"Great pacing. Tighten the fourth beat.\"\n# becomes\n#   \"Great pacing. Tighten the fourth beat AND cut the sixth.\"\n\n# AFTER — same reel, same approvals block, one word added\n$ ./art approvals /tmp/claude-501/approvals-demo-fellows\n[safety] REFUSED: GATE professor_notes: missing, pending or\n  stale human approval; inspect build_safety.py <reel>\n  --fingerprints\n[exit 1]\n\n# RECOVERY — the error itself names the fix\n$ ./art approvals /tmp/claude-501/approvals-demo-fellows \\\n     --fingerprints\n{\n  \"voice\":            { \"subject_sha256\":   \"d3486a7ac5d09…04bf4\" },\n  \"professor_notes\": {\n    \"notes_sha256\":     \"09686350c0147…d77b\",\n    \"narration_sha256\": \"e133218aca8bd…0ce68\"   # ← new\n  }\n}\n# Hand the new subjects to the human. Get a fresh, dated record.\n# Paste it in. Re-run. Exit 0.",
+            "sparkLine": "One word changed. Approval stale. Human decides."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T20:05:03.920809+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 23.08,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 23.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T17:43:25"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, in the order you use it.",
+      "narration_text": "So — art approvals. A five-field auditor. Two verbs, neither one signs. It reads the beat sheet, decides which gates are armed, computes the subjects live, and either prints them or checks a pasted record against them. It refuses on missing, wrong, or stale. And the refusal is the whole reason the command exists — a fellows reel with a pending signature never ships.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'art approvals — the whole surface, in the order you use it'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art approvals — the whole surface, in the order you use it",
+            "artifactLines": [
+              "bare invocation — ./art approvals <reel> [--fingerprints]; wraps python3 runtime/scripts/build_safety.py $@.",
+              "two verbs, neither signs — --fingerprints prints the subjects; default validates the pasted metadata.approvals against them.",
+              "two gates, sheet-armed — voice arms when metadata.profile/kind/skill == fellows or voice_policy == persistent-fellow-selected; professor_notes arms on requires_approval, a feedback act, or B05/B06 in a fellows reel.",
+              "five fields per record — status=approved · reviewer_type=human · reviewed_by non-empty · reviewed_at ISO-8601 with tz · every subject SHA verbatim.",
+              "fingerprints from the source every run — pasted SHAs are the human's; recomputed SHAs are the truth. Edit the sheet after signing → stale.",
+              "no aliases; changes zero files — the pen never leaves the human. Downstream renderers call the same validator, so a pending signature never ships."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-12T18:36:58.691104+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.39,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 19.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-12T17:43:25"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Command: art approvals. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art approvals.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art approvals.",
+            "slug": "claude-liam-brutalist-command-approvals"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T20:06:47.861382+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.44,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.458333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T17:43:25"
+      }
+    }
+  ]
+}

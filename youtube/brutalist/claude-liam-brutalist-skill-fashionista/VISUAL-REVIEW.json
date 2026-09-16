@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "ca12337c8e2c43d0a0add834b390efd7",
+  "source_sha256": "aeb54e310d896f9de59d94c31aa04648f00a35e352f0518b68f17985110f37c0",
+  "beat_sheet_sha256": "6384d3af71eb520be7467968f4779a146e1ba1a46f2b6b87080beb5a221ae7e1",
+  "video_sha256": "7f384f6161e716a43f44010f202fa923596bfd2315b3cb3581e93398693135a1",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-landscape.png", "sha256": "cc86438a976bbcd25e781c6c858a9aa14ee568bb55b4b0be3790758ea35d351a"}
+  ],
+  "notes": "Re-verified under run_id ca12337c8e2c43d0a0add834b390efd7 (source SHA changed due to referenced file updates; fashionista/SKILL.md content matches beat sheet — no beat modifications required). Inspected contact-landscape.png directly (12-panel grid, all beats). Establishes: (1) B00 ClaudeComposerAsk — 'Hallo, Liam' greeting, @HumanitariansAI folder chip, three result lines, terracotta send button armed; (2) B01 BrutalistHesitantWriter — 'Fashionista is a fashion experiment. Every episode is one trial. You are the judge.' large serif centered, tutorial→experiment correction landed; (3) B02 SkillTeardownAnatomy — 'The fashionista folder.' file tree legible, CALLS.json row callout present; (4) B03 SkillTeardownPipeline — 'Three beats. Clip plus five.' INPUT → INTRO → THE VIDEO (terracotta) → OUTRO → OUTPUT pipeline clean; (5) B04–B08 mechanism cards each carry eyebrow, heading, body, verbatim SKILL.md quote with citation, and verdict pill inside safe area; (6) B09 ClaudeVerdictArtifact — 'An experiment. Not a series.' with six numbered lines; (7) B10 Your Turn ClaudeComposerAsk — paste-ready dry-run prompt, three-check rubric as output; (8) B11 ClaudeTitleOutro — 'The fashionista Skill.' terracotta period, @NikBearBrown handle, slug-seeded mascot. 3840×2160 · 24fps · 276s · aac stereo confirmed by ffprobe. No captions, no unresolved slates, no clipping past safe area. Human review pending."
+}

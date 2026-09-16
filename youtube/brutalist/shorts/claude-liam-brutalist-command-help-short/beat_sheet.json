@@ -1,0 +1,529 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art help",
+    "slug": "claude-liam-brutalist-command-help-short",
+    "topic": "BRUTALIST · COMMAND: ART HELP",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Namaste, Liam",
+    "greeting_note": "hello lexicon: Hindi (single-word). Wagwan check: sum('claude-liam-brutalist-command-help') mod 10 == 7, not a Wagwan reel.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "2c495c5f99c840f6adc567ad1aa16613",
+    "episode_id": "command-help",
+    "order": 22,
+    "note": "Command teardown of the four ./art help aliases ('', -h, --help, help) that all map to the same case branch in the top-level 'art' dispatcher (episode.source_sha256 387d12c338fe3e8e05a3c2202be86ea81beaf548c2fd11ec3ee4876694f8b562). The middle body walks the actual source (case block + sed pipeline that extracts lines 2..18 of the art file itself), then contrasts with ./art --list, then a real failure (./art bogus exits 2, does NOT print help) and the recovery. All demo outputs in demo/RUN-LOG.md are verbatim from this workspace. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for human reviewer before publication. No paid API, no upload, no re-render of catalog reels.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:37-39"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "help",
+      "command teardown",
+      "aliases",
+      "bash case",
+      "usage sheet",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T07:02:32",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-command-help-vertical",
+    "dropped_beats": [
+      "B02",
+      "B07",
+      "B08",
+      "B10"
+    ],
+    "total_estimated_duration_seconds": 107.38,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Namaste, this is Liam, in for Bear. Every fellow in Brutalist has typed dot slash art help. What most people miss is that four different aliases hit that same line, and the help text you see is not stored anywhere. It is the file's own header, extracted by sed at run time. Here is what that means, and where it stops.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.12",
+            "event": "greeting 'Namaste, Liam' types above the composer"
+          },
+          {
+            "at": "0.30",
+            "event": "typed ask appears in the composer"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'reading the entry point…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Namaste, Liam",
+            "topic": "BRUTALIST · COMMAND: ART HELP",
+            "segment": "art help",
+            "command": "What does ./art help actually do — and what does it not do?",
+            "runningText": "reading the entry point…",
+            "output": [
+              "prints a 17-line usage sheet, then exits 0",
+              "four aliases fire it: empty, -h, --help, help",
+              "different scope from ./art --list (the skills catalog)"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T06:26:12.914277+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.11,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 17.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T07:02:32"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Corrects the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art help does not list every skill. It prints every command, straight from the file's own header. The skills catalog is a different command.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "four short lines type down the frame: 'art help / lists / every / skill.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'skill' turns terracotta, hesitates, backspaces, types 'command'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected stack settles: 'art help / lists / every / command.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art help\nlists\nevery\nskill.",
+            "triggerWords": "skill",
+            "replacementWords": "command",
+            "seed": "command-help-b01",
+            "face": "serif",
+            "fontSize": 210,
+            "lineSpacing": 1.55,
+            "align": "center",
+            "charMs": 16,
+            "jitter": 14,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T06:36:44.847004+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 9.71,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 9.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T07:02:32"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — how the help text is generated. Not stored; extracted from the file's own header.",
+      "narration_text": "This is the whole body. Two sed calls. The first grabs lines two through eighteen of the art file itself. The second strips the leading hash and space that make those lines a shell comment. What you see on your terminal is the file reading its own head, without the hash marks.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card in; title reads 'art:39 — the help body'"
+          },
+          {
+            "at": "0.25",
+            "event": "sed line types character by character"
+          },
+          {
+            "at": "0.65",
+            "event": "comment underneath types: '# reads its own header'"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art:56 — the help body",
+            "code": "# One line. Two sed calls. That is the whole implementation.\nsed -n '2,18p' \"$ART_HOME/art\" | sed 's/^# \\{0,1\\}//'\n\n# 1st sed: print lines 2..18 of the art file itself.\n# 2nd sed: strip the leading '# ' (or '#') from each line.\n# Net effect: the file's own header, un-commented, is the help.",
+            "sparkLine": "The help IS the header, minus the hash."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-11T17:23:32.354763+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.76,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 14.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:02:32"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — the actual output captured from this workspace, verbatim.",
+      "narration_text": "So this is what runs. Seventeen lines. The first line is a title. The other sixteen are commands, each with a short description. There are no colours, no pager, no interactive prompt. It prints, it exits zero, it is done.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 17,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art help'"
+          },
+          {
+            "at": "0.20",
+            "event": "17 lines cascade in one at a time"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line settles: '17 lines. Exits 0. Done.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art help  (verbatim, 17 lines)",
+            "code": "art — one entry point for the brutalist toolkit (the pared-down brutalist-art).\n\n  ./art --list                 list the skills\n  ./art <skill> --help         show a skill's SKILL.md\n  ./art scenes \"<beat need>\"   LIBRARY-FIRST scene search — run BEFORE authoring a beat\n  ./art scenes --check <Name>  is that composition renderable? (the anti-slate check)\n  ./art scene-index            regenerate scenes.json + SCENE-DOC-TODO.md after adding one\n  ./art icons \"<what it needs>\" CANONICAL icon search — run BEFORE drawing a mark\n  ./art icons --check <name>   is that icon in the set? (the anti-redraw check)\n  ./art icon-build             re-cut the canonical set from svg/ (rarely needed)\n  ./art todo  <reel> [flags]   per-video beat ledger (which beats need filling, how)\n  ./art run   <reel> [flags]   compile a review cut\n  ./art shorts <reel> [flags]  derive the 9:16 Short (cap check + auto-shorten)\n  ./art vertical <reel>        full-length 9:16 companion (no shortening)\n  ./art approvals <reel> --fingerprints  inspect human-review subjects (never signs)\n  ./art final <reel>           verified master — no review label (→ <slug>.mp4)\n  ./art doctor                 dependency readiness (wraps ./setup)\n\n$  # exit 0  (smoke + keys exist at header lines 19-20, not shown — beyond sed 2,18p range)",
+            "sparkLine": "17 lines. Exits 0. (smoke + keys beyond sed range)"
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-11T17:24:08.901451+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 12.48,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 12.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:02:32"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the four aliases share one body.",
+      "narration_text": "The alias set is the interesting part. Bash pipes inside a case pattern mean this branch matches four different things. The empty string, so bare dot slash art matches. Dash h. Dash dash help. And the literal word help. All four hit the same sed line. Same output, no duplicated code.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'the four aliases'"
+          },
+          {
+            "at": "0.20",
+            "event": "four invocations type as a grid"
+          },
+          {
+            "at": "0.60",
+            "event": "arrow annotation ties them to the '\"\"|-h|--help|help)' pattern"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "the four aliases → one branch",
+            "code": "# All four print the SAME 17-line usage sheet:\n$ ./art               # empty string alias\n$ ./art -h            # short flag\n$ ./art --help        # long flag\n$ ./art help          # bare word\n\n# The case pattern that catches them, in art:55 :\n\"\"|-h|--help|help)\n    sed -n '2,18p' \"$ART_HOME/art\" | sed 's/^# \\{0,1\\}//'\n    ;;",
+            "sparkLine": "Empty. Dash-h. Dash-dash-help. help."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T06:28:47.305087+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.7,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 15.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:02:32"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "CONTRAST — help ≠ --list. Different scope.",
+      "narration_text": "Now the near miss. Dot slash art dash dash list is a different command. It is not an alias for help. It prints the skills table — every skill in the toolkit with a one-line role. If you want the commands, use help. If you want the skills, use dash dash list. They cover different scopes.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art --list'"
+          },
+          {
+            "at": "0.20",
+            "event": "skills table types, first 8 rows"
+          },
+          {
+            "at": "0.75",
+            "event": "footer annotation: 'commands vs skills — different scopes'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art --list  (the skills catalog)",
+            "code": "SKILL                  ROLE\nai-explainer           builder — Claude-branded explainer reel\ncli-explainer          builder — prompt → code → moving output\ndeep-explainer         builder — 5-10 min documentary episode\nanthropics             builder — reads Anthropic artifacts vs claims\nfellows                builder — wraps a HAI fellow's video report\nfinance                builder — templatized SEC EDGAR filings\nnbb                    persona — Teardown, Liam in for Bear\nhai                    persona — Plain register, Kokoro Bella\nexplainer              doctrine — parent chassis (not an entry point)\nyour-turn              doctrine — the closing three-beat standard\nnopunt                 doctrine — animatable beat-types mapping\n# …16 rows total.\n\n# help = commands.  --list = skills.  Different scopes.",
+            "sparkLine": "help = commands. --list = skills."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-09T06:29:15.938479+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 15.02,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 15.041666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T07:02:32"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the split. Four scopes, in order.",
+      "narration_text": "So the split. Art help is the 17-line command sheet, pulled from the file's own header. Dash dash list is the skills table. Skill dash dash help is that skill's SKILL dot m-d. An unknown token is exit two, one line, pointing at dash dash list. Four scopes, one dispatcher, zero surprises.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'Four scopes'"
+          },
+          {
+            "at": "0.30",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.50",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.70",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.88",
+            "event": "line 4 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art help vs --list vs <skill> --help vs unknown",
+            "artifactLines": [
+              "art help — the 17-line command sheet, from the file's own header.",
+              "art --list — the skills table (16 rows), name plus one-line role.",
+              "art <skill> --help — that skill's SKILL.md, opened in $PAGER.",
+              "unknown token — exit 2, one line to stderr, points to --list."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T06:40:16.589358+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.3,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 17.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-12T07:02:32"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art help. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art help.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art help.",
+            "slug": "claude-liam-brutalist-command-help"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T06:31:39.785882+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.1,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T07:02:32"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "d6a7b8125f8a4bc4bbd1122f104532f0",
+  "source_sha256": "dca78a66fe88354fb0608f4e03633e7c91ef7e28ac0d0ddc6e878cb2a915b697",
+  "beat_sheet_sha256": "985cd72c1fa16593994016e4c1398a33004e2162ee7956ba515d6d542df70a6b",
+  "video_sha256": "da36f3e53e00d7599708d5ff36adecc03aa89c6501f51f8877de41aae9a9ddd0",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/frames/start.png",
+      "sha256": "c1c79cf9904980997a593bb9009f94519a5a0cd041cabf803368da5895f620fc"
+    },
+    {
+      "path": "_qc/frames/b04_50pct.png",
+      "sha256": "e061b71eff0caaeac0f310618513d6f0dfcba9e54dca5859decb8661ab48d786"
+    },
+    {
+      "path": "_qc/frames/b05_50pct.png",
+      "sha256": "6a688d0dc5117e457df19ed3da356b081e94d17489ac9dc1895b24e14a0ff3ec"
+    },
+    {
+      "path": "_qc/frames/b10_50pct.png",
+      "sha256": "65170bc05d46558985bdac717374ca9ccb3856f84a53d74e5b8f3891b792e2e4"
+    },
+    {
+      "path": "_qc/frames/end.png",
+      "sha256": "6d9178381826b4c4f90f26c49182020551c91e6ec92430edd9ecbcca2b0fb4b2"
+    }
+  ],
+  "notes": "Landscape 3840x2160 · 231.8s · H.264 + AAC. Rebuilt in run_id d6a7b8125f8a4bc4bbd1122f104532f0 for SKILL.md source change (added 'Code → visible result is the teaching unit' section and teaching_contract:code-then-result-v1 requirement). B04 narration updated to introduce the code→result pairing principle; B04 GodotDevWorkbench notes now include 'Visible result' entry and updated output bar 'player.gd · code → visible result'. B05 body updated to reference teaching_contract. B10 verdict line 1 updated to 'Code → visible result: each excerpt, then its game consequence — not deferred.' Gate-V: 26 frames, BLOCKER=0, MAJOR=0. Five QC frames inspected directly with Read tool. start.png (B00, t=5s): ClaudeComposerAsk cold open — 'Bula, Liam' greeting, @HumanitariansAI folder chip, ask about godot-gamedev typed in, three result lines ('It takes games apart. / Not a builder – a reader. / It makes teaching films from source.') — cream ground, no overflow. b04_50pct.png (B04, t=70.8s): GodotDevWorkbench code mode — 'Reading a player script.' title, Godot editor reconstruction, player.gd with _physics_process highlighted (line 6); bottom output bar reads 'player.gd · code → visible result · Godot editor reconstruction'; source annotation present; @NikBearBrown bottom right. b05_50pct.png (B05, t=90.4s): SkillTeardownMechanism 'Reconstruct — don't invent.' — body text now includes teaching_contract reference ('Code-result pairs are logged in evidence as teaching_contract: code-then-result-v1'); verbatim SKILL.md quote present; 'HONEST CONTRACT' verdict pill; 'The label is the contract.' spark line — cream background, no overflow. b10_50pct.png (B10, t=182.7s): ClaudeVerdictArtifact — 'Verdict' header, 'The godot-gamedev skill.' heading, updated line 1 'Code → visible result: each excerpt, then its game consequence — not deferred.' (terracotta); lines 2-4 unchanged; @HumanitariansAI bottom right; white card, no overflow. end.png (B12, t=228.8s): ClaudeTitleOutro — dark olive background, 'The godot-gamedev Skill.' serif title, '@NikBearBrown' handle, terracotta pixel mascot — per OUTRO-LOCK. No unresolved slates, no captions, no off-frame content. SKIN LINT warning on outro @NikBearBrown vs body @HumanitariansAI is expected. Human review pending."
+}

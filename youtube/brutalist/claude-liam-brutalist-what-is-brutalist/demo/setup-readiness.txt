@@ -1,0 +1,16 @@
+
+[1mbrutalist — readiness (free-only toolkit: no keys, ever)[0m
+
+  FEATURE                      STATUS
+  -------                      ------
+  audio (Kokoro Bella/Onyx)    [31m❌ blocked[0m
+        · model files ship with this toolkit — if missing: curl -LO from github.com/thewh1teagle/kokoro-onnx releases (model-files-v1.0)
+        · Kokoro failed to synthesize + decode a test phrase above -40 dB — check model files, kokoro_onnx install, and ffmpeg (run runtime/scripts/setup_smoke_kokoro.py directly to see why)
+  captions + word clock        [32m✅ ready[0m
+  Manim beats                  [32m✅ ready[0m
+  Manim equation beats         [32m✅ ready[0m
+  Remotion beats + bookends    [32m✅ ready[0m
+  slates / previz / compile    [32m✅ ready[0m
+  fonts (EB Garamond + Oswald) [32m✅ ready[0m
+
+[31mSomething is blocked — see above.[0m

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "f971dbe48eef4a7c82cd58515b018d69",
+  "source_sha256": "43f7abe9af3dc4f9a7af430799b4c04732a78b6f4ba39dddbdb812259f95d7f6",
+  "beat_sheet_sha256": "b1924707c7518d6ab1b15dc83cda4338e7c79940844aaaacaee09452767ba963",
+  "video_sha256": "94612121ccdea9b2bb397d2310ec6bcc2b61a16b7a2faa0243fa8f886c8b67d6",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "qc-sheet.png", "sha256": "6f6fdd1edde307ba8ea287257613c136d8ddda551f1e38951269f4d7ac0316e8"},
+    {"path": "_qc/samples/B00_85.png", "sha256": "15cd86ddd5986315a72044dad36718719e84398cd272d777ead20336bd1a9d6d"},
+    {"path": "_qc/samples/B01_85.png", "sha256": "0035ee8281b6c5a70b1bdd31affbfe70f6e37afa37fdea7de7686a1d7e9e89c9"},
+    {"path": "_qc/samples/B09_50.png", "sha256": "8daf9c4365b35881f9122a25f3066b2c5663537fe0c7cb1bce0bc95713686ec5"},
+    {"path": "_qc/samples/B11_50.png", "sha256": "58fe06403706ada52402423082262cd354bd3a78cf826d7068cbf54b28b1c1ba"}
+  ],
+  "notes": "Re-verified under run_id f971dbe4 (source re-snapshot; previous run_id 19539b2d; underlying SKILL.md content unchanged, SHA badfb2bc). Landscape master, 12 beats, 317.25s, 3840x2160. Viewed qc-sheet.png (tiled 12-beat contact sheet), B00_85 (cold open: 'Hola, Liam' greeting, command, three-line answer, @HumanitariansAI folder chip and footer — clean), B01_85 (hesitant writer: 'The logo skill / plays a random brand sting / after every reel. / The MP3 is the clock.' — 4-line BLUF, correction fixed→random visible, fills safe area), B09_50 (six-line verdict card 'A locked lottery. Silence at the end.' — all 6 numbered lines legible), B11_50 (outro: 'The logo Skill.' title, @NikBearBrown handle per OUTRO-LOCK, pixel bear mascot visible). No captions, no burned-in transcript. @HumanitariansAI in all composer beats; @NikBearBrown in outro. Gate V BLOCKER=0 MAJOR=0 (from previous render session — renders not changed). Human review pending — Bear's viewing and editing is next."
+}

@@ -1,0 +1,39 @@
+# riff Skill — demo commands run during this build
+# Date: 2026-09-11
+# Toolkit: /Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/.repoloop/workspaces/claude-liam-brutalist-skill-riff/toolkit
+# Purpose: Source-backed evidence for B05 (ClaudeCodeBeat: "Look before writing" demo)
+
+## Command 1: Search for riff-related scenes before authoring
+$ ./art scenes "riff commentary observe inspect"
+6 candidate(s) for "riff commentary observe inspect"  —  a hit is a lead, read the props:
+
+  [ 4.5] RiffSplit   (16:9)
+       under: OutroRiff
+       OutroRiff.tsx — reel-local Remotion components for claude-liam-riff-the-outros. Two scenes only.
+       props: title, left, right, note
+
+  [ 4.5] RiffLottery   (16:9)
+       under: OutroRiff
+       OutroRiff.tsx — reel-local Remotion components for claude-liam-riff-the-outros. Two scenes only.
+       props: title, chips, lockedIndex, note
+
+  [ 3.5] CodexTitleOutro   (16:9)  [derived text — open the file]
+  [ 2.0] CadencesFig6Tide   (16:9)
+  [ 2.0] GodotDevWorkbench   (16:9)
+  [ 2.0] GodotDevWorkbench916   (9:16)
+
+## Command 2: Check specific skill teardown scenes
+$ ./art scenes --check SkillTeardownAnatomy SkillTeardownPipeline SkillTeardownMechanism
+  SkillTeardownAnatomy         RENDERABLE   16:9   props: skillName, oldName, eyebrow, title, files, calloutText
+  SkillTeardownPipeline        RENDERABLE   16:9   props: eyebrow, title, inputLabel, outputLabel, phases, footerNote
+  SkillTeardownMechanism       RENDERABLE   16:9   props: eyebrow, heading, body, quote, cite, verdictLabel
+
+## Observation (B05 evidence):
+# This IS the "look before writing" step. Before authoring a single beat,
+# we searched the scene library. The top hits (RiffSplit, RiffLottery) are
+# reel-local — context-specific, not generic. The generic SkillTeardown*
+# components are what we actually needed.
+# This is exactly what riff SKILL.md mandates: "find the existing renderer
+# with ./art scenes, inspect its props/source, then render one small,
+# clearly labeled educational fixture."
+# Source: skills/make/riff/SKILL.md

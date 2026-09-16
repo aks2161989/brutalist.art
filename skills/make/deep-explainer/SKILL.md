@@ -1,35 +1,30 @@
 ---
 name: deep-explainer
 description: >
-  5–10 minute deep explainers on the ai-explainer chassis — Claude composer
-  cold open, verdict recap, YOUR TURN handoff, title-restate outro — with a
-  documentary BODY built from Manim fragments and Remotion
-  patterns/illustrations chosen per beat, plus VOX beats — pantry stills in the
-  cutout grammar (greyscale/duotone, ease-out Ken Burns, film grain) — used ONLY
-  where the still is itself the evidence (VOX LAW). There is no vox quota.
-  Frame-continuity chains ONLY within runs of consecutive vox beats (the
-  vox-run handoff contract); hard cuts everywhere else. Two hard gates beyond
-  the parents': the first compile is a full-length SLATE PREVIZ, and a
-  tier-tagged, duration-locked SHOPPING LIST for pantry stills must exist
-  before the review cut. Use when the user types `deep-explainer`,
-  `deep explainer`, `deep reel`, or asks for a long / in-depth / documentary
-  Claude-bookended explainer (5–10 min). AUDIT MODE modifier arms on:
-  `audit`, `evaluate the tool`, `what can X do`, `capability audit`,
-  `is X useful for` — BUT: if the exhibits are real rendered artifacts
-  with no pantry need, prefer `ai-explainer` audit mode (lighter chassis).
-  Register: Teardown. Default channel claude-liam (Kokoro am_onyx, free).
-  Never publishes.
+  Build multi-act, in-depth documentary explainers with Claude bookends
+  and Liam's Teardown narration (free local Kokoro am_onyx). Use for
+  deep-explainer, deep reel, or an in-depth Claude-bookended film request.
+  Depth determines runtime; executed examples and diagrams are preferred,
+  with pantry stills only when the source artifact is necessary. No still
+  quota. Explicit tool-evaluation requests activate audit mode. Audio-first,
+  phase-gated, with a full review cut and a sourcing list only for genuine
+  outstanding assets. Never publishes.
 ---
 
 # deep-explainer — the long-form Claude-bookended documentary cut
 
 A sibling of `ai-explainer` and `cli-explainer` on the same shared skeleton:
 Claude bookends, different MIDDLE. Here the middle is a 5–10 minute
-documentary-register vox body that leans on **human-supplied static stills in
-`pantry/`** which the machine animates in the vox cutout grammar. Where
+documentary-register body built from executed examples, data and diagrams.
+Use human-supplied or archival stills in `pantry/` only when the artifact itself
+is necessary evidence, not to decorate a computation. Where
 `ai-explainer` makes a tight reel, deep-explainer makes an episode.
 
 ## Lineage — what governs when
+
+Math in every beat follows [MATH-TYPESETTING.md](../../../docs/MATH-TYPESETTING.md).
+A generic text-card reroute is not a valid substitute for typeset equations,
+even when ordinary typography checks pass. Verify algebra and rendered notation.
 
 This skill EXTENDS `ai-explainer`, which extends `explainer`. Nothing below
 repeals a parent law; this file only adds the genre's own contracts.
@@ -55,7 +50,7 @@ repeals a parent law; this file only adds the genre's own contracts.
 - **Pacing** → `../duration-planner/` doctrine: duration is an OUTPUT.
   The 5–10 min band is the genre's natural landing zone for a multi-act
   concept, never a target to pad toward. If the arc lands at 4:40, ship 4:40.
-- **This file** governs: the beat-mix quota, the vox-beat treatment on the
+- **This file** governs: evidence-based beat routing, the vox-beat treatment on the
   Claude stage, the vox-run continuity contract, the shopping-list gate, and
   the deep act structure.
 
@@ -76,12 +71,10 @@ Trigger phrases: `audit`, `evaluate the tool`, `what can X do`,
 `capability audit`, `is X useful for`. Full doctrine: `AUDIT-MODE.md`
 at the toolkit root — read it before building an audit reel.
 
-**Chassis routing note:** if the exhibits are already-rendered artifacts
-(no pantry stills needed), prefer `ai-explainer` audit mode — the
-deep-explainer VOX quota and shopping-list gate are dead weight when
-there is nothing to shop for. Use deep-explainer audit mode only when
-the audit genuinely needs 5–10 min AND the body includes archival/
-documentary stills alongside the real exhibits.
+**Chassis routing note:** choose depth by the teaching problem, not the media
+mix. A multi-act audit can use only executed examples and rendered artifacts.
+There is no VOX quota; when nothing needs sourcing, record zero outstanding
+requests instead of inventing a shopping list.
 
 Three-line summary (read AUDIT-MODE.md for the full rules):
 
@@ -203,6 +196,11 @@ it or the author explicitly justifies it in `BUILD-LOG.md`. Neither is ever
 silently passed.
 
 ## VOX BEATS — pantry stills, machine-animated
+
+First apply [EXECUTABLE-EVIDENCE.md](../../../docs/EXECUTABLE-EVIDENCE.md).
+Use pantry only when the artifact itself is needed. Run Python for a Python
+result; compute data for a chart. A notebook/index-card photograph is not
+necessary evidence for a constructed example or a locally runnable experiment.
 
 A vox beat does not generate its own media. It **expects a static image** —
 `pantry/[BID].png` → intake to `media/[BID].png` — and the compiler animates

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "9b4d02f2e64e486f84128da57eea5d86",
+  "source_sha256": "c5b4e9954b15e76f4e7b9009997cdf0796d3321fbd3b9e8c9f6f54f0cfc08c5b",
+  "beat_sheet_sha256": "ed6959671efb4084dd9d83e90ddce59b850a0f1c653061efff212f71e5f84cc1",
+  "video_sha256": "1a18a49c4c26ceee881b711cdbd83782f387ada8f958d7eabf084425c1f89b6d",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/B02-verify/landscape-50pct.png", "sha256": "4e326f56aa942138f0502e35f512342d20a4ab1eb5064cbe433d7898cf2868cf"},
+    {"path": "_qc/final-landscape/frame-5s.png", "sha256": "46c48156cbc5703fef08de7a0f141b99f303f8e92b322a3f94ae435979dc5bc2"},
+    {"path": "_qc/final-landscape/frame-25s.png", "sha256": "11a192f7c63dc27d535dc217bc25355c94887f0a293fba0db178585905fc9f1b"},
+    {"path": "_qc/final-landscape/frame-170s.png", "sha256": "346f924d7e89f11db558ca9b0cec0038d4695cd0eb768585704b7d6b7e0a6914"},
+    {"path": "_qc/final-landscape/frame-235s.png", "sha256": "a0385a5902c72917382452bf5385ebc0d05e170969032b12aaa19fb36fb7fcbd"}
+  ],
+  "notes": "Re-reviewed for run_id 9b4d02f2e64e486f84128da57eea5d86. Video and frame files unchanged from prior build (all SHA-256 hashes stable). Prior build rebuilt for e6fb28666cd: art dispatcher smoke case moved from lines 100-102 to 121-123 (commit ba2d0e0), B02 re-rendered and recompiled. 3840x2160 landscape master, 238.7s, mean_volume -27.0 dB (clears -40 dB floor), both video+audio streams decode. GATE V (final_frame_check) BLOCKER=0 MAJOR=0. Frames re-inspected via Read tool this invocation: B02 at 50% — code card title bar reads 'art:121-123' (correct), code content inside card, spark line 'One case. No flags. One script.' at bottom-left. frame-235s — outro reads 'Brutalist Command: art smoke.' + @NikBearBrown handle (OUTRO-LOCK) + slug-seeded mascot centred on dark ground. All non-outro beats carry @HumanitariansAI folder chip per playlist adaptation. Human review pending."
+}

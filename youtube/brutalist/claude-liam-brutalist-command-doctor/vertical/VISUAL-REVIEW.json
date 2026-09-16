@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "5c2c1dda1a4548798796300fb24665e1",
+  "source_sha256": "83bf8a6815768028aee4bff000d45efd17fe3fd3878c7a0cac7fef9cb6fbd932",
+  "beat_sheet_sha256": "285dd876f8e29e4701ea81b88f2101c8862588521a9c8d821d2abc161345c00d",
+  "video_sha256": "b0554d945529b6c3a8cb1791c816a92c7502fd6179b3f4cdd4fc941aa8c47591",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact_sheet.png",               "sha256": "5351d519b0812b784d46fc21c8e09b4c8370c0c01296a4037dcdfa1a1b074812"},
+    {"path": "_qc/frames-vertical/B02_50.png",       "sha256": "927a949c1f7fe4410fc489996f3ef8d2debe6df24ed21dc81d329ea54778fb55"},
+    {"path": "_qc/frames-vertical/B02_85.png",       "sha256": "94c6c991bd6662be6eaace87bad7540a5dcaac24c500a160858ac685842164b3"}
+  ],
+  "notes": "Rebuild triggered by source change: art dispatcher case moved from art:96-99 to art:117-121 (two new commands 'vertical' and 'approvals' added above doctor in the dispatch table). Only B02 changed — title card updated from 'art:96-99' to 'art:117-121'. B02 re-rendered via ClaudeCodeBeat916, both aspects recompiled. Inspected B02_50 and B02_85 portrait frames: title bar reads 'art:117-121 — one branch, no aliases'; code block legible; spark line 'One case. No aliases. One script.' present. Known limitation: long monospace lines in portrait ClaudeCodeBeat916 beats truncate at right card edge; ink stays inside card, Gate V clean, salient doctor) case fully visible. 2160x3840 h264 portrait master, 216.8s, aac audio 216.8s. Gate V: 24 frames, BLOCKER 0, MAJOR 0. Skin lint warnings for ClaudeComposerAsk916/ClaudeTitleOutro916 on B00/B11 are expected for portrait native variants (documented in metadata). All other beats unchanged from previous build (run_id 22ff8413d025455cba847ff321663dff). Minor limitation: outro card (B11) reads @NikBearBrown per OUTRO-LOCK.md — flagged in README.md. Human review pending."
+}

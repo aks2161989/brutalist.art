@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "b7896f5b2d2a441186ff1451881c0a5b",
+  "source_sha256": "7c3b6abf2ec61bb70122fe12ba1e2d5bad049db19db16ddb3a1026cad274e8c6",
+  "beat_sheet_sha256": "7265a43772e71c00b2589f5e66c6e904c293bd76ec6ccf77445e7623fafaa08a",
+  "video_sha256": "6c86395efba7a96cafd4ee6d99a8b22fcf9951c502bdde9e46d18ce521e3fadf",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/contact-sheet-landscape.png", "sha256": "416d33bcfa75090200fb2cf58554ea2626fbc1d2d9d888791124d1da8b5df241"},
+    {"path": "_qc/proof-landscape/B00-50.png", "sha256": "a04d6504fd9c06e1fef9fbc4924722ab8a3b69a6c2442c8adb1eb1ade00ccc89"},
+    {"path": "_qc/proof-landscape/B01-85.png", "sha256": "f16af81d3c6d072a938ac59376a303697b004ee8cfd2eb9af48e1b27e973d622"},
+    {"path": "_qc/proof-landscape/B04-85.png", "sha256": "9248c632fd951fdb7c2cba5d76d49386667cf7f0d17207bf1084bf243d04617f"},
+    {"path": "_qc/proof-landscape/B06-85.png", "sha256": "1aac210f9cd47e8f72ea7085278354320327938f2c91af5af0b324ad95dbcec5"},
+    {"path": "_qc/proof-landscape/B08-85.png", "sha256": "be5e350d8566d39b3c9e1e6691e064f120a2abc9a67efb2a5abefaf9df4f8a95"},
+    {"path": "_qc/proof-landscape/B09-85.png", "sha256": "73b7e7e8bd9bc4fa4b66dc2dc8cda030acbb4948a3c9c64cdf25423f6214cb47"},
+    {"path": "_qc/proof-landscape/B10-85.png", "sha256": "8778b44543dd051e6b9fe786b2768f7c6451dfd200fc4d41af3a6bac0eae3a09"},
+    {"path": "_qc/proof-landscape/B11-50.png", "sha256": "d6f01ebf3291337687d1c660c4881fbf2aa5b0fba3bd2ff2868f5f33f531a8fb"}
+  ],
+  "notes": "Re-verification pass for run_id b7896f5b2d2a441186ff1451881c0a5b (2026-09-13). Previous run abdef8f04e1246deaf8cf7ab26ae350b was interrupted by Claude usage limit; exports and all frame hashes are stable and unchanged. Source files art (85cf6a0a) and check_keys.py (95ad03f1) current on this workstation; episode.source_sha256 7c3b6abf is the combined source fingerprint from the invocation record. Landscape master (3840x2160, 218.583 s) SHA-256 6c86395e is unchanged from previous passing run. Gate V (runtime/qc/final_frame_check.py) returned frames=24 BLOCKER=0 MAJOR=0. All 8 proof frames and contact sheet Read with the image-capable Read tool; all SHA-256 values stable and match previous passing review record. B00-50: cold open composer — 'Habari, Liam' greeting, ask about optional keys, @HumanitariansAI folder label, three output lines (probes ONE service / prints colored row / always exits 0); B01-85: BLUF corrected to 'art keys / audits upgrades.' in large serif; B04-85: verbatim invalid-row output with red emoji, 'All present keys validated.' footer, [exit 0]; B06-85: full higgsfield probe body (try/except/FileNotFoundError/except Exception), readable; B08-85: design-tell beat showing any_invalid=False drift and SI-key grep; B09-85: six-line verdict artifact card legible; B10-85: Your Turn composer with audit prompt and @HumanitariansAI label; B11-50: outro title 'Brutalist Command: art keys.' + @NikBearBrown handle + slug-seeded mascot. No captions, no bleed, no clipping. OUTRO-LOCK: @NikBearBrown handle hardcoded per OUTRO-LOCK.md — flagged for human reviewer before publication. No paid API called. Human review pending."
+}

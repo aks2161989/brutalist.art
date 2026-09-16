@@ -1,0 +1,799 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art final",
+    "slug": "claude-liam-brutalist-command-final-vertical",
+    "topic": "BRUTALIST · COMMAND: ART FINAL",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Hei, Liam",
+    "greeting_note": "hello lexicon: Hei (Norwegian, one word). Fresh — does not repeat prior batch. Slug char-sum mod 10 == 4, not a Wagwan slot; Wagwan is Bear's alone.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "9bd89bb7cb05441183300f026a38f958",
+    "episode_id": "command-final",
+    "order": 33,
+    "note": "Command teardown of ./art final — the dispatcher case at art:111-116 that forwards to python3 runtime/scripts/compile.py, defaulting --height 2160 when unset. compile.py is the assembler AND the review-cut compiler; --review draws beat labels and stays beside the reel, no --review writes a verified master to --out. final_preflight (paperwork triad + beat_lint + gate_shape) runs before rendering; final_frame_check (Gate V) runs against the candidate encode; approvals are re-checked and input SHA-256s re-hashed after the encode so a mid-render edit invalidates the cut. Successful finals ship with a sibling verified.json receipt (output SHA-256, input SHA-256, duration, timestamp). Slates and pending approvals block the master unconditionally; --allow-slates is review-only. All demo output in demo/RUN-LOG.txt is verbatim from this workstation against /tmp/claude-501/art-final-demo/ and /tmp/claude-501/art-final-slate-demo/. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged for the human reviewer before publication. No paid API, no upload, no network calls. episode.source_sha256 5c4110bae43e20554516f1eabb31aff2a2f84e2f32d4c46e9b91fa51f03c4b43. Sources updated 2026-09-13: art dispatcher grew with vertical/approvals commands; compile.py atomic block gained file-existence guard in input hash check (line numbers shifted to final_preflight:454-466, atomic-replace:803-825).",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "case_lines": "art:111-116",
+      "compile_script": "runtime/scripts/compile.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "final",
+      "compile.py",
+      "verified.json",
+      "Gate F",
+      "Gate V",
+      "final_preflight",
+      "final_frame_check",
+      "atomic replace",
+      "SHA-256",
+      "receipt",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-13T00:50:54",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "full-length; native portrait graphics; preserve source framing",
+    "derived_from": "claude-liam-brutalist-command-final",
+    "dropped_beats": [],
+    "total_estimated_duration_seconds": 239.25,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hei, this is Liam, in for Bear. The ask — compile this reel to a verified 4K master. Refuse if the paperwork is thin or a beat is still a slate. If the new export fails any check, keep the last good file in place. Do not print ready unless the file on disk really is.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Hei, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'reading beat_sheet.json; gating paperwork…' appears"
+          },
+          {
+            "at": "0.84",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Hei, Liam",
+            "topic": "BRUTALIST · COMMAND: ART FINAL",
+            "segment": "art final",
+            "command": "Compile this reel to a verified 4K master. Refuse on thin paperwork or an unfilled slate. If the new export fails any check, keep the last good file in place. Do not print ready unless the file on disk really is.",
+            "runningText": "reading beat_sheet.json; gating paperwork…",
+            "output": [
+              "gate F (paperwork) → gate LINT → gate SHAPE → render slots → encode candidate",
+              "gate V (frame-level QC) on the candidate mp4, then re-check approvals + input hashes",
+              "atomic replace of the master; write sibling verified.json (SHA-256, inputs, duration)"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T21:58:16.194678+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.85,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 14.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Correction is the reel's actual misconception.",
+      "narration_text": "Watch the writer walk this back. Art final does not render once. It gates the paperwork, renders, and then re-verifies the output it just wrote. Two lines of defence, one written next to the other on the receipt.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 16,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.12",
+            "event": "first lines type: 'art final / renders once.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'renders' turns terracotta, hesitates, backspaces, types 'verifies'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'once' turns terracotta, hesitates, backspaces, types 'twice'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'art final / verifies twice.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "art final\nrenders\nonce.",
+            "triggerWords": "renders, once",
+            "replacementWords": "verifies, twice",
+            "seed": "final-b01-916-v5",
+            "face": "serif",
+            "fontSize": 230,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T22:19:22.993204+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 11.65,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 11.666666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the dispatcher case at art:111-116. Two-branch height default, forwards to compile.py.",
+      "narration_text": "The dispatcher is one case in the art file. It matches the exact string final, checks whether you already passed a --height, and forwards everything to compile.py. If you did not name a height, it hardcodes 2160 — the native 4K master. There are no aliases. Every rule the command enforces lives inside compile.py.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in; title bar reads 'art'"
+          },
+          {
+            "at": "0.20",
+            "event": "'final)' pattern types"
+          },
+          {
+            "at": "0.45",
+            "event": "case \" $* \" branch types (--height check)"
+          },
+          {
+            "at": "0.75",
+            "event": "the two exec lines type"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line settles under the card"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "art:111-116 — one branch, two paths",
+            "code": "# From the top-level art dispatcher (bash):\ncase \"$cmd\" in\n  # ...\n  final)\n    case \" $* \" in\n      *\" --height \"*|*\" --height=\"*)\n        exec python3 \"$ART_HOME/runtime/scripts/compile.py\" \"$@\" ;;\n      *)\n        exec python3 \"$ART_HOME/runtime/scripts/compile.py\" \"$@\" --height 2160 ;;\n    esac\n    ;;\n  # ...\nesac\n\n# The wrapper always: (1) resolves ART_HOME from art's own path,\n# (2) execs python3 on compile.py, (3) forwards \"$@\" untouched,\n# (4) if no --height was named, appends --height 2160 for 4K.",
+            "sparkLine": "One case. No aliases. --height defaults to 4K."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-12T21:53:19.102456+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.67,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 18.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — compile.py argparse surface. --review vs no-review is the whole two-verb split.",
+      "narration_text": "Compile.py's argparse surface is small on purpose. A reel folder. Optional --review, which is the reason art run and art final are the same script — the review path draws beat labels and stays beside the reel. Then --fps, --height, --audio, --force, --allow-slates, and --out. --allow-slates is review-only; a final refuses slates unconditionally. --out picks the destination — a local folder, a mounted drive, anywhere.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card in; title reads 'compile.py — the small surface'"
+          },
+          {
+            "at": "0.22",
+            "event": "argparse block types (folder + flags)"
+          },
+          {
+            "at": "0.55",
+            "event": "--out fallback chain lands as comment"
+          },
+          {
+            "at": "0.85",
+            "event": "final vs review distinction card lands"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "compile.py — the small surface",
+            "code": "# runtime/scripts/compile.py — argparse surface\nap = argparse.ArgumentParser()\nap.add_argument(\"folder\", type=Path)\nap.add_argument(\"--review\",       action=\"store_true\")\nap.add_argument(\"--fps\",    type=int, default=24)\nap.add_argument(\"--height\", type=int, default=720)   # art final overrides to 2160\nap.add_argument(\"--audio\",  help=\"master audio file\")\nap.add_argument(\"--force\",         action=\"store_true\")\nap.add_argument(\"--allow-slates\",  action=\"store_true\")   # review only\nap.add_argument(\"--out\",    type=Path, default=None)\nap.add_argument(\"--sheet\", default=\"beat_sheet.json\")\n\n# Destination precedence for a clean master:\n#   1. --out DIR       explicit, always wins\n#   2. $ART_OUT        the downloader's configured render folder\n#   3. <toolkit>/renders/   built-in default\n# A --review cut is a working artifact and always stays beside the reel.",
+            "sparkLine": "One script. --review vs. no --review = two verbs."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T22:00:06.717456+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.19,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 22.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — final_preflight (paperwork triad + beat_lint + gate_shape). Verbatim from compile.py:454-466.",
+      "narration_text": "When --review is off, final_preflight runs before a single frame renders. It calls require_paperwork — a FACTCHECK, a SHOTLIST, and a PROMPTS file, each nonempty. Then it runs beat_lint and gate_shape as executable Python. If either gate exits non-zero, final refuses. The lint runs on the sheet, not the mp4 — you fail fast, before you spend the render.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title 'final_preflight — fail before you render'"
+          },
+          {
+            "at": "0.22",
+            "event": "final_preflight() body types"
+          },
+          {
+            "at": "0.62",
+            "event": "call site in compile_reel() types under it"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "final_preflight — fail before you render",
+            "code": "# compile.py:454-466 (verbatim)\ndef final_preflight(folder, sheet, sheet_name):\n    require_paperwork(folder)           # FACTCHECK.md, SHOTLIST.md, PROMPTS.md nonempty\n    for name in ('beat_lint.py', 'gate_shape.py'):\n        gate = Path(__file__).resolve().parents[1] / 'qc' / name\n        if not gate.is_file():\n            raise BuildError(f'Missing required final gate: {gate.name}')\n        sh([sys.executable, gate, folder / sheet_name])\n    md = sheet.get('metadata') or {}\n    if md.get('kind') == 'short':\n        if md.get('short_validation', {}).get('status') != 'ready':\n            raise BuildError('Short needs a ready portrait plan before final export')\n\n# The call site — only entered when this cut is a final (not a review):\nif not a.review:\n    if a.allow_slates:\n        raise BuildError('--allow-slates is review-only; a final cannot contain missing visuals')\n    final_preflight(folder, sheet, a.sheet)",
+            "sparkLine": "Gate the paperwork before you spend the render."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-13T04:47:05.928301+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.97,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 20.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — the happy path. Verbatim from demo/RUN-LOG.txt section 2.",
+      "narration_text": "Here is a tiny reel with one still, three seconds of narration, and the three paperwork files. Art final prints a single line per beat, a motion histogram, a build stamp, then the mp4 path. Next to the mp4 is a verified.json file the compiler wrote itself — the SHA-256 of the export, and the SHA-256 of every input that fed it. This receipt is what downstream tools use to match the file to its recipe.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads the verbatim command"
+          },
+          {
+            "at": "0.22",
+            "event": "the seven-line stdout types"
+          },
+          {
+            "at": "0.55",
+            "event": "the verified.json body types under it"
+          },
+          {
+            "at": "0.93",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./art final /tmp/…-demo --out /tmp/…-demo/exports --height 1080   (verbatim)",
+            "code": "$ ./art final /tmp/claude-501/art-final-demo \\\n     --out /tmp/claude-501/art-final-demo/exports --height 1080\n[art] compiled B00  STILL     3.0s  ← B00.png\n[art] motion histogram: hold:1\n[art] SKIN LINT: NO RENDERABLE BEATS: … (fixture only)\n[art] build stamp → beat_sheet.json (1/1 filled)\n[art] wrote /tmp/…/exports/art-final-demo.mp4  (3.0s, audio: …)\n[art] slots: 1/1 filled — B00:STILL\n[exit 0]\n\n$ cat /tmp/claude-501/art-final-demo/exports/art-final-demo.verified.json\n{\n  \"status\": \"ready\",\n  \"output\": \"/private/tmp/…/exports/art-final-demo.mp4\",\n  \"sha256\": \"5910ade9793c943b2…3403eb5eecfae93e3\",\n  \"duration_s\": 3.0,\n  \"input_sha256\": {\n    \"/private/tmp/…/media/B00.png\":       \"1ef1f64877df491d9…dd07bbea\",\n    \"/private/tmp/…/mp3/beat-B00.mp3\":    \"e90000344ef36e942…e3ee182ebc\"\n  },\n  \"at\": \"2026-09-09T21:34:24+00:00\"\n}",
+            "sparkLine": "One line per beat. One receipt beside the mp4."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T22:01:13.190491+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.43,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 25.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — atomic candidate write pattern. Verbatim from compile.py:803-825.",
+      "narration_text": "The atomic bit. Compile.py encodes into a candidate.mp4 inside a temp folder next to your --out. Only after Gate V passes and the approvals recheck succeeds does the candidate get os.replaced onto the final path. If any check fails — Gate V, an approval turning stale mid-render, a source file changing hash — the temp folder is thrown away, the previous verified export stays in place, and build-state records the failure. There is never a moment when the file on disk is between two versions.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title 'compile.py:800-822 — atomic replace'"
+          },
+          {
+            "at": "0.22",
+            "event": "TemporaryDirectory context types"
+          },
+          {
+            "at": "0.55",
+            "event": "gate V + approvals recheck lines type"
+          },
+          {
+            "at": "0.85",
+            "event": "os.replace(candidate, out) lands"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "compile.py:803-825 — atomic replace",
+            "code": "# The last-good-file guarantee (verbatim, compile.py:803-825):\nwith tempfile.TemporaryDirectory(\n        prefix=f'.{slug}-candidate-', dir=out_dir) as scratch:\n    candidate = Path(scratch) / 'candidate.mp4'\n    cmd[-1] = str(candidate)\n    sh(cmd)                                    # encode into the temp\n    verify_output(candidate, total, fps, …)    # decode + duration + audio\n    if not a.review:\n        gate = … 'runtime/qc/final_frame_check.py'\n        timeline = work / 'resolved-sheet.json'\n        atomic_json(timeline, sheet)           # resolved-clock sheet for Gate V\n        sh([sys.executable, gate, folder,\n            '--mp4',   candidate,\n            '--sheet', timeline])              # Gate V on the candidate\n        latest = json.loads((folder / a.sheet).read_text())\n        validate_approvals(folder, latest)     # re-check approvals\n        if latest != original_sheet:\n            raise BuildError('Beat sheet changed during rendering…')\n        if any(not Path(p).is_file() or file_digest(p) != value\n               for p, value in input_hashes.items()):\n            raise BuildError('Source media or narration changed…')\n    os.replace(candidate, out)                 # the atomic swap",
+            "sparkLine": "Encode into a temp. Replace only after every check clears."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-13T04:47:46.568173+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.24,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 26.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the receipt. Five keys, machine claim only; publication is a separate human step.",
+      "narration_text": "The receipt is five keys. Status equals ready. Output — the absolute path. SHA-256 of the mp4. Input_sha256 — every media file and every narration mp3 hashed by name. Duration_s from the timeline the audio built. And a timestamp. Ready is a machine claim about the checks that just passed. It is not human approval, and it is not a promise of YouTube 4K processing. Publication is a separate human step.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title '<slug>.verified.json — the machine receipt'"
+          },
+          {
+            "at": "0.20",
+            "event": "the receipt writer body types"
+          },
+          {
+            "at": "0.60",
+            "event": "the read-side pattern under it"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "<slug>.verified.json — the machine receipt",
+            "code": "# compile.py — the receipt writer (verbatim shape):\nstate = {\n  'status':       'review' if a.review else 'ready',\n  'output':       str(out.resolve()),\n  'sha256':       file_digest(out),           # SHA-256 of the mp4 you just wrote\n  'duration_s':   total,\n  'input_sha256': input_hashes,               # {path: sha256} for every input\n  'at':           datetime.now(timezone.utc).isoformat(),\n}\nif not a.review:\n    atomic_json(out.with_suffix('.verified.json'), state)\natomic_json(writable_path(folder, 'build-state.json'), state)\n\n# Read side — downstream tooling matches file to recipe:\nreceipt = json.loads(Path(f'{out}.verified.json'.replace('.mp4', '')).read_text())\nassert receipt['sha256'] == sha256_of(out), 'file drifted from its receipt'\n# 'ready' says these automated checks passed — it does NOT mean:\n#   * a human watched the film                (see FEEDBACK.md)\n#   * YouTube 4K processing succeeded          (checked post-upload)\n#   * professors approved publication          (out of scope for art)",
+            "sparkLine": "Ready is a machine claim. Publication is a human step."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T22:02:22.159621+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 24.77,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 24.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FAILURE_RECOVERY",
+      "role_note": "FALSIFIABILITY — empty FACTCHECK.md refuses, previous export preserved. Verbatim from demo/RUN-LOG.txt section 3.",
+      "narration_text": "One failure worth showing. Same reel. Truncate FACTCHECK.md to zero bytes — mimicking the accidental commit that empties a paperwork file. Re-run. Art final refuses immediately: gate F, missing or empty. The mp4 in exports is unchanged; the SHA-256 you had before is the SHA-256 you have now. The recovery is one line — put a real sentence back in FACTCHECK.md — and the next art final exits zero.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'recovery   (verbatim; empty FACTCHECK)'"
+          },
+          {
+            "at": "0.20",
+            "event": "BEFORE: exports contain a ready mp4 + verified.json"
+          },
+          {
+            "at": "0.40",
+            "event": "EDIT: FACTCHECK.md truncated to 0 bytes"
+          },
+          {
+            "at": "0.60",
+            "event": "AFTER: refused — GATE F: missing or empty FACTCHECK.md"
+          },
+          {
+            "at": "0.78",
+            "event": "SHA-256 comparison: exports/*.mp4 unchanged"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "recovery   (verbatim; empty FACTCHECK, previous mp4 untouched)",
+            "code": "# BEFORE — last successful export\n$ shasum -a 256 /tmp/…/exports/art-final-demo.mp4\n5910ade9793c943b2…3403eb5eecfae93e3  /tmp/…/exports/art-final-demo.mp4\n\n# ---------------- EDIT ----------------\n$ echo -n '' > /tmp/claude-501/art-final-demo/FACTCHECK.md\n\n# AFTER — same reel, empty paperwork file\n$ ./art final /tmp/claude-501/art-final-demo --out … --height 1080\n[art] REFUSED: GATE F: missing or empty FACTCHECK.md;\n  review is allowed, final is blocked\n[exit 2]\n\n# The last-good-file guarantee, observed:\n$ shasum -a 256 /tmp/…/exports/art-final-demo.mp4\n5910ade9793c943b2…3403eb5eecfae93e3  /tmp/…/exports/art-final-demo.mp4   ← same\n$ cat /tmp/…/build-state.json\n{ \"status\": \"failed\",\n  \"error\":  \"GATE F: missing or empty FACTCHECK.md…\",\n  \"at\":     \"2026-09-09T…\" }\n\n# RECOVERY — put a real sentence back and re-run\n$ echo 'One demonstration beat.' > /tmp/…/FACTCHECK.md\n$ ./art final /tmp/claude-501/art-final-demo --out … --height 1080\n[art] wrote /tmp/…/exports/art-final-demo.mp4  (3.0s, …)\n[exit 0]",
+            "sparkLine": "Refusal preserves the last good file. Recovery is one line."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T22:02:56.699091+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.37,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 25.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — six-line recap of the whole surface, in the order you use it.",
+      "narration_text": "So — art final. One dispatcher branch, one Python script, two verbs. It gates the paperwork, encodes into a temp, gates the pixels, re-checks approvals, and only then swaps the file in. It writes a receipt beside the mp4. Slates and pending signatures block the master unconditionally. Every guarantee — last good file preserved, receipt matches file, sheet did not drift mid-render — falls out of that same atomic pattern.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.14",
+            "event": "heading types: 'art final — the whole surface, in the order you use it'"
+          },
+          {
+            "at": "0.24",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art final — the whole surface, in the order you use it",
+            "artifactLines": [
+              "bare invocation — ./art final <reel> [--out DIR] [--height 2160]; forwards to python3 runtime/scripts/compile.py.",
+              "one script, two verbs — --review writes a slate-marked cut beside the reel; no --review writes a clean master to --out.",
+              "final_preflight fails fast — paperwork triad + beat_lint + gate_shape run before the first ffmpeg call.",
+              "atomic candidate write — candidate encodes into a temp, gates run against it, os.replace swaps it in; a failure never overwrites the last verified export.",
+              "verified.json is the receipt — SHA-256 of the mp4, SHA-256 of every input, duration, ISO timestamp; ready is a machine claim, not human sign-off.",
+              "slates and approvals block the master — --allow-slates is review-only, --no-gate cannot bypass approvals; a pending signature never ships."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T22:03:33.767106+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.44,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 22.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at a reel folder you finished this week. Run art final with a --out flag pointed at a fresh directory. Copy the printed SHA-256 out of exports and hash the file yourself with shasum minus a two-five-six. If those two strings match, the receipt describes the file. If they do not, something wrote to your export after the compile — investigate before you share the video.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Verify your export against its receipt",
+            "command": "From the brutalist.art toolkit root against a reel I finished this week: (1) ./art final <reel> --out /tmp/verify-<reel> --height 2160. (2) cat the sibling <slug>.verified.json and copy the sha256. (3) Independently hash the mp4 with shasum -a 256. (4) Report whether the two strings match character-for-character; if not, list every file modified in the export directory in the last minute.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "expect verified.json.sha256 == shasum -a 256 of the mp4",
+              "if they diverge, the receipt is stale; investigate before sharing"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T22:12:23.161420+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.14,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 22.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-13T00:50:54"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Command: art final. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.12",
+            "event": "title types: 'Brutalist Command: art final.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.72",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: art final.",
+            "slug": "claude-liam-brutalist-command-final"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T22:04:33.588954+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.29,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.291666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-13T00:50:54"
+      }
+    }
+  ]
+}

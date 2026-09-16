@@ -1,0 +1,403 @@
+{
+  "metadata": {
+    "title": "The guests Skill",
+    "slug": "claude-liam-brutalist-skill-guests-short",
+    "topic": "BRUTALIST · SKILL TEARDOWN",
+    "kind": "short",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "9:16",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "presenter": "Liam (in for Bear)",
+    "persona": "Liam (in for Bear)",
+    "run_id": "e0065af65f614cd19be5cc0bb8820e54",
+    "episode_id": "skill-guests",
+    "order": 13,
+    "note": "Skill teardown of skills/make/guests/SKILL.md (SOURCE-SNAPSHOT SHA-256 dc9db967…; supervisor's episode.source_sha256 d38fbfba…). `guests` is the sibling of `fellows` — the same Claude-branded bookends and the same 'the recording plays as is' contract, but ONE structural difference: no feedback beat, no Professor Bear's notes, GATE G (guest approves the framing) in place of GATE N. Teaches: the six-beat spine (COLD OPEN · SUMMARY · THE GUEST'S VIDEO · RECAP · YOUR TURN · HAI OUTRO), the absence-not-toggle design that prevents an org-chart inversion (a fellow is mentored; a board member is not evaluated by staff), GATE G as a third-party gate (SKIPPED under --silent, never auto-passed), the screen-clean carve-out for the source recording, and privacy-aware naming (first names by default, standing named when the guest is a board member). No guest recording is transcoded or shipped — this teardown is source-backed per SELF-DEMO LAW's feasibility fallback (running a real guests episode would require a guest's video and the guest's actual signature on a review file via GATE G). Kokoro am_onyx throughout — free, local. No captions. Outro is ClaudeTitleOutro (OUTRO-LOCK.md locks @NikBearBrown handle) because this is a claude-liam TEARDOWN; the guests skill it explains uses the standard HAI outro, and that channel-follows-outro rule is the falsifiability beat itself. Portrait companion — native 9:16 layouts (not a center-crop of the landscape master). channel_title metadata deliberately omitted — its compile-overlay bleeds past portrait safe.b (feedback_channel_title_portrait_bleed). Three SkillTeardown*916 wrappers plus the BrutalistHesitantWriter portrait-aware scale patch are copies of the fellows episode's scene-source (credited in SOURCES.md), registered in this isolated toolkit's Root.tsx for this run.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "skill_file": "skills/make/guests/SKILL.md"
+    },
+    "tags": [
+      "Brutalist",
+      "guests",
+      "skill teardown",
+      "Humanitarians AI",
+      "board member",
+      "GATE G",
+      "Claude",
+      "Kokoro",
+      "Remotion"
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-09-11T22:14:32",
+      "cut": "master",
+      "filled": 5,
+      "of": 5,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "derived_from": "claude-liam-brutalist-skill-guests-vertical",
+    "dropped_beats": [
+      "B02",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B10"
+    ],
+    "total_estimated_duration_seconds": 81.71,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hallo, this is Liam, in for Bear. Today we tear down the guests skill. It is the sibling of fellows — same Claude-branded bookends, same contract that a person's recording plays untouched. One structural difference. Here is the mental model.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "greeting 'Hallo, Liam' types above the composer"
+          },
+          {
+            "at": "0.35",
+            "event": "command types the ask about the guests skill"
+          },
+          {
+            "at": "0.65",
+            "event": "send button arms terracotta"
+          },
+          {
+            "at": "0.78",
+            "event": "three result lines fade in one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Hallo, Liam",
+            "topic": "BRUTALIST · SKILL TEARDOWN",
+            "segment": "The guests Skill",
+            "command": "What is the `guests` skill? Read skills/make/guests/SKILL.md and tell me what it actually does with a board member's video.",
+            "runningText": "reading skills/make/guests/SKILL.md…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Teardown",
+            "output": [
+              "a frame around a board member's recording",
+              "six beats · Claude bookends · standard HAI outro",
+              "no feedback beat — the guest is not evaluated"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-08T18:09:09.595172+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 13.16,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 13.166666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-11T22:14:32"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — hesitant writer corrects the sibling-is-clone read to the actual claim. Single-token trigger per BrutalistHesitantWriter contract.",
+      "lead_silence_s": 0.8,
+      "narration_text": "The easy read — the one the sibling relationship invites — is that guests copies the fellows spine and swaps the name. It does not. Guests deliberately prunes one beat. A fellow is mentored; a board member is not. Professor Bear's notes are absent by design, not disabled by flag.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "typed line 1: 'The guests skill'"
+          },
+          {
+            "at": "0.20",
+            "event": "typed line 2: 'copies the fellows spine.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'copies' flashes terracotta (about-to-delete)"
+          },
+          {
+            "at": "0.62",
+            "event": "'copies' deletes and 'prunes' types in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 3: 'A board member'"
+          },
+          {
+            "at": "0.90",
+            "event": "line 4: 'is not a fellow.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "The guests skill\ncopies the\nfellows spine.\nA board member\nis not a fellow.",
+            "triggerWords": "copies",
+            "replacementWords": "prunes",
+            "seed": "guests-bluf-vertical-c073fbb7-v2",
+            "face": "serif",
+            "fontSize": 130,
+            "lineSpacing": 2.4,
+            "align": "center",
+            "charMs": 14,
+            "jitter": 4,
+            "mistakeRate": 2,
+            "hesitateWithin": 0,
+            "hesitateBetween": 1,
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-08T18:21:36.917896+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 15.51,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 15.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-11T22:14:32"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The pipeline — the required beat spine. Six beats, not nine. Input: guest's raw recording. Output: a wrapped reel + a signed REVIEW.md.",
+      "narration_text": "The spine is fixed. Six beats. Not nine. The composer cold open names the guest's standing and the video's subject — never a progress report. A summary beat written from the faster-whisper transcript. Then the guest's video plays as is — that is beat three. A recap, descriptive only, no evaluation. A Your Turn prompt. And the standard Humanitarians AI outro. Same shape every episode. Only the middle is the guest's own material.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "eyebrow SKILL · PIPELINE lands"
+          },
+          {
+            "at": "0.12",
+            "event": "title 'Six beats. One fixed spine.' lands"
+          },
+          {
+            "at": "0.20",
+            "event": "input node 'guest's raw recording' appears"
+          },
+          {
+            "at": "0.35",
+            "event": "phase nodes reveal — 'THE VIDEO' lit terracotta"
+          },
+          {
+            "at": "0.85",
+            "event": "output node 'wrapped reel + signed REVIEW.md' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "SkillTeardownPipeline916",
+          "props": {
+            "eyebrow": "SKILL · PIPELINE",
+            "title": "Six beats. One fixed spine.",
+            "inputLabel": "guest's raw recording",
+            "outputLabel": "wrapped reel + signed REVIEW.md",
+            "phases": [
+              {
+                "label": "COLD OPEN",
+                "desc": "composer · guest's STANDING + video's SUBJECT"
+              },
+              {
+                "label": "SUMMARY",
+                "desc": "2–3 lines · written FROM the transcript"
+              },
+              {
+                "label": "THE VIDEO",
+                "desc": "beat 3 · guest's own recording · plays as is",
+                "accent": true
+              },
+              {
+                "label": "RECAP",
+                "desc": "descriptive · no evaluation · no assignment"
+              },
+              {
+                "label": "YOUR TURN + HAI OUTRO",
+                "desc": "handoff · standard HAI outro (channel follows)"
+              }
+            ],
+            "footerNote": "Only the middle is the guest's own material. Everything else is native rebuild in the humanitarians palette.",
+            "sparkLine": "Bookends around the guest's file."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-08T18:11:45.291051+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 32,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 22.34,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 22.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:SkillTeardownPipeline916",
+        "at": "2026-09-11T22:14:32"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — artifact card. Recapitulates the skill in six lines.",
+      "narration_text": "The verdict. Guests is a frame around a guest's own recording — nothing more, nothing less. Six beats, not nine. Professor Bear's notes are absent by design — a board member is not evaluated by staff. GATE G moves the signature from Bear to the guest, and dash-dash silent will queue the reel, never auto-pass it. Screen-clean cleans the recording, but the talk itself is never trimmed to fit a runtime. The narrator voice belongs to the channel, not the guest. And the outro is the standard HAI outro — because the channel is HAI.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card scales in, filling frame"
+          },
+          {
+            "at": "0.15",
+            "event": "heading 'A frame. Not a re-edit.' lands"
+          },
+          {
+            "at": "0.25",
+            "event": "six verdict lines reveal one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "The guests Skill",
+            "artifactHeading": "A frame. Not a re-edit.",
+            "artifactLines": [
+              "guests wraps a guest's own recording — the talk itself plays untouched.",
+              "SIX beats, not nine: cold open · summary · THE VIDEO · recap · Your Turn · HAI outro.",
+              "NO feedback beat, absent by design — a board member is not evaluated by staff.",
+              "GATE G: the GUEST signs the summary and recap; --silent queues, never auto-passes.",
+              "screen-clean cleans the source; NEVER cut or excerpt the talk to fit a runtime.",
+              "One persistent narrator per channel; the outro is HAI's — the channel picks it."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-08T18:17:04.599992+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 36,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 27.37,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 27.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-11T22:14:32"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate + hardcoded @NikBearBrown handle + slug-seeded mascot. Liam signoff. This teardown IS a claude-liam reel, so ClaudeTitleOutro applies here (the beat we just discussed is about how guests itself uses a DIFFERENT outro).",
+      "narration_text": "That was the guests Skill. Liam, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "cream ground with pixel-mascot corner"
+          },
+          {
+            "at": "0.15",
+            "event": "title 'The guests Skill.' lands, terracotta period"
+          },
+          {
+            "at": "0.55",
+            "event": "handle '@NikBearBrown' fades in"
+          },
+          {
+            "at": "0.80",
+            "event": "seeded mascot animation plays under the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "The guests Skill",
+            "slug": "claude-liam-brutalist-skill-guests"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-08T18:18:04.685731+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "actual_duration_s": 3.24,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 3.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-11T22:14:32"
+      }
+    }
+  ]
+}

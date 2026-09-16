@@ -68,6 +68,13 @@ Run `./setup` first (add `--install` to install deps + fetch the Kokoro model). 
 
 ## Rules
 
+**Math in every film:** follow [MATH-TYPESETTING.md](docs/MATH-TYPESETTING.md).
+Structured equations, verified algebra and actual rendered-frame review are
+required. Ordinary text cards are not a fallback for a missing math renderer.
+**Executable evidence:** follow [EXECUTABLE-EVIDENCE.md](docs/EXECUTABLE-EVIDENCE.md).
+Run local code/data instead of requesting photographs or generated screenshots
+of its output. Pantry remains for genuinely necessary source artifacts.
+
 1. **Read the whole SKILL.md before building.** Every skill under `skills/make/` has a `SKILL.md` — it is doctrine, not a README. Read it completely.
 2. **Audio-first.** Narration MP3s are generated and measured first (`runtime/scripts/generate_audio_kokoro.py`); their durations are the master clock. Never fix timing by hand — regenerate audio, recompile.
 3. **Videos travel with their book.** Build into `<book>/youtube/<slug>/`, never into this toolkit folder. `examples/` holds study copies only.

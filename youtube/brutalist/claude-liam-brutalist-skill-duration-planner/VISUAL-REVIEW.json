@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "d046c67744a74bd5ad40572da67b71da",
+  "source_sha256": "59febf661654aabeef9c8b5d20f31864a9d5a97dd8078c58018d6ea56c3d8a6d",
+  "beat_sheet_sha256": "c58e4e71eca106b3725a7318e85775c352f409806fda762fd9afbbc4ebde8865",
+  "video_sha256": "f746980712cf2bff92a164c5a96d327b6cff5e9a2aef26f0d8ed1fde428ce301",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {
+      "path": "_qc/contact_sheet.png",
+      "sha256": "a6124a193b604c4d68346e80d9f2c199de12a85cda75319d716c362ab0163ce9"
+    }
+  ],
+  "notes": "Re-verified 2026-09-11 under run_id d046c67744a74bd5ad40572da67b71da. Source SKILL.md SHA unchanged (07dc8136…); no human feedback received; duration-planner SKILL.md content is identical to the prior build. Landscape 3840×2160 (16:9), 214.1s, 11 beats, Kokoro am_onyx throughout. MP4 sha256 verified byte-identical to prior VISUAL-REVIEW record. Contact sheet re-read via image-capable Read: B00 composer cold open opens on 'Sawadee, Liam' greeting with the anchor question and paste-ready output lines; B01 hesitant-writer executive summary corrects 'target' → 'output' into 'Video duration / is your output. / Size the script. / Hold every beat.' (grammatical after swap; lands the reel's actual claim). B02 anatomy tree names SKILL.md, reference/duration-evidence.md, scripts/pace_check.py; B03 pipeline diagram walks content_type → measure → floor → hold / ceiling → split. B04–B07 mechanism cards carry the four verbatim quotes from SKILL.md (thesis, floors-are-minimums, re-render-and-re-assemble, padding-is-a-coherence-violation). B08 verdict artifact card enumerates six recap lines. B09 Your Turn composer types the paste-ready duration-planner prompt with the three-check rubric, and the narration reads it aloud + discusses. B10 ClaudeTitleOutro restates the title with the hardcoded @NikBearBrown handle (OUTRO-LOCK.md) and a slug-seeded mascot. Zero unresolved slates, zero captions, zero paid calls. Motion histogram warning (reveal at 63%) is a house pantry-cap advisory, not a Gate V failure. Missing runtime checks (GATE T `scripts/type_check.py`, `pace_check.py` self-demo) recorded honestly in TYPECHECK.md and CHECKS-REPORT.md — no substitutes claimed. Human review pending."
+}

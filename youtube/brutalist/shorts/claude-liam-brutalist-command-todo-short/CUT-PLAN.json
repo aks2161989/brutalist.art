@@ -1,0 +1,28 @@
+{
+  "strategy": "whole-beat-cut",
+  "focus": "art todo is a derived receipt of the beat sheet — five fill lanes, agent-loop filter, refuses loud when the sheet is missing",
+  "parent_master_sha256": "400eb021c8011e14810b8beb1256b6bc79cb3ab79457c1189f5bd15e2eb6ed27",
+  "parent_source_sha256": "4c52fd96434fe90eb9b825a6575ebec2af674f877471bcc08965cf97dbda0598",
+  "run_id": "da9910aa30784a5ca3041e101c7b037f",
+  "kept_beats": ["B00", "B01", "B02", "B03", "B04", "B07", "B08", "B09", "B11"],
+  "dropped_beats": [
+    {"beat_id": "B05", "reason": "Entry anatomy (six-field dictionary) is generic internals; belongs in the long, not a Short's high-level pitch"},
+    {"beat_id": "B06", "reason": "Five-lane methods table repeats what B03 --method flag effect already names (manim | remotion | ai-video-prompt | historical-image | user-capture); the agent-loop beat B07 uses --method manim and stands without the table"},
+    {"beat_id": "B10", "reason": "Extended Your Turn CTA reads the full assignment aloud; per shorts prompt, a detailed CTA can be cut. B09 verdict + B11 sign-off close the Short cleanly"}
+  ],
+  "cut_first_review": "Retained narration: B00 introduces Liam-in-for-Bear and the ask (what is still open on my reel). B01 BLUF flips the misconception (art todo is not a list, it is a receipt). B02 gives the one-arrow mental model (sheet in, three receipts out). B03 shows the four surfaces and every flag (--open, --method, --json). B04 shows a live 0/5 run with the five methods laid out in the rows — this preserves the five-lane teaching without needing B06's separate table. B07 (the agent loop) uses --method manim --open — which B03 already introduced — to show why the ledger exists. B08 keeps the one safety limitation the prompt requires: refuses loud when beat_sheet.json is missing (exit 1). B09 verdict is a five-line recap that self-contains all the moves. B11 signs off with the outro. Transitions: B04→B07 ('they are the ones you drop clips for.' → 'This is why the ledger exists.') reads clean because B04 has already established the receipt format. B08→B09 ('That refusal is the feature.' → 'So — art todo.') is a natural summation. Dropping B10 leaves B09 as the verdict beat and B11 as the sign-off — coherent bookend.",
+  "planned_duration_s": 116.33,
+  "planned_beat_seconds": {
+    "B00": 10.958,
+    "B01": 11.5,
+    "B02": 16.833,
+    "B03": 11.625,
+    "B04": 15.167,
+    "B07": 15.958,
+    "B08": 15.833,
+    "B09": 13.875,
+    "B11": 4.583
+  },
+  "rewrite_reason": null,
+  "notes": "No endcard (--no-endcard); no outro rewrite (--no-outro-rewrite). Reuses native portrait media/*.mp4 and mp3/beat-*.mp3 from the parent vertical unchanged (each beat's render_duration_s preserved). All nine kept beats are shot.source=remotion; all are already native 2160x3840 (verified below during shorts.py run)."
+}

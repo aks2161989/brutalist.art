@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "title": "Brutalist Utility: pantry.py — Short",
+    "slug": "claude-liam-brutalist-runtime-pantry-short",
+    "topic": "BRUTALIST · UTILITIES",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "aspect_ratio": "9:16",
+    "aspect": "9:16",
+    "captions": false,
+    "playlist": "Brutalist",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Bula, Liam",
+    "note": "Full-length native portrait companion. B04 uses SkillTeardownMechanism (Pipeline bleeds on 9:16). B01 lineSpacing=2.5 for portrait BLUF. No channel_title (portrait bleed fix). OUTRO-LOCK: ClaudeTitleOutro916 hardcodes @NikBearBrown.",
+    "derived_from": "claude-liam-brutalist-runtime-pantry-vertical",
+    "run_id": "517c4dadd53d490386ecb25993a16740",
+    "build": {
+      "at": "2026-09-13T21:23:26",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B11: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "fit": "pad",
+    "kind": "short",
+    "reformat": "portrait graphics; captured-media crop in short/media only",
+    "dropped_beats": [
+      "B02",
+      "B05",
+      "B07",
+      "B10"
+    ],
+    "total_estimated_duration_seconds": 113.58,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN — ASK",
+      "lane": "BOOKEND",
+      "narration_text": "Hi, this is Liam, in for Bear. pantry.py is the step between your raw media finds and your Remotion slots — it normalizes assets, names them by beat, and flags anything that will cause a rendering problem. Let's look at how it works.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 17,
+      "actual_duration_s": 13.29,
+      "audio_file": "mp3/beat-B00.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Greeting 'Bula, Liam' serif above composer (portrait)"
+          },
+          {
+            "at": "0.50",
+            "event": "Command types; send arms"
+          },
+          {
+            "at": "0.65",
+            "event": "Output lines stagger in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Bula, Liam",
+            "topic": "BRUTALIST · UTILITIES",
+            "segment": "pantry.py",
+            "command": "explain pantry.py — the Brutalist asset intake script",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Fable 5",
+            "effortLabel": "High",
+            "runningText": "reading pantry.py…",
+            "output": [
+              "Slots raw b-roll into beat-named media files.",
+              "Strips b-roll audio; preserves report sound.",
+              "Warns on sizing, duration, and source mismatches."
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-14T00:05:04.364922+00:00"
+          }
+        }
+      },
+      "render_duration_s": 13.291666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-13T21:23:26"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF — EXECUTIVE SUMMARY",
+      "lane": "BOOKEND",
+      "lead_silence_s": 0.8,
+      "narration_text": "pantry.py stands between your raw media and the film. Every asset must enter through pantry-slash, renamed with its beat. This episode walks that contract and shows where it fails.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 13,
+      "actual_duration_s": 10.73,
+      "audio_file": "mp3/beat-B01.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on correcting",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "Lead silence, typing begins"
+          },
+          {
+            "at": "0.40",
+            "event": "'media' -> 'pantry' correction"
+          },
+          {
+            "at": "0.85",
+            "event": "'optional' -> 'mandatory' correction"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "One BID prefix per filename is the key\nPantry slots each clip into a named spot\nSidecar stubs record each asset source\nDrop raw footage in media to ingest it\nIntake is optional for each raw clip",
+            "triggerWords": "media,optional",
+            "replacementWords": "pantry,mandatory",
+            "seed": "pantry-bluf-2026",
+            "fontSize": 88,
+            "lineSpacing": 8.2,
+            "face": "serif",
+            "align": "center",
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 5
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-14T00:48:54.404118+00:00"
+          }
+        }
+      },
+      "render_duration_s": 10.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-13T21:23:26"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM — BEAT-PREFIX RULE",
+      "lane": "BODY",
+      "narration_text": "The prefix is the key. BID_RE — uppercase letters then two digits — must be the first thing in the filename. B04 underscore anything. B12 dash anything. Skip the prefix and the file is silently ignored. The regex is the gate the Pantry Law describes.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 17,
+      "actual_duration_s": 14.76,
+      "audio_file": "mp3/beat-B03.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "line-reveal",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "pantry.py — the beat-prefix rule",
+            "code": "# Beat-prefix rule — pantry.py lines 11, 61\nBID_RE = re.compile(r\"^([A-Z]{1,3}\\d{2})\")\n\n# Valid prefixes — matched to beats in the sheet:\n#   B04_restoration.mov  -> media/B04.mp4\n#   B12_landscape.png    -> media/B12.png\n#   B04-916.mp4          -> media/B04-916.mp4  (portrait)\n\n# No prefix -> silently skipped:\n#   broll.mp4            -> [pantry] SKIP (no beat prefix)\n#   thumbnail.jpg        -> [pantry] SKIP (no beat prefix)",
+            "sparkLine": "B04 first. Always."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-14T00:37:21.781117+00:00"
+          }
+        }
+      },
+      "render_duration_s": 14.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T21:23:26"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED EXAMPLE — INTAKE PIPELINE (portrait: Mechanism swap)",
+      "lane": "BODY",
+      "narration_text": "The intake runs three steps: detect what type of asset it is — image or video, portrait or landscape; normalize it — crop documents, strip audio from b-roll, convert to RGB; and slot it into media with the beat ID as the filename. That is the whole machine.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 18,
+      "actual_duration_s": 15.1,
+      "audio_file": "mp3/beat-B04.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "stagger-in",
+        "visual_intent": "Portrait swap: SkillTeardownPipeline horizontal row bleeds on 9:16; SkillTeardownMechanism used instead.",
+        "remotion": {
+          "pattern": "SkillTeardownMechanism916",
+          "props": {
+            "eyebrow": "UTILITY · PIPELINE",
+            "heading": "Three steps. One slot.",
+            "body": "pantry/ to detect type (image or video, portrait?) to normalize (crop, strip audio, convert RGB) to media/<BID>.png or .mp4. Input filename is irrelevant. Output filename is the beat ID.",
+            "sparkLine": "Three steps. One slot.",
+            "verdictLabel": "IDEMPOTENT",
+            "verdictPositive": true
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-14T00:38:20.461922+00:00"
+          }
+        }
+      },
+      "render_duration_s": 15.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:SkillTeardownMechanism916",
+        "at": "2026-09-13T21:23:26"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "WORKED EXAMPLE — VIDEO PATH",
+      "lane": "BODY",
+      "narration_text": "For video, two checks run immediately. Is it portrait? Height greater than width means it routes to B04-916.mp4 — the Short override slot. Is it a source report? Then the audio stays. Ordinary b-roll gets the sound stripped. The compiler adds the narration MP3; the b-roll is just picture.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 20,
+      "actual_duration_s": 18.05,
+      "audio_file": "mp3/beat-B06.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "line-reveal",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "pantry.py — video path",
+            "code": "# Video handling — pantry.py lines 74-109\n# Portrait: taller than wide -> 9:16 Short slot\nsuffix = \"-916\" if vh > vw and not report else \"\"\nout = media / f\"{bid}{suffix}.mp4\"\n\n# Strip b-roll audio; preserve source-report audio\nreport = is_source_report(beat, sheet)\naudio = ['-map','0:a:0','-c:a','aac'] if report \\\n        else ['-an']\n\n# Duration check: clip shorter than beat -> slow-mo\nif d and need and d < need * 0.85:\n    # will slow {need / d:.1f}x to fit",
+            "sparkLine": "Reports keep their sound."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-14T00:39:29.417254+00:00"
+          }
+        }
+      },
+      "render_duration_s": 18.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T21:23:26"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "EDGE CASE — WHAT STOPS IT",
+      "lane": "BODY",
+      "narration_text": "Two conditions stop the run outright: a missing pantry directory and an invalid beat sheet. Beyond those, the script is permissive — wrong prefix, unknown beat ID, unrecognized extension all get a logged skip, not an abort. The contract is strict on naming; it is lenient on what you leave in pantry while you work.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 22,
+      "actual_duration_s": 17.3,
+      "audio_file": "mp3/beat-B08.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "line-reveal",
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "pantry.py — what stops it",
+            "code": "# Hard stops — pantry.py lines 49-55\nif not pantry.is_dir():\n    sys.exit(f\"[pantry] no pantry/ in {folder}\")\nvalidate_project(sheet)  # build_safety: hard stop\n\n# Silent skips — logged, not aborted:\nif not m or f.name.endswith(\".source.txt\"):\n    print(f\"[pantry] SKIP (no beat prefix): ...\")\n\nif beat is None:\n    print(f\"[pantry] SKIP -- no beat {bid} in sheet\")",
+            "sparkLine": "No pantry. No run."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-14T00:40:58.822052+00:00"
+          }
+        }
+      },
+      "render_duration_s": 17.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-13T21:23:26"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "lane": "BOOKEND",
+      "narration_text": "The verdict: the naming law works. The idempotency is real — rerun it and only hash-changed files get reprocessed. The provenance stubs are the right idea, gating disclosure at intake. Where it bites: no dry-run flag. You learn about skipped files from the console after the fact, not before.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 21,
+      "actual_duration_s": 16.19,
+      "audio_file": "mp3/beat-B09.mp3",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "stagger-in",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "pantry.py - Verdict",
+            "artifactHeading": "The naming law works.",
+            "artifactLines": [
+              "Idempotent: reprocesses pantry/ without corrupting finished media slots.",
+              "Provenance-first: sidecar stubs enforce disclosure at intake, not at publish.",
+              "Where it bites: portrait detection reads dimensions — landscape clips can get mis-tagged -916.",
+              "Where it bites: no dry-run flag — skips only surface in the console after the run.",
+              "Call it: python3 runtime/scripts/pantry.py reels/slug — positional folder, no flags.",
+              "Every SKIP line in the console names a file that needs a BID prefix before next run."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-14T00:41:38.205897+00:00"
+          }
+        }
+      },
+      "render_duration_s": 16.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-13T21:23:26"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "lane": "BOOKEND",
+      "narration_text": "Brutalist Utility: pantry.py. Liam, in for Bear.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "estimated_duration_s": 8,
+      "actual_duration_s": 8,
+      "audio_file": "mp3/beat-B11.mp3",
+      "audio_policy": "silence",
+      "silent": false,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade-in",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Utility: pantry.py",
+            "slug": "claude-liam-brutalist-runtime-pantry"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-14T00:12:12.123576+00:00"
+          }
+        }
+      },
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-13T21:23:26"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+usage: build_cli_d3_reels.py [-h] [--log LOG] config
+
+build_cli_d3_reels.py — batch-build CLI-explainer review cuts for D3 sims. The
+input beats wear the CLAUDE Remotion template (ClaudeComposerAsk /
+ClaudeCodeBeat / ClaudeTitleOutro — cream, warm ink, terracotta), never the
+Onda/bash terminal. The reel reconstructs how the sim was BUILT with Claude:
+show the prompt (B02), show the ACTUAL code from the sim's own HTML (B03),
+show the output (B04/B06). For each sim in a JSON config: 1. Write
+beat_sheet.json (Liam / am_onyx / claude palette; canonical
+shot.remotion.pattern format so remotion_scenes.py can render the beats) 2.
+capture_sim.py → media/output.mp4 + media/change.mp4 3. Copy to media/B04.mp4
+and media/B06.mp4 4. generate_audio_kokoro.py --no-gate 5. remotion_scenes.py
+→ media/B00/B02/B03/B08/B09.mp4 (Claude-skin beats; soft-fail: un-rendered
+beats compile as slates) 6. compile.py --review 7. Append result to log file
+Usage: python3 build_cli_d3_reels.py <config.json> [--log <log_file>] Config
+JSON: { "sims": [ { "slug": "00-wave-packet-spreading", "book": "quantum-
+mechanics-with-llms", "html": "/path/to/sim.html", "note": "physics note from
+log", "title": "Wave Packet Spreading with Claude" # optional }, ... ] }
+
+positional arguments:
+  config      JSON config with sim list
+
+options:
+  -h, --help  show this help message and exit
+  --log LOG

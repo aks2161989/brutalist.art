@@ -1,0 +1,240 @@
+{
+  "number": 12,
+  "relative": "info-7375-conducting-ai/youtube/the-solve-verify-asymmetry",
+  "reel": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry",
+  "beats": 31,
+  "sheet_sha256": "e825583bb373c7d3e13399efaae4bd9111a850ac695c44d7e4a8e81d48e48443",
+  "master": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/the-solve-verify-asymmetry.mp4",
+  "stale": false,
+  "width": 3840,
+  "height": 2160,
+  "duration": "432.625000",
+  "audio_stream": true,
+  "declared_slates": [
+    "B00",
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12",
+    "B13",
+    "B14",
+    "B15",
+    "B16",
+    "B17",
+    "B18",
+    "B19",
+    "B20",
+    "B21",
+    "B22",
+    "B23",
+    "B24",
+    "B25",
+    "B26",
+    "BCRY",
+    "BVDT",
+    "BHTF",
+    "BOUT"
+  ],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "B00",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B00.mp4",
+      "seconds": 13.8541669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B01",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B01.mp4",
+      "seconds": 9.6541669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B02.mp4",
+      "seconds": 2.4208331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B03.mp4",
+      "seconds": 13.0083331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B04.mp4",
+      "seconds": 10.208333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B05.mp4",
+      "seconds": 2.7125,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B06.mp4",
+      "seconds": 16.0416669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B07.mp4",
+      "seconds": 15.312499999999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B08.mp4",
+      "seconds": 3.7041669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B09.mp4",
+      "seconds": 3.15,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B10.mp4",
+      "seconds": 15.6916669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B11.mp4",
+      "seconds": 14.7291669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B12.mp4",
+      "seconds": 6.8541669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B13.mp4",
+      "seconds": 15.487499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B14.mp4",
+      "seconds": 2.3625,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B15.mp4",
+      "seconds": 14.3791669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B16.mp4",
+      "seconds": 8.4291669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B17.mp4",
+      "seconds": 2.3916668999999997,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B18.mp4",
+      "seconds": 14.933333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B19",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B19.mp4",
+      "seconds": 14.554166899999998,
+      "status": "sampled"
+    },
+    {
+      "beat": "B20",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B20.mp4",
+      "seconds": 4.345833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B21",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B21.mp4",
+      "seconds": 2.4208331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B22",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B22.mp4",
+      "seconds": 5.0166669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B23",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B23.mp4",
+      "seconds": 16.3625,
+      "status": "sampled"
+    },
+    {
+      "beat": "B24",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B24.mp4",
+      "seconds": 3.0916669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B25",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B25.mp4",
+      "seconds": 12.1916669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B26",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/B26.mp4",
+      "seconds": 14.641666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BCRY",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/BCRY.mp4",
+      "seconds": 7.670833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BVDT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/BVDT.mp4",
+      "seconds": 20.1833331,
+      "status": "sampled"
+    },
+    {
+      "beat": "BHTF",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/BHTF.mp4",
+      "seconds": 14.087499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/youtube/the-solve-verify-asymmetry/clips/BOUT.mp4",
+      "seconds": 3.3249999999999997,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/bear/Documents/CoWork/bear-textbooks/books/brutalist.art/reports/isdone-2026-09-11/12-contact.jpg",
+  "visual_review": "not yet reviewed"
+}

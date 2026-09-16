@@ -1,0 +1,12 @@
+$ ART_HOME=<toolkit> KOKORO_MODEL=<..>/kokoro-v1.0.onnx KOKORO_VOICES=<..>/voices-v1.0.bin \
+    python3 runtime/scripts/generate_audio_kokoro.py demo/fixture-reel --dry-run
+
+[kokoro] B02 SKIPPED — source audio / intentional silence
+[kokoro] B03 SKIPPED — source audio / intentional silence
+[kokoro] B04  SKIPPED — narration_text is a sentinel, not narration
+[kokoro] B05  engine=nbb — skipped (run its own generator, e.g. generate_audio.py --only B05)
+[kokoro] (dry-run) B00  voice=am_onyx  49 chars
+[kokoro] (dry-run) B01  voice=am_onyx  24 chars
+[kokoro] 2 beat(s) would generate — cost: $0.00
+
+# Observed 2026-09-10 · disposable fixture at demo/fixture-reel/ · no MP3 written · no beat sheet mutated

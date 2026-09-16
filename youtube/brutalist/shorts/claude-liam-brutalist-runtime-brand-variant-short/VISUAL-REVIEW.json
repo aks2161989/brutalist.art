@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "35d2bfc3afca45bab850ce47e34be832",
+  "source_sha256": "ba3ddf369972cb93ce8451186823c4435de631185d5c075274b7acf841dc0f44",
+  "beat_sheet_sha256": "7f50be29535b3de8aa631f353307de704052393551f9b9d8362aa2f403fb2ea6",
+  "video_sha256": "f06280e5578db039c38f60acd8247670029da21712b48be1415771a3b7ebcf85",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/beat_frames/B00_15.png", "sha256": "844c4923c2090f95fb3ba96662ab19f14ee33724654c638a17751c5e48707539"},
+    {"path": "_qc/beat_frames/B00_50.png", "sha256": "de09958b028319b43fdad34b5e90b6f003f0cabde84349a0dafc11248f087ba0"},
+    {"path": "_qc/beat_frames/B00_85.png", "sha256": "b20f44895517f6b5bdde55b0351cfbb2ccabdbd34ea1055af777e83c2b3da6b6"},
+    {"path": "_qc/beat_frames/B01_15.png", "sha256": "08c802a2ec3aa61badc5dd937d1a2e89302fdae9a91807a497f4da412e1129ca"},
+    {"path": "_qc/beat_frames/B01_50.png", "sha256": "ce7af281ba37dd32d86d666896664dd2c6310eaa4b5228a25381eb9137578231"},
+    {"path": "_qc/beat_frames/B01_85.png", "sha256": "ff4c6af86b420fa284ae30bdc6f7c87c3588e75dfa4d1e73d6706ea7349e8a6e"},
+    {"path": "_qc/beat_frames/B02_15.png", "sha256": "df0394b6154e51426edb1428e30832b926992774ce40cd9fbf8cc35a323c1250"},
+    {"path": "_qc/beat_frames/B02_50.png", "sha256": "14975d8fb3991daa41496bc530acc9569af2f5761caefab1367096672fd9f3db"},
+    {"path": "_qc/beat_frames/B02_85.png", "sha256": "7f6cd0f1f86baadca1c63103307044bace824d426cf9f953cda5cee70d8118f0"},
+    {"path": "_qc/beat_frames/B04_15.png", "sha256": "ec3bd1354ed2f14b546eabf87ea192540c7cbf7b856d5902af711a99a373b123"},
+    {"path": "_qc/beat_frames/B04_50.png", "sha256": "90a67840aea33604f21cfde6db0d00c66d2b1e1117e6899fbfdda67d3eeaad7e"},
+    {"path": "_qc/beat_frames/B04_85.png", "sha256": "19689121195a393ffc4ee28599c80471f59c9ec9942a48526b7da89ff980856a"},
+    {"path": "_qc/beat_frames/B09_15.png", "sha256": "07e4d9dcca8a8da0dfa7a0520e7ab4ea591c17e5a4e190f2ff2f2a23a23a5dcd"},
+    {"path": "_qc/beat_frames/B09_50.png", "sha256": "9872aa9f4bda4971ce465b1b5001bd59b4e6a2a142a4376218f9c870c69fc085"},
+    {"path": "_qc/beat_frames/B09_85.png", "sha256": "bc5450af317d7d7c66b14f88f265908cf82150676b28045e80a1d06a57a0d7ef"},
+    {"path": "_qc/beat_frames/B11_15.png", "sha256": "5f20aabb7aac6abaf8a054ef83405240d0a00353a7de58086aaf1ad9d258ee60"},
+    {"path": "_qc/beat_frames/B11_50.png", "sha256": "5e0ff0468e5817d4877f85f42f3d91563133f1ff249a3e0813863eb80a845a66"},
+    {"path": "_qc/beat_frames/B11_85.png", "sha256": "8a30bbdb91c2e8d3ec2df7e6e05e1fc5c835fb1bbc4abad16878e988c5edc43d"}
+  ],
+  "notes": "Re-verified on run_id 35d2bfc3afca45bab850ce47e34be832 (prior run becb052db31446b88e60ea9de19dfbaf had a stale run_id; export and frames are byte-identical). Whole-beat cut — six beats (B00, B01, B02, B04, B09, B11) retained. Container 2160×3840 h264 @ 24fps; ffprobe measured duration 92.292s (video stream 92.292s, audio stream 92.291s) — strictly under the 180s cap with 87s+ headroom. B00: ClaudeComposerAsk916 — composer card with 'Yassou, Liam' greeting, three-audience ask, @HumanitariansAI folder label, running-text output lines fully legible. B01: BrutalistHesitantWriter916 — 15% shows early type-on ('the brand.py / variant just'); 50% shows 'narration' highlighted in terracotta mid-correction; 85% shows settled correction 'stamps the / metadata.' — misconception corrected. B02: SkillTeardownMechanism916 — 'UTILITY · PIPELINE' eyebrow, 'The audience-variant scaffold — deterministic half only.' heading, full RESOLVE→STAMP→TODO→EMIT pipeline body, deterministic-half quote, 'ONE CANONICAL · THREE AUDIENCES · ONE VARIANT AT A TIME' verdict chip, spark line — all within safe area. B04: ClaudeCodeBeat916 — verbatim demo/RUN-LOG.txt §2+5; command output and jq .metadata block (audience: HAI, register: Plain, palette: humanitarians, voice_kokoro: af_bella, _variant_todo) legible; spark line 'Deterministic metadata. Creative rewrite deferred.' B09: ClaudeVerdictArtifact916 — six-line verdict list (input, lookup, resolve, stamp, todo, emit) fully legible within white card, all within safe area. B11: ClaudeTitleOutro916 — 'Brutalist Utility: brand_variant.py.' with terracotta dot, '@NikBearBrown' handle — locked outro-lock compliance verified. No edge bleed, no clipping, no dangling references. Compiler skin-lint warnings on B00/B11 are inherited cosmetic notes (portrait-native compositions); not blockers. No audio regenerated; no narration changed. Human review of outro-lock @HumanitariansAI adaptation pending; this Short does not publish."
+}

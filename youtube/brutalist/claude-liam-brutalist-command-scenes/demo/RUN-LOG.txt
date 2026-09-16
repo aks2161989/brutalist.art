@@ -1,0 +1,149 @@
+===== 1. Bare invocation — the doc
+scene_search.py — library-first scene lookup. Ask BEFORE you author a beat.
+
+THE DOCTRINE (same as pantry_search.py's, one level up the stack): before a beat
+is routed to Manim, or slated, or sent to a human as a request card, search here.
+The library has 750+ renderable compositions and no one can hold that in their
+head — which is exactly how a reel ends up with ten beats slated while a
+purpose-built component sits unused two directories away.
+
+A hit is a LEAD, not a verdict. Read the desc and the props; a name match with
+the wrong props is not a match.
+
+A genuine miss is a PUNT, and a punt is a design card — stop and build the
+component, then it is in the library forever. It is not a licence to slate.
+A miss is LOGGED AUTOMATICALLY to TEMPLATE-MISSES.md so the punt ledger stops
+depending on anyone's discipline. Pass --reel <path> so the row says who needed it.
+
+Usage (from brutalist-art/):
+    python3 runtime/scripts/scene_search.py "access boundary folders"
+    python3 runtime/scripts/scene_search.py "schedule recurring" --top 5
+    python3 runtime/scripts/scene_search.py "words falling" --reel ../book/youtube/slug
+    python3 runtime/scripts/scene_search.py --check FormBCard ClaudeUsageBeat
+    python3 runtime/scripts/scene_search.py --undocumented        # the backfill list
+    python3 runtime/scripts/scene_search.py "..." --no-log        # exploring, do not log
+
+Or through the toolkit entry point:  ./art scenes "words falling"
+
+
+===== 2. Query: sankey flow (rare word wins)
+5 candidate(s) for "sankey flow"  —  a hit is a lead, read the props:
+
+  [ 8.5] FinanceSankey   (16:9)  [derived text — open the file]
+       under: Finance-Charts
+       (derived — no header in the component) FinanceSankey, registered under “Finance-Charts”; keywords: finance sankey; on screen: “NVDA FY2026 — Income Statement”; props: title, subtitle, nodes, links, un
+       props: title, subtitle, nodes, links, unit, source, sparkLine, statement
+
+  [ 4.5] Illu-SourceFlow   (16:9)
+       under: concept-illustration library (STRUCTURAL family) — starter templates
+       Illustrations/previews.tsx — Remotion Studio preview wrappers. Each export bakes sample props into an <IlluStage> so the component shows up in `npx remotion studio` under an `Illu-*` id (registered in
+
+  [ 4.5] ClaudeScienceSourceFlow   (16:9)
+       under: claude-liam-claude-science — structural illustrations (parameterized)
+       ClaudeScienceIllu.tsx — parameterized wrappers for the structural illustration family, registered as Remotion Compositions for the claude-liam-claude-science reel. Each wrapper accepts a `sparkLine` p
+       props: sparkLine, sourceLabel, feeds, destApp, destTitle, arcCaption, settleLine, rackRows
+
+  [ 4.5] ClaudeMdImproverWorkflow   (16:9)
+       under: claude-liam — claude-md-improver (claude-plugins-official) skill teardown figures
+       B02 — 5-phase workflow + diff-with-why format + user tips.
+       props: sparkLine
+
+  [ 4.5] CwcFanOutFlow   (16:9)
+       under: cwc-workshops — Code with Claude 2026 figures
+       C3 centerpiece for "Fan Out: Parallel Orchestration" Fan-out flow diagram: head agent → dispatch_analysts tool → three parallel analyst sessions (progress bars) → converging results table.
+       props: sparkLine
+
+
+===== 3. Query: bar chart (common terms)
+5 candidate(s) for "bar chart"  —  a hit is a lead, read the props:
+
+  [ 9.0] BarChart   (16:9)
+       under: Codex interface template library
+       Vox scene_type: DATA (comparison). Horizontal-staggered bars that grow from a baseline on the house spring. Single-accent palette: the bar at `accentIndex` earns TEAL (the good/kept/true thing), every
+       props: title, data, accentIndex, unit
+
+  [ 6.0] DoodleChart   (16:9)
+       under: Ported 2026-08-30 — named by the public cut's own skills/docs.
+       A sketchy, hand-drawn data beat (the roughViz idea, done against the house rules): rough.js geometry, hand-lettered labels, and the teardown color grammar — ink on white, ONE red element (`accentIndex
+       props: kind, title, data, unit, accentIndex, yMax, caption, grain
+
+  [ 5.5] FinanceMirroredBar   (16:9)  [derived text — open the file]
+       under: Finance-Charts
+       (derived — no header in the component) FinanceMirroredBar, registered under “Finance-Charts”; keywords: bar finance mirrored; on screen: “NVDA FY2026 — Balance Sheet”; props: title, subtitle, leftLabe
+       props: title, subtitle, leftLabel, rightLabel, leftItems, rightItems, totalValue, source
+
+  [ 5.5] FinanceStackedBar   (16:9)  [derived text — open the file]
+       under: Finance-Charts
+       (derived — no header in the component) FinanceStackedBar, registered under “Finance-Charts”; keywords: bar finance stacked; on screen: “NVDA — Revenue by Segment”; props: title, subtitle, periods, seg
+       props: title, subtitle, periods, segments, unit, normalize, source, sparkLine
+
+  [ 4.5] SleeperAgentsResult916   (9:16)
+       under: claude-liam — sleeper-agents figures
+       Portrait 9:16 (1080×1920) version. Same schema. Reflow move: R4 (serialize) — the two side-by-side bar chart groups are stacked vertically: Chain-of-Thought on top, Distilled below.
+
+
+===== 4. --check on known name and a fake
+  ClaudeComposerAsk            RENDERABLE   16:9   props: command, topic, segment, greeting, runningText, output
+  BarChart                     RENDERABLE   16:9   props: title, data, accentIndex, unit
+  NotAScene                    NOT RENDERABLE — no <Composition> in Root.tsx. Authoring this is a punt.
+
+===== 5. All stop words rejection
+every word in that query is a stop word — search for the mechanic, not the sentence.
+
+===== 6. --undocumented (backfill list; head only)
+118 of 620 scenes run on DERIVED search text (no header comment in the component):
+
+  CodexComposerAsk                   scenes/CodexComposerAsk.tsx
+  CodexWindow                        scenes/CodexWindow.tsx
+  CodexCodeBeat                      scenes/CodexCodeBeat.tsx
+  CodexCallout                       scenes/CodexCallout.tsx
+  CodexTitleOutro                    scenes/CodexTitleOutro.tsx
+  GitHubSectionRail                  scenes/GitHubSectionRail.tsx
+  GitHubStructureMap                 scenes/GitHubStructureMap.tsx
+  ShellSession                       scenes/ShellSession.tsx
+  AdaptiveTherapyRevolution          AdaptiveTherapyRevolution.tsx
+  CancerDisparitiesZipCode           CancerDisparitiesZipCode.tsx
+  CancerDormancyRecurrence           CancerDormancyRecurrence.tsx
+  CarTSolidTumorBarrier              CarTSolidTumorBarrier.tsx
+  ClonalResistancePrediction         ClonalResistancePrediction.tsx
+
+===== 7. A miss: quantum entanglement (no scene)
+2 candidate(s) for "quantum entanglement particle"  —  a hit is a lead, read the props:
+
+  [ 4.0] AlgArtMovementGallery   (16:9)
+       under: claude-liam — algorithmic-art figures
+       Four living generative-art vignettes cycling in gallery style. Each ~7s (210 frames): Quantum Harmonics → Recursive Whispers → Field Dynamics → Stochastic Crystallization. Cross-fade 20 frames between
+       props: sparkLine
+
+  [ 2.0] AlgArtOrganicTurbulence   (16:9)
+       under: claude-liam — algorithmic-art figures
+       Living flow-field generative system. Deterministic: seeded at SEED=42, frame-keyed. Particles follow Perlin-like noise vectors; fast particles → terracotta, slow ones → ink shadow.
+       props: sparkLine, showTitle
+
+
+  exit code was: (see body — the tool exits 1 on miss)
+
+===== 8. Aliases: scenes vs scene vs scene-search
+  ClaudeComposerAsk            RENDERABLE   16:9   props: command, topic, segment, greeting, runningText, output
+  ClaudeComposerAsk            RENDERABLE   16:9   props: command, topic, segment, greeting, runningText, output
+  ClaudeComposerAsk            RENDERABLE   16:9   props: command, topic, segment, greeting, runningText, output
+
+===== 9. Scene count from scenes.json
+620 renderable compositions in the index
+
+===== 10. A real miss: yak shaving trombone (exits 1)
+no scene matches "yak shaving trombone".
+That is a PUNT. Do not slate it — design the component, add it to the library,
+and the next reel that needs this will find it here.
+  exit code: 1 (miss = PUNT, tool signals failure)
+
+===== 11. Verify hesitant writer names live in the library (the BLUF misconception)
+  BrutalistHesitantWriter      RENDERABLE   16:9   props: text, face, fontSize, lineSpacing, align, ink
+  BrutalistHesitantWriter916   RENDERABLE   9:16   props: text, face, fontSize, lineSpacing, align, ink
+
+===== 12. Scenes anchor beats found (the reel we are building right now)
+  ClaudeComposerAsk            RENDERABLE   16:9   props: command, topic, segment, greeting, runningText, output
+  ClaudeCodeBeat               RENDERABLE   16:9   props: title, code, sparkLine
+  ClaudeVerdictArtifact        RENDERABLE   16:9   props: artifactTitle, artifactHeading, artifactLines
+  ClaudeTitleOutro             RENDERABLE   16:9   props: title, slug, mascotAnimation
+  FormBCard                    RENDERABLE   16:9   props: title, items, dark

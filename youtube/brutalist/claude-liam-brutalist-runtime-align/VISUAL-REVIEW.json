@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "reviewer_type": "ai",
+  "run_id": "d295e86979c344a7b9b979f8bdf6d514",
+  "source_sha256": "1a028fbdb1e705ca5005394f40ceda11267d1c2f631fb339ef46c64edc259111",
+  "beat_sheet_sha256": "d605281e1bc3fe3f8840209fce4a942d916a9bfdb41632fba5df73da28cf84c0",
+  "video_sha256": "1e1106847b5092837a314b29aa8a15b8a2f3158d737e8b96c7d32d3cf83c13ac",
+  "blockers": 0,
+  "majors": 0,
+  "frames": [
+    {"path": "_qc/frames_v3/frame_4s.png",   "sha256": "61187d85c6a1ba2575eb00c7984c7ba7a32fba8b6a639e0665c755e79aa95f3b"},
+    {"path": "_qc/frames_v3/frame_24s.png",  "sha256": "0274a962c25add245aef60d06f87199046a5d710990facc913ee34ef68de4200"},
+    {"path": "_qc/frames_v3/frame_60s.png",  "sha256": "13fce65b700a49461d6ea88349f1602ebeb2f885aabf9b0270835b74db2395ac"},
+    {"path": "_qc/frames_v3/frame_110s.png", "sha256": "c9a25303bac5be6d2c9587804cd2811d6663efc949820245c6012691ba44821f"},
+    {"path": "_qc/frames_v3/frame_165s.png", "sha256": "c6aed3681f061f31387e7a88836f83718ae9f34b928a390293cacaa6fd61f818"},
+    {"path": "_qc/frames_v3/frame_223s.png", "sha256": "3c7a8ce531d3c4390908cf520e124b92379aa4ff1162ff0ee380f37a86c05ee8"}
+  ],
+  "notes": "Re-verified against run_id d295e86979c344a7b9b979f8bdf6d514 (source snapshot updated; video unchanged, SHA stable). Landscape 3840x2160 master, 224.4s, 12/12 beats filled, zero slates. Gate V re-run: 24 frames sampled, BLOCKER 0, MAJOR 0. Current align.py (SHA b2ee07253e474cbce79820dc90199929570880e012062e5b8c4980ca31bc3058, 183 lines) reviewed against beat content: line numbers in B05 title (49-66), B06 title (69-101), B07 title (104-109) all confirmed exact in the current file; fallback block at line 157-165 matches B07 code verbatim. Frames sampled at: 4s (cold-open ClaudeComposerAsk — 'Shalom, Liam' greeting, @HumanitariansAI folder chip, ask text, invoking output lines), 24s (BLUF BrutalistHesitantWriter settled — 'align.py / times words.' with cursor), 60s (B03 ClaudeCodeBeat — align.py --help cascade, positional + options, fixture layout comment), 110s (B06 ClaudeCodeBeat — align_words() code with SequenceMatcher, anchors, interpolation), 165s (B08 ClaudeCodeBeat — number-drift demo, '1926,' spanning 'nineteen twenty six' tokens), 223s (B11 ClaudeTitleOutro — 'Brutalist Utility: align.py.' title, @NikBearBrown handle, terracotta mascot). No edge-bleed, no unresolved slates, no subtitle track, no unwanted captions. Outro retains hardcoded @NikBearBrown handle per OUTRO-LOCK.md; composer folder chip carries @HumanitariansAI adaptation — flagged for human reviewer before publication. Human review pending."
+}

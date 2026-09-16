@@ -1,0 +1,879 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: setup",
+    "slug": "claude-liam-brutalist-command-setup-vertical",
+    "topic": "BRUTALIST · COMMAND: SETUP",
+    "kind": "vertical",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "9:16",
+    "fit": "pad",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Konnichiwa, Liam",
+    "greeting_note": "hello lexicon: Konnichiwa (Japanese, one word). Fresh — does not repeat scene-index=Bonjour, scenes/help=Namaste, icons=Sawubona, list=Salaam, icon-build=Merhaba, run=Ciao, shorts=Salam, todo/vertical=Hola, approvals=Selam, doctor=Jambo. Slug char-sum mod 10 == 3 (same as doctor), not a Wagwan slot; Wagwan is Bear's only.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "81d4ac79a3f54016801f0269956c2d7c",
+    "episode_id": "command-setup",
+    "order": 37,
+    "note": "Command teardown of the ./setup script itself — the free-by-default readiness checker at the toolkit root. Bash 3.2-compatible (macOS-safe), built around a check() helper that eval-writes dynamic OK_<id>/MISS_<id> vars instead of declare -A. Two verbs: bare './setup' (verify + FEATURE table + exit 0 iff all green) and './setup --install' (pip install requirements.txt + npm install runtime/remotion + copy bundled fonts + curl Kokoro model files from thewh1teagle/kokoro-onnx releases — then verify). Readiness is decided ONLY by live verification — importing every Python dep, actually running ffmpeg/ffprobe, and synthesizing + decoding one real Kokoro phrase whose mean_volume must exceed -40 dB. Thirteen atomic checks aggregate into 7 FEATUREs; any missing atomic hint prints under the blocked feature. Unique-to-setup content vs the sibling doctor episode: the pip contract from requirements.txt (numpy>=2.0.2 pinning story), the four-phase --install pipeline, and the ElevenLabs guard at setup:102-115 (a paid-provider quarantine — the script exits 1 the day any of four fingerprints reappears in a file that isn't setup itself). All demo output in demo/RUN-LOG.txt is verbatim from this workstation, section 3 captured with runtime/models temporarily unlinked to force one red row. No paid API, no upload, no network calls beyond the setup smoke test's local Kokoro synth. Playlist adaptation for @HumanitariansAI: composer folder chip reads @HumanitariansAI; outro card is the locked ClaudeTitleOutro with hardcoded @NikBearBrown handle per OUTRO-LOCK.md — flagged in README.md for the human reviewer before publication. episode.source_sha256 cf8873d1a540147a49b11feff3dd4ab774fd4f0e0ef9941c52895bd691bb628c. Source changes in this build: (1) setup --install pipeline refactored from || chaining to if/! blocks with explicit b/r output headers; (2) setup success output now includes ./art keys and ./art smoke advice lines; (3) requirements.txt added commented-out optional playwright section. B04 narration updated to highlight the art smoke proof line; B05 code block updated to current source.",
+    "approvals": {},
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "auditor_script": "setup",
+      "pip_contract": "requirements.txt",
+      "elevenlabs_guard_lines": "setup:102-115",
+      "features_table_lines": "setup:142-150",
+      "kokoro_synth_line": "setup:137",
+      "smoke_helper": "runtime/scripts/setup_smoke_kokoro.py",
+      "kokoro_model_releases": "https://github.com/thewh1teagle/kokoro-onnx/releases"
+    },
+    "tags": [
+      "Brutalist",
+      "setup",
+      "readiness",
+      "requirements.txt",
+      "pip",
+      "npm",
+      "fonts",
+      "Kokoro",
+      "ffmpeg",
+      "live verification",
+      "ElevenLabs guard",
+      "bash 3.2",
+      "command teardown",
+      "Teardown register",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T22:45:56",
+      "cut": "master",
+      "filled": 13,
+      "of": 13,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'ClaudeComposerAsk916' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B12: palette=claude but the outro is 'ClaudeTitleOutro916' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "reformat": "full-length; native portrait graphics; preserve source framing",
+    "derived_from": "claude-liam-brutalist-command-setup",
+    "dropped_beats": [],
+    "total_estimated_duration_seconds": 285.5,
+    "short_validation": {
+      "status": "ready",
+      "errors": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Konnichiwa, this is Liam, in for Bear. The ask — before I fill a single beat sheet, tell me what's actually installed on this box. Don't install anything. Just verify.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 14,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Konnichiwa, Liam' types above the composer"
+          },
+          {
+            "at": "0.25",
+            "event": "the ask types in"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'running ./setup…' appears"
+          },
+          {
+            "at": "0.82",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Konnichiwa, Liam",
+            "topic": "BRUTALIST · COMMAND: SETUP",
+            "segment": "./setup",
+            "command": "Before I fill a single beat sheet, tell me what's actually installed on this box. Don't install anything. Just verify.",
+            "runningText": "running ./setup…",
+            "output": [
+              "prints a 7-row FEATURE table — green when every atomic check passes live",
+              "installs pip deps + Remotion npm + fonts + Kokoro model, then verifies (only under --install)",
+              "exits 0 iff all rows green; exits 1 the moment one is red"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-10T03:04:50.867658+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 9.54,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 9.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Correction is the reel's actual misconception. Narration expands the on-screen line with the --install caveat.",
+      "narration_text": "Watch the writer walk this back. Setup does not install everything by default. It verifies, live — imports every Python module, runs ffmpeg, and makes Kokoro actually speak. Only if you add dash dash install does it fetch anything. A green row is a spoken proof, not a receipt from a package manager.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.15",
+            "event": "first lines type: 'setup / installs everything.'"
+          },
+          {
+            "at": "0.55",
+            "event": "the word 'installs' turns terracotta, hesitates, backspaces, types 'verifies'"
+          },
+          {
+            "at": "0.80",
+            "event": "the word 'everything' turns terracotta, hesitates, backspaces, types 'live'"
+          },
+          {
+            "at": "0.92",
+            "event": "final corrected lines settle: 'setup / verifies live.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter916",
+          "props": {
+            "text": "setup\ninstalls\neverything.",
+            "triggerWords": "installs, everything",
+            "replacementWords": "verifies, live",
+            "seed": "setup-b01",
+            "face": "serif",
+            "fontSize": 218,
+            "lineSpacing": 3.45,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-10T04:20:52.438103+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.69,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 17.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the setup surface: verbatim shebang + short-help block + one honest sentence. Two modes end at the same seven-row table.",
+      "narration_text": "The setup script is the source of truth. Sixteen lines of header at the top: shebang, two modes, one honest sentence about what a green table proves. Bare dot slash setup verifies and prints the readiness table. Dot slash setup dash dash install installs the core Python dependencies, Remotion's node modules, the fonts, and the Kokoro model — then runs the same verification.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in; title reads 'setup:1-16 — shebang + surface + one honest sentence'"
+          },
+          {
+            "at": "0.20",
+            "event": "shebang + two-mode block types"
+          },
+          {
+            "at": "0.55",
+            "event": "the free-by-default paragraph types"
+          },
+          {
+            "at": "0.85",
+            "event": "the set -uo pipefail line lands"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "setup:1-16 — shebang + surface + one honest sentence",
+            "code": "#!/usr/bin/env bash\n# setup — the doctor for the brutalist toolkit (free by default).\n#\n#   ./setup            # check everything, print the readiness table\n#   ./setup --install  # install the core Python deps + Remotion's node deps, then check\n#\n# Core features require no paid services or API keys. Everything below is free\n# and local. Optional Higgsfield CLI login unlocks AI video beats; ElevenLabs is\n# permanently removed. Exit 0 if all required features are ready; exit 1 otherwise.\n#\n# Readiness is decided ONLY by live verification below — importing every\n# Python dep, actually running ffmpeg/ffprobe, and synthesizing + decoding\n# one real Kokoro phrase (mean_volume > -40 dB). An install step's own exit\n# code is reported (INSTALL_FAILED) but never substitutes for a check: a\n# green table means the checks passed, not that `pip install` returned 0.\nset -uo pipefail",
+            "sparkLine": "Two modes. One script. One honest sentence."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-10T03:44:00.704354+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.8,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 20.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK 2 — requirements.txt as the pip contract. Six pinning lines + the numpy>=2.0.2 rationale.",
+      "narration_text": "Under dash dash install, the whole Python surface comes from one file: requirements dot txt. Kokoro pinned at greater-than-or-equal zero point four — the free voice engine, no key. Mutagen at forty-seven for MP3 duration; that's the master clock. Pillow ten point two for slates. Manim eighteen for animation. Faster-whisper one for captions. And numpy pinned above two point zero point two, because Kokoro's release requires it, and Manim eighteen has no upper bound to fight. Six lines of pinning; that's the whole contract.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'requirements.txt — the pip contract (verbatim)'"
+          },
+          {
+            "at": "0.20",
+            "event": "the top-of-file rationale comment types"
+          },
+          {
+            "at": "0.45",
+            "event": "the core narration pipeline block types"
+          },
+          {
+            "at": "0.68",
+            "event": "the animation block types"
+          },
+          {
+            "at": "0.85",
+            "event": "the captions block types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "requirements.txt — the pip contract (verbatim)",
+            "code": "# brutalist — Python dependencies (free-only toolkit).\n#   pip install -r requirements.txt\n# numpy>=2.0.2 is required by kokoro-onnx (every >=0.4 release pins this\n# floor); manim 0.18 and its deps have no upper bound on numpy, so there's\n# no real conflict — just don't hold numpy below 2.\n\n# ── core: audio-first narration pipeline ────────────────────────────────────\nkokoro-onnx>=0.4            # the FREE voice engine (Kokoro-82M, local, no key)\nmutagen>=1.47,<1.48         # audio-duration measurement (the master clock)\nPillow>=10.2,<11            # slates / request cards / previz / stills\nnumpy>=2.0.2\n\n# ── animation ────────────────────────────────────────────────────────────────\nmanim>=0.18,<0.19           # pulls manimpango, moderngl, etc.\nmanimpango>=0.5,<0.6\n\n# ── captions + word clock ────────────────────────────────────────────────────\nfaster-whisper>=1.0,<2      # forced alignment + transcript captions (local, no key)",
+            "sparkLine": "Six lines. One pinned floor."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-10T03:44:56.828013+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 28.61,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 28.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — the ready run. Verbatim from demo/RUN-LOG.txt section 2.",
+      "narration_text": "Here is a ready toolkit. Ffmpeg on the path, Python packages importable, Node twenty for Remotion, the two font families installed, and the Kokoro model files present. Seven rows, all green. Cost: zero dollars. And setup tells you directly — a green table means the dependency checks passed, not that a video actually renders. Run art smoke for that end-to-end proof. Exit zero.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads the verbatim command"
+          },
+          {
+            "at": "0.25",
+            "event": "the FEATURE header and rules type"
+          },
+          {
+            "at": "0.50",
+            "event": "each row types with 'ready' terracotta on the right"
+          },
+          {
+            "at": "0.85",
+            "event": "cost line + art smoke advice + exit 0 land"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "$ ./setup    (verbatim)",
+            "code": "$ ./setup\n\nbrutalist — readiness (free-only toolkit: no keys, ever)\n\n  FEATURE                STATUS\n  -------                ------\n  audio (Kokoro Bella/Onyx)   ✅ ready\n  captions + word clock       ✅ ready\n  Manim beats                 ✅ ready\n  Manim equation beats        ✅ ready\n  Remotion beats + bookends   ✅ ready\n  slates / previz / compile   ✅ ready\n  fonts (EB Garamond + Oswald) ✅ ready\n\nAll core features ready. Cost: $0.00.\nRun `./art keys` to check Higgsfield login.\nGreen table = dep checks passed (NOT renders).\nRun `./art smoke` for end-to-end proof.\n[exit 0]",
+            "sparkLine": "Green dep checks ≠ video renders. art smoke proves it."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-13T02:42:45.752024+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 20.78,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 20.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 1 — --install: four phases (pip, npm, fonts, Kokoro model). Every step's exit code is captured; no install turns a row green on its own.",
+      "narration_text": "Add dash dash install and setup does four things, in order, before it verifies. One: pip installs from requirements dot txt — break-system-packages first for the modern pip, plain second as a fallback. Two: change into runtime slash remotion and npm install. Three: copy the bundled fonts into the user font directory, and download Oswald from Google Fonts if it's missing. Four: only if the Kokoro model files are absent, curl them from the kokoro-onnx releases page. Every step's exit code is captured; every failure widens the fail path — but no install turns a row green on its own.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'setup:57-100 — --install: four phases'"
+          },
+          {
+            "at": "0.18",
+            "event": "phase 1 (pip) types"
+          },
+          {
+            "at": "0.38",
+            "event": "phase 2 (npm) types"
+          },
+          {
+            "at": "0.58",
+            "event": "phase 3 (fonts + Oswald) types"
+          },
+          {
+            "at": "0.78",
+            "event": "phase 4 (Kokoro model curl) types"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "setup:57-100 — --install: four phases, then verify",
+            "code": "if [ \"${1:-}\" = \"--install\" ]; then\n  # 1) pip: if/! pattern; --break-system-packages first, plain second\n  b \"Installing core Python deps…\"; echo\n  if ! python3 -m pip install --break-system-packages -r requirements.txt \\\n      && ! python3 -m pip install -r requirements.txt; then\n    r \"Python dependency install FAILED\"; INSTALL_FAILED=1\n  fi; echo\n\n  # 2) npm: Remotion's node deps\n  b \"Installing Remotion node deps…\"; echo\n  if ! (cd runtime/remotion && npm install); then\n    r \"npm install FAILED\"; INSTALL_FAILED=1\n  fi; echo\n\n  # 3) fonts: bundled EB Garamond + download Oswald if missing\n  b \"Installing fonts into $(font_dir)…\"; echo\n  FONT_DIR=\"$(font_dir)\"; mkdir -p \"$FONT_DIR\"\n  find runtime/fonts -iname '*.ttf' -exec cp -n {} \"$FONT_DIR/\" \\; 2>/dev/null\n  if ! have_font \"Oswald\"; then\n    curl -fsSL \"https://…/Oswald%5Bwght%5D.ttf\" \\\n      -o \"$FONT_DIR/Oswald-Variable.ttf\" || INSTALL_FAILED=1\n  fi; have fc-cache && fc-cache -f >/dev/null 2>&1; echo\n\n  # 4) Kokoro model: only if BOTH files are absent (~340 MB, one-time)\n  if [ ! -f runtime/models/kokoro/kokoro-v1.0.onnx ] || \\\n     [ ! -f runtime/models/kokoro/voices-v1.0.bin ]; then\n    b \"Downloading the Kokoro voice model (~340MB)…\"\n    mkdir -p runtime/models/kokoro\n    ( cd runtime/models/kokoro && curl -fLO …/kokoro-v1.0.onnx \\\n      && curl -fLO …/voices-v1.0.bin ) || INSTALL_FAILED=1\n  fi; echo; shift || true\nfi\n# SAME live verification runs after. INSTALL_FAILED widens exit;\n# it never turns a row green — that's the checks' job.",
+            "sparkLine": "Four phases. Explicit error output. Then verify."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-13T02:43:30.218633+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 33.43,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 33.458333333333336,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 2 — bash 3.2 compat. check() helper uses eval to write dynamic OK_<id>/MISS_<id> vars instead of declare -A.",
+      "narration_text": "Under the hood, one small design choice makes this script portable. Macos ships bash three point two by default — no associative arrays. So instead of declaring an array, the check helper uses eval to write two dynamic variables per test: OK-underscore-ID and MISS-underscore-ID. That is why setup runs the same on a Mac and on Linux, without a bash five prerequisite.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'setup:117-140 — check() and dynamic OK_<id>/MISS_<id>'"
+          },
+          {
+            "at": "0.25",
+            "event": "the header comment types"
+          },
+          {
+            "at": "0.42",
+            "event": "the check() body types"
+          },
+          {
+            "at": "0.72",
+            "event": "two example checks type below it"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "setup:117-140 — check() and dynamic OK_<id>/MISS_<id>",
+            "code": "# Dynamic OK_<id>/MISS_<id> vars instead of associative arrays: macOS ships\n# bash 3.2 by default (no `declare -A`), and this script must run there too.\ncheck(){\n  local id=\"$1\"\n  eval \"OK_${id}=0\"\n  if eval \"$2\" >/dev/null 2>&1; then\n    eval \"OK_${id}=1\"\n  else\n    eval \"MISS_${id}=\\$3\"\n  fi\n}\n\n# Two examples — the first checks ffmpeg exists AND ffprobe exists;\n# the second imports the Python module 'kokoro_onnx' from Python itself.\ncheck ffmpeg    'ffmpeg -version >/dev/null 2>&1 && ffprobe -version >/dev/null 2>&1' \\\n                'install ffmpeg (brew install ffmpeg / apt install ffmpeg)'\ncheck py_kokoro 'pymod kokoro_onnx' 'pip install kokoro-onnx (the free voice engine)'",
+            "sparkLine": "Bash 3.2-safe. OK_id / MISS_id via eval."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-10T03:47:47.234570+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.88,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 19.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 3 — live verification, not receipts. Kokoro must actually SPEAK a phrase above -40 dB to earn green.",
+      "narration_text": "Here is the part that makes the whole script honest. Readiness is decided ONLY by live verification. A successful pip install is not enough. For the audio feature to turn green, setup runs setup-underscore-smoke-underscore-kokoro dot py, which synthesizes one throwaway phrase and checks that the decoded audio's mean volume exceeds negative forty decibels. A silent wav is a failure. Kokoro has to actually speak to earn the green row.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'live verification, not receipts'"
+          },
+          {
+            "at": "0.22",
+            "event": "the kokoro_synth check line types"
+          },
+          {
+            "at": "0.50",
+            "event": "the setup_smoke_kokoro.py summary types under it"
+          },
+          {
+            "at": "0.85",
+            "event": "the top-of-file rationale types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "live verification, not receipts",
+            "code": "# setup:137 — the kokoro_synth check row\ncheck kokoro_synth \\\n  \"python3 \\\"$HERE/runtime/scripts/setup_smoke_kokoro.py\\\"\" \\\n  'Kokoro failed to synthesize + decode a test phrase above -40 dB —\n   check model files, kokoro_onnx install, and ffmpeg\n   (run runtime/scripts/setup_smoke_kokoro.py directly to see why)'\n\n# What setup_smoke_kokoro.py actually does:\n#   1. loads the onnx voice model from runtime/models/kokoro/\n#   2. calls kokoro.create(\"This is a setup smoke test.\", voice=\"af_bella\")\n#   3. writes the wav, then ffmpeg -af volumedetect decodes it\n#   4. parses mean_volume, asserts it is greater than -40 dB\n\n# From the top of setup, in plain English:\n#   Readiness is decided ONLY by live verification below — importing\n#   every Python dep, actually running ffmpeg/ffprobe, and synthesizing\n#   + decoding one real Kokoro phrase (mean_volume > -40 dB). An install\n#   step's own exit code is reported (INSTALL_FAILED) but never substitutes\n#   for a check: a green table means the checks passed, not that\n#   `pip install` returned 0.",
+            "sparkLine": "Kokoro must actually speak. Silence fails."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-10T03:48:40.952485+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 23.55,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 23.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM 4 — the ElevenLabs guard (setup:102-115). A paid-provider quarantine that refuses to start if a fingerprint reappears in any file outside setup itself.",
+      "narration_text": "And one more design choice, unique to this script. Before any check runs, setup greps the whole toolkit for four fingerprints of a paid voice provider: the API-key environment variable, the domain, the engine string in a JSON, and the xi-api-key header. If any of them shows up in a file that isn't this setup script itself, the whole script exits one and lists the offending files. Free-by-default isn't a slogan; it's a guard that refuses to start the day the pattern comes back.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'setup:102-115 — the ElevenLabs guard'"
+          },
+          {
+            "at": "0.20",
+            "event": "the guard comment types"
+          },
+          {
+            "at": "0.35",
+            "event": "the four-fingerprint EL_PAT types"
+          },
+          {
+            "at": "0.60",
+            "event": "the sweep + error path types"
+          },
+          {
+            "at": "0.85",
+            "event": "the file-listing branch types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "setup:102-115 — the ElevenLabs guard",
+            "code": "# ── ElevenLabs guard ─────────────────────────────────────────────────\n# Functional ElevenLabs references are bugs; prose documentation mentioning the\n# name is allowed. setup is excluded because it contains this guard.\nEL_PAT=\"ELEVEN\"\"LABS_API_KEY|elevenlabs\"\"\\.io|\\\"engine\\\"[^\\\"]*\\\"elevenlabs\\\"|xi-api-key\"\n#      └──── four fingerprints, split so this line itself doesn't match ────┘\n\nif grep -rqiE \"$EL_PAT\" \\\n    --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=__pycache__ \\\n    --exclude-dir='.claude' --exclude='CHANGELOG*' --exclude=setup .; then\n  r \"ElevenLabs reference found — this toolkit is Kokoro-only for narration.\"; echo\n  echo \"  Files with hits:\"\n  grep -rliE \"$EL_PAT\" \\\n    --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=__pycache__ \\\n    --exclude-dir='.claude' --exclude='CHANGELOG*' --exclude=setup . | sed 's/^/    /'\n  exit 1\nfi",
+            "sparkLine": "Free-by-default is a guard, not a slogan."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-10T03:49:34.634341+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.77,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 25.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "FAILURE_RECOVERY",
+      "role_note": "FALSIFIABILITY — unlink runtime/models; audio row goes red with two hint lines; exit 1. Recovery: restore, or --install re-fetches. Verbatim from demo/RUN-LOG.txt sections 3 and 4.",
+      "narration_text": "One failure worth showing. Unlink the Kokoro model directory — the models are the one thing not in the git repo, because they're three hundred megabytes. Re-run setup. Audio row goes red. Two hint lines print underneath: the model files are missing, and the synth-and-decode phrase failed. Every other row stays green. Exit code: one. Recovery: put the files back — or on a fresh install, run setup with dash dash install and the fourth phase of the pipeline downloads them for you. The exit code is the whole point — a red row never ships a build.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'recovery   (verbatim; models unlinked)'"
+          },
+          {
+            "at": "0.18",
+            "event": "BEFORE: unlink runtime/models"
+          },
+          {
+            "at": "0.35",
+            "event": "AFTER: red audio row + two hint lines + exit 1 types"
+          },
+          {
+            "at": "0.75",
+            "event": "RECOVERY: --install re-fetches; ready again + exit 0"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat916",
+          "props": {
+            "title": "recovery   (verbatim; models unlinked, one gate refuses)",
+            "code": "# BEFORE — hide the model files by unlinking the models directory\n$ mv runtime/models runtime/models.holdaside\n\n# AFTER — same toolkit, model files missing\n$ ./setup\nbrutalist — readiness (free-only toolkit: no keys, ever)\n\n  FEATURE                      STATUS\n  -------                      ------\n  audio (Kokoro Bella/Onyx)    ❌ blocked\n        · model files ship with this toolkit — if missing:\n          curl -LO from github.com/thewh1teagle/kokoro-onnx\n          releases (model-files-v1.0)\n        · Kokoro failed to synthesize + decode a test phrase\n          above -40 dB — check model files, kokoro_onnx install,\n          and ffmpeg (run runtime/scripts/setup_smoke_kokoro.py\n          directly to see why)\n  captions + word clock        ✅ ready\n  Manim beats                  ✅ ready\n  …\nSomething is blocked — see above.\n[exit 1]\n\n# RECOVERY — the fix is printed inside the error\n$ ./setup --install     # fresh box: phase 4 curls the model files\n$ ./setup               # this box: restore, re-verify\n[… seven rows green, exit 0]",
+            "sparkLine": "One dir missing. Row red. Exit 1. Fix printed."
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-10T03:50:38.808132+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 29.18,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 29.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, in the order you use it.",
+      "narration_text": "So — setup. A live-verification readiness checker, with an optional install-first mode. Two modes, one script, one seven-row table. It reads requirements dot txt for the pip contract, it makes Kokoro speak for the audio row, it refuses to run if a paid provider is smuggled in, and it exits zero only when every atomic check passes live. Run this before you fill a beat sheet, and downstream failures with cryptic messages become failures with a checklist.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 34,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'setup — the whole surface, in the order you use it'"
+          },
+          {
+            "at": "0.25",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.38",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.51",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.64",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.77",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 6 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "setup — the whole surface, in the order you use it",
+            "artifactLines": [
+              "two modes — ./setup verifies; ./setup --install installs pip + npm + fonts + Kokoro model, THEN verifies.",
+              "one pip contract — requirements.txt: kokoro-onnx, mutagen, Pillow, numpy>=2.0.2, manim, faster-whisper. Six lines. One pinned floor.",
+              "live verification only — imports every Python dep, runs ffmpeg, makes Kokoro speak a test phrase above -40 dB. Receipts don't count.",
+              "13 atomic checks → 7 features — any missing atomic check blocks the whole feature and prints its fix line beneath.",
+              "ElevenLabs guard — greps for four fingerprints before any check runs; exits 1 the moment any file outside setup itself matches.",
+              "exit 0 all-green; exit 1 any-red — run this before a beat sheet, so downstream failures come with a checklist, not a mystery."
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-10T03:15:36.891899+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 24.3,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 24.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code, pointed at your own copy of the toolkit: run dot slash setup, save the whole output, then — without installing anything — for each red row, name the atomic check ID that failed and quote the fix hint the script printed underneath. Also grep the toolkit for the four ElevenLabs fingerprints setup guards against, and tell me whether any file outside of setup itself matches. Look for whether Claude is tempted to run dot slash setup dash dash install to make the table green. That is the one thing I did not ask for. Verification is not remediation.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 36,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "three grading lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Diagnose without installing",
+            "command": "From my brutalist.art toolkit root: (1) run ./setup and save stdout+stderr to /tmp/setup.txt. (2) Do NOT install anything. (3) For every '❌ blocked' row, write one line naming the atomic check ID that failed (the id passed to check() in setup) and quoting the exact fix hint printed beneath it. (4) Grep the toolkit for the four ElevenLabs fingerprints in setup:102-115. (5) Tell me whether you were tempted to run ./setup --install to make the table green, and why you did not.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — output saved to /tmp/setup.txt",
+              "step 2 — red rows → check ID + fix hint",
+              "step 3 — ElevenLabs sweep: files or 'none'"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-10T04:05:38.802910+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 31.81,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 31.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk916",
+        "at": "2026-09-12T22:45:56"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot. Flagged in README.md for @HumanitariansAI review.",
+      "narration_text": "Brutalist Command: setup. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: setup.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Brutalist Command: setup.",
+            "slug": "claude-liam-brutalist-command-setup"
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-09-10T03:17:36.790848+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 4.86,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 4.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro916",
+        "at": "2026-09-12T22:45:56"
+      }
+    }
+  ]
+}

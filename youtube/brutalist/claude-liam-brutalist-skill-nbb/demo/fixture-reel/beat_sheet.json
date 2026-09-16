@@ -1,0 +1,44 @@
+{
+ "metadata": {
+  "title": "Fixture — nbb Skill Demo",
+  "slug": "nbb-fixture-reel",
+  "audience": "Brutalist",
+  "engine": "kokoro",
+  "voice_kokoro": "am_onyx",
+  "palette": "claude",
+  "aspect_ratio": "16:9"
+ },
+ "beats": [
+  {
+   "beat_id": "B00",
+   "act": "ASK",
+   "narration_text": "Fixture opening. In canonical claude-liam register.",
+   "estimated_duration_s": 4,
+   "actual_duration_s": 4.0,
+   "shot": {
+    "type": "GRAPHIC",
+    "source": "remotion",
+    "remotion": {
+     "pattern": "ClaudeComposerAsk",
+     "rendered": {"out": "media/B00.mp4", "at": "2026-09-08T00:00:00Z"}
+    }
+   }
+  },
+  {
+   "beat_id": "B01",
+   "act": "BODY",
+   "narration_text": "Fixture body beat one. A single sentence in the source register.",
+   "estimated_duration_s": 6,
+   "actual_duration_s": 6.0,
+   "shot": {"type": "GRAPHIC", "source": "remotion"}
+  },
+  {
+   "beat_id": "B02",
+   "act": "OUTRO",
+   "narration_text": "Fixture sign-off.",
+   "estimated_duration_s": 3,
+   "actual_duration_s": 3.0,
+   "shot": {"type": "GRAPHIC", "source": "remotion"}
+  }
+ ]
+}

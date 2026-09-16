@@ -1,0 +1,39 @@
+# smithsonian_fetch.py — local demo log
+# Run from toolkit root, 2026-09-14, run_id 742a1549e73142e4b6d655986b0ae560
+# All commands run against the isolated toolkit workspace.
+
+---
+COMMAND: python3 runtime/scripts/smithsonian_fetch.py --list
+OUTPUT:
+[si-fetch] No shelved images yet.
+
+STATUS: Correct — no images have been shelved yet. Library does not exist.
+
+---
+COMMAND: python3 runtime/scripts/smithsonian_fetch.py "UNIVAC computer console"
+OUTPUT:
+[si-fetch] No index at .../library/smithsonian/index.jsonl
+  Build it first: python3 runtime/scripts/smithsonian_index.py
+  (or --s3 for keyless streaming)
+EXIT CODE: 1
+
+STATUS: Correct — index must be built first (smithsonian_index.py prerequisite).
+This is the metadata-first gate firing. No network call was made.
+
+---
+COMMAND: python3 runtime/scripts/smithsonian_fetch.py --copy /tmp
+OUTPUT:
+[si-fetch] --copy requires --beat BID
+EXIT CODE: 1
+
+STATUS: Correct — --copy requires --beat flag for pantry file naming.
+
+---
+COMMAND: python3 runtime/scripts/smithsonian_fetch.py --help
+OUTPUT: (full usage text — see build for exact flags)
+
+---
+NOTE: Network-dependent steps (API resolve, download, Topaz upscale) were NOT run
+against real accounts. Source-backed behavior (sys.exit on missing index, error on
+missing --beat) is demonstrated above. Scored search ranking is shown via source code
+in ClaudeCodeBeat B03 and SkillTeardownMechanism B04.

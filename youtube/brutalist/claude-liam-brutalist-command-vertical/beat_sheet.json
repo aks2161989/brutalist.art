@@ -1,0 +1,817 @@
+{
+  "metadata": {
+    "title": "Brutalist Command: art vertical",
+    "slug": "claude-liam-brutalist-command-vertical",
+    "topic": "BRUTALIST · COMMAND: ART VERTICAL",
+    "kind": "command",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Brutalist fellows already using Claude Code",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@HumanitariansAI",
+    "channel_title": "@HumanitariansAI",
+    "folderLabel": "@HumanitariansAI",
+    "greeting": "Hola, Liam",
+    "greeting_note": "hello lexicon: Hola (Spanish, one word, warm). Slug char-sum is 0 but Wagwan is Bear's alone — Liam falls back to the world-language hello.",
+    "persona": "Liam (in for Bear)",
+    "presenter": "Liam (in for Bear)",
+    "in_for_bear": true,
+    "run_id": "ac6edaa227b34224a6622a2702619b03",
+    "episode_id": "command-vertical",
+    "order": 35,
+    "note": "Command teardown of ./art vertical — dispatcher case at art:105-106 that execs runtime/scripts/shorts.py with --vertical appended. Same script that powers art shorts. Aliases: `vertical` (the same word; the dispatcher matches only 'vertical'; `art shorts <reel> --vertical` reaches the same code path and the same guardrails). Editorial contract: full length, no cap, no drops, no endcard, no rewritten outro. The three guardrails inside main(): (a) --vertical + --drop raises BuildError, (b) a.no_endcard is forced True, (c) a.no_outro_rewrite is forced True. The one measurement skipped: require_short_duration is only called when not a.vertical. Everything else — ONDA CHECK, pantry precedence, validate_project, atomic_json — runs identically to shorts. All demo output in demo/VERTICAL-LOG.txt is verbatim from the isolated toolkit against the same fixture reel Ep 30 used (/tmp/claude-501/claude-shorts-demo — 7 REMOTION beats totaling 214s). Nothing was uploaded. No paid calls. episode.source_sha256 2d0d192fefff25f6f9a44c6a5cd588dc1b958f2f19fc2abc48cc0c2d89bd1f01.",
+    "links": {
+      "toolkit_repo": "https://github.com/nikbearbrown/brutalist.art",
+      "dispatcher": "art",
+      "shorts_case_lines": "art:102-103",
+      "vertical_case_lines": "art:105-106",
+      "script": "runtime/scripts/shorts.py"
+    },
+    "tags": [
+      "Brutalist",
+      "art",
+      "vertical",
+      "9:16",
+      "full-length companion",
+      "ONDA CHECK",
+      "pantry",
+      "no crop",
+      "command teardown",
+      "Teardown register",
+      "Kokoro",
+      "Remotion",
+      "Claude"
+    ],
+    "build": {
+      "at": "2026-09-12T13:48:33",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — Claude UI cold open. Ask lands answered; narration introduces Liam in for Bear.",
+      "narration_text": "Hola, this is Liam, in for Bear. Art vertical takes a finished sixteen-nine reel and produces its full-length nine-sixteen twin. No cropping. No cut beats. No shortened outro. Same script that powers art shorts, opposite editorial contract: shorts caps at three minutes and drops beats to fit; vertical preserves every beat and every second.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Hola, Liam' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "the ask types into the composer"
+          },
+          {
+            "at": "0.72",
+            "event": "runningText 'planning the twin; rewiring, no cutting…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "output lines cascade in under the composer"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hola, Liam",
+            "topic": "BRUTALIST · COMMAND: ART VERTICAL",
+            "segment": "art vertical",
+            "command": "Turn my finished 16:9 reel into its full-length 9:16 twin. Do NOT crop the frame, do NOT shorten anything, and re-render every Remotion beat portrait instead of chopping it. Print the plan before you touch a file.",
+            "runningText": "planning the twin; rewiring, no cutting…",
+            "output": [
+              "wraps: python3 runtime/scripts/shorts.py <reel> --vertical",
+              "writes: <reel>/vertical/beat_sheet.json (never <reel>/short/)",
+              "contract: full length — no cap, no drops, no endcard, no rewritten outro"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T18:37:52.860946+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.82,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 18.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — Beat 2 BLUF, written by the hesitant writer. Corrects the reel's actual misconception: that art vertical is a Short cut or a crop.",
+      "narration_text": "Watch the writer walk this back. Art vertical is not a Short. It does not shorten anything, and it never crops the frame. What it does do — every time — is rewire each Remotion beat to its nine-sixteen composition, so the portrait render is a native layout, not a chopped landscape. That is the whole difference from a bad screen-crop.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hesitant-type",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "cream page holds; caret blinks"
+          },
+          {
+            "at": "0.18",
+            "event": "first line types: 'vertical shrinks. / and crops it.'"
+          },
+          {
+            "at": "0.55",
+            "event": "'shrinks' turns terracotta, hesitates, backspaces, types 'preserves'"
+          },
+          {
+            "at": "0.80",
+            "event": "'crops' turns terracotta, hesitates, backspaces, types 'rewires'"
+          },
+          {
+            "at": "0.94",
+            "event": "final corrected lines settle: 'vertical preserves. / and rewires it.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "vertical shrinks.\nand crops it.",
+            "triggerWords": "shrinks, crops",
+            "replacementWords": "preserves, rewires",
+            "seed": "command-vertical-b01",
+            "face": "serif",
+            "fontSize": 240,
+            "lineSpacing": 2.5,
+            "align": "center",
+            "charMs": 26,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-09T18:44:06.935521+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.39,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 17.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "role_note": "FRAMEWORK — the dispatcher case for vertical, quoted verbatim. Two adjacent cases in one bash file.",
+      "narration_text": "The dispatcher lives in a single bash file. Art vertical is one case. Art shorts is the case above it. Both exec the same python script — shorts dot py — but vertical appends dash dash vertical to the argument list. Same code path, opposite editorial contract, chosen by which verb you typed.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "code card fades in with 'art' in the title bar"
+          },
+          {
+            "at": "0.20",
+            "event": "help line for vertical types first (from art:15)"
+          },
+          {
+            "at": "0.45",
+            "event": "shorts case block types"
+          },
+          {
+            "at": "0.70",
+            "event": "vertical case block types (with --vertical appended)"
+          },
+          {
+            "at": "0.90",
+            "event": "spark line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "art — the dispatcher (verbatim, help line + two cases)",
+            "code": "# from the help block (art:15):\n#   ./art vertical <reel>       full-length 9:16 companion (no shortening)\n\n# From the case dispatcher (art:102-107):\ncase \"$cmd\" in\n  # ...\n  shorts)\n    exec python3 \"$ART_HOME/runtime/scripts/shorts.py\" \"$@\"\n    ;;\n  vertical)\n    exec python3 \"$ART_HOME/runtime/scripts/shorts.py\" \"$@\" --vertical\n    ;;\n  # ...\nesac\n\n# One Python script.  Two verbs.  Two editorial contracts:\n#   shorts   -> Short  = strictly < 3:00 ; can drop beats ; endcard\n#   vertical -> Twin   = full length     ; no drops       ; no endcard",
+            "sparkLine": "One script. Two verbs. Two contracts."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-12T17:46:52.790809+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.05,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 17.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — THE VERTICAL CONTRACT verbatim from the shorts.py module docstring, rule 5.",
+      "narration_text": "The contract for vertical is rule five of the module's own docstring, and it is worth reading verbatim. Dash dash vertical creates a full-length companion, not a Short. No drops. No duration cap. No rewritten outro. No added endcard. Every beat that landscape had, vertical has. Same running time. Same words. Just a portrait layout for every generated visual.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'shorts.py — THE VERTICAL CONTRACT'"
+          },
+          {
+            "at": "0.20",
+            "event": "rule 5 preamble types"
+          },
+          {
+            "at": "0.55",
+            "event": "the four 'no' clauses land, one per line"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "shorts.py — rule 5 of THE SHORTS LAW (verbatim)",
+            "code": "# From the shorts.py module docstring, rule 5 — verbatim:\n#\n#   5. --vertical creates a full-length companion, not a Short:\n#      no drops,\n#      no duration cap,\n#      no rewritten outro,\n#      no added endcard.\n#\n# Every beat the landscape master has, --vertical retains.\n# Same running time.  Same narration.  Portrait layout for every\n# generated visual (Remotion / Manim).  Captured media reused untouched\n# when the parent reel's aspect_ratio is already 9:16.",
+            "sparkLine": "Full length. No drops. No endcard."
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-09T18:45:05.169301+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.8,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 19.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the three-line guardrail inside shorts.py main(). This is where the contract becomes code.",
+      "narration_text": "The guardrails are three lines of python. If vertical is on and dash dash drop was passed, the script refuses on the spot. If vertical is on, the endcard is forced off and the outro-rewrite is forced off — both flags auto-set to true. There is no way to sneak a drop, an endcard, or a reworded outro into a vertical build. The refusal is by construction.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'shorts.py — main() guardrails'"
+          },
+          {
+            "at": "0.22",
+            "event": "if a.vertical: header types"
+          },
+          {
+            "at": "0.42",
+            "event": "if a.drop: raise BuildError(...) types — REFUSAL line"
+          },
+          {
+            "at": "0.70",
+            "event": "a.no_endcard = a.no_outro_rewrite = True types"
+          },
+          {
+            "at": "0.92",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "shorts.py:251-254 — where vertical becomes different",
+            "code": "# From shorts.py, inside main(), immediately after parse_args:\n\nif a.vertical:\n    if a.drop:\n        raise BuildError(\n            '--vertical preserves the full film; '\n            '--drop is not allowed')\n    a.no_endcard = a.no_outro_rewrite = True\n\n# Three effects of the branch, all mechanical:\n#   1. --drop combined with --vertical => refuse before any file write\n#   2. no_endcard forced True   => the 4.5s silent card is never appended\n#   3. no_outro_rewrite forced  => the parent outro narration stays intact\n#\n# The refusal is by construction, not by convention.",
+            "sparkLine": "Three lines. Three guarantees."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-09T18:45:34.976779+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.39,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 19.416666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the ONDA CHECK. Unchanged for vertical; every REMOTION beat is rewired, never cropped.",
+      "narration_text": "Then the ONDA check runs, exactly the way it runs for shorts. Every Remotion beat is detected by its beat sheet — shot dot type equals Remotion. The script appends nine sixteen to each beat's composition pattern, looks it up in Root dot tsx, and rewires the beat when a portrait composition exists. If it does not, the beat is BLOCKED — you register the nine sixteen composition or drop a pantry override. Vertical does not soften this check. It is the same check.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'shorts.py — the ONDA CHECK (shared)'"
+          },
+          {
+            "at": "0.22",
+            "event": "is_remotion helper types"
+          },
+          {
+            "at": "0.50",
+            "event": "portrait_pattern lookup types"
+          },
+          {
+            "at": "0.78",
+            "event": "rewire vs BLOCKED path types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "shorts.py — the ONDA CHECK (same for shorts and vertical)",
+            "code": "# 1. detect REMOTION beats by their beat sheet, not their folder:\ndef is_remotion(b):\n    shot = b.get('shot') or {}\n    return (str(shot.get('type','')).upper() == 'REMOTION'\n            or bool(shot.get('remotion')))\n\n# 2. does Root.tsx register the 916 sibling of this pattern?\ndef portrait_pattern(pattern, tsx):\n    if pattern.endswith('916') and f'id=\"{pattern}\"' in tsx:\n        return pattern\n    cand = f'{pattern}916'\n    return cand if f'id=\"{cand}\"' in tsx else None\n\n# 3. rewire (per kept beat) — vertical uses this same block:\np916 = portrait_pattern(pattern, tsx)\nif p916:\n    b['shot']['remotion']['pattern'] = p916      # re-render portrait\nelse:\n    onda_blocked.append((bid, pattern))         # add 916 or pantry",
+            "sparkLine": "REMOTION beats are rewired, never cropped."
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-09T18:46:05.902727+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 24.55,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 24.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "MECHANISM",
+      "role_note": "MECHANISM — the one measurement vertical skips: require_short_duration is gated by 'if not a.vertical:'.",
+      "narration_text": "The one thing vertical skips is the cap check. Right at the end of main, the script asks — was this a vertical build? If yes, require underscore short underscore duration is not called. That is the entire delta on the duration side. Every other check — validate project, atomic write, invalidate stale renders — runs the same. Vertical is not a lenient shorts. It is a different contract with one guardrail flipped and one measurement removed.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'shorts.py — one line, one delta'"
+          },
+          {
+            "at": "0.22",
+            "event": "if not a.vertical: types"
+          },
+          {
+            "at": "0.50",
+            "event": "try/except require_short_duration types"
+          },
+          {
+            "at": "0.78",
+            "event": "meta['short_validation'] line types"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "shorts.py:480-485 — the cap check is skipped for vertical",
+            "code": "# From shorts.py, just before atomic_json writes the derivative sheet:\n\nblocked = [f'{bid}: {pattern}' for bid, pattern in onda_blocked]\nif not a.vertical:\n    try:\n        require_short_duration(total, 'Planned Short')\n    except BuildError as exc:\n        blocked.append(str(exc))\nmeta['short_validation'] = {\n    'status': 'blocked' if blocked else 'ready',\n    'errors': blocked,\n}\n\n# The cap only exists for shorts.  ONDA CHECK failures still\n# block vertical (a missing 916 composition is a blocker in both\n# contracts).  validate_project runs unchanged.  atomic_json runs\n# unchanged.  Stale-render invalidation runs unchanged.",
+            "sparkLine": "One flag flipped. One measurement removed."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-09T18:46:35.894585+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.78,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 21.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "WORKED EXAMPLE — verbatim from demo/VERTICAL-LOG.txt invocation 1. 7 REMOTION beats, 214s, retained.",
+      "narration_text": "Here is a real run against the fixture reel. Seven beats. Two hundred fourteen seconds. Three minutes thirty-four. The script prints the parent reel's total, prints the vertical banner, walks the seven Remotion beats through the ONDA check — every one of them has a nine sixteen composition already registered — and reports seven beats at two hundred fourteen seconds, full-length vertical, no Short cap. The dropped column reads none. The endcard line reads ends on the last beat. That is exactly the shape vertical promises.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads '$ ./art vertical /tmp/claude-501/claude-shorts-demo'"
+          },
+          {
+            "at": "0.20",
+            "event": "parent reel line types (7 beats · 214.0s)"
+          },
+          {
+            "at": "0.35",
+            "event": "[vertical] banner types"
+          },
+          {
+            "at": "0.55",
+            "event": "ONDA CHECK block types — seven rewires"
+          },
+          {
+            "at": "0.82",
+            "event": "7 beats · 214.0s full-length vertical (no Short cap) types"
+          },
+          {
+            "at": "0.90",
+            "event": "dropped: none · ends on the last beat (no endcard) types"
+          },
+          {
+            "at": "0.95",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "$ ./art vertical /tmp/claude-501/claude-shorts-demo   (verbatim)",
+            "code": "$ ./art vertical /tmp/claude-501/claude-shorts-demo\n[short] parent reel: 7 beats · 214.0s (3:34.0) · Shorts cap 3:00\n[vertical] full-length companion: every source beat is retained\n[short] B00  ONDA CHECK: ClaudeComposerAsk -> ClaudeComposerAsk916\n[short] B01  ONDA CHECK: BrutalistHesitantWriter -> BrutalistHesitantWriter916\n[short] B02  ONDA CHECK: ClaudeCodeBeat -> ClaudeCodeBeat916\n[short] B03  ONDA CHECK: ClaudeCodeBeat -> ClaudeCodeBeat916\n[short] B04  ONDA CHECK: ClaudeCodeBeat -> ClaudeCodeBeat916\n[short] B05  ONDA CHECK: ClaudeVerdictArtifact -> ClaudeVerdictArtifact916\n[short] B06  ONDA CHECK: ClaudeTitleOutro -> ClaudeTitleOutro916\n[short] 7 beats · ~214.0s (3:34.0) full-length vertical (no Short cap)\n[short] dropped: none · ends on the last beat (no endcard)\n[short] next:\n[short]   1. remotion_scenes.py <vertical>   # portrait renders for rewired beats\n[short]   2. compile.py <vertical> --review --height 1920",
+            "sparkLine": "Full length. No drops. No endcard."
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T18:47:09.808657+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.9,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 26.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FALSIFIABILITY",
+      "role_note": "FALSIFIABILITY — the vertical + drop refusal. Two spellings, one guardrail, same BuildError.",
+      "narration_text": "And here is the refusal that makes the contract real. Art vertical on the fixture, dash dash drop B zero two. The script prints one line to stderr — REFUSED, dash dash vertical preserves the full film, dash dash drop is not allowed. Exit one. No directory written. Recovery is to pick one intent. Shorts if you want a cut, vertical if you want the twin. The same refusal fires from the shorts dispatch too — because both spellings hit the same guardrail in the same python source.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "code-cascade",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "card in; title reads 'failure + recovery (verbatim)'"
+          },
+          {
+            "at": "0.22",
+            "event": "first refusal invocation types"
+          },
+          {
+            "at": "0.35",
+            "event": "REFUSED line highlights terracotta"
+          },
+          {
+            "at": "0.50",
+            "event": "second spelling (via shorts) types with same refusal"
+          },
+          {
+            "at": "0.70",
+            "event": "RECOVERY comment types"
+          },
+          {
+            "at": "0.82",
+            "event": "two recovery invocations type"
+          },
+          {
+            "at": "0.94",
+            "event": "spark line lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "failure + recovery — the --vertical + --drop refusal (verbatim)",
+            "code": "# Spelling A — via the vertical dispatcher:\n$ ./art vertical /tmp/claude-501/claude-shorts-demo --drop B02\n[short] REFUSED: --vertical preserves the full film; --drop is not allowed\n$ echo $?\n1\n\n# Spelling B — via the shorts dispatcher with --vertical:\n$ ./art shorts /tmp/claude-501/claude-shorts-demo --vertical --drop B02\n[short] REFUSED: --vertical preserves the full film; --drop is not allowed\n$ echo $?\n1\n\n# Both hit the same three lines of Python (shorts.py:251-254):\n#   if a.vertical:\n#       if a.drop:\n#           raise BuildError('--vertical preserves the full film; ...')\n\n# --------------------------- RECOVERY ---------------------------\n# Pick one intent.  Two verbs, two contracts, no overlap.\n#\n# A) shorter cut with a specific beat gone:\n$ ./art shorts /tmp/claude-501/claude-shorts-demo --drop B02\n#\n# B) full-length 9:16 twin (no cap, no drops, no endcard):\n$ ./art vertical /tmp/claude-501/claude-shorts-demo",
+            "sparkLine": "Two verbs. Two contracts. No overlap."
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T18:47:41.244086+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.03,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 26.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeCodeBeat",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "role_note": "VERDICT — the whole surface, in the order you use it. Eight lines.",
+      "narration_text": "So the surface. Art vertical wraps art shorts with dash dash vertical. Same script. Same ONDA check. Full length. No cap. No drops. No endcard. No rewritten outro. Every Remotion beat rewires to its portrait sibling and re-renders. Captured media in a native portrait reel is reused untouched. The two commands the script prints — remotion scenes, then compile — are what actually build the vertical mp4. Publishing is separate. Nothing here uploads.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-in",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "artifact card in on cream"
+          },
+          {
+            "at": "0.15",
+            "event": "heading types: 'art vertical — the whole surface'"
+          },
+          {
+            "at": "0.28",
+            "event": "line 1 in"
+          },
+          {
+            "at": "0.36",
+            "event": "line 2 in"
+          },
+          {
+            "at": "0.44",
+            "event": "line 3 in"
+          },
+          {
+            "at": "0.52",
+            "event": "line 4 in"
+          },
+          {
+            "at": "0.60",
+            "event": "line 5 in"
+          },
+          {
+            "at": "0.68",
+            "event": "line 6 in"
+          },
+          {
+            "at": "0.78",
+            "event": "line 7 in"
+          },
+          {
+            "at": "0.90",
+            "event": "line 8 in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "art vertical — the whole surface, in the order you use it",
+            "artifactLines": [
+              "bare invocation — ./art vertical <reel>; wraps python3 shorts.py --vertical.",
+              "full length — every source beat retained; no cap, no drops.",
+              "no endcard — --vertical forces a.no_endcard = True.",
+              "no rewritten outro — --vertical forces a.no_outro_rewrite = True.",
+              "--drop refused — --vertical + --drop raises BuildError before any file write.",
+              "ONDA CHECK still fires — every REMOTION beat rewired to <pattern>916 or BLOCKED.",
+              "captured portrait media — reused unchanged when the parent's aspect_ratio is 9:16.",
+              "render only — no upload, no scheduling; publishing is a separate human workflow."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T18:49:13.577099+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 23.77,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 23.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — Your Turn composer. Prompt read aloud verbatim, then discussed.",
+      "narration_text": "Your turn. Paste this into Claude Code from a finished sixteen-nine reel of yours. Run art vertical, read the plan, then run the two printed next-steps. If ONDA check reports BLOCKED for any Remotion beat, either register the nine sixteen composition in Root dot tsx or drop a pantry override. This prompt is the discipline: read the plan, resolve BLOCKED, render portrait, compile at four K. Look for a full-length vertical mp4 that plays end to end with no cropped text.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 32,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Your Turn' types above the composer"
+          },
+          {
+            "at": "0.28",
+            "event": "typed prompt fills the composer"
+          },
+          {
+            "at": "0.75",
+            "event": "runningText 'paste this into Claude Code…' appears"
+          },
+          {
+            "at": "0.85",
+            "event": "expected outcome lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your Turn",
+            "topic": "BRUTALIST · YOUR TURN",
+            "segment": "Build the full-length 9:16 twin",
+            "command": "From the brutalist.art toolkit against a finished 16:9 reel of yours: (1) run ./art vertical <reel> and read the plan — every source beat should appear as retained and the ONDA CHECK should list each Remotion beat rewired to its <pattern>916 composition. (2) If ONDA CHECK prints BLOCKED for a beat, either register the missing 916 composition in runtime/remotion/src/Root.tsx (mirror the 16:9 pattern at width 1080 × height 1920) or drop a manual override at pantry/<BID>-916.mp4 in the reel folder. (3) Run the two commands the script prints: python3 runtime/scripts/remotion_scenes.py <reel>/vertical, then python3 runtime/scripts/compile.py <reel>/vertical --review --height 1920. (4) Inspect the resulting mp4 end-to-end — look for cropped text or any Remotion beat that fell back to a center-cut instead of a native portrait render.",
+            "runningText": "paste this into Claude Code…",
+            "output": [
+              "step 1 — plan prints with every source beat retained, no drops",
+              "step 2 — 916 composition or pantry/<BID>-916.mp4 clears BLOCKED",
+              "step 3 — portrait renders land under <reel>/vertical/media/",
+              "step 4 — final MP4 is a native portrait, not an upscaled crop"
+            ],
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-09T18:50:37.055211+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 26.28,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 26.291666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-12T13:48:33"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW / OUTRO-LOCK — title restate, @NikBearBrown hardcoded, slug-seeded mascot.",
+      "narration_text": "Brutalist Command: art vertical. Liam, in for Bear, for at Humanitarians A I.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "outro-card",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "cream page in; polarity seeded from slug"
+          },
+          {
+            "at": "0.10",
+            "event": "title types: 'Brutalist Command: art vertical.'"
+          },
+          {
+            "at": "0.55",
+            "event": "handle appears: @NikBearBrown"
+          },
+          {
+            "at": "0.70",
+            "event": "mascot animates below the handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Brutalist Command: art vertical.",
+            "slug": "claude-liam-brutalist-command-vertical"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-09T18:50:54.187949+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.42,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.458333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-12T13:48:33"
+      }
+    }
+  ]
+}
