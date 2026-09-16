@@ -46,6 +46,7 @@ import {ClaudeVerdictArtifact916, claudeVerdictArtifact916Schema} from './scenes
 import {ClaudeTitleOutro, claudeTitleOutroSchema} from './scenes/ClaudeTitleOutro';
 // claude-liam — adaptive-therapy-revolution
 import {ClaudeCodeBeat, claudeCodeBeatSchema} from './scenes/ClaudeCodeBeat';
+import {ClaudeCodeBeat916, claudeCodeBeatSchema as claudeCodeBeat916Schema} from './scenes/ClaudeCodeBeat916';
 import {ClaudeWindow, claudeWindowSchema} from './scenes/ClaudeWindow';
 // claude-liam — 1hr-cowork
 import {CoworkHourClock, coworkHourClockSchema} from './scenes/CoworkHourClock';
@@ -1449,6 +1450,14 @@ export const RemotionRoot: React.FC = () => {
           code: '# code here',
           sparkLine: 'The code speaks.',
         }} />
+      <Composition id="ClaudeCodeBeat916" component={ClaudeCodeBeat916}
+      durationInFrames={300} fps={30} width={1080} height={1920}
+      schema={claudeCodeBeat916Schema}
+      defaultProps={{
+        title: 'script.py',
+        code: '# code here',
+        sparkLine: 'The code speaks.',
+      }} />
       <Composition id="ClaudeWindow" component={ClaudeWindow}
         durationInFrames={360} fps={30} width={1920} height={1080}
         schema={claudeWindowSchema}

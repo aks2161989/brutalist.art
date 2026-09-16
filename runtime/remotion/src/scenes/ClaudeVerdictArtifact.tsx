@@ -46,7 +46,7 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
   const headIn = spring({ frame: frame - 8, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
 
   // Fill the frame: ~84% of width, capped so ultrawide stays readable.
-  const cardW = Math.min(width * 0.84, 1560);
+  const cardW = Math.min(width * 0.84, 1560 * (width / 1920));
   const lines = (artifactLines ?? []).map(stripLeadNum);
 
   return (
@@ -54,6 +54,7 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
       {/* Artifact card */}
       <div style={{
         width: cardW,
+        minHeight: 720 * (width / 1920),
         background: CLAUDE.CARD,
         borderRadius: 24,
         boxShadow: '0 20px 72px rgba(61,57,41,0.16)',

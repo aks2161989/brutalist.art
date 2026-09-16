@@ -44,6 +44,7 @@ export const ClaudeVerdictArtifact916: React.FC<ClaudeVerdictArtifact916Props> =
     <AbsoluteFill style={{ background: '#F2F0E9', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{
         width: CARD_W,
+        minHeight: height * 0.60,
         background: CLAUDE.CARD,
         borderRadius: 20,
         boxShadow: '0 16px 56px rgba(61,57,41,0.16)',

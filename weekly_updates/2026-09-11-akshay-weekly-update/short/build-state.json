@@ -1,0 +1,21 @@
+{
+  "status": "ready",
+  "output": "F:\\brutalist.art\\renders\\2026-09-11-akshay-weekly-update-portrait.mp4",
+  "sha256": "5039c9119698461e43a4b76d5601baa831295ec2f2bc5fc43e0c4b059de3d19b",
+  "duration_s": 99.08333333333334,
+  "input_sha256": {
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\media\\B00.mp4": "e76bad1f09a82f7c4f1b0a391f0a1d0911069109f3680b0f4944660e8e64f29b",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\media\\B01.mp4": "9da1140288e55ec032c2e211a27cb137b79bb9790dd50317c4ab888ade35d943",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\media\\B02.mp4": "754e6eb63fc26d29fb4a72ff84d104281a8faa62b09e0db386594530775650a8",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\media\\B03.mp4": "9ac771643dbba81fce8b45c4b110de19df20ef23f8aaf6cdb79c8b338a2522aa",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\media\\B04.mp4": "15242b7d67eff03b6e46e47f01cb2950c552465f370c27663353ddaf36655051",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\media\\B05.mp4": "99771a0ca417c1badf1abd2c13b33f8dcb734336f83ecd799111438d16a4d262",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\mp3\\beat-B00.mp3": "012878d4c215923b749ada8b13064fbb5bb61f2f6e84ecfe0f66f56f56b3e9af",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\mp3\\beat-B01.mp3": "66e2b1d3121e63d95601dee4539ca04a3dcd725b19514f95a46575236e5b18cd",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\mp3\\beat-B02.mp3": "f020c2133718287c02950f21913bc39e76ada4f42a1dfe88674021ae88f8eeeb",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\mp3\\beat-B03.mp3": "5a950c38658d492a0ef38895fe7a18613461957c7b14db8ed654bf8cff16dfcc",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\mp3\\beat-B04.mp3": "866da1d8c86d5b7a30f41e7a48d6e6208ba7e90c399f5302f291d58f9514c49c",
+    "F:\\brutalist.art\\weekly_updates\\2026-09-11-akshay-weekly-update\\short\\mp3\\beat-B05.mp3": "65ff09d707741c1f48b8c1c2cea9004a69bd0e796d02070323f51dd390b9f2d1"
+  },
+  "at": "2026-09-12T00:37:27.873079+00:00"
+}

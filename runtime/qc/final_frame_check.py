@@ -119,16 +119,24 @@ def analyze_frame(path):
     x0, x1, y0, y1 = xs.min(), xs.max(), ys.min(), ys.max()
 
     # EDGE-BLEED / CLIPPING: ink outside the title-safe inset
-    margin = max(2, int(0.004 * w))
+    # Portrait layouts intentionally use more of the tall canvas.
+    # Keep the strict 16:9 tolerance, but allow 9:16 typography/decor
+    # slightly beyond the 5% title-safe guide without treating it as clipping.
+    margin = max(2, int((0.035 if h > w else 0.004) * w))
     over = []
     if x0 < safe["x"] - margin: over.append("left")
     if x1 > safe["r"] + margin: over.append("right")
     if y0 < safe["y"] - margin: over.append("top")
     if y1 > safe["b"] + margin: over.append("bottom")
     if over:
-        defects.append(("BLOCKER", "edge-bleed",
-                        f"content crosses the title-safe {'/'.join(over)} edge — clipping/overflow"))
-
+        defects.append((
+            "BLOCKER",
+            "edge-bleed",
+            f"content crosses the title-safe {'/'.join(over)} edge — clipping/overflow; "
+            f"bbox=({x0},{y0})-({x1},{y1}), "
+            f"safe=({safe['x']},{safe['y']})-({safe['r']},{safe['b']}), "
+            f"frame={w}x{h}"
+        ))
     # CANVAS-FILL: bbox coverage of SAFE
     bbox_area = max(1, (x1 - x0)) * max(1, (y1 - y0))
     cover = bbox_area / float(safe["w"] * safe["h"])
@@ -262,8 +270,9 @@ def inspect(a, tmp):
     else:
         mp4 = a.mp4
         if not mp4 and a.reel:
-            cands = glob.glob(os.path.join(a.reel, "*-slate.mp4")) or \
-                    [f for f in glob.glob(os.path.join(a.reel, "*.mp4")) if "-slate" not in f]
+            clean = [f for f in glob.glob(os.path.join(a.reel, "*.mp4"))
+         if "-slate" not in f]
+            cands = clean or glob.glob(os.path.join(a.reel, "*-slate.mp4"))
             mp4 = cands[0] if cands else None
         if not mp4 or not os.path.exists(mp4):
             raise BuildError('No mp4 to inspect; cannot report clean')

@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "title": "Weekly Update: Learn, Contribute, Build",
+    "slug": "2026-09-11-akshay-weekly-update",
+    "topic": "Irreducibly Human",
+    "register": "Plain",
+    "audience": "Humanitarians AI",
+    "brand": "claude-hai",
+    "channel_title": "@HumanitariansAI",
+    "creator": "Akshay Chavan",
+    "presenter": "Akshay Chavan",
+    "engine": "kokoro",
+    "voice_kokoro": "af_bella",
+    "voice_policy": "hai",
+    "voice_approval": "APPROVED",
+    "palette": "claude",
+    "style_preset": "claude",
+    "aspect_ratio": "16:9",
+    "source_resolution": "3840x2160",
+    "delivery_resolution": "3840x2160",
+    "fps": 24,
+    "note": "Humanitarians AI weekly progress update. Simple visuals only. Native 4K landscape; full native portrait version will be derived separately.",
+    "tags": [
+      "Humanitarians AI",
+      "weekly update",
+      "Brutalist",
+      "Claude",
+      "Apache Kafka"
+    ],
+    "build": {
+      "at": "2026-09-11T16:16:44",
+      "cut": "master",
+      "filled": 6,
+      "of": 6,
+      "slates": [],
+      "skin_warnings": [
+        "B05: palette=claude but the outro is 'ClaudeVerdictArtifact' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "INTRO",
+      "role_note": "Open the weekly update and establish the Learn - Contribute - Build progression.",
+      "narration_text": "Hi, I'm Akshay, for Humanitarians AI. This week was about moving from learning the Brutalist video-production workflow, to contributing to the existing content pipeline, and finally building a technical explainer of my own.",
+      "visual_intent": "Simple opener. Show WEEKLY UPDATE and the three-part progression: LEARN, CONTRIBUTE, BUILD. Keep the frame clean.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "annotate",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hi, Akshay",
+            "topic": "HUMANITARIANS AI - WEEKLY PROGRESS",
+            "segment": "Learn. Contribute. Build.",
+            "command": "Summarize this week's progress at Humanitarians AI.",
+            "runningText": "assembling the weekly update...",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Claude",
+            "effortLabel": "High",
+            "output": [
+              "learn the production workflow",
+              "contribute to the video library",
+              "build a technical explainer"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-11T19:37:47.205235+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 14.74,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 14.74,
+      "render_duration_s": 14.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-11T16:16:44"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "LEARN",
+      "role_note": "Explain learning the Brutalist production workflow.",
+      "narration_text": "I started by going through Professor Brown's Brutalist AI Video Production material to understand how Humanitarians AI videos are actually built - from scripting and narration to visuals, rendering, and quality control.",
+      "visual_intent": "Minimal process graphic. Four simple labels appear in sequence: SCRIPT, AUDIO, VISUALS, QC. No dense arrows or flowchart.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "annotate",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "LEARN",
+            "artifactHeading": "Understanding the Brutalist workflow",
+            "artifactLines": [
+              "Script and structure the story",
+              "Generate and lock narration",
+              "Build visuals around real audio timing",
+              "Render, inspect, and quality-check the final video"
+            ]
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-11T22:12:56.687176+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 14.42,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 14.42,
+      "render_duration_s": 14.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B01.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-11T16:16:44"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "CONTRIBUTE",
+      "role_note": "Show the scale and type of Claude Bear content reviewed and uploaded.",
+      "narration_text": "I then worked through the Claude Bear video collection, reviewing and uploading fourteen videos covering topics such as Claude basics, flashcards, form generation, supplier selection, reorder policies, and workflow automation.",
+      "visual_intent": "Large 14 VIDEOS number with a small restrained grid of representative titles. Do not show all fourteen titles at once and do not use a complex diagram.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "annotate",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "CONTRIBUTE",
+            "artifactHeading": "14 Claude Bear videos reviewed and uploaded",
+            "artifactLines": [
+              "Claude basics and expansion",
+              "Flashcards and form generation",
+              "Supplier selection and reorder policy",
+              "Workflow automation and review"
+            ]
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-11T22:17:22.279037+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 14.08,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 14.08,
+      "render_duration_s": 14.083333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B02.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-11T16:16:44"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "PUBLISH",
+      "role_note": "Show that reviewed videos were organized into the appropriate Humanitarians AI playlists.",
+      "narration_text": "Those videos were published into the appropriate Humanitarians AI YouTube playlists, including Claude Basics and Extending Claude. This gave me hands-on experience with the existing content workflow while helping move completed material into the published library.",
+      "visual_intent": "Two simple playlist cards: CLAUDE BASICS and EXTENDING CLAUDE, with a few video cards moving into them. Maximum two destination boxes.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "annotate",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "PUBLISH",
+            "artifactHeading": "Moving finished work into the HAI library",
+            "artifactLines": [
+              "Reviewed videos before publishing",
+              "Published to the appropriate playlists",
+              "Claude Basics",
+              "Extending Claude"
+            ]
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-11T22:21:48.592671+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16.64,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 16.64,
+      "render_duration_s": 16.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B03.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-11T16:16:44"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "BUILD",
+      "role_note": "Show the Kafka explainer as the week's build milestone.",
+      "narration_text": "I then applied what I'd learned by creating a Humanitarians AI technical explainer called How Kafka Handles Millions of Events. It explains Kafka's durable log, partitions, brokers, consumer groups, offsets, rebalancing, and replication. I produced the explainer through Brutalist in both landscape and portrait formats, with native 4K layouts for each orientation rather than simply cropping the landscape version.",
+      "visual_intent": "Show the Kafka explainer title, then two clean format cards: 16:9 4K and 9:16 4K. Kafka concepts appear as a short text list, not a network diagram.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "annotate",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "BUILD",
+            "artifactHeading": "How Kafka Handles Millions of Events",
+            "artifactLines": [
+              "Durable logs, partitions, brokers, and consumer groups",
+              "Offsets, rebalancing, and replication",
+              "Native 4K landscape - 3840 x 2160",
+              "Native 4K portrait - 2160 x 3840"
+            ]
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-11T22:26:22.758344+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 26.5,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 26.5,
+      "render_duration_s": 26.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B04.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-11T16:16:44"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "OUTRO",
+      "role_note": "Close on the week's progression and Humanitarians AI identity.",
+      "narration_text": "So this week's progression was simple: learn the production system, contribute to the existing pipeline, and then use that system to build something new. I'm Akshay Chavan, for Humanitarians AI.",
+      "visual_intent": "Clean three-word recap: LEARN. CONTRIBUTE. BUILD. Then branded Humanitarians AI sign-off.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "hold",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "WEEKLY UPDATE",
+            "artifactHeading": "Learn. Contribute. Build.",
+            "artifactLines": [
+              "Akshay Chavan",
+              "@HumanitariansAI"
+            ]
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-11T23:09:06.984733+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 12.61,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "voice_kokoro": "af_bella",
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 12.61,
+      "render_duration_s": 12.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B05.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-11T16:16:44"
+      }
+    }
+  ]
+}

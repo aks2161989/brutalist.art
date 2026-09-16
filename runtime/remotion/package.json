@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@remotion/cli": "^4.0.0",
-    "@remotion/paths": "^4.0.490",
+    "@remotion/paths": "4.0.486",
     "@remotion/zod-types": "^4.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -23,4 +23,3 @@
     "esbuild@0.28.1": true
   }
 }
-

@@ -24,6 +24,7 @@ PROJECT = HERE / "remotion"        # the Remotion project
 ENTRY = "src/index.ts"
 CONSUMERS = HERE / "remotion" / "_bench" / "consumers.json"
 FFMPEG = os.environ.get("FFMPEG", "ffmpeg")
+NPX = shutil.which("npx.cmd") or shutil.which("npx") or "npx"
 
 
 def load(p):
@@ -87,7 +88,7 @@ def render_beat(folder: Path, beat: dict, force: bool) -> str:
             candidate = Path(scratch) / 'render.mp4'
             props_path = Path(scratch) / 'props.json'
             atomic_json(props_path, rem.get('props', {}))
-            cmd = ["npx", "remotion", "render", ENTRY, pattern, str(candidate),
+            cmd = [NPX, "remotion", "render", ENTRY, pattern, str(candidate),
                    f"--props={props_path}", "--concurrency=1",
                    "--scale=2", "--image-format=png", "--crf=16"] + browser_flags()
             r = subprocess.run(cmd, cwd=PROJECT, capture_output=True, text=True)

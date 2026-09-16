@@ -53,3 +53,67 @@ art.pre-scene-search
 /runtime/remotion/_bench/
 .venv/
 /my_videos/
+
+# ============================================================
+# Generated video/audio assets
+# ============================================================
+
+# Final / intermediate renders
+/renders/
+/media/
+
+# Per-reel generated media
+**/media/
+**/manim/
+**/clips/
+**/_qc/
+
+# Generated audio
+**/mp3/
+**/*.mp3
+**/*.wav
+
+# Rendered video files
+**/*.mp4
+**/*.mov
+**/*.webm
+
+# Temporary frames / images produced during rendering or QC
+**/_frames/
+**/frames/
+**/*_debug.png
+**/*-debug.png
+
+# ============================================================
+# Python
+# ============================================================
+
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# ============================================================
+# Temporary / backup files
+# ============================================================
+
+*.bak
+*.bak2
+*.tmp
+*.temp
+*.before-arrow-fix
+*.kafka-bak
+
+# ============================================================
+# Runtime-generated benchmark / QC data
+# ============================================================
+
+/runtime/remotion/_bench/
+
+# ============================================================
+# OS / editor junk
+# ============================================================
+
+.DS_Store
+Thumbs.db

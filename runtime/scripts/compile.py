@@ -792,9 +792,11 @@ def compile_reel(a):
                       f"enable='between(t,{ts:.3f},{ts + dur:.3f})'[{nxt}]")
             prev = nxt
         if title_png:
+            title_bottom = int(h * 0.06)
             fc.append(f"[{prev}][{n_label_inputs}:v]"
-                      f"overlay=(W-w)/2:H-h-40"
-                      f":enable='between(t,0,{first_beat_dur:.3f})'[vtitle]")
+                    f"overlay=(W-w)/2:H-h-{title_bottom}"
+                    f":enable='between(t,0,{first_beat_dur:.3f})'[vtitle]")
+            prev = "vtitle"
             prev = "vtitle"
         if a.review and drawtext and font:
             # FFmpeg's drawtext filter needs Windows paths like
