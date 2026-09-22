@@ -8,10 +8,10 @@ import { ANIMATIONS, AnimationName, computeAnimation, MascotSVG } from './Claude
  * ClaudeTitleOutro â€” title-restate outro card for claude-liam / @NikBearBrown reels ONLY.
  *
  * LOCKED per OUTRO-LOCK.md (same lock family as VOICE-LOCK.md):
- *   handle  â†’ '@NikBearBrown', HARDCODED â€” no prop, no lookup, no override.
- *   subline â†’ NOT RENDERED â€” this component never shows a subline.
- *   title   â†’ exact video title, required (sentinel default catches missing values in preview).
- *   slug    â†’ reel folder name; seeds mascot, polarity, and jingle deterministically.
+ *   handle  → '@NikBearBrown', HARDCODED — no prop, no lookup, no override.
+ *   subline → NOT RENDERED — this component never shows a subline.
+ *   title   → exact video title, required (sentinel default catches missing values in preview).
+ *   slug    → reel folder name; seeds mascot and polarity deterministically. Audio is Liam reading the title + "At Nik Bear Brown" (no jingle, OUTRO-LOCK.md §Voice).
  *
  * Other channels (HAI, Medhavy, Musinique) use their own outro components â€” never this one.
  */
@@ -26,8 +26,8 @@ function seedHash(s: string): number {
 export const claudeTitleOutroSchema = z.object({
   // title is required â€” sentinel default makes a missing title obvious in preview/dev.
   // Production beat sheets MUST set this to the video's title verbatim.
-  title: z.string().default('âš  SET IN BEAT SHEET'),
-  // slug is the reel folder name â€” seeds mascot, polarity, and jingle (OUTRO-LOCK.md Â§Randomness).
+  title: z.string().default('⚠ SET IN BEAT SHEET'),
+  // slug is the reel folder name — seeds mascot and polarity (OUTRO-LOCK.md §Randomness).
   // New beat sheets MUST set this. Omitting it falls back to the title hash (legacy compat only).
   slug: z.string().default(''),
   handle: z.string().default('@NikBearBrown'),
