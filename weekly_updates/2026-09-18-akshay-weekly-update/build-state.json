@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "[Errno 2] No such file or directory: 'ffmpeg'",
+  "at": "2026-09-18T19:01:57.502871-07:00"
+}

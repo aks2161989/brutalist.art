@@ -5,15 +5,15 @@ import { CLAUDE, CLAUDE_FONT } from '../tokens/claude';
 import { ANIMATIONS, AnimationName, computeAnimation, MascotSVG } from './ClaudeMascotScene';
 
 /**
- * ClaudeTitleOutro — title-restate outro card for claude-liam / @NikBearBrown reels ONLY.
+ * ClaudeTitleOutro â€” title-restate outro card for claude-liam / @NikBearBrown reels ONLY.
  *
  * LOCKED per OUTRO-LOCK.md (same lock family as VOICE-LOCK.md):
- *   handle  → '@NikBearBrown', HARDCODED — no prop, no lookup, no override.
- *   subline → NOT RENDERED — this component never shows a subline.
- *   title   → exact video title, required (sentinel default catches missing values in preview).
- *   slug    → reel folder name; seeds mascot, polarity, and jingle deterministically.
+ *   handle  â†’ '@NikBearBrown', HARDCODED â€” no prop, no lookup, no override.
+ *   subline â†’ NOT RENDERED â€” this component never shows a subline.
+ *   title   â†’ exact video title, required (sentinel default catches missing values in preview).
+ *   slug    â†’ reel folder name; seeds mascot, polarity, and jingle deterministically.
  *
- * Other channels (HAI, Medhavy, Musinique) use their own outro components — never this one.
+ * Other channels (HAI, Medhavy, Musinique) use their own outro components â€” never this one.
  */
 
 const HANDLE = '@NikBearBrown';
@@ -24,12 +24,13 @@ function seedHash(s: string): number {
 }
 
 export const claudeTitleOutroSchema = z.object({
-  // title is required — sentinel default makes a missing title obvious in preview/dev.
+  // title is required â€” sentinel default makes a missing title obvious in preview/dev.
   // Production beat sheets MUST set this to the video's title verbatim.
-  title: z.string().default('⚠ SET IN BEAT SHEET'),
-  // slug is the reel folder name — seeds mascot, polarity, and jingle (OUTRO-LOCK.md §Randomness).
+  title: z.string().default('âš  SET IN BEAT SHEET'),
+  // slug is the reel folder name â€” seeds mascot, polarity, and jingle (OUTRO-LOCK.md Â§Randomness).
   // New beat sheets MUST set this. Omitting it falls back to the title hash (legacy compat only).
   slug: z.string().default(''),
+  handle: z.string().default('@NikBearBrown'),
   // mascotAnimation: explicit override for dev/preview; production uses slug seed.
   mascotAnimation: z.string().optional(),
 });
@@ -39,28 +40,28 @@ const SERIF = CLAUDE_FONT.serif;
 
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
-export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug, mascotAnimation }) => {
+export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug, handle, mascotAnimation }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const o = clamp(interpolate(frame, [0, 14], [0, 1]), 0, 1);
 
   // Terminal punctuation in terracotta
-  const _pm = title.match(/^([\s\S]*?)\s*([.?!…]+)\s*$/);
+  const _pm = title.match(/^([\s\S]*?)\s*([.?!â€¦]+)\s*$/);
   const titleBody = _pm ? _pm[1] : title;
   const titlePunct = _pm ? _pm[2] : '.';
 
-  // Slug seed — stable per reel, varied across reels (OUTRO-LOCK.md §Randomness)
+  // Slug seed â€” stable per reel, varied across reels (OUTRO-LOCK.md Â§Randomness)
   const seed = seedHash(slug || title);
   const isDark = seed % 2 === 1;  // polarity: even=light, odd=dark
   const bg = isDark ? CLAUDE.INK : CLAUDE.PAGE;
   const fg = isDark ? CLAUDE.PAGE : CLAUDE.INK;
   const fgSend = isDark ? CLAUDE.PAGE : CLAUDE.SEND;
 
-  // Mascot — slug-seeded pick from the 18 crisp-safe animations; explicit override for dev only
+  // Mascot â€” slug-seeded pick from the 18 crisp-safe animations; explicit override for dev only
   const anim: AnimationName = (mascotAnimation as AnimationName | undefined) ?? ANIMATIONS[seed % ANIMATIONS.length];
   const mascotState = computeAnimation(anim, frame, fps);
   const mascotH = 120;
-  const mascotW = Math.round((136 / 86) * mascotH); // ≈ 190px
+  const mascotW = Math.round((136 / 86) * mascotH); // â‰ˆ 190px
 
   return (
     <AbsoluteFill style={{
@@ -71,9 +72,9 @@ export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug,
       gap: 0,
       opacity: o,
     }}>
-      {/* QC fill anchors — 3px dots at safe-zone corners, invisible at viewing distance.
+      {/* QC fill anchors â€” 3px dots at safe-zone corners, invisible at viewing distance.
           Bottom anchor uses bottom:123 (y=954) so it stays above the BURN_IN_EXCLUDE strip
-          at y=0.94×1080=1015 — the strip masks the burn-in label band in art-run cuts. */}
+          at y=0.94Ã—1080=1015 â€” the strip masks the burn-in label band in art-run cuts. */}
       <div style={{ position: 'absolute', left: 96, top: 54, width: 3, height: 3, background: '#D4D4D4' }} />
       <div style={{ position: 'absolute', right: 96, bottom: 123, width: 3, height: 3, background: '#D4D4D4' }} />
 
@@ -93,7 +94,7 @@ export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug,
         <span style={{ color: fgSend }}>{titlePunct}</span>
       </div>
 
-      {/* Handle — HARDCODED to @NikBearBrown per OUTRO-LOCK.md */}
+      {/* Handle â€” HARDCODED to @NikBearBrown per OUTRO-LOCK.md */}
       <div style={{
         fontFamily: SERIF,
         fontSize: 52,
@@ -101,10 +102,10 @@ export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug,
         marginTop: 28,
         opacity: 0.9,
       }}>
-        {HANDLE}
+        {handle}
       </div>
 
-      {/* Mascot — slug-seeded, small, under the handle */}
+      {/* Mascot â€” slug-seeded, small, under the handle */}
       <div style={{
         width: mascotW,
         height: mascotH,
@@ -114,7 +115,7 @@ export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug,
         <MascotSVG s={mascotState} scale={1} />
       </div>
 
-      {/* NO subline — locked per OUTRO-LOCK.md */}
+      {/* NO subline â€” locked per OUTRO-LOCK.md */}
     </AbsoluteFill>
   );
 };

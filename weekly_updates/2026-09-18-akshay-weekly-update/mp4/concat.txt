@@ -1,0 +1,6 @@
+file 'F:/brutalist.art/weekly_updates/2026-09-18-akshay-weekly-update/mp4/B00.mp4'
+file 'F:/brutalist.art/weekly_updates/2026-09-18-akshay-weekly-update/mp4/B01.mp4'
+file 'F:/brutalist.art/weekly_updates/2026-09-18-akshay-weekly-update/mp4/B02.mp4'
+file 'F:/brutalist.art/weekly_updates/2026-09-18-akshay-weekly-update/mp4/B03.mp4'
+file 'F:/brutalist.art/weekly_updates/2026-09-18-akshay-weekly-update/mp4/B04.mp4'
+file 'F:/brutalist.art/weekly_updates/2026-09-18-akshay-weekly-update/mp4/B05.mp4'

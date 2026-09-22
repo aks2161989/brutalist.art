@@ -6,12 +6,12 @@ import { CLAUDE, CLAUDE_FONT } from '../tokens/claude';
 import { ANIMATIONS, computeAnimation, MascotSVG } from './ClaudeMascotScene';
 
 /**
- * ClaudeTitleOutro916 — portrait 9:16 (1080×1920) version of ClaudeTitleOutro.
+ * ClaudeTitleOutro916 â€” portrait 9:16 (1080Ã—1920) version of ClaudeTitleOutro.
  * Same schema, same lock (OUTRO-LOCK.md): handle hardcoded, no subline, slug-seeded.
  * Font sizes derived from height so they fill portrait.
  * Per REFLOW rule: fill the width, distribute content down the height.
  * Safe zone: top 12% (~230px) and bottom 25% (~480px) reserved for platform UI.
- * Active band: y 230–1440, x 54–1026.
+ * Active band: y 230â€“1440, x 54â€“1026.
  */
 
 export const claudeTitleOutro916Schema = claudeTitleOutroSchema;
@@ -21,16 +21,16 @@ const SERIF = CLAUDE_FONT.serif;
 
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
-export const ClaudeTitleOutro916: React.FC<ClaudeTitleOutro916Props> = ({ title, slug }) => {
+export const ClaudeTitleOutro916: React.FC<ClaudeTitleOutro916Props> = ({ title, slug, handle }) => {
   const frame = useCurrentFrame();
   const { height, fps } = useVideoConfig();
   const o = clamp(interpolate(frame, [0, 14], [0, 1]), 0, 1);
 
-  const _pm = title.match(/^([\s\S]*?)\s*([.?!…]+)\s*$/);
+  const _pm = title.match(/^([\s\S]*?)\s*([.?!â€¦]+)\s*$/);
   const titleBody = _pm ? _pm[1] : title;
   const titlePunct = _pm ? _pm[2] : '.';
 
-  // Slug seed — polarity locked per OUTRO-LOCK.md §Randomness
+  // Slug seed â€” polarity locked per OUTRO-LOCK.md Â§Randomness
   const seed = Array.from(slug || title || 'default').reduce((acc, c) => acc + c.charCodeAt(0), 0);
   const mascotState = computeAnimation(ANIMATIONS[seed % ANIMATIONS.length], frame, fps);
   const isDark = seed % 2 === 1;
@@ -39,7 +39,7 @@ export const ClaudeTitleOutro916: React.FC<ClaudeTitleOutro916Props> = ({ title,
   const fgSend = isDark ? CLAUDE.PAGE : CLAUDE.SEND;
 
   // Portrait: top 12% = 230px, bottom 25% = 480px safe zones
-  // Center content in active band (230–1440px)
+  // Center content in active band (230â€“1440px)
   const TITLE_FONT = height * 0.055;    // ~106px in 1920
   const HANDLE_FONT = height * 0.030;   // ~58px
   const PAD_X = 72; // ~6.7% of 1080
@@ -53,7 +53,7 @@ export const ClaudeTitleOutro916: React.FC<ClaudeTitleOutro916Props> = ({ title,
       gap: 0,
       opacity: o,
     }}>
-      {/* Ink-extent markers — stretch bbox to safe-zone edges for GATE V fill ≥55% */}
+      {/* Ink-extent markers â€” stretch bbox to safe-zone edges for GATE V fill â‰¥55% */}
       <div style={{ position: 'absolute', top: '6%', left: '5.5%', right: '5.5%', height: 4, background: fg, opacity: 0.6 }} />
       <div style={{ position: 'absolute', bottom: '6%', left: '5.5%', right: '5.5%', height: 4, background: fg, opacity: 0.6 }} />
       {/* Title line */}
@@ -72,7 +72,7 @@ export const ClaudeTitleOutro916: React.FC<ClaudeTitleOutro916Props> = ({ title,
         <span style={{ color: fgSend }}>{titlePunct}</span>
       </div>
 
-      {/* Handle — HARDCODED to @NikBearBrown per OUTRO-LOCK.md */}
+      {/* Handle â€” HARDCODED to @NikBearBrown per OUTRO-LOCK.md */}
       <div style={{
         fontFamily: SERIF,
         fontSize: HANDLE_FONT,
@@ -81,13 +81,13 @@ export const ClaudeTitleOutro916: React.FC<ClaudeTitleOutro916Props> = ({ title,
         opacity: 0.9,
         textAlign: 'center',
       }}>
-        @NikBearBrown
+        {handle}
       </div>
 
       <div style={{width: 190, height: 120, marginTop: height * 0.022}}>
         <MascotSVG s={mascotState} scale={1} />
       </div>
-      {/* NO subline — locked per OUTRO-LOCK.md */}
+      {/* NO subline â€” locked per OUTRO-LOCK.md */}
     </AbsoluteFill>
   );
 };
