@@ -1,22 +1,15 @@
 ---
 name: lecture
 description: >
-  Build a LECTURE: one full-length, act-structured film of a WHOLE chapter or
-  document (a full markdown file, a report, a long post). Primarily visual:
-  every body beat auditions the entire Brutalist playset (Manim mechanisms and
-  math, isometric drawings, ShowTellCard kinds, Remotion patterns, 2-D library
-  icons, real code and terminal skins, the real app or website) and takes the
-  one visual that teaches that beat best. When a beat is about a tool, an app
-  or a website, the film shows that thing itself. Fixed bookends: hesitant
-  writer (what the topic is about) → key terms → acts → recap → Your Turn →
-  the channel's outro. Default channel @NikBearBrown (claude-liam, Liam in for
-  Bear, free Kokoro am_onyx). Use when the user types `lecture`, `lecture
-  <chapter | document | path | paste>`, or asks for a full-chapter film, a
-  whole-document lecture, or "the whole chapter as one film". Length is an
-  output; no cap. Self-contained: assumes the viewer has read none of the
-  books and seen none of the other films. Audio-first; free steps run straight
-  through with no approval gate (approval only before paid generation).
-  Never publishes.
+  Build one act-structured film of a whole chapter or document. Use for
+  lecture requests, full-chapter films, or whole-document lectures; not HTML
+  lecture decks. Every body beat selects the best teaching visual from the
+  Brutalist playset; named tools are shown as themselves. Opens with a
+  narrated portrait/title/description slide, then hesitant writer and key
+  terms; closes with recap, Your Turn and channel outro. Default @NikBearBrown:
+  Liam in for Bear, free Kokoro am_onyx. Self-contained, primarily visual,
+  audio-first; runtime follows whole-source coverage, no cap. Free steps run
+  without approval gates; paid generation requires approval. Never publishes.
 ---
 
 # lecture — the whole chapter, shown
@@ -67,13 +60,15 @@ extends `../explainer/`. Parent laws all bind unless this file changes them.
 - **This file** governs: whole-source coverage, the opening pair, the
   BEST-BEAT LAW and its router, the SHOW-THE-THING LAW, and the channel outro.
 
-What this file CHANGES from the parents: the composer cold open is dropped (the
-film opens on the hesitant writer), and the 5–10 minute band is dropped.
+What this file CHANGES from the parents: the composer cold open is dropped
+(a briefly narrated portrait/title slide opens the film, then the hesitant writer),
+and the 5–10 minute band is dropped.
 
 ## The spine (fixed)
 
 ```
-BIDEA   hesitant writer   BrutalistHesitantWriter   greeting + what this topic is about
+BOPEN   portrait/title   lecture-title-slide-16x9   spoken playlist + film title + brief summary
+BIDEA   hesitant writer   BrutalistHesitantWriter   greeting + topic framing, no repeated introduction
 BDEFS   key terms         ClaudeDefinitions         the vocabulary the acts will use
   ACT I … ACT N           the body: one best visual per beat (this skill's subject)
 BVDT    recap             ClaudeVerdictArtifact     what the chapter established
@@ -81,8 +76,44 @@ BHTF    your turn         ClaudeComposerAsk         one prompt, read in full, tw
 BOUT    outro             per channel (table below)
 ```
 
+- **BOPEN — the default first beat (Bear, 2026-10-07).** Use the approved
+  [16:9 opening template](templates/title-slide-16x9/README.md); read its
+  field/build contract before authoring. A randomly selected Professor Bear
+  portrait on the left, film title and a short description on the right.
+  Fill the fields from THIS film, not from the template's Figma example.
+  On a series film include the playlist title and nothing positional.
+  **NO VIDEO NUMBERS, EVER** (Bear, 2026-10-11: "we do not number our
+  videos one of X, because we never know what X is going to be", then
+  "remove all the numbers"; a new film can always land first): no "Video 3",
+  no "3 of 16", no "Video 03 / 15", no "Start here · Introduction", no "New
+  here? Start with Video 1", in the card, the narration, the description, the
+  metadata or the roadmap visuals (a roadmap may name parts of a path, never
+  a film count). Plans may keep an order; nothing the viewer sees may carry
+  a number or a total. Keep
+  “Professor Bear” and, when Liam narrates, “Liam, in for Bear · Narration”;
+  do not label Bear's picture as Liam. Standalone films omit series fields.
+  Choose randomly within the square portrait library, seeded by the film slug
+  so separate films vary but re-renders keep their picture. Record the choice.
+  **Narrate this first beat (Bear, 2026-10-07):** say the playlist name,
+  then the exact film name, then a very short explanation of what this film
+  covers and why it is useful. Usually one or two explanatory sentences;
+  at most one short paragraph. For example: “Claude for Figma. The Machine-Ready
+  File. Learn how to prepare a Figma file that Claude can read reliably.”
+  For standalone films, omit the nonexistent playlist; start with the film name.
+  Use the film's narrator (default Liam, Kokoro `am_onyx`), beginning in BOPEN,
+  not after it. Store this speech in `narration_text`, with
+  `shot.narration_contract: "playlist-title-summary-v1"`; do not mark it silent.
+  Hold the fully populated slide from frame zero for the measured narration
+  duration, then cut to BIDEA. The old silent 2–3-second rule is superseded
+  for new builds. No placeholder labels, typing, on-screen paragraph, or jingle.
+  This identity slide is an intentional exception to the static-slide ban;
+  body beats still obey the motion laws. Series purpose, position, practical
+  payoff must be clear within the first 10–15 seconds. Keep the opening speech
+  concise; never speed it up or truncate it to fit a fixed card duration.
+  Other brand variants are not supplied by this template.
 - **BIDEA.** Liam's greeting is spoken over it (`Hallo. This is Liam, in for
-  Bear. …`), then what the topic is about, in two or three plain sentences. The
+  Bear. …`), then advance to the topic's framing or misconception instead of
+  repeating BOPEN's playlist, title and summary. The
   writer types the framing a newcomer arrives with and corrects ONE phrase into
   the chapter's real subject (`triggerWords` → `replacementWords`; the trigger
   must appear verbatim in `text`; neither ends in punctuation, or the
@@ -122,7 +153,8 @@ BOUT    outro             per channel (table below)
   not in this table is a question for Bear, not a guess.
 
 `metadata.skill: "lecture"`, `style_preset: "lecture"`, and
-`bookend_check.py` accepts the hesitant-writer open for this skill. On the
+`bookend_check.py` accepts BOPEN followed by the hesitant writer, and preserves
+compatibility with existing hesitant-writer-first films. On the
 default channel run it and get a PASS. On any other channel the checker's
 outro rule still expects `ClaudeTitleOutro`; record that one expected FAIL in
 `BUILD-LOG.md` rather than putting the wrong outro on the film.
@@ -199,6 +231,8 @@ whichever skill it comes from. No lane is the default. No lane has a quota.
 | A physical arrangement or flow of THINGS: packages, parts, containers, people handing off, a pipeline you could build out of boxes | **Isometric drawing** (`iso_kit.py`, the 25 original props) | `../show-tell/SKILL.md` DRAWING LAWS |
 | A structure with a shape: a 2×2, a ladder, a funnel, a stack, a taxonomy, a gate | **Manim diagram**, drawn on the spoken cue | `../nopunt/SKILL.md` catalog |
 | A set of 2–4 named things, each recognisable by a mark | **2-D library icons**, large, on `LibraryIconRow` (`./art icons`; copy the SVG into `runtime/remotion/public/form-b-icons/`; specific → general → ask, never invent). `FormBCard` shows the same icons at 44 px and reads as a text card: use it only when the words matter more than the marks | `../nopunt/SKILL.md` FormB rules |
+| A person, or Professor Bear himself (the author, the professor, "you", a user) | **Professor Bear portrait**, random within the ratio: Remotion `ProfessorBearPortrait` / `<ProfessorBear>`, Manim `professor_bear()`, shell `./art bear <ratio> --seed <beat>`; cropping to a circle or a tight head shot is fine. Never a person token or a `user` icon (PROFESSOR BEAR LAW) | toolkit `CLAUDE.md` rule 9 |
+| Writing itself: drafting, authorship, notes, a manuscript, a log, a letter, "the model is writing" | **Writing kit**: Manim `quill` + `write_lines` / `grow_tree` (`../show-tell/templates/iso_kit.py`), or Remotion `QuillWriter` (`pages` · `scroll` · `page` · `spinner`); 2-D icons `quill`, `inkwell`, `quill-scroll`, `quill-pages`, `page-scribble` on `LibraryIconRow` | `../show-tell/SKILL.md` Drawing kit → Writing kit |
 | An interface behaviour: searching, switching, choosing, a document assembling | **`ShowTellCard`** (16 kinds), only when it passes the card test | `../show-tell/SKILL.md` Card family |
 | Code: a listing, a diff, a run, an error, an output | **The real code, run**: `ClaudeCodeBeat` for a listing, `CCPlainShell` for a plain terminal, the output captured from an actual run | `docs/EXECUTABLE-EVIDENCE.md`; `../cli-explainer/SKILL.md` |
 | Claude Code, Codex, the Claude app, a website, any named tool | **The thing itself** (SHOW-THE-THING LAW, below) | `../cc-explainer/SKILL.md`; `../medhavy-walkthrough/SKILL.md` |
@@ -209,6 +243,45 @@ The table says what USUALLY wins. The beat decides. A flow of data through
 named services may be better as an isometric conveyor than as a node diagram;
 a "structure" may be better shown as the real config file. Pick by which
 picture a viewer would understand with the sound off.
+
+### Show Tell is part of the lecture visual toolkit
+
+For a process, data lineage, ownership boundary, transformation, or handoff,
+read `../show-tell/SKILL.md` and audition its isometric drawing lane explicitly.
+Use its `templates/iso_kit.py` and approved original props where they clarify
+the mechanism. A flat row of labelled boxes is not the default process visual.
+For conceptual source/adapter/output chains, the registered Remotion
+`DesignPipelineClaim` also offers `diagramStyle: "show-tell-isometric"`, a
+vector port of Show Tell's projection, document slabs, ported blocks and gates.
+Set it explicitly; legacy consumers remain flat. Preserve measured voice cues
+and verify that blocked data actually stops before the barrier.
+For an authored process, set `objectKinds` alongside `labels` to choose its
+cast (`document`, `adapter`, `monitor`, `phone`, `package`, `token`, `scanner`).
+Choose each object from the narrated role, not a keyword guessed from its label;
+the curated lane wraps long labels and keeps blocked outputs inactive.
+Before replacing an established series diagram, inspect the existing film's
+rendered frames and scene source: preserve its recognisable cast and useful
+visual grammar. Figma–MCP–agent diagrams should show what travels, which
+connection carries it, and what changes or blocks the handoff—not just arrows.
+
+Keep one recurring cast per act, draw new states on the narrated event, and
+use short labels beside objects. Isometric perspective must explain the
+relationship; extra detail or perspective for decoration does not count.
+Faithful screen captures, exact code, measured tables, and sequence diagrams
+still win when the claim is interface behaviour, literal evidence, or timing.
+Record the isometric candidate and the keep/replace reason in `SHOTLIST.md`.
+There is no isometric quota, and a strong existing diagram needs no replacement.
+
+Borrow Show Tell's drawing laws, not its standalone film spine: lectures keep
+their narrated first-beat portrait/title card, writer, terms, acts, recap,
+exercise, and outro. During a series refresh, inspect every film and record
+per-beat keep/upgrade decisions. Re-render only earned changes, preserve audio
+and real evidence, and run the normal visual and final-master checks.
+When body beats change, clear any opt-in `metadata.verified_body_reuse` from an
+earlier BOPEN-only refresh: the canonical compiler must rebuild the full film.
+Wait for in-flight review compilers to finish before clearing that setting;
+their build stamps write the sheet snapshot they loaded. Never edit a beat
+sheet while its review or final compiler is running.
 
 **The laws around the pick:**
 
@@ -250,6 +323,11 @@ Codex, the Claude app, GitHub, Figma, a course site, a dashboard, any named
 product), **the screen shows that thing**. Never a generic drawing standing in
 for a product's interface: no isometric box labelled "Codex", no abstract
 window labelled "the website".
+
+A clearly identified conceptual process diagram is not a product-interface
+substitute: Show Tell may illustrate the Figma–MCP–agent handoff while real
+captures establish the tool behaviour. Never present conceptual geometry as
+an observed session, verified output, or a reproduction of an actual interface.
 
 Take the highest rung that is available:
 
@@ -344,7 +422,10 @@ in `youtube/`. Never into the toolkit.
    `skill` / `style_preset: "lecture"`, `channel`, `title`, `playlist`,
    `tags`, and `course` when there is a course credit. Carry `audio_file` and
    `actual_duration_s` forward on re-runs.
-6. **Audio.** `generate_audio_kokoro.py <reel>` (free). Pad BOUT with its 1.0 s
+6. **Audio.** `generate_audio_kokoro.py <reel>` (free), including BOPEN's
+   playlist/title/summary narration. Build the title-card clip after measuring
+   BOPEN's audio, so the complete card holds until that speech finishes.
+   Pad BOUT with its 1.0 s
    tail. Write measured durations back; they are the clock. Whisper-check the
    greeting, numbers and acronyms. Re-voice single beats with `--only <BID>`.
 7. **Stills first.** Low-resolution last frames of every Manim scene and
@@ -360,6 +441,15 @@ in `youtube/`. Never into the toolkit.
    <reel>/exports/landscape` (GATE T, then the master). Check the master:
    3840×2160, runtime equals the sum of the audio, silent tail present.
    `python3 brutalist.art/runtime/scripts/bookend_check.py <reel>`.
+**TWO-STAGE HANDOFF (Bear, 2026-10-11).** Unless Bear asks for an end-to-end
+build, a Cowork session does steps 1–5 (read, `ACTS.md`, `SHOTLIST.md`,
+`FACTCHECK.md`, evidence, `make_sheet.py`, narration and scene code), writes
+`BUILD-PROMPT.md` in the reel folder, and STOPS. It then gives Bear a short
+Claude Code prompt that points at that file; the lower-effort Claude Code
+session, launched from `books/`, does steps 6–10 (audio, stills, review cut, final, checks). The prompt
+template and the rules for `BUILD-PROMPT.md` are in `books/CLAUDE.md`, section
+"Two-stage builds".
+
 10. **STOP.** Hand over the master, the runtime, the lane histogram and any
     open HOLD. Stage (`art post`) and publish only on the human's word, and
     only from TOPOST.
@@ -391,8 +481,8 @@ in `youtube/`. Never into the toolkit.
 4. **Primarily visual.** Text-only beats are act titles and the rare breath.
    Narration is never set as type.
 5. **One film, no cap.** Never split, never padded, never trimmed to a length.
-6. **The opening pair and the closing three are fixed.** Hesitant writer, key
-   terms; recap, Your Turn, the channel's outro. No composer cold open, no
+6. **The opening three and the closing three are fixed.** Portrait/title slide,
+   hesitant writer, key terms; recap, Your Turn, the channel's outro. No composer cold open, no
    TL;DR page.
 7. **The outro belongs to the channel.** Default @NikBearBrown, locked by
    `OUTRO-LOCK.md`. Never one channel's card on another channel's film.

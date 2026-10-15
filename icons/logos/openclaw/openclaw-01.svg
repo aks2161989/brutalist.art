@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.00" y="145.67" width="800.00" height="732.66" viewBox="0.0 0.0 113.75 104.17489" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="lobster-gradient"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#ff4d4d"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#991b1b"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#lobster-gradient"
+       id="linearGradient9"
+       x1="15.811388"
+       y1="9.486833"
+       x2="110.67972"
+       y2="104.35516"
+       gradientTransform="matrix(0.9486833,0,0,1.0540926,-3.125,-5.8251119)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#lobster-gradient"
+       id="linearGradient10"
+       x1="3.0363002"
+       y1="44.945807"
+       x2="25.453366"
+       y2="67.362873"
+       gradientTransform="matrix(1.0292131,0,0,0.97161606,-3.125,-5.8251119)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#lobster-gradient"
+       id="linearGradient11"
+       x1="91.140561"
+       y1="44.945807"
+       x2="113.55763"
+       y2="67.362873"
+       gradientTransform="matrix(1.0292131,0,0,0.97161606,-3.125,-5.8251119)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <!-- Body -->
+  <path
+     d="m 56.875,4.1748881 c -30,0 -45,24.9999999 -45,44.9999999 0,20 15,40 30,45 v 10.000002 h 10 V 94.174888 c 0,0 5,2 10,0 v 10.000002 h 10 V 94.174888 c 15,-5 30,-25 30,-45 0,-20 -15,-44.9999999 -45,-44.9999999 z"
+     fill="url(#lobster-gradient)"
+     id="path2"
+     style="fill:url(#linearGradient9)" />
+  <!-- Left Claw -->
+  <path
+     d="m 16.875,39.174888 c -15,-5 -20,5 -15,15 5,10 15,5 20,-5 3,-7 0,-10 -5,-10 z"
+     fill="url(#lobster-gradient)"
+     id="path3"
+     style="fill:url(#linearGradient10)" />
+  <!-- Right Claw -->
+  <path
+     d="m 96.875,39.174888 c 15,-5 20,5 15,15 -5,10 -15,5 -20,-5 -3,-7 0,-10 5,-10 z"
+     fill="url(#lobster-gradient)"
+     id="path4"
+     style="fill:url(#linearGradient11)" />
+  <!-- Antenna -->
+  <path
+     d="m 41.875,9.1748881 q -10,-9.99999997 -15,-7"
+     stroke="#ff4d4d"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path5" />
+  <path
+     d="m 71.875,9.1748881 q 10,-9.99999997 15,-7"
+     stroke="#ff4d4d"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path6" />
+  <!-- Eyes -->
+  <circle
+     cx="41.875"
+     cy="29.174889"
+     r="6"
+     fill="#050810"
+     id="circle6" />
+  <circle
+     cx="71.875"
+     cy="29.174889"
+     r="6"
+     fill="#050810"
+     id="circle7" />
+  <circle
+     cx="42.875"
+     cy="28.174889"
+     r="2.5"
+     fill="#00e5cc"
+     id="circle8" />
+  <circle
+     cx="72.875"
+     cy="28.174889"
+     r="2.5"
+     fill="#00e5cc"
+     id="circle9" />
+</svg></svg>

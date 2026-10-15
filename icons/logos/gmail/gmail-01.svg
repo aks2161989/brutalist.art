@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.00" y="211.93" width="800.00" height="600.15" viewBox="0.0 49.4 512.0 384.09587" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <defs
+     id="defs5" />
+  <g
+     fill="none"
+     fill-rule="evenodd"
+     id="g5"
+     transform="translate(0,-15.324108)">
+    <g
+       fill-rule="nonzero"
+       id="g3">
+      <path
+         fill="#4285f4"
+         d="m 34.91,448.818 h 81.454 V 251 L 0,163.727 V 413.91 c 0,19.287 15.622,34.91 34.91,34.91 z"
+         id="path1" />
+      <path
+         fill="#34a853"
+         d="m 395.636,448.818 h 81.455 c 19.287,0 34.909,-15.622 34.909,-34.909 V 163.727 L 395.636,251 Z"
+         id="path2" />
+      <path
+         fill="#fbbc04"
+         d="M 395.636,99.727 V 251 L 512,163.727 V 117.182 C 512,74.04 462.75,49.4 428.218,75.291 Z"
+         id="path3" />
+    </g>
+    <path
+       fill="#ea4335"
+       d="M 116.364,251 V 99.727 L 256,204.455 395.636,99.727 V 251 L 256,355.727 Z"
+       id="path4" />
+    <path
+       fill="#c5221f"
+       fill-rule="nonzero"
+       d="m 0,117.182 v 46.545 L 116.364,251 V 99.727 L 83.782,75.291 C 49.25,49.4 0,74.04 0,117.18 Z"
+       id="path5" />
+  </g>
+</svg></svg>

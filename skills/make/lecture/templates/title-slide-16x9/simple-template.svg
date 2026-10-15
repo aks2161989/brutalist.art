@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <title>Brutalist lecture — first-beat template</title>
+  <desc>Replaceable portrait, film title and brief film description. Hold for two to three seconds.</desc>
+  <rect id="background" width="1920" height="1080" fill="#FAF9F5"/>
+  <g id="portrait-placeholder">
+    <rect x="120" y="280" width="520" height="520" fill="#EDEBE1"/>
+    <path d="M120 280L640 800M640 280L120 800" stroke="#A9A491" stroke-width="2"/>
+    <rect x="215" y="494" width="330" height="92" fill="#FAF9F5"/>
+    <text x="380" y="554" text-anchor="middle" font-family="Inter, sans-serif" font-size="36" fill="#3D3929">[Portrait]</text>
+  </g>
+  <g id="film-title" font-family="EB Garamond, Georgia, serif" font-size="108" fill="#3D3929">
+    <text x="740" y="435">[Film Title]</text>
+  </g>
+  <g id="film-description" font-family="Inter, sans-serif" font-size="42" fill="#3D3929">
+    <text x="740" y="550">[What this film teaches]</text>
+    <text x="740" y="614">[Short description, if needed]</text>
+  </g>
+</svg>

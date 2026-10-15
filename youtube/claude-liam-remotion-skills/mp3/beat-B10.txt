@@ -1,0 +1,1 @@
+What a skill is, one command inside the Remoshing project installs them, seven folders under .agents slash skills, and a Simlink from .clod slash skills so Claude code finds them. A lock file records the exact version so an update never changes the rules halfway through a film.

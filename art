@@ -8,6 +8,7 @@
 #   ./art scene-index            regenerate scenes.json + SCENE-DOC-TODO.md after adding one
 #   ./art icons "<what it needs>" CANONICAL icon search — run BEFORE drawing a mark
 #   ./art icons --check <name>   is that icon in the set? (the anti-redraw check)
+#   ./art bear <1x1|2x3|16x9>  a random Professor Bear portrait of that ratio (--seed <beat> for a stable pick)
 #   ./art icon-build             re-cut the canonical set from svg/ (rarely needed)
 #   ./art todo  <reel> [flags]   per-video beat ledger (which beats need filling, how)
 #   ./art run   <reel> [flags]   compile a review cut
@@ -52,6 +53,25 @@ if [ "$cmd" = "godot-waikthrough" ] && [ "${1:-}" = "--check" ]; then
   exec python3 "$SKILLS/make/godot-waikthrough/scripts/verify_walkthrough.py" "$@"
 fi
 
+# Godot game trailer; accept the plain spelling.
+if [ "$cmd" = "game-trailer" ]; then cmd="godot-trailer"; fi
+if [ "$cmd" = "godot-trailer" ] && [ "${1:-}" = "--check" ]; then
+  shift
+  exec python3 "$SKILLS/make/godot-trailer/scripts/verify_trailer.py" "$@"
+fi
+if [ "$cmd" = "godot-trailer" ] && [ "${1:-}" = "--assemble" ]; then
+  shift
+  exec python3 "$SKILLS/make/godot-trailer/scripts/assemble_trailer.py" "$@"
+fi
+if [ "$cmd" = "godot-trailer" ] && [ "${1:-}" = "--vo" ]; then
+  shift
+  exec python3 "$SKILLS/make/godot-trailer/scripts/vo_kokoro.py" "$@"
+fi
+if [ "$cmd" = "godot-trailer" ] && [ "${1:-}" = "--beat-grid" ]; then
+  shift
+  exec python3 "$SKILLS/make/godot-trailer/scripts/beat_grid.py" "$@"
+fi
+
 # Medhavy Hub web walkthrough; accept the old "medhavi" spelling.
 if [ "$cmd" = "medhavi-walkthrough" ]; then cmd="medhavy-walkthrough"; fi
 if [ "$cmd" = "medhavy-walkthrough" ] && [ "${1:-}" = "--check" ]; then
@@ -70,6 +90,7 @@ case "$cmd" in
     printf '%-22s %s\n' "godot-waikthrough" "builder — real Godot gameplay + Liam riffs; optional Walker bookends"
     printf '%-22s %s\n' "godot-gamedev" "builder — code, scenes, assets and art deep dive; optional Walker bookends"
     printf '%-22s %s\n' "godot-gdd" "builder — GDD intent, scope and game evidence; optional Walker bookends"
+    printf '%-22s %s\n' "godot-trailer" "builder — 60-90 s game trailer from a Godot repo; real gameplay, one idea escalated, cut to music, one call to action"
     printf '%-22s %s\n' "medhavy-walkthrough" "builder — real Medhavy Hub browser capture + Liam riffs; optional textbook bookends"
     printf '%-22s %s\n' "riff"           "utility — render/inspect, then critique what visibly happens"
     printf '%-22s %s\n' "deep-explainer" "builder — 5-10 min documentary episode (vox pantry beats)"
@@ -94,6 +115,15 @@ case "$cmd" in
   icons|icon|icon-search)
     # LIBRARY-FIRST, one level down from scenes: find the mark before drawing one.
     exec python3 "$ART_HOME/runtime/scripts/icon_search.py" "$@"
+    ;;
+  bear|professor-bear)
+    # PROFESSOR BEAR LAW: a person icon / Professor Bear is always one of his portraits, random within the ratio.
+    exec python3 "$ART_HOME/runtime/scripts/professor_bear.py" "$@"
+    ;;
+  remotion-version|remotion-upgrade)
+    # REMOTION VERSION LAW: the toolkit uses the latest Remotion. `remotion-upgrade` upgrades; `remotion-version` reports.
+    if [ "$cmd" = "remotion-upgrade" ]; then exec python3 "$ART_HOME/runtime/scripts/remotion_version.py" --upgrade; fi
+    exec python3 "$ART_HOME/runtime/scripts/remotion_version.py" "$@"
     ;;
   icon-build)
     exec python3 "$ART_HOME/runtime/scripts/build_icon_set.py" "$@"
@@ -136,6 +166,10 @@ case "$cmd" in
       elif [ "$tc_rc" -ge 2 ]; then
         echo "[art final] GATE T BLOCKED: TYPECHECK.md has FAILs — fix before final cut."
         echo "[art final] See: $REEL_FOR_TC/TYPECHECK.md"
+        exit 2
+      elif [ "$tc_rc" -ne 0 ]; then
+        # 2026-10-07: a checker crash used to exit 1 and the cut went ahead with no TYPECHECK.md at all.
+        echo "[art final] GATE T did not complete (exit $tc_rc) — no verdict is not a pass. Fix the reel or type_check.py."
         exit 2
       fi
     fi

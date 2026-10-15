@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.00" y="112.00" width="800.00" height="800.00" viewBox="0.0 0.0 80.0 80.0" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <g
+     clip-path="url(#clip0_905_1790)"
+     id="g6">
+    <path
+       d="M 40,80 C 62.0914,80 80,62.0914 80,40 80,17.9086 62.0914,0 40,0 17.9086,0 0,17.9086 0,40 0,62.0914 17.9086,80 40,80 Z"
+       fill="#7d2ae7"
+       id="path1" />
+    <path
+       d="M 40,80 C 62.0914,80 80,62.0914 80,40 80,17.9086 62.0914,0 40,0 17.9086,0 0,17.9086 0,40 0,62.0914 17.9086,80 40,80 Z"
+       fill="url(#paint0_radial_905_1790)"
+       id="path2"
+       style="fill:url(#paint0_radial_905_1790)" />
+    <path
+       d="M 40,80 C 62.0914,80 80,62.0914 80,40 80,17.9086 62.0914,0 40,0 17.9086,0 0,17.9086 0,40 0,62.0914 17.9086,80 40,80 Z"
+       fill="url(#paint1_radial_905_1790)"
+       id="path3"
+       style="fill:url(#paint1_radial_905_1790)" />
+    <path
+       d="M 40,80 C 62.0914,80 80,62.0914 80,40 80,17.9086 62.0914,0 40,0 17.9086,0 0,17.9086 0,40 0,62.0914 17.9086,80 40,80 Z"
+       fill="url(#paint2_radial_905_1790)"
+       id="path4"
+       style="fill:url(#paint2_radial_905_1790)" />
+    <path
+       d="M 40,80 C 62.0914,80 80,62.0914 80,40 80,17.9086 62.0914,0 40,0 17.9086,0 0,17.9086 0,40 0,62.0914 17.9086,80 40,80 Z"
+       fill="url(#paint3_radial_905_1790)"
+       id="path5"
+       style="fill:url(#paint3_radial_905_1790)" />
+    <path
+       d="m 57.2691,48.2052 c -0.3301,0 -0.6206,0.2788 -0.9229,0.8876 -3.4139,6.9225 -9.3104,11.8206 -16.1337,11.8206 -7.8897,0 -12.7755,-7.1221 -12.7755,-16.9612 0,-16.6667 9.2862,-26.3031 17.4426,-26.3031 3.8114,0 6.139,2.3952 6.139,6.2068 0,4.5237 -2.5701,6.9189 -2.5701,8.5143 0,0.7162 0.4454,1.1499 1.3288,1.1499 3.5491,0 7.7145,-4.0782 7.7145,-9.8393 0,-5.5861 -4.8618,-9.692 -13.0181,-9.692 -13.4797,0 -25.4595,12.497 -25.4595,29.7882 0,13.3844 7.643,22.2291 19.4358,22.2291 12.5168,0 19.7543,-12.4535 19.7543,-16.4956 0,-0.8952 -0.4577,-1.3053 -0.9352,-1.3053 z"
+       fill="#ffffff"
+       id="path6" />
+  </g>
+  <defs
+     id="defs14">
+    <radialGradient
+       id="paint0_radial_905_1790"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(40.252428,-46.989864,46.989864,40.252428,15.453,70.9057)">
+      <stop
+         stop-color="#6420FF"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="#6420FF"
+         stop-opacity="0"
+         id="stop7" />
+    </radialGradient>
+    <radialGradient
+       id="paint1_radial_905_1790"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(40.316167,56.946887,-56.946887,40.316167,21.1788,9.09457)">
+      <stop
+         stop-color="#00C4CC"
+         id="stop8" />
+      <stop
+         offset="1"
+         stop-color="#00C4CC"
+         stop-opacity="0"
+         id="stop9" />
+    </radialGradient>
+    <radialGradient
+       id="paint2_radial_905_1790"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(43.073684,-43.368486,19.94572,19.810137,15.4526,70.9053)">
+      <stop
+         stop-color="#6420FF"
+         id="stop10" />
+      <stop
+         offset="1"
+         stop-color="#6420FF"
+         stop-opacity="0"
+         id="stop11" />
+    </radialGradient>
+    <radialGradient
+       id="paint3_radial_905_1790"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(25.09469,57.76842,-96.775376,42.039371,32.7158,10.7789)">
+      <stop
+         stop-color="#00C4CC"
+         stop-opacity="0.725916"
+         id="stop12" />
+      <stop
+         offset="0.0001"
+         stop-color="#00C4CC"
+         id="stop13" />
+      <stop
+         offset="1"
+         stop-color="#00C4CC"
+         stop-opacity="0"
+         id="stop14" />
+    </radialGradient>
+    <clipPath
+       id="clip0_905_1790">
+      <rect
+         width="80"
+         height="80"
+         fill="#ffffff"
+         id="rect14"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+</svg></svg>

@@ -34,7 +34,9 @@ export const CodexComposerAsk: React.FC<CodexComposerAskProps> = ({
   const resultIn = progress(frame, typeStart + typeDuration + 0.25 * fps, typeStart + typeDuration + 0.7 * fps);
   const ui = height * 0.019;
 
-  return <AbsoluteFill style={{background: CODEX.PAGE, flexDirection: 'row', overflow: 'hidden'}}>
+  return <AbsoluteFill style={{background: CODEX.PAGE, overflow: 'hidden'}}>
+    {/* inset 5% on all sides keeps UI content within title-safe area */}
+    <div style={{position: 'absolute', inset: '5% 5%', display: 'flex', flexDirection: 'row', overflow: 'hidden', borderRadius: 8}}>
     <CodexSidebar workspace={workspace} activeThread={segment}/>
     <div style={{flex: 1, position: 'relative', fontFamily: CODEX_FONT.ui}}>
       <div style={{position: 'absolute', left: width * 0.045, right: width * 0.045, top: height * 0.065,
@@ -71,6 +73,7 @@ export const CodexComposerAsk: React.FC<CodexComposerAskProps> = ({
           </div>
         </div>
       </div>
+    </div>
     </div>
   </AbsoluteFill>;
 };

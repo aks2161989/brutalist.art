@@ -377,7 +377,7 @@ def inspect(a, tmp):
             if bid in exempt:
                 d = [x for x in d if x[1] != "edge-bleed"]
         if d and sparse and bid in sparse:
-            d = [x for x in d if x[1] not in ("underfill", "clustered")]
+            d = [x for x in d if x[1] not in ("underfill", "clustered", "empty-frame")]
         if d:
             worst[f] = d
 

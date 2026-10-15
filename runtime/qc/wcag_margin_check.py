@@ -24,6 +24,12 @@ skipped for geometry (reported as 'unresolved'). Gate B remains the pixel truth
 after render — this gate exists to stop the OBVIOUS failures before they cost a
 render. Exit: 0 clean, 1 warnings, 2 errors.
 
+Scene selection: a module-level class is analysed when its name looks like
+<LETTERS><digits><optional letters>_<Name> (B07_Foo, B18A_Foo, A1M_Foo). Any other
+Scene subclass is NOT analysed, and a one-line NOTICE names it so the skip is never
+silent (also under --quiet; with --class, only when that class is one of them). The
+NOTICE does not change the exit code.
+
 Usage:
   python3 wcag_margin_check.py path/to/scenes.py [--class B02_Name] [--quiet]
 """
@@ -78,6 +84,8 @@ def blend(fg, bg, alpha):
     return "#%02X%02X%02X" % (m(fr, br), m(fgc, bgc), m(fb, bb))
 
 CHAP_RE = re.compile(r'\bchapter\b|\bch\.\s*\d', re.I)
+# <BEAT-ID>_<Name>: B07_Foo, B18A_Foo (letter suffix), A1M_Foo
+BEAT_SCENE_RE = re.compile(r"[A-Z]+\d+[A-Za-z]*_")
 
 DIRS = {"UP": (0, 1), "DOWN": (0, -1), "LEFT": (-1, 0), "RIGHT": (1, 0),
         "ORIGIN": (0, 0), "UL": (-1, 1), "UR": (1, 1), "DL": (-1, -1), "DR": (1, -1)}
@@ -349,6 +357,22 @@ def analyze_scene(cls, src_lines, quiet):
             errors.append(f"W7 CHAPTER-ON-SLIDE ('{snip}' line {getattr(cnode, 'lineno', '?')}) — chapter numbers never appear on screen; name the TOPIC, not the chapter (SLATE-RUNNER recap law)")
     return errors, warns, infos
 
+def skipped_scenes(tree, only=None):
+    """Scene subclasses the name filter leaves out, in file order; with `only` (--class),
+    just that class if it is one of them. A base counts as Scene when it is named *Scene
+    or is a class in this file that extends one (a base imported under another name
+    cannot be seen by a static read)."""
+    classes = {n.name: n for n in tree.body if isinstance(n, ast.ClassDef)}
+    def extends_scene(name, seen=()):
+        for b in classes[name].bases:
+            base = b.id if isinstance(b, ast.Name) else b.attr if isinstance(b, ast.Attribute) else ""
+            if base.endswith("Scene") or (base in classes and base not in seen
+                                          and extends_scene(base, seen + (name,))):
+                return True
+        return False
+    return [n for n in classes
+            if not BEAT_SCENE_RE.match(n) and (not only or n == only) and extends_scene(n)]
+
 def main():
     global HEX
     ap = argparse.ArgumentParser()
@@ -363,7 +387,7 @@ def main():
     lines = src.split("\n")
     rc = 0
     for node in tree.body:
-        if not (isinstance(node, ast.ClassDef) and re.match(r"[A-Z]+\d+_", node.name)):
+        if not (isinstance(node, ast.ClassDef) and BEAT_SCENE_RE.match(node.name)):
             continue
         if a.cls and node.name != a.cls:
             continue
@@ -377,6 +401,9 @@ def main():
         elif warns: rc = max(rc, 1)
         if not errs and not warns:
             print(f"{tag} clean")
+    skipped = skipped_scenes(tree, a.cls)
+    if skipped:
+        print(f"[gateW] NOTICE Scene class(es) NOT analysed (name must look like B07_Foo / B18A_Foo): {', '.join(skipped)}")
     return rc
 
 if __name__ == "__main__":

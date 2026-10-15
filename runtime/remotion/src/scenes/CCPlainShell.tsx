@@ -30,6 +30,16 @@ export const ccPlainShellSchema = z.object({
   lineGap:  z.number().int().default(14),
   /** Optional: the beat's measured audio. Sizes the composition so cues can run past 10 s. */
   durationSeconds: z.number().optional(),
+  /** Optional mono size at the 1920 design width (default 40). Lower it only so long REAL output lines fit
+   *  without the ellipsis cutting them (verbatim law); 32 fits ~80 columns. Added 2026-10-09. */
+  fontSize: z.number().min(24).max(48).optional(),
+  /** Optional (2026-10-11, logging-into-aicr film): the frame each line lands, one per line. Overrides startCue/lineGap
+   *  so every line can land on its spoken word. A cue <= 0 means the line is on screen from frame 0. */
+  lineCues: z.array(z.number()).optional(),
+  /** Optional: terracotta rings round chosen lines once their cue passes: [{ line, cue }] (line = index into `lines`). */
+  rings: z.array(z.object({ line: z.number().int(), cue: z.number() })).optional(),
+  /** Optional: side margin of the window at the 1920 design width (default 140). 48 lets ~104 mono columns of REAL output fit. */
+  windowMargin: z.number().min(24).max(200).optional(),
 });
 export type CCPlainShellProps = z.infer<typeof ccPlainShellSchema>;
 
@@ -40,14 +50,15 @@ const SPRING = { damping: 26, stiffness: 160, mass: 0.8 };
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
-export const CCPlainShell: React.FC<CCPlainShellProps> = ({ title, lines, startCue, lineGap }) => {
+export const CCPlainShell: React.FC<CCPlainShellProps> = ({ title, lines, startCue, lineGap, fontSize = 40, lineCues, rings, windowMargin = 140 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const winIn = clamp(spring({ frame, fps, config: SPRING }), 0, 1);
 
   // Each command line waits an extra half-gap so the output reads as a reply.
   let t = startCue;
-  const cues = lines.map((l) => {
+  const cues = lines.map((l, i) => {
+    if (lineCues && lineCues[i] !== undefined) return lineCues[i];
     if (l.startsWith('$ ')) t += Math.round(lineGap / 2);
     const c = t; t += lineGap; return c;
   });
@@ -55,7 +66,7 @@ export const CCPlainShell: React.FC<CCPlainShellProps> = ({ title, lines, startC
   return (
     <AbsoluteFill style={{ backgroundColor: CC.PAGE }}>
       <div style={{
-        position: 'absolute', left: 140, right: 140, top: 68, bottom: 68,
+        position: 'absolute', left: windowMargin, right: windowMargin, top: 68, bottom: 68,
         background: CC.PANEL, border: `1px solid ${CC.BORDER}`, borderRadius: CC.RADIUS + 4,
         boxShadow: '0 20px 60px rgba(0,0,0,0.45)', overflow: 'hidden',
         opacity: winIn, transform: `translateY(${(1 - winIn) * 10}px)`,
@@ -68,13 +79,16 @@ export const CCPlainShell: React.FC<CCPlainShellProps> = ({ title, lines, startC
           <span style={{ position: 'absolute', left: 0, right: 0, textAlign: 'center', fontFamily: CC_FONT.ui, fontSize: 26, fontWeight: 600, color: CC.INK_2 }}>{title}</span>
         </div>
         {/* lines */}
-        <div style={{ position: 'absolute', left: 28, right: 28, top: 84, bottom: 24, fontFamily: CC_FONT.mono, fontSize: 40, lineHeight: 1.55, color: CC.INK }}>
+        <div style={{ position: 'absolute', left: 28, right: 28, top: 84, bottom: 24, fontFamily: CC_FONT.mono, fontSize, lineHeight: 1.55, color: CC.INK }}>
           {lines.map((l, i) => {
-            const lineIn = clamp(spring({ frame: frame - cues[i], fps, config: SPRING }), 0, 1);
+            const lineIn = cues[i] <= 0 ? 1 : clamp(spring({ frame: frame - cues[i], fps, config: SPRING }), 0, 1);
+            const ring = (rings ?? []).find((r) => r.line === i);
+            const ringIn = ring ? clamp(spring({ frame: frame - ring.cue, fps, config: SPRING }), 0, 1) : 0;
             const isCmd = l.startsWith('$ '); const isComment = l.startsWith('# ');
             return (
               <div key={i} style={{ whiteSpace: 'pre', overflow: 'hidden', textOverflow: 'ellipsis', opacity: lineIn, transform: `translateY(${(1 - lineIn) * 6}px)`,
-                                    color: isComment ? CC.INK_3 : CC.INK }}>
+                                    color: isComment ? CC.INK_3 : CC.INK,
+                                    ...(ring ? { boxShadow: `0 0 0 ${Math.round(4 * ringIn)}px ${CC.SPARK}`, borderRadius: 8, outlineOffset: 0 } : {}) }}>
                 {isCmd ? <><span style={{ color: CC.VIOLET, fontWeight: 700 }}>$ </span>{l.slice(2)}</> : l}
               </div>
             );

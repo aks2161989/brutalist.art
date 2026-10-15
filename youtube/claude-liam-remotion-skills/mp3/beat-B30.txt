@@ -1,0 +1,1 @@
+Media, the multimedia skill, reads a file's duration with the Media Bunny Library instead of shelling out to FF Probe. Here it measures the opening card of that same research computing film, 12.528 seconds, where FF Probe says 12.48, the gap being how each counts the last MP3 frame. The toolkits clock stays in Python, but a composition can now size itself from the audio at

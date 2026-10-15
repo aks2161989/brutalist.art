@@ -1,0 +1,1 @@
+The spinner itself, a terracotta quill writes one short stroke, lifts and starts again, every 1.6 seconds with a status word beside it. Use it when the point is that the model is writing.

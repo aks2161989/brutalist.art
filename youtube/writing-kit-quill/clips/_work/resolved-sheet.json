@@ -1,0 +1,675 @@
+{
+  "metadata": {
+    "slug": "writing-kit-quill",
+    "title": "The Writing Quill",
+    "topic": "BRUTALIST · WRITING KIT",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "greeting_language": "Swedish (Hej)",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "audience": "Bear and toolkit users: what the writing quill set is and when to use each piece",
+    "source_doc": "brutalist.art writing kit (icons/svg quill*, runtime/remotion/src/scenes/QuillWriter.tsx, skills/make/show-tell/templates/iso_kit.py), built 2026-10-07",
+    "playlist": "Claude",
+    "chapter_number": 0,
+    "tags": [
+      "brutalist.art",
+      "writing",
+      "quill",
+      "Manim",
+      "Remotion",
+      "icons",
+      "Nik Bear Brown"
+    ],
+    "build": {
+      "at": "2026-10-07T16:20:29",
+      "cut": "review",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "writing kit",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hej. This is Liam, in for Bear. A new set in the Brutalist toolkit: the writing quill. It began as the little spinner in the Claude app, the terracotta quill that turns while Claude writes. Now it is six icons, four Remotion animations, and a Manim writing kit. Here is each one.",
+      "estimated_duration_s": 20.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types the assumption"
+          },
+          {
+            "at": 0.3,
+            "event": "corrects it"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Just a loading\nspinner",
+            "triggerWords": "loading spinner",
+            "replacementWords": "quill that writes",
+            "fontSize": 78,
+            "charMs": 50,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "writing-kit-quill",
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/BIDEA.mp4",
+            "at": "2026-10-07T19:53:30.362915+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "lead_silence_s": 0.8,
+      "actual_duration_s": 14.95,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 14.958333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "writing kit",
+      "lane": "bookend",
+      "proof_gate": "CARD",
+      "narration_text": "Six terms. A quill: the drawn feather pen, nib first. An inkwell: the dark bottle with one terracotta drop. A scribble: a wavy stroke that reads as handwriting, never as type. An outline: a branching tree from one trunk, a terracotta dot at every tip. A spinner: the app's writing mark, a terracotta quill looping one stroke. And the writing kit: all of it, in Manim and in Remotion.",
+      "estimated_duration_s": 27.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.08,
+            "event": "quill"
+          },
+          {
+            "at": 0.25,
+            "event": "inkwell"
+          },
+          {
+            "at": 0.4,
+            "event": "scribble"
+          },
+          {
+            "at": 0.58,
+            "event": "outline"
+          },
+          {
+            "at": 0.72,
+            "event": "spinner"
+          },
+          {
+            "at": 0.87,
+            "event": "writing kit"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Film",
+            "terms": [
+              {
+                "term": "quill",
+                "meaning": "the drawn feather pen, nib first"
+              },
+              {
+                "term": "inkwell",
+                "meaning": "the dark bottle with one terracotta drop"
+              },
+              {
+                "term": "scribble",
+                "meaning": "a wavy stroke that reads as handwriting, never as type"
+              },
+              {
+                "term": "outline",
+                "meaning": "a branching tree from one trunk, a dot at every tip"
+              },
+              {
+                "term": "spinner",
+                "meaning": "the app's writing mark: a terracotta quill looping one stroke"
+              },
+              {
+                "term": "writing kit",
+                "meaning": "all of it, in Manim and in Remotion"
+              }
+            ],
+            "folderLabel": "@NikBearBrown",
+            "durationSeconds": 19.8
+          },
+          "rendered": {
+            "out": "media/BDEFS.mp4",
+            "at": "2026-10-07T19:54:28.348499+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 19.8,
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "render_duration_s": 19.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BDEFS.mp4",
+        "filled_by": "remotion:ClaudeDefinitions",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "writing kit",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "The icons first. Six originals drawn in the house line, twenty-four by twenty-four, stroke two: a quill, an inkwell, a quill on a scroll, a quill with pages, and two more, a plain scroll and a scribbled page. They sit in the canonical set, so art icons quill finds them, and they drop straight onto an icon row.",
+      "estimated_duration_s": 23.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "quill"
+          },
+          {
+            "at": 0.4,
+            "event": "inkwell"
+          },
+          {
+            "at": 0.5,
+            "event": "quill-scroll"
+          },
+          {
+            "at": 0.6,
+            "event": "quill-pages"
+          }
+        ],
+        "remotion": {
+          "pattern": "LibraryIconRow",
+          "props": {
+            "title": "Six Original Icons",
+            "items": [
+              {
+                "label": "quill",
+                "icon": "quill",
+                "cue_phrase": "a quill,",
+                "mono": true,
+                "at": 0.309
+              },
+              {
+                "label": "inkwell",
+                "icon": "inkwell",
+                "cue_phrase": "an inkwell",
+                "mono": true,
+                "at": 0.338
+              },
+              {
+                "label": "quill-scroll",
+                "icon": "quill-scroll",
+                "cue_phrase": "on a scroll",
+                "mono": true,
+                "at": 0.402
+              },
+              {
+                "label": "quill-pages",
+                "icon": "quill-pages",
+                "cue_phrase": "with pages",
+                "mono": true,
+                "at": 0.58
+              }
+            ],
+            "durationSeconds": 17.15
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-07T19:55:18.904171+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 17.15,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 17.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:LibraryIconRow",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "writing kit",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "The spinner itself. A terracotta quill writes one short stroke, lifts, and starts again, every one point six seconds, with a status word beside it. Use it when the point is that the model is writing.",
+      "estimated_duration_s": 14.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the quill loops"
+          }
+        ],
+        "remotion": {
+          "pattern": "QuillWriter",
+          "props": {
+            "kind": "spinner",
+            "status": "Writing…",
+            "durationSeconds": 11.31
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-07T19:55:56.821563+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 11.31,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 11.333333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:QuillWriter",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "writing kit",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "Pages. Three scattered sheets, and the quill writes each one line by line, the nib riding the stroke. Scribbles, not letters, so the type gate has nothing to read, and the voice says what is being written.",
+      "estimated_duration_s": 14.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "pages land"
+          },
+          {
+            "at": 0.3,
+            "event": "writing"
+          }
+        ],
+        "remotion": {
+          "pattern": "QuillWriter",
+          "props": {
+            "kind": "pages",
+            "title": "Pages",
+            "lines": 5,
+            "caption": "three sheets, one quill",
+            "durationSeconds": 10.99
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-10-07T20:20:01.789941+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 10.99,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 11.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:QuillWriter",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "writing kit",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "The scroll. It unrolls, then the quill draws an outline: one trunk, two forks, a terracotta dot at every tip. The reference drawing, as a motion.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "unrolls"
+          },
+          {
+            "at": 0.3,
+            "event": "the outline grows"
+          }
+        ],
+        "remotion": {
+          "pattern": "QuillWriter",
+          "props": {
+            "kind": "scroll",
+            "title": "Scroll",
+            "levels": 2,
+            "durationSeconds": 8.28
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-10-07T20:03:01.824718+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 8.28,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 8.291666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:QuillWriter",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "writing kit",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "One page. The draft grows down the sheet, eight lines, the quill always at the last stroke. Good for a long beat where something is being written while the voice explains.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the page"
+          },
+          {
+            "at": 0.3,
+            "event": "lines grow"
+          }
+        ],
+        "remotion": {
+          "pattern": "QuillWriter",
+          "props": {
+            "kind": "page",
+            "lines": 8,
+            "caption": "a draft grows",
+            "durationSeconds": 9.24
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-10-07T20:16:34.284269+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 9.24,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 9.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:QuillWriter",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "writing kit",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "And in Manim, the same objects as drawn primitives in the show-tell kit: paper, quill, scribbles on, and write lines, which hops the nib to each stroke and rides it as it draws. It paces to the narration like every other kit scene.",
+      "estimated_duration_s": 17.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three tilted paper() sheets land; a quill() writes scribbles_on() each in turn via write_lines(); mono labels name the helpers as they are spoken.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "paper"
+          },
+          {
+            "at": 0.25,
+            "event": "quill"
+          },
+          {
+            "at": 0.45,
+            "event": "write lines"
+          }
+        ],
+        "manim": {
+          "class": "B05_PagesWriting"
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 13.25,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 13.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "writing kit",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The outline tree and the inkwell, in the isometric kit: grow tree draws each branch with the quill and lands the terracotta tips last. Six icons, four cards, two Manim rigs. One quill.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A paper() sheet, an inkwell() on the iso grid, a quill(); grow_tree() draws an outline_tree() branch by branch, dots last; the count '6 · 4 · 2' lands as ink numerals.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "inkwell"
+          },
+          {
+            "at": 0.3,
+            "event": "grow tree"
+          },
+          {
+            "at": 0.85,
+            "event": "6 · 4 · 2"
+          }
+        ],
+        "manim": {
+          "class": "B06_ScrollOutline"
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 11.03,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 11.041666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "writing kit",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Your turn. Paste this into Claude: Add one writing beat to my explainer: the moment where [who] drafts [what]. Pick the best of the Brutalist writing kit for it, the QuillWriter pages, scroll, page or spinner card, or the Manim quill with write_lines, and write the beat's narration and the exact props or scene code. Then check two things yourself. Is the stroke a scribble, never a word? And is terracotta only the drop, the tips, or the spinner?",
+      "estimated_duration_s": 31.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Composer opens"
+          },
+          {
+            "at": 0.1,
+            "event": "the prompt types"
+          },
+          {
+            "at": 0.8,
+            "event": "two checks"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "CLAUDE · YOUR TURN",
+            "segment": "Add One Writing Beat",
+            "command": "Add one writing beat to my explainer: the moment where [who] drafts [what]. Pick the best of the Brutalist writing kit for it, the QuillWriter pages, scroll, page or spinner card, or the Manim quill with write_lines, and write the beat's narration and the exact props or scene code.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Check: the stroke is a scribble, never a word.",
+              "Check: terracotta is only the drop, the tips, or the spinner."
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Opus 5.5",
+            "effortLabel": "High"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": "2026-10-07T19:59:03.770658+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 21.55,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "render_duration_s": 21.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-07T16:20:29"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "The Writing Quill. At Nik Bear Brown.",
+      "estimated_duration_s": 4.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restates; handle; mascot"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The Writing Quill",
+            "slug": "writing-kit-quill",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": "2026-10-07T19:59:18.723895+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 3.67,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 3.7083333333333335,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-07T16:20:29"
+      }
+    }
+  ]
+}

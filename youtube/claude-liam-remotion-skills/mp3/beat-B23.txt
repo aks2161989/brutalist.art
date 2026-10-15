@@ -1,0 +1,1 @@
+Transitions, the Transitions package gives a transition series with fade, slide, and white between scenes, and the skills explain the trap. A transition overlaps its neighbors, so the composition is shorter than the some of its scenes, and you subtract the overlap when you compute the length. Three cards, three cuts, and the running frame count shows the overlap.

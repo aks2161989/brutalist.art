@@ -19,6 +19,9 @@ export const claudeVerdictArtifactSchema = z.object({
   artifactTitle: z.string().default('Verdict'),
   artifactHeading: z.string().default('The split'),
   brandLabel: z.string().optional(),
+  lectureLayout: z.boolean().optional(),
+  durationSeconds: z.number().optional(),
+  lecturePageFrames: z.array(z.number()).optional(),
   artifactLines: z.array(z.string()).default([
     'Chat: synchronous judgment — you, in the loop.',
     'Cowork: asynchronous recipes — runs while you rehearse.',
@@ -38,10 +41,10 @@ const stripLeadNum = (s: string) => s.replace(/^\s*\d+\s*[.)\-–—:]\s*/, '');
 
 
 export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
-  artifactTitle, artifactHeading, artifactLines, brandLabel,
+  artifactTitle, artifactHeading, artifactLines, brandLabel, lectureLayout, lecturePageFrames,
 }) => {
   const frame = useCurrentFrame();
-  const { fps, width } = useVideoConfig();
+  const { fps, width, durationInFrames } = useVideoConfig();
 
   const cardIn = spring({ frame, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
   const headIn = spring({ frame: frame - 8, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
@@ -49,6 +52,24 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
   // Fill the frame: ~84% of width, capped so ultrawide stays readable.
   const cardW = Math.min(width * 0.84, 1560 * (width / 1920));
   const lines = (artifactLines ?? []).map(stripLeadNum);
+
+  if (lectureLayout) {
+    const pageCount=Math.ceil(lines.length/2);
+    const start=Math.round(1.8*fps);
+    const page=lecturePageFrames?.length
+      ? Math.min(pageCount-1,lecturePageFrames.reduce((last,cue,i)=>frame>=cue?i:last,0))
+      : Math.min(pageCount-1,Math.floor(Math.max(0,frame-start)/Math.max(1,(durationInFrames-start)/pageCount)));
+    return <AbsoluteFill style={{background:'#F2F0E9',color:CLAUDE.INK,fontFamily:SERIF,padding:'90px 140px'}}>
+      <div style={{border:'3px solid #3D3929',borderRadius:24,background:'#fffefb',height:780,padding:'45px 60px',boxSizing:'border-box'}}>
+        <div style={{fontSize:44,borderBottom:'2px solid #3D3929',paddingBottom:25}}>{artifactTitle}</div>
+        <div style={{fontSize:64,margin:'34px 0 55px'}}>{artifactHeading}</div>
+        {lines.slice(page*2,page*2+2).map((line,j)=><div key={page*2+j} style={{display:'flex',gap:30,marginBottom:55,fontSize:58,lineHeight:1.25}}>
+          <span style={{color:'#A64A24',minWidth:60}}>{page*2+j+1}.</span><span>{line}</span>
+        </div>)}
+      </div>
+      {brandLabel?<div style={{position:'absolute',bottom:65,right:140,fontSize:40}}>{brandLabel}</div>:null}
+    </AbsoluteFill>;
+  }
 
   return (
     <AbsoluteFill style={{ background: '#F2F0E9', alignItems: 'center', justifyContent: 'center' }}>

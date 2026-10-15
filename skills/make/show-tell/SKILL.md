@@ -131,6 +131,18 @@ Gate A copies only `scenes.py`.** It provides:
   vector; plus `quad`, `box`, `open_box` (returns back and front so contents sit
   between), `tape`, `mcp`, `page`, and `server` (returns stack and lights).
 - `check`, `cursor`, `pill`, `T` (EB Garamond), `ease_in`.
+- **Writing kit** (added 2026-10-07 from Bear's quill references: the app's terracotta
+  writing spinner, a quill drawing a branching outline on a scroll, scattered pages of
+  scribbled handwriting): `quill(x, y, s, angle)` (nib at `(x, y)`, `.nib` tracked),
+  `inkwell(iso, …)`, `paper(x, y, w, h, tilt)` (flat 2-D sheet with kraft shadow),
+  `scribble(x, y, w)` / `scribble_block(…)` / `scribbles_on(page, n)` (wavy handwriting
+  strokes, never glyphs), `outline_tree(x, y, h, levels)` (ink branches, terracotta tips),
+  and the animations `write_lines(self, q, lines)` and `grow_tree(self, q, tree)`, which make
+  the quill's nib ride each stroke as it draws. The Remotion twin is `QuillWriter`
+  (kinds `pages` · `scroll` · `page` · `spinner`); the 2-D icons are `quill`, `inkwell`,
+  `scroll-paper`, `quill-scroll`, `quill-pages`, `page-scribble` (`./art icons quill`).
+  Use when the beat is about writing, drafting, authorship, notes, a log, a manuscript, or
+  "the model is writing". Terracotta: only the ink drop, the outline's tips, and the spinner quill.
 - Pacing: `until(self, "spoken phrase")` waits for the phrase (by its share of
   the characters in the narration, times the measured audio), and `finish(self)`
   holds to the end. Class names must start with the beat id (`B03_Bundle`).
@@ -141,6 +153,10 @@ the kit. Never retint.
 
 **DRAWING LAWS.** These are the GATE B, T and V traps, already obeyed by the kit:
 
+- **A person is never an icon (PROFESSOR BEAR LAW, 2026-10-07).** A beat that needs a person,
+  or Professor Bear, uses `professor_bear(ratio, height, seed=<beat id>)` from the kit: a random
+  portrait of the matching ratio (`1x1` · `2x3` · `16x9`) in an ink frame; `shape="circle"` for a round
+  badge. Cropping is fine. No person tokens.
 - Labels sit **beside** objects, never inside an outline, and never on a
   terracotta fill. Keep a leader line clear of its label, with at least
   0.3 units of gap.

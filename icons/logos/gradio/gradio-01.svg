@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.00" y="163.08" width="800.00" height="697.84" viewBox="0.0 0.0 256.0 223.30727" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <defs
+     id="defs6">
+    <linearGradient
+       id="a"
+       x1="-13.086149"
+       x2="172.87832"
+       y1="180.00555"
+       y2="180.00555"
+       gradientTransform="matrix(1.2621835,0,0,0.79227785,0,-3.6365093e-4)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#F9D100"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#F97700"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="b"
+       x1="215.15276"
+       x2="28.938802"
+       y1="100.97393"
+       y2="100.97393"
+       gradientTransform="matrix(1.2621835,0,0,0.79227785,0,-3.6365093e-4)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#F9D100"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#F97700"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="c"
+       x1="-6.9790639"
+       x2="191.47293"
+       y1="158.77478"
+       y2="157.70466"
+       gradientTransform="matrix(1.1791545,0,0,0.84806527,0,-3.6365093e-4)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#F9D100"
+         id="stop5" />
+      <stop
+         offset="100%"
+         stop-color="#F97700"
+         id="stop6" />
+    </linearGradient>
+  </defs>
+  <path
+     fill="url(#a)"
+     d="m 119.871,64.779636 a 16.346,16.346 0 0 1 16.258,0 l 111.654,64.000004 c 10.956,6.28 10.956,22.083 0,28.363 l -111.654,64 a 16.346,16.346 0 0 1 -16.258,0 l -111.654,-64 c -10.956,-6.28 -10.956,-22.083 0,-28.364 L 119.871,64.778636 Z m 8.126,33.014 -78.783,45.164004 78.783,45.155 78.784,-45.155 z"
+     id="path6"
+     style="fill:url(#a)" />
+  <path
+     fill="url(#b)"
+     d="m 119.871,2.1646363 a 16.346,16.346 0 0 1 16.258,0 L 247.783,66.164636 c 10.956,6.28 10.956,22.083 0,28.363 L 136.129,158.52764 a 16.346,16.346 0 0 1 -16.258,0 L 8.217,94.527636 c -10.956,-6.28 -10.956,-22.083 0,-28.363 z m 8.126,33.0149997 -78.783,45.163 78.783,45.156004 78.784,-45.156004 z"
+     id="path7"
+     style="fill:url(#b)" />
+  <path
+     fill="url(#c)"
+     d="m 120.19,64.754636 16.174,28.412 -111.93,63.723004 -16.175,-28.412 z"
+     id="path8"
+     style="fill:url(#c)" />
+</svg></svg>

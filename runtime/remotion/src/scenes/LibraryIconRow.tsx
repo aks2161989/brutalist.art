@@ -60,7 +60,7 @@ export const LibraryIconRow: React.FC<LibraryIconRowProps> = ({ title, items, ic
           const s = clamp(spring({ frame: frame - Math.round(it.at * durationInFrames), fps,
                                    config: { damping: 18, stiffness: 150, mass: 0.7 } }), 0, 1);
           return (
-            <div key={i} style={{ width: 500, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div key={i} style={{ width: items.length > 3 ? 400 : 500, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               {/* The tile is on stage from frame one as an empty slot (so the row is laid out and the
                   frame is never a lone icon); the icon and its words arrive on the spoken cue. */}
               <div style={{ width: iconPx + 80, height: iconPx + 80, borderRadius: 28,
@@ -71,14 +71,14 @@ export const LibraryIconRow: React.FC<LibraryIconRowProps> = ({ title, items, ic
                 {landed[i] ? <Img src={staticFile(`form-b-icons/${it.icon}.svg`)}
                                   style={{ width: iconPx, height: iconPx, opacity: s }} /> : null}
               </div>
-              <div style={{ marginTop: 34, fontFamily: it.mono ? CLAUDE_FONT.mono : CLAUDE_FONT.serif, fontSize: it.mono ? 60 : 66,
-                            fontWeight: 600, color: CLAUDE.INK, opacity: landed[i] ? 1 : 0 }}>
+              <div style={{ marginTop: 34, fontFamily: it.mono ? CLAUDE_FONT.mono : CLAUDE_FONT.serif, fontSize: (it.mono ? 60 : 66) * (items.length > 3 ? 0.78 : 1),
+                            fontWeight: 600, color: CLAUDE.INK, opacity: landed[i] ? 1 : 0, textAlign: 'center', lineHeight: 1.1 }}>
                 {it.label}
               </div>
               <div style={{ marginTop: 10, width: 120 * s, height: 8, borderRadius: 4, opacity: landed[i] ? 1 : 0,
                             background: i === current ? CLAUDE.SPARK : CLAUDE.BORDER }} />
               {it.sub ? (
-                <div style={{ marginTop: 20, fontFamily: CLAUDE_FONT.serif, fontSize: 44, color: CLAUDE.INK, textAlign: 'center',
+                <div style={{ marginTop: 20, fontFamily: CLAUDE_FONT.serif, fontSize: items.length > 3 ? 38 : 44, color: CLAUDE.INK, textAlign: 'center',
                               lineHeight: 1.2, opacity: landed[i] ? 1 : 0 }}>
                   {it.sub}
                 </div>

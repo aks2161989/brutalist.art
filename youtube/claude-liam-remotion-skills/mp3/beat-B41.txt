@@ -1,0 +1,1 @@
+Second, text highlights, hand drawn circles, highlights, underlines, strike-throughs, and boxes, each a component driven by a progress value from the frame. The terracotta ring this toolkit used to draw by hand in every scene is now a circle around a word.

@@ -4,6 +4,10 @@ The Remotion project the `remotion-pass` skill renders from. `src/tokens/vox.ts`
 single palette/motion token source; every scene is a `Composition` in `src/Root.tsx`
 with a Zod schema, reading its timing off the frame clock so it fills any beat length.
 
+> **Always the latest Remotion** (Bear's rule, 2026-10-10): every `remotion` / `@remotion/*` package at one exact
+> version, currently 4.0.534 with React 19. `./art remotion-version` checks, `./art remotion-upgrade` upgrades. See the
+> toolkit `CLAUDE.md` rule 10.
+
 ## Prerequisites — what installs are needed
 
 This is the only vox lane that needs **Node.js** (everything else in the workshop is

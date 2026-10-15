@@ -40,6 +40,7 @@ Usage:
 Exit: 0=PASS, 2=one or more FAILs.
 """
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -121,7 +122,32 @@ def run(reel_dir: str) -> int:
             failures.append(
                 f'COLD-OPEN (tldr): first beat pattern={first_pat!r} — expected ClaudeTldrWhat (or the composer)')
     elif skill == 'lecture':
-        if first_pat not in COLD_OPEN_PATTERNS | LECTURE_COLD_OPEN_PATTERNS:
+        if beats[0].get('beat_id') == 'BOPEN':
+            opening = beats[0]
+            shot = opening.get('shot') or {}
+            duration = opening.get('actual_duration_s', 0)
+            if shot.get('template') != 'lecture-title-slide-16x9':
+                failures.append('LECTURE BOPEN: expected template=lecture-title-slide-16x9')
+            narration = (opening.get('narration_text') or '').strip()
+            narrated = bool(narration) or shot.get('narration_contract') == 'playlist-title-summary-v1'
+            if narrated:
+                if not narration:
+                    failures.append('LECTURE BOPEN: playlist/title/summary narration is required')
+                if opening.get('audio_policy') == 'silence':
+                    failures.append('LECTURE BOPEN: narrated opening cannot use audio_policy=silence')
+                if isinstance(duration, bool) or not isinstance(duration, (int, float)) or not math.isfinite(duration) or duration <= 0:
+                    failures.append('LECTURE BOPEN: positive measured narration duration is required')
+                audio = opening.get('audio_file')
+                if not isinstance(audio, str) or not audio.strip() or not (reel / audio).is_file():
+                    failures.append('LECTURE BOPEN: missing narration audio_file')
+            elif opening.get('audio_policy') != 'silence' or not isinstance(duration, (int, float)) or not 2 <= duration <= 3:
+                # Previously delivered silent cards retain their historical contract.
+                failures.append('LECTURE BOPEN: legacy silent card requires audio_policy=silence and 2–3 seconds')
+            if not (reel/'media/BOPEN.mp4').is_file():
+                failures.append('LECTURE BOPEN: missing rendered media/BOPEN.mp4')
+            if len(beats) < 2 or _pattern(beats[1]) != 'BrutalistHesitantWriter':
+                failures.append('LECTURE BOPEN: must be followed by BrutalistHesitantWriter')
+        elif first_pat not in COLD_OPEN_PATTERNS | LECTURE_COLD_OPEN_PATTERNS:
             failures.append(
                 f'COLD-OPEN (lecture): first beat pattern={first_pat!r} — expected BrutalistHesitantWriter')
     elif skill == 'cc-explainer':

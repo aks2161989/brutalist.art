@@ -1,0 +1,177 @@
+{
+  "video": "writing-kit-quill",
+  "metadata": {
+    "slug": "writing-kit-quill",
+    "title": "The Writing Quill",
+    "topic": "BRUTALIST \u00b7 WRITING KIT",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "greeting_language": "Swedish (Hej)",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "audience": "Bear and toolkit users: what the writing quill set is and when to use each piece",
+    "source_doc": "brutalist.art writing kit (icons/svg quill*, runtime/remotion/src/scenes/QuillWriter.tsx, skills/make/show-tell/templates/iso_kit.py), built 2026-10-07",
+    "playlist": "Claude",
+    "chapter_number": 0,
+    "tags": [
+      "brutalist.art",
+      "writing",
+      "quill",
+      "Manim",
+      "Remotion",
+      "icons",
+      "Nik Bear Brown"
+    ],
+    "build": {
+      "at": "2026-10-07T16:20:29",
+      "cut": "review",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' \u2014 COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "source_of_truth": "beat_sheet.json \u2014 edit the sheet, not this file",
+  "beats_total": 11,
+  "beats_open": 0,
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "status": "filled",
+      "on_disk": "media/BIDEA.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BIDEA.mp4",
+      "label": "Hej. This is Liam, in for Bear. A new set in the Brutalist toolkit: the writing quill. It began as t"
+    },
+    {
+      "beat_id": "BDEFS",
+      "status": "filled",
+      "on_disk": "media/BDEFS.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BDEFS.mp4",
+      "label": "Six terms. A quill: the drawn feather pen, nib first. An inkwell: the dark bottle with one terracott"
+    },
+    {
+      "beat_id": "B00",
+      "status": "filled",
+      "on_disk": "media/B00.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B00.mp4",
+      "label": "The icons first. Six originals drawn in the house line, twenty-four by twenty-four, stroke two: a qu"
+    },
+    {
+      "beat_id": "B01",
+      "status": "filled",
+      "on_disk": "media/B01.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B01.mp4",
+      "label": "The spinner itself. A terracotta quill writes one short stroke, lifts, and starts again, every one p"
+    },
+    {
+      "beat_id": "B02",
+      "status": "filled",
+      "on_disk": "media/B02.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B02.mp4",
+      "label": "Pages. Three scattered sheets, and the quill writes each one line by line, the nib riding the stroke"
+    },
+    {
+      "beat_id": "B03",
+      "status": "filled",
+      "on_disk": "media/B03.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B03.mp4",
+      "label": "The scroll. It unrolls, then the quill draws an outline: one trunk, two forks, a terracotta dot at e"
+    },
+    {
+      "beat_id": "B04",
+      "status": "filled",
+      "on_disk": "media/B04.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B04.mp4",
+      "label": "One page. The draft grows down the sheet, eight lines, the quill always at the last stroke. Good for"
+    },
+    {
+      "beat_id": "B05",
+      "status": "filled",
+      "on_disk": "manim/B05.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B05.mp4",
+      "label": "And in Manim, the same objects as drawn primitives in the show-tell kit: paper, quill, scribbles on,"
+    },
+    {
+      "beat_id": "B06",
+      "status": "filled",
+      "on_disk": "manim/B06.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B06.mp4",
+      "label": "The outline tree and the inkwell, in the isometric kit: grow tree draws each branch with the quill a"
+    },
+    {
+      "beat_id": "BHTF",
+      "status": "filled",
+      "on_disk": "media/BHTF.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BHTF.mp4",
+      "label": "Your turn. Paste this into Claude: Add one writing beat to my explainer: the moment where [who] draf"
+    },
+    {
+      "beat_id": "BOUT",
+      "status": "filled",
+      "on_disk": "media/BOUT.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BOUT.mp4",
+      "label": "The Writing Quill. At Nik Bear Brown."
+    }
+  ]
+}

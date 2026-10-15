@@ -1,0 +1,1 @@
+Measuring text, the layout utilities measure a string in its real font before it is placed. The left box sets a long title at one size and clips it. The right box asks fit text for the largest size that fits the width and shows the size it found. For this toolkit, that is the difference between catching a truncated title in a gate and never producing one.

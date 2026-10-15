@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.00" y="112.00" width="800.00" height="800.00" viewBox="0.0 0.0 96.0 96.0" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <g
+     clip-path="url(#a)"
+     id="g1">
+    <path
+       fill="#ffff"
+       fill-rule="evenodd"
+       d="M 9,6 A 3,3 0 0 0 6,9 V 75 H 0 V 9 A 9,9 0 0 1 9,0 h 80.379 c 4.009,0 6.016,4.847 3.182,7.682 L 43.055,57.187 H 57 V 51 h 6 v 7.688 a 4.5,4.5 0 0 1 -4.5,4.5 H 37.055 L 26.743,73.5 H 73.5 V 36 h 6 v 37.5 a 6,6 0 0 1 -6,6 H 20.743 L 10.243,90 H 87 a 3,3 0 0 0 3,-3 V 21 h 6 v 66 a 9,9 0 0 1 -9,9 H 6.621 C 2.612,96 0.605,91.153 3.439,88.318 L 52.757,39 H 39 v 6 H 33 V 37.5 A 4.5,4.5 0 0 1 37.5,33 h 21.257 l 10.5,-10.5 H 22.5 V 60 h -6 V 22.5 a 6,6 0 0 1 6,-6 H 75.257 L 85.757,6 Z"
+       clip-rule="evenodd"
+       id="path1" />
+  </g>
+  <defs
+     id="defs2">
+    <clipPath
+       id="a">
+      <path
+         fill="#ffffff"
+         d="M 0,0 H 96 V 96 H 0 Z"
+         id="path2" />
+    </clipPath>
+  </defs>
+</svg></svg>

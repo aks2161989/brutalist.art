@@ -15,6 +15,22 @@ THE INTERFACE IS THE HOUSE INTERFACE — identical to generate_audio.py:
 Durations are GROUND TRUTH for all downstream timing. Downstream never knows
 which engine spoke.
 
+PRONUNCIATION — the G2P reads spelling, so it will mispronounce brand names.
+Two layers, applied in this order:
+  1. runtime/pronunciation/<persona>.json — voice-only TEXT respellings
+     (see liam.json); the on-screen text is untouched.
+  2. metadata["pronounce"] = {"Medhavy": "mɛdˈhɑːviː"} — a word → IPA lexicon.
+     The line is phonemized normally, the listed words are substituted, and the
+     whole line is synthesized as phonemes. Espeak gives "Medhavy" as
+     /mˈɛdhævi/ — med-HAV-ee, rhyming with savvy — when the name is
+     meh-DHAA-vee. Get the starting IPA from --phonemize, then edit the one
+     word. A lexicon key matches the text AFTER layer 1, so key it on the
+     respelled form if layer 1 rewrites that word.
+
+PACE:
+  beat["speed"] or --speed. 1.0 is Kokoro's default and reads brisk; a brand
+  line wants ~0.94. Below ~0.85 Kokoro smears the vowels.
+
 VOICE SELECTION (mixed-engine sheets supported):
   - beat["voice"] = "af_bella" | "am_adam" | …  → that Kokoro voice
   - metadata["voice_kokoro"] or metadata["voice"] → folder default (must agree)
@@ -37,10 +53,12 @@ Usage:
     python3 generate_audio_kokoro.py path/to/<slug> --dry-run
     python3 generate_audio_kokoro.py path/to/<slug> --only B03 B08
     python3 generate_audio_kokoro.py --list-voices
+    python3 generate_audio_kokoro.py --phonemize "Medhavy AI."
 """
 import argparse
 import json
 import os
+import re
 import shutil
 import struct
 import subprocess
@@ -66,15 +84,51 @@ SYMBOLS = {
 }
 
 
-def normalize_for_tts(text: str) -> str:
+def normalize_for_tts(text: str, voice: str = None) -> str:
     for sym, spoken in SYMBOLS.items():
         text = text.replace(sym, spoken)
+    if voice:
+        from pronunciation import apply as _pron   # runtime/pronunciation/<persona>.json, voice-only rewrites
+        text = _pron(text, voice)
     return text
 
 
 FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 FFPROBE = shutil.which("ffprobe") or "ffprobe"
 DEFAULT_VOICE = "am_onyx"   # Non-fellows fallback; fellows require an approved choice.
+
+
+def phonemize(text: str, lang: str = "en-us") -> str:
+    """The G2P Kokoro runs internally, exposed so a wrong guess is visible."""
+    from kokoro_onnx.tokenizer import Tokenizer
+    return Tokenizer().phonemize(text, lang=lang)
+
+
+def apply_lexicon(text: str, lexicon: dict, lang: str = "en-us") -> str:
+    """text + {word: IPA} -> one phoneme string for the whole line.
+
+    The listed words are cut out of the text first and the surviving chunks are
+    phonemized in context, so the rest of the line keeps its sentence-level
+    prosody (espeak reduces "An" to /ɐn/ only when it can see the sentence).
+    Phonemizing word by word and concatenating loses that.
+    """
+    if not lexicon:
+        return phonemize(text, lang)
+    pattern = re.compile(
+        r"\b(" + "|".join(re.escape(w) for w in
+                          sorted(lexicon, key=len, reverse=True)) + r")\b",
+        re.IGNORECASE)
+    out, hits = [], []
+    for i, chunk in enumerate(pattern.split(text)):
+        if i % 2:                       # odd chunks are the matched words
+            key = next(k for k in lexicon if k.lower() == chunk.lower())
+            out.append(lexicon[key].strip())
+            hits.append(chunk)
+        elif chunk.strip():
+            out.append(phonemize(chunk, lang).strip())
+    if hits:
+        print(f"[kokoro] pronounce: {', '.join(hits)}")
+    return " ".join(out)
 
 
 def model_paths():
@@ -152,10 +206,16 @@ def main():
     ap.add_argument("--no-gate", action="store_true",
                     help="deprecated; cannot bypass human approvals")
     ap.add_argument("--list-voices", action="store_true")
+    ap.add_argument("--phonemize", metavar="TEXT", default=None,
+                    help="print the G2P's IPA for TEXT and exit — the first step "
+                         "in fixing a mispronounced name")
     ap.add_argument("--sheet", default="beat_sheet.json",
                     help="beat sheet filename to read/write (default: beat_sheet.json)")
     a = ap.parse_args()
 
+    if a.phonemize:
+        print(phonemize(a.phonemize))
+        return 0
     if a.list_voices:
         k = load_engine()
         for v in sorted(k.get_voices()):
@@ -182,6 +242,7 @@ def main():
     validate_project(sheet)
     validate_approvals(folder, sheet)
     selected_voice = default_voice(sheet)
+    lexicon = md.get("pronounce", {})
 
     todo = []
     for b in sheet["beats"]:
@@ -229,15 +290,21 @@ def main():
     timings = json.loads(timings_path.read_text()) if timings_path.exists() else {}
     for b, voice, text in todo:
         bid = b["beat_id"]
-        samples, sr = k.create(normalize_for_tts(text), voice=voice,
-                               speed=a.speed, lang=lang_for(voice))
+        lang = lang_for(voice)
+        speed = float(b.get("speed", a.speed))
+        spoken = normalize_for_tts(text, voice)
+        if lexicon:
+            spoken = apply_lexicon(spoken, lexicon, lang)
+        samples, sr = k.create(spoken, voice=voice, speed=speed, lang=lang,
+                               is_phonemes=bool(lexicon))
         out = writable_path(folder, f"mp3/beat-{bid}.mp3")
         write_mp3(samples, sr, out)
         dur = measure(out)
         b["audio_file"] = f"mp3/beat-{bid}.mp3"
         b["actual_duration_s"] = round(dur, 2)
         timings[bid] = round(dur, 2)
-        print(f"[kokoro] beat-{bid}.mp3  {dur:.2f}s  voice={voice}")
+        print(f"[kokoro] beat-{bid}.mp3  {dur:.2f}s  voice={voice}  "
+              f"speed={speed}")
     atomic_json(sheet_path, sheet)
     atomic_json(timings_path, timings)
     print(f"[kokoro] {len(todo)} beat(s) generated · cost $0.00 · durations "

@@ -1,18 +1,23 @@
 # brutalist — Python dependencies (free-only toolkit).
 #   pip install -r requirements.txt
-# numpy>=2.0.2 is required by kokoro-onnx (every >=0.4 release pins this
-# floor); manim 0.18 and its deps have no upper bound on numpy, so there's
-# no real conflict — just don't hold numpy below 2.
+# Manim is pinned to the 0.20 series — the version Bear's Mac (the machine that
+# builds every film) runs: Manim 0.20.1 + ManimPango 0.6.1, Python 3.14. Other
+# machines (clusters, CI) MUST match: 0.18.x renders every scene exactly one
+# frame shorter than 0.20.x, and compile.py then refuses the film ("Output
+# duration ... does not match timeline"). Never downgrade the Mac to fit a pin.
+# numpy>=2.1 and Pillow>=11 are Manim 0.20's own floors (kokoro-onnx needs
+# numpy>=2.0.2, which 2.1 satisfies); none of them has an upper bound that
+# conflicts, so don't hold numpy below 2.1 or Pillow below 11.
 
 # ── core: audio-first narration pipeline ────────────────────────────────────
 kokoro-onnx>=0.4            # the FREE voice engine (Kokoro-82M, local, no key)
-mutagen>=1.47,<1.48         # audio-duration measurement (the master clock)
-Pillow>=10.2,<11            # slates / request cards / previz / stills
-numpy>=2.0.2
+mutagen>=1.47,<2           # audio-duration measurement (the master clock)
+Pillow>=11,<13             # slates / request cards / previz / stills
+numpy>=2.1
 
 # ── animation ────────────────────────────────────────────────────────────────
-manim>=0.18,<0.19           # pulls manimpango, moderngl, etc.
-manimpango>=0.5,<0.6
+manim>=0.20,<0.21          # pulls manimpango, moderngl, etc.
+manimpango>=0.6.1,<0.7
 
 # ── captions + word clock ────────────────────────────────────────────────────
 faster-whisper>=1.0,<2      # forced alignment + transcript captions (local, no key)

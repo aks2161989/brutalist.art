@@ -18,6 +18,8 @@ export const claudeCodeBeatSchema = z.object({
   language: z.string().optional(),
   largeText: z.boolean().optional(),
   brandLabel: z.string().optional(),
+  /** Optional (2026-10-11): the frame each line lands (one per line), so lines can arrive on their spoken words. A cue <= 0 = on screen at once. */
+  lineCues: z.array(z.number()).optional(),
 });
 export type ClaudeCodeBeatProps = z.infer<typeof claudeCodeBeatSchema>;
 
@@ -28,7 +30,7 @@ const COMMENT_CLR = '#8B8878';
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
 
-export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, sparkLine, language = 'python', largeText = false, brandLabel }) => {
+export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, sparkLine, language = 'python', largeText = false, brandLabel, lineCues }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
 
@@ -109,9 +111,9 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
           overflow: 'hidden',
         }}>
           {lines.map((line, i) => {
-            const start = REVEAL_START + i * LINE_STRIDE;
-            const op = clamp(interpolate(frame, [start, start + 5], [0, 1]), 0, 1);
-            const ty = interpolate(frame, [start, start + 7], [6, 0], {
+            const start = lineCues && lineCues[i] !== undefined ? lineCues[i] : REVEAL_START + i * LINE_STRIDE;
+            const op = start <= 0 ? 1 : clamp(interpolate(frame, [start, start + 5], [0, 1]), 0, 1);
+            const ty = start <= 0 ? 0 : interpolate(frame, [start, start + 7], [6, 0], {
               extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
             });
             const isComment = line.trimStart().startsWith('#');
@@ -130,12 +132,12 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
         </pre>
       </div>
 
-      {/* Spark line at bottom — inset 12px from the card's left edge so the first glyph
-          never sits on the card boundary (GATE T §8.13 card-clip, tol 4px). */}
+      {/* Spark line at bottom — inset 12px from the card's left AND right edges so no
+          glyph (including brandLabel) sits on the card boundary (GATE T §8.13 tol 4px). */}
       <div style={{
         position: 'absolute',
         left: width * 0.07 + 12,
-        right: width * 0.07,
+        right: width * 0.07 + 12,
         bottom: height * 0.06,
         display: 'flex',
         alignItems: 'center',

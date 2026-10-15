@@ -39,20 +39,31 @@ export const browserCaptureSchema = z.object({
   caption: z.string().default(''),
   moves:   z.array(browserCaptureMoveSchema).min(1).max(6).default([{ at: 0, x: 0.5, y: 0.5, scale: 1 }]),
   moveSeconds:     z.number().default(1.2),
+  /** Ring colour. Default is the Claude terracotta; pass a deeper tone (e.g. #A64A24) when GATE T reads the thin ring as accent text. */
+  ringColor:       z.string().default('#D97757'),
+  /** Optional light/dark halo for an annotation crossing mixed image backgrounds. */
+  ringBackingColor: z.string().optional(),
   /** Width / height of the capture (default 16:9). */
   imageAspect:     z.number().default(16 / 9),
+  /** Optional framing adjustment; preserve existing compositions by default. */
+  windowOffsetY:   z.number().default(0),
   durationSeconds: z.number().default(10),
+  /** 'app' = a desktop-app capture: no address bar, no URL (never fake one). Window is 1600x900 so a 16:9 capture fits exactly. */
+  frame:           z.enum(['browser', 'app']).default('browser'),
 });
 export type BrowserCaptureProps = z.infer<typeof browserCaptureSchema>;
 
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
 // Window geometry at the 1920×1080 design size.
-const WIN = { left: 120, top: 48, width: 1680, height: 900 };
-const BAR = 64;
-const VIEW = { width: WIN.width, height: WIN.height - BAR };
+const WIN_BROWSER = { left: 120, top: 48, width: 1680, height: 900 };
+const WIN_APP = { left: 160, top: 48, width: 1600, height: 900 };
+const BAR_BROWSER = 64;
 
-export const BrowserCapture: React.FC<BrowserCaptureProps> = ({ url, image, caption, moves, moveSeconds, imageAspect }) => {
+export const BrowserCapture: React.FC<BrowserCaptureProps> = ({ url, image, caption, moves, moveSeconds, imageAspect, ringColor, ringBackingColor, windowOffsetY = 0, frame: frameKind = 'browser' }) => {
+  const WIN = frameKind === 'app' ? WIN_APP : WIN_BROWSER;
+  const BAR = frameKind === 'app' ? 0 : BAR_BROWSER;
+  const VIEW = { width: WIN.width, height: WIN.height - BAR };
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const winIn = clamp(spring({ frame, fps, config: { damping: 26, stiffness: 150, mass: 0.8 } }), 0, 1);
@@ -92,13 +103,13 @@ export const BrowserCapture: React.FC<BrowserCaptureProps> = ({ url, image, capt
   return (
     <AbsoluteFill style={{ backgroundColor: CLAUDE.PAGE }}>
       <div style={{
-        position: 'absolute', left: WIN.left, top: WIN.top, width: WIN.width, height: WIN.height,
+        position: 'absolute', left: WIN.left, top: WIN.top + windowOffsetY, width: WIN.width, height: WIN.height,
         background: CLAUDE.CARD, border: `2px solid ${CLAUDE.INK}`, borderRadius: 16, overflow: 'hidden',
         boxShadow: '0 14px 44px rgba(61,57,41,0.16)',
         opacity: winIn, transform: `translateY(${(1 - winIn) * 14}px)`,
       }}>
-        {/* address bar */}
-        <div style={{ position: 'absolute', left: 0, right: 0, top: 0, height: BAR, background: CLAUDE.FOOTER,
+        {/* address bar (browser frame only; an app capture never gets a fake one) */}
+        {frameKind === 'browser' && <div style={{ position: 'absolute', left: 0, right: 0, top: 0, height: BAR, background: CLAUDE.FOOTER,
                       borderBottom: `2px solid ${CLAUDE.INK}`, display: 'flex', alignItems: 'center' }}>
           <div style={{ display: 'flex', gap: 10, marginLeft: 22 }}>
             {[0, 1, 2].map((i) => <span key={i} style={{ width: 15, height: 15, borderRadius: 8, background: CLAUDE.GHOST, display: 'inline-block' }} />)}
@@ -108,7 +119,7 @@ export const BrowserCapture: React.FC<BrowserCaptureProps> = ({ url, image, capt
                         fontFamily: CLAUDE_FONT.mono, fontSize: 28, color: CLAUDE.INK, whiteSpace: 'nowrap', overflow: 'hidden' }}>
             {url}
           </div>
-        </div>
+        </div>}
         {/* the captured page */}
         <div style={{ position: 'absolute', left: 0, top: BAR, width: VIEW.width, height: VIEW.height, overflow: 'hidden', background: '#FFFFFF' }}>
           <div style={{ position: 'absolute', left: tx, top: ty, width: imgW, height: imgH }}>
@@ -117,7 +128,8 @@ export const BrowserCapture: React.FC<BrowserCaptureProps> = ({ url, image, capt
               <div style={{
                 position: 'absolute', left: `${ring[0] * 100}%`, top: `${ring[1] * 100}%`,
                 width: `${ring[2] * 100}%`, height: `${ring[3] * 100}%`,
-                border: `7px solid ${CLAUDE.SPARK}`, borderRadius: 18, boxSizing: 'border-box',
+                border: `7px solid ${ringColor || CLAUDE.SPARK}`, borderRadius: 18, boxSizing: 'border-box',
+                boxShadow: ringBackingColor ? `0 0 0 4px ${ringBackingColor}, inset 0 0 0 4px ${ringBackingColor}` : undefined,
                 opacity: ringIn, transform: `scale(${1.06 - 0.06 * ringIn})`,
               }} />
             ) : null}
@@ -125,7 +137,7 @@ export const BrowserCapture: React.FC<BrowserCaptureProps> = ({ url, image, capt
         </div>
       </div>
       {caption ? (
-        <div style={{ position: 'absolute', left: 0, right: 0, top: WIN.top + WIN.height + 26, textAlign: 'center',
+        <div style={{ position: 'absolute', left: 0, right: 0, top: WIN.top + windowOffsetY + WIN.height + 26, textAlign: 'center',
                       fontFamily: CLAUDE_FONT.serif, fontSize: 36, color: CLAUDE.INK, opacity: winIn }}>
           {caption}
         </div>

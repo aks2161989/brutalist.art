@@ -598,6 +598,12 @@ def stamp_sheet(folder, sheet, report, cut, sheet_name="beat_sheet.json"):
         print(f"[art] WARNING: build stamp failed: {e}", file=sys.stderr)
 
 
+def opening_has_embedded_channel_title(beats):
+    """The official lecture card already carries its channel/footer field."""
+    return bool(beats and beats[0].get('beat_id') == 'BOPEN'
+                and (beats[0].get('shot') or {}).get('template') == 'lecture-title-slide-16x9')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("folder", type=Path)
@@ -772,7 +778,7 @@ def compile_reel(a):
     title_png = None
     first_beat_dur = float(beats[0].get("actual_duration_s")
                            or beats[0].get("estimated_duration_s") or 6.0) if beats else 0.0
-    if channel_title and font:
+    if channel_title and font and not opening_has_embedded_channel_title(beats):
         title_png = work / "channel_title.png"
         make_channel_title_png(title_png, channel_title, font, int(h * 0.030))
 
@@ -817,6 +823,19 @@ def compile_reel(a):
     cmd += ["-c:v", "libx264", "-preset", "slow", "-crf", "16",
             "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest",
             "-t", f"{total:.3f}", str(out)]
+    preservation = None
+    if not a.review and sheet.get('metadata', {}).get('verified_body_reuse'):
+        if fc or label_pngs or a.audio or audio is None:
+            raise BuildError('Verified-body reuse cannot apply new overlays or a replacement master audio track')
+        from verified_body import validate_reuse, make_concat
+        preservation = validate_reuse(folder, sheet, fps, w, h, input_hashes)
+        reuse_list = make_concat(preservation, clips / (beats[0]['beat_id'] + '.mp4'),
+                                 round(beat_duration(beats[0]) * fps), work, concat_line)
+        cmd = [FFMPEG, '-y', '-f', 'concat', '-safe', '0', '-i', str(reuse_list),
+               '-i', str(audio), '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
+               '-c:a', 'aac', '-frames:v', str(preservation['new_opening_frames'] + preservation['body_frames']),
+               '-t', f'{total:.9f}', str(out)]
+        print('[art] retaining verified encoded lesson body; replacing only BOPEN', flush=True)
     # Encode to a candidate. A previous verified final remains untouched if any
     # encode, approval re-check, media inspection or required QC gate fails.
     with tempfile.TemporaryDirectory(prefix=f'.{slug}-candidate-', dir=out_dir) as scratch:
@@ -825,6 +844,9 @@ def compile_reel(a):
         sh(cmd)
         verify_output(candidate, total, fps, bool(a.audio) or any(not intentional_silence(b) for b in beats),
                       short=sheet.get('metadata', {}).get('kind') == 'short')
+        if preservation:
+            from verified_body import verify_samples
+            verify_samples(preservation, candidate)
         if not a.review:
             atomic_json(writable_path(folder, 'build-state.json'), {'status': 'verifying'})
             gate = Path(__file__).resolve().parents[1] / 'qc' / 'final_frame_check.py'
@@ -847,6 +869,8 @@ def compile_reel(a):
              'sha256': file_digest(out), 'duration_s': total,
              'input_sha256': input_hashes,
              'at': datetime.now(timezone.utc).isoformat()}
+    if preservation:
+        state['video_preservation'] = preservation
     if not a.review:
         atomic_json(out.with_suffix('.verified.json'), state)
     atomic_json(writable_path(folder, 'build-state.json'), state)

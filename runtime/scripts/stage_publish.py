@@ -22,10 +22,10 @@ from pathlib import Path
 
 
 def ts(sec):
-    h, rem = divmod(int(sec), 3600)
+    total_ms = int(round(sec * 1000))          # round once, so 33.9996 s is 33,999+1 ms, never ",1000"
+    h, rem = divmod(total_ms // 1000, 3600)
     m, s = divmod(rem, 60)
-    ms = int(round((sec - int(sec)) * 1000))
-    return f"{h:02}:{m:02}:{s:02},{ms:03}"
+    return f"{h:02}:{m:02}:{s:02},{total_ms % 1000:03}"
 
 
 def chapter_ts(sec):

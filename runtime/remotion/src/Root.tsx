@@ -39,6 +39,7 @@ import {TypesetMath, typesetMathSchema} from './scenes/TypesetMath';
 import {ExecutedData, executedDataSchema} from './scenes/ExecutedData';
 import {FormBCard, formBCardSchema} from './scenes/FormBCard';
 import {FormACard916, formACard916Schema} from './scenes/FormACard916';
+import {GameTrailerCard, gameTrailerCardSchema} from './scenes/GameTrailerCard';
 import {FormBCard916, formBCard916Schema} from './scenes/FormBCard916';
 // Ported from the sandbox 2026-08-30 — components the public skills already name.
 import {ClaudeMascotGrid, claudeMascotGridSchema} from './scenes/ClaudeMascotGrid';
@@ -733,7 +734,17 @@ import {ClaudeTldrWhat, claudeTldrWhatSchema, claudeTldrWhatDefaultProps} from '
 import {ClaudeTldrWhy, claudeTldrWhySchema, claudeTldrWhyDefaultProps} from './scenes/ClaudeTldrWhy';
 import {ShowTellCard, showTellCardSchema, showTellCardDefaultProps} from './scenes/ShowTellCard';
 import {BrowserCapture, browserCaptureSchema, browserCaptureDefaultProps} from './scenes/BrowserCapture';
+import {AccessFormCard, accessFormCardSchema, accessFormCardDefaultProps} from './scenes/AccessFormCard';
+import {ClaudeChatShot, claudeChatShotSchema, claudeChatShotDefaultProps} from './scenes/ClaudeChatShot';
+import {DesignPipelineClaim, designPipelineClaimSchema} from './scenes/DesignPipelineClaim';
+import {LectureEvidenceTable, lectureEvidenceTableSchema} from './scenes/LectureEvidenceTable';
+import {LectureCodeTrace, lectureCodeTraceSchema} from './scenes/LectureCodeTrace';
+import {ShaderLab, shaderLabSchema} from './scenes/ShaderLab';
+import {LectureDocumentTree, lectureDocumentTreeSchema} from './scenes/LectureDocumentTree';
 import {LibraryIconRow, libraryIconRowSchema, libraryIconRowDefaultProps} from './scenes/LibraryIconRow';
+import {QuillWriter, quillWriterSchema, quillWriterDefaultProps} from './scenes/QuillWriter';
+import {SkillDemo, skillDemoSchema, skillDemoDefaultProps} from './scenes/SkillDemo';
+import {ProfessorBearPortrait, professorBearPortraitSchema, professorBearPortraitDefaultProps} from './scenes/ProfessorBearPortrait';
 // ── fashionista modifier — photo-critique beat components ──
 import {LookPlate,      lookPlateSchema}      from './scenes/LookPlate';
 import {LookPlate916,   lookPlate916Schema}   from './scenes/LookPlate916';
@@ -922,6 +933,22 @@ export const RemotionRoot: React.FC = () => {
         height={3840}
         schema={formACard916Schema}
         defaultProps={formACard916Schema.parse({})}
+      />
+      {/* godot-trailer: the game's own title / end card (CTA). 1920x1080, rendered --scale=2 → 3840x2160. */}
+      <Composition
+        id="GameTrailerCard"
+        component={GameTrailerCard}
+        durationInFrames={150}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={gameTrailerCardSchema}
+        defaultProps={gameTrailerCardSchema.parse({
+          title: 'Game Title',
+          platforms: ['Platform'],
+          availability: 'Availability',
+          directive: 'One action',
+        })}
       />
       <Composition
         id="FormBCard916"
@@ -4176,6 +4203,31 @@ export const RemotionRoot: React.FC = () => {
           defaultProps={showTellCardDefaultProps}
         />
         {/* lecture — SHOW-THE-THING: a real captured web page in a browser window; camera pushes in, one terracotta ring */}
+        <Composition id="DesignPipelineClaim" component={DesignPipelineClaim}
+          durationInFrames={288} fps={24} width={1920} height={1080}
+          schema={designPipelineClaimSchema}
+          defaultProps={designPipelineClaimSchema.parse({title:'Testable Synchronization',mode:'flow',labels:['Decision','Extract','Verify','Ship']})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*24)})}/>
+        <Composition id="LectureEvidenceTable" component={LectureEvidenceTable}
+          durationInFrames={288} fps={24} width={1920} height={1080}
+          schema={lectureEvidenceTableSchema}
+          defaultProps={lectureEvidenceTableSchema.parse({title:'Source and Consumer',headers:['Artifact','Revision'],rows:[['Source','2'],['Consumer','1']],note:'Constructed example'})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*24)})}/>
+        <Composition id="LectureCodeTrace" component={LectureCodeTrace}
+          durationInFrames={288} fps={24} width={1920} height={1080}
+          schema={lectureCodeTraceSchema}
+          defaultProps={lectureCodeTraceSchema.parse({title:'Executed source',code:'const value = 1;',note:'Local example'})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*24)})}/>
+        <Composition id="ShaderLab" component={ShaderLab}
+          durationInFrames={288} fps={24} width={1920} height={1080}
+          schema={shaderLabSchema}
+          defaultProps={shaderLabSchema.parse({code:'shader_type canvas_item;\n\nvoid fragment() {\n\tCOLOR = vec4(UV.x, 0.0, 0.0, 1.0);\n}'})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*24)})}/>
+        <Composition id="LectureDocumentTree" component={LectureDocumentTree}
+          durationInFrames={288} fps={24} width={1920} height={1080}
+          schema={lectureDocumentTreeSchema}
+          defaultProps={lectureDocumentTreeSchema.parse({title:'Preorder Traversal'})}
+          calculateMetadata={({props})=>({durationInFrames:Math.ceil(props.durationSeconds*24)})}/>
         <Composition
           id="BrowserCapture"
           component={BrowserCapture}
@@ -4186,6 +4238,28 @@ export const RemotionRoot: React.FC = () => {
           height={1080}
           schema={browserCaptureSchema}
           defaultProps={browserCaptureDefaultProps}
+        />
+        <Composition
+          id="AccessFormCard"
+          component={AccessFormCard}
+          durationInFrames={300}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 10) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={accessFormCardSchema}
+          defaultProps={accessFormCardDefaultProps}
+        />
+        {/* unified Claude desktop app, recreated still (Cowork merged into Claude 2026-09-16) */}
+        <Composition
+          id="ClaudeChatShot"
+          component={ClaudeChatShot}
+          durationInFrames={1}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={claudeChatShotSchema}
+          defaultProps={claudeChatShotDefaultProps}
         />
         {/* lecture — 2-D icons lane: 2–4 named things, one LARGE library icon each, landing on cue */}
         <Composition
@@ -4198,6 +4272,42 @@ export const RemotionRoot: React.FC = () => {
           height={1080}
           schema={libraryIconRowSchema}
           defaultProps={libraryIconRowDefaultProps}
+        />
+        {/* PROFESSOR BEAR LAW — a person is never an icon: a random Professor Bear portrait of the right ratio, framed, with a label */}
+        <Composition
+          id="ProfessorBearPortrait"
+          component={ProfessorBearPortrait}
+          durationInFrames={180}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 6) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={professorBearPortraitSchema}
+          defaultProps={professorBearPortraitDefaultProps}
+        />
+        {/* remotion skills — one live demo per rule the installed Remotion agent skills teach (frameDriven · easing · sequence · transitions · fitText · captions · audioViz · transparent) */}
+        <Composition
+          id="SkillDemo"
+          component={SkillDemo}
+          durationInFrames={300}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 10) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={skillDemoSchema}
+          defaultProps={skillDemoDefaultProps}
+        />
+        {/* writing kit — a drawn quill WRITES: scattered pages, a scroll outline, one page, or the app's writing spinner */}
+        <Composition
+          id="QuillWriter"
+          component={QuillWriter}
+          durationInFrames={240}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 8) * 30)})}
+          fps={30}
+          width={1920}
+          height={1080}
+          schema={quillWriterSchema}
+          defaultProps={quillWriterDefaultProps}
         />
         {/* tldr — TERMS beat: 2–5 jargon rows landing one at a time, cream stage */}
         <Composition

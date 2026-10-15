@@ -42,6 +42,16 @@ def slate_resolves(folder: Path, bid: str) -> bool:
 def browser_flags():
     flags = []
     chrome = os.environ.get("ART_CHROME")
+    if not chrome:
+        # Remotion 4.0.534's bundled Chrome 157 headless shell crashes on
+        # Bear's Mac (GPU child: icu_util.cc check failed, 2026-10-10), so
+        # prefer Playwright's headless shell when it is installed.
+        import glob
+        hits = sorted(glob.glob(os.path.expanduser(
+            "~/Library/Caches/ms-playwright/chromium_headless_shell-*/"
+            "chrome-headless-shell-*/chrome-headless-shell")))
+        if hits:
+            chrome = hits[-1]
     mode = os.environ.get("ART_CHROME_MODE")
     if chrome:
         flags += [f"--browser-executable={chrome}"]
@@ -135,6 +145,7 @@ def main():
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--outro", action="store_true")
     ap.add_argument("--now", default=None, help="override ISO8601 build timestamp")
+    ap.add_argument("--stills", action="store_true", help="serial low-resolution 25/50/95%% visual preflight; no media slot or provenance mutation")
     a = ap.parse_args()
     folder = a.reel.resolve()
     sheet_path = writable_path(folder, 'beat_sheet.json')
@@ -159,6 +170,17 @@ def main():
                   f"pattern={rem['pattern']}  ({rem.get('provenance','reel-local')})")
         return
 
+    if a.stills:
+        validate_approvals(folder, sheet)
+        out = writable_path(folder, '_qc/preflight')
+        out.mkdir(parents=True, exist_ok=True)
+        manifest = out / 'manifest.json'
+        atomic_json(manifest, {'out': str(out), 'beats': [
+            {'beat_id': b['beat_id'], 'pattern': b['shot']['remotion']['pattern'],
+             'props': b['shot']['remotion'].get('props', {})} for b in cands]})
+        runner = HERE / 'scripts' / 'remotion_stills.cjs'
+        return subprocess.run(['node', str(runner), str(PROJECT), str(manifest)]).returncode
+
     if a.outro:
         # spec: OutroSeries from ABOUT.MD, OutroCTA from AUTHOR.MD (book = reel/../../).
         book = folder.parents[1]
@@ -174,6 +196,11 @@ def main():
         print("[remotion] nothing to do — no shot.remotion.pattern beats")
         return
 
+    try:
+        import subprocess as _sp
+        _sp.run([sys.executable, str(Path(__file__).resolve().parent / 'remotion_version.py')], timeout=40)
+    except Exception:
+        pass
     validate_approvals(folder, sheet)
     changed = False
     failures = []

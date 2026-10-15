@@ -1,0 +1,579 @@
+{
+ "persona": "liam",
+ "voice": "am_onyx",
+ "engine": "kokoro",
+ "about": "Pronunciation fixes for Liam (Kokoro am_onyx). The beat sheet's narration_text and the captions are never changed; these substitutions are applied only to the text sent to the voice. Started 2026-10-07 at Professor Bear's request; add an entry whenever a word is said wrong.",
+ "how_to_add": "Add an entry with a regex that has a named group 'w' around the word to replace, the respelling in 'say', and at least one example with the phoneme string it must produce ('expect'). Run: python3 runtime/scripts/pronunciation.py --check. The check asks Kokoro's own phonemizer what it will say, so a respelling is verified without listening, though it still needs an ear on first use.",
+ "entries": [
+  {
+   "id": "record-verb",
+   "word": "record",
+   "say": "rekord",
+   "ignorecase": true,
+   "note": "Verb rih-KORD (ɹᵻkˈɔːɹd), not noun REK-erd (ɹˈɛkɚd). Kokoro defaults even 'Record its source' to the noun. Apply only to clear imperative or subject/modal/infinitive verb contexts with an object, leaving noun uses such as 'a record of', 'source record', and 'record player' untouched. Conservative patterns, not a general part-of-speech parser; add narrow contexts when needed. Authored narration and captions retain record. Requested 2026-10-08; preview awaits listening approval.",
+   "patterns": [
+    "(?:^|[.!?:;]\\s+)(?P<w>record)(?=\\s+(?:its|which|what|when|where|how|the|a|an|your|our|their|my|his|her|each|every|all|this|these|those|one|two|values|data|audio|video)\\b)",
+    "\\b(?:to|must|should|can|could|will|would|shall|please|then|we|you|they|and)\\s+(?P<w>record)(?=\\s+(?:its|which|what|when|where|how|the|a|an|your|our|their|my|his|her|each|every|all|this|these|those|one|two|values|data|audio|video)\\b)"
+   ],
+   "examples": [
+    {
+     "text": "Record its source, value, mode, and retrieval date.",
+     "expect": "ɹᵻkˈɔːɹd"
+    },
+    {
+     "text": "Record which frame and mode you intended.",
+     "expect": "ɹᵻkˈɔːɹd"
+    },
+    {
+     "text": "Read the values and record the source receipt.",
+     "expect": "ɹᵻkˈɔːɹd"
+    },
+    {
+     "text": "We need to record a lecture.",
+     "expect": "ɹᵻkˈɔːɹd"
+    },
+    {
+     "text": "Keep a record of the source.",
+     "expect": "ɹˈɛkɚd"
+    }
+   ]
+  },
+  {
+   "id": "records-verb",
+   "word": "records",
+   "say": "rekords",
+   "ignorecase": true,
+   "note": "Third-person verb 'records' (ri-KORDZ: 'a success statement records what was said'), not the noun REK-erdz ('record store'). Kokoro reads every 'records' as the noun. Applies only when 'records' is followed by an object clause opener (what, how, where, when, who, whether, the, its, their, each, every, all, a, an). Noun 'these records were written' is left alone. Authored narration and captions keep 'records'. Bear, 2026-10-09: 'records ... sounds like a record store; it should be record, the verb'.",
+   "patterns": [
+    "\\b(?P<w>records)(?=\\s+(?:what|how|where|when|who|whether|the|its|their|his|her|each|every|all|a|an)\\b)"
+   ],
+   "examples": [
+    {
+     "text": "A success statement records what was said.",
+     "expect": "ɹᵻkˈɔːɹdz"
+    },
+    {
+     "text": "The state records what actually changed.",
+     "expect": "ɹᵻkˈɔːɹdz"
+    },
+    {
+     "text": "These records were written by hand.",
+     "expect": "ɹˈɛkɚdz"
+    }
+   ]
+  },
+  {
+   "id": "provenance",
+   "word": "provenance",
+   "say": "provvenance",
+   "ignorecase": true,
+   "note": "Use first-syllable-stressed American PRAH-vuh-nuhns, not PROOV-nuhns. Kokoro's default phonemizer emits pɹˈuːvnəns for the normal spelling; doubling the v yields pɹˈɑːvənəns. Voice-only override requested by Professor Bear on 2026-10-08. Reference: https://dictionary.cambridge.org/pronunciation/english/provenance . Captions and authored narration retain provenance. Listening approval is still needed for the generated preview.",
+   "patterns": [
+    "\\b(?P<w>provenance)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Provenance traces a value to its source.",
+     "expect": "pɹˈɑːvənəns"
+    },
+    {
+     "text": "Keep the source provenance beside the output.",
+     "expect": "pɹˈɑːvənəns"
+    }
+   ]
+  },
+  {
+   "id": "live-adjective",
+   "word": "live",
+   "say": "lyve",
+   "note": "Adjective LYVE (lˈaɪv), not the verb liv (lˈɪv). Bear, 2026-10-09: if something lives somewhere and is there, it is live; if it is online, it is live. Liam mixes the two. Covers: copula/state (is/was/now/already/still live), going/went/set/put live, 'live' before a noun (site, link, demo, data…), 'live on/at/in' + a place (GitHub, the web, the site, production, a URL), sentence-final 'live'. Verb uses stay: 'we live in', 'it lives on the server', 'to live'. Authored narration and captions retain live.",
+   "patterns": [
+    "\\b(?:built|coded|done|run|running|shown|filmed|recorded|streamed|taught|made|going|go|goes|went|gone|is|are|was|were|be|been|being|stay|stays|staying|aired|posted|published|deployed|pushed|set|put|kept|keep|now|already|still|fully|officially|currently|it's|that's|site's|page's|app's)\\s+(?P<w>live)\\b",
+    "\\b(?P<w>live)(?=[- ](?:coded|coding|code|demo|demos|class|classes|stream|streams|streaming|session|sessions|film|films|video|videos|run|runs|data|board|boards|page|pages|site|sites|website|websites|posting|postings|app|apps|capture|captures|test|tests|webinar|event|events|show|shows|performance|audience|recording|feed|feeds|broadcast|coverage|updates|chat|link|links|URL|url|version|versions|copy|build|builds|deployment|server|servers|system|systems|record|records|dashboard|dashboards|view|preview|playlist|channel|instance|environment|production|repo|repository|file|files|document|documents|deck|notebook|preprint|paper|draft)s?\\b)",
+    "\\b(?P<w>live)\\s+(?:on|at|in|from)\\s+(?:YouTube|GitHub|Vercel|Substack|Canvas|air|stage|camera|screen|production|the\\s+(?:web|site|website|internet|cluster|server|repo|channel|playlist|page|app|homepage|course\\s+site)|https?://|[A-Za-z0-9.-]+\\.(?:com|org|edu|ai|co|io|net|art))\\b",
+    "\\b(?P<w>live)(?=[.!?,;:]|\\s*$)"
+   ],
+   "examples": [
+    {
+     "text": "built live in three courses",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "a live demo",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "going live tonight",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "The site is live.",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "It's live now.",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "The page is already live on GitHub.",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "Here is the live link.",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "The film is live at youtube.com.",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "And now it's live.",
+     "expect": "lˈaɪv"
+    },
+    {
+     "text": "We live in the terminal.",
+     "expect": "lˈɪv"
+    },
+    {
+     "text": "The file lives on the server.",
+     "expect": "lˈɪvz"
+    },
+    {
+     "text": "People live with these tools.",
+     "expect": "lˈɪv"
+    }
+   ]
+  },
+  {
+   "id": "polish",
+   "word": "polish",
+   "say": "pollish",
+   "note": "'polish' as in shine or finish (rhymes with 'wallish'), not the nationality 'Polish' (said 'POH-lish'). A capital P makes the voice choose the nationality, so the word is respelled everywhere except before words that make the nationality obvious. 'polished' is already right and is not touched.",
+   "patterns": [
+    "\\b(?P<w>[Pp]olish)\\b(?!\\s+(?:language|people|food|cuisine|government|army|border|city|town|village|citizen|citizens|born|american|immigrant|immigrants|sausage|vodka|pierogi|poet|poets|writer|film|films|history|culture|president|prime|national|ministry|parliament|forces|noble|king|jews|jewish))"
+   ],
+   "examples": [
+    {
+     "text": "Polish is not proof.",
+     "expect": "pˈɑːlɪʃ"
+    },
+    {
+     "text": "a coat of polish",
+     "expect": "pˈɑːlɪʃ"
+    }
+   ]
+  },
+  {
+   "id": "namaste",
+   "word": "namaste",
+   "say": "nah mah stay",
+   "note": "Said 'NAH-mah-stay'; the voice reads it as 'NAM-ast' otherwise.",
+   "patterns": [
+    "\\b(?P<w>[Nn]amaste)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Namaste, everyone.",
+     "expect": "nˈɑː mˈɑː stˈeɪ"
+    }
+   ]
+  },
+  {
+   "id": "AIs-plural",
+   "word": "AIs",
+   "say": "A-I's",
+   "patterns": [
+    "\\b(?P<w>AIs)\\b"
+   ],
+   "note": "Plural of AI is 'A-eyes' (ay + eyes, like somebody's eyes), one smooth word. The old AI entry left 'A-Is', which Kokoro says as 'A-iz' / 'AIS'. Bear, 2026-10-09.",
+   "examples": [
+    {
+     "text": "Two AIs disagree.",
+     "expect": "ˈeɪaɪz"
+    }
+   ]
+  },
+  {
+   "id": "AI-dotted-possessive",
+   "word": "A. I.'s",
+   "say": "A-I",
+   "patterns": [
+    "\\b(?P<w>A\\. I\\.)(?='s\\b)"
+   ],
+   "note": "Narration spells the acronym 'A. I.' with periods; Kokoro then reads two letters with a pause. Joined, it is ay-eye with no break. Bear, 2026-10-09.",
+   "examples": [
+    {
+     "text": "The A. I.'s answer.",
+     "expect": "ˈeɪaɪz"
+    }
+   ]
+  },
+  {
+   "id": "AI-dotted-final",
+   "word": "A. I. (sentence end)",
+   "say": "A-I-.",
+   "patterns": [
+    "\\b(?P<w>A\\. I\\.)(?=\\s*$|\\s+[A-Z\"“])"
+   ],
+   "note": "Sentence-final 'A. I.' keeps its full stop but loses the pause between the letters. 'A-I-.' (trailing hyphen) is what makes Kokoro say ay-eye as one unit before punctuation; plain 'A-I.' gives two separate stresses.",
+   "examples": [
+    {
+     "text": "You are not the A. I. Next.",
+     "expect": "ˈeɪaɪ."
+    }
+   ]
+  },
+  {
+   "id": "AI-dotted-before-mark",
+   "word": "A. I. before , ; : ? !",
+   "say": "A-I-",
+   "patterns": [
+    "\\b(?P<w>A\\. I\\.)(?=[,;:?!])"
+   ],
+   "note": "'A. I.' directly before a comma or other mark: trailing hyphen keeps it one smooth unit.",
+   "examples": [
+    {
+     "text": "The A. I., then, writes.",
+     "expect": "ˈeɪaɪ,"
+    }
+   ]
+  },
+  {
+   "id": "AI-dotted",
+   "word": "A. I.",
+   "say": "A-I",
+   "patterns": [
+    "\\b(?P<w>A\\. I\\.)(?=\\s)"
+   ],
+   "note": "Mid-sentence 'A. I.' read as one smooth 'ay-eye', not 'A' pause 'I'.",
+   "examples": [
+    {
+     "text": "An A. I. writes the code.",
+     "expect": "ˈeɪaɪ"
+    }
+   ]
+  },
+  {
+   "id": "AI",
+   "word": "AI",
+   "say": "A-I",
+   "note": "Said as one quick word, 'ay-eye' with a single stress and no gap between the letters (phonemes ˈeɪaɪ). Earlier 'A.I.' put a full stop and two stresses in, which Professor Bear heard as a pause (2026-10-08). Plain 'AI' gives ˌeɪˈaɪ, also with no pause but a weaker first letter; 'A-I' keeps both letters clear. Needs an ear on first use.",
+   "patterns": [
+    "\\b(?P<w>AI)(?=s?\\b)"
+   ],
+   "examples": [
+    {
+     "text": "AI is good at producing.",
+     "expect": "ˈeɪaɪ"
+    },
+    {
+     "text": "Conducting AI means the person directs.",
+     "expect": "ˈeɪaɪ"
+    }
+   ]
+  },
+  {
+   "id": "live-verb",
+   "word": "live",
+   "say": "liv",
+   "ignorecase": true,
+   "note": "Verb liv (lˈɪv), the other half of Bear's 2026-10-09 rule: 'lives on the server', 'we live in the terminal'. Kokoro's default reads the verb as LYVE in these contexts. Matches live/lives/lived before a place or manner word, after a subject pronoun, or after 'to'. Runs after live-adjective, which has already respelled the adjective to 'lyve', so there is no clash.",
+   "patterns": [
+    "\\b(?P<w>live)(?=s?\\s+(?:on|in|at|with|under|inside|beside|alongside|next|here|there|where|wherever|together|alone|nearby|within|among|outside|off|by)\\b)",
+    "\\b(?:to|we|you|they|people|users|students|who|all|I)\\s+(?P<w>live)\\b",
+    "\\b(?P<w>live)(?=d\\b)",
+    "\\b(?:code|file|files|data|repo|repository|site|config|model|key|keys|token|script|folder|copy|version|truth|logic|state|it|that|which|everything|this|one)\\s+(?P<w>live)(?=s\\b)",
+    "\\b(?P<w>live)(?=s(?:[.!?,;:]|\\s*$))"
+   ],
+   "examples": [
+    {
+     "text": "The file lives on the server.",
+     "expect": "lˈɪvz"
+    },
+    {
+     "text": "People live with these tools.",
+     "expect": "lˈɪv"
+    },
+    {
+     "text": "where the code lives",
+     "expect": "lˈɪvz"
+    },
+    {
+     "text": "We live in the terminal.",
+     "expect": "lˈɪv"
+    },
+    {
+     "text": "The site is live.",
+     "expect": "lˈaɪv"
+    }
+   ]
+  },
+  {
+   "id": "pi-greek",
+   "word": "pi",
+   "say": "pie",
+   "ignorecase": false,
+   "note": "Bear, 2026-10-09: the Greek letter is pi as in apple pie (pˈaɪ). Lowercase or capitalised 'pi'/'Pi' only; all-caps PI is the principal investigator (see PI-caps). Kokoro already says pˈaɪ by default; this entry locks it in and is checked.",
+   "patterns": [
+    "\\b(?P<w>[Pp]i)\\b(?!\\.)"
+   ],
+   "examples": [
+    {
+     "text": "pi times r squared",
+     "expect": "pˈaɪ"
+    },
+    {
+     "text": "The Greek letter pi is about three point one four.",
+     "expect": "pˈaɪ"
+    }
+   ]
+  },
+  {
+   "id": "PI-caps",
+   "word": "PI",
+   "say": "P-I",
+   "ignorecase": false,
+   "note": "Bear, 2026-10-09: all-caps PI is the principal investigator, said as the two letters P I (pˈiːˈaɪ), never pie. Also PIs.",
+   "patterns": [
+    "\\b(?P<w>PI)\\b(?!s)"
+   ],
+   "examples": [
+    {
+     "text": "Ask the PI on the grant.",
+     "expect": "pˈiːaɪ"
+    }
+   ]
+  },
+  {
+   "id": "PI-caps-plural",
+   "word": "PIs",
+   "say": "P-I's",
+   "ignorecase": false,
+   "note": "Plural of the all-caps principal investigator: 'PIs' → P-I's so Kokoro says pˈiːaɪz (the apostrophe is what makes the s read as a plural).",
+   "patterns": [
+    "\\b(?P<w>PIs)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Two PIs share the allocation.",
+     "expect": "pˈiːaɪz"
+    }
+   ]
+  },
+  {
+   "id": "AICR",
+   "word": "AICR",
+   "say": "A-I-C-R",
+   "ignorecase": false,
+   "note": "Northeastern's AI cluster. Kokoro reads AICR as 'acre'. Bear, 2026-10-11: say it ONE way, always - the four letters A-I-C-R (the alternative he allowed was 'Aker', like an acre of ground; not used, so the film never mixes them). Capital AICR here; lower-case aicr (hostnames, 'ssh aicr', the alias) is the next entry.",
+   "patterns": [
+    "\\b(?P<w>AICR)\\b"
+   ],
+   "examples": [
+    {
+     "text": "AICR is the cluster.",
+     "expect": "ˈeɪaɪsˈiːˈɑːɹ"
+    },
+    {
+     "text": "Optimizing GPU Usage on AICR",
+     "expect": "ˈeɪaɪsˈiːˈɑːɹ"
+    }
+   ]
+  },
+  {
+   "id": "aicr-lower",
+   "word": "aicr",
+   "say": "A-I-C-R",
+   "ignorecase": false,
+   "note": "Lower-case aicr inside hostnames and commands (login.aicr.ai, ssh aicr, the aicr alias). Same four letters as the capital entry, so the film says it one way. Bear, 2026-10-11.",
+   "patterns": [
+    "\\b(?P<w>aicr)\\b"
+   ],
+   "examples": [
+    {
+     "text": "ssh aicr",
+     "expect": "ˈeɪaɪsˈiːˈɑːɹ"
+    },
+    {
+     "text": "login dot aicr dot A I",
+     "expect": "ˈeɪaɪsˈiːˈɑːɹ"
+    }
+   ]
+  },
+  {
+   "id": "model-version-5-5",
+   "word": "5.5",
+   "say": "five point five",
+   "ignorecase": false,
+   "note": "Claude model version numbers (Professor Bear's Claude Notebook, 'Model x Effort', 2026-10-09). Kokoro phonemizes 'Sonnet 5.5' as 'five.five' with no 'point'. Applies only after a Claude model-family name; captions keep '5.5'.",
+   "patterns": [
+    "\\b(?:Fable|Opus|Sonnet|Haiku|Mythos)\\s+(?P<w>5\\.5)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Opus 5.5 defaults to medium.",
+     "expect": "fˈaɪv pˈɔɪnt fˈaɪv"
+    },
+    {
+     "text": "Sonnet 5.5 at max effort.",
+     "expect": "fˈaɪv pˈɔɪnt fˈaɪv"
+    }
+   ]
+  },
+  {
+   "id": "model-version-5-1",
+   "word": "5.1",
+   "say": "five point one",
+   "ignorecase": false,
+   "note": "Claude model version numbers, as model-version-5-5.",
+   "patterns": [
+    "\\b(?:Fable|Opus|Sonnet|Haiku|Mythos)\\s+(?P<w>5\\.1)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Fable 5.1 defaults to high.",
+     "expect": "fˈaɪv pˈɔɪnt wˈʌn"
+    }
+   ]
+  },
+  {
+   "id": "model-version-4-7",
+   "word": "4.7",
+   "say": "four point seven",
+   "ignorecase": false,
+   "note": "Claude model version numbers, as model-version-5-5.",
+   "patterns": [
+    "\\b(?:Fable|Opus|Sonnet|Haiku|Mythos)\\s+(?P<w>4\\.7)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Anthropic's notes on Opus 4.7 add a warning.",
+     "expect": "fˈɔːɹ pˈɔɪnt sˈɛvən"
+    }
+   ]
+  },
+  {
+   "id": "xhigh",
+   "word": "xhigh",
+   "say": "extra high",
+   "ignorecase": true,
+   "note": "The effort level written xhigh. Anthropic's help center names it 'Extra high (xhigh)'; Kokoro otherwise says 'ex-high'. Captions and on-screen text keep xhigh. Added 2026-10-09 for 'Model x Effort'.",
+   "patterns": [
+    "\\b(?P<w>xhigh)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Opus at xhigh effort.",
+     "expect": "ˈɛkstɹə hˈaɪ"
+    }
+   ]
+  },
+  {
+   "id": "Godot",
+   "word": "Godot",
+   "say": "Go-doe",
+   "note": "Godot: French-original go-DOH (/go.do/, even syllables, slight lean on the second; final t silent), chosen by Bear 2026-10-09 from four options (Beckett GOD-oh, US guh-DOH, French go-DOH, engine GO-dot). Kokoro defaults to GAH-daht ('God dot'). Voice only.",
+   "patterns": [
+    "\\b(?P<w>Godot)(?=['’]s\\b|\\b)"
+   ],
+   "examples": [
+    {
+     "text": "Why Godot suits an AI agent.",
+     "expect": "ɡˌoʊdˈoʊ"
+    },
+    {
+     "text": "Godot's scenes are text files.",
+     "expect": "ɡˌoʊdˈoʊz"
+    }
+   ]
+  },
+  {
+   "id": "coding-title",
+   "word": "Coding",
+   "say": "co-ding",
+   "ignorecase": false,
+   "note": "In the BOUT title 'Agentic Coding Is Mostly Design', Kokoro says 'coating' (KOH-ting). Respelling 'co-ding' separates the syllables explicitly: 'co' (like co-author, /koʊ/) + 'ding' (the known word, /dɪŋ/) → kˈoʊdɪŋ. Narrower than 'koding' and forces Kokoro's neural model to read through the hyphen. Narrow pattern: only fires between 'Agentic' and 'Is'. Added 2026-10-11 for Agentic Figma Film 1. Voice only; narration and captions retain 'Coding'.",
+   "patterns": [
+    "(?:Agentic\\s+)(?P<w>Coding)(?=\\s+Is\\b)"
+   ],
+   "examples": [
+    {
+     "text": "Agentic Coding Is Mostly Design.",
+     "expect": "kˈoʊdˈɪŋ"
+    }
+   ]
+  },
+  {
+   "id": "redoable",
+   "word": "redoable",
+   "say": "redooable",
+   "ignorecase": true,
+   "note": "'redoable' = re-DOO-able (re + do, like 'undoable'), not 're-DOH-able' (as in bread dough). Kokoro says dough. Requested 2026-10-10. Covers redoable and re-doable.",
+   "patterns": [
+    "\\b(?P<w>re-?doable)\\b"
+   ],
+   "examples": [
+    {
+     "text": "The step is redoable.",
+     "expect": "ɹᵻdˈuːəbəl"
+    },
+    {
+     "text": "A re-doable render.",
+     "expect": "ɹᵻdˈuːəbəl"
+    }
+   ]
+  },
+  {
+   "id": "Ollama",
+   "word": "Ollama",
+   "say": "Ohlama",
+   "ignorecase": true,
+   "note": "The local model server. Kokoro reads Ollama as 'ah-LAH-muh' (ɑːlˈɑːmə); the name starts 'oh-' (oh-LAH-muh). Added 2026-10-13 while building the local-LLM-on-Explorer lecture; check by ear on first use.",
+   "patterns": [
+    "\\b(?P<w>Ollama)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Ollama serves the model.",
+     "expect": "oʊlˈɑːmə"
+    },
+    {
+     "text": "the ollama launch command",
+     "expect": "oʊlˈɑːmə"
+    }
+   ]
+  },
+  {
+   "id": "Apptainer",
+   "word": "Apptainer",
+   "say": "Aptayner",
+   "ignorecase": true,
+   "note": "The container tool (formerly Singularity), said AP-tay-ner. Kokoro says 'AP-tih-ner' (ˈæptɪnɚ). Added 2026-10-13; check by ear on first use.",
+   "patterns": [
+    "\\b(?P<w>Apptainer)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Apptainer runs containers.",
+     "expect": "ˈæpteɪnɚ"
+    }
+   ]
+  },
+  {
+   "id": "Qwen",
+   "word": "Qwen",
+   "say": "Kwen",
+   "ignorecase": false,
+   "note": "The Qwen model family. Kokoro spells it out as the letter Q plus 'wen' (kjˈuːwˈɛn). Said 'Kwen' here (the maker's own pronunciation is closer to 'chwen'; Bear to choose). Added 2026-10-13.",
+   "patterns": [
+    "\\b(?P<w>Qwen)\\b"
+   ],
+   "examples": [
+    {
+     "text": "Qwen three Coder",
+     "expect": "kwˈɛn"
+    }
+   ]
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
  "metadata": {
   "title": "Smoke Test",
-  "slug": "_smoke",
+  "slug": "smoke",
   "topic": "PACKAGING SMOKE TEST",
   "register": "fixture",
   "engine": "kokoro",

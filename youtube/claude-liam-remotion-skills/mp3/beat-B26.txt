@@ -1,0 +1,1 @@
+Audio visualization, the media utilities read the waveform of an audio file and give a spectrum per frame. These bars are this sentence, my own narration, analyzed as it plays nothing faked. This on the left treble on the right and the shape follows the voice.

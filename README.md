@@ -27,6 +27,7 @@ agents.
 | [`godot-waikthrough`](skills/make/godot-waikthrough/SKILL.md) | Play a Godot game, cover its implemented features with Liam riffs, render in 4K; optional `walker` Claude/GDD bookends |
 | [`godot-gamedev`](skills/make/godot-gamedev/SKILL.md) | Detailed game-development film: actual code, scenes, resources, assets and art in source-backed Godot teaching views; optional `walker` bookends |
 | [`godot-gdd`](skills/make/godot-gdd/SKILL.md) | Explain a complete GDD using existing game evidence; separate proposals, implementation, tests and human decisions; optional `walker` bookends |
+| [`godot-trailer`](skills/make/godot-trailer/SKILL.md) | Cut a 60–90 s trailer from a Godot repo: real gameplay only, one idea escalated, edited to music, ending on one call to action; selects the hook instead of covering every feature |
 | `deep-explainer` | 5–10 min documentary episode with vox pantry beats |
 | `anthropics` | Reads an Anthropic artifact (repo/paper/content) against its own claims; practitioner-report register |
 | `fashionista` | AI fashion-call experiment — sports-announcer call with stated confidence + correction ask |
@@ -91,6 +92,27 @@ follow; it is not an autonomous film-render command.
 
 Note: the Kokoro voice model is not in this repo (GitHub's 100MB file limit)
 — `./setup --install` fetches it once from the kokoro-onnx releases.
+
+### Game trailers
+
+Ask your agent: `godot-trailer /path/to/game-package` (alias `game-trailer`). It reuses
+the walkthrough's capture contract and any same-build walkthrough captures, but it
+**selects**: one hook, one idea escalated, gameplay in the first five seconds, cut to
+music, one call to action on the last card. No Claude bookends or channel outro; no AI
+footage; planned features never appear. Music-only by default; add `voice` for a few
+sparse lines in Liam's voice (Kokoro `am_onyx`), each backed by something on screen. Music
+and a person who has never seen the game are the two inputs only a human supplies.
+
+```bash
+./art godot-trailer --check /path/to/reel --game /path/to/game-package   # read-only gate
+./art godot-trailer --beat-grid music/track.wav --out music/beats.json   # tempo, beats, downbeats
+./art godot-trailer --assemble /path/to/reel                              # trims, beat sheet, cards, voice, mix
+./art godot-trailer --vo /path/to/reel                                    # just the Liam voice lines
+```
+
+The end card is the reusable `GameTrailerCard` scene (title, platforms, availability,
+one directive). The gate checks structure, honesty attestations and media evidence; it
+cannot judge legibility, music fit or whether a stranger understands the game.
 
 ### Godot development films
 

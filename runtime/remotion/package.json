@@ -7,16 +7,29 @@
     "render": "remotion render"
   },
   "dependencies": {
-    "@remotion/cli": "^4.0.0",
-    "@remotion/paths": "4.0.486",
-    "@remotion/zod-types": "^4.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "remotion": "^4.0.0",
-    "zod": "^4.3.6"
+    "@remotion/bundler": "4.0.535",
+    "@remotion/captions": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/effects": "4.0.535",
+    "@remotion/fonts": "4.0.535",
+    "@remotion/layout-utils": "4.0.535",
+    "@remotion/media-utils": "4.0.535",
+    "@remotion/motion-blur": "4.0.535",
+    "@remotion/noise": "4.0.535",
+    "@remotion/paths": "4.0.535",
+    "@remotion/renderer": "4.0.535",
+    "@remotion/rough-notation": "4.0.535",
+    "@remotion/shapes": "4.0.535",
+    "@remotion/transitions": "4.0.535",
+    "@remotion/zod-types": "4.0.535",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.535",
+    "zod": "4.5.4"
   },
   "devDependencies": {
-    "@types/react": "^18.3.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "typescript": "^5.4.0"
   },
   "allowScripts": {

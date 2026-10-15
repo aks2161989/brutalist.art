@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="178.67" y="112.00" width="666.67" height="800.00" viewBox="0.0 0.0 20.0 24.0" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <defs
+     id="defs3" />
+  <path
+     d="M 0,1.5 C 0,0.671573 0.671573,0 1.5,0 h 7 C 9.32843,0 10,0.671573 10,1.5 V 8 H 1.5 C 0.671573,8 0,7.32843 0,6.5 Z"
+     fill="#f26207"
+     id="path1" />
+  <path
+     d="m 10,8 h 8.5 C 19.3284,8 20,8.67157 20,9.5 v 5 C 20,15.3284 19.3284,16 18.5,16 H 10 Z"
+     fill="#f26207"
+     id="path2" />
+  <path
+     d="M 0,17.5 C 0,16.6716 0.671573,16 1.5,16 H 10 v 6.5 C 10,23.3284 9.32843,24 8.5,24 h -7 C 0.671573,24 0,23.3284 0,22.5 Z"
+     fill="#f26207"
+     id="path3" />
+</svg></svg>

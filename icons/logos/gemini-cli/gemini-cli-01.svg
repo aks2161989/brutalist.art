@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.09" y="112.00" width="799.81" height="800.00" viewBox="0.0 0.0 255.67 255.73" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <!-- SVG created with Arrow, by QuiverAI (https://quiver.ai) -->
+  <path
+     d="m 45.74,0 h 164.1 c 25.35,0 45.83,20.72 45.83,46.3 v 163.1 c 0,25.58 -21,46.33 -46.48,46.33 H 45.99 C 20.51,255.73 0,234.57 0,209.43 V 46.53 C 0,20.76 20.75,0.01 45.76,0.01 Z"
+     fill="url(#paint0_linear_1238_6151)"
+     id="path1"
+     style="fill:url(#paint0_linear_1238_6151)" />
+  <path
+     d="m 46.76,13.97 h 161.9 c 18.49,0 32.5,15.43 32.5,33.06 v 161.8 c 0,18.33 -14.53,32.49 -32.56,32.49 H 46.9 c -18.03,0 -32.86,-13.85 -32.86,-32.27 V 46.65 c 0,-17.66 14.43,-32.61 32.76,-32.61 z"
+     fill="#1f1d2e"
+     id="path2" />
+  <path
+     d="m 76.87,61.99 102.2,49.64 v 38.76 L 76.67,199.82 V 171.36 L 158.95,130.74 76.89,91.44 V 61.99 Z"
+     fill="url(#paint1_linear_1238_6151)"
+     id="path3"
+     style="fill:url(#paint1_linear_1238_6151)" />
+  <defs
+     id="defs11">
+    <linearGradient
+       id="paint0_linear_1238_6151"
+       x1="10.83"
+       x2="245.5"
+       y1="24.309999"
+       y2="238.7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.06,-0.09)">
+      <stop
+         stop-color="#0083FF"
+         offset="0"
+         id="stop3" />
+      <stop
+         stop-color="#2384FF"
+         offset=".23"
+         id="stop4" />
+      <stop
+         stop-color="#0186FF"
+         offset=".41"
+         id="stop5" />
+      <stop
+         stop-color="#A774DB"
+         offset=".59"
+         id="stop6" />
+      <stop
+         stop-color="#E0597A"
+         offset=".83"
+         id="stop7" />
+      <stop
+         stop-color="#E0597A"
+         offset="1"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear_1238_6151"
+       x1="71.540001"
+       x2="162.7"
+       y1="100.5"
+       y2="151.2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.06,-0.09)">
+      <stop
+         stop-color="#0186FF"
+         offset="0"
+         id="stop9" />
+      <stop
+         stop-color="#0186FF"
+         offset=".5"
+         id="stop10" />
+      <stop
+         stop-color="#B878D6"
+         offset=".96"
+         id="stop11" />
+    </linearGradient>
+  </defs>
+</svg></svg>

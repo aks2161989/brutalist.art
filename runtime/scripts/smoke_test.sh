@@ -57,7 +57,7 @@ if ! ART_FACTS=0 ART_QC=1 ART_STRICT=0 bash "$ROOT/scripts/run.sh" "$WORK" 2>&1 
   fail "run.sh exited non-zero — see $WORK/.run.log"
 fi
 
-OUT="$WORK/_smoke-slate.mp4"
+OUT="$WORK/smoke-slate.mp4"
 [ -f "$OUT" ] || fail "no compiled slate cut at $OUT — run.sh reported success but produced nothing"
 
 echo "[smoke] --- GATE SIZE: non-zero, non-truncated mp4 on disk ---"

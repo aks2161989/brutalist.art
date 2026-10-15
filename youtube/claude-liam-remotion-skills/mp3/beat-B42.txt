@@ -1,0 +1,1 @@
+Third motion blur, the top card is a hard-edged move every frame sharp. The bottom is wrapped in camera motion blur, which renders each frame at 12 moments inside a 240 degree shutter and averages them, so the card smears the way a real camera sees it. The newer HTML and canvas blur needs a chrome flag, so this is the component that runs everywhere.

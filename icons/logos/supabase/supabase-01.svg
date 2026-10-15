@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="122.57" y="112.00" width="778.86" height="800.00" viewBox="0.0 0.0 108.97505 111.93246" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <path
+     d="m 63.682941,110.07282 c -2.8595,3.601 -8.6574,1.628 -8.7263,-2.97 l -1.0075,-67.251301 h 45.2197 c 8.190499,0 12.758499,9.4601 7.665499,15.8747 z"
+     fill="url(#paint0_linear)"
+     id="path1"
+     style="fill:url(#paint0_linear)" />
+  <path
+     d="m 63.682941,110.07282 c -2.8595,3.601 -8.6574,1.628 -8.7263,-2.97 l -1.0075,-67.251301 h 45.2197 c 8.190499,0 12.758499,9.4601 7.665499,15.8747 z"
+     fill="url(#paint1_linear)"
+     fill-opacity="0.2"
+     id="path2"
+     style="fill:url(#paint1_linear)" />
+  <path
+     d="m 45.292341,1.8598491 c 2.8595,-3.6014 8.6575,-1.62809305 8.7264,2.96997 l 0.4415,67.2511999 H 9.8064712 c -8.19075,0 -12.75888,-9.4601 -7.66563,-15.8747 z"
+     fill="#3ecf8e"
+     id="path3" />
+  <defs
+     id="defs6">
+    <linearGradient
+       id="paint0_linear"
+       x1="53.973801"
+       y1="54.973999"
+       x2="94.163498"
+       y2="71.829498"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.02465877,-0.21118095)">
+      <stop
+         stop-color="#249361"
+         id="stop3" />
+      <stop
+         offset="1"
+         stop-color="#3ECF8E"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear"
+       x1="36.1558"
+       y1="30.577999"
+       x2="54.484402"
+       y2="65.080597"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.02465877,-0.21118095)">
+      <stop
+         id="stop5" />
+      <stop
+         offset="1"
+         stop-opacity="0"
+         id="stop6" />
+    </linearGradient>
+  </defs>
+</svg></svg>

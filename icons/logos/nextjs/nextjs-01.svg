@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.00" y="112.00" width="800.00" height="800.00" viewBox="0.0 0.0 256.0 256.0" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="SVGrDou6dwg"
+       x1="164.14683"
+       x2="204.52774"
+       y1="153.79976"
+       y2="211.8871"
+       gradientTransform="scale(0.92824532,1.0773014)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#fff"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="SVG9onTObtB"
+       x1="421.52735"
+       x2="421.5077"
+       y1="31.353775"
+       y2="62.054555"
+       gradientTransform="scale(0.40825228,2.4494658)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#fff"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop4" />
+    </linearGradient>
+    <circle
+       id="SVGN5eQqeMK"
+       cx="128"
+       cy="128"
+       r="128" />
+  </defs>
+  <mask
+     id="SVGMX2wGdvm"
+     fill="#ffffff">
+    <use
+       href="#SVGN5eQqeMK"
+       id="use4" />
+  </mask>
+  <g
+     mask="url(#SVGMX2wGdvm)"
+     id="g5">
+    <circle
+       cx="128"
+       cy="128"
+       r="128"
+       id="circle4" />
+    <path
+       fill="url(#SVGrDou6dwg)"
+       d="M 212.634,224.028 98.335,76.8 H 76.8 V 179.157 H 94.028 V 98.68 L 199.11,234.446 a 128,128 0 0 0 13.524,-10.418"
+       id="path4"
+       style="fill:url(#SVGrDou6dwg)" />
+    <path
+       fill="url(#SVG9onTObtB)"
+       d="m 163.556,76.8 h 17.067 v 102.4 h -17.067 z"
+       id="path5"
+       style="fill:url(#SVG9onTObtB)" />
+  </g>
+</svg></svg>

@@ -1,0 +1,1 @@
+Keeping it current, the skills come from a public repository and one command pulls updates. The lock file changes with them, so the update is a diff you can read before the next film, and a commit you can roll back. The old snapshot in the Toolkit's Docs folder now points at the live set.

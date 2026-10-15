@@ -1,0 +1,1 @@
+Render, the render skill is the command line. Render, still in a frames mode that writes several frames as images in one call, which is exactly how this tool gets gate sample of beat. It also documents transparent output, PNG frames and alpha pixel format, ProRes 4444 or VP9, for a clip that drops onto another video with no background.

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.00" y="158.14" width="800.00" height="707.72" viewBox="0.0 0.0 90.431801 80.0" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <g
+     clip-path="url(#clip0_906_1839)"
+     id="g3">
+    <path
+       d="M 56.9686,0 H 90.4318 V 80 Z"
+       fill="#eb1000"
+       id="path1" />
+    <path
+       d="M 33.4632,0 H 0 v 80 z"
+       fill="#eb1000"
+       id="path2" />
+    <path
+       d="M 45.1821,29.4668 66.5199,80.0002 H 52.5657 L 46.1982,63.9461 h -15.58 z"
+       fill="#eb1000"
+       id="path3" />
+  </g>
+  <defs
+     id="defs3">
+    <clipPath
+       id="clip0_906_1839">
+      <rect
+         width="90.431801"
+         height="80"
+         fill="#ffffff"
+         id="rect3"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+</svg></svg>

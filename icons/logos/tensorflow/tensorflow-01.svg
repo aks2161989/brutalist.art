@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="154.58" y="112.00" width="714.85" height="800.00" viewBox="0.0 0.0 134.91 150.98" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <defs
+     id="defs2">
+    <style
+       id="style1">.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:url(#linear-gradient);}.cls-4{clip-path:url(#clip-path-2);}.cls-5{fill:url(#linear-gradient-2);}</style>
+    <clipPath
+       id="clip-path">
+      <polygon
+         class="cls-1"
+         points="136.29,59.02 136.29,210 162.05,195.04 162.05,152.57 181.5,163.82 181.39,134.77 162.05,123.72 162.05,106.85 200.85,129.27 200.76,95.86 "
+         id="polygon1" />
+    </clipPath>
+    <linearGradient
+       id="linear-gradient"
+       x1="60.080002"
+       y1="134.33"
+       x2="218.39"
+       y2="134.33"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#ff6f00"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#ffa800"
+         id="stop2" />
+    </linearGradient>
+    <clipPath
+       id="clip-path-2">
+      <polygon
+         class="cls-1"
+         points="130.5,59.02 130.5,210 104.74,195.04 104.74,106.85 65.94,129.27 66.03,95.86 "
+         id="polygon2" />
+    </clipPath>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="59"
+       y1="134.33"
+       x2="217.32001"
+       y2="134.33"
+       xlink:href="#linear-gradient" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       id="linearGradient3"
+       gradientUnits="userSpaceOnUse"
+       x1="60.080002"
+       y1="134.33"
+       x2="218.39"
+       y2="134.33" />
+  </defs>
+  <title
+     id="title2">FullColorPrimary Icon</title>
+  <g
+     class="cls-2"
+     clip-path="url(#clip-path)"
+     id="g2"
+     transform="translate(-65.94,-59.02)">
+    <rect
+       class="cls-3"
+       x="60.080002"
+       y="58.470001"
+       width="158.31"
+       height="151.72"
+       id="rect2"
+       style="fill:url(#linearGradient3)" />
+  </g>
+  <g
+     class="cls-4"
+     clip-path="url(#clip-path-2)"
+     id="g3"
+     transform="translate(-65.94,-59.02)">
+    <rect
+       class="cls-5"
+       x="59"
+       y="58.470001"
+       width="158.31"
+       height="151.72"
+       id="rect3"
+       style="fill:url(#linear-gradient-2)" />
+  </g>
+</svg></svg>

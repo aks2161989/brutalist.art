@@ -1,0 +1,1 @@
+Captions as data, the captions package parses a subtitle file into caption objects with start and end times in milliseconds. This is a real caption file from the first film in the Northeastern Research Computing series, and these are its first cues drawn as pages each word lighting on its own time. The toolkit already writes these files, now a composition can read them.

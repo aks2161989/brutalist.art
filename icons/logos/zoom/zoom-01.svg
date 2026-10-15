@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024"><svg x="112.00" y="112.00" width="800.00" height="800.00" viewBox="0.0 0.0 256.0 256.0" preserveAspectRatio="xMidYMid meet" overflow="visible">
+  <defs
+     id="defs9">
+    <linearGradient
+       id="a"
+       x1="60.584961"
+       x2="195.41504"
+       y1="244.7662"
+       y2="11.233791"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset=".00006%"
+         stop-color="#0845BF"
+         id="stop1" />
+      <stop
+         offset="19.11%"
+         stop-color="#0950DE"
+         id="stop2" />
+      <stop
+         offset="38.23%"
+         stop-color="#0B59F6"
+         id="stop3" />
+      <stop
+         offset="50%"
+         stop-color="#0B5CFF"
+         id="stop4" />
+      <stop
+         offset="67.32%"
+         stop-color="#0E5EFE"
+         id="stop5" />
+      <stop
+         offset="77.74%"
+         stop-color="#1665FC"
+         id="stop6" />
+      <stop
+         offset="86.33%"
+         stop-color="#246FF9"
+         id="stop7" />
+      <stop
+         offset="93.88%"
+         stop-color="#387FF4"
+         id="stop8" />
+      <stop
+         offset="100%"
+         stop-color="#4F90EE"
+         id="stop9" />
+    </linearGradient>
+  </defs>
+  <path
+     fill="url(#a)"
+     d="m 256,128 c 0,13.568 -1.024,27.136 -3.328,40.192 -6.912,43.264 -41.216,77.568 -84.48,84.48 C 155.136,254.976 141.568,256 128,256 114.432,256 100.864,254.976 87.808,252.672 44.544,245.76 10.24,211.456 3.328,168.192 1.024,155.136 0,141.568 0,128 0,114.432 1.024,100.864 3.328,87.808 10.24,44.544 44.544,10.24 87.808,3.328 100.864,1.024 114.432,0 128,0 c 13.568,0 27.136,1.024 40.192,3.328 43.264,6.912 77.568,41.216 84.48,84.48 C 254.976,100.864 256,114.432 256,128 Z"
+     id="path9"
+     style="fill:url(#a)" />
+  <path
+     fill="#ffffff"
+     d="M 204.032,207.872 H 75.008 c -8.448,0 -16.64,-4.608 -20.48,-12.032 -4.608,-8.704 -2.816,-19.2 4.096,-26.112 L 148.48,79.872 H 83.968 c -17.664,0 -32,-14.336 -32,-32 h 118.784 c 8.448,0 16.64,4.608 20.48,12.032 4.608,8.704 2.816,19.2 -4.096,26.112 l -89.6,90.112 h 74.496 c 17.664,0 32,14.08 32,31.744 z"
+     id="path10" />
+</svg></svg>

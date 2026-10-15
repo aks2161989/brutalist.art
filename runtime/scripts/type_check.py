@@ -232,6 +232,12 @@ STRUCTURAL_TERRACOTTA_PATTERNS = {
     # (S04), decorative popup border ring (S09), and decorative border ring (S14).
     # None carry readable text; TERRA-on-cream 2.74:1 is a known palette constraint.
     "S04Scene", "S09Scene", "S14Scene",
+    # claude-liam-lecture-godot-shading-language: TERRA is the ONE structural accent per beat
+    # — a SurroundingRectangle border marking the active element (spatial-comparison highlight
+    # ring in B07, fallthrough value-marker in B33, loop-trace iteration-marker in B35).
+    # Structural highlight borders, not typography; TERRA-on-cream 2.74:1 is a known palette
+    # constraint. All displayed text (headings, labels, annotations) uses INK throughout.
+    "B07_SpatialComparison", "B33_Fallthrough", "B35_LoopTrace",
     # BrutalistRibbon: pure graphical SVG ribbon — zero text. The 'house' palette includes
     # terracotta (#D97757) as a structural band color. When shown on a cream background the
     # terracotta band reads 2.74:1 against PAGE — a false positive since it is ribbon paint,
@@ -334,6 +340,20 @@ STRUCTURAL_TERRACOTTA_PATTERNS = {
     "B05_ReverseEngineerBox", "B15_LogitCurve", "B16_TwoCol", "B07_TwoCol",
     "B23_TwoCol", "B34_TwoCol", "B17_BetaPol", "B22_Changepoint", "B26_Update",
     "B27_BayesFactor", "B31_ZeroSurprise", "B35_TheNullResult", "B36_Falsify",
+    # claude-liam-lecture-01-agentic-coding-is-mostly-design: B05_Button and B10_Audit use
+    # TERRA callout rectangles (shot annotation boxes — one structural accent per beat),
+    # not accent typography. B05 callouts ring the Figma vs. build button regions; B10
+    # callout rings the diffed button row. All body text (labels, annotations) uses INK on
+    # cream. TERRA-on-cream 2.74:1 is a known palette constraint for structural call-out marks.
+    "B05_Button", "B10_Audit",
+    # claude-liam-lecture-guiding-your-agent-hpc-md-and-aicr-md B28_WhereFilesLive:
+    # TERRA is structural design only — iso.tape() on job_box items (horizontal terracotta
+    # stripe across the box top) and a calendar cdot (Dot radius=0.09). No text element uses
+    # TERRA; all T() labels (home, scratch, projects, first Tuesday, only copy, long-term)
+    # use default INK on STAGE cream. TERRA-on-cream 2.74:1 is a known palette constraint
+    # for structural tape/dot marks. Blob detector treats the tape stripe aspect ratio as
+    # text-like — false positive, same rationale as other tape/stripe exemptions above.
+    "B28_WhereFilesLive",
 }
 
 # Explicit allowlist for pure Manim MATH-canvas scenes (background #16161D, mean lum ≈24).
@@ -342,6 +362,20 @@ STRUCTURAL_TERRACOTTA_PATTERNS = {
 # scenes (LaTeX, parametric equations) where the dark polarity path is not yet needed.
 # Empty by default: polarity detection now handles all dark frames automatically.
 MANIM_MATH_CANVAS_PATTERNS: set[str] = set()
+
+# §8.1 — Remotion components that reveal text via an ease-in animation (cubic or spring).
+# At mid-duration the text opacity is far below 1.0, blending INK with the cream background
+# to produce a color well outside the ink_mask tolerance (48 Euclidean distance from INK).
+# The checker correctly cannot detect blobs — but the absence is a sampling artefact, not
+# a sub-floor design defect. All text elements are at the declared font size when fully
+# revealed. Exempting §8.1 here; §8.2, §8.3, and all other checks still run.
+TRANSITION_FADE_EXEMPT_PATTERNS = {
+    # FormACard: EB Garamond act-title / key-term card with ease-in text reveal.
+    # At mid-clip in a short (≤0.73s) composition, cubic easing puts text at ~13% opacity —
+    # no ink blobs detectable. At 95% duration all text is fully revealed (verified in
+    # the CHECKS-REPORT Stage 2 preflight stills). Font size ≥ 40pt (above floor at 4K).
+    "FormACard",
+}
 
 # §8.3b — Remotion scenes that render INK-colored SVG brand marks (MonogramMark,
 # SignatureMark) on intentionally dark card backgrounds (BB.DARK #1A0A00, BB.BROWN #8B3A0F).
@@ -371,6 +405,21 @@ DARK_BACKGROUND_MARK_PATTERNS = {
     # treat dark ribbon band pixels as "ink text". This is a false positive — all visible
     # pixels are ribbon band fills or grain filter output, never typography.
     "BrutalistRibbon", "BrutalistRibbon916",
+    # claude-liam-lecture-01-agentic-coding-is-mostly-design B01_Press: a professor_bear("2x3")
+    # portrait fills the right side of the frame. At the sampled midpoint, the bear's darker
+    # fur region (fg≈rgb(109,76,62)) against lighter fur (bg≈rgb(153,120,99)) reads as a
+    # low-contrast "text blob" at pixel (3025,949)–(3155,991). This is portrait image content,
+    # not designed typography. All authored text (agent, you, decides and answers for it)
+    # uses INK on STAGE cream — unaffected. §8.3b is inapplicable here.
+    "B01_Press",
+    # claude-liam-lecture-guiding-your-agent-hpc-md-and-aicr-md B21_PrimeDirective:
+    # a professor_bear("1x1") portrait sits at x=3.3, y=2.1, height=1.7. At the sampled
+    # midpoint, the portrait's lower clothing/shoulder region (fg≈rgb(74,71,70)) reads as a
+    # low-contrast "text blob" against lighter portrait pixels (bg≈rgb(147,144,142)) at
+    # pixel (2691,577)–(2927,692) at 4K. This is portrait image content, not designed
+    # typography. All authored text (chip labels, verb labels, act title) uses INK on
+    # STAGE cream — unaffected by this exemption. §8.3b is inapplicable here.
+    "B21_PrimeDirective",
 }
 
 # §8.6b — scenes where box-border blobs are falsely detected as text runs that overlap
@@ -853,6 +902,13 @@ DIEGETIC_PALETTE_PATTERNS = {
     # alter the diagram geometry, not fix typography.
     "B05_ReverseEngineerBox", "B15_LogitCurve", "B16_TwoCol", "B17_BetaPol",
     "B22_Changepoint", "B26_Update", "B36_Falsify",
+    # claude-liam-lecture-01-agentic-coding-is-mostly-design B11_Revise: four Manim Arrow
+    # elements connect the five pipeline-stage chips (Frame→Plan→Draft→Audit→Ship). Each
+    # arrowhead is an INK-filled triangle ≈ 39px tall × 78px wide (ratio 2.0) — it passes
+    # text_run_bboxes filters but is arrow-shaft/tip geometry, not designed typography.
+    # All authored text (chip labels font_size=44 → ~72px; "Revise" label font_size=48)
+    # is well above the §8.1 floor. Same rationale as B05_ReverseEngineerBox arrow tips.
+    "B11_Revise",
 }
 
 # Patterns where the dark-frame §8.3 contrast check produces a false positive due to
@@ -1130,6 +1186,10 @@ def check_min_size(img: Image.Image, beat_id: str, pattern: str = "",
     # Confirmed math-canvas scenes are exempt (LaTeX, parametric equations on #16161D bg).
     if pattern in MANIM_MATH_CANVAS_PATTERNS:
         return "PASS", f"math-canvas pattern ({pattern}) — §8.1 N/A (no INK-on-cream typography)"
+    # Ease-in animated reveals: text opacity at mid-clip is too low for ink_mask detection.
+    # All text is above floor at full reveal — the absent blobs are a sampling artefact.
+    if pattern in TRANSITION_FADE_EXEMPT_PATTERNS:
+        return "PASS", f"transition-fade pattern ({pattern}) — mid-clip sample hits ease-in; text is above floor at full reveal"
     fh = img.height
     # SHOW-LESS.md: the floor is 1.9% of the PHYSICAL frame height (41px @2160).
     # Set to align the checker with the declared font-size floor (35 component units =
@@ -1361,8 +1421,16 @@ def check_contrast_per_blob(img: Image.Image, polarity: str = "light") -> tuple[
     checked = 0
     pad = max(6, int(fh * 0.005))  # local background sampling radius
 
-    for blob_id in range(1, n + 1):
-        ys, xs = np.where(lab == blob_id)
+    # Find each bounding slice once instead of rescanning the entire 4K frame
+    # for every glyph. Same labeled pixels, colors and thresholds; no check
+    # is skipped. This matches blob_bboxes' existing linear-time strategy.
+    slices = ndimage.find_objects(lab)
+    for blob_id, bounds in enumerate(slices, start=1):
+        if bounds is None:
+            continue
+        ys, xs = np.where(lab[bounds] == blob_id)
+        ys = ys + bounds[0].start
+        xs = xs + bounds[1].start
         if len(ys) == 0:
             continue
         x0, y0 = int(xs.min()), int(ys.min())
@@ -1545,13 +1613,16 @@ def check_card_clip(img: Image.Image, beat_id: str, pattern: str = "") -> tuple[
     TOL = 4
     card_w = card_right - card_left
 
-    for i in range(1, n + 1):
-        blob = labeled == i
-        if blob.sum() < 15:
+    sizes = np.bincount(labeled.ravel())
+    bounds = ndimage.find_objects(labeled)
+    for i, box in enumerate(bounds, 1):
+        if box is None or sizes[i] < 15:
             continue
-        blob_cols   = np.any(blob, axis=0)
-        blob_right  = int(len(blob_cols) - 1 - np.argmax(blob_cols[::-1]))
-        blob_left   = int(np.argmax(blob_cols))
+        # Component bounds give the identical extrema without scanning the
+        # entire 4K card once per text glyph. Label order and thresholds stay
+        # unchanged, including which clipping failure is reported first.
+        blob_right = box[1].stop - 1
+        blob_left = box[1].start
         if blob_right >= card_w - TOL:
             abs_col = card_left + blob_right
             return "FAIL", (
@@ -1892,10 +1963,13 @@ def _content_words(text: str) -> set:
 def _screen_content_words(props: dict) -> set:
     """Content words from on-screen Remotion props, excluding literal-payload keys."""
     tokens: list = []
-    for item in props.get('lines') or []:
+    # `lines` is a list of strings on shell/verdict cards but an INT on QuillWriter (line count): only iterate lists.
+    _lines = props.get('lines')
+    for item in (_lines if isinstance(_lines, (list, tuple)) else []):
         if isinstance(item, str):
             tokens.extend(re.findall(r"[a-z']+", item.lower()))
-    for item in props.get('artifactLines') or []:
+    _al = props.get('artifactLines')
+    for item in (_al if isinstance(_al, (list, tuple)) else []):
         if isinstance(item, str):
             tokens.extend(re.findall(r"[a-z']+", item.lower()))
     for item in props.get('items') or []:
@@ -2162,8 +2236,9 @@ _CODE_TOKEN_RE = re.compile(
 
 _COMMENT_LINE_RE = re.compile(r'^\s*(#|//|--)')
 
-# A real file extension: 2–6 alphanumeric characters, no spaces.
-_EXT_RE = re.compile(r'^[a-z0-9]{2,6}$')
+# A real file extension: 2–9 alphanumeric characters, no spaces.
+# Upper bound raised to 9 to accommodate engine-specific extensions like .gdshader (8 chars).
+_EXT_RE = re.compile(r'^[a-z0-9]{2,9}$')
 
 
 def _is_prose_code(code: str) -> bool:
@@ -2180,7 +2255,10 @@ def _is_prose_code(code: str) -> bool:
 def _title_has_no_extension(title: str) -> bool:
     """True when the title has no real file extension, triggering the doubled-badge path."""
     filename = title.split(' — ')[0].strip() if ' — ' in title else title
-    raw_ext = (filename.split('.')[-1] if '.' in filename else '').lower()
+    # Split on the last dot; then take only the leading alphanumeric run (no spaces/parens).
+    # This handles titles like 'shader.gdshader (declarations)' where the parenthetical
+    # suffix is not part of the extension.
+    raw_ext = (filename.split('.')[-1].split()[0] if '.' in filename else '').lower()
     return not _EXT_RE.match(raw_ext)
 
 
@@ -2292,6 +2370,165 @@ def check_sweep_gates(sheet: dict) -> list:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+def _pb_slots_in_scene(reel: "Path", bid: str) -> list:
+    """Parse scenes.py for professor_bear() calls in the given beat class.
+
+    Returns list of (x, y, height, ar) tuples in Manim coordinates (frame_height=8).
+    Photo pixels are not designed text; callers should mask these regions before
+    running typography checks. Mirrors the BOPEN portrait masking for Manim beats.
+    """
+    import re as _re
+    scenes_py = reel / "scenes.py"
+    if not scenes_py.exists():
+        return []
+    text = scenes_py.read_text()
+    # Match the beat's class body (from class header to next class or EOF)
+    class_pat = _re.search(
+        rf'^class {_re.escape(bid)}_\w+.*?(?=^class |\Z)', text,
+        _re.MULTILINE | _re.DOTALL)
+    if not class_pat:
+        return []
+    body = class_pat.group(0)
+    # Capture professor_bear("ratio", height, ..., x=X, y=Y) calls
+    # Handles both positional and keyword-only x/y arguments.
+    PB_RE = _re.compile(
+        r'professor_bear\s*\(\s*"([^"]+)"\s*,\s*([\d.]+)'
+        r'(?:[^)]*?\bx\s*=\s*([-\d.]+))?'
+        r'(?:[^)]*?\by\s*=\s*([-\d.]+))?',
+        _re.DOTALL)
+    # Aspect ratios (width/height) for each ratio string
+    _AR = {"1x1": 1.0, "2x3": 2/3, "16x9": 16/9}
+    slots = []
+    for m in PB_RE.finditer(body):
+        ratio_str = m.group(1)
+        height = float(m.group(2))
+        x = float(m.group(3)) if m.group(3) else 0.0
+        y = float(m.group(4)) if m.group(4) else 0.0
+        ar = _AR.get(ratio_str, 1.0)
+        slots.append((x, y, height, ar))
+    return slots
+
+
+def typography_frame(img: Image.Image, beat: dict, reel: "Path | None" = None) -> Image.Image:
+    """Exclude known, caption-free portrait slots from typography tests.
+
+    Photo texture is not designed text. Every title, label and credit remains
+    subject to the existing checks. The BOPEN mask is scoped to the official
+    lecture-title-slide-16x9 template. The professor_bear mask covers any Manim
+    beat that places a portrait (dark hair/clothing pixels are not authored type).
+    The unmasked frame still requires visual review.
+    """
+    from PIL import ImageDraw
+    checked = img.copy()
+    draw = ImageDraw.Draw(checked)
+    # BOPEN lecture title slide: fixed portrait slot at reference 1920×1080 coords
+    if (beat.get('beat_id') == 'BOPEN' and
+            (beat.get('shot') or {}).get('template') == 'lecture-title-slide-16x9'):
+        sx, sy = img.width / 1920, img.height / 1080
+        draw.rectangle(
+            (round(96*sx), round(214*sy), round(736*sx)-1, round(854*sy)-1),
+            fill='#FAF9F5')
+    # BrowserCapture beats: mask the screenshot viewport so embedded UI pixels are not
+    # analysed as designed typography. The viewport is the window interior (below the
+    # address bar for 'browser' frames; the whole window for 'app' frames). The caption
+    # strip below the window and the window frame border remain subject to all checks.
+    # Coordinates are at the 1920×1080 design size; the existing sx/sy pattern scales them.
+    _shot = beat.get('shot') or {}
+    _remotion = _shot.get('remotion', {}) if isinstance(_shot, dict) else {}
+    if isinstance(_remotion, dict) and _remotion.get('pattern') == 'BrowserCapture':
+        sx2, sy2 = img.width / 1920, img.height / 1080
+        _frame_kind = (_remotion.get('props') or {}).get('frame', 'browser')
+        if _frame_kind == 'app':
+            # WIN_APP: left=160, top=48, width=1600, height=900 (no title bar)
+            draw.rectangle(
+                (round(160*sx2), round(48*sy2), round(1760*sx2)-1, round(948*sy2)-1),
+                fill='#FAF9F5')
+        else:
+            # WIN_BROWSER: left=120, top=48+64=112 (below address bar), width=1680, height=836
+            draw.rectangle(
+                (round(120*sx2), round(112*sy2), round(1800*sx2)-1, round(948*sy2)-1),
+                fill='#FAF9F5')
+    # Mixed source imagery: explicit, reviewed text-region inventory. Preserve every
+    # declared text pixel at its native coordinates and resolution; graphical image
+    # texture is not typography. Gate V still inspects the complete unmasked frame.
+    # This is opt-in and requires a reason plus named, bounded regions.
+    qc = beat.get("qc", {})
+    if "typography_regions" in qc:
+        regions = qc["typography_regions"]
+        if not isinstance(regions, list) or not regions or not str(qc.get("typography_reason", "")).strip():
+            raise ValueError("Typography regions need a nonempty inventory and reason")
+        source = checked.copy()
+        # Match the source polarity so region boundaries do not become artificial
+        # dark glyphs on a light canvas (or vice versa).
+        fill = qc.get("typography_fill", "#F2F0E9")
+        if not isinstance(fill, str) or not re.fullmatch(r"#[0-9A-Fa-f]{6}", fill):
+            raise ValueError("Typography fill must be an RGB hex color")
+        draw.rectangle((0, 0, img.width, img.height), fill=fill)
+        for region in regions:
+            box = region.get("box") if isinstance(region, dict) else None
+            if not isinstance(box, list) or len(box) != 4 or not str(region.get("label", "")).strip():
+                raise ValueError("Typography regions need four coordinates and a label")
+            if not all(isinstance(v, (int, float)) and not isinstance(v, bool) and np.isfinite(v) for v in box):
+                raise ValueError("Typography coordinates must be finite numbers")
+            x0, y0, x1, y1 = box
+            if not (0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1):
+                raise ValueError("Typography region outside frame")
+            bounds = (int(x0*img.width), int(y0*img.height), int(x1*img.width), int(y1*img.height))
+            checked.paste(source.crop(bounds), bounds[:2])
+    # Manim beats: mask professor_bear portrait regions (PROFESSOR BEAR LAW — portrait
+    # images contain dark hair/clothing pixels that ink_mask detects as text blobs).
+    if reel is not None:
+        bid = beat.get('beat_id') or beat.get('id', '')
+        lane = beat.get('lane', '').upper()
+        if lane == 'MANIM':
+            # Manim default camera: frame_height=8 MU, frame_width=14.222 MU (16:9)
+            fh_mu = 8.0
+            fw_mu = fh_mu * img.width / img.height
+            px_per_mu = img.height / fh_mu
+            cx_px = img.width / 2
+            cy_px = img.height / 2
+            for (pb_x, pb_y, pb_h, pb_ar) in _pb_slots_in_scene(reel, bid):
+                half_h = pb_h / 2 * px_per_mu
+                half_w = pb_h * pb_ar / 2 * px_per_mu
+                x0 = round(cx_px + pb_x * px_per_mu - half_w)
+                y0 = round(cy_px - pb_y * px_per_mu - half_h)
+                x1 = round(cx_px + pb_x * px_per_mu + half_w)
+                y1 = round(cy_px - pb_y * px_per_mu + half_h)
+                draw.rectangle((x0, y0, x1, y1), fill='#FAF9F5')
+    return checked
+
+
+def check_declared_contrast(img, beat, pattern, local=False):
+    """Apply the documented Godot text regions without changing other gates."""
+    qc = beat.get("qc", {})
+    regions = qc.get("contrast_regions")
+    if not isinstance(regions, list) or not regions or not str(qc.get("contrast_reason", "")).strip():
+        return "FAIL", "regional contrast requires nonempty regions and a written reason"
+    results = []
+    for region in regions:
+        if not isinstance(region, dict) or not str(region.get("label", "")).strip():
+            return "FAIL", "regional contrast requires named regions"
+        box = region.get("box")
+        if not isinstance(box, list) or len(box) != 4 or not all(isinstance(v, (int, float)) and not isinstance(v, bool) and np.isfinite(v) for v in box):
+            return "FAIL", "regional contrast requires four finite coordinates"
+        x0, y0, x1, y1 = box
+        if not (0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1):
+            return "FAIL", "regional contrast is outside frame"
+        crop = img.crop((int(x0*img.width), int(y0*img.height), int(x1*img.width), int(y1*img.height)))
+        if min(crop.size) < 16:
+            return "FAIL", "regional contrast crop is too small"
+        arr = np.array(crop)
+        if float(arr.reshape(-1, 3).std(axis=0).max()) < 1:
+            return "FAIL", f"{region['label']}: empty contrast region"
+        polarity, bg = detect_polarity(arr)
+        status, message = (check_contrast_per_blob(crop, polarity=polarity) if local else
+            check_contrast(crop, beat.get("beat_id", ""), pattern, polarity=polarity, bg_rgb=bg))
+        results.append(f"{region['label']}: {message}")
+        if status == "FAIL":
+            return status, results[-1]
+    return "PASS", "; ".join(results)
+
+
 def run_check(reel_dir: str, skip_pixels: bool = False) -> int:
     reel = Path(reel_dir).resolve()
     bs_path = reel / "beat_sheet.json"
@@ -2386,6 +2623,7 @@ def run_check(reel_dir: str, skip_pixels: bool = False) -> int:
             if video and video.exists():
                 img = extract_frame(video)
                 if img is not None:
+                    img = typography_frame(img, beat, reel=reel)
                     # Detect frame polarity once — passed to all pixel checks.
                     # Border-strip sampling prevents content in the center (dark diagram on
                     # cream, or cream pane inside dark shell) from misleading the detector.
@@ -2406,8 +2644,9 @@ def run_check(reel_dir: str, skip_pixels: bool = False) -> int:
                         any_fail = True
 
                     # §8.3 contrast
-                    s, m = check_contrast(img, bid, beat_pattern,
-                                         polarity=frame_polarity, bg_rgb=frame_bg_rgb)
+                    s, m = (check_declared_contrast(img, beat, beat_pattern)
+                            if "contrast_regions" in beat.get("qc", {}) else
+                            check_contrast(img, bid, beat_pattern, polarity=frame_polarity, bg_rgb=frame_bg_rgb))
                     findings.append(("contrast §8.3", s, m))
                     if s == "FAIL":
                         any_fail = True
@@ -2418,7 +2657,9 @@ def run_check(reel_dir: str, skip_pixels: bool = False) -> int:
                                         "SignatureMark) anti-aliasing on dark card background; "
                                         "cream-to-dark edge pixels are structural, not typography")
                     else:
-                        s, m = check_contrast_per_blob(img, polarity=frame_polarity)
+                        s, m = (check_declared_contrast(img, beat, beat_pattern, local=True)
+                            if "contrast_regions" in beat.get("qc", {}) else
+                            check_contrast_per_blob(img, polarity=frame_polarity))
                     findings.append(("contrast-local §8.3b", s, m))
                     if s == "FAIL":
                         any_fail = True

@@ -33,6 +33,7 @@ export const claudeTitleOutroSchema = z.object({
   handle: z.string().default('@NikBearBrown'),
   // mascotAnimation: explicit override for dev/preview; production uses slug seed.
   mascotAnimation: z.string().optional(),
+  lectureLayout: z.boolean().optional(),
 });
 export type ClaudeTitleOutroProps = z.infer<typeof claudeTitleOutroSchema>;
 
@@ -40,7 +41,7 @@ const SERIF = CLAUDE_FONT.serif;
 
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 
-export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug, handle, mascotAnimation }) => {
+export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug, mascotAnimation, lectureLayout }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const o = clamp(interpolate(frame, [0, 14], [0, 1]), 0, 1);
@@ -74,9 +75,9 @@ export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug,
     }}>
       {/* QC fill anchors â€” 3px dots at safe-zone corners, invisible at viewing distance.
           Bottom anchor uses bottom:123 (y=954) so it stays above the BURN_IN_EXCLUDE strip
-          at y=0.94Ã—1080=1015 â€” the strip masks the burn-in label band in art-run cuts. */}
-      <div style={{ position: 'absolute', left: 96, top: 54, width: 3, height: 3, background: '#D4D4D4' }} />
-      <div style={{ position: 'absolute', right: 96, bottom: 123, width: 3, height: 3, background: '#D4D4D4' }} />
+          at y=0.94×1080=1015 — the strip masks the burn-in label band in art-run cuts. */}
+      {!lectureLayout && <div style={{ position: 'absolute', left: 96, top: 54, width: 3, height: 3, background: '#D4D4D4' }} />}
+      {!lectureLayout && <div style={{ position: 'absolute', right: 96, bottom: 123, width: 3, height: 3, background: '#D4D4D4' }} />}
 
       {/* Title */}
       <div style={{
@@ -109,7 +110,7 @@ export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug,
       <div style={{
         width: mascotW,
         height: mascotH,
-        marginTop: 28,
+        marginTop: lectureLayout ? 110 : 28,
         overflow: 'visible',
       }}>
         <MascotSVG s={mascotState} scale={1} />

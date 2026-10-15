@@ -148,7 +148,7 @@ class DiscoveryTests(unittest.TestCase):
                                     cwd='/tmp', capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertIn('name: ', result.stdout)
-            self.assertIn('regular', result.stdout)
+            self.assertIn('OUTRO-LOCK', result.stdout)
 
 
 if __name__ == '__main__':
