@@ -27,6 +27,7 @@ make a video.
 | medhavy-walkthrough | Real Medhavy Hub (hub.medhavy.com) browser walkthrough with Liam riffs; `textbook` adds Claude bookends; seeded tenant + human sign-in required; regular outro |
 | godot-gdd | GDD design-contract walkthrough using existing game evidence; proposals versus implementation; optional `walker` bookends; Liam and regular outro |
 | godot-trailer | 60–90 s game trailer from a Godot repo: real gameplay only, hook in 5 s, one idea escalated, cut to music, ends on one call to action. Selects (not covers); reuses walkthrough captures; music-only by default, sparse Liam voice on request; no Claude bookends, no channel outro |
+| blender-modelbuild | Beat sheet for a finished Blender model: views first, then how to build it by hand from the real build evidence; labelled UI reconstructions, human verdicts, what is not established; Liam; no render |
 | nbb | NikBearBrown/Teardown register — Kokoro am_onyx voice |
 | guests | Board members, advisors, invited speakers. NO feedback beat — staff do not evaluate board members. GATE G. |
 | finance | SEC filings → 11 fixed beats, EDGAR XBRL data, two deterministic audits |
@@ -54,3 +55,6 @@ make a video.
 [SILENT-MODE.md](./SILENT-MODE.md). Removes the human from the loop, never the
 gates: machine gates still fail the build, third-party gates (GATE N, GATE G)
 skip the reel rather than auto-pass.
+| building-walkthrough | Liam walkthrough of a 3D model: a building, a game environment seen as a model, or one game asset. Plans the route and every shot's job, builds the camera rig in Blender and MEASURES it (speed, turn rate, roll, height, distance to walls) before rendering, renders numbered image sequences, and discloses in the opening what the model is and is not. Companion to blender-build |
+| blender-walkthrough | Film of a finished model from its existing rendered images/gallery: view-by-view explanation, source-backed stats and limitations; no model file required |
+| blender-build | Image-based reconstruction lesson and film: Blender concepts, incremental coding-agent prompts and visual checkpoints; no original assets required. Explicit record/history mode retains the historical workflow |

@@ -28,6 +28,10 @@ agents.
 | [`godot-gamedev`](skills/make/godot-gamedev/SKILL.md) | Detailed game-development film: actual code, scenes, resources, assets and art in source-backed Godot teaching views; optional `walker` bookends |
 | [`godot-gdd`](skills/make/godot-gdd/SKILL.md) | Explain a complete GDD using existing game evidence; separate proposals, implementation, tests and human decisions; optional `walker` bookends |
 | [`godot-trailer`](skills/make/godot-trailer/SKILL.md) | Cut a 60–90 s trailer from a Godot repo: real gameplay only, one idea escalated, edited to music, ending on one call to action; selects the hook instead of covering every feature |
+| [`building-walkthrough`](skills/make/building-walkthrough/SKILL.md) | Walk a viewer through a 3D model (a building, a game level seen as a model, or one asset) with real Blender renders from a camera route that is designed and then measured; opens by saying what the model is and what it leaves out |
+| [`blender-walkthrough`](skills/make/blender-walkthrough/SKILL.md) | Turn existing rendered views or an HTML/GitHub model gallery into a narrated film of the final model, details, reported stats and limitations; no model file required |
+| [`blender-build`](skills/make/blender-build/SKILL.md) | Teach how to construct a similar model from rendered images or video screenshots, with Blender concepts, visual checkpoints and copyable coding-agent prompts; explicit record/history mode preserves the original build-record workflow |
+| [`blender-modelbuild`](skills/make/blender-modelbuild/SKILL.md) | Beat sheet only (no render): a finished Blender model from every angle, then how a person would build it by hand, from the real build evidence; AI-did vs hand steps, human verdicts; writes to `<model>/film/` |
 | `deep-explainer` | 5–10 min documentary episode with vox pantry beats |
 | `anthropics` | Reads an Anthropic artifact (repo/paper/content) against its own claims; practitioner-report register |
 | `fashionista` | AI fashion-call experiment — sports-announcer call with stated confidence + correction ask |
@@ -132,3 +136,42 @@ The reusable `GodotDevWorkbench` scene has code, tree, asset, and trace views,
 including native portrait layout. Its editor chrome is explicitly reconstructed;
 source excerpts, runtime observations and art previews must come from the actual
 game. It does not modify game code, pretend to export a game, or publish a film.
+
+### Blender films from rendered images
+
+Two companion skills work from a model's rendered images, public GitHub gallery
+or screenshots taken from its video. Neither requires the original model,
+private drawings or original build scripts.
+
+- `blender-walkthrough /path/to/gallery/` makes a narrated tour of the final model:
+  forward quarter, side, rear, other available views, details and documented stats.
+- `blender-build /path/to/gallery/` teaches how a learner could build a similar
+  model from those images, explaining Blender concepts and providing incremental
+  prompts for a coding agent. A teaching reconstruction is labeled as such; it is
+  not presented as the original build history.
+
+Both use Liam and the existing Brutalist film pipeline, output to the subject's
+own `youtube/` folder, and do not upload. `./art <skill>` points an agent to the
+workflow; it is not an autonomous film-generation command.
+
+```bash
+./art blender-walkthrough --help
+./art blender-build --help
+```
+
+The separate `building-walkthrough /path/to/model.blend` workflow still renders
+a measured camera route from an actual model. For an explicit original-build
+record, use `blender-build /path/to/model-folder record` or `build-breakdown` and
+read [the historical workflow](skills/make/blender-build/references/recorded-build.md).
+Its existing utilities are unchanged:
+
+```bash
+./art building-walkthrough --check /path/to/reel/walkthrough.json
+./art building-walkthrough --render rigged.blend route.json --out renders
+./art blender-build --check /path/to/build-record/record.json
+./art blender-build --draft | --guide | --tape
+```
+
+Those checks validate historical records or model camera routes, not an
+image-based lesson. The latter is reviewed for source evidence, usable prompts,
+visible learning checkpoints and honest demonstration status.

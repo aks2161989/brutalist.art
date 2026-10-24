@@ -2,7 +2,7 @@
 """seis_extract.py — the seis-extract skill's engine (skills/make/seis-extract).
 
   transcribe <video.mp4> [--model small]            → <stem>.transcript.json + .md (word timestamps; pick pulls against the brief)
-  cut <video.mp4> --pulls pulls.json --out <dir>     → one branded Q&A clip per pull: Bella asks (Kokoro af_bella, question typed on
+  cut <video.mp4> --pulls pulls.json --out <dir>     → one branded Q&A clip per pull: Kore asks (Kokoro af_kore, question typed on
                                                        the SEIS page) → the alum answers (segment, lower third naming the PROGRAM,
                                                        burned captions from the transcript). Sidecar <id>.json per clip for seis-composite.
 pulls.json:
@@ -11,6 +11,7 @@ pulls.json:
 Optional top-level "frame": {"zoom": 1.3, "cx": 0.37, "cy": 0.5} reframes a Teams/Zoom recording onto the speaker (crops out side tiles);
 in/out may also be "~a phrase from the transcript" — resolved to the word timings (in = phrase start, out = phrase end).
 optional "corrections": {"Dhunvardini Rajendra": "Dhanvardini Rajendran", "SAIS": "SEIS"} fixes whisper's proper nouns in the burned captions.
+Per-pull "ask": false renders an ANSWER-ONLY clip (no question card) — used when the section's question was already asked by the first pull.
 Sections: now · turning-point · became · forward · closing (the editing brief's timeline). No answer clip over 15 s (warned).
 Free, local: faster-whisper + kokoro-onnx + ffmpeg + Remotion (composition SeisQA). Never publishes.
 """
@@ -20,9 +21,11 @@ HERE = Path(__file__).resolve().parent; TOOLKIT = HERE.parent.parent
 CORR = {}   # the active pulls.json corrections map (set in cut) — phrase anchors try both spellings
 REM = TOOLKIT / 'runtime' / 'remotion'; PUB = REM / 'public' / 'seis-qa'
 KOKORO = TOOLKIT / 'runtime' / 'models' / 'kokoro'
+ASK_VOICE = os.environ.get('SEIS_ASK_VOICE', 'af_bella')  # Bella — identified from the reference cut SEIS approved
+ASK_SPEED = float(os.environ.get('SEIS_ASK_SPEED', '0.85'))  # SEIS: "the voice is just really fast" — slowed
 FPS = 30
 
-def tsec(v, transcript=None, side='in'):
+def tsec(v, transcript=None, side='in', in_pad=0.15):
     """seconds from a number, "m:ss", or "~phrase" (resolved against the transcript's words — first match after any earlier pull is the author's job)."""
     if isinstance(v, (int, float)): return float(v)
     if isinstance(v, str) and v.startswith('~') and transcript is not None:
@@ -41,7 +44,7 @@ def tsec(v, transcript=None, side='in'):
                 r = SequenceMatcher(None, target, cand).ratio()
                 if r > best: best, bi, bn = r, i, n
         if best < 0.6: sys.exit(f"phrase not found in transcript: {v!r} (best match {best:.2f}) — anchor to whisper's words in <stem>.transcript.md")
-        return words[bi]['s'] - 0.15 if side == 'in' else words[min(len(words)-1, bi + bn - 1)]['e'] + 0.25
+        return words[bi]['s'] - in_pad if side == 'in' else words[min(len(words)-1, bi + bn - 1)]['e'] + 0.25
     p = [float(x) for x in str(v).split(':')]
     return p[0] * 60 + p[1] if len(p) == 2 else p[0] * 3600 + p[1] * 60 + p[2] if len(p) == 3 else p[0]
 
@@ -64,11 +67,14 @@ def transcribe(video: Path, model='small'):
     tm.write_text(f"# Transcript — {video.name}\n\n" + '\n'.join(lines) + '\n'); wav.unlink(missing_ok=True)
     print(f"{tm}  ({len(out)} segments, {info.duration:.0f}s)")
 
-def bella(text: str, out_mp3: Path):
+def ask_voice(text: str, out_mp3: Path, voice: str = ASK_VOICE, speed: float = ASK_SPEED):
     import numpy as np, soundfile as sf
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from espeak_fallback import use_system_espeak
+    use_system_espeak()
     from kokoro_onnx import Kokoro
     k = Kokoro(str(KOKORO / 'kokoro-v1.0.onnx'), str(KOKORO / 'voices-v1.0.bin'))
-    a, sr = k.create(text, voice='af_bella', speed=1.0, lang='en-us')
+    a, sr = k.create(text, voice=voice, speed=speed, lang='en-us')
     wav = out_mp3.with_suffix('.wav'); sf.write(str(wav), a, sr)
     sh(['ffmpeg', '-loglevel', 'error', '-y', '-i', str(wav), '-codec:a', 'libmp3lame', '-q:a', '3', str(out_mp3)]); wav.unlink()
     return len(a) / sr
@@ -93,25 +99,31 @@ def cut(video: Path, pulls_path: Path, out: Path):
     if not tj.exists(): transcribe(video)
     transcript = json.loads(tj.read_text()); PUB.mkdir(parents=True, exist_ok=True); out.mkdir(parents=True, exist_ok=True)
     for p in plan['pulls']:
-        pid = p['id']; t0, t1 = tsec(p['in'], transcript, 'in'), tsec(p['out'], transcript, 'out'); alum = dict(default, **p.get('alum', {}))
+        pid = p['id']; t0, t1 = tsec(p['in'], transcript, 'in', float(p.get('in_pad', 0.15))), tsec(p['out'], transcript, 'out'); alum = dict(default, **p.get('alum', {}))
         if t1 - t0 > 15.5: print(f"  ! {pid}: answer is {t1-t0:.1f}s — the brief caps clips at ~15 s")
-        qmp3 = PUB / f'{pid}-q.mp3'; qdur = bella(p['question'], qmp3)
+        asks = bool(p.get('ask', True))
+        if asks:
+            qmp3 = PUB / f'{pid}-q.mp3'; qdur = ask_voice(p['question'], qmp3)
+            # hold the card long enough to READ: short questions need a floor, not just a tail pad
+            qaudio, qframes = f'seis-qa/{qmp3.name}', int(math.ceil(max(qdur + 1.2, 3.0) * FPS))
+        else:
+            qdur, qaudio, qframes = 0.0, '', 0
         clip = PUB / f'{pid}.mp4'
         z = float(fr.get('zoom', 1.0)); cx, cy = float(fr.get('cx', 0.5)), float(fr.get('cy', 0.5))
         crop = f"crop=iw/{z}:ih/{z}:iw*{cx}-iw/{z}/2:ih*{cy}-ih/{z}/2," if z > 1.0 else ''
         sh(['ffmpeg', '-loglevel', 'error', '-y', '-ss', f'{t0:.3f}', '-to', f'{t1:.3f}', '-i', str(video), '-vf', crop + 'scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30',
             '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', str(clip)])
-        props = {'question': p['question'], 'questionAudio': f'seis-qa/{qmp3.name}', 'questionFrames': int(math.ceil((qdur + 0.7) * FPS)),
+        props = {'question': p['question'], 'questionAudio': qaudio, 'questionFrames': qframes,
                  'clip': f'seis-qa/{clip.name}', 'clipFrames': int(math.ceil((t1 - t0) * FPS)),
                  'name': alum.get('name', ''), 'program': alum.get('program', 'SEIS'), 'gradYear': str(alum.get('gradYear', '')), 'title': alum.get('title', ''), 'company': alum.get('company', ''),
                  'captions': captions_for(transcript, t0, t1, corrections=corr), 'logo': 'seis/seis-button-logo.jpg', 'lockup': 'seis/seis-logo.png'}
         pj = out / f'{pid}.props.json'; pj.write_text(json.dumps(props, ensure_ascii=False))
         final = out / f'{pid}.mp4'
-        sh(['npx', 'remotion', 'render', 'src/index.ts', 'SeisQA', str(final), f'--props={pj.resolve()}', '--codec=h264', '--crf=18', '--concurrency=4', '--log=error'], cwd=str(REM))
+        sh(['npx', 'remotion', 'render', 'src/index.ts', 'SeisQA', str(final), f'--props={pj.resolve()}', '--codec=h264', '--crf=18', '--concurrency=3', '--timeout=180000', '--log=error'], cwd=str(REM))
         side = {'id': pid, 'section': p.get('section', ''), 'question': p['question'], 'in': t0, 'out': t1, 'alum': alum,
                 'frames': props['questionFrames'] + props['clipFrames'], 'seconds': round((props['questionFrames'] + props['clipFrames']) / FPS, 2), 'file': str(final), 'source': video.name}
         (out / f'{pid}.json').write_text(json.dumps(side, indent=1, ensure_ascii=False))
-        print(f"  ✓ {pid}  [{p.get('section','')}]  Q {qdur:.1f}s + A {t1-t0:.1f}s → {final.name}")
+        print(f"  ✓ {pid}  [{p.get('section','')}]  {'Q %.1fs + ' % qdur if asks else 'answer-only  '}A {t1-t0:.1f}s → {final.name}")
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(); sub = ap.add_subparsers(dest='cmd', required=True)

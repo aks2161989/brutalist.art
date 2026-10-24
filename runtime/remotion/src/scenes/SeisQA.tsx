@@ -5,6 +5,11 @@ import {NEU, NEU_RED, FONT_NEU} from '../tokens/neu';
 import {SPRING_SMOOTH} from '../tokens/vox';
 import {useLato} from '../tokens/lato';
 
+// SEIS alumni-impact film runs on the dark reference palette (black ground + NU red),
+// not the inherited NEU white ground. Approved 2026-09-22; deviation noted in brands/seis.md.
+const SEIS_DARK = '#0A0A0A';
+const SEIS_DIM = '#B0B0B0';
+
 /**
  * SeisQA — one extracted Q&A clip (seis-extract): PART A the question, typed onto a SEIS page while
  * Bella (Kokoro af_bella, the interviewer's voice) asks it; PART B the alum's answer — the interview
@@ -35,12 +40,11 @@ const Question: React.FC<SeisQAProps> = ({question, questionAudio, questionFrame
   const ruleIn = spring({frame, fps, config: SPRING_SMOOTH});
   const out = interpolate(frame, [questionFrames - 8, questionFrames], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
-    <AbsoluteFill style={{backgroundColor: NEU.CREAM, opacity: out}}>
+    <AbsoluteFill style={{backgroundColor: SEIS_DARK, opacity: out}}>
       {questionAudio && <Audio src={staticFile(questionAudio)} />}
-      <div style={{position: 'absolute', left: width * 0.07, top: height * 0.07, fontFamily: FONT_NEU.display, fontSize: height * 0.024, letterSpacing: 1.5, textTransform: 'uppercase', color: NEU.SLATE}}>SEIS · Alumni · Software Engineering and Information Systems</div>
-      <Img src={staticFile(logo)} style={{position: 'absolute', right: width * 0.06, top: height * 0.05, height: height * 0.11}} />
+      <Img src={staticFile('seis/seis-logo-knockout.png')} style={{position: 'absolute', left: width * 0.07, top: height * 0.07, height: height * 0.075}} />
       <div style={{position: 'absolute', left: width * 0.07, top: height * 0.30, width: width * 0.12 * ruleIn, height: Math.max(4, height * 0.007), backgroundColor: NEU_RED}} />
-      <div style={{position: 'absolute', left: width * 0.07, top: height * 0.36, width: width * 0.86, fontFamily: FONT_NEU.display, fontSize: height * 0.085, fontWeight: 400, lineHeight: 1.15, color: NEU.INK}}>
+      <div style={{position: 'absolute', left: width * 0.07, top: height * 0.36, width: width * 0.86, fontFamily: FONT_NEU.display, fontSize: height * 0.085, fontWeight: 400, lineHeight: 1.15, color: '#FFFFFF'}}>
         {question.slice(0, chars)}<span style={{color: NEU_RED, opacity: frame % 20 < 10 ? 1 : 0}}>|</span>
       </div>
     </AbsoluteFill>
@@ -49,28 +53,30 @@ const Question: React.FC<SeisQAProps> = ({question, questionAudio, questionFrame
 
 const Answer: React.FC<SeisQAProps> = ({clip, clipFrames, name, program, gradYear, title, company, captions, logo, lockup}) => {
   const frame = useCurrentFrame(); const {fps, width, height} = useVideoConfig();
-  const zoom = interpolate(frame, [0, clipFrames], [1.0, 1.06], {extrapolateRight: 'clamp'});
+  // starts slightly over 1 so the Teams recordings' black edge bands never show
+  const zoom = interpolate(frame, [0, clipFrames], [1.03, 1.09], {extrapolateRight: 'clamp'});
   const lt = spring({frame: frame - 10, fps, config: SPRING_SMOOTH});
-  const ltOut = interpolate(frame, [fps * 5.5, fps * 6.5], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const cap = captions.find((c) => frame >= c.s && frame < c.e);
   const fadeIn = interpolate(frame, [0, 8], [0, 1], {extrapolateRight: 'clamp'});
   return (
     <AbsoluteFill style={{backgroundColor: '#000', opacity: fadeIn}}>
       {clip && <OffthreadVideo src={staticFile(clip)} style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${zoom})`}} />}
       {/* lower third — the PROGRAM is named, not just the university */}
-      <div style={{position: 'absolute', left: width * 0.05, bottom: height * 0.20, opacity: lt * ltOut, transform: `translateX(${(1 - lt) * -30}px)`}}>
-        <div style={{display: 'inline-block', backgroundColor: 'rgba(255,255,255,0.96)', borderLeft: `${Math.max(6, width * 0.005)}px solid ${NEU_RED}`, padding: `${height * 0.012}px ${width * 0.018}px`}}>
-          <div style={{fontFamily: FONT_NEU.display, fontSize: height * 0.046, color: NEU.INK, lineHeight: 1.1}}>{name}</div>
-          <div style={{fontFamily: FONT_NEU.display, fontSize: height * 0.026, color: NEU_RED, marginTop: height * 0.006}}>{program}{gradYear ? ` · ${gradYear}` : ''}</div>
-          {(title || company) && <div style={{fontFamily: FONT_NEU.display, fontSize: height * 0.026, color: NEU.SLATE, marginTop: height * 0.004}}>{[title, company].filter(Boolean).join(' · ')}</div>}
-          <Img src={staticFile(lockup)} style={{display: 'block', height: height * 0.055, marginTop: height * 0.012}} />
+      <div style={{position: 'absolute', left: width * 0.028, bottom: height * 0.085, opacity: lt, transform: `translateX(${(1 - lt) * -30}px)`}}>
+        <div style={{display: 'inline-block', backgroundColor: 'rgba(255,255,255,0.96)', borderLeft: `${Math.max(5, width * 0.004)}px solid ${NEU_RED}`, padding: `${height * 0.009}px ${width * 0.013}px`}}>
+          <div style={{fontFamily: FONT_NEU.display, fontSize: height * 0.034, color: NEU.INK, lineHeight: 1.15}}>{name}</div>
+          <div style={{fontFamily: FONT_NEU.display, fontSize: height * 0.023, color: NEU_RED, marginTop: height * 0.005, lineHeight: 1.2}}>{program}{gradYear ? ` ${gradYear}` : ''}</div>
+          {(title || company) && <div style={{fontFamily: FONT_NEU.display, fontSize: height * 0.024, color: NEU.INK, marginTop: height * 0.005, lineHeight: 1.2}}>{[title, company].filter(Boolean).join(', ')}</div>}
         </div>
       </div>
       {/* captions, burned */}
       {cap && <div style={{position: 'absolute', left: 0, right: 0, bottom: height * 0.06, textAlign: 'center'}}>
         <span style={{fontFamily: FONT_NEU.display, fontSize: height * 0.044, color: '#fff', backgroundColor: 'rgba(0,0,0,0.62)', padding: `${height * 0.008}px ${width * 0.014}px`, lineHeight: 1.35}}>{cap.t}</span>
       </div>}
-      <Img src={staticFile(logo)} style={{position: 'absolute', right: width * 0.05, top: height * 0.05, height: height * 0.11}} />
+      {/* N Department Logo — upper left, on a plate so it reads over any footage */}
+      <div style={{position: 'absolute', left: width * 0.035, top: height * 0.05, backgroundColor: 'rgba(255,255,255,0.96)', padding: `${height * 0.012}px ${width * 0.012}px`}}>
+        <Img src={staticFile(lockup)} style={{display: 'block', height: height * 0.062}} />
+      </div>
     </AbsoluteFill>
   );
 };
@@ -79,7 +85,7 @@ export const SeisQA: React.FC<SeisQAProps> = (props) => {
   useLato();
   return (
     <AbsoluteFill style={{backgroundColor: '#000'}}>
-      <Sequence from={0} durationInFrames={props.questionFrames}><Question {...props} /></Sequence>
+      {props.questionFrames > 0 && <Sequence from={0} durationInFrames={props.questionFrames}><Question {...props} /></Sequence>}
       <Sequence from={props.questionFrames} durationInFrames={props.clipFrames}><Answer {...props} /></Sequence>
     </AbsoluteFill>
   );

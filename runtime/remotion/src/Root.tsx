@@ -27,6 +27,7 @@ import {SeisSongReadAlong, seisSongReadAlongSchema} from './scenes/SeisSongReadA
 import {SeisQA, seisQASchema} from './scenes/SeisQA';
 import {SeisFilm, seisFilmSchema} from './scenes/SeisFilm';
 import {SeisLogoTechnique, seisLogoTechniqueSchema} from './scenes/SeisLogoTechnique';
+import {SeisLogoReveal, seisLogoRevealSchema} from './scenes/SeisLogoReveal';
 import {NikBearBrownOpen, nikBearBrownOpenSchema} from './scenes/NikBearBrownOpen';
 import {NikBearBrownOutro, nikBearBrownOutroSchema} from './scenes/NikBearBrownOutro';
 import {NikBearBrownTerminalAsk, nikBearBrownTerminalAskSchema} from './scenes/NikBearBrownTerminalAsk';
@@ -1327,6 +1328,16 @@ export const RemotionRoot: React.FC = () => {
         schema={seisFilmSchema}
         defaultProps={{items: [], music: '', musicGain: 0.12}}
         calculateMetadata={({props}) => ({durationInFrames: Math.max(30, props.items.reduce((a, it) => a + it.frames, 0))})}
+      />
+      <Composition
+        id="SeisLogoReveal"
+        component={SeisLogoReveal}
+        durationInFrames={150}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={seisLogoRevealSchema}
+        defaultProps={{tagline: '', holdFrames: 150, light: false}}
       />
       <Composition
         id="SeisLogoTechnique"

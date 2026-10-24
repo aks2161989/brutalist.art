@@ -8,7 +8,7 @@ own account of itself. Search can reach these by name and props only.
 The fix per row is one honest sentence at the top of the .tsx: what it puts
 on screen, and when to reach for it. Add it, then re-run the builder.
 
-**118 scenes** (17% of 697).
+**122 scenes** (17% of 698).
 
 | Scene | File | Folder / registered under |
 |---|---|---|
@@ -64,6 +64,10 @@ on screen, and when to reach for it. Add it, then re-run the builder.
 | `HubSpotApiTell` | `scenes/HubSpotApiTell.tsx` | claude-liam — hubspot-api (claude-tag-plugins) skill teardown figures |
 | `IReplacedMyself` | `IReplacedMyself.tsx` | ruben-substack batch |
 | `IShookHandsWithANobelPrize` | `IShookHandsWithANobelPrize.tsx` | ruben-substack batch |
+| `Illu-ChipGrid` | `?` | concept-illustration library (STRUCTURAL family) — starter templates |
+| `Illu-LayerStack` | `?` | concept-illustration library (STRUCTURAL family) — starter templates |
+| `Illu-PredictCard` | `?` | concept-illustration library (STRUCTURAL family) — starter templates |
+| `Illu-SourceFlow` | `?` | concept-illustration library (STRUCTURAL family) — starter templates |
 | `ImClaudeCertified` | `ImClaudeCertified.tsx` | ruben-substack batch |
 | `ItsNotXItsY` | `ItsNotXItsY.tsx` | ruben-substack batch |
 | `JiraApiAnatomy` | `scenes/JiraApiAnatomy.tsx` | claude-liam — jira-api (claude-tag-plugins) skill teardown figures |
